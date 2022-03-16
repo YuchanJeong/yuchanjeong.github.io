@@ -7,40 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Mon, 20 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/redux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/redux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>BC-12w-9 / &lt;FC&gt; Redux Advanced (2) </title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/cb-12w-9/</link>
-      <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
+      <title>BC-12w-7 / &lt;FC&gt; Redux Advanced (2) </title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-7/</link>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/cb-12w-9/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-7/</guid>
       <description>1. Ducks Pattern * # /components  TodoForm.</description>
     </item>
     
     <item>
-      <title>BC-12w-8 / &lt;FC&gt; Redux Advanced (1) </title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/cb-12w-8/</link>
+      <title>BC-12w-6 / &lt;FC&gt; Redux Advanced (1) </title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-6/</link>
       <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/cb-12w-8/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-6/</guid>
       <description>1. Async Action with Redux #1) 비동기 처리가 컴포넌트에 있는 경우 #// components/UserList.</description>
     </item>
     
     <item>
-      <title>BC-12w-6 / &lt;FC&gt; Redux Basic </title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/cb-12w-6/</link>
-      <pubDate>Thu, 16 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/cb-12w-6/</guid>
-      <description>1. Redux 개요 # Single Store  [만들기] 단일 스토어 사용 준비  import redux Action을 정의하고, Action을 사용하는, Reducer를 만들고, Reducer들을 합침 최종 합쳐진 Reducer를 인자로, Single Store를 만듦   [사용하기] 준비한 스토어를 리액트 컴포넌트에서 사용  import react-redux connect 함수를 이용해서 컴포넌트에 연결     npm i redux  1) Actions #  Action of Redux</description>
-    </item>
-    
-    <item>
       <title>BC-11w-2 / [React] 상태 관리(2) redux</title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/cb-11w-2/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-2/</link>
       <pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/cb-11w-2/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-2/</guid>
       <description>Today I learned #Sprint - Cmarket Redux #index.</description>
     </item>
     
