@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTML on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/html/</link>
+    <description>Recent content in HTML on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Fri, 27 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BC-1w-5 / [HTML/CSS] HTML 기초</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/cb-1w-5/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/cb-1w-5/</guid>
+      <description>Today I learned # HTML(Structure), CSS(Presentation), JS(Interaction)  HTML # 웹 페이지를 구성하는 마크업 언어 트리구조 태그들의 집합  닫힌 태그:  열린 태그:        자주 쓰는 태그 설명     &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; block level tag, 한 줄 차지   &amp;lt;span&amp;gt;&amp;lt;/span&amp;gt; inline level tag, 콘텐츠 크기만큼 공간 차지   &amp;lt;img src=&#39;&#39; /&amp;gt; 이미지 삽입   &amp;lt;a&amp;gt;&amp;lt;/a&amp;gt; 링크 삽입   &amp;lt;ul&amp;gt;&amp;lt;/ul&amp;gt; 순서가 없는 목록 묶음(부모 요소)   &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt; 목록(자식 요소)   &amp;lt;input type=&#39;&#39;&amp;gt;&amp;lt;/input&amp;gt; 사용자가 직접 입력하는 부분   &amp;lt;textarea&amp;gt;&amp;lt;/textarea&amp;gt; 줄 바꿈이 되는 입력 폼   &amp;lt;button&amp;gt;&amp;lt;/button&amp;gt; 버튼    Today&amp;rsquo;s takeaway # 전에 혼자 공부할 때는 div로 다 처리하면 되지 왜 굳이 header, section 등의 sematic tag를 쓰는지 이해하지 못했었다.</description>
+    </item>
+    
+  </channel>
+</rss>

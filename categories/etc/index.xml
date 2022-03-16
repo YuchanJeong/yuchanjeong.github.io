@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>&#39;Etc&#39; on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/categories/etc/</link>
+    <description>Recent content in &#39;Etc&#39; on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Sat, 01 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/etc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My VSC Extensions</title>
+      <link>https://yuchanjeong.github.io/posts/etc/my_vsc_extensions/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/etc/my_vsc_extensions/</guid>
+      <description>Basic # Auto Close Tag Auto Rename Tag Better Comments Bracket Pair Colorizer Live Server Auto Import Git Graph npm Intellisense vscode-icons Path Intellisense  Spell Checker # Code Spell Checker Korean Spell Checker VS Code  ctrl+opt+shift+C (user setting) ctrl+opt+shift+F (user setting)    CSS # HTML CSS Support  Ctrl+Space   CSS Navigation  F12 Shift+F12   vscode-styled-components Tailwind CSS IntelliSense  Formatter # Prettier - Code formatter ESLint  Docker # Docker Remote - Containers  </description>
+    </item>
+    
+    <item>
+      <title>My Mac Shortcuts</title>
+      <link>https://yuchanjeong.github.io/posts/etc/mac_shortcuts/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/etc/mac_shortcuts/</guid>
+      <description>1. 포커스 및 화면 관리(ctrl) #   단축키 설명     ctrl+F2 상태 막대 포커스 이동   ctrl+F3 Dock 포커스 이동   ctrl+F4 활성 창 포커스 이동   *ctrl+F5 상태 메뉴 포커스 이동   ctrl+↑ 미션 컨트롤   ctrl+↓ 해당 앱 창   ctrl+⇆ 스페이스 이동    2.</description>
+    </item>
+    
+    <item>
+      <title>VSC Shortcuts</title>
+      <link>https://yuchanjeong.github.io/posts/etc/vsc_shortcuts/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/etc/vsc_shortcuts/</guid>
+      <description>1. Cursor #   단축키 설명     opt+shift+I Focus의 각 줄 마지막 멀티 커서   opt+click 멀티 커서   opt+⇆ 단어 커서   cmd+⇆/⇅ 커서 처음/끝으로(한 줄/페이지)   cmd+U 커서 되돌리기   cmd+enter 다음 줄 이동   cmd+shift+\ 괄호 끝으로 이동    2.</description>
+    </item>
+    
+  </channel>
+</rss>

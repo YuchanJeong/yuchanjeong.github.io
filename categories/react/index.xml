@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>&#39;React&#39; on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/categories/react/</link>
+    <description>Recent content in &#39;React&#39; on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Sat, 05 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hooks &amp; Utils</title>
+      <link>https://yuchanjeong.github.io/posts/react/hooksutils/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/react/hooksutils/</guid>
+      <description>1. useInput #export function useInput(initialValue, validator) { const [value, setValue] = useState(initialValue); const onChange = (e) =&amp;gt; { const { target: { value }, } = e; let isValid = true; if (typeof validator === &amp;#34;function&amp;#34;) { isValid = validator(value); } if (isValid) { setValue(value); } }; return { value, onChange }; } const validator = (value) =&amp;gt; !</description>
+    </item>
+    
+  </channel>
+</rss>

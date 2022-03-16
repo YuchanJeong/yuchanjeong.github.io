@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CLI on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/cli/</link>
+    <description>Recent content in CLI on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Mon, 13 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BC-12w-1 / [Linux] 사용 권한, 환경 변수</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/cb-12w-1/</link>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/cb-12w-1/</guid>
+      <description>1. 사용 권한 #ls -l: 권한을 확인하는 명령어 # 첫 시작인 - 와 d 는 각각 not directory와 directory r, w, x는 각각 read permission, write permission, execute permission 순서대로 user, group, other에 대한 권한을 표시 Ex)  -rw-r&amp;ndash;r&amp;ndash; -&amp;gt; -/rw-/r&amp;ndash;/r&amp;ndash; drwxr-xr-x -&amp;gt; d/rwx/r-x/r-x    chmod: 권한을 변경하는 명령어 # 만약 OS에 로그인한 사용자와, 폴더나 파일의 소유자가 다를 경우에는 관리자 권한을 획득하는 명령어 sudo 를 이용해 폴더나 파일의 권한을 변경할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>BC-2w-3 / [Linux] 기초</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/cb-2w-3/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/cb-2w-3/</guid>
+      <description>Today I learned #CLI 명령어 # 기본적인 이동/생성/삭제/복사 등의 명령어 관리자 권한을 획득하는 명령어 sudo 텍스트 에디터 nano ls -l  d: 폴더 / -: 파일 r: 읽기 권한 w: 쓰기 권한 e: 실행 권한 -: 권한 없음   -f는 강제 명령  패키지와 패키지 매니저 Home Brew # eval $(/opt/homebrew/bin/brew shellenv)</description>
+    </item>
+    
+  </channel>
+</rss>
