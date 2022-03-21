@@ -7,14 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Thu, 03 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BC-Final / Final Project 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-final-1/</link>
+      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-final-1/</guid>
+      <description>Debate Ducks # Notion Github Demo  1.</description>
+    </item>
+    
     <item>
       <title>BC-First / First Project 기능 회고</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-first-2/</link>
       <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-first-2/</guid>
-      <description>1. Custom Hooks &amp;amp; Utils #useDetectOutsideClick # 범위 밖을 클릭하면 닫히는 모달  import { useState, useEffect } from &amp;#34;react&amp;#34;; export default function useDetectOutsideClick(target, initialState) { const [isActive, setIsActive] = useState(initialState); useEffect(() =&amp;gt; { const onClick = (e) =&amp;gt; { if (target.</description>
+      <description>HiBye #1.</description>
     </item>
     
     <item>
@@ -23,7 +32,7 @@
       <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-first-1/</guid>
-      <description>1.</description>
+      <description>HiBye #1.</description>
     </item>
     
     <item>
