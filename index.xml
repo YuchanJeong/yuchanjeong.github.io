@@ -189,24 +189,6 @@
     </item>
     
     <item>
-      <title>BC-12w-7 / &lt;FC&gt; Redux Advanced (2) </title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-7/</link>
-      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-7/</guid>
-      <description>1. Ducks Pattern * # /components  TodoForm.</description>
-    </item>
-    
-    <item>
-      <title>BC-12w-6 / &lt;FC&gt; Redux Advanced (1) </title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-6/</link>
-      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-6/</guid>
-      <description>1. Async Action with Redux #1) 비동기 처리가 컴포넌트에 있는 경우 #// components/UserList.</description>
-    </item>
-    
-    <item>
       <title>BC-12w-5 / [데이터베이스] 관계형 데이터베이스(2) &#43; &lt;FC&gt; Redux Basic</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-5/</link>
       <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>

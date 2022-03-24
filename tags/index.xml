@@ -99,15 +99,6 @@
     </item>
     
     <item>
-      <title>React</title>
-      <link>https://yuchanjeong.github.io/tags/react/</link>
-      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/tags/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Algorithm</title>
       <link>https://yuchanjeong.github.io/tags/algorithm/</link>
       <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
@@ -122,6 +113,15 @@
       <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>https://yuchanjeong.github.io/tags/react/</link>
+      <pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/react/</guid>
       <description></description>
     </item>
     
