@@ -13,14 +13,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>BC-16w / Section3 및 HA 회고 &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="BC-16w / Section3 및 HA 회고 &middot; Yuchan&#39;s hello world!" />
+  <title>BC-15w-2 / [배포] Docker &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="BC-15w-2 / [배포] Docker &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog of a developer who wants to help create a better world :)" />
   
   
   
-  <link rel="canonical" href="https://yuchanjeong.github.io/posts/bootcamp/bc-16w/" />
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/bootcamp/bc-15w-4/" />
   
   
   
@@ -66,17 +66,17 @@
   
   
   
-  <meta property="og:title" content="BC-16w / Section3 및 HA 회고" />
-<meta property="og:description" content="Section3 회고지만 First Project를 끝내고서야 작성할 수 있을 정도로 프로젝트에 온 힘을 쏟았었다." />
+  <meta property="og:title" content="BC-15w-2 / [배포] Docker" />
+<meta property="og:description" content="1. Why Docker?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yuchanjeong.github.io/posts/bootcamp/bc-16w/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-01-29T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-01-29T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/bootcamp/bc-15w-4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-01-07T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="BC-16w / Section3 및 HA 회고"/>
-<meta name="twitter:description" content="Section3 회고지만 First Project를 끝내고서야 작성할 수 있을 정도로 프로젝트에 온 힘을 쏟았었다."/>
+<meta name="twitter:title" content="BC-15w-2 / [배포] Docker"/>
+<meta name="twitter:description" content="1. Why Docker?"/>
 
   
   <script type="application/ld+json">
@@ -84,26 +84,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "BC-16w \/ Section3 및 HA 회고",
-    "headline": "BC-16w \/ Section3 및 HA 회고",
+    "name": "BC-15w-2 \/ [배포] Docker",
+    "headline": "BC-15w-2 \/ [배포] Docker",
     
-    "abstract": "Section3 회고지만 First Project를 끝내고서야 작성할 수 있을 정도로 프로젝트에 온 힘을 쏟았었다.",
+    "abstract": "1. Why Docker?",
     "inLanguage": "en",
-    "url" : "https:\/\/yuchanjeong.github.io\/posts\/bootcamp\/bc-16w\/",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/bootcamp\/bc-15w-4\/",
     "author" : {
       "@type": "Person",
       "name": "Yuchan"
     },
     "copyrightYear": "2022",
-    "dateCreated": "2022-01-29T00:00:00\u002b00:00",
-    "datePublished": "2022-01-29T00:00:00\u002b00:00",
+    "dateCreated": "2022-01-07T00:00:00\u002b00:00",
+    "datePublished": "2022-01-07T00:00:00\u002b00:00",
     
-    "dateModified": "2022-01-29T00:00:00\u002b00:00",
+    "dateModified": "2022-01-07T00:00:00\u002b00:00",
     
-    "keywords": ["Retrospect"],
+    "keywords": ["Deployment","Docker"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "193"
+    "wordCount": "549"
   }]
   </script>
 
@@ -244,7 +244,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        BC-16w / Section3 및 HA 회고
+        BC-15w-2 / [배포] Docker
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -277,7 +277,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2022-01-29 00:00:00 &#43;0000 UTC">29 January 2022</time>
+      <time datetime="2022-01-07 00:00:00 &#43;0000 UTC">7 January 2022</time>
     
 
     
@@ -301,9 +301,15 @@
         
           
             <a
-              href="/tags/retrospect/"
+              href="/tags/deployment/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >Retrospect</a
+              >Deployment</a
+            >
+          
+            <a
+              href="/tags/docker/"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Docker</a
             >
           
         
@@ -316,16 +322,207 @@
     </header>
     <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       
-      <div class="min-w-0 min-h-0 max-w-prose">
-        <ul>
-<li>Section3 회고지만 First Project를 끝내고서야 작성할 수 있을 정도로 프로젝트에 온 힘을 쏟았었다. 특히 Section3 후반부 부터는 프로젝트 전에 나의 역량을 최대한 끌어올리기 위해 다양한 공부(특히 리액트와 관련된 추가 스택들)를 병행하였다.</li>
-<li>Section3는 데이터베이스, 인증/보안, 배포에 관해서 배웠는데 확실히 나는 프런트 쪽이 더 적성에 맞는 거 같다. 데이터를 마음대로 주무르고 조회하는 과정은 흥미로웠으나 프런트에서 직접 작동하는 모습을 보는 것보다는 흥미가 떨어졌다. 그래도 데이터 베이스를 설계하는 부분은 프런트에서 직접 작동하는 모습을 보는 것만큼 흥미로웠다.</li>
-<li>section3에서 가장 흥미로웠던 부분은 인증/보안 부분이었다. 이제까지는 보안을 신경 쓰면서 코딩을 했던 적이 없었던 나로서는 신세계였다. 특히 토큰은 앞으로도 쭉 요긴하게 쓰일 것 같았다. 아직은 공부가 덜되어서 정확한 이해는 되지 않았지만 좀 더 이 부분을 공부하여 사용자가 안심하고 사용할 수 있는 앱이나 사이트를 개발하고 싶다.</li>
-<li>배포 부분은 사실 가장 흥미가 떨어졌다. 클라우드 기반으로 환경에 상관없이 퍼포먼스를 유지할 수 있게 하는 부분은 흥미롭기는 하였으나 무엇인가를 직접 개발하는 것보다는 나에게 흥미롭지 않았다. (아마 DevOps 쪽으로 가는 일은 없을 것 같다.)</li>
-<li>문제형 HA는 역시나 Toy-project(알고리즘 문제)보다 쉬워서 막힘없이 수월하게 풀 수 있었다.</li>
-<li>과제형 HA는 인증/보안 부분이 나왔는데 처음에는 막막 하였으나 공부하고 정리했던 내용들을 하나하나 읽어보면서 어떤 원리로 작동하는지를 이해하니 그 다음부터는 생각보다 쉽게 풀어나갈 수 있었다. 과제형 HA는 프로젝트를 만드는데 있어서 많은 도움이 되었다.</li>
-</ul>
+        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
+            <details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 lg:mt-3">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700"
+  >
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600"
+  >
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-why-dockerhttpsdocsdockercomdesktopmacinstall">1. Why <a href="https://docs.docker.com/desktop/mac/install/">Docker</a>?</a>
+      <ul>
+        <li><a href="#1-의존성-충돌-문제-해결">1) 의존성 충돌 문제 해결</a></li>
+        <li><a href="#2-개발과-배포-환경-일치">2) 개발과 배포 환경 일치</a></li>
+        <li><a href="#3-수평-확장--새로운-내용-배포-간편화">3) 수평 확장 &amp; 새로운 내용 배포 간편화</a></li>
+        <li><a href="#etc-용어-정리">Etc. 용어 정리</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-docker-cli-1">2. Docker CLI (1)</a></li>
+    <li><a href="#3-docker-cli-2">3. Docker CLI (2)</a>
+      <ul>
+        <li><a href="#a-httpdhttp-daemon">A. httpd(http daemon)</a></li>
+        <li><a href="#b-docker-이미지-만들기">B. Docker 이미지 만들기</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
 
+          </div>
+        </div>
+      
+      <div class="min-w-0 min-h-0 max-w-prose">
+        <h2 id="1-why-dockerhttpsdocsdockercomdesktopmacinstall" class="relative group">1. Why <a href="https://docs.docker.com/desktop/mac/install/">Docker</a>? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-why-dockerhttpsdocsdockercomdesktopmacinstall" aria-label="Anchor">#</a></span></h2>
+<ul>
+<li>컨테이너 방식으로 실행 환경에 구애받지 않고 애플리케이션을 실행할 수 있음</li>
+</ul>
+<h3 id="1-의존성-충돌-문제-해결" class="relative group">1) 의존성 충돌 문제 해결 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ec%9d%98%ec%a1%b4%ec%84%b1-%ec%b6%a9%eb%8f%8c-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>각 컨테이너가 철저하게 실행 환경이 격리되어 있기 때문에 가능</li>
+<li>각 컨테이너의 내용물
+<ul>
+<li>프로세스
+<ul>
+<li>특정 컨테이너에서 작동하는 프로세스는 기본적으로 그 컨테이너 안에서만 액세스할 수 있음</li>
+<li>컨테이너 안에서 실행되는 프로세스는 다른 컨테이너의 프로세스에게 영향을 줄 수 없음</li>
+</ul>
+</li>
+<li>네트워크
+<ul>
+<li>기본으로 컨테이너 하나에 하나의 IP 주소가 할당</li>
+</ul>
+</li>
+<li>파일 시스템
+<ul>
+<li>컨테이너 안에서 사용되는 파일 시스템은 구획화되어 있음</li>
+<li>해당 컨테이너에서의 명령이나 파일 등의 액세스를 제한할 수 있음</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-개발과-배포-환경-일치" class="relative group">2) 개발과 배포 환경 일치 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%ea%b0%9c%eb%b0%9c%ea%b3%bc-%eb%b0%b0%ed%8f%ac-%ed%99%98%ea%b2%bd-%ec%9d%bc%ec%b9%98" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>Ex. ECS in AWS</li>
+</ul>
+<h3 id="3-수평-확장--새로운-내용-배포-간편화" class="relative group">3) 수평 확장 &amp; 새로운 내용 배포 간편화 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%ec%88%98%ed%8f%89-%ed%99%95%ec%9e%a5--%ec%83%88%eb%a1%9c%ec%9a%b4-%eb%82%b4%ec%9a%a9-%eb%b0%b0%ed%8f%ac-%ea%b0%84%ed%8e%b8%ed%99%94" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>트래픽 분산을 위해 프록시 서버(로드 밸런서) 운영</li>
+<li>실행 환경의 일치로 이를 쉽게 해줌</li>
+</ul>
+<h3 id="etc-용어-정리" class="relative group">Etc. 용어 정리 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc-%ec%9a%a9%ec%96%b4-%ec%a0%95%eb%a6%ac" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>컨테이너
+<ul>
+<li>애플리케이션이 의존성, 네트워크 환경, 파일 시스템에 구애받지 않고, 도커라는 기술 위에 실행될 수 있도록 만든 애플리케이션 상자</li>
+</ul>
+</li>
+<li>이미지
+<ul>
+<li>이미지는 애플리케이션 및 애플리케이션 구성을 함께 담아놓은 템플릿</li>
+<li>이미지를 이용해 여러 개의 컨테이너를 생성(수평 확장)</li>
+<li>이미지는 기본 이미지로부터 변경 사항을 추가/커밋해서 또 다른 이미지를 만들 수도 있음</li>
+<li>Ex. <a href="https://nodejs.org/ko/docs/guides/nodejs-docker-webapp/">Node.js 웹 앱의 도커라이징(컨테이너화)</a></li>
+</ul>
+</li>
+<li>레지스트리
+<ul>
+<li>이미지는 레지스트리에 저장</li>
+<li>Ex. Docker Hub, Amazon ECR</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-docker-cli-1" class="relative group">2. Docker CLI (1) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-docker-cli-1" aria-label="Anchor">#</a></span></h2>
+<ul>
+<li><a href="https://docs.docker.com/engine/reference/commandline/container_run/">Docker docs</a></li>
+<li>Registry_Account/Repository_Name:Tag
+<ul>
+<li>레지스트리(Registry)
+<ul>
+<li>Ex. <a href="https://hub.docker.com/">Docker Hub</a></li>
+<li>도커 이미지를 관리하는 공간</li>
+</ul>
+</li>
+<li>레포지토리(Repository)
+<ul>
+<li>레지스트리 내에 도커 이미지가 저장되는 공간</li>
+<li>이미지 이름이 사용되기도 함</li>
+</ul>
+</li>
+<li>태그(Tag)
+<ul>
+<li>해당 이미지를 설명하는 버전 정보를 주로 입력</li>
+<li>특별히 다른 것을 지정하지 않는다면 latest 태그를 붙인 이미지를 가져옴</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 최신 이미지를 받아옴</span>
+docker image pull Registry_Account/Repository_Name:Tag
+
+<span class="c1"># 이미지 리스트를 출력</span>
+docker image ls
+
+<span class="c1"># 이미지 삭제</span>
+docker image rm 이미지_이름 <span class="p">|</span> 6b362a9f73eb
+
+<span class="c1"># 컨테이너_이름을 이름으로 갖는 컨테이너를 실행</span>
+docker container run --name 컨테이너_이름 Registry_Account/Repository_Name:Tag
+
+<span class="c1"># 모든 컨테이너의 리스트를 출력</span>
+docker container ps -a
+
+<span class="c1"># 컨테이너 삭제</span>
+docker container rm 컨테이너_이름 <span class="p">|</span> CONTAINER ID
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 컨테이너 실행</span>
+
+docker container run --name 컨테이너_이름 docker/whalesay:latest cowsay boo
+<span class="c1"># OPTIONS</span>
+<span class="c1">#   --name : 컨테이너의 이름을 할당</span>
+<span class="c1"># COMMAND</span>
+<span class="c1">#   cowsay : 컨테이너 실행 시 cowsay 명령어를 호출</span>
+<span class="c1"># ARG...</span>
+<span class="c1">#   boo : COMMAND인 cowsay에 넘겨질 파라미터</span>
+
+docker container run -it --rm danielkraic/asciiquarium:latest
+</code></pre></div><h2 id="3-docker-cli-2" class="relative group">3. Docker CLI (2) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-docker-cli-2" aria-label="Anchor">#</a></span></h2>
+<ul>
+<li>로컬에 있는 파일과 도커 이미지를 연결하는 방법
+<ul>
+<li>CP(Copy) : 호스트와 컨테이너 사이에 파일을 복사(Copy)</li>
+<li>Volume : 호스트와 컨테이너 사이에 공간을 마운트(Mount)</li>
+</ul>
+</li>
+</ul>
+<h3 id="a-httpdhttp-daemon" class="relative group">A. httpd(http daemon) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#a-httpdhttp-daemon" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>Apache HTTP Server를 실행할 수 있는 오픈소스 웹 서버 소프트웨어</li>
+<li>httpd는 /usr/local/apache2/htdocs/ 경로에 웹 서버와 관련된 파일들이 저장되어 있다면, 해당 파일을 기반으로 웹 서버가 실행되도록 함</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/codestates/pacman-canvas
+
+docker container run --name 컨테이너_이름 -p 818:80 httpd
+<span class="c1"># -p 옵션은 로컬호스트의 포트와 컨테이너의 포트를 연결</span>
+<span class="c1"># 2의 명령어에서 818포트가 로컬호스트의 포트이고, 80번은 컨테이너의 포트</span>
+<span class="c1"># httpd 는 일정 시간 연결 기록이 없으면, 서버 가동이 중지됨</span>
+<span class="c1"># (컨테이너를 백그라운드에서 실행하게 해주는 -d 옵션)</span>
+
+docker container cp ./ 컨테이너_이름:/usr/local/apache2/htdocs/
+<span class="c1"># [주의] 위의 명령어를 로컬 터미널에서 실행할 때, 위치는 pacman-canvas 디렉토리여야 함</span>
+
+docker <span class="nb">exec</span> -it 컨테이너_이름 bash
+<span class="c1"># 컨테이너 내부 터미널로 접속할 수 있음</span>
+</code></pre></div><h3 id="b-docker-이미지-만들기" class="relative group">B. Docker 이미지 만들기 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#b-docker-%ec%9d%b4%eb%af%b8%ec%a7%80-%eb%a7%8c%eb%93%a4%ea%b8%b0" aria-label="Anchor">#</a></span></h3>
+<ol>
+<li>구동한 Docker Container를 이미지로 만드는 방법</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker container commit 컨테이너_이름 my_pacman:1.0
+
+docker run --name my_web2 -p 900:80 my_pacman:1.0
+</code></pre></div><ol start="2">
+<li>Docker Image 빌드를 위한 파일인 <a href="https://docs.docker.com/engine/reference/builder/">Dockerfile</a> 로 만드는 방법</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 베이스 이미지를 httpd:2.4 로 사용</span>
+FROM httpd:2.4
+
+<span class="c1"># 호스트의 현재 경로에 있는 파일을 생성할 이미지 /usr/local/apache2/htdocs/ 에 복사</span>
+COPY ./ /usr/local/apache2/htdocs/
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># --tag 는 name:tag 형식으로 이미지를 생성할 수 있음</span>
+<span class="c1"># 지정한 경로에 있는 Dockerfile을 찾아서 빌드</span>
+docker build --tag my_pacman:2.0 .
+<span class="c1"># [주의] &#34;.&#34;을 명령어에 꼭 포함해야 함</span>
+
+docker run --name my_web3 -p 901:80 my_pacman:2.0
+<span class="c1"># 901 포트에서 웹 서버로 이미지를 구동</span>
+</code></pre></div>
       </div>
     </section>
     <footer class="pt-8 max-w-prose">
@@ -432,7 +629,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group" href="/posts/bootcamp/bc-15w-4/">
+            <a class="flex group" href="/posts/bootcamp/bc-15w-2/">
               <span
                 class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -444,11 +641,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >BC-15w-2 / [배포] Docker</span
+                  >BC-15w-1 / [배포] Amazon Web Service</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2022-01-07 00:00:00 &#43;0000 UTC">7 January 2022</time>
+                    <time datetime="2022-01-05 00:00:00 &#43;0000 UTC">5 January 2022</time>
                   
                 </span>
               </span>
@@ -457,15 +654,15 @@
         </span>
         <span>
           
-            <a class="flex text-right group" href="/posts/bootcamp/bc-first-1/">
+            <a class="flex text-right group" href="/posts/bootcamp/bc-16w/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >BC-First / First Project 회고</span
+                  >BC-16w / Section3 및 HA 회고</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2022-02-01 00:00:00 &#43;0000 UTC">1 February 2022</time>
+                    <time datetime="2022-01-29 00:00:00 &#43;0000 UTC">29 January 2022</time>
                   
                 </span>
               </span>
@@ -489,6 +686,19 @@
     
   </article>
 
+      
+        <div
+          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
+        >
+          <a
+            href="#the-top"
+            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
       
     </main>
     <div
