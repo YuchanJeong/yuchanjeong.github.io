@@ -13,8 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>BC-12w-7 / &lt;FC&gt; Redux Advanced (2)  &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="BC-12w-7 /  Redux Advanced (2)  &middot; Yuchan&#39;s hello world!" />
+  <title>&lt;FC&gt; Redux-saga &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content=" Redux-saga &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog of a developer who wants to help create a better world :)" />
   
@@ -66,8 +66,8 @@
   
   
   
-  <meta property="og:title" content="BC-12w-7 / &lt;FC&gt; Redux Advanced (2) " />
-<meta property="og:description" content="1. Ducks Pattern * # /components  TodoForm." />
+  <meta property="og:title" content="&lt;FC&gt; Redux-saga" />
+<meta property="og:description" content="Redux-saga # An intuitive Redux side effect manager; middleware" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/bootcamp/bc-12w-7/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-12-19T00:00:00+00:00" />
@@ -75,8 +75,8 @@
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="BC-12w-7 / &lt;FC&gt; Redux Advanced (2) "/>
-<meta name="twitter:description" content="1. Ducks Pattern * # /components  TodoForm."/>
+<meta name="twitter:title" content="&lt;FC&gt; Redux-saga"/>
+<meta name="twitter:description" content="Redux-saga # An intuitive Redux side effect manager; middleware"/>
 
   
   <script type="application/ld+json">
@@ -84,10 +84,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "BC-12w-7 \/ \u003cFC\u003e Redux Advanced (2) ",
-    "headline": "BC-12w-7 \/ \u003cFC\u003e Redux Advanced (2) ",
+    "name": "\u003cFC\u003e Redux-saga",
+    "headline": "\u003cFC\u003e Redux-saga",
     
-    "abstract": "1. Ducks Pattern * #\r \/components  TodoForm.",
+    "abstract": "Redux-saga #\r An intuitive Redux side effect manager; middleware",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/posts\/bootcamp\/bc-12w-7\/",
     "author" : {
@@ -100,10 +100,10 @@
     
     "dateModified": "2021-12-19T00:00:00\u002b00:00",
     
-    "keywords": ["React","Redux"],
+    "keywords": ["Redux"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "85"
+    "wordCount": "219"
   }]
   </script>
 
@@ -187,17 +187,6 @@
           >
             <a
               class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-              href=""
-              title=""
-              >WIL</a
-            >
-          </li>
-        
-          <li
-            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
-          >
-            <a
-              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href="/posts/"
               title="Posts"
               >Posts</a
@@ -255,7 +244,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        BC-12w-7 / <FC> Redux Advanced (2) 
+        <FC> Redux-saga
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -312,12 +301,6 @@
         
           
             <a
-              href="/tags/react/"
-              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >React</a
-            >
-          
-            <a
               href="/tags/redux/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
               >Redux</a
@@ -346,10 +329,14 @@
   >
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-ducks-pattern-httpsgithubcomerikrasducks-modular-redux">1. Ducks Pattern <a href="https://github.com/erikras/ducks-modular-redux">*</a></a></li>
-    <li><a href="#2-react-router-와-redux-함께-쓰기-httpsgithubcomsupasateconnected-react-router">2. react-router 와 redux 함께 쓰기 <a href="https://github.com/supasate/connected-react-router">*</a></a></li>
-    <li><a href="#3-redux-saga-httpsredux-sagajsorg">3. redux-saga <a href="https://redux-saga.js.org">*</a></a></li>
-    <li><a href="#4-redux-actions-httpsgithubcomredux-utilitiesredux-actions">4. redux-actions <a href="https://github.com/redux-utilities/redux-actions">*</a></a></li>
+    <li>
+      <ul>
+        <li><a href="#1-createsagamiddleware--sagamiddlewarerun">1) createSagaMiddleware() &amp; sagaMiddleware.run()</a></li>
+        <li><a href="#2-rootsaga">2) rootSaga</a></li>
+        <li><a href="#3-redux-saga-in-a-module">3) redux-saga in a Module</a></li>
+        <li><a href="#4-saga-creator-in-a-container">4) Saga Creator in a Container</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -359,54 +346,83 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <h2 id="1-ducks-pattern-httpsgithubcomerikrasducks-modular-redux" class="relative group">1. Ducks Pattern <a href="https://github.com/erikras/ducks-modular-redux">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-ducks-pattern-httpsgithubcomerikrasducks-modular-redux" aria-label="Anchor">#</a></span></h2>
-<ul>
-<li>/components
-<ul>
-<li>TodoForm.jsx</li>
-<li>TodoList.jsx</li>
-<li>UserList.jsx</li>
-</ul>
-</li>
-<li>/containers
-<ul>
-<li>TodoFormContainer.jsx</li>
-<li>TodoListContainer.jsx</li>
-<li>UserListContainer.jsx</li>
-</ul>
-</li>
-<li>/redux
-<ul>
-<li>/modules
-<ul>
-<li>reducer.js</li>
-<li>filter.js</li>
-<li>todos.js</li>
-<li>users.js</li>
-</ul>
-</li>
-<li>store.js</li>
-</ul>
-</li>
-<li>App.js</li>
-<li>index.js</li>
-</ul>
-<h2 id="2-react-router-와-redux-함께-쓰기-httpsgithubcomsupasateconnected-react-router" class="relative group">2. react-router 와 redux 함께 쓰기 <a href="https://github.com/supasate/connected-react-router">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-react-router-%ec%99%80-redux-%ed%95%a8%ea%bb%98-%ec%93%b0%ea%b8%b0-httpsgithubcomsupasateconnected-react-router" aria-label="Anchor">#</a></span></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm i connected-react-router
-</code></pre></div><h2 id="3-redux-saga-httpsredux-sagajsorg" class="relative group">3. redux-saga <a href="https://redux-saga.js.org">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-redux-saga-httpsredux-sagajsorg" aria-label="Anchor">#</a></span></h2>
+        <h1 id="redux-sagahttpsredux-sagajsorgdocsintroductiongettingstarted" class="relative group"><a href="https://redux-saga.js.org/docs/introduction/GettingStarted">Redux-saga</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#redux-sagahttpsredux-sagajsorgdocsintroductiongettingstarted" aria-label="Anchor">#</a></span></h1>
+<blockquote>
+<p>An intuitive Redux side effect manager; middleware</p>
+</blockquote>
+<p>*<a href="https://redux-saga.js.org/docs/api#effect-creators">redux-saga/effects API</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm i redux-saga
-</code></pre></div><ul>
-<li>미들웨어 입니다.</li>
-<li>제너레이터 객체를 만들어 내는 제네레이터 생성 함수를 이용합니다.</li>
-<li>리덕스 사가 미들웨어를 설정하고, 내가 만든 사가 함수를 등록한 후, 사가 미들웨어를 실행합니다.</li>
-<li>그리고 등록된 사가 함수를 실행할 액션을 디스패치하면 됩니다.</li>
-</ul>
-<h2 id="4-redux-actions-httpsgithubcomredux-utilitiesredux-actions" class="relative group">4. redux-actions <a href="https://github.com/redux-utilities/redux-actions">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-redux-actions-httpsgithubcomredux-utilitiesredux-actions" aria-label="Anchor">#</a></span></h2>
-<ul>
-<li>ducks 패턴을 쉽게</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createAction</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux-actions&#34;</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">createAction</span><span class="p">(</span><span class="s2">&#34;type&#34;</span><span class="p">)(</span><span class="s2">&#34;payload&#34;</span><span class="p">));</span>
+</code></pre></div><h3 id="1-createsagamiddleware--sagamiddlewarerun" class="relative group">1) createSagaMiddleware() &amp; sagaMiddleware.run() <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-createsagamiddleware--sagamiddlewarerun" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">applyMiddleware</span><span class="p">,</span> <span class="nx">createStore</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">reducers</span> <span class="nx">from</span> <span class="s2">&#34;./modules/reducers&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">createSagaMiddleware</span> <span class="nx">from</span> <span class="s2">&#34;redux-saga&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">rootSaga</span> <span class="nx">from</span> <span class="s2">&#34;./modules/rootSaga&#34;</span><span class="p">;</span>
+
+<span class="c1">// sagaMiddleware 생성
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">sagaMiddleware</span> <span class="o">=</span> <span class="nx">createSagaMiddleware</span><span class="p">();</span>
+
+<span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span>
+  <span class="nx">reducers</span><span class="p">,</span>
+  <span class="c1">// sagaMiddleware 등록
+</span><span class="c1"></span>  <span class="nx">applyMiddleware</span><span class="p">(</span><span class="nx">sagaMiddleware</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="c1">// sagaMiddleware 실행 준비
+</span><span class="c1"></span><span class="nx">sagaMiddleware</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">rootSaga</span><span class="p">);</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">store</span><span class="p">;</span>
+</code></pre></div><h3 id="2-rootsaga" class="relative group">2) rootSaga <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-rootsaga" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">all</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux-saga/effects&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">사가_이펙트</span><span class="p">,</span> <span class="p">...</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./...&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span><span class="o">*</span> <span class="nx">rootSaga</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">yield</span> <span class="nx">all</span><span class="p">([</span><span class="nx">사가_이펙트</span><span class="p">,</span> <span class="p">...]);</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="3-redux-saga-in-a-module" class="relative group">3) redux-saga in a Module <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-redux-saga-in-a-module" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">form</span> <span class="s2">&#34;axios&#34;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">put</span><span class="p">,</span> <span class="nx">call</span><span class="p">,</span> <span class="nx">takeEvery</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux-saga/effects&#34;</span><span class="p">;</span>
+
+
+<span class="c1">// 1) Saga Function 작성
+</span><span class="c1"></span><span class="kd">function</span><span class="o">*</span> <span class="nx">사가_함수</span><span class="p">(</span><span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="k">yield</span> <span class="nx">put</span><span class="p">(</span><span class="nx">액션_생성자_시작</span><span class="p">());</span>
+    <span class="c1">// yield delay(ms)
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">yield</span> <span class="nx">call</span><span class="p">(</span><span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">,</span> <span class="s2">&#34;경로&#34;</span><span class="p">);</span>
+    <span class="k">yield</span> <span class="nx">put</span><span class="p">(</span><span class="nx">액션_생성자_성공</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">yield</span> <span class="nx">put</span><span class="p">(</span><span class="nx">액션_생성자_실패</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 2) Saga Type 정의
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">사가_타입</span> <span class="o">=</span> <span class="s2">&#34;액션_사가_타입&#34;</span><span class="p">;</span>
+
+<span class="c1">// 3) Saga Creator 작성
+</span><span class="c1">// params(payload)는 옵션
+</span><span class="c1"></span><span class="kr">export</span> <span class="kd">function</span> <span class="nx">사가_생성자</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="nx">사가_타입</span><span class="p">,</span>
+    <span class="nx">param</span><span class="p">,</span>
+    <span class="p">...</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="c1">// 4) Saga Effect 작성
+</span><span class="c1"></span><span class="kr">export</span> <span class="kd">function</span><span class="o">*</span> <span class="nx">사가_이펙트</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">yield</span> <span class="nx">throttle</span><span class="p">(</span><span class="nx">ms</span><span class="p">,</span> <span class="nx">사가_타입</span><span class="p">,</span> <span class="nx">사가_함수</span><span class="p">);</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="4-saga-creator-in-a-container" class="relative group">4) Saga Creator in a Container <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-saga-creator-in-a-container" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useDispatch</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useCallback</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">사가_생성자</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;../redux/modules/모듈&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">dispatch</span> <span class="o">=</span> <span class="nx">useDispatch</span><span class="p">();</span>
+
+<span class="kr">const</span> <span class="nx">getUsers</span> <span class="o">=</span> <span class="nx">useCallback</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">dispatch</span><span class="p">(</span><span class="nx">사가_생성자</span><span class="p">(</span><span class="nx">옵션</span><span class="p">));</span>
+<span class="p">},</span> <span class="p">[</span><span class="nx">dispatch</span><span class="p">]);</span>
 </code></pre></div>
       </div>
     </section>
@@ -526,7 +542,7 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >BC-12w-6 / <FC> Redux Advanced (1) </span
+                  ><FC> Redux</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
@@ -571,6 +587,19 @@
     
   </article>
 
+      
+        <div
+          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
+        >
+          <a
+            href="#the-top"
+            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
       
     </main>
     <div
