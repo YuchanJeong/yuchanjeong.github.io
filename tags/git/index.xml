@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Yuchan&#39;s hello world!</title>
-    <link>https://yuchanjeong.github.io/tags/git/</link>
+    <link>/tags/git/</link>
     <description>Recent content in Git on Yuchan&#39;s hello world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BC-2w-4 / [Git] 기초</title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-4/</link>
+      <link>/posts/bootcamp/bc-2w-4/</link>
       <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-4/</guid>
+      <guid>/posts/bootcamp/bc-2w-4/</guid>
       <description>Today I learned #Git 설치 # git config &amp;ndash;global core.</description>
     </item>
     
