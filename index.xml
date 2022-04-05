@@ -80,7 +80,7 @@
     </item>
     
     <item>
-      <title>BC-15w-1 / &lt;FC&gt; Next.js로 블로그 만들기 - Next.js</title>
+      <title>BC-15w-1 / {FC} Next.js로 블로그 만들기 - Next.js</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-1/</link>
       <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -89,7 +89,7 @@
     </item>
     
     <item>
-      <title>BC-14w-5 / &lt;FC&gt; Next.js로 블로그 만들기 - Sanity</title>
+      <title>BC-14w-5 / {FC} Next.js로 블로그 만들기 - Sanity</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-5/</link>
       <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
       
@@ -98,7 +98,7 @@
     </item>
     
     <item>
-      <title>BC-14w-4 / &lt;FC&gt; GraphQL 맛보기</title>
+      <title>BC-14w-4 / {FC} GraphQL 맛보기</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-4/</link>
       <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
       
@@ -179,25 +179,25 @@
     </item>
     
     <item>
-      <title>&lt;FC&gt; Redux-saga</title>
+      <title>BC-12w-7 / {FC} Redux-saga</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-7/</link>
       <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-7/</guid>
-      <description>Redux-saga # An intuitive Redux side effect manager; middleware</description>
+      <description>An intuitive Redux side effect manager; middleware</description>
     </item>
     
     <item>
-      <title>&lt;FC&gt; Redux</title>
+      <title>BC-12w-6 / {FC} Redux</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-6/</link>
       <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-6/</guid>
-      <description>Redux # A Predictable State Container for JS Apps</description>
+      <description>A Predictable State Container for JS Apps</description>
     </item>
     
     <item>
-      <title>BC-12w-5 / [데이터베이스] 관계형 데이터베이스(2) &#43; &lt;FC&gt; Redux Basic</title>
+      <title>BC-12w-5 / [데이터베이스] 관계형 데이터베이스(2) &#43; {FC} Redux Basic</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-5/</link>
       <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
       
@@ -224,7 +224,7 @@
     </item>
     
     <item>
-      <title>BC-12w-2 / [자료구조/알고리즘] 시간 복잡도 &amp; 탐욕 알고리즘 &#43; &lt;FC&gt; Context로 전역 상태 관리하기</title>
+      <title>BC-12w-2 / [자료구조/알고리즘] 시간 복잡도 &amp; 탐욕 알고리즘 &#43; {FC} Context로 전역 상태 관리하기</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-2/</link>
       <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
       
@@ -323,7 +323,7 @@
     </item>
     
     <item>
-      <title>BC-9w-4 / &lt;FC&gt; React(8) Deploy React App</title>
+      <title>BC-9w-4 / {FC} React(8) Deploy React App</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-4/</link>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
       
@@ -494,7 +494,7 @@
     </item>
     
     <item>
-      <title>BC-6w-1 / &lt;FC&gt; React(7)</title>
+      <title>BC-6w-1 / {FC} React(7)</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-1/</link>
       <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -503,7 +503,7 @@
     </item>
     
     <item>
-      <title>BC-5w-추석(3) / 5주 차 정리 &#43; &lt;FC&gt; React(6)</title>
+      <title>BC-5w-추석(3) / 5주 차 정리 &#43; {FC} React(6)</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-3/</link>
       <pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -512,7 +512,7 @@
     </item>
     
     <item>
-      <title>BC-5w-추석(2) / &lt;FC&gt; React(5)</title>
+      <title>BC-5w-추석(2) / {FC} React(5)</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-2/</link>
       <pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -521,7 +521,7 @@
     </item>
     
     <item>
-      <title>BC-5w-추석(1) / &lt;FC&gt; React(4)</title>
+      <title>BC-5w-추석(1) / {FC} React(4)</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-1/</link>
       <pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -530,7 +530,7 @@
     </item>
     
     <item>
-      <title>BC-4w-6 / 4주 차 정리 &#43; &lt;FC&gt; React(3)</title>
+      <title>BC-4w-6 / 4주 차 정리 &#43; {FC} React(3)</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-6/</link>
       <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -548,7 +548,7 @@
     </item>
     
     <item>
-      <title>BC-4w-4 / [React] Router &#43; &lt;FC&gt; React(2)</title>
+      <title>BC-4w-4 / [React] Router &#43; {FC} React(2)</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-4/</link>
       <pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -557,7 +557,7 @@
     </item>
     
     <item>
-      <title>BC-4w-3 / [React] Intro &#43; &lt;FC&gt; React(1)</title>
+      <title>BC-4w-3 / [React] Intro &#43; {FC} React(1)</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-3/</link>
       <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -575,7 +575,7 @@
     </item>
     
     <item>
-      <title>BC-4w-1 / [JS/브라우저] DOM(2) &#43; &lt;FC&gt; TypeScript</title>
+      <title>BC-4w-1 / [JS/브라우저] DOM(2) &#43; {FC} TypeScript</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-1/</link>
       <pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate>
       
