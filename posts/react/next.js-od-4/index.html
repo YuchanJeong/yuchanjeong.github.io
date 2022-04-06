@@ -99,7 +99,7 @@
     "keywords": ["Next.js"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1227"
+    "wordCount": "1225"
   }]
   </script>
 
@@ -401,7 +401,7 @@
 <h2 id="7-what-is-rendering" class="relative group">7. What is Rendering? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#7-what-is-rendering" aria-label="Anchor">#</a></span></h2>
 <p>There is an unavoidable unit of work to convert the code you write in React into the HTML representation of your UI. This process is called rendering.</p>
 <ul>
-<li><strong>Client-Side Rendering</strong>
+<li><strong>Client-Side Rendering (CSR)</strong>
 <ul>
 <li>In a standard React application, the browser receives an <strong>empty HTML</strong> shell from the server along with the JavaScript instructions to construct the UI. The initial rendering work happens on the user&rsquo;s device.</li>
 </ul>
@@ -411,7 +411,7 @@
 <li>Next.js pre-renders every page by default. Pre-rendering means the HTML is generated in advance, on a server, instead of having it all done by JavaScript on the user&rsquo;s device.</li>
 </ul>
 <ol>
-<li><strong>Server-Side Rendering</strong>
+<li><strong>Server-Side Rendering (SSR)</strong>
 <ul>
 <li>The HTML of the page is generated on a server for each request. The generated HTML, JSON data, and JavaScript instructions to make the page interactive are then sent to the client.</li>
 <li>On the client, the HTML is used to show a fast non-interactive page, while React uses the JSON data and JavaScript instructions to make components interactive (for example, attaching event handlers to a button). This process is called hydration.</li>
@@ -422,7 +422,7 @@
 </li>
 </ul>
 </li>
-<li><strong>Static Site Generation</strong>
+<li><strong>Static Site Generation (SSG)</strong>
 <ul>
 <li>The HTML is generated on the server, but unlike server-side rendering, there is no server at runtime. Instead, content is generated once, at build time, when the application is deployed, and the HTML is stored in a CDN and re-used for each request.</li>
 <li>In Next.js, you can opt to statically generate pages by using <a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">getStaticProps</a>.</li>
@@ -450,7 +450,7 @@
 <ul>
 <li>The Edge is a generalized concept for the fringe (or edge) of the network, closest to the user. CDNs could be considered part of &ldquo;the Edge&rdquo; because they store static content at the fringe (edge) of the network.</li>
 <li>Similar to CDNs, Edge servers are distributed to multiple locations around the world. But unlike CDNs, which store static content, some Edge servers can run code.</li>
-<li>By running code at the Edge, you can move some of the work that was traditionally done client-side or server-side to the Edge (see examples with Next.js here). This can make your application more performant.</li>
+<li>By running code at the Edge, you can move some of the work that was traditionally done client-side or server-side to the Edge. This can make your application more performant.</li>
 <li>In Next.js, you can run code at the Edge with <a href="https://nextjs.org/docs/middleware">Middleware</a>, and soon with <a href="https://nextjs.org/docs/advanced-features/react-18/overview#react-server-components-alpha">React Server Components</a>.</li>
 </ul>
 </li>
