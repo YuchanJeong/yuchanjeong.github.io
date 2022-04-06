@@ -2,143 +2,143 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>React on Yuchan&#39;s hello world!</title>
-    <link>https://github.com/YuchanJeong/yuchanjeong.github.io/tags/react/</link>
+    <link>https://yuchanjeong.github.io/tags/react/</link>
     <description>Recent content in React on Yuchan&#39;s hello world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://github.com/YuchanJeong/yuchanjeong.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BC-11w-1 / [React] 상태 관리(1)</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-11w-1/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-1/</link>
       <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-11w-1/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-1/</guid>
       <description>Today I learned #0) {let count = Math.</description>
     </item>
     
     <item>
       <title>BC-10w-5 / [React] 컴포넌트 디자인-실습(2)</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-10w-5/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-5/</link>
       <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-10w-5/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-5/</guid>
       <description>Today I learned #Sprint - React Custom Component #Autocomplete #import { useState, useEffect } from &amp;#34;react&amp;#34;; import styled from &amp;#34;styled-components&amp;#34;; const deselectedOptions = [&amp;#34;rustic&amp;#34;, &amp;#34;antique&amp;#34;, &amp;#34;vinyl&amp;#34;, &amp;#34;vintage&amp;#34;, &amp;#34;refurbished&amp;#34;, &amp;#34;신품&amp;#34;, &amp;#34;빈티지&amp;#34;, &amp;#34;중고A급&amp;#34;, &amp;#34;중고B급&amp;#34;, &amp;#34;골동품&amp;#34;]; const boxShadow = &amp;#34;0 4px 6px rgb(32 33 36 / 28%)&amp;#34;; const activeBorderRadius = &amp;#34;1rem 1rem 0 0&amp;#34;; const inactiveBorderRadius = &amp;#34;1rem 1rem 1rem 1rem&amp;#34;; export const InputContainer = styled.</description>
     </item>
     
     <item>
       <title>BC-10w-4 / [React] 컴포넌트 디자인-실습(1)</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-10w-4/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-4/</link>
       <pubDate>Thu, 28 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-10w-4/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-4/</guid>
       <description>Today I learned #params) {if (arr.</description>
     </item>
     
     <item>
       <title>BC-10w-3 / [React] 컴포넌트 디자인-기본</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-10w-3/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-3/</link>
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-10w-3/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-3/</guid>
       <description>Today I learned #{// 소수 판별const isPrime = (num) = {const sqrt = Math.</description>
     </item>
     
     <item>
       <title>BC-9w-4 / {FC} React(8) Deploy React App</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-9w-4/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-4/</link>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-9w-4/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-4/</guid>
       <description>Today I learned #{const copy = [.</description>
     </item>
     
     <item>
       <title>BC-9w-3 / [React] 데이터 흐름의 이해와 비동기 처리</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-9w-3/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-3/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-9w-3/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-3/</guid>
       <description>Today I learned #{const midIdx = parseInt((leftIdx + rightIdx) / 2);// 탈출 조건: 배열의 길이가 1if (leftIdx === rightIdx) {// target이 없는 경우if (arr[leftIdx] !</description>
     </item>
     
     <item>
       <title>BC-6w-2 / HA-React</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-6w-2/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-2/</link>
       <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-6w-2/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-2/</guid>
       <description>Today I learned #Section Review #DOM #&amp;lt;!</description>
     </item>
     
     <item>
       <title>BC-6w-1 / {FC} React(7)</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-6w-1/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-1/</link>
       <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-6w-1/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-1/</guid>
       <description>Today I learned #+ React with FastCampus(7) Advanced #Optimizing Performance #  필요할 때만 랜더 한다.</description>
     </item>
     
     <item>
       <title>BC-5w-추석(3) / 5주 차 정리 &#43; {FC} React(6)</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-5w-3/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-3/</link>
       <pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-5w-3/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-3/</guid>
       <description>5주 차 정리(추석 연휴) # 19일은 외가, 20일은 산소, 21일은 친가를 방문하였다.</description>
     </item>
     
     <item>
       <title>BC-5w-추석(2) / {FC} React(5)</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-5w-2/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-2/</link>
       <pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-5w-2/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-2/</guid>
       <description>React with FastCampus(5) 실전 활용 #HOC(Higher-Order Component) # HOC = function(컴포넌트) { return 새로운 컴포넌트 } Ex.</description>
     </item>
     
     <item>
       <title>BC-5w-추석(1) / {FC} React(4)</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-5w-1/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-1/</link>
       <pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-5w-1/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-1/</guid>
       <description>React with FastCampus(4) Style #Style Loaders # loader in webpack  CSS, SASS # 스타일이 전역적으로 순서만 다르게 들어가서,</description>
     </item>
     
     <item>
       <title>BC-4w-6 / 4주 차 정리 &#43; {FC} React(3)</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-4w-6/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-6/</link>
       <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-4w-6/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-6/</guid>
       <description>4주 차 정리 # 월요일에는 DOM의 이벤트에 대해 배우고, 혼자서 TypeScript를 학습하였다.</description>
     </item>
     
     <item>
       <title>BC-4w-5 / [React] props, state</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-4w-5/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-5/</link>
       <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-4w-5/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-5/</guid>
       <description>Today I learned #React props &amp;amp; state #  props</description>
     </item>
     
     <item>
       <title>BC-4w-4 / [React] Router &#43; {FC} React(2)</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-4w-4/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-4/</link>
       <pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-4w-4/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-4/</guid>
       <description>Today I learned #SPA # 전통적인 웹사이트는 페이지 전체를 로딩 SPA는 Menu와 Footer와 같이 페이지 전환 전후에 중복되는 부분은 새로 불러오지 않음 SPA는 무거운 JS 파일을 기다리는 시간으로 인해 첫 화면의 로딩 시간이 길어짐 SPA는 검색 엔진 최적화(SEO)가 좋지 않음(구글 등이 HTML을 기반으로 자료 수집)  React Router # npm i react-router-dom 라우팅(Routing)  경로(주소)에 따라 다른 뷰를 보여줌   &amp;lt;BrowserRouter&amp;gt;  &amp;lt;App /&amp;gt;을 감쌈   &amp;lt;Switch&amp;gt;  Route를 감쌈   &amp;lt;Route&amp;gt;  exact 속성은 정확한 주소 매칭 path 속성에 경로   &amp;lt;Link&amp;gt;  to 속성에 path의 경로   Ex.</description>
     </item>
     
     <item>
       <title>BC-4w-3 / [React] Intro &#43; {FC} React(1)</title>
-      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-4w-3/</link>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-3/</link>
       <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-4w-3/</guid>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-3/</guid>
       <description>Today I learned #React Intro #  React</description>
     </item>
     
