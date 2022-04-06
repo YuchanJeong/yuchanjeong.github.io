@@ -5,6 +5,44 @@
     <link>/categories/</link>
     <description>Recent content in Categories on Yuchan&#39;s hello world!</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Wed, 06 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&#39;React&#39;</title>
+      <link>/categories/react/</link>
+      <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>&#39;Bootcamp&#39;</title>
+      <link>/categories/bootcamp/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/bootcamp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>&#39;Etc&#39;</title>
+      <link>/categories/etc/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/etc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>&#39;What I Read&#39;</title>
+      <link>/categories/what-i-read/</link>
+      <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/what-i-read/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
