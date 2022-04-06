@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Algorithm on Yuchan&#39;s hello world!</title>
-    <link>https://yuchanjeong.github.io/tags/algorithm/</link>
+    <link>https://github.com/YuchanJeong/yuchanjeong.github.io/tags/algorithm/</link>
     <description>Recent content in Algorithm on Yuchan&#39;s hello world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://github.com/YuchanJeong/yuchanjeong.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BC-12w-3 / [자료구조/알고리즘] 순열/조합 &amp; GCD/LCM &amp; 멱집합</title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-3/</link>
+      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-12w-3/</link>
       <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-3/</guid>
+      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-12w-3/</guid>
       <description>1. 순열 / 조합 # 순열(순서 O) 공식 : nPr = n!</description>
     </item>
     
     <item>
       <title>BC-12w-2 / [자료구조/알고리즘] 시간 복잡도 &amp; 탐욕 알고리즘 &#43; {FC} Context로 전역 상태 관리하기</title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-2/</link>
+      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-12w-2/</link>
       <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-2/</guid>
+      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-12w-2/</guid>
       <description>Intro to Algorithm # 알고리즘이란 문제를 해결하는 최선의 선택   문제 이해 해결 전략 구상(with 수도 코드) 수도 코드를 바탕으로 코드 작성  1.</description>
     </item>
     
     <item>
       <title>BC-8w-1 / [자료구조/알고리즘] Graph, Tree, BST</title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-1/</link>
+      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-8w-1/</link>
       <pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-1/</guid>
+      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-8w-1/</guid>
       <description>Today I learned #arr[j + 1]) {const temp = arr[j];arr[j] = arr[j + 1];arr[j + 1] = temp;flag = true;}}}return arr;};``` --Graph / Tree / BST #Graph #  여러개의 점들이 서로 복잡하게 연결되어 있는 관계를 표현한 자료구조</description>
     </item>
     
     <item>
       <title>BC-7w-4 / [자료구조/알고리즘] Stack, Queue</title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-4/</link>
+      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-7w-4/</link>
       <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-4/</guid>
+      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-7w-4/</guid>
       <description>Today I learned #a - b);sample.</description>
     </item>
     
     <item>
       <title>BC-7w-3 / [자료구조/알고리즘] 재귀(2)</title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-3/</link>
+      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-7w-3/</link>
       <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-3/</guid>
+      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-7w-3/</guid>
       <description>Today I learned #{// n 인덱스가 있으면 그데로 반환if (listOfFib[n] !</description>
     </item>
     
     <item>
       <title>BC-7w-2 / [자료구조/알고리즘] 재귀(1)</title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-2/</link>
+      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-7w-2/</link>
       <pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-2/</guid>
+      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/posts/bootcamp/bc-7w-2/</guid>
       <description>Today I learned #Algorithm Test 01 팩토리얼 인덱스 찾기 #{// N(1)-1-i(0) === 0if (n it === false).</description>
     </item>
     
