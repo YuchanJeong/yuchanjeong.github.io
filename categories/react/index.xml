@@ -6,7 +6,16 @@
     <description>Recent content in &#39;React&#39; on Yuchan&#39;s hello world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Next.js] Official Documentation (3) - From React to Next.js</title>
+      <link>/posts/react/next.js-od-3/</link>
+      <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/react/next.js-od-3/</guid>
+      <description>From React to Next.</description>
+    </item>
+    
     <item>
       <title>[Next.js] Official Documentation (1) - About Next.js</title>
       <link>/posts/react/next.js-od-1/</link>
