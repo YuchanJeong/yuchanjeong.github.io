@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Wed, 06 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Next.js</title>
       <link>/tags/next.js/</link>
-      <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>/tags/next.js/</guid>
       <description></description>
@@ -27,15 +27,6 @@
     </item>
     
     <item>
-      <title>Deployment</title>
-      <link>/tags/deployment/</link>
-      <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/deployment/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Docker</title>
       <link>/tags/docker/</link>
       <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
@@ -47,7 +38,7 @@
     <item>
       <title>AWS</title>
       <link>/tags/aws/</link>
-      <pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>/tags/aws/</guid>
       <description></description>

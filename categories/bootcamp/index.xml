@@ -63,15 +63,6 @@
     </item>
     
     <item>
-      <title>BC-15w-1 / [배포] Amazon Web Service 실습</title>
-      <link>/draft/bc-15w-3/</link>
-      <pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/draft/bc-15w-3/</guid>
-      <description>1. 백엔드 배포 #1) EC2 인스턴스 생성/연결 Hands-on # AMI 선택 인스턴스 유형 선택 (검토 및 시작) 검토 (키 페어) 연결 (SSH 연결)  chmod 400 ~/Downloads/AWS_DEPLOY_PRACTICE.</description>
-    </item>
-    
-    <item>
       <title>BC-15w-2 / [배포] Amazon Web Service</title>
       <link>/posts/bootcamp/bc-15w-2/</link>
       <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
