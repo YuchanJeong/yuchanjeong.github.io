@@ -103,7 +103,7 @@
     "keywords": ["Next.js"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1192"
+    "wordCount": "1556"
   }]
   </script>
 
@@ -354,7 +354,14 @@
         <li><a href="#dynamic-routes-details">Dynamic Routes Details</a></li>
       </ul>
     </li>
-    <li><a href="#6-api-routes">6. API Routes</a></li>
+    <li><a href="#6-api-routeshttpsnextjsorgdocsapi-routesintroduction">6. API Routes<a href="https://nextjs.org/docs/api-routes/introduction">*</a></a></li>
+    <li><a href="#7-deploying-your-nextjs-app">7. Deploying Your Next.js App</a>
+      <ul>
+        <li><a href="#deploy-to-vercel">Deploy to Vercel</a></li>
+        <li><a href="#nextjs-and-vercelhttpsvercelcomdocs">Next.js and Vercel<a href="https://vercel.com/docs">*</a></a></li>
+        <li><a href="#preview-deployment-for-every-push-develop-preview-ship">Preview Deployment for Every Push (Develop, Preview, Ship)</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -782,7 +789,68 @@ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 <span class="p">}</span>
 </code></pre></div></li>
 </ul>
-<h2 id="6-api-routes" class="relative group">6. API Routes <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#6-api-routes" aria-label="Anchor">#</a></span></h2>
+<h2 id="6-api-routeshttpsnextjsorgdocsapi-routesintroduction" class="relative group">6. API Routes<a href="https://nextjs.org/docs/api-routes/introduction">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#6-api-routeshttpsnextjsorgdocsapi-routesintroduction" aria-label="Anchor">#</a></span></h2>
+<ul>
+<li>Create <code>pages/api/hello.js</code>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">handler</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="nx">text</span><span class="o">:</span> <span class="s2">&#34;Hello&#34;</span> <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div><ul>
+<li><a href="http://localhost:3000/api/hello">http://localhost:3000/api/hello</a></li>
+</ul>
+</li>
+<li>Do Not Fetch an API Route from <code>getStaticProps</code> or <code>getStaticPaths</code>
+<ul>
+<li>Because they run only on the server-side and will never run on the client-side.</li>
+</ul>
+</li>
+<li>A Good Use Case: Handling Form Input
+<ul>
+<li>A good use case for API Routes is handling form input. For example, you can create a form on your page and have it send a POST request to your API Route. You can then write code to directly save it to your database. The API Route code will not be part of your client bundle, so you can safely write server-side code.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">handler</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">email</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">email</span><span class="p">;</span>
+  <span class="c1">// Then save email to your database, etc...
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li><a href="https://nextjs.org/docs/advanced-features/preview-mode">Preview Mode</a></li>
+<li><a href="https://nextjs.org/docs/api-routes/dynamic-api-routes">Dynamic API Routes</a></li>
+</ul>
+<h2 id="7-deploying-your-nextjs-app" class="relative group">7. Deploying Your Next.js App <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#7-deploying-your-nextjs-app" aria-label="Anchor">#</a></span></h2>
+<h3 id="deploy-to-vercel" class="relative group">Deploy to Vercel <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#deploy-to-vercel" aria-label="Anchor">#</a></span></h3>
+<ol>
+<li>Create a Github Repository</li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git remote add origin git@github.com:YuchanJeong/nextjs-blog-sample.git
+git push -u origin main
+</code></pre></div></li>
+<li><a href="https://vercel.com/signup">Create a Vercel Account</a></li>
+<li>Import your <code>nextjs-blog-sample</code> repository</li>
+</ol>
+<ul>
+<li><a href="https://nextjs-blog-sample-omega.vercel.app/">nextjs-blog-sample</a></li>
+</ul>
+<h3 id="nextjs-and-vercelhttpsvercelcomdocs" class="relative group">Next.js and Vercel<a href="https://vercel.com/docs">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nextjs-and-vercelhttpsvercelcomdocs" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>Default features:
+<ul>
+<li>Pages that use Static Generation and assets (JS, CSS, images, fonts, etc) will automatically be served from the Vercel Edge Network, which is blazingly fast.</li>
+<li>Pages that use Server-Side Rendering and API routes will automatically become isolated Serverless Functions. This allows page rendering and API requests to scale infinitely.</li>
+</ul>
+</li>
+<li>More features:
+<ul>
+<li><strong>Custom Domains</strong>: Once deployed on Vercel, you can assign a custom domain to your Next.js app. Take a look at <a href="https://vercel.com/docs/concepts/projects/custom-domains">our documentation</a> here.</li>
+<li><strong>Environment Variables</strong>: You can also set environment variables on Vercel. Take a look at <a href="https://vercel.com/docs/concepts/deployments/build-step#environment-variables">our documentation</a> here. You can then use those <a href="https://nextjs.org/docs/basic-features/environment-variables#loading-environment-variables">environment variables</a> in your Next.js app.</li>
+<li><strong>Automatic HTTPS</strong>: HTTPS is enabled by default (including custom domains) and doesn&rsquo;t require extra configuration. We auto-renew SSL certificates.</li>
+</ul>
+</li>
+</ul>
+<h3 id="preview-deployment-for-every-push-develop-preview-ship" class="relative group">Preview Deployment for Every Push (Develop, Preview, Ship) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#preview-deployment-for-every-push-develop-preview-ship" aria-label="Anchor">#</a></span></h3>
+<p>When you have a pull request open, Vercel automatically creates a preview deployment for that branch on every push. The preview URL will always point to the latest preview deployment.</p>
+<p>You can share this preview URL with your collaborators and get immediate feedback.</p>
+<p>If your preview deployment looks good, merge it to <code>main</code>. When you do this, Vercel automatically creates a production deployment.</p>
 
       </div>
     </section>
