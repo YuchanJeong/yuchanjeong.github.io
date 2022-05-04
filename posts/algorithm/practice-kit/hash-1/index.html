@@ -103,7 +103,7 @@
     "keywords": ["Algorithm","Practice Kit"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "871"
+    "wordCount": "981"
   }]
   </script>
 
@@ -362,7 +362,8 @@
     </li>
     <li><a href="#my-tip">My Tip</a>
       <ul>
-        <li><a href="#type-별-정보-정리">Type 별 정보 정리</a></li>
+        <li><a href="#compile-by-type">Compile by Type</a></li>
+        <li><a href="#sort">.sort</a></li>
       </ul>
     </li>
   </ul>
@@ -608,7 +609,15 @@
   <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><h2 id="my-tip" class="relative group">My Tip <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#my-tip" aria-label="Anchor">#</a></span></h2>
-<h3 id="type-별-정보-정리" class="relative group">Type 별 정보 정리 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#type-%eb%b3%84-%ec%a0%95%eb%b3%b4-%ec%a0%95%eb%a6%ac" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>sort
+<ul>
+<li>내부의 값을 이용한 정렬</li>
+<li>다중 정렬</li>
+</ul>
+</li>
+</ul>
+<h3 id="compile-by-type" class="relative group">Compile by Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#compile-by-type" aria-label="Anchor">#</a></span></h3>
 <ul>
 <li>reduce
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">arr1</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
@@ -629,6 +638,38 @@
 <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr1</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">arr1</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">arr1</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">||</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">+</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
 <span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="sort" class="relative group">.sort <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sort" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>
+<p>객체 정렬</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 1) value
+</span><span class="c1"></span><span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">value</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span> <span class="c1">// value값 기준 내림차순정렬
+</span><span class="c1"></span><span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">value</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span> <span class="c1">// value값 기준 오름차순정렬
+</span><span class="c1"></span>
+<span class="c1">// 2) key
+</span><span class="c1"></span><span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">el</span><span class="p">));</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="c1">// key값 기준 내림차순정렬
+</span><span class="c1"></span><span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="nx">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="c1">// key값 기준 오름차순정렬
+</span></code></pre></div></li>
+<li>
+<p>다중 정렬</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">type1</span> <span class="o">!==</span> <span class="nx">b</span><span class="p">.</span><span class="nx">type1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">b</span><span class="p">.</span><span class="nx">type1</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">type1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">type2</span> <span class="o">!==</span> <span class="nx">b</span><span class="p">.</span><span class="nx">type2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">b</span><span class="p">.</span><span class="nx">type2</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">type2</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">b</span><span class="p">.</span><span class="nx">type3</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">type3</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="cm">/*
+</span><span class="cm">arr.sort((a, b) =&gt; b.type3 - a.type3)
+</span><span class="cm">arr.sort((a, b) =&gt; b.type2 - a.type2)
+</span><span class="cm">arr.sort((a, b) =&gt; b.type1 - a.type1)
+</span><span class="cm">*/</span>
 </code></pre></div></li>
 </ul>
 <hr>
