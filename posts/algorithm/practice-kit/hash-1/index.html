@@ -103,7 +103,7 @@
     "keywords": ["Algorithm","Practice Kit"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "693"
+    "wordCount": "871"
   }]
   </script>
 
@@ -357,7 +357,12 @@
       <ul>
         <li><a href="#1-완주하지-못한-선수-lv1-httpsprogrammerscokrlearncourses30lessons42576languagejavascript">1. 완주하지 못한 선수 (Lv.1) <a href="https://programmers.co.kr/learn/courses/30/lessons/42576?language=javascript#">*</a></a></li>
         <li><a href="#2-위장-lv2-httpsprogrammerscokrlearncourses30lessons42578languagejavascript">2. 위장 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42578?language=javascript">*</a></a></li>
-        <li><a href="#3-베스트앨범-httpsprogrammerscokrlearncourses30lessons42579">3. 베스트앨범 <a href="https://programmers.co.kr/learn/courses/30/lessons/42579">*</a></a></li>
+        <li><a href="#3-베스트앨범-lv3-httpsprogrammerscokrlearncourses30lessons42579">3. 베스트앨범 (Lv.3) <a href="https://programmers.co.kr/learn/courses/30/lessons/42579">*</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#my-tip">My Tip</a>
+      <ul>
+        <li><a href="#type-별-정보-정리">Type 별 정보 정리</a></li>
       </ul>
     </li>
   </ul>
@@ -523,48 +528,110 @@
     <span class="p">).</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acc</span> <span class="o">*</span> <span class="p">(</span><span class="nx">cur</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
   <span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div><h3 id="3-베스트앨범-httpsprogrammerscokrlearncourses30lessons42579" class="relative group">3. 베스트앨범 <a href="https://programmers.co.kr/learn/courses/30/lessons/42579">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%eb%b2%a0%ec%8a%a4%ed%8a%b8%ec%95%a8%eb%b2%94-httpsprogrammerscokrlearncourses30lessons42579" aria-label="Anchor">#</a></span></h3>
+</code></pre></div><h3 id="3-베스트앨범-lv3-httpsprogrammerscokrlearncourses30lessons42579" class="relative group">3. 베스트앨범 (Lv.3) <a href="https://programmers.co.kr/learn/courses/30/lessons/42579">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%eb%b2%a0%ec%8a%a4%ed%8a%b8%ec%95%a8%eb%b2%94-lv3-httpsprogrammerscokrlearncourses30lessons42579" aria-label="Anchor">#</a></span></h3>
+<ol>
+<li>reduce 사용</li>
+</ol>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">genres</span><span class="p">,</span> <span class="nx">plays</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">info</span> <span class="o">=</span> <span class="nx">genres</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">genre</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="kr">const</span> <span class="nx">infos</span> <span class="o">=</span> <span class="nx">genres</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">genre</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
     <span class="nx">num</span><span class="o">:</span> <span class="nx">idx</span><span class="p">,</span>
     <span class="nx">genre</span><span class="o">:</span> <span class="nx">genre</span><span class="p">,</span>
     <span class="nx">play</span><span class="o">:</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">],</span>
   <span class="p">}));</span>
 
   <span class="c1">// 1) 장르별 총 플레이 시간
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">genre_play_obj</span> <span class="o">=</span> <span class="nx">genres</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">genre_play</span> <span class="o">=</span> <span class="nx">genres</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
     <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">genre</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
       <span class="p">(</span><span class="nx">obj</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">?</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">:</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">]),</span> <span class="nx">obj</span>
     <span class="p">),</span>
     <span class="p">{}</span>
   <span class="p">);</span>
 
-  <span class="nx">info</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">infos</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="kr">const</span> <span class="nx">genre</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">genre</span><span class="p">;</span>
-    <span class="kr">const</span> <span class="nx">genre_play</span> <span class="o">=</span> <span class="nx">genre_play_obj</span><span class="p">[</span><span class="nx">genre</span><span class="p">];</span>
+    <span class="kr">const</span> <span class="nx">genre_play</span> <span class="o">=</span> <span class="nx">genre_play</span><span class="p">[</span><span class="nx">genre</span><span class="p">];</span>
 
     <span class="nx">el</span><span class="p">.</span><span class="nx">genre</span> <span class="o">=</span> <span class="nx">genre_play</span><span class="p">;</span>
   <span class="p">});</span>
 
   <span class="c1">// 2) 순서대로 정렬
-</span><span class="c1"></span>  <span class="nx">info</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">play</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">play</span><span class="p">);</span>
-  <span class="nx">info</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">genre</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">genre</span><span class="p">);</span>
+</span><span class="c1"></span>  <span class="nx">infos</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">play</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">play</span><span class="p">);</span>
+  <span class="nx">infos</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">genre</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">genre</span><span class="p">);</span>
 
-  <span class="c1">// 3) 2개만 베스트앨범에 추가
+  <span class="c1">// 3) 2개만 앨범에 추가
 </span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="p">{};</span>
-  <span class="kr">const</span> <span class="nx">best_album</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="kr">const</span> <span class="nx">album</span> <span class="o">=</span> <span class="p">[];</span>
 
-  <span class="nx">info</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">infos</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="nx">count</span><span class="p">[</span><span class="nx">el</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">count</span><span class="p">[</span><span class="nx">el</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">?</span> <span class="nx">count</span><span class="p">[</span><span class="nx">el</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="nx">count</span><span class="p">[</span><span class="nx">el</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">best_album</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">num</span><span class="p">);</span>
+      <span class="nx">album</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">num</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">});</span>
 
-  <span class="k">return</span> <span class="nx">best_album</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">album</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><hr>
+</code></pre></div><ol start="2">
+<li>forEach, 다중 sort 사용</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">genres</span><span class="p">,</span> <span class="nx">plays</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">genre_play</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="nx">genres</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">genre</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">genre_play</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">genre_play</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span>
+      <span class="o">?</span> <span class="nx">genre_play</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span>
+      <span class="o">:</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span>
+  <span class="p">});</span>
+
+  <span class="kr">const</span> <span class="nx">genre_play_count</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="nx">genres</span>
+      <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">genre</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">genre</span><span class="o">:</span> <span class="nx">genre</span><span class="p">,</span> <span class="nx">play</span><span class="o">:</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">],</span> <span class="nx">num</span><span class="o">:</span> <span class="nx">idx</span> <span class="p">}))</span>
+      <span class="c1">// 다중 sort
+</span><span class="c1"></span>      <span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">genre</span> <span class="o">!==</span> <span class="nx">b</span><span class="p">.</span><span class="nx">genre</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nx">genre_play</span><span class="p">[</span><span class="nx">b</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">-</span> <span class="nx">genre_play</span><span class="p">[</span><span class="nx">a</span><span class="p">.</span><span class="nx">genre</span><span class="p">];</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">play</span> <span class="o">!==</span> <span class="nx">b</span><span class="p">.</span><span class="nx">play</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nx">b</span><span class="p">.</span><span class="nx">play</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">play</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">num</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">num</span><span class="p">;</span>
+      <span class="p">})</span>
+      <span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">genre</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">genre_play_count</span><span class="p">[</span><span class="nx">genre</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="nx">genre_play_count</span><span class="p">[</span><span class="nx">genre</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">genre_play_count</span><span class="p">[</span><span class="nx">genre</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span>
+          <span class="o">?</span> <span class="nx">genre_play_count</span><span class="p">[</span><span class="nx">genre</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+          <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="p">})</span>
+      <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">genre</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">genre</span><span class="p">.</span><span class="nx">num</span><span class="p">)</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="my-tip" class="relative group">My Tip <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#my-tip" aria-label="Anchor">#</a></span></h2>
+<h3 id="type-별-정보-정리" class="relative group">Type 별 정보 정리 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#type-%eb%b3%84-%ec%a0%95%eb%b3%b4-%ec%a0%95%eb%a6%ac" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>reduce
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">arr1</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
+  <span class="p">(</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
+    <span class="p">(</span><span class="nx">acc</span><span class="p">[</span><span class="nx">cur</span><span class="p">]</span> <span class="o">=</span> <span class="nx">acc</span><span class="p">[</span><span class="nx">cur</span><span class="p">]</span> <span class="o">?</span> <span class="nx">acc</span><span class="p">[</span><span class="nx">cur</span><span class="p">]</span> <span class="o">+</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">:</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">idx</span><span class="p">]),</span> <span class="nx">obj</span>
+  <span class="p">),</span>
+  <span class="p">{}</span>
+<span class="p">);</span>
+</code></pre></div></li>
+<li>forEach
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="nx">arr1</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">el</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">obj</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span> <span class="o">?</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span> <span class="o">+</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">:</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span>
+<span class="p">});</span>
+</code></pre></div></li>
+<li>map
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr1</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">arr1</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">arr1</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">||</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">+</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<hr>
 <p>*Ref. <a href="https://programmers.co.kr/learn/courses/30/parts/12077">프로그래머스 고득점 Kit - 해시</a>
 *Ref. <a href="https://ratsgo.github.io/data%20structure&amp;algorithm/2017/10/25/hash/">ratsgo&rsquo;s blog - 해싱, 해시함수, 해시테이블</a></p>
 
