@@ -10,10 +10,10 @@
     <lastBuildDate>Mon, 02 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Practice Kit] Hash</title>
-      <link>/posts/algorithm/practice-kit/hash-1/</link>
+      <link>/posts/algorithm/practice-kit/hash/</link>
       <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>/posts/algorithm/practice-kit/hash-1/</guid>
+      <guid>/posts/algorithm/practice-kit/hash/</guid>
       <description>개념 정리 #Hash Table # key, value 쌍으로 데이터를 배열(bucket, slot)에 저장하는 자료 구조.</description>
     </item>
     
@@ -807,6 +807,15 @@
       
       <guid>/posts/bootcamp/bc-1w-1/</guid>
       <description>Today I learned #학습 환경 설정 # UrClass Zoom Discord Notion GitHub GoogleCalendar  학습 방향 설정 # 자기 주도 학습  개발자는 끊임없이 학습해야한다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/algorithm/practice-kit/sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/algorithm/practice-kit/sort/</guid>
+      <description></description>
     </item>
     
   </channel>
