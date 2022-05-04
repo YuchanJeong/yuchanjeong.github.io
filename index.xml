@@ -14,7 +14,7 @@
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
       
       <guid>/posts/algorithm/practice-kit/sort/</guid>
-      <description>문제 #1.</description>
+      <description>정렬을 이용해서 문제를 효율적으로 풀어보세요.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
       
       <guid>/posts/algorithm/practice-kit/hash/</guid>
-      <description>개념 정리 #Hash Table # key, value 쌍으로 데이터를 배열(bucket, slot)에 저장하는 자료 구조.</description>
+      <description>Key-value쌍으로 데이터를 빠르게 찾아보세요.</description>
     </item>
     
     <item>
