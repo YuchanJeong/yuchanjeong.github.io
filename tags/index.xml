@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithm</title>
+      <link>/tags/algorithm/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Practice Kit</title>
+      <link>/tags/practice-kit/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/practice-kit/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>React</title>
       <link>/tags/react/</link>
@@ -95,15 +113,6 @@
       <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/redux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Algorithm</title>
-      <link>/tags/algorithm/</link>
-      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/algorithm/</guid>
       <description></description>
     </item>
     

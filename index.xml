@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Practice Kit] Hash</title>
+      <link>/posts/algorithm/practice-kit/hash-1/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/algorithm/practice-kit/hash-1/</guid>
+      <description>개념 정리 #Hash Table # key, value 쌍으로 데이터를 배열(bucket, slot)에 저장하는 자료 구조.</description>
+    </item>
+    
     <item>
       <title>[React] React v18.0</title>
       <link>/posts/today-i-learned/react/react-v18/</link>
