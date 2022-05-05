@@ -2,54 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Yuchan&#39;s hello world!</title>
-    <link>/categories/</link>
+    <link>https://github.com/YuchanJeong/yuchanjeong.github.io/categories/</link>
     <description>Recent content in Categories on Yuchan&#39;s hello world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Thu, 05 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://github.com/YuchanJeong/yuchanjeong.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#39;Algorithm&#39;</title>
-      <link>/categories/algorithm/</link>
+      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/categories/algorithm/</link>
       <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>/categories/algorithm/</guid>
+      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/categories/algorithm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>&#39;Today I learned&#39;</title>
-      <link>/categories/today-i-learned/</link>
+      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/categories/today-i-learned/</link>
       <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>/categories/today-i-learned/</guid>
+      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/categories/today-i-learned/</guid>
       <description></description>
     </item>
     
     <item>
       <title>&#39;Bootcamp&#39;</title>
-      <link>/categories/bootcamp/</link>
+      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/categories/bootcamp/</link>
       <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>/categories/bootcamp/</guid>
+      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/categories/bootcamp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>&#39;Etc&#39;</title>
-      <link>/categories/etc/</link>
+      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/categories/etc/</link>
       <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>/categories/etc/</guid>
+      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/categories/etc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>&#39;What I read&#39;</title>
-      <link>/categories/what-i-read/</link>
+      <link>https://github.com/YuchanJeong/yuchanjeong.github.io/categories/what-i-read/</link>
       <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>/categories/what-i-read/</guid>
+      <guid>https://github.com/YuchanJeong/yuchanjeong.github.io/categories/what-i-read/</guid>
       <description></description>
     </item>
     
