@@ -103,7 +103,7 @@
     "keywords": ["Algorithm","Practice Kit"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "505"
+    "wordCount": "634"
   }]
   </script>
 
@@ -350,12 +350,14 @@
       <ul>
         <li><a href="#1-모의고사-lv1-httpsprogrammerscokrlearncourses30lessons42840languagejavascript">1. 모의고사 (Lv.1) <a href="https://programmers.co.kr/learn/courses/30/lessons/42840?language=javascript">*</a></a></li>
         <li><a href="#2-소수-찾기-lv2-httpsprogrammerscokrlearncourses30lessons42839languagejavascript">2. 소수 찾기 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42839?language=javascript">*</a></a></li>
+        <li><a href="#3-카펫-lv2-httpsprogrammerscokrlearncourses30lessons42842languagejavascript">3. 카펫 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42842?language=javascript">*</a></a></li>
       </ul>
     </li>
     <li><a href="#my-tips">My Tips</a>
       <ul>
         <li><a href="#효율적인-소수-판별">효율적인 소수 판별</a></li>
         <li><a href="#재귀함수를-활용한-조합-및-순열">재귀함수를 활용한 조합 및 순열</a></li>
+        <li><a href="#효율적인-약수-쌍-구하기">효율적인 약수 쌍 구하기</a></li>
       </ul>
     </li>
   </ul>
@@ -422,6 +424,29 @@
   <span class="kr">const</span> <span class="nx">unique_arr</span> <span class="o">=</span> <span class="p">[...</span><span class="k">new</span> <span class="nx">Set</span><span class="p">(</span><span class="nx">arr</span><span class="p">)];</span>
 
   <span class="k">return</span> <span class="nx">unique_arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">isPrime</span><span class="p">(</span><span class="nx">el</span><span class="p">)).</span><span class="nx">length</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="3-카펫-lv2-httpsprogrammerscokrlearncourses30lessons42842languagejavascript" class="relative group">3. 카펫 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42842?language=javascript">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%ec%b9%b4%ed%8e%ab-lv2-httpsprogrammerscokrlearncourses30lessons42842languagejavascript" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">brown</span><span class="p">,</span> <span class="nx">yellow</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">getDivisors</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nx">num</span><span class="p">));</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">%</span> <span class="nx">i</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">result</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">num</span> <span class="o">/</span> <span class="nx">el</span><span class="p">,</span> <span class="nx">el</span><span class="p">]);</span>
+  <span class="p">};</span>
+
+  <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="kr">const</span> <span class="nx">divisors</span> <span class="o">=</span> <span class="nx">getDivisors</span><span class="p">(</span><span class="nx">yellow</span><span class="p">);</span>
+  <span class="nx">divisors</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">divisor</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">width</span> <span class="o">=</span> <span class="nx">divisor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="kr">const</span> <span class="nx">height</span> <span class="o">=</span> <span class="nx">divisor</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">brown</span> <span class="o">===</span> <span class="nx">width</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="nx">height</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h2 id="my-tips" class="relative group">My Tips <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#my-tips" aria-label="Anchor">#</a></span></h2>
 <h3 id="효율적인-소수-판별" class="relative group">효율적인 소수 판별 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%9a%a8%ec%9c%a8%ec%a0%81%ec%9d%b8-%ec%86%8c%ec%88%98-%ed%8c%90%eb%b3%84" aria-label="Anchor">#</a></span></h3>
@@ -508,7 +533,15 @@
 </code></pre></div></li>
 </ul>
 <p>*forEach에 rest_arr가 하나씩 줄어서 따로 탈출 조건은 필요 없음.</p>
-<hr>
+<h3 id="효율적인-약수-쌍-구하기" class="relative group">효율적인 약수 쌍 구하기 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%9a%a8%ec%9c%a8%ec%a0%81%ec%9d%b8-%ec%95%bd%ec%88%98-%ec%8c%8d-%ea%b5%ac%ed%95%98%ea%b8%b0" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">getDivisors</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nx">num</span><span class="p">));</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">%</span> <span class="nx">i</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">result</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">el</span><span class="p">,</span> <span class="nx">num</span> <span class="o">/</span> <span class="nx">el</span><span class="p">]);</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <p>*Ref. <a href="https://programmers.co.kr/learn/courses/30/parts/12230">프로그래머스 고득점 Kit - 완전탐색</a></p>
 
       </div>
