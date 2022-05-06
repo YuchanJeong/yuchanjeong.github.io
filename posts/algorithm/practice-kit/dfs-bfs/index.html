@@ -103,7 +103,7 @@
     "keywords": ["Algorithm","Practice Kit"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "260"
+    "wordCount": "446"
   }]
   </script>
 
@@ -458,8 +458,68 @@
 </span><span class="cm">로 처음 풀었었는데 중복 char를 처리해주지 못해서 에러!
 </span><span class="cm">*/</span>
 </code></pre></div><h3 id="4-여행경로-lv3-httpsprogrammerscokrlearncourses30lessons43164languagejavascript" class="relative group">4. 여행경로 (Lv.3) <a href="https://programmers.co.kr/learn/courses/30/lessons/43164?language=javascript">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-%ec%97%ac%ed%96%89%ea%b2%bd%eb%a1%9c-lv3-httpsprogrammerscokrlearncourses30lessons43164languagejavascript" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// DFS(재귀)
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">tickets</span><span class="p">)</span> <span class="p">{</span>
+  <span class="cm">/*
+</span><span class="cm">  // 문자일 때는 .sort()로 가능!
+</span><span class="cm">  tickets.sort((a, b) =&gt; {
+</span><span class="cm">    if (a[0] !== b[0]) {
+</span><span class="cm">      return a[0] - b[0];
+</span><span class="cm">    }
+</span><span class="cm">    return a[1] - b[1];
+</span><span class="cm">  });
+</span><span class="cm">  */</span>
+  <span class="nx">tickets</span><span class="p">.</span><span class="nx">sort</span><span class="p">();</span>
+
+  <span class="c1">// 1) 결과 저장소
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="c1">// 2) 중복 체크
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">isVisited</span> <span class="o">=</span> <span class="nx">tickets</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="kc">false</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">tickets</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+
+  <span class="c1">// 3) 재귀 함수
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">dfs</span> <span class="o">=</span> <span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">depth</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// a. 결과 저장!!!
+</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
+
+    <span class="c1">// ★☆★유효 경로 O (마지막 node 도착)★☆★
+</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">depth</span> <span class="o">===</span> <span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 반복문
+</span><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// 중복 체크
+</span><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="nx">isVisited</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="k">continue</span><span class="p">;</span>
+      <span class="c1">// 및 조건 확인
+</span><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="nx">tickets</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// b. 중복 저장!!
+</span><span class="c1"></span>        <span class="nx">isVisited</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+        <span class="c1">// 조건을 만족한다면 다음 node에서 재귀 지속!
+</span><span class="c1"></span>        <span class="c1">// 조건을 만족하지 못하면 false를 반환하고 재귀 종료!
+</span><span class="c1"></span>        <span class="c1">// ★☆★탈출 조건에서 true를 반환하는 순간 순차적으로 true 반환★☆★
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">dfs</span><span class="p">(</span><span class="nx">tickets</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="nx">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// b. 중복 취소!!
+</span><span class="c1"></span>        <span class="nx">isVisited</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// a. 결과 취소!!!
+</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+    <span class="c1">// 유효 경로 X
+</span><span class="c1"></span>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="nx">dfs</span><span class="p">(</span><span class="s2">&#34;ICN&#34;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><hr>
+<p>*Ref. <a href="https://programmers.co.kr/learn/courses/30/parts/12421">프로그래머스 고득점 Kit - 깊이/너비 우선 탐색(DFS/BFS)</a></p>
+
       </div>
     </section>
     <footer class="pt-8 max-w-prose">
