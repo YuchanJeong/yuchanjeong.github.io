@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Practice Kit] 스택/큐(Stack/Queue)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/stack-queue/</link>
+      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/stack-queue/</guid>
+      <description>LIFO, FIFO, push &amp;amp; pop!</description>
+    </item>
+    
     <item>
       <title>[Practice Kit] 깊이/너비 우선 탐색(DFS/BFS)</title>
       <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/dfs-bfs/</link>
