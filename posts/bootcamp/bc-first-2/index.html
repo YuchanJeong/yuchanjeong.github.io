@@ -100,10 +100,10 @@
     
     "dateModified": "2022-02-03T00:00:00\u002b00:00",
     
-    "keywords": ["Retrospect"],
+    "keywords": ["Debate-Ducks","Retrospect"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1771"
+    "wordCount": "1804"
   }]
   </script>
 
@@ -312,6 +312,12 @@
         
           
             <a
+              href="/tags/debate-ducks/"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Debate-Ducks</a
+            >
+          
+            <a
               href="/tags/retrospect/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
               >Retrospect</a
@@ -465,8 +471,12 @@
   <span class="c1">// 처음에 undefined라서 초깃값을 따로 할당해서 length나 filter()를 사용 가능하게 만듦
 </span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">publicBoardsData</span> <span class="o">=</span> <span class="nx">publicBoards</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span> <span class="o">||</span> <span class="p">[];</span>
   <span class="kr">const</span> <span class="nx">privateBoardsData</span> <span class="o">=</span> <span class="nx">privateBoards</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span> <span class="o">||</span> <span class="p">[];</span>
-  <span class="kr">const</span> <span class="nx">publicBoard</span> <span class="o">=</span> <span class="nx">publicBoardsData</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">board</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">String</span><span class="p">(</span><span class="nx">board</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span> <span class="o">===</span> <span class="nx">boardId</span><span class="p">);</span>
-  <span class="kr">const</span> <span class="nx">privateBoard</span> <span class="o">=</span> <span class="nx">privateBoardsData</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">board</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">String</span><span class="p">(</span><span class="nx">board</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span> <span class="o">===</span> <span class="nx">boardId</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">publicBoard</span> <span class="o">=</span> <span class="nx">publicBoardsData</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span>
+    <span class="p">(</span><span class="nx">board</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">String</span><span class="p">(</span><span class="nx">board</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span> <span class="o">===</span> <span class="nx">boardId</span>
+  <span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">privateBoard</span> <span class="o">=</span> <span class="nx">privateBoardsData</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span>
+    <span class="p">(</span><span class="nx">board</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">String</span><span class="p">(</span><span class="nx">board</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span> <span class="o">===</span> <span class="nx">boardId</span>
+  <span class="p">);</span>
   <span class="kr">const</span> <span class="nx">board</span> <span class="o">=</span> <span class="nx">publicBoard</span><span class="p">.</span><span class="nx">length</span> <span class="o">!==</span> <span class="mi">0</span> <span class="o">?</span> <span class="nx">publicBoard</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">:</span> <span class="nx">privateBoard</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
   <span class="kr">const</span> <span class="nx">isLoading</span> <span class="o">=</span> <span class="nx">publicBoards</span><span class="p">.</span><span class="nx">loading</span> <span class="o">&amp;&amp;</span> <span class="nx">privateBoards</span><span class="p">.</span><span class="nx">loading</span><span class="p">;</span>
 
@@ -481,10 +491,15 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createAsyncThunk</span><span class="p">,</span> <span class="nx">createSlice</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;@reduxjs/toolkit&#34;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&#34;axios&#34;</span><span class="p">;</span>
 
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">getPrivateBoards</span> <span class="o">=</span> <span class="nx">createAsyncThunk</span><span class="p">(</span><span class="s2">&#34;privateBoards/getPrivateBoards&#34;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">couple_id</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_API_URL</span><span class="si">}</span><span class="sb">/boards/</span><span class="si">${</span><span class="nx">couple_id</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-  <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
-<span class="p">});</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">getPrivateBoards</span> <span class="o">=</span> <span class="nx">createAsyncThunk</span><span class="p">(</span>
+  <span class="s2">&#34;privateBoards/getPrivateBoards&#34;</span><span class="p">,</span>
+  <span class="kr">async</span> <span class="p">(</span><span class="nx">couple_id</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span>
+      <span class="sb">`</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_API_URL</span><span class="si">}</span><span class="sb">/boards/</span><span class="si">${</span><span class="nx">couple_id</span><span class="si">}</span><span class="sb">`</span>
+    <span class="p">);</span>
+    <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">);</span>
 
 <span class="kr">const</span> <span class="nx">privateBoardsSlice</span> <span class="o">=</span> <span class="nx">createSlice</span><span class="p">({</span>
   <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;privateBoardsSlice&#34;</span><span class="p">,</span>
@@ -588,7 +603,8 @@
 </code></pre></div><h3 id="5-navbar" class="relative group">5. Navbar <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-navbar" aria-label="Anchor">#</a></span></h3>
 <h5 id="게시판-타입-별로-아이콘-선택" class="relative group">게시판 타입 별로 아이콘 선택 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ea%b2%8c%ec%8b%9c%ed%8c%90-%ed%83%80%ec%9e%85-%eb%b3%84%eb%a1%9c-%ec%95%84%ec%9d%b4%ec%bd%98-%ec%84%a0%ed%83%9d" aria-label="Anchor">#</a></span></h5>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">const</span> <span class="nx">choseIcon</span> <span class="o">=</span> <span class="p">(</span><span class="nx">category</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">category</span> <span class="o">===</span> <span class="s2">&#34;post&#34;</span><span class="p">)</span> <span class="k">return</span> <span class="p">&lt;</span><span class="nt">BsPencilSquare</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;inline mr-2 mb-1&#34;</span> <span class="p">/&gt;;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">category</span> <span class="o">===</span> <span class="s2">&#34;post&#34;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">&lt;</span><span class="nt">BsPencilSquare</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;inline mr-2 mb-1&#34;</span> <span class="p">/&gt;;</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">category</span> <span class="o">===</span> <span class="s2">&#34;chat&#34;</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">(</span>
       <span class="p">&lt;</span><span class="nt">BsChatDots</span>
@@ -611,7 +627,12 @@
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;border-hibye-60&#34;</span><span class="p">&gt;</span><span class="nx">There</span> <span class="nx">is</span> <span class="nx">no</span> <span class="nx">board</span><span class="p">.&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">)</span> <span class="o">:</span> <span class="p">(</span>
     <span class="nx">boards</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">board</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
-      <span class="p">&lt;</span><span class="nt">Link</span> <span class="na">to</span><span class="o">=</span><span class="p">{</span><span class="sb">`/</span><span class="si">${</span><span class="nx">board</span><span class="p">.</span><span class="nx">category</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">board</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">?page=1&amp;search=`</span><span class="p">}</span> <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">board</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;mb-4 truncate block hover:text-hibye-80 duration-300&#34;</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">click</span><span class="p">}&gt;</span>
+      <span class="p">&lt;</span><span class="nt">Link</span>
+        <span class="na">to</span><span class="o">=</span><span class="p">{</span><span class="sb">`/</span><span class="si">${</span><span class="nx">board</span><span class="p">.</span><span class="nx">category</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">board</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">?page=1&amp;search=`</span><span class="p">}</span>
+        <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">board</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span>
+        <span class="na">className</span><span class="o">=</span><span class="s">&#34;mb-4 truncate block hover:text-hibye-80 duration-300&#34;</span>
+        <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">click</span><span class="p">}</span>
+      <span class="p">&gt;</span>
         <span class="p">{</span><span class="nx">choseIcon</span><span class="p">(</span><span class="nx">board</span><span class="p">.</span><span class="nx">category</span><span class="p">)}</span> <span class="p">{</span><span class="nx">board</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span>
       <span class="p">&lt;/</span><span class="nt">Link</span><span class="p">&gt;</span>
     <span class="p">))</span>
@@ -626,10 +647,21 @@
 
 <span class="c1">// --- //
 </span><span class="c1"></span>
-<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">value</span><span class="o">=</span><span class="p">{</span><span class="nx">name</span><span class="p">}</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Enter board name&#34;</span> <span class="na">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">onChangeName</span><span class="p">}</span> <span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="nx">inputStyle</span><span class="p">}</span> <span class="na">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">refName</span><span class="p">}</span> <span class="p">/&gt;;</span>
+<span class="p">&lt;</span><span class="nt">input</span>
+  <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span>
+  <span class="na">value</span><span class="o">=</span><span class="p">{</span><span class="nx">name</span><span class="p">}</span>
+  <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Enter board name&#34;</span>
+  <span class="na">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">onChangeName</span><span class="p">}</span>
+  <span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="nx">inputStyle</span><span class="p">}</span>
+  <span class="na">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">refName</span><span class="p">}</span>
+<span class="p">/&gt;;</span>
 </code></pre></div><h5 id="게시판-생성-시-유효성-검사" class="relative group">게시판 생성 시 유효성 검사 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ea%b2%8c%ec%8b%9c%ed%8c%90-%ec%83%9d%ec%84%b1-%ec%8b%9c-%ec%9c%a0%ed%9a%a8%ec%84%b1-%ea%b2%80%ec%82%ac" aria-label="Anchor">#</a></span></h5>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">const</span> <span class="nx">nameByte</span> <span class="o">=</span> <span class="nx">getByteLength</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">nameByte</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">nameByte</span> <span class="o">&gt;</span> <span class="mi">36</span> <span class="o">||</span> <span class="sr">/\s{2,}|^\s|\s$|[^\w가-힣\x20\s]/g</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">name</span><span class="p">))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span>
+  <span class="nx">nameByte</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span>
+  <span class="nx">nameByte</span> <span class="o">&gt;</span> <span class="mi">36</span> <span class="o">||</span>
+  <span class="sr">/\s{2,}|^\s|\s$|[^\w가-힣\x20\s]/g</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+<span class="p">)</span> <span class="p">{</span>
   <span class="nx">setValid</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="p">...</span><span class="nx">state</span><span class="p">,</span> <span class="nx">isValid</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">reason</span><span class="o">:</span> <span class="s2">&#34;name&#34;</span> <span class="p">}));</span>
   <span class="nx">refName</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
   <span class="k">return</span><span class="p">;</span>
@@ -705,10 +737,12 @@
 
 <span class="kr">const</span> <span class="nx">getChats</span> <span class="o">=</span> <span class="nx">useCallback</span><span class="p">(</span><span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="nx">setLoading</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-  <span class="kr">await</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_API_URL</span><span class="si">}</span><span class="sb">/posts/</span><span class="si">${</span><span class="nx">boardId</span><span class="si">}</span><span class="sb">?page=</span><span class="si">${</span><span class="nx">page</span><span class="si">}</span><span class="sb">`</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">setChats</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[...</span><span class="nx">state</span><span class="p">,</span> <span class="p">...</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">]);</span>
-    <span class="nx">setLastPage</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">lastPage</span><span class="p">);</span>
-  <span class="p">});</span>
+  <span class="kr">await</span> <span class="nx">axios</span>
+    <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_API_URL</span><span class="si">}</span><span class="sb">/posts/</span><span class="si">${</span><span class="nx">boardId</span><span class="si">}</span><span class="sb">?page=</span><span class="si">${</span><span class="nx">page</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">setChats</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[...</span><span class="nx">state</span><span class="p">,</span> <span class="p">...</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">]);</span>
+      <span class="nx">setLastPage</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">lastPage</span><span class="p">);</span>
+    <span class="p">});</span>
   <span class="nx">setLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
 <span class="p">},</span> <span class="p">[</span><span class="nx">page</span><span class="p">,</span> <span class="nx">boardId</span><span class="p">]);</span>
 
@@ -734,8 +768,19 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="p">{</span>
   <span class="nx">edit</span><span class="p">.</span><span class="nx">isEdit</span> <span class="o">&amp;&amp;</span> <span class="nx">edit</span><span class="p">.</span><span class="nx">post_id</span> <span class="o">===</span> <span class="nx">post</span><span class="p">.</span><span class="nx">id</span> <span class="o">?</span> <span class="p">(</span>
     <span class="p">&lt;&gt;</span>
-      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;w-full rounded-2xl border bg-gray-10 pl-3 pr-3 text-gray-80&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">onChangeEditContents</span><span class="p">}</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Enter Chat here&#34;</span> <span class="na">value</span><span class="o">=</span><span class="p">{</span><span class="nx">editContents</span><span class="p">}</span> <span class="na">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">refInput</span><span class="p">}</span> <span class="p">/&gt;</span>
-      <span class="p">{</span><span class="nx">valid</span><span class="p">.</span><span class="nx">isValid</span> <span class="o">?</span> <span class="kc">null</span> <span class="o">:</span> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-80 text-sm text-center mb-2 mt-2&#34;</span><span class="p">&gt;</span><span class="nx">Invalid</span> <span class="nx">chat</span><span class="p">.</span> <span class="nx">Please</span> <span class="nx">check</span> <span class="nx">again</span><span class="p">.&lt;/</span><span class="nt">div</span><span class="p">&gt;}</span>
+      <span class="p">&lt;</span><span class="nt">input</span>
+        <span class="na">className</span><span class="o">=</span><span class="s">&#34;w-full rounded-2xl border bg-gray-10 pl-3 pr-3 text-gray-80&#34;</span>
+        <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span>
+        <span class="na">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">onChangeEditContents</span><span class="p">}</span>
+        <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Enter Chat here&#34;</span>
+        <span class="na">value</span><span class="o">=</span><span class="p">{</span><span class="nx">editContents</span><span class="p">}</span>
+        <span class="na">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">refInput</span><span class="p">}</span>
+      <span class="p">/&gt;</span>
+      <span class="p">{</span><span class="nx">valid</span><span class="p">.</span><span class="nx">isValid</span> <span class="o">?</span> <span class="kc">null</span> <span class="o">:</span> <span class="p">(</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-80 text-sm text-center mb-2 mt-2&#34;</span><span class="p">&gt;</span>
+          <span class="nx">Invalid</span> <span class="nx">chat</span><span class="p">.</span> <span class="nx">Please</span> <span class="nx">check</span> <span class="nx">again</span><span class="p">.</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">)}</span>
     <span class="p">&lt;/&gt;</span>
   <span class="p">)</span> <span class="o">:</span> <span class="p">(</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-xm text-gray-80&#34;</span><span class="p">&gt;{</span><span class="nx">post</span><span class="p">.</span><span class="nx">contents</span><span class="p">}&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -744,7 +789,11 @@
 </code></pre></div><h3 id="8-postboard" class="relative group">8. PostBoard <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#8-postboard" aria-label="Anchor">#</a></span></h3>
 <h5 id="nested-routing" class="relative group">Nested routing <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nested-routing" aria-label="Anchor">#</a></span></h5>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="p">&lt;</span><span class="nt">Routes</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">Route</span> <span class="na">exact</span> <span class="na">path</span><span class="o">=</span><span class="s">&#34;/&#34;</span> <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">PostBoardMain</span> <span class="na">board</span><span class="o">=</span><span class="p">{</span><span class="nx">board</span><span class="p">}</span> <span class="na">boardId</span><span class="o">=</span><span class="p">{</span><span class="nx">boardId</span><span class="p">}</span> <span class="p">/&gt;}</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">Route</span>
+    <span class="na">exact</span>
+    <span class="na">path</span><span class="o">=</span><span class="s">&#34;/&#34;</span>
+    <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">PostBoardMain</span> <span class="na">board</span><span class="o">=</span><span class="p">{</span><span class="nx">board</span><span class="p">}</span> <span class="na">boardId</span><span class="o">=</span><span class="p">{</span><span class="nx">boardId</span><span class="p">}</span> <span class="p">/&gt;}</span>
+  <span class="p">/&gt;</span>
   <span class="p">&lt;</span><span class="nt">Route</span> <span class="na">exact</span> <span class="na">path</span><span class="o">=</span><span class="s">&#34;/:postId&#34;</span> <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">Post</span> <span class="p">/&gt;}</span> <span class="p">/&gt;</span>
 <span class="p">&lt;/</span><span class="nt">Routes</span><span class="p">&gt;</span>
 </code></pre></div><h5 id="게시물-목록-불러오기페이지네이션" class="relative group">게시물 목록 불러오기(페이지네이션) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ea%b2%8c%ec%8b%9c%eb%ac%bc-%eb%aa%a9%eb%a1%9d-%eb%b6%88%eb%9f%ac%ec%98%a4%ea%b8%b0%ed%8e%98%ec%9d%b4%ec%a7%80%eb%84%a4%ec%9d%b4%ec%85%98" aria-label="Anchor">#</a></span></h5>
@@ -857,7 +906,9 @@
         <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;mt-24 mb-24 p-10&#34;</span><span class="p">&gt;</span>
           <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;flex items-center mb-12&#34;</span><span class="p">&gt;</span>
             <span class="p">{</span><span class="o">!</span><span class="nx">isEditName</span> <span class="o">?</span> <span class="p">(</span>
-              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-80 text-lg mr-3 font-bold&#34;</span><span class="p">&gt;{</span><span class="nx">userInfo</span><span class="p">.</span><span class="nx">username</span><span class="p">}&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-80 text-lg mr-3 font-bold&#34;</span><span class="p">&gt;</span>
+                <span class="p">{</span><span class="nx">userInfo</span><span class="p">.</span><span class="nx">username</span><span class="p">}</span>
+              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
             <span class="p">)</span> <span class="o">:</span> <span class="p">(</span>
               <span class="p">&lt;</span><span class="nt">input</span>
                 <span class="na">className</span><span class="o">=</span><span class="s">&#34;self-center text-hibye-100 text-base rounded-2xl border bg-gray-10 pl-3 pr-3 w-56 mr-3&#34;</span>
@@ -883,12 +934,16 @@
             <span class="p">)}</span>
           <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
           <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;flex bb-12 mb-8&#34;</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-60 text-sm font-bold w-28 mr-8&#34;</span><span class="p">&gt;</span><span class="nx">Email</span> <span class="nx">address</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-60 text-sm font-bold w-28 mr-8&#34;</span><span class="p">&gt;</span>
+              <span class="nx">Email</span> <span class="nx">address</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-gray-80 text-sm&#34;</span><span class="p">&gt;{</span><span class="nx">userInfo</span><span class="p">.</span><span class="nx">email</span><span class="p">}&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
           <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
           <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;flex mb-2&#34;</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-60 text-sm font-bold w-28 mr-8&#34;</span><span class="p">&gt;</span><span class="nx">Lover</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-60 text-sm font-bold w-28 mr-8&#34;</span><span class="p">&gt;</span>
+              <span class="nx">Lover</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
             <span class="p">{</span><span class="o">!</span><span class="nx">userInfo</span><span class="p">.</span><span class="nx">couple_id</span> <span class="o">?</span> <span class="p">(</span>
               <span class="p">&lt;&gt;</span>
                 <span class="p">&lt;</span><span class="nt">input</span>
@@ -899,21 +954,42 @@
                   <span class="na">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">refLover</span><span class="p">}</span>
                 <span class="p">/&gt;</span>
                 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">addLover</span><span class="p">}&gt;</span>
-                  <span class="p">&lt;</span><span class="nt">FiArrowRightCircle</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-2xl text-hibye-80 hover:text-hibye-10 hover:bg-hibye-80 rounded-full cursor-pointer duration-300 ml-2&#34;</span> <span class="na">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">refLover</span><span class="p">}</span> <span class="p">/&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">FiArrowRightCircle</span>
+                    <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-2xl text-hibye-80 hover:text-hibye-10 hover:bg-hibye-80 rounded-full cursor-pointer duration-300 ml-2&#34;</span>
+                    <span class="na">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">refLover</span><span class="p">}</span>
+                  <span class="p">/&gt;</span>
                 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
               <span class="p">&lt;/&gt;</span>
             <span class="p">)</span> <span class="o">:</span> <span class="o">!</span><span class="nx">userInfo</span><span class="p">.</span><span class="nx">is_matching</span> <span class="o">?</span> <span class="p">(</span>
-              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-80 text-sm&#34;</span><span class="p">&gt;</span><span class="nx">Please</span> <span class="nx">wait</span> <span class="k">for</span> <span class="nx">reply</span><span class="p">.&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-80 text-sm&#34;</span><span class="p">&gt;</span>
+                <span class="nx">Please</span> <span class="nx">wait</span> <span class="k">for</span> <span class="nx">reply</span><span class="p">.</span>
+              <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
             <span class="p">)</span> <span class="o">:</span> <span class="p">(</span>
-              <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;date&#34;</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-100 text-sm rounded-2xl border bg-gray-10 pl-3 pr-3&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;YYYY-MM-DD&#34;</span> <span class="p">/&gt;</span>
+              <span class="p">&lt;</span><span class="nt">input</span>
+                <span class="na">type</span><span class="o">=</span><span class="s">&#34;date&#34;</span>
+                <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-100 text-sm rounded-2xl border bg-gray-10 pl-3 pr-3&#34;</span>
+                <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;YYYY-MM-DD&#34;</span>
+              <span class="p">/&gt;</span>
             <span class="p">)}</span>
           <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
-          <span class="p">{</span><span class="nx">isUsernameValid</span> <span class="o">?</span> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;mb-10&#34;</span> <span class="p">/&gt;</span> <span class="o">:</span> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-80 text-xs text-center mb-10&#34;</span><span class="p">&gt;</span><span class="nx">Invalid</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">Please</span> <span class="nx">check</span> <span class="nx">again</span><span class="p">.&lt;/</span><span class="nt">div</span><span class="p">&gt;}</span>
-          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-gray-80 text-sm underline cursor-pointer w-max&#34;</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">changePassword</span><span class="p">}&gt;</span>
+          <span class="p">{</span><span class="nx">isUsernameValid</span> <span class="o">?</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;mb-10&#34;</span> <span class="p">/&gt;</span>
+          <span class="p">)</span> <span class="o">:</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-hibye-80 text-xs text-center mb-10&#34;</span><span class="p">&gt;</span>
+              <span class="nx">Invalid</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">Please</span> <span class="nx">check</span> <span class="nx">again</span><span class="p">.</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">)}</span>
+          <span class="p">&lt;</span><span class="nt">div</span>
+            <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-gray-80 text-sm underline cursor-pointer w-max&#34;</span>
+            <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">changePassword</span><span class="p">}</span>
+          <span class="p">&gt;</span>
             <span class="nx">Change</span> <span class="nx">password</span>
           <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-gray-80 text-sm underline cursor-pointer w-max&#34;</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">deleteId</span><span class="p">}&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span>
+            <span class="na">className</span><span class="o">=</span><span class="s">&#34;text-gray-80 text-sm underline cursor-pointer w-max&#34;</span>
+            <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">deleteId</span><span class="p">}</span>
+          <span class="p">&gt;</span>
             <span class="nx">Delete</span> <span class="nx">account</span>
           <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
