@@ -13,8 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>[Debate-Ducks] 프로젝트 준비 &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="[Debate-Ducks] 프로젝트 준비 &middot; Yuchan&#39;s hello world!" />
+  <title>[Debate-Ducks] 개선 프로젝트 시작 &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[Debate-Ducks] 개선 프로젝트 시작 &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog of a developer who wants to help create a better world :)" />
   
@@ -66,8 +66,8 @@
   
   
   
-  <meta property="og:title" content="[Debate-Ducks] 프로젝트 준비" />
-<meta property="og:description" content="" />
+  <meta property="og:title" content="[Debate-Ducks] 개선 프로젝트 시작" />
+<meta property="og:description" content="개요 #새로운 스택을 적극 활용하여 기존 프로젝트를 개선한 새로운 버전의 Debate-Ducks 프로젝트 시작." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/devlog/debate-ducks-1/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-09T00:00:00+00:00" />
@@ -75,8 +75,8 @@
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[Debate-Ducks] 프로젝트 준비"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="[Debate-Ducks] 개선 프로젝트 시작"/>
+<meta name="twitter:description" content="개요 #새로운 스택을 적극 활용하여 기존 프로젝트를 개선한 새로운 버전의 Debate-Ducks 프로젝트 시작."/>
 
   
   <script type="application/ld+json">
@@ -84,10 +84,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "[Debate-Ducks] 프로젝트 준비",
-    "headline": "[Debate-Ducks] 프로젝트 준비",
+    "name": "[Debate-Ducks] 개선 프로젝트 시작",
+    "headline": "[Debate-Ducks] 개선 프로젝트 시작",
     
-    
+    "abstract": "개요 #\r새로운 스택을 적극 활용하여 기존 프로젝트를 개선한 새로운 버전의 Debate-Ducks 프로젝트 시작.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/posts\/devlog\/debate-ducks-1\/",
     "author" : {
@@ -103,7 +103,7 @@
     "keywords": ["Debate-Ducks","Devlog"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "0"
+    "wordCount": "760"
   }]
   </script>
 
@@ -255,7 +255,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        [Debate-Ducks] 프로젝트 준비
+        [Debate-Ducks] 개선 프로젝트 시작
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -333,8 +333,258 @@
     </header>
     <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       
+        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
+            <details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 lg:mt-3">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700"
+  >
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600"
+  >
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#개요">개요</a></li>
+    <li><a href="#목적">목적</a>
+      <ul>
+        <li><a href="#1-프로젝트의-목적">1. 프로젝트의 목적</a></li>
+        <li><a href="#2-새로운-스택-사용-목적">2. 새로운 스택 사용 목적</a></li>
+      </ul>
+    </li>
+    <li><a href="#규칙-설정">규칙 설정</a>
+      <ul>
+        <li><a href="#1-communication-rules">1. Communication Rules</a></li>
+        <li><a href="#2-git-message-convention">2. Git Message Convention</a></li>
+      </ul>
+    </li>
+    <li><a href="#github-세팅">Github 세팅</a>
+      <ul>
+        <li><a href="#1-labels">1. Labels</a></li>
+        <li><a href="#2-issue-template">2. Issue Template</a></li>
+        <li><a href="#3-pull-request-template">3. Pull Request Template</a></li>
+      </ul>
+    </li>
+    <li><a href="#client-초기-세팅">Client 초기 세팅</a>
+      <ul>
+        <li><a href="#1-nextjs--typescript">1. NextJS + TypeScript</a></li>
+        <li><a href="#2-eslint--prettier">2. EsLint + Prettier</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-w-0 min-h-0 max-w-prose">
-        
+        <h2 id="개요" class="relative group">개요 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ea%b0%9c%ec%9a%94" aria-label="Anchor">#</a></span></h2>
+<p>새로운 스택을 적극 활용하여 기존 프로젝트를 개선한 새로운 버전의 Debate-Ducks 프로젝트 시작.</p>
+<h2 id="목적" class="relative group">목적 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%aa%a9%ec%a0%81" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-프로젝트의-목적" class="relative group">1. 프로젝트의 목적 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8%ec%9d%98-%eb%aa%a9%ec%a0%81" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>기존 프로젝트에서 완성하지 못했던 기능 완성.</li>
+<li>UI/UX에서 아쉬웠던 부분 개선.</li>
+<li>코드의 가독성 및 재활용성 개선.</li>
+<li>기간의 압박으로 도입하지 못했던 새로운 스택들의 도입.</li>
+<li>협업의 방식을 효율적으로 개선.</li>
+</ul>
+<h3 id="2-새로운-스택-사용-목적" class="relative group">2. 새로운 스택 사용 목적 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%ec%83%88%eb%a1%9c%ec%9a%b4-%ec%8a%a4%ed%83%9d-%ec%82%ac%ec%9a%a9-%eb%aa%a9%ec%a0%81" aria-label="Anchor">#</a></span></h3>
+<ol>
+<li><strong>TypeScript</strong>를 사용하여 코드의 안정성과 가독성 향상.
+<ul>
+<li>정적 타입
+<ul>
+<li>컴파일 단계에서 오류 포착 가능</li>
+<li>개발자의 의도를 코드로 명확히 표시 가능</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>NextJS</strong>를 사용하여 기능 및 편의성 향상.
+<ul>
+<li>Pre-rendering, 파일 시스템 기반 라우팅등의 장점</li>
+<li><a href="https://yuchanjeong.github.io/posts/today-i-learned/react/next.js-lc-2/">NextJS 작동 원리</a></li>
+</ul>
+</li>
+<li><strong>React-query</strong>를 사용하여 외부 데이터 효율적 처리.
+<ul>
+<li>캐싱, 중복 호출 허용 시간 조절등의 장점</li>
+</ul>
+</li>
+<li><strong>SCSS</strong>를 사용하여 관심사 분리.
+<ul>
+<li>중첩, 변수 선언, 연산자등의 장점</li>
+</ul>
+</li>
+<li><strong>NestJS</strong>를 사용하여 효율성, 안정성, 확장성 향상.</li>
+</ol>
+<h2 id="규칙-설정" class="relative group">규칙 설정 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ea%b7%9c%ec%b9%99-%ec%84%a4%ec%a0%95" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-communication-rules" class="relative group">1. Communication Rules <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-communication-rules" aria-label="Anchor">#</a></span></h3>
+<p>부트 캠프의 프로젝트 때는 거의 모든 의사소통을 영상 회의를 통해 하였다. 그러다 보니 회의에 너무 많은 시간을 소비하였다. 그래서 이번에는 <strong>정규 회의</strong>를 월요일에 진행하고, 메시지와 Comment를 적극적으로 활용하며, 회의가 필요한 경우에만 목적을 명확히 하고 <strong>임시 회의</strong>를 진행 하기로 하였다.</p>
+<h3 id="2-git-message-convention" class="relative group">2. Git Message Convention <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-git-message-convention" aria-label="Anchor">#</a></span></h3>
+<p>기존의 Type 분류가 명확하지 않아 헷갈리던 부분을 개선하였다. (Ex. Add의 경우 파일 추가를 기준으로 하였었는데 기능 추가 없이 단순히 파일만 늘어나게 되는 경우 애매하였음) 또한 예시를 추가하여 명확성을 높혔다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>Type<span class="o">]</span> Title
+<span class="c1"># ----------</span>
+<span class="c1"># [Add] 기능 추가 / Ex. 로그인 기능 추가</span>
+<span class="c1"># [Update] 기능 개선 / Ex. 로그인 기능에 유효성 검사 추가</span>
+<span class="c1"># [Delete] 기능 삭제 / Ex. 로그인 기능 삭제</span>
+<span class="c1"># [Change] 기능 수정 / Ex. 유효성 검사 조건 변경</span>
+<span class="c1"># [Modify] 오타 수정 및 코드 정돈 / Ex. 로그인 기능 코드 정돈</span>
+<span class="c1"># [Fix] 문제 해결 / Ex. 로그인 기능에 중복 아이디 생성 문제 해결</span>
+<span class="c1"># [Setting] 설정 / Ex. Redux-toolkit 초기 설정</span>
+<span class="c1"># [Style] 스타일 관련 작업 / Ex. 로그인 버튼 스타일 적용</span>
+<span class="c1"># [Docs] 문서 관련 작업 / Ex. README 문서에 변경 사항 추가</span>
+<span class="c1"># [Test] 테스트 관련 작업 / Ex. 로그인 기능 테스트 코드 변경</span>
+<span class="c1"># ----------</span>
+<span class="c1"># 개조식으로 작성</span>
+<span class="c1"># 내용이 필요할 경우 제목에서 한 줄 띄우고 작성</span>
+<span class="c1"># 내용이 여러 줄일 때는 &#34;-&#34;로 구분</span>
+<span class="c1"># 내용은 &#34;어떻게&#34; 보다는 &#34;무엇을&#34;, &#34;왜&#34;를 설명</span>
+</code></pre></div><h2 id="github-세팅" class="relative group">Github 세팅 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#github-%ec%84%b8%ed%8c%85" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-labels" class="relative group">1. Labels <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-labels" aria-label="Anchor">#</a></span></h3>
+<p>부트 캠프의 프로젝트 때는 라벨링을 팀 단위로 철저히 적용하지는 않았다. 개인적으로는 닫힌 Issue나 PR을 확인할 때 라벨을 통해 쉽게 <strong>필터링</strong>이 가능하다는 장점이 마음에 들어 적극 활용하였다. 이번에는 이 장점을 적극 어필하였고 라벨링을 팀 단위로 철저히 적용하기로 하였다.</p>
+<ol>
+<li>
+<p>엑세스 토큰 발급</p>
+<ul>
+<li><a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></li>
+<li>scopes에서 repo 선택</li>
+</ul>
+</li>
+<li>
+<p>labels.json 파일 생성</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Problem&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;color&#34;</span><span class="p">:</span> <span class="s2">&#34;3B170B&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
+  <span class="p">},</span>
+  <span class="err">...</span>
+<span class="p">]</span>
+</code></pre></div></li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npx github-label-sync --access-token <span class="o">[</span>액세스 토큰<span class="o">]</span> --labels labels.json <span class="o">[</span>계정명<span class="o">]</span>/<span class="o">[</span>저장소 이름<span class="o">]</span>
+</code></pre></div></li>
+</ol>
+<img width="1085" alt="스크린샷 2022-05-09 오후 9 22 51" src="https://user-images.githubusercontent.com/84524514/167466579-9bdc32c8-a2dd-43e8-b79e-34afa9ab43d8.png">
+<ul>
+<li>Issue Labels: <code>Problem</code>, <code>Suggestion</code>, <code>Urgent</code></li>
+<li>Pull Request Labels: Git message의 <a href="#git-message-convention">Type</a>과 일치</li>
+</ul>
+<h3 id="2-issue-template" class="relative group">2. Issue Template <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-issue-template" aria-label="Anchor">#</a></span></h3>
+<p>부트 캠프의 프로젝트 때는 Issue를 주로 Task Card로 활용하였다. 하지만 Issues 탭을 보았을 때 Task Card로 가득하여 정작 어떤 이슈들이 있었는지 알아보기 힘들었고, Task Card도 결국 PR과 중복되는 내용이라 크게 의미가 없었다. 그래서 Issue는 정말 이슈가 있을 때만 발행하고, 작업 관리의 경우 다른 툴을 활용하기로 결정하였다. (이번에는 Client와 Server의 저장소를 분리해서 Issues에서 통합 관리가 되지 않는 문제도 있었음)</p>
+<ul>
+<li>
+<p>.github/ISSUE_TEMPLATE/problem-template.md</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">---
+name: Problem Template
+about: 문제가 발생했을 때 발행하는 이슈입니다.
+title: &#34;&#34;
+labels: &#34;Problem&#34;
+assignees: &#34;&#34;
+---
+
+  <span class="c">&lt;!-- 어떤 문제이며 어떤 상황에서 발생하는지 명시 --&gt;</span>
+  <span class="c">&lt;!-- 원하는지 결과 명시 --&gt;</span>
+  <span class="c">&lt;!-- 해결을 위해 사용해 본 방법 명시 --&gt;</span>
+  <span class="c">&lt;!-- 에러 코드가 있을 경우 첨부 --&gt;</span>
+  <span class="c">&lt;!-- 필요할 경우 Screenshot 및 Gif 첨부 --&gt;</span>
+  <span class="c">&lt;!-- 해결된 문제의 경우 해결 방법 명시 --&gt;</span>
+</code></pre></div></li>
+<li>
+<p>.github/ISSUE_TEMPLATE/suggestion-template.md</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">---
+name: Suggestion Template
+about: 제안이 있을 때 발행하는 이슈입니다.
+title: &#34;&#34;
+labels: &#34;Suggestion&#34;
+assignees: &#34;&#34;
+---
+
+<span class="c">&lt;!-- 제안과 제안의 이유 설명 --&gt;</span>
+<span class="c">&lt;!-- 구제적인 실현 방법이 있을 경우 명시 --&gt;</span>
+<span class="c">&lt;!-- 참고 자료가 있을 경우 첨부 --&gt;</span>
+</code></pre></div></li>
+</ul>
+<h3 id="3-pull-request-template" class="relative group">3. Pull Request Template <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-pull-request-template" aria-label="Anchor">#</a></span></h3>
+<p>부트 캠프의 프로젝트 때는 어떤 브랜치에서 어떤 브랜치로 PR을 보내는지 직접 작성하였는데 Github에서 기본적으로 명시해 주는 내용이라 더 이상 작성하지 않기로 하였다.</p>
+<ul>
+<li>.github/pull_request_template.md
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="c">&lt;!-- 제목의 경우 [Type] 사용하지 않기 --&gt;</span>
+<span class="c">&lt;!-- 변경 사항을 개조식으로 작성 --&gt;</span>
+<span class="c">&lt;!-- 변경 사항이 여러 개일 경우 &#34;-&#34;로 구분 --&gt;</span>
+<span class="c">&lt;!-- &#34;어떻게&#34; 보다는 &#34;무엇을&#34;, &#34;왜&#34;를 설명 --&gt;</span>
+<span class="c">&lt;!-- 결과물에 대한 Screenshot 및 Gif 추가 가능 --&gt;</span>
+<span class="c">&lt;!-- Reviewers 등록 --&gt;</span>
+<span class="c">&lt;!-- Assignees 등록 --&gt;</span>
+<span class="c">&lt;!-- 포함되는 Commit의 Label 등록 --&gt;</span>
+</code></pre></div></li>
+</ul>
+<h2 id="client-초기-세팅" class="relative group">Client 초기 세팅 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#client-%ec%b4%88%ea%b8%b0-%ec%84%b8%ed%8c%85" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-nextjs--typescript" class="relative group">1. NextJS + TypeScript <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-nextjs--typescript" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npx create-next-app --typescript debate-ducks --use-npm
+</code></pre></div><ul>
+<li>tsconfig.json
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;target&#34;</span><span class="err">:</span> <span class="s2">&#34;es6&#34;</span><span class="err">,</span>
+</code></pre></div></li>
+</ul>
+<h3 id="2-eslint--prettier" class="relative group">2. EsLint + Prettier <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-eslint--prettier" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm i -D eslint prettier eslint-config-prettier @typescript-eslint/eslint-plugin
+</code></pre></div><ul>
+<li>
+<p>.eslintrc.json</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;plugins&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">],</span>
+  <span class="nt">&#34;extends&#34;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&#34;next/core-web-vitals&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;plugin:@typescript-eslint/recommended&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;prettier&#34;</span>
+  <span class="p">],</span>
+  <span class="nt">&#34;rules&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;react/react-in-jsx-scope&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&#34;@typescript-eslint/no-unused-vars&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&#34;@typescript-eslint/no-explicit-any&#34;</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>
+<p>.prettierrc.json</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;arrowParens&#34;</span><span class="p">:</span> <span class="s2">&#34;always&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;bracketSpacing&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&#34;htmlWhitespaceSensitivity&#34;</span><span class="p">:</span> <span class="s2">&#34;css&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;insertPragma&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&#34;jsxBracketSameLine&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&#34;jsxSingleQuote&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&#34;printWidth&#34;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+  <span class="nt">&#34;proseWrap&#34;</span><span class="p">:</span> <span class="s2">&#34;preserve&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;quoteProps&#34;</span><span class="p">:</span> <span class="s2">&#34;as-needed&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;requirePragma&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&#34;semi&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&#34;singleQuote&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&#34;tabWidth&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nt">&#34;trailingComma&#34;</span><span class="p">:</span> <span class="s2">&#34;all&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;useTabs&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&#34;vueIndentScriptAndStyle&#34;</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>
+<p>.vscode/settings.json</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;source.fixAll.eslint&#34;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;css.lint.unknownAtRules&#34;</span><span class="p">:</span> <span class="s2">&#34;ignore&#34;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+
       </div>
     </section>
     <footer class="pt-8 max-w-prose">
@@ -476,6 +726,19 @@
     
   </article>
 
+      
+        <div
+          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
+        >
+          <a
+            href="#the-top"
+            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
       
     </main>
     <div
