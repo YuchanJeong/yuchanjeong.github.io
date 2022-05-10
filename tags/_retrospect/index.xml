@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>_Retrospect on Yuchan&#39;s hello world!</title>
-    <link>https://yuchanjeong.github.io/tags/_retrospect/</link>
-    <description>Recent content in _Retrospect on Yuchan&#39;s hello world!</description>
+    <title>(Retrospect) on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/(Retrospect)/</link>
+    <description>Recent content in (Retrospect) on Yuchan&#39;s hello world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Mon, 21 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/_retrospect/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/(Retrospect)/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BC-Final / Final Project 기능 회고</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-final-2/</link>
@@ -59,7 +59,8 @@
       <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-3/</guid>
-      <description>HA-Algorithm, HA-react # 알고리즘 문제는 코플릿 보다 쉽게 나와서 어렵지 않게 풀었다.</description>
+      <description>HA-Algorithm, HA-react #
+ 알고리즘 문제는 코플릿 보다 쉽게 나와서 어렵지 않게 풀었다.</description>
     </item>
     
     <item>
@@ -77,7 +78,8 @@
       <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-5/</guid>
-      <description>7주 차 정리 # 이번 주의 핵심은 데이터를 다루는 방법이다.</description>
+      <description>7주 차 정리 #
+ 이번 주의 핵심은 데이터를 다루는 방법이다.</description>
     </item>
     
     <item>
@@ -86,7 +88,8 @@
       <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-4/</guid>
-      <description>6주 차 정리 # 10월 1일에 코로나 2차 백신을 맞았다.</description>
+      <description>6주 차 정리 #
+ 10월 1일에 코로나 2차 백신을 맞았다.</description>
     </item>
     
     <item>
@@ -95,7 +98,8 @@
       <pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-3/</guid>
-      <description>5주 차 정리(추석 연휴) # 19일은 외가, 20일은 산소, 21일은 친가를 방문하였다.</description>
+      <description>5주 차 정리(추석 연휴) #
+ 19일은 외가, 20일은 산소, 21일은 친가를 방문하였다.</description>
     </item>
     
     <item>
@@ -104,7 +108,8 @@
       <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-6/</guid>
-      <description>4주 차 정리 # 월요일에는 DOM의 이벤트에 대해 배우고, 혼자서 TypeScript를 학습하였다.</description>
+      <description>4주 차 정리 #
+ 월요일에는 DOM의 이벤트에 대해 배우고, 혼자서 TypeScript를 학습하였다.</description>
     </item>
     
     <item>
@@ -113,7 +118,8 @@
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-6/</guid>
-      <description>3주 차 정리 # 이번 주는 전체적으로 평이한 난이도였다.</description>
+      <description>3주 차 정리 #
+ 이번 주는 전체적으로 평이한 난이도였다.</description>
     </item>
     
     <item>
@@ -122,7 +128,8 @@
       <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-7/</guid>
-      <description>2주 차 정리 # 월요일에 처음으로 계산기를 만드는 과제를 하였다.</description>
+      <description>2주 차 정리 #
+ 월요일에 처음으로 계산기를 만드는 과제를 하였다.</description>
     </item>
     
     <item>
@@ -131,7 +138,8 @@
       <pubDate>Sun, 05 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-6/</guid>
-      <description>HTML과 CSS # 크게 display(출력)와 buttonWrap(입력) 부분으로 구분 background를 flex로 설정하고, justify-content와 align-items에 center 값을 줘서 계산기를 가운데 배치 맥 계산기는 커서 모양이 변하지 않아서 cursor: default;로 커서가 변하지 않게 함 user-select: none;을 이용해서 계산기의 contents들이 선택되지 않게 함</description>
+      <description>HTML과 CSS #
+ 크게 display(출력)와 buttonWrap(입력) 부분으로 구분 background를 flex로 설정하고, justify-content와 align-items에 center 값을 줘서 계산기를 가운데 배치 맥 계산기는 커서 모양이 변하지 않아서 cursor: default;로 커서가 변하지 않게 함 user-select: none;을 이용해서 계산기의 contents들이 선택되지 않게 함</description>
     </item>
     
     <item>
@@ -140,7 +148,8 @@
       <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-6/</guid>
-      <description>1주 차 정리 # 월요일에는 학습 환경설정과 학습 방향 설정을 하였다.</description>
+      <description>1주 차 정리 #
+ 월요일에는 학습 환경설정과 학습 방향 설정을 하였다.</description>
     </item>
     
   </channel>
