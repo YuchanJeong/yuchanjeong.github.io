@@ -103,7 +103,7 @@
     "keywords": ["React"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "427"
+    "wordCount": "432"
   }]
   </script>
 
@@ -304,7 +304,7 @@
             <a
               href="/categories/bootcamp/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&#39;Bootcamp&#39;</a
+              >&lt;Bootcamp&gt;</a
             >
           
         
@@ -521,8 +521,13 @@ serve -s build
 
 <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/test&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="c1">// &lt;div data-reactroot&#34;&#34;&gt;Hello&lt;/div&gt;
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">ssr</span> <span class="o">=</span> <span class="nx">ReactDOMServer</span><span class="p">.</span><span class="nx">renderToString</span><span class="p">(</span><span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;div&#34;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="s2">&#34;Hello&#34;</span><span class="p">));</span>
-  <span class="kr">const</span> <span class="nx">indexHtml</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s2">&#34;build&#34;</span><span class="p">,</span> <span class="s2">&#34;index.html&#34;</span><span class="p">)).</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;&lt;div id=&#34;root&#34;&gt;&lt;/div&gt;&#39;</span><span class="p">,</span> <span class="sb">`&lt;div id=&#34;root&#34;&gt;</span><span class="si">${</span><span class="nx">ssr</span><span class="si">}</span><span class="sb">&lt;/div&gt;`</span><span class="p">);</span>
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">ssr</span> <span class="o">=</span> <span class="nx">ReactDOMServer</span><span class="p">.</span><span class="nx">renderToString</span><span class="p">(</span>
+    <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;div&#34;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="s2">&#34;Hello&#34;</span><span class="p">)</span>
+  <span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">indexHtml</span> <span class="o">=</span> <span class="nx">fs</span>
+    <span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s2">&#34;build&#34;</span><span class="p">,</span> <span class="s2">&#34;index.html&#34;</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">toString</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;&lt;div id=&#34;root&#34;&gt;&lt;/div&gt;&#39;</span><span class="p">,</span> <span class="sb">`&lt;div id=&#34;root&#34;&gt;</span><span class="si">${</span><span class="nx">ssr</span><span class="si">}</span><span class="sb">&lt;/div&gt;`</span><span class="p">);</span>
   <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">indexHtml</span><span class="p">);</span>
 <span class="p">});</span>
 

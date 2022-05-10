@@ -103,7 +103,7 @@
     "keywords": ["React"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "878"
+    "wordCount": "882"
   }]
   </script>
 
@@ -304,7 +304,7 @@
             <a
               href="/categories/bootcamp/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&#39;Bootcamp&#39;</a
+              >&lt;Bootcamp&gt;</a
             >
           
         
@@ -483,9 +483,20 @@
   <span class="k">return</span> <span class="p">(</span>
     <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;App&#34;</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">username</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
-      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;text&#34;</span> <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">username</span><span class="p">}</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">setUsername</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&#34;여기는 인풋입니다.&#34;</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;tweetForm__input--username&#34;</span><span class="o">&gt;&lt;</span><span class="err">/input&gt;</span>
+      <span class="o">&lt;</span><span class="nx">input</span>
+        <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;text&#34;</span>
+        <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">username</span><span class="p">}</span>
+        <span class="nx">onChange</span><span class="o">=</span><span class="p">{(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">setUsername</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span>
+        <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&#34;여기는 인풋입니다.&#34;</span>
+        <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;tweetForm__input--username&#34;</span>
+      <span class="o">&gt;&lt;</span><span class="err">/input&gt;</span>
       <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">msg</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
-      <span class="o">&lt;</span><span class="nx">textarea</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&#34;여기는 텍스트 영역입니다.&#34;</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;tweetForm__input--message&#34;</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">setMsg</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span> <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">msg</span><span class="p">}</span><span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
+      <span class="o">&lt;</span><span class="nx">textarea</span>
+        <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&#34;여기는 텍스트 영역입니다.&#34;</span>
+        <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;tweetForm__input--message&#34;</span>
+        <span class="nx">onChange</span><span class="o">=</span><span class="p">{(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">setMsg</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span>
+        <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">msg</span><span class="p">}</span>
+      <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
     <span class="o">&lt;</span><span class="err">/div&gt;</span>
   <span class="p">);</span>
 <span class="p">}</span>
@@ -551,7 +562,9 @@
 <span class="p">};</span>
 
 <span class="c1">// MyPage.js
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">filteredTweets</span> <span class="o">=</span> <span class="nx">props</span><span class="p">.</span><span class="nx">tweets</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">username</span> <span class="o">===</span> <span class="nx">props</span><span class="p">.</span><span class="nx">username</span><span class="p">);</span>
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">filteredTweets</span> <span class="o">=</span> <span class="nx">props</span><span class="p">.</span><span class="nx">tweets</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span>
+  <span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">username</span> <span class="o">===</span> <span class="nx">props</span><span class="p">.</span><span class="nx">username</span>
+<span class="p">);</span>
 </code></pre></div></li>
 <li>
 <p>추가로 MyPage의 필터를 사용자가 입력한 props.username으로 하였는데 이때, username만 바꾸고 tweet을 보내지 않은 다음에 마이페이지를 누르면 에러가 났다(아직 입력되어있는 username은 정보를 전혀 가지고 있지 않아서). 그래서 초기값을 삼항 연산자를 이용해 정해주었다.</p>

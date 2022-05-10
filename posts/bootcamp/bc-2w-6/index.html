@@ -100,10 +100,10 @@
     
     "dateModified": "2021-09-05T00:00:00\u002b00:00",
     
-    "keywords": ["Retrospect"],
+    "keywords": ["_Retrospect"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1400"
+    "wordCount": "1408"
   }]
   </script>
 
@@ -304,7 +304,7 @@
             <a
               href="/categories/bootcamp/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&#39;Bootcamp&#39;</a
+              >&lt;Bootcamp&gt;</a
             >
           
         
@@ -312,9 +312,9 @@
         
           
             <a
-              href="/tags/retrospect/"
+              href="/tags/_retrospect/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >Retrospect</a
+              >_Retrospect</a
             >
           
         
@@ -466,7 +466,9 @@
 
     <span class="nx">exponentialNum</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">.</span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">displayNum</span><span class="p">).</span><span class="nx">toExponential</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
     <span class="nx">intPart</span> <span class="o">=</span> <span class="nx">exponentialNum</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-    <span class="nx">decimalPart</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="sb">`0.</span><span class="si">${</span><span class="nx">exponentialNum</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">)).</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="nx">decimalPart</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span>
+      <span class="nb">parseFloat</span><span class="p">(</span><span class="sb">`0.</span><span class="si">${</span><span class="nx">exponentialNum</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+    <span class="p">).</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
     <span class="nx">exponentialPart</span> <span class="o">=</span> <span class="nx">exponentialNum</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">18</span><span class="p">);</span>
 
     <span class="nx">displayEl</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">intPart</span><span class="si">}${</span><span class="nx">decimalPart</span><span class="si">}${</span><span class="nx">exponentialPart</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
@@ -505,7 +507,11 @@
 <li>디스플레이 수가 0이거나 연산자 혹은 계산 다음일 때, 디스플레이에 입력이 그대로 할당. 나머지 경우는 디스플레이의 수에 입력 할당 연산</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="k">if</span> <span class="p">(</span><span class="nx">action</span> <span class="o">===</span> <span class="s2">&#34;number&#34;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">displayNum</span> <span class="o">===</span> <span class="s2">&#34;0&#34;</span> <span class="o">||</span> <span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;operator&#34;</span> <span class="o">||</span> <span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;calculate&#34;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span>
+    <span class="nx">displayNum</span> <span class="o">===</span> <span class="s2">&#34;0&#34;</span> <span class="o">||</span>
+    <span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;operator&#34;</span> <span class="o">||</span>
+    <span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;calculate&#34;</span>
+  <span class="p">)</span> <span class="p">{</span>
     <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">buttonContent</span><span class="p">;</span>
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="nx">displayNum</span> <span class="o">+=</span> <span class="nx">buttonContent</span><span class="p">;</span>
@@ -719,7 +725,11 @@
 
   <span class="k">if</span> <span class="p">(</span><span class="nx">stackCalculate</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">buttonContent</span> <span class="o">===</span> <span class="s2">&#34;＋&#34;</span> <span class="o">||</span> <span class="nx">buttonContent</span> <span class="o">===</span> <span class="s2">&#34;－&#34;</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span><span class="nx">stackCalculate</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">stackCalculate</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">displayNum</span><span class="p">);</span>
+      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span>
+        <span class="nx">stackCalculate</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="nx">stackCalculate</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="nx">displayNum</span>
+      <span class="p">);</span>
       <span class="nx">stackCalculate</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
@@ -753,7 +763,11 @@
     <span class="p">}</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="nx">stackCalculate</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span><span class="nx">stackCalculate</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">stackCalculate</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">displayNum</span><span class="p">);</span>
+      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span>
+        <span class="nx">stackCalculate</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="nx">stackCalculate</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="nx">displayNum</span>
+      <span class="p">);</span>
       <span class="nx">stackCalculate</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
     <span class="p">}</span>
 

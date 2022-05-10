@@ -103,7 +103,7 @@
     "keywords": ["React"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "550"
+    "wordCount": "552"
   }]
   </script>
 
@@ -304,7 +304,7 @@
             <a
               href="/categories/bootcamp/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&#39;Bootcamp&#39;</a
+              >&lt;Bootcamp&gt;</a
             >
           
         
@@ -469,13 +469,22 @@ import { Switch, Route, Link } from &ldquo;react-router-dom&rdquo;</li>
 </span><span class="c1"></span>      <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="s2">&#34;/&#34;</span><span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;far fa-comment-dots&#34;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
       <span class="o">&lt;</span><span class="err">/Link&gt;</span>
-      <span class="o">&lt;</span><span class="nx">NavLink</span> <span class="nx">exact</span> <span class="nx">to</span><span class="o">=</span><span class="s2">&#34;/about&#34;</span> <span class="nx">activeClassName</span><span class="o">=</span><span class="s2">&#34;selectedPage selectedPage--about&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">NavLink</span>
+        <span class="nx">exact</span>
+        <span class="nx">to</span><span class="o">=</span><span class="s2">&#34;/about&#34;</span>
+        <span class="nx">activeClassName</span><span class="o">=</span><span class="s2">&#34;selectedPage selectedPage--about&#34;</span>
+      <span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;far fa-question-circle&#34;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
       <span class="o">&lt;</span><span class="err">/NavLink&gt;</span>
-      <span class="o">&lt;</span><span class="nx">NavLink</span> <span class="nx">exact</span> <span class="nx">to</span><span class="o">=</span><span class="s2">&#34;/mypage&#34;</span> <span class="nx">activeClassName</span><span class="o">=</span><span class="s2">&#34;selectedPage selectedPage--mypage&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">NavLink</span>
+        <span class="nx">exact</span>
+        <span class="nx">to</span><span class="o">=</span><span class="s2">&#34;/mypage&#34;</span>
+        <span class="nx">activeClassName</span><span class="o">=</span><span class="s2">&#34;selectedPage selectedPage--mypage&#34;</span>
+      <span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;far fa-user&#34;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
       <span class="o">&lt;</span><span class="err">/NavLink&gt;</span>
-      <span class="o">&lt;</span><span class="nx">i</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">history</span><span class="p">.</span><span class="nx">back</span><span class="p">()}</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;far fa-arrow-left&#34;</span><span class="o">&gt;&lt;</span><span class="sr">/i&gt; /</span><span class="o">/</span> <span class="nx">history</span>
+      <span class="o">&lt;</span><span class="nx">i</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">history</span><span class="p">.</span><span class="nx">back</span><span class="p">()}</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;far fa-arrow-left&#34;</span><span class="o">&gt;&lt;</span><span class="sr">/i&gt; /</span><span class="o">/</span>
+      <span class="nx">history</span>
     <span class="o">&lt;</span><span class="err">/section&gt;</span>
   <span class="p">);</span>
 <span class="p">};</span>

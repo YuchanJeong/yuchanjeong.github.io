@@ -103,7 +103,7 @@
     "keywords": ["Network"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "387"
+    "wordCount": "389"
   }]
   </script>
 
@@ -304,7 +304,7 @@
             <a
               href="/categories/bootcamp/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&#39;Bootcamp&#39;</a
+              >&lt;Bootcamp&gt;</a
             >
           
         
@@ -423,7 +423,9 @@ const func = function (arr) {
 <span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
 
 <span class="kr">const</span> <span class="nx">myLogger</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`http request method is </span><span class="si">${</span><span class="nx">req</span><span class="p">.</span><span class="nx">method</span><span class="si">}</span><span class="sb">, url is </span><span class="si">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+    <span class="sb">`http request method is </span><span class="si">${</span><span class="nx">req</span><span class="p">.</span><span class="nx">method</span><span class="si">}</span><span class="sb">, url is </span><span class="si">${</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="sb">`</span>
+  <span class="p">);</span>
   <span class="nx">next</span><span class="p">();</span>
 <span class="p">};</span>
 

@@ -103,7 +103,7 @@
     "keywords": ["React"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "952"
+    "wordCount": "954"
   }]
   </script>
 
@@ -304,7 +304,7 @@
             <a
               href="/categories/bootcamp/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&#39;Bootcamp&#39;</a
+              >&lt;Bootcamp&gt;</a
             >
           
         
@@ -627,7 +627,11 @@ const func = function (arr, callback = (params) => params) {
       <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="nx">TabMenu</span><span class="o">&gt;</span>
           <span class="p">{</span><span class="nx">menuArr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">menu</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
-            <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">idx</span><span class="p">}</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">idx</span> <span class="o">===</span> <span class="nx">currentTab</span> <span class="o">?</span> <span class="s2">&#34;submenu focused&#34;</span> <span class="o">:</span> <span class="s2">&#34;submenu&#34;</span><span class="p">}</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">selectMenuHandler</span><span class="p">(</span><span class="nx">idx</span><span class="p">)}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">li</span>
+              <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">idx</span><span class="p">}</span>
+              <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">idx</span> <span class="o">===</span> <span class="nx">currentTab</span> <span class="o">?</span> <span class="s2">&#34;submenu focused&#34;</span> <span class="o">:</span> <span class="s2">&#34;submenu&#34;</span><span class="p">}</span>
+              <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">selectMenuHandler</span><span class="p">(</span><span class="nx">idx</span><span class="p">)}</span>
+            <span class="o">&gt;</span>
               <span class="p">{</span><span class="nx">menu</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span>
             <span class="o">&lt;</span><span class="err">/li&gt;</span>
           <span class="p">))}</span>
@@ -727,13 +731,21 @@ const func = function (arr, callback = (params) => params) {
           <span class="p">{</span><span class="nx">tags</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">tag</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
             <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;tag&#34;</span><span class="o">&gt;</span>
               <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;tag-title&#34;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">tag</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/span&gt;</span>
-              <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;tag-close-icon&#34;</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">removeTags</span><span class="p">(</span><span class="nx">index</span><span class="p">)}</span><span class="o">&gt;</span>
+              <span class="o">&lt;</span><span class="nx">span</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;tag-close-icon&#34;</span>
+                <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">removeTags</span><span class="p">(</span><span class="nx">index</span><span class="p">)}</span>
+              <span class="o">&gt;</span>
                 <span class="nx">x</span>
               <span class="o">&lt;</span><span class="err">/span&gt;</span>
             <span class="o">&lt;</span><span class="err">/li&gt;</span>
           <span class="p">))}</span>
         <span class="o">&lt;</span><span class="err">/ul&gt;</span>
-        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;tag-input&#34;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;text&#34;</span> <span class="nx">onKeyUp</span><span class="o">=</span><span class="p">{(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">key</span> <span class="o">===</span> <span class="s2">&#34;Enter&#34;</span> <span class="o">?</span> <span class="nx">addTags</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">)}</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&#34;Press enter to add tags&#34;</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">input</span>
+          <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;tag-input&#34;</span>
+          <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;text&#34;</span>
+          <span class="nx">onKeyUp</span><span class="o">=</span><span class="p">{(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">key</span> <span class="o">===</span> <span class="s2">&#34;Enter&#34;</span> <span class="o">?</span> <span class="nx">addTags</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">)}</span>
+          <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&#34;Press enter to add tags&#34;</span>
+        <span class="o">/&gt;</span>
       <span class="o">&lt;</span><span class="err">/TagsInput&gt;</span>
     <span class="o">&lt;</span><span class="err">/&gt;</span>
   <span class="p">);</span>

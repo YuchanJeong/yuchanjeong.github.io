@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>&#39;Bootcamp&#39; on Yuchan&#39;s hello world!</title>
+    <title>&lt;Bootcamp&gt; on Yuchan&#39;s hello world!</title>
     <link>https://yuchanjeong.github.io/categories/bootcamp/</link>
-    <description>Recent content in &#39;Bootcamp&#39; on Yuchan&#39;s hello world!</description>
+    <description>Recent content in &lt;Bootcamp&gt; on Yuchan&#39;s hello world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
@@ -266,7 +266,7 @@
       <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-5/</guid>
-      <description>Today I learned #Sprint - React Custom Component #Autocomplete #import { useState, useEffect } from &amp;#34;react&amp;#34;; import styled from &amp;#34;styled-components&amp;#34;; const deselectedOptions = [&amp;#34;rustic&amp;#34;, &amp;#34;antique&amp;#34;, &amp;#34;vinyl&amp;#34;, &amp;#34;vintage&amp;#34;, &amp;#34;refurbished&amp;#34;, &amp;#34;신품&amp;#34;, &amp;#34;빈티지&amp;#34;, &amp;#34;중고A급&amp;#34;, &amp;#34;중고B급&amp;#34;, &amp;#34;골동품&amp;#34;]; const boxShadow = &amp;#34;0 4px 6px rgb(32 33 36 / 28%)&amp;#34;; const activeBorderRadius = &amp;#34;1rem 1rem 0 0&amp;#34;; const inactiveBorderRadius = &amp;#34;1rem 1rem 1rem 1rem&amp;#34;; export const InputContainer = styled.</description>
+      <description>Today I learned #Sprint - React Custom Component #Autocomplete #import { useState, useEffect } from &amp;#34;react&amp;#34;; import styled from &amp;#34;styled-components&amp;#34;; const deselectedOptions = [ &amp;#34;rustic&amp;#34;, &amp;#34;antique&amp;#34;, &amp;#34;vinyl&amp;#34;, &amp;#34;vintage&amp;#34;, &amp;#34;refurbished&amp;#34;, &amp;#34;신품&amp;#34;, &amp;#34;빈티지&amp;#34;, &amp;#34;중고A급&amp;#34;, &amp;#34;중고B급&amp;#34;, &amp;#34;골동품&amp;#34;, ]; const boxShadow = &amp;#34;0 4px 6px rgb(32 33 36 / 28%)&amp;#34;; const activeBorderRadius = &amp;#34;1rem 1rem 0 0&amp;#34;; const inactiveBorderRadius = &amp;#34;1rem 1rem 1rem 1rem&amp;#34;; export const InputContainer = styled.</description>
     </item>
     
     <item>

@@ -100,10 +100,10 @@
     
     "dateModified": "2021-12-15T00:00:00\u002b00:00",
     
-    "keywords": ["Algorithm"],
+    "keywords": ["_Algorithm"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1536"
+    "wordCount": "1539"
   }]
   </script>
 
@@ -304,7 +304,7 @@
             <a
               href="/categories/bootcamp/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&#39;Bootcamp&#39;</a
+              >&lt;Bootcamp&gt;</a
             >
           
         
@@ -312,9 +312,9 @@
         
           
             <a
-              href="/tags/algorithm/"
+              href="/tags/_algorithm/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >Algorithm</a
+              >_Algorithm</a
             >
           
         
@@ -619,11 +619,15 @@ C는 900/90 = 10번의 작업을 반복하고 10턴 X 25개 = 250개</li>
 
   <span class="nx">recur</span><span class="p">(</span><span class="nx">cards</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">);</span>
 
-  <span class="kr">const</span> <span class="nx">listOfStr</span> <span class="o">=</span> <span class="nx">listOfArr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">)).</span><span class="nx">map</span><span class="p">((</span><span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">());</span>
+  <span class="kr">const</span> <span class="nx">listOfStr</span> <span class="o">=</span> <span class="nx">listOfArr</span>
+    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">());</span>
   <span class="kr">const</span> <span class="nx">setOfStr</span> <span class="o">=</span> <span class="p">[...</span><span class="k">new</span> <span class="nx">Set</span><span class="p">(</span><span class="nx">listOfStr</span><span class="p">)];</span>
   <span class="kr">const</span> <span class="nx">setOfStrArr</span> <span class="o">=</span> <span class="nx">setOfStr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">str</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">str</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">));</span>
   <span class="kr">const</span> <span class="nx">setOfNumArr</span> <span class="o">=</span> <span class="nx">setOfStrArr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">str</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">str</span><span class="p">)));</span>
-  <span class="kr">const</span> <span class="nx">setOfNum</span> <span class="o">=</span> <span class="nx">setOfNumArr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">cur</span><span class="p">));</span>
+  <span class="kr">const</span> <span class="nx">setOfNum</span> <span class="o">=</span> <span class="nx">setOfNumArr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span>
+    <span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">cur</span><span class="p">)</span>
+  <span class="p">);</span>
 
   <span class="kr">const</span> <span class="nx">isPrime</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>

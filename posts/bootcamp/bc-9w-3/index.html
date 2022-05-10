@@ -103,7 +103,7 @@
     "keywords": ["React"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "784"
+    "wordCount": "786"
   }]
   </script>
 
@@ -304,7 +304,7 @@
             <a
               href="/categories/bootcamp/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&#39;Bootcamp&#39;</a
+              >&lt;Bootcamp&gt;</a
             >
           
         
@@ -652,7 +652,9 @@ const func = function (arr, target) {
     <span class="nx">query</span> <span class="o">=</span> <span class="nx">query</span> <span class="o">+</span> <span class="sb">`destination=</span><span class="si">${</span><span class="nx">filterBy</span><span class="p">.</span><span class="nx">destination</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
   <span class="p">}</span>
 
-  <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="sb">`http://ec2-13-124-90-231.ap-northeast-2.compute.amazonaws.com:81/flight?</span><span class="si">${</span><span class="nx">query</span><span class="si">}</span><span class="sb">`</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span>
+  <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span>
+    <span class="sb">`http://ec2-13-124-90-231.ap-northeast-2.compute.amazonaws.com:81/flight?</span><span class="si">${</span><span class="nx">query</span><span class="si">}</span><span class="sb">`</span>
+  <span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span>
 <span class="p">}</span>
 </code></pre></div><h2 id="todays-takeaway" class="relative group">Today&rsquo;s takeaway <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#todays-takeaway" aria-label="Anchor">#</a></span></h2>
 <ul>

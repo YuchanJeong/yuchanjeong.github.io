@@ -103,7 +103,7 @@
     "keywords": ["Database"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "491"
+    "wordCount": "497"
   }]
   </script>
 
@@ -304,7 +304,7 @@
             <a
               href="/categories/bootcamp/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&#39;Bootcamp&#39;</a
+              >&lt;Bootcamp&gt;</a
             >
           
         
@@ -366,7 +366,9 @@
 <span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
 <span class="kr">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="mi">4000</span><span class="p">;</span>
 
-<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">morgan</span><span class="p">(</span><span class="s2">&#34;      :method :url :status :res[content-length] - :response-time ms&#34;</span><span class="p">));</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span>
+  <span class="nx">morgan</span><span class="p">(</span><span class="s2">&#34;      :method :url :status :res[content-length] - :response-time ms&#34;</span><span class="p">)</span>
+<span class="p">);</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">cors</span><span class="p">());</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">urlencoded</span><span class="p">({</span> <span class="nx">extended</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}));</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span>
@@ -427,7 +429,9 @@
 <span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;../config/config&#34;</span><span class="p">);</span>
 <span class="nx">dotenv</span><span class="p">.</span><span class="nx">config</span><span class="p">();</span>
 
-<span class="kr">const</span> <span class="nx">con</span> <span class="o">=</span> <span class="nx">mysql</span><span class="p">.</span><span class="nx">createConnection</span><span class="p">(</span><span class="nx">config</span><span class="p">[</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span> <span class="o">||</span> <span class="s2">&#34;development&#34;</span><span class="p">]);</span>
+<span class="kr">const</span> <span class="nx">con</span> <span class="o">=</span> <span class="nx">mysql</span><span class="p">.</span><span class="nx">createConnection</span><span class="p">(</span>
+  <span class="nx">config</span><span class="p">[</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span> <span class="o">||</span> <span class="s2">&#34;development&#34;</span><span class="p">]</span>
+<span class="p">);</span>
 
 <span class="nx">con</span><span class="p">.</span><span class="nx">connect</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
@@ -480,7 +484,11 @@
         <span class="k">if</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
           <span class="kr">const</span> <span class="nx">queryString</span> <span class="o">=</span> <span class="sb">`
 </span><span class="sb">          INSERT INTO order_items (item_id, order_quantity, order_id) VALUES ?;`</span><span class="p">;</span>
-          <span class="kr">const</span> <span class="nx">values</span> <span class="o">=</span> <span class="nx">orders</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">order</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">order</span><span class="p">.</span><span class="nx">itemId</span><span class="p">,</span> <span class="nx">order</span><span class="p">.</span><span class="nx">quantity</span><span class="p">,</span> <span class="nx">result</span><span class="p">.</span><span class="nx">insertId</span><span class="p">]);</span>
+          <span class="kr">const</span> <span class="nx">values</span> <span class="o">=</span> <span class="nx">orders</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">order</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span>
+            <span class="nx">order</span><span class="p">.</span><span class="nx">itemId</span><span class="p">,</span>
+            <span class="nx">order</span><span class="p">.</span><span class="nx">quantity</span><span class="p">,</span>
+            <span class="nx">result</span><span class="p">.</span><span class="nx">insertId</span><span class="p">,</span>
+          <span class="p">]);</span>
           <span class="k">return</span> <span class="nx">db</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="nx">queryString</span><span class="p">,</span> <span class="p">[</span><span class="nx">values</span><span class="p">],</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
             <span class="nx">callback</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">);</span>
           <span class="p">});</span>

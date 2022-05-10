@@ -103,7 +103,7 @@
     "keywords": ["JavaScript"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "638"
+    "wordCount": "640"
   }]
   </script>
 
@@ -304,7 +304,7 @@
             <a
               href="/categories/bootcamp/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&#39;Bootcamp&#39;</a
+              >&lt;Bootcamp&gt;</a
             >
           
         
@@ -423,7 +423,9 @@
 
 <span class="kd">function</span> <span class="nx">func</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="k">typeof</span> <span class="nx">item</span> <span class="o">===</span> <span class="s2">&#34;number&#34;</span><span class="p">).</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">innerFunc</span><span class="p">(</span><span class="nx">item</span><span class="p">));</span>
+    <span class="k">return</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span>
+      <span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="k">typeof</span> <span class="nx">item</span> <span class="o">===</span> <span class="s2">&#34;number&#34;</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">innerFunc</span><span class="p">(</span><span class="nx">item</span><span class="p">));</span>
   <span class="p">}</span>
   <span class="k">return</span> <span class="p">[];</span>
 <span class="p">}</span>
@@ -527,7 +529,8 @@
     <span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">gender</span> <span class="o">===</span> <span class="s2">&#34;female&#34;</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
       <span class="c1">// 재할당
-</span><span class="c1"></span>      <span class="nx">item</span><span class="p">.</span><span class="nx">grades</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">grades</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">cur</span><span class="p">)</span> <span class="o">/</span> <span class="nx">item</span><span class="p">.</span><span class="nx">grades</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</span><span class="c1"></span>      <span class="nx">item</span><span class="p">.</span><span class="nx">grades</span> <span class="o">=</span>
+        <span class="nx">item</span><span class="p">.</span><span class="nx">grades</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">cur</span><span class="p">)</span> <span class="o">/</span> <span class="nx">item</span><span class="p">.</span><span class="nx">grades</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
       <span class="k">return</span> <span class="nx">item</span><span class="p">;</span>
     <span class="p">});</span>
 <span class="p">}</span>

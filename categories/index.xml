@@ -9,16 +9,16 @@
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
     <lastBuildDate>Mon, 09 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>&#39;Devlog&#39;</title>
-      <link>https://yuchanjeong.github.io/categories/devlog/</link>
+      <title>&lt;Project&gt;</title>
+      <link>https://yuchanjeong.github.io/categories/project/</link>
       <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/categories/devlog/</guid>
+      <guid>https://yuchanjeong.github.io/categories/project/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>&#39;Algorithm&#39;</title>
+      <title>&lt;Algorithm&gt;</title>
       <link>https://yuchanjeong.github.io/categories/algorithm/</link>
       <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
       
@@ -27,16 +27,16 @@
     </item>
     
     <item>
-      <title>&#39;Today I learned&#39;</title>
-      <link>https://yuchanjeong.github.io/categories/today-i-learned/</link>
+      <title>&lt;Study&gt;</title>
+      <link>https://yuchanjeong.github.io/categories/study/</link>
       <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/categories/today-i-learned/</guid>
+      <guid>https://yuchanjeong.github.io/categories/study/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>&#39;Bootcamp&#39;</title>
+      <title>&lt;Bootcamp&gt;</title>
       <link>https://yuchanjeong.github.io/categories/bootcamp/</link>
       <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
       
@@ -45,16 +45,16 @@
     </item>
     
     <item>
-      <title>&#39;Etc&#39;</title>
-      <link>https://yuchanjeong.github.io/categories/etc/</link>
+      <title>&lt;Ect&gt;</title>
+      <link>https://yuchanjeong.github.io/categories/ect/</link>
       <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/categories/etc/</guid>
+      <guid>https://yuchanjeong.github.io/categories/ect/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>&#39;What I read&#39;</title>
+      <title>&lt;What I read&gt;</title>
       <link>https://yuchanjeong.github.io/categories/what-i-read/</link>
       <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
       

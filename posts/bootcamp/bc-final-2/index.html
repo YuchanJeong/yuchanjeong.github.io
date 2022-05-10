@@ -100,10 +100,10 @@
     
     "dateModified": "2022-03-21T00:00:00\u002b00:00",
     
-    "keywords": ["Retrospect"],
+    "keywords": ["_Retrospect"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1802"
+    "wordCount": "1820"
   }]
   </script>
 
@@ -304,7 +304,7 @@
             <a
               href="/categories/bootcamp/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&#39;Bootcamp&#39;</a
+              >&lt;Bootcamp&gt;</a
             >
           
         
@@ -312,9 +312,9 @@
         
           
             <a
-              href="/tags/retrospect/"
+              href="/tags/_retrospect/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >Retrospect</a
+              >_Retrospect</a
             >
           
         
@@ -628,43 +628,53 @@
 <li>
 <p>Screen Share</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">shareScreen</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">navigator</span><span class="p">.</span><span class="nx">mediaDevices</span><span class="p">.</span><span class="nx">getDisplayMedia</span><span class="p">({</span> <span class="nx">cursor</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}).</span><span class="nx">then</span><span class="p">((</span><span class="nx">screenStream</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// Screen Share On
-</span><span class="c1"></span>    <span class="c1">// 얻은 공유 화면 스트림의 비디오 트랙으로 기존 스트림의 비디오 트랙 대체
-</span><span class="c1"></span>    <span class="nx">myPeer</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">replaceTrack</span><span class="p">(</span><span class="nx">stream</span><span class="o">?</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">screenStream</span><span class="o">?</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">stream</span><span class="p">);</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="nx">myVideoRef</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// 비디오 스트림 대체
-</span><span class="c1"></span>      <span class="nx">myVideoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">srcObject</span> <span class="o">=</span> <span class="nx">screenStream</span><span class="p">;</span>
-
-      <span class="k">if</span> <span class="p">(</span><span class="nx">isPro</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">setIsProScreenOn</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isPro</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">setIsConScreenOn</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-      <span class="p">}</span>
-
-      <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&#34;screen_on&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">debateId</span><span class="p">,</span> <span class="nx">isPro</span> <span class="p">});</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Screen Share Off
-</span><span class="c1"></span>    <span class="c1">// 기존 스트림의 비디오 트랙으로 공유 화면의 스트림의 비디오 트랙 대체
-</span><span class="c1"></span>    <span class="nx">screenStream</span><span class="p">.</span><span class="nx">getTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">].</span><span class="nx">onended</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">myPeer</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">replaceTrack</span><span class="p">(</span><span class="nx">screenStream</span><span class="o">?</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">stream</span><span class="o">?</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">stream</span><span class="p">);</span>
+  <span class="nx">navigator</span><span class="p">.</span><span class="nx">mediaDevices</span>
+    <span class="p">.</span><span class="nx">getDisplayMedia</span><span class="p">({</span> <span class="nx">cursor</span><span class="o">:</span> <span class="kc">true</span> <span class="p">})</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">screenStream</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// Screen Share On
+</span><span class="c1"></span>      <span class="c1">// 얻은 공유 화면 스트림의 비디오 트랙으로 기존 스트림의 비디오 트랙 대체
+</span><span class="c1"></span>      <span class="nx">myPeer</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">replaceTrack</span><span class="p">(</span>
+        <span class="nx">stream</span><span class="o">?</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="nx">screenStream</span><span class="o">?</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="nx">stream</span>
+      <span class="p">);</span>
 
       <span class="k">if</span> <span class="p">(</span><span class="nx">myVideoRef</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// 비디오 스트림 대체
-</span><span class="c1"></span>        <span class="nx">myVideoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">srcObject</span> <span class="o">=</span> <span class="nx">stream</span><span class="p">;</span>
+</span><span class="c1"></span>        <span class="nx">myVideoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">srcObject</span> <span class="o">=</span> <span class="nx">screenStream</span><span class="p">;</span>
 
         <span class="k">if</span> <span class="p">(</span><span class="nx">isPro</span><span class="p">)</span> <span class="p">{</span>
-          <span class="nx">setIsProScreenOn</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+          <span class="nx">setIsProScreenOn</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
         <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isPro</span><span class="p">)</span> <span class="p">{</span>
-          <span class="nx">setIsConScreenOn</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+          <span class="nx">setIsConScreenOn</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
         <span class="p">}</span>
 
-        <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&#34;screen_off&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">debateId</span><span class="p">,</span> <span class="nx">isPro</span> <span class="p">});</span>
+        <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&#34;screen_on&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">debateId</span><span class="p">,</span> <span class="nx">isPro</span> <span class="p">});</span>
       <span class="p">}</span>
-    <span class="p">};</span>
-  <span class="p">});</span>
+
+      <span class="c1">// Screen Share Off
+</span><span class="c1"></span>      <span class="c1">// 기존 스트림의 비디오 트랙으로 공유 화면의 스트림의 비디오 트랙 대체
+</span><span class="c1"></span>      <span class="nx">screenStream</span><span class="p">.</span><span class="nx">getTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">].</span><span class="nx">onended</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">myPeer</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">replaceTrack</span><span class="p">(</span>
+          <span class="nx">screenStream</span><span class="o">?</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
+          <span class="nx">stream</span><span class="o">?</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
+          <span class="nx">stream</span>
+        <span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">myVideoRef</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">// 비디오 스트림 대체
+</span><span class="c1"></span>          <span class="nx">myVideoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">srcObject</span> <span class="o">=</span> <span class="nx">stream</span><span class="p">;</span>
+
+          <span class="k">if</span> <span class="p">(</span><span class="nx">isPro</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">setIsProScreenOn</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+          <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isPro</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">setIsConScreenOn</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+          <span class="p">}</span>
+
+          <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&#34;screen_off&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">debateId</span><span class="p">,</span> <span class="nx">isPro</span> <span class="p">});</span>
+        <span class="p">}</span>
+      <span class="p">};</span>
+    <span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div></li>
 </ul>
@@ -745,9 +755,17 @@
     <span class="nx">noticeCtx</span><span class="p">.</span><span class="nx">textAlign</span> <span class="o">=</span> <span class="s2">&#34;center&#34;</span><span class="p">;</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="nx">notice</span><span class="o">?</span><span class="p">.</span><span class="nx">turn</span> <span class="o">===</span> <span class="s2">&#34;pre&#34;</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">noticeCtx</span><span class="p">.</span><span class="nx">fillText</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">notice</span><span class="o">?</span><span class="p">.</span><span class="nx">text</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="nx">canvasRef</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">);</span>
+      <span class="nx">noticeCtx</span><span class="p">.</span><span class="nx">fillText</span><span class="p">(</span>
+        <span class="sb">`</span><span class="si">${</span><span class="nx">notice</span><span class="o">?</span><span class="p">.</span><span class="nx">text</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+        <span class="nx">canvasRef</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="mi">25</span>
+      <span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">notice</span><span class="o">?</span><span class="p">.</span><span class="nx">turn</span> <span class="o">===</span> <span class="s2">&#34;pro&#34;</span> <span class="o">||</span> <span class="nx">notice</span><span class="o">?</span><span class="p">.</span><span class="nx">turn</span> <span class="o">===</span> <span class="s2">&#34;con&#34;</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">noticeCtx</span><span class="p">.</span><span class="nx">fillText</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">notice</span><span class="o">?</span><span class="p">.</span><span class="nx">text</span><span class="si">}</span><span class="sb"> ( </span><span class="si">${</span><span class="nx">notice</span><span class="o">?</span><span class="p">.</span><span class="nx">time</span><span class="si">}</span><span class="sb"> sec )`</span><span class="p">,</span> <span class="nx">canvasRef</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">);</span>
+      <span class="nx">noticeCtx</span><span class="p">.</span><span class="nx">fillText</span><span class="p">(</span>
+        <span class="sb">`</span><span class="si">${</span><span class="nx">notice</span><span class="o">?</span><span class="p">.</span><span class="nx">text</span><span class="si">}</span><span class="sb"> ( </span><span class="si">${</span><span class="nx">notice</span><span class="o">?</span><span class="p">.</span><span class="nx">time</span><span class="si">}</span><span class="sb"> sec )`</span><span class="p">,</span>
+        <span class="nx">canvasRef</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="mi">25</span>
+      <span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">},</span> <span class="p">[</span><span class="nx">notice</span><span class="p">.</span><span class="nx">text</span><span class="p">,</span> <span class="nx">notice</span><span class="p">.</span><span class="nx">time</span><span class="p">]);</span>
@@ -768,13 +786,18 @@
 </span><span class="c1"></span>  <span class="nx">canvasStream</span><span class="p">.</span><span class="nx">current</span> <span class="o">=</span> <span class="nx">canvasRef</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">captureStream</span><span class="p">();</span>
 
   <span class="c1">// 캔버스 스트림의 비디오 트랙과 합쳐진 오디오 트랙 합침
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">mergeTracks</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">canvasStream</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">(),</span> <span class="p">...</span><span class="nx">mergedAudioTracks</span><span class="p">.</span><span class="nx">current</span><span class="p">];</span>
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">mergeTracks</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">...</span><span class="nx">canvasStream</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">(),</span>
+    <span class="p">...</span><span class="nx">mergedAudioTracks</span><span class="p">.</span><span class="nx">current</span><span class="p">,</span>
+  <span class="p">];</span>
 
   <span class="c1">// 합쳐진 트랙에서 스트림 생성
 </span><span class="c1"></span>  <span class="nx">mergedStream</span><span class="p">.</span><span class="nx">current</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MediaStream</span><span class="p">(</span><span class="nx">mergeTracks</span><span class="p">);</span>
 
   <span class="c1">// 레코더 생성
-</span><span class="c1"></span>  <span class="nx">mergedRecorder</span><span class="p">.</span><span class="nx">current</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MediaRecorder</span><span class="p">(</span><span class="nx">mergedStream</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="p">,</span> <span class="p">{</span> <span class="nx">mimeType</span><span class="o">:</span> <span class="s2">&#34;video/webm&#34;</span> <span class="p">});</span>
+</span><span class="c1"></span>  <span class="nx">mergedRecorder</span><span class="p">.</span><span class="nx">current</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MediaRecorder</span><span class="p">(</span><span class="nx">mergedStream</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">mimeType</span><span class="o">:</span> <span class="s2">&#34;video/webm&#34;</span><span class="p">,</span>
+  <span class="p">});</span>
 
   <span class="c1">// Blobs에 얻은 데이터들 추가하기
 </span><span class="c1"></span>  <span class="nx">mergedRecorder</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">ondataavailable</span> <span class="o">=</span> <span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -792,19 +815,35 @@
     <span class="c1">// 저장 가능한 링크
 </span><span class="c1"></span>    <span class="nx">aRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">mergedUrl</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="p">;</span>
 
-    <span class="kr">const</span> <span class="nx">videoUrl</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">saveVideo</span><span class="p">(</span><span class="nx">mergedBlob</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="p">,</span> <span class="sb">`</span><span class="si">${</span><span class="nx">debateInfo</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="nx">videoUrl</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">saveVideo</span><span class="p">(</span>
+      <span class="nx">mergedBlob</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="p">,</span>
+      <span class="sb">`</span><span class="si">${</span><span class="nx">debateInfo</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">`</span>
+    <span class="p">);</span>
 
-    <span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_API_URL</span><span class="si">}</span><span class="sb">/debate/debate_room/</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">/video`</span><span class="p">,</span> <span class="p">{</span> <span class="nx">videoUrl</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">withCredentials</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+    <span class="nx">axios</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span>
+      <span class="sb">`</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_API_URL</span><span class="si">}</span><span class="sb">/debate/debate_room/</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">/video`</span><span class="p">,</span>
+      <span class="p">{</span> <span class="nx">videoUrl</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">withCredentials</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span>
+    <span class="p">);</span>
   <span class="p">};</span>
 
   <span class="c1">// 60프레임으로 녹화 시작
 </span><span class="c1"></span>  <span class="nx">mergedRecorder</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="mi">1000</span> <span class="o">/</span> <span class="mi">60</span><span class="p">);</span>
 
-  <span class="nx">setNotice</span><span class="p">({</span> <span class="p">...</span><span class="nx">notice</span><span class="p">,</span> <span class="p">...{</span> <span class="nx">turn</span><span class="o">:</span> <span class="s2">&#34;pre&#34;</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="sb">`Topic : </span><span class="si">${</span><span class="nx">debateInfo</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="sb">`</span> <span class="p">}</span> <span class="p">});</span>
+  <span class="nx">setNotice</span><span class="p">({</span>
+    <span class="p">...</span><span class="nx">notice</span><span class="p">,</span>
+    <span class="p">...{</span> <span class="nx">turn</span><span class="o">:</span> <span class="s2">&#34;pre&#34;</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="sb">`Topic : </span><span class="si">${</span><span class="nx">debateInfo</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="sb">`</span> <span class="p">},</span>
+  <span class="p">});</span>
 
   <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="nx">setIsProTurn</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-    <span class="nx">setNotice</span><span class="p">({</span> <span class="p">...</span><span class="nx">notice</span><span class="p">,</span> <span class="p">...{</span> <span class="nx">turn</span><span class="o">:</span> <span class="s2">&#34;pre&#34;</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="s2">&#34;The debate will begin soon with the opening remarks of the pro. ( 60 sec )&#34;</span> <span class="p">}</span> <span class="p">});</span>
+    <span class="nx">setNotice</span><span class="p">({</span>
+      <span class="p">...</span><span class="nx">notice</span><span class="p">,</span>
+      <span class="p">...{</span>
+        <span class="nx">turn</span><span class="o">:</span> <span class="s2">&#34;pre&#34;</span><span class="p">,</span>
+        <span class="nx">text</span><span class="o">:</span> <span class="s2">&#34;The debate will begin soon with the opening remarks of the pro. ( 60 sec )&#34;</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">});</span>
   <span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
 
   <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -927,8 +966,21 @@
 <ul>
 <li>보이지 않는 비디오를 화면 가운데 고정해서 해결
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;w-screen h-screen flex justify-center items-center fixed&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">video</span> <span class="na">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">myVideoRef</span><span class="p">}</span> <span class="na">muted</span> <span class="na">autoPlay</span> <span class="na">playsInline</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">video</span> <span class="na">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">peerVideoRef</span><span class="p">}</span> <span class="na">autoPlay</span> <span class="na">playsInline</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">video</span>
+    <span class="na">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">myVideoRef</span><span class="p">}</span>
+    <span class="na">muted</span>
+    <span class="na">autoPlay</span>
+    <span class="na">playsInline</span>
+    <span class="na">width</span><span class="o">=</span><span class="s">&#34;0&#34;</span>
+    <span class="na">height</span><span class="o">=</span><span class="s">&#34;0&#34;</span>
+  <span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">video</span>
+    <span class="na">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">peerVideoRef</span><span class="p">}</span>
+    <span class="na">autoPlay</span>
+    <span class="na">playsInline</span>
+    <span class="na">width</span><span class="o">=</span><span class="s">&#34;0&#34;</span>
+    <span class="na">height</span><span class="o">=</span><span class="s">&#34;0&#34;</span>
+  <span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div></li>
 </ul>
@@ -1227,7 +1279,7 @@
         </span>
         <span>
           
-            <a class="flex text-right group" href="/posts/today-i-learned/react/next.js-lc-1/">
+            <a class="flex text-right group" href="/posts/study/react/next.js-lc-1/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
