@@ -103,7 +103,7 @@
     "keywords": ["Algorithm"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "169"
+    "wordCount": "166"
   }]
   </script>
 
@@ -359,26 +359,27 @@
         <blockquote>
 <p>정렬을 이용해서 문제를 효율적으로 풀어보세요.</p>
 </blockquote>
-<p>*<a href="https://yuchanjeong.github.io/posts/algorithm/practice-kit/hash/#sort">객체 정렬 및 다중 정렬</a></p>
+<p>Tip. <a href="https://yuchanjeong.github.io/posts/algorithm/practice-kit/hash/#sort">객체 정렬 및 다중 정렬</a></p>
 <h2 id="문제" class="relative group">문제 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c" aria-label="Anchor">#</a></span></h2>
 <h3 id="1-k번째수-lv1-httpsprogrammerscokrlearncourses30lessons42748" class="relative group">1. K번째수 (Lv.1) <a href="https://programmers.co.kr/learn/courses/30/lessons/42748">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-k%eb%b2%88%ec%a7%b8%ec%88%98-lv1-httpsprogrammerscokrlearncourses30lessons42748" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">commands</span><span class="p">)</span> <span class="p">{</span>
   <span class="kr">const</span> <span class="nx">func</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">_arr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">j</span><span class="p">);</span>
-    <span class="nx">_arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nx">_arr</span><span class="p">[</span><span class="nx">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+    <span class="kr">const</span> <span class="nx">cutArr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">j</span><span class="p">);</span>
+    <span class="nx">cutArr</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">cutArr</span><span class="p">[</span><span class="nx">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
   <span class="p">};</span>
 
   <span class="k">return</span> <span class="nx">commands</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">command</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">func</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="p">...</span><span class="nx">command</span><span class="p">));</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="2-가장-큰-수-lv2-httpsprogrammerscokrlearncourses30lessons42746" class="relative group">2. 가장 큰 수 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42746">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%ea%b0%80%ec%9e%a5-%ed%81%b0-%ec%88%98-lv2-httpsprogrammerscokrlearncourses30lessons42746" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">numbers</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">nums</span> <span class="o">=</span> <span class="nx">numbers</span>
+  <span class="kr">const</span> <span class="nx">numStr</span> <span class="o">=</span> <span class="nx">numbers</span>
     <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">String</span><span class="p">(</span><span class="nx">num</span><span class="p">))</span>
-    <span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">b</span> <span class="o">+</span> <span class="nx">a</span><span class="p">)</span> <span class="o">-</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">))</span>
+    <span class="c1">// .sort는 Greedy하게 작동.
+</span><span class="c1"></span>    <span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">b</span> <span class="o">+</span> <span class="nx">a</span><span class="p">)</span> <span class="o">-</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">))</span>
     <span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
   <span class="c1">// 0으로만 구성 되었을 경우 edge case!
-</span><span class="c1"></span>  <span class="k">return</span> <span class="nx">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="s2">&#34;0&#34;</span> <span class="o">?</span> <span class="s2">&#34;0&#34;</span> <span class="o">:</span> <span class="nx">nums</span><span class="p">;</span>
+</span><span class="c1"></span>  <span class="k">return</span> <span class="nx">numStr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="s2">&#34;0&#34;</span> <span class="o">?</span> <span class="s2">&#34;0&#34;</span> <span class="o">:</span> <span class="nx">numStr</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="3-h-index-lv2-httpsprogrammerscokrlearncourses30lessons42747languagejavascript" class="relative group">3. H-Index (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42747?language=javascript">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-h-index-lv2-httpsprogrammerscokrlearncourses30lessons42747languagejavascript" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">citations</span><span class="p">)</span> <span class="p">{</span>
@@ -391,8 +392,7 @@
   <span class="k">return</span> <span class="nx">i</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">solution</span> <span class="o">=</span> <span class="p">(</span><span class="nx">citations</span><span class="p">)</span> <span class="p">=&gt;</span>
-  <span class="c1">// h 편 이상 인용된 논문 수가 length.
-</span><span class="c1"></span>  <span class="nx">citations</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">b</span> <span class="o">-</span> <span class="nx">a</span><span class="p">).</span><span class="nx">filter</span><span class="p">((</span><span class="nx">citation</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">citation</span> <span class="o">&gt;=</span> <span class="nx">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="nx">citations</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">b</span> <span class="o">-</span> <span class="nx">a</span><span class="p">).</span><span class="nx">filter</span><span class="p">((</span><span class="nx">citation</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">citation</span> <span class="o">&gt;=</span> <span class="nx">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">length</span><span class="p">;</span>
 </code></pre></div><hr>
 <p>*Ref. <a href="https://programmers.co.kr/learn/courses/30/parts/12198">프로그래머스 고득점 Kit - 정렬</a></p>
