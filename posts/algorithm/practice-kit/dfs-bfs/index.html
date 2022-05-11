@@ -103,7 +103,7 @@
     "keywords": ["Algorithm"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "475"
+    "wordCount": "465"
   }]
   </script>
 
@@ -349,11 +349,6 @@
         <li><a href="#4-여행경로-lv3-httpsprogrammerscokrlearncourses30lessons43164languagejavascript">4. 여행경로 (Lv.3) <a href="https://programmers.co.kr/learn/courses/30/lessons/43164?language=javascript">*</a></a></li>
       </ul>
     </li>
-    <li><a href="#my-tips">My Tips</a>
-      <ul>
-        <li><a href="#dfs-bfs-구분">DFS, BFS 구분</a></li>
-      </ul>
-    </li>
   </ul>
 </nav>
   </div>
@@ -367,9 +362,24 @@
 <p>깊이/너비 우선 탐색을 사용해 원하는 답을 찾아보세요.</p>
 </blockquote>
 <h2 id="개념-정리" class="relative group">개념 정리 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ea%b0%9c%eb%85%90-%ec%a0%95%eb%a6%ac" aria-label="Anchor">#</a></span></h2>
-<ul>
-<li>추가 예정</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>DFS</th>
+<th>BFS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>스택, 재귀 함수</td>
+<td>큐</td>
+</tr>
+<tr>
+<td>탐색 시 가중치 혹은 제약, 완전 탐색</td>
+<td>최단 탐색만 고려</td>
+</tr>
+</tbody>
+</table>
 <h2 id="문제" class="relative group">문제 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c" aria-label="Anchor">#</a></span></h2>
 <h3 id="1-타겟-넘버-lv2-httpsprogrammerscokrlearncourses30lessons43165" class="relative group">1. 타겟 넘버 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/43165">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ed%83%80%ea%b2%9f-%eb%84%98%eb%b2%84-lv2-httpsprogrammerscokrlearncourses30lessons43165" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// DFS(재귀), 트리
@@ -521,27 +531,7 @@
   <span class="nx">dfs</span><span class="p">(</span><span class="s2">&#34;ICN&#34;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
   <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><h2 id="my-tips" class="relative group">My Tips <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#my-tips" aria-label="Anchor">#</a></span></h2>
-<h3 id="dfs-bfs-구분" class="relative group">DFS, BFS 구분 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#dfs-bfs-%ea%b5%ac%eb%b6%84" aria-label="Anchor">#</a></span></h3>
-<table>
-<thead>
-<tr>
-<th>DFS</th>
-<th>BFS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>재귀 함수 &gt; 스택</td>
-<td>큐</td>
-</tr>
-<tr>
-<td>탐색 시 가중치 혹은 제약, 완전 탐색</td>
-<td>최단 탐색만 고려</td>
-</tr>
-</tbody>
-</table>
-<hr>
+</code></pre></div><hr>
 <p>*Ref. <a href="https://programmers.co.kr/learn/courses/30/parts/12421">프로그래머스 고득점 Kit - 깊이/너비 우선 탐색(DFS/BFS)</a></p>
 
       </div>

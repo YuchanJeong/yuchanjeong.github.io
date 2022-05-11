@@ -103,7 +103,7 @@
     "keywords": ["Algorithm"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1185"
+    "wordCount": "1056"
   }]
   </script>
 
@@ -356,8 +356,8 @@
     </li>
     <li><a href="#my-tips">My Tips</a>
       <ul>
-        <li><a href="#compile-by-type">Compile by Type</a></li>
-        <li><a href="#sort">.sort</a></li>
+        <li><a href="#종류별로-정리">종류별로 정리</a></li>
+        <li><a href="#고급-정렬">고급 정렬</a></li>
       </ul>
     </li>
   </ul>
@@ -442,8 +442,8 @@
 <ol>
 <li>sort 사용</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 1. 순서데로 정렬.
-</span><span class="c1">// 2. 하나씩 비교 -&gt; 다른 순간 해당 참가자는 완주하지 못한 것.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 정렬 후 비교해서 다른 순간이 완주하지 못한 참가자.
+</span><span class="c1">// Ps. 문자는 `.sort()`로 오름차순 정렬 가능.
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">participant</span><span class="p">,</span> <span class="nx">completion</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">participant</span><span class="p">.</span><span class="nx">sort</span><span class="p">();</span>
   <span class="nx">completion</span><span class="p">.</span><span class="nx">sort</span><span class="p">();</span>
@@ -452,109 +452,81 @@
 
   <span class="k">return</span> <span class="nx">participant</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span>
 <span class="p">}</span>
-<span class="c1">// Ps. 해시로 풀지 않음.
-</span></code></pre></div><ol start="2">
+</code></pre></div><ol start="2">
 <li>Map 사용</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// participant에 있는 경우 +1,completion에 있는 경우 -1, 1이 남는 경우가 정답.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// participant에 있는 경우 +1, completion에 있는 경우 -1.
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">participant</span><span class="p">,</span> <span class="nx">completion</span><span class="p">)</span> <span class="p">{</span>
   <span class="kr">const</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
 
   <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">participant</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">participant</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-    <span class="kr">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">completion</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="kr">const</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">participant</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">completion</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
 
-    <span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-    <span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">p</span><span class="p">)</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">c</span><span class="p">,</span> <span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
   <span class="p">}</span>
 
   <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="p">[</span><span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">]</span> <span class="k">of</span> <span class="nx">map</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">v</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="nx">k</span><span class="p">;</span>
   <span class="p">}</span>
-
-  <span class="k">return</span> <span class="s2">&#34;nothing&#34;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><ol start="3">
-<li>reduce, 쉼표 연산자 사용</li>
+<li>reduce, <strong>쉼표 연산자</strong> 사용</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// completion의 요소를 key로 중복이 있으면 1+a, 없으면 1을 value로 가지는 객체 생성.
-</span><span class="c1">// completion에 있는 경우 -1을 해주고, 없을 경우 0이라 falsy 즉, 해당 el이 반환!
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// completion에 있는 경우 -1.
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">participant</span><span class="p">,</span> <span class="nx">completion</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">completion</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
-    <span class="p">(</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">((</span><span class="nx">acc</span><span class="p">[</span><span class="nx">cur</span><span class="p">]</span> <span class="o">=</span> <span class="nx">acc</span><span class="p">[</span><span class="nx">cur</span><span class="p">]</span> <span class="o">?</span> <span class="nx">acc</span><span class="p">[</span><span class="nx">cur</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">),</span> <span class="nx">acc</span><span class="p">),</span>
-    <span class="p">{}</span>
-  <span class="p">);</span>
-  <span class="k">return</span> <span class="nx">participant</span><span class="p">.</span><span class="nx">find</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">[</span><span class="nx">el</span><span class="p">])</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="k">else</span> <span class="kc">true</span><span class="p">;</span>
-  <span class="p">});</span>
-<span class="p">}</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 2022.05.04
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">participant</span><span class="p">,</span> <span class="nx">completion</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">participant_obj</span> <span class="o">=</span> <span class="nx">participant</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
+  <span class="kr">const</span> <span class="nx">pObj</span> <span class="o">=</span> <span class="nx">participant</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
     <span class="p">(</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">((</span><span class="nx">acc</span><span class="p">[</span><span class="nx">cur</span><span class="p">]</span> <span class="o">=</span> <span class="nx">acc</span><span class="p">[</span><span class="nx">cur</span><span class="p">]</span> <span class="o">?</span> <span class="nx">acc</span><span class="p">[</span><span class="nx">cur</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">),</span> <span class="nx">acc</span><span class="p">),</span>
     <span class="p">{}</span>
   <span class="p">);</span>
 
-  <span class="nx">completion</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">participant_obj</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="nx">completion</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">pObj</span><span class="p">[</span><span class="nx">c</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
   <span class="p">});</span>
 
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">participant_obj</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">participant_obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nx">key</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">pObj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">pObj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nx">key</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="2-위장-lv2-httpsprogrammerscokrlearncourses30lessons42578languagejavascript" class="relative group">2. 위장 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42578?language=javascript">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%ec%9c%84%ec%9e%a5-lv2-httpsprogrammerscokrlearncourses30lessons42578languagejavascript" aria-label="Anchor">#</a></span></h3>
 <ol>
 <li>Map 사용</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 옷 종류별로 갯수 + 1(안입는 경우의 수) 전부 곱한 뒤 -1(아무것도 안입는 경우의 수).
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 옷 종류별로 개수 + 1(안입는 경우의 수) 전부 곱한 뒤, -1(아무것도 안입는 경우의 수).
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">clothes</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-
+  <span class="kd">let</span> <span class="nx">cnt</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
   <span class="kr">const</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
 
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">el</span> <span class="k">of</span> <span class="nx">clothes</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">type</span> <span class="o">=</span> <span class="nx">el</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">c</span> <span class="k">of</span> <span class="nx">clothes</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">type</span> <span class="o">=</span> <span class="nx">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
     <span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">type</span><span class="p">)</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
   <span class="p">}</span>
 
   <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="p">[</span><span class="nx">_</span><span class="p">,</span> <span class="nx">v</span><span class="p">]</span> <span class="k">of</span> <span class="nx">map</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">count</span> <span class="o">*=</span> <span class="nx">v</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nx">cnt</span> <span class="o">*=</span> <span class="nx">v</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
   <span class="p">}</span>
 
-  <span class="k">return</span> <span class="nx">count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">cnt</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><ol start="2">
 <li>reduce 사용</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// reduce로 obj와 값을 추출!
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">clothes</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span>
-      <span class="nx">clothes</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
-        <span class="p">(</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">((</span><span class="nx">acc</span><span class="p">[</span><span class="nx">cur</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="nx">acc</span><span class="p">[</span><span class="nx">cur</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">?</span> <span class="nx">acc</span><span class="p">[</span><span class="nx">cur</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">),</span> <span class="nx">acc</span><span class="p">),</span>
-        <span class="p">{}</span>
-      <span class="p">)</span>
-    <span class="p">).</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acc</span> <span class="o">*</span> <span class="p">(</span><span class="nx">cur</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 2022.05.04
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">clothes</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">clothes_obj</span> <span class="o">=</span> <span class="nx">clothes</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">clothes</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">cObj</span> <span class="o">=</span> <span class="nx">clothes</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
     <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">_clothes</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
       <span class="p">(</span><span class="nx">obj</span><span class="p">[</span><span class="nx">_clothes</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">_clothes</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">?</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">_clothes</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">),</span> <span class="nx">obj</span>
     <span class="p">),</span>
     <span class="p">{}</span>
   <span class="p">);</span>
 
-  <span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">cnt</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">clothes_obj</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">count</span> <span class="o">*=</span> <span class="nx">clothes_obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">cObj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">cnt</span> <span class="o">*=</span> <span class="nx">cObj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
   <span class="p">}</span>
 
-  <span class="k">return</span> <span class="nx">count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">cnt</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="3-베스트앨범-lv3-httpsprogrammerscokrlearncourses30lessons42579" class="relative group">3. 베스트앨범 (Lv.3) <a href="https://programmers.co.kr/learn/courses/30/lessons/42579">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%eb%b2%a0%ec%8a%a4%ed%8a%b8%ec%95%a8%eb%b2%94-lv3-httpsprogrammerscokrlearncourses30lessons42579" aria-label="Anchor">#</a></span></h3>
 <ol>
@@ -568,57 +540,57 @@
   <span class="p">}));</span>
 
   <span class="c1">// 1) 장르별 총 플레이 시간.
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">genre_play</span> <span class="o">=</span> <span class="nx">genres</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">genrePlayObj</span> <span class="o">=</span> <span class="nx">genres</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
     <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">genre</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
       <span class="p">(</span><span class="nx">obj</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">?</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">:</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">]),</span> <span class="nx">obj</span>
     <span class="p">),</span>
     <span class="p">{}</span>
   <span class="p">);</span>
 
-  <span class="nx">infos</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">genre</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">genre</span><span class="p">;</span>
-    <span class="kr">const</span> <span class="nx">genre_play</span> <span class="o">=</span> <span class="nx">genre_play</span><span class="p">[</span><span class="nx">genre</span><span class="p">];</span>
+  <span class="nx">infos</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">info</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">genre</span> <span class="o">=</span> <span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">;</span>
+    <span class="kr">const</span> <span class="nx">genrePlayObj</span> <span class="o">=</span> <span class="nx">genrePlayObj</span><span class="p">[</span><span class="nx">genre</span><span class="p">];</span>
 
-    <span class="nx">el</span><span class="p">.</span><span class="nx">genre</span> <span class="o">=</span> <span class="nx">genre_play</span><span class="p">;</span>
+    <span class="nx">info</span><span class="p">.</span><span class="nx">genre</span> <span class="o">=</span> <span class="nx">genrePlayObj</span><span class="p">;</span>
   <span class="p">});</span>
 
   <span class="c1">// 2) 순서대로 정렬.
 </span><span class="c1"></span>  <span class="nx">infos</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">play</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">play</span><span class="p">);</span>
   <span class="nx">infos</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">genre</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">genre</span><span class="p">);</span>
 
-  <span class="c1">// 3) 2개만 앨범에 추가.
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="c1">// 3) 상위 2개만 앨범에 추가.
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">cnt</span> <span class="o">=</span> <span class="p">{};</span>
   <span class="kr">const</span> <span class="nx">album</span> <span class="o">=</span> <span class="p">[];</span>
 
-  <span class="nx">infos</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">count</span><span class="p">[</span><span class="nx">el</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">count</span><span class="p">[</span><span class="nx">el</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">?</span> <span class="nx">count</span><span class="p">[</span><span class="nx">el</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="nx">infos</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">info</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">cnt</span><span class="p">[</span><span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">cnt</span><span class="p">[</span><span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">?</span> <span class="nx">cnt</span><span class="p">[</span><span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">count</span><span class="p">[</span><span class="nx">el</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">album</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">num</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">cnt</span><span class="p">[</span><span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">album</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">info</span><span class="p">.</span><span class="nx">num</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">});</span>
 
   <span class="k">return</span> <span class="nx">album</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 2022.05.04
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">genres</span><span class="p">,</span> <span class="nx">plays</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// reduce로 Type 별로 정리
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">genres_play</span> <span class="o">=</span> <span class="nx">genres</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">genres</span><span class="p">,</span> <span class="nx">plays</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// reduce로 타입 별로 정리
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">genrePlayObj</span> <span class="o">=</span> <span class="nx">genres</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
     <span class="p">(</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">genre</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
       <span class="p">(</span><span class="nx">acc</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">acc</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">?</span> <span class="nx">acc</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">:</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">]),</span> <span class="nx">acc</span>
     <span class="p">),</span>
     <span class="p">{}</span>
   <span class="p">);</span>
 
-  <span class="kr">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="kr">const</span> <span class="nx">cnt</span> <span class="o">=</span> <span class="p">{};</span>
   <span class="kr">const</span> <span class="nx">album</span> <span class="o">=</span> <span class="p">[];</span>
+
   <span class="nx">genres</span>
     <span class="c1">// 객체에 정보 담아서
 </span><span class="c1"></span>    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">genre</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">genre</span><span class="p">,</span> <span class="nx">play</span><span class="o">:</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">],</span> <span class="nx">idx</span> <span class="p">}))</span>
     <span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
       <span class="c1">// 다중 정렬
 </span><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">genre</span> <span class="o">!==</span> <span class="nx">b</span><span class="p">.</span><span class="nx">genre</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">genres_play</span><span class="p">[</span><span class="nx">b</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">-</span> <span class="nx">genres_play</span><span class="p">[</span><span class="nx">a</span><span class="p">.</span><span class="nx">genre</span><span class="p">];</span>
+        <span class="k">return</span> <span class="nx">genrePlayObj</span><span class="p">[</span><span class="nx">b</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">-</span> <span class="nx">genrePlayObj</span><span class="p">[</span><span class="nx">a</span><span class="p">.</span><span class="nx">genre</span><span class="p">];</span>
       <span class="p">}</span>
       <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">play</span> <span class="o">!==</span> <span class="nx">b</span><span class="p">.</span><span class="nx">play</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="nx">b</span><span class="p">.</span><span class="nx">play</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">play</span><span class="p">;</span>
@@ -627,8 +599,8 @@
     <span class="p">})</span>
     <span class="c1">// 상위 2개만 앨범에 포함
 </span><span class="c1"></span>    <span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">info</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">count</span><span class="p">[</span><span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">count</span><span class="p">[</span><span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">?</span> <span class="nx">count</span><span class="p">[</span><span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">count</span><span class="p">[</span><span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">cnt</span><span class="p">[</span><span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">cnt</span><span class="p">[</span><span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">?</span> <span class="nx">cnt</span><span class="p">[</span><span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">cnt</span><span class="p">[</span><span class="nx">info</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">album</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">info</span><span class="p">.</span><span class="nx">idx</span><span class="p">);</span>
       <span class="p">}</span>
     <span class="p">});</span>
@@ -636,50 +608,39 @@
   <span class="k">return</span> <span class="nx">album</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><ol start="2">
-<li>forEach, 다중 sort 사용</li>
+<li>forEach 사용</li>
 </ol>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">genres</span><span class="p">,</span> <span class="nx">plays</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">genre_play</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="kr">const</span> <span class="nx">genrePlayObj</span> <span class="o">=</span> <span class="p">{};</span>
   <span class="nx">genres</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">genre</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">genre_play</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">genre_play</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span>
-      <span class="o">?</span> <span class="nx">genre_play</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span>
+    <span class="nx">genrePlayObj</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">genrePlayObj</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span>
+      <span class="o">?</span> <span class="nx">genrePlayObj</span><span class="p">[</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span>
       <span class="o">:</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span>
   <span class="p">});</span>
 
-  <span class="kr">const</span> <span class="nx">genre_play_count</span> <span class="o">=</span> <span class="p">{};</span>
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="nx">genres</span>
-      <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">genre</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">genre</span><span class="o">:</span> <span class="nx">genre</span><span class="p">,</span> <span class="nx">play</span><span class="o">:</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">],</span> <span class="nx">num</span><span class="o">:</span> <span class="nx">idx</span> <span class="p">}))</span>
-      <span class="c1">// 다중 sort.
-</span><span class="c1"></span>      <span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">genre</span> <span class="o">!==</span> <span class="nx">b</span><span class="p">.</span><span class="nx">genre</span><span class="p">)</span> <span class="p">{</span>
-          <span class="k">return</span> <span class="nx">genre_play</span><span class="p">[</span><span class="nx">b</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">-</span> <span class="nx">genre_play</span><span class="p">[</span><span class="nx">a</span><span class="p">.</span><span class="nx">genre</span><span class="p">];</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">play</span> <span class="o">!==</span> <span class="nx">b</span><span class="p">.</span><span class="nx">play</span><span class="p">)</span> <span class="p">{</span>
-          <span class="k">return</span> <span class="nx">b</span><span class="p">.</span><span class="nx">play</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">play</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">num</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">num</span><span class="p">;</span>
-      <span class="p">})</span>
-      <span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">genre</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">genre_play_count</span><span class="p">[</span><span class="nx">genre</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-        <span class="nx">genre_play_count</span><span class="p">[</span><span class="nx">genre</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">genre_play_count</span><span class="p">[</span><span class="nx">genre</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span>
-          <span class="o">?</span> <span class="nx">genre_play_count</span><span class="p">[</span><span class="nx">genre</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-          <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-      <span class="p">})</span>
-      <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">genre</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">genre</span><span class="p">.</span><span class="nx">num</span><span class="p">)</span>
-  <span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">genrePlayObj_cnt</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="k">return</span> <span class="nx">genres</span>
+    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">genre</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">genre</span><span class="o">:</span> <span class="nx">genre</span><span class="p">,</span> <span class="nx">play</span><span class="o">:</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">idx</span><span class="p">],</span> <span class="nx">num</span><span class="o">:</span> <span class="nx">idx</span> <span class="p">}))</span>
+    <span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">genre</span> <span class="o">!==</span> <span class="nx">b</span><span class="p">.</span><span class="nx">genre</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">genrePlayObj</span><span class="p">[</span><span class="nx">b</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">-</span> <span class="nx">genrePlayObj</span><span class="p">[</span><span class="nx">a</span><span class="p">.</span><span class="nx">genre</span><span class="p">];</span>
+      <span class="p">}</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">play</span> <span class="o">!==</span> <span class="nx">b</span><span class="p">.</span><span class="nx">play</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">b</span><span class="p">.</span><span class="nx">play</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">play</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">num</span> <span class="o">-</span> <span class="nx">b</span><span class="p">.</span><span class="nx">num</span><span class="p">;</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">genre</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">genrePlayObj_cnt</span><span class="p">[</span><span class="nx">genre</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+      <span class="nx">genrePlayObj_cnt</span><span class="p">[</span><span class="nx">genre</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">=</span> <span class="nx">genrePlayObj_cnt</span><span class="p">[</span><span class="nx">genre</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span>
+        <span class="o">?</span> <span class="nx">genrePlayObj_cnt</span><span class="p">[</span><span class="nx">genre</span><span class="p">.</span><span class="nx">genre</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">genre</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">genre</span><span class="p">.</span><span class="nx">num</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><h2 id="my-tips" class="relative group">My Tips <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#my-tips" aria-label="Anchor">#</a></span></h2>
-<ul>
-<li>sort
-<ul>
-<li>내부의 값을 이용한 정렬</li>
-<li>다중 정렬</li>
-</ul>
-</li>
-</ul>
-<h3 id="compile-by-type" class="relative group">Compile by Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#compile-by-type" aria-label="Anchor">#</a></span></h3>
+<h3 id="종류별로-정리" class="relative group">종류별로 정리 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%a2%85%eb%a5%98%eb%b3%84%eb%a1%9c-%ec%a0%95%eb%a6%ac" aria-label="Anchor">#</a></span></h3>
 <ul>
 <li>reduce
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">arr1</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
@@ -695,14 +656,14 @@
   <span class="nx">obj</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span> <span class="o">?</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span> <span class="o">+</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">:</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span>
 <span class="p">});</span>
 </code></pre></div></li>
-<li>map
+<li>Map
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
 <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr1</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">arr1</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">arr1</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">||</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">+</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
 <span class="p">}</span>
 </code></pre></div></li>
 </ul>
-<h3 id="sort" class="relative group">.sort <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sort" aria-label="Anchor">#</a></span></h3>
+<h3 id="고급-정렬" class="relative group">고급 정렬 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ea%b3%a0%ea%b8%89-%ec%a0%95%eb%a0%ac" aria-label="Anchor">#</a></span></h3>
 <ul>
 <li>
 <p>객체 정렬</p>
@@ -727,8 +688,7 @@
   <span class="k">return</span> <span class="nx">b</span><span class="p">.</span><span class="nx">type3</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">type3</span><span class="p">;</span>
 <span class="p">});</span>
 
-<span class="cm">/*
-</span><span class="cm">성능이 떨어짐!
+<span class="cm">/* lower performance
 </span><span class="cm">arr.sort((a, b) =&gt; b.type3 - a.type3)
 </span><span class="cm">arr.sort((a, b) =&gt; b.type2 - a.type2)
 </span><span class="cm">arr.sort((a, b) =&gt; b.type1 - a.type1)
