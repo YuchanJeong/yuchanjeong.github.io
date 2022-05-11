@@ -863,5 +863,14 @@
       <description>Today I learned #학습 환경 설정 # UrClass Zoom Discord Notion GitHub GoogleCalendar  학습 방향 설정 # 자기 주도 학습  개발자는 끊임없이 학습해야한다.</description>
     </item>
     
+    <item>
+      <title>About me</title>
+      <link>https://yuchanjeong.github.io/posts/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/about/</guid>
+      <description>A developer who wants to help create a better world :)</description>
+    </item>
+    
   </channel>
 </rss>
