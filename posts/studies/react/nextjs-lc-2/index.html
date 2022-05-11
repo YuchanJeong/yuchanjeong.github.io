@@ -13,14 +13,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>BC-15w-1 / [배포] Amazon Web Service &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="BC-15w-1 / [배포] Amazon Web Service &middot; Yuchan&#39;s hello world!" />
+  <title>[Next.js] Learn Course (2) - How Next.js Works &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[Next.js] Learn Course (2) - How Next.js Works &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog of a developer who wants to help create a better world :)" />
   
   
   
-  <link rel="canonical" href="https://yuchanjeong.github.io/posts/bootcamp/cb-15w-1/" />
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/studies/react/nextjs-lc-2/" />
   
   
   
@@ -66,23 +66,17 @@
   
   
   
-  <meta property="og:title" content="BC-15w-1 / [배포] Amazon Web Service" />
-<meta property="og:description" content="Amazon Web Service #
-1) Cloud Computing #
- 데이터 센터에서는 서버의 자원과 공간, 및 네트워크 환경을 제공(온프레미스) 클라우드 컴퓨팅은 가상화 기술의 발전으로부터 비롯 운영 환경 자체가 클라우드 제공자에게 종속되어 버리므로, 클라우드 서비스에 문제가 생기면 내가 배포하고 관리하는 환경에도 영향이 미치거나 백엔드 구성 자체가 특정 회사의 기술로만 구성해야만 하는 경우가 발생할 수도 있는 단점이 있음 클라우드 서비스의 형태  SaaS(Software as a Service)  클라우드 제공자가 당장 사용 가능한 소프트웨어를 제공하는 경우 대부분 SaaS에 해당   PaaS(Platform as a Service)  클라우드 제공자가 데이터베이스, 개발 플랫폼까지 제공하는 경우 대부분 PaaS에 해당   IaaS(Infrastructure as a Service)  클라우드 제공자가 가상 컴퓨터까지 제공하는 경우 대부분 IaaS에 해당 *AWS는 IaaS에 가까움      2) Deploy #
- Development 단계  각자의 컴퓨터에서 코드를 작성하고 테스트하는 과정 개발 단계이기 때문에 실제 데이터를 이용하지 않고 더미 데이터를 이용해서 테스트   Integration 단계  각자의 컴퓨터에서 작성한 코드를 합치는 과정 내가 작성한 코드가 다른 코드를 침범해서 오류를 일으키지 않는지, 코드 간에 conflict가 있지는 않은지 확인하는 과정   Staging 단계  실제 출시 단계인 Production 단계와 가장 유사한 환경에서 테스트하는 과정 실제 데이터를 복사해서 문제가 있지 않은지 등 다양한 환경에서 테스트를 진행 또한 서비스와 관련된 부서 혹은 인원의 확인 과정을 거침   Production 단계  개발된 서비스를 출시하는 단계 사용자가 접속할 수 있는 Production 환경에서 코드를 구동하고 서비스를 제공 실제 데이터를 가지고 서비스가 운영되기 때문에 문제가 생기면 안 되는 단계     환경 설정을 코드와 분리하는 것이 중요  절대경로 대신 상대경로 사용 환경에 따라 포트를 분기할 수 있도록 환경 변수를 설정(." />
+  <meta property="og:title" content="[Next.js] Learn Course (2) - How Next.js Works" />
+<meta property="og:description" content="How Next." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yuchanjeong.github.io/posts/bootcamp/cb-15w-1/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-01-05T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-01-05T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/studies/react/nextjs-lc-2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-06T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="BC-15w-1 / [배포] Amazon Web Service"/>
-<meta name="twitter:description" content="Amazon Web Service #
-1) Cloud Computing #
- 데이터 센터에서는 서버의 자원과 공간, 및 네트워크 환경을 제공(온프레미스) 클라우드 컴퓨팅은 가상화 기술의 발전으로부터 비롯 운영 환경 자체가 클라우드 제공자에게 종속되어 버리므로, 클라우드 서비스에 문제가 생기면 내가 배포하고 관리하는 환경에도 영향이 미치거나 백엔드 구성 자체가 특정 회사의 기술로만 구성해야만 하는 경우가 발생할 수도 있는 단점이 있음 클라우드 서비스의 형태  SaaS(Software as a Service)  클라우드 제공자가 당장 사용 가능한 소프트웨어를 제공하는 경우 대부분 SaaS에 해당   PaaS(Platform as a Service)  클라우드 제공자가 데이터베이스, 개발 플랫폼까지 제공하는 경우 대부분 PaaS에 해당   IaaS(Infrastructure as a Service)  클라우드 제공자가 가상 컴퓨터까지 제공하는 경우 대부분 IaaS에 해당 *AWS는 IaaS에 가까움      2) Deploy #
- Development 단계  각자의 컴퓨터에서 코드를 작성하고 테스트하는 과정 개발 단계이기 때문에 실제 데이터를 이용하지 않고 더미 데이터를 이용해서 테스트   Integration 단계  각자의 컴퓨터에서 작성한 코드를 합치는 과정 내가 작성한 코드가 다른 코드를 침범해서 오류를 일으키지 않는지, 코드 간에 conflict가 있지는 않은지 확인하는 과정   Staging 단계  실제 출시 단계인 Production 단계와 가장 유사한 환경에서 테스트하는 과정 실제 데이터를 복사해서 문제가 있지 않은지 등 다양한 환경에서 테스트를 진행 또한 서비스와 관련된 부서 혹은 인원의 확인 과정을 거침   Production 단계  개발된 서비스를 출시하는 단계 사용자가 접속할 수 있는 Production 환경에서 코드를 구동하고 서비스를 제공 실제 데이터를 가지고 서비스가 운영되기 때문에 문제가 생기면 안 되는 단계     환경 설정을 코드와 분리하는 것이 중요  절대경로 대신 상대경로 사용 환경에 따라 포트를 분기할 수 있도록 환경 변수를 설정(."/>
+<meta name="twitter:title" content="[Next.js] Learn Course (2) - How Next.js Works"/>
+<meta name="twitter:description" content="How Next."/>
 
   
   <script type="application/ld+json">
@@ -90,26 +84,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "BC-15w-1 \/ [배포] Amazon Web Service",
-    "headline": "BC-15w-1 \/ [배포] Amazon Web Service",
+    "name": "[Next.js] Learn Course (2) - How Next.js Works",
+    "headline": "[Next.js] Learn Course (2) - How Next.js Works",
     
-    "abstract": "Amazon Web Service #\r1) Cloud Computing #\r 데이터 센터에서는 서버의 자원과 공간, 및 네트워크 환경을 제공(온프레미스) 클라우드 컴퓨팅은 가상화 기술의 발전으로부터 비롯 운영 환경 자체가 클라우드 제공자에게 종속되어 버리므로, 클라우드 서비스에 문제가 생기면 내가 배포하고 관리하는 환경에도 영향이 미치거나 백엔드 구성 자체가 특정 회사의 기술로만 구성해야만 하는 경우가 발생할 수도 있는 단점이 있음 클라우드 서비스의 형태  SaaS(Software as a Service)  클라우드 제공자가 당장 사용 가능한 소프트웨어를 제공하는 경우 대부분 SaaS에 해당   PaaS(Platform as a Service)  클라우드 제공자가 데이터베이스, 개발 플랫폼까지 제공하는 경우 대부분 PaaS에 해당   IaaS(Infrastructure as a Service)  클라우드 제공자가 가상 컴퓨터까지 제공하는 경우 대부분 IaaS에 해당 *AWS는 IaaS에 가까움      2) Deploy #\r Development 단계  각자의 컴퓨터에서 코드를 작성하고 테스트하는 과정 개발 단계이기 때문에 실제 데이터를 이용하지 않고 더미 데이터를 이용해서 테스트   Integration 단계  각자의 컴퓨터에서 작성한 코드를 합치는 과정 내가 작성한 코드가 다른 코드를 침범해서 오류를 일으키지 않는지, 코드 간에 conflict가 있지는 않은지 확인하는 과정   Staging 단계  실제 출시 단계인 Production 단계와 가장 유사한 환경에서 테스트하는 과정 실제 데이터를 복사해서 문제가 있지 않은지 등 다양한 환경에서 테스트를 진행 또한 서비스와 관련된 부서 혹은 인원의 확인 과정을 거침   Production 단계  개발된 서비스를 출시하는 단계 사용자가 접속할 수 있는 Production 환경에서 코드를 구동하고 서비스를 제공 실제 데이터를 가지고 서비스가 운영되기 때문에 문제가 생기면 안 되는 단계     환경 설정을 코드와 분리하는 것이 중요  절대경로 대신 상대경로 사용 환경에 따라 포트를 분기할 수 있도록 환경 변수를 설정(.",
+    "abstract": "How Next.",
     "inLanguage": "en",
-    "url" : "https:\/\/yuchanjeong.github.io\/posts\/bootcamp\/cb-15w-1\/",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/studies\/react\/nextjs-lc-2\/",
     "author" : {
       "@type": "Person",
       "name": "Yuchan"
     },
     "copyrightYear": "2022",
-    "dateCreated": "2022-01-05T00:00:00\u002b00:00",
-    "datePublished": "2022-01-05T00:00:00\u002b00:00",
+    "dateCreated": "2022-04-06T00:00:00\u002b00:00",
+    "datePublished": "2022-04-06T00:00:00\u002b00:00",
     
-    "dateModified": "2022-01-05T00:00:00\u002b00:00",
+    "dateModified": "2022-04-06T00:00:00\u002b00:00",
     
-    "keywords": ["Deployment","AWS"],
+    "keywords": ["NextJS"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "555"
+    "wordCount": "1226"
   }]
   </script>
 
@@ -122,7 +116,7 @@
   <meta name="author" content="Yuchan" />
   
     
-      <link href="mailto:wertypoiu@pusan.ac.kr" rel="me" />
+      <link href="mailto:yuchanjeong0923@gmail.com" rel="me" />
     
       <link href="https://github.com/YuchanJeong" rel="me" />
     
@@ -183,7 +177,7 @@
             <a
               class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href="/about/"
-              title="About"
+              title="About me"
               >About</a
             >
           </li>
@@ -221,6 +215,17 @@
             >
           </li>
         
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
+            <a
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+              href="https://github.com/YuchanJeong/_WIL"
+              title=""
+              >WIL</a
+            >
+          </li>
+        
         
           <li
             class="ltr:text-right rtl:text-left ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
@@ -250,7 +255,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        BC-15w-1 / [배포] Amazon Web Service
+        [Next.js] Learn Course (2) - How Next.js Works
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -283,7 +288,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2022-01-05 00:00:00 &#43;0000 UTC">5 January 2022</time>
+      <time datetime="2022-04-06 00:00:00 &#43;0000 UTC">6 April 2022</time>
     
 
     
@@ -297,9 +302,9 @@
         
           
             <a
-              href="/categories/bootcamp/"
+              href="/categories/studies/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&#39;Bootcamp&#39;</a
+              >&lt;Studies&gt;</a
             >
           
         
@@ -307,15 +312,9 @@
         
           
             <a
-              href="/tags/deployment/"
+              href="/tags/nextjs/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >Deployment</a
-            >
-          
-            <a
-              href="/tags/aws/"
-              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >AWS</a
+              >NextJS</a
             >
           
         
@@ -341,16 +340,15 @@
   >
     <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#1-cloud-computing">1) Cloud Computing</a></li>
-        <li><a href="#2-deploy">2) Deploy</a></li>
-        <li><a href="#3-ec2elastic-compute-cloud">3) EC2(Elastic Compute Cloud)</a></li>
-        <li><a href="#4-rdsrelational-database-service">4) RDS(Relational Database Service)</a></li>
-        <li><a href="#5-s3simple-storage-service">5) S3(Simple Storage Service)</a></li>
-        <li><a href="#6-deploy-strategy">6) Deploy Strategy</a></li>
-      </ul>
-    </li>
+    <li><a href="#0-development-and-production-environments">0. Development and Production Environments</a></li>
+    <li><a href="#1-what-is-compiling">1. What is Compiling?</a></li>
+    <li><a href="#2-what-is-minifying">2. What is Minifying?</a></li>
+    <li><a href="#3-what-is-bundling">3. What is Bundling?</a></li>
+    <li><a href="#4-what-is-code-splitting">4. What is Code Splitting?</a></li>
+    <li><a href="#5-build-time-and-runtime">5. Build Time and Runtime</a></li>
+    <li><a href="#6-client-and-server">6. Client and Server</a></li>
+    <li><a href="#7-what-is-rendering">7. What is Rendering?</a></li>
+    <li><a href="#8-what-is-the-network">8. What is the Network?</a></li>
   </ul>
 </nav>
   </div>
@@ -360,150 +358,139 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <h1 id="amazon-web-service" class="relative group">Amazon Web Service <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#amazon-web-service" aria-label="Anchor">#</a></span></h1>
-<h3 id="1-cloud-computing" class="relative group">1) Cloud Computing <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-cloud-computing" aria-label="Anchor">#</a></span></h3>
+        <h1 id="how-nextjs-works" class="relative group">How Next.js Works <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#how-nextjs-works" aria-label="Anchor">#</a></span></h1>
+<h2 id="0-development-and-production-environments" class="relative group">0. Development and Production Environments <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#0-development-and-production-environments" aria-label="Anchor">#</a></span></h2>
+<p>During development, you’re building and running the application on your local machine. <a href="https://nextjs.org/docs/going-to-production">Going to production</a> is the process of making your application ready to be deployed and consumed by users.</p>
 <ul>
-<li>데이터 센터에서는 서버의 자원과 공간, 및 네트워크 환경을 제공(온프레미스)</li>
-<li>클라우드 컴퓨팅은 가상화 기술의 발전으로부터 비롯</li>
-<li>운영 환경 자체가 클라우드 제공자에게 종속되어 버리므로, 클라우드 서비스에 문제가 생기면 내가 배포하고 관리하는 환경에도 영향이 미치거나 백엔드 구성 자체가 특정 회사의 기술로만 구성해야만 하는 경우가 발생할 수도 있는 단점이 있음</li>
-<li>클라우드 서비스의 형태
+<li>In the development stage, Next.js optimizes for the developer and their experience building the application. It comes with features that aim to improve the Developer Experience such the TypeScript and ESLint integration, Fast Refresh, and more.</li>
+<li>In the production stage, Next.js optimizes for the end-users, and their experience using the application. It aims to transform the code to make it performant and accessible.</li>
+</ul>
+<p>Next.js handles much of these <strong>code transformations</strong> and <strong>underlying infrastructure</strong> to make it easier for your application to go to production.</p>
+<p>This is made possible because Next.js has a compiler written in <strong>Rust</strong>, a low-level programming language, and <strong>SWC</strong>, a platform that can be used for compilation, minification, bundling, and more.</p>
+<h2 id="1-what-is-compiling" class="relative group">1. What is Compiling? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-what-is-compiling" aria-label="Anchor">#</a></span></h2>
+<p>Compiling refers to the process of taking code in one language and outputting it in another language or another version of that language.</p>
 <ul>
-<li>SaaS(Software as a Service)
+<li>
+<p>Developer code</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">HomePage</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="nx">DX</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">Future</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>
+<p>Compiled code</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="s2">&#34;use strict&#34;</span><span class="p">;</span>
+
+<span class="nb">Object</span> <span class="nx">defineProperty</span><span class="p">(</span><span class="nx">exports</span><span class="p">,</span>
+  <span class="s2">&#34;__esModule&#34;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">value</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+<span class="nx">exports</span><span class="p">.</span><span class="k">default</span> <span class="o">=</span> <span class="nx">HomePage</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">HomePage</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="cm">/*#__PURE__*/</span><span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+    <span class="s2">&#34;div&#34;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="s2">&#34;DX of the Future&#34;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<p>In Next.js, compilation happens during the development stage as you edit your code, and as part of the build step to prepare your application for production.</p>
+<h2 id="2-what-is-minifying" class="relative group">2. What is Minifying? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-what-is-minifying" aria-label="Anchor">#</a></span></h2>
+<p>Minification is the process of removing unnecessary code formatting and comments without changing the code’s functionality. The goal is to improve the application’s performance by decreasing file sizes.</p>
 <ul>
-<li>클라우드 제공자가 당장 사용 가능한 소프트웨어를 제공하는 경우 대부분 SaaS에 해당</li>
+<li>
+<p>Minified code</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="s2">&#34;use strict&#34;</span><span class="p">;</span>Object.defineProperty<span class="o">(</span>exports,<span class="s2">&#34;__esModule&#34;</span>,<span class="o">{</span>value:0<span class="o">})</span><span class="p">;</span>exports.default<span class="o">=</span>HomePage<span class="p">;</span><span class="k">function</span> HomePage<span class="o">(){</span><span class="k">return</span> React.createElement<span class="o">(</span><span class="s2">&#34;div&#34;</span>,null,<span class="s2">&#34;DX of the Future&#34;</span><span class="o">)</span><span class="p">;</span><span class="o">}</span>
+</code></pre></div></li>
+</ul>
+<h2 id="3-what-is-bundling" class="relative group">3. What is Bundling? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-what-is-bundling" aria-label="Anchor">#</a></span></h2>
+<p>Exporting and importing internal modules, as well as external third-party packages, creates a complex web of file dependencies.</p>
+<p>Bundling is the process of resolving the web of dependencies and merging (or ‘packaging’) the files (or modules) into optimized bundles for the browser, with the goal of reducing the number of requests for files when a user visits a web page.</p>
+<h2 id="4-what-is-code-splitting" class="relative group">4. What is Code Splitting? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-what-is-code-splitting" aria-label="Anchor">#</a></span></h2>
+<p>Code-splitting is the process of splitting the application’s bundle into smaller chunks required by each <strong>entry point(URLs)</strong>. The goal is to improve the application&rsquo;s initial load time by only loading the code required to run that page.</p>
+<p>Next.js has built-in support for code splitting. Each file inside your <strong>pages/</strong> directory will be automatically code split into its own JavaScript bundle during the build step.</p>
+<h2 id="5-build-time-and-runtime" class="relative group">5. Build Time and Runtime <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-build-time-and-runtime" aria-label="Anchor">#</a></span></h2>
+<ul>
+<li>Build time (or build step)
+<ul>
+<li>A series of steps that prepare your application code for production.</li>
+<li>Built files include:
+<ul>
+<li>HTML files for statically generated pages</li>
+<li>JavaScript code for rendering pages on the server</li>
+<li>JavaScript code for making pages interactive on the client</li>
+<li>CSS files</li>
 </ul>
 </li>
-<li>PaaS(Platform as a Service)
+</ul>
+</li>
+<li>Runtime (or request time)
 <ul>
-<li>클라우드 제공자가 데이터베이스, 개발 플랫폼까지 제공하는 경우 대부분 PaaS에 해당</li>
+<li>The period of time when your application runs in response to a user’s request, after your application has been built and deployed.</li>
 </ul>
 </li>
-<li>IaaS(Infrastructure as a Service)
+</ul>
+<h2 id="6-client-and-server" class="relative group">6. Client and Server <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#6-client-and-server" aria-label="Anchor">#</a></span></h2>
+<p>In the context of web applications, the <strong>client</strong> refers to the browser on a user’s device that sends a request to a server for your application code. It then turns the response it receives from the server into an interface the user can interact with.</p>
+<p><strong>Server</strong> refers to the computer in a data centre that stores your application code, receives requests from a client, does some computation, and sends back an appropriate response.</p>
+<h2 id="7-what-is-rendering" class="relative group">7. What is Rendering? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#7-what-is-rendering" aria-label="Anchor">#</a></span></h2>
+<p>There is an unavoidable unit of work to convert the code you write in React into the HTML representation of your UI. This process is called rendering.</p>
 <ul>
-<li>클라우드 제공자가 가상 컴퓨터까지 제공하는 경우 대부분 IaaS에 해당
-*AWS는 IaaS에 가까움</li>
+<li><strong>Client-Side Rendering (CSR)</strong>
+<ul>
+<li>In a standard React application, the browser receives an <strong>empty HTML</strong> shell from the server along with the JavaScript instructions to construct the UI. The initial rendering work happens on the user&rsquo;s device.</li>
 </ul>
 </li>
+<li>Pre-Rendering
+<ul>
+<li>NextJS pre-renders every page by default. Pre-rendering means the HTML is generated in advance, on a server, instead of having it all done by JavaScript on the user&rsquo;s device.</li>
 </ul>
-</li>
-</ul>
-<h3 id="2-deploy" class="relative group">2) Deploy <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-deploy" aria-label="Anchor">#</a></span></h3>
 <ol>
-<li>Development 단계
+<li><strong>Server-Side Rendering (SSR)</strong>
 <ul>
-<li>각자의 컴퓨터에서 코드를 작성하고 테스트하는 과정</li>
-<li>개발 단계이기 때문에 실제 데이터를 이용하지 않고 더미 데이터를 이용해서 테스트</li>
+<li>The HTML of the page is generated on a server for each request. The generated HTML, JSON data, and JavaScript instructions to make the page interactive are then sent to the client.</li>
+<li>On the client, the HTML is used to show a fast non-interactive page, while React uses the JSON data and JavaScript instructions to make components interactive (for example, attaching event handlers to a button). This process is called hydration.</li>
+<li>In Next.js, you can opt to server-side render pages by using <a href="https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props">getServerSideProps</a>.
+<blockquote>
+<p>React 18 and Next 12 introduce an alpha version of React <code>server components</code>. Server components are completely rendered on the server and do not require client-side JavaScript to render. In addition, server components allow developers to keep some logic on the server and only send the result of that logic to the client. This reduces the bundle size sent to the client and improves client-side rendering performance. <a href="https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html">Learn more about React server components here</a>.</p>
+</blockquote>
+</li>
 </ul>
 </li>
-<li>Integration 단계
+<li><strong>Static Site Generation (SSG)</strong>
 <ul>
-<li>각자의 컴퓨터에서 작성한 코드를 합치는 과정</li>
-<li>내가 작성한 코드가 다른 코드를 침범해서 오류를 일으키지 않는지, 코드 간에 conflict가 있지는 않은지 확인하는 과정</li>
-</ul>
-</li>
-<li>Staging 단계
-<ul>
-<li>실제 출시 단계인 Production 단계와 가장 유사한 환경에서 테스트하는 과정</li>
-<li>실제 데이터를 복사해서 문제가 있지 않은지 등 다양한 환경에서 테스트를 진행</li>
-<li>또한 서비스와 관련된 부서 혹은 인원의 확인 과정을 거침</li>
-</ul>
-</li>
-<li>Production 단계
-<ul>
-<li>개발된 서비스를 출시하는 단계</li>
-<li>사용자가 접속할 수 있는 Production 환경에서 코드를 구동하고 서비스를 제공</li>
-<li>실제 데이터를 가지고 서비스가 운영되기 때문에 문제가 생기면 안 되는 단계</li>
+<li>The HTML is generated on the server, but unlike server-side rendering, there is no server at runtime. Instead, content is generated once, at build time, when the application is deployed, and the HTML is stored in a CDN and re-used for each request.</li>
+<li>In Next.js, you can opt to statically generate pages by using <a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">getStaticProps</a>.</li>
 </ul>
 </li>
 </ol>
+</li>
+</ul>
+<p>The beauty of Next.js is that you can choose the most appropriate rendering method for your use case on a page-by-page basis, whether that&rsquo;s Static Site Generation, Server-side Rendering, or Client-Side Rendering. To learn more about which rendering method is right for your specific use case, see the <a href="https://nextjs.org/docs/basic-features/data-fetching/overview">data fetching docs</a>.</p>
+<h2 id="8-what-is-the-network" class="relative group">8. What is the Network? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#8-what-is-the-network" aria-label="Anchor">#</a></span></h2>
 <ul>
-<li>환경 설정을 코드와 분리하는 것이 중요
+<li>Origin Servers
 <ul>
-<li>절대경로 대신 상대경로 사용</li>
-<li>환경에 따라 포트를 분기할 수 있도록 환경 변수를 설정(.env)</li>
-<li>Docker와 같은 개발 환경 자체를 통일시키는 솔루션을 사용</li>
+<li>The server refers to the main computer that stores and runs the original version of your application code. We use the term origin to distinguish this server from the other places application code can be distributed to, such as CDN servers and Edge servers.</li>
+</ul>
+</li>
+<li>Content Delivery Network (CDN)
+<ul>
+<li>CDNs store static content (such as HTML and image files) in multiple locations around the world and are placed between the client and the origin server. When a new request comes in, the closest CDN location to the user can respond with the <strong>cached result</strong>.</li>
+<li>This <strong>reduces the load on the origin</strong> because the computation doesn’t have to happen on each request. It also <strong>makes it faster for the user</strong> because the response comes from a location geographically closer to them.</li>
+<li>In Next.js, since pre-rendering can be done ahead of time, CDNs are well suited to store the static result of the work - making content delivery faster.</li>
+</ul>
+</li>
+<li>The Edge
+<ul>
+<li>The Edge is a generalized concept for the fringe (or edge) of the network, closest to the user. CDNs could be considered part of &ldquo;the Edge&rdquo; because they store static content at the fringe (edge) of the network.</li>
+<li>Similar to CDNs, Edge servers are distributed to multiple locations around the world. But unlike CDNs, which store static content, some Edge servers can run code.</li>
+<li>By running code at the Edge, you can move some of the work that was traditionally done client-side or server-side to the Edge. This can make your application more performant.</li>
+<li>In Next.js, you can run code at the Edge with <a href="https://nextjs.org/docs/middleware">Middleware</a>, and soon with <a href="https://nextjs.org/docs/advanced-features/react-18/overview#react-server-components-alpha">React Server Components</a>.</li>
 </ul>
 </li>
 </ul>
-<h3 id="3-ec2elastic-compute-cloud" class="relative group">3) EC2(Elastic Compute Cloud) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-ec2elastic-compute-cloud" aria-label="Anchor">#</a></span></h3>
-<ul>
-<li>AWS에서 원격으로 제어할 수 있는 가상의 컴퓨터를 한 대 빌리는 것</li>
-<li>사용한 만큼 비용을 지불</li>
-<li>인스턴스는 1대의 컴퓨터를 의미하는 단위이고 AWS에서 컴퓨터를 빌리는 것을 인스턴스를 생성한다고 함</li>
-<li>장점
-<ul>
-<li>구성하는 데 필요한 시간이 짧다</li>
-<li>AMI를 통해서 필요한 용도에 따라 다양한 운영체제에 대한 선택이 가능</li>
-<li>CPU와 RAM, 용량까지도 손쉽게 구성</li>
-</ul>
-</li>
-<li>AMI(Amazon Machine Image)는 소프트웨어 구성이 기재된 템플릿</li>
-</ul>
-<h3 id="4-rdsrelational-database-service" class="relative group">4) RDS(Relational Database Service) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-rdsrelational-database-service" aria-label="Anchor">#</a></span></h3>
-<ul>
-<li>AWS에서 제공하는 관계형 데이터베이스 서비스</li>
-<li>RDS를 이용하면 데이터베이스 유지 보수와 관련된 일들을 RDS에서 전적으로 자동 관리</li>
-<li>다양한 데이터베이스 엔진 선택지를 제공</li>
-</ul>
-<h3 id="5-s3simple-storage-service" class="relative group">5) S3(Simple Storage Service) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-s3simple-storage-service" aria-label="Anchor">#</a></span></h3>
-<ul>
-<li>AWS에서 제공하는 클라우드 스토리지 서비스</li>
-<li>높은 확장성</li>
-<li>강력한 내구성</li>
-<li>높은 가용성 보장
-<ul>
-<li>가용 영역(Availability Zone)이란 각 리전(Region) 안에 존재하는 데이터 센터(IDC)</li>
-</ul>
-</li>
-<li>다양한 스토리지 클래스를 제공
-<ul>
-<li>&ldquo;Standard&rdquo;
-<ul>
-<li>데이터에 빠른 속도로 접근할 수 있고, 데이터 액세스 요청에 대한 처리 속도가 빠름</li>
-<li>데이터를 오래 보관하는 목적으로는 비효율적 bcs 높은 보관 비용</li>
-</ul>
-</li>
-<li>&ldquo;Glacier&rdquo;
-<ul>
-<li>저장된 데이터에 액세스하는 속도는 느리지만, 데이터를 보관하는 비용이 매우 저렴</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>정적 웹 사이트 호스팅이 가능
-<ul>
-<li>버킷이 사용자들이 정적 웹 사이트를 배포할 수 있는 공간을 제공</li>
-</ul>
-</li>
-<li>버킷
-<ul>
-<li>S3에 저장되는 파일들이 담기는 바구니(파일을 저장하는 최상위 디렉터리)</li>
-<li>버킷의 이름은 버킷이 속해 있는 리전(버킷이 생성된 지역)에서 유일해야 함</li>
-<li>버킷 정책을 생성하여 해당 버킷에 대한 다른 유저의 접근 권한을 수정할 수 있음</li>
-<li>버킷에 저장되는 객체는 파일과 메타데이터로 구성</li>
-<li>파일의 값에는 실제 데이터를 저장하며, 최대 크기는 5TB</li>
-<li>메타데이터는 객체에 대한 정보가 담긴 데이터</li>
-<li>모든 객체는 고유한 URL 주소를 가지고 있음
-<ul>
-<li>http://[버킷의 이름].S3.amazonaws.com/[객체의 키]</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="6-deploy-strategy" class="relative group">6) Deploy Strategy <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#6-deploy-strategy" aria-label="Anchor">#</a></span></h3>
-<ul>
-<li>클라이언트 앱을 정적 파일로 빌드하여 제공 즉, S3를 이용해서 클라이언트를 배포</li>
-<li>빌드
-<ul>
-<li>불필요한 데이터를 없애고, 여러 갈래로 퍼져있는 데이터들을 통합/ 압축하여 배포하기에 최적화된 상태를 만듬</li>
-<li>빌드 과정을 진행하기 전과 비교했을 때 데이터의 용량이 줄어들고, 웹 사이트의 로딩 속도가 빨라진다는 장점이 생김</li>
-<li>일반적인 의미의 빌드는, 소스코드를 실행 가능한 번들로 변환하는 컴파일 과정을 의미</li>
-</ul>
-</li>
-<li>AWS에서 제공하는 CDN 서비스인 &ldquo;CloudFront&quot;를 통해서 각지의 데이터 센터에 데이터를 분산시켜서 저장해 뒀다가 가까운 지역에서 데이터를 주는 방식으로 사용자에게 더 빠르게 서비스를 제공</li>
-<li>AWS에서 제공하는 &ldquo;Route 53&rdquo; 서비스를 이용하면 직관적인 도메인 주소를 통해서 서비스에 접근하도록 할 수 있음</li>
-</ul>
+<hr>
+<p>*Ref. <a href="https://nextjs.org/learn/foundations/how-nextjs-works">https://nextjs.org/learn/foundations/how-nextjs-works</a></p>
 
       </div>
     </section>
@@ -541,7 +528,7 @@
       
         <a
           class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
-          href="mailto:wertypoiu@pusan.ac.kr"
+          href="mailto:yuchanjeong0923@gmail.com"
           target="_blank"
           aria-label="Email"
           rel="me noopener noreferrer"
@@ -611,23 +598,23 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group" href="/posts/bootcamp/cb-15w-3/">
+            <a class="flex group" href="/posts/studies/react/nextjs-lc-3/">
               <span
                 class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&larr;</span
               >
               <span
-                class="ml-3 ltr:hidden rtl:inline te- NextJSl-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                class="ml-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&rarr;</span
               >
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >BC-15w-3 / <FC> Next.js로 블로그 만들기 - Next.js</span
+                  >[Next.js] Learn Course (3) - CREATE YOUR FIRST APP 1</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2022-01-03 00:00:00 &#43;0000 UTC">3 January 2022</time>
+                    <time datetime="2022-04-06 00:00:00 &#43;0000 UTC">6 April 2022</time>
                   
                 </span>
               </span>
@@ -636,15 +623,15 @@
         </span>
         <span>
           
-            <a class="flex text-right group" href="/posts/bootcamp/cb-15w-2/">
+            <a class="flex text-right group" href="/posts/studies/react/nextjs-lc-4/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >BC-15w-2 / [배포] Docker</span
+                  >[Next.js] Learn Course (4) - CREATE YOUR FIRST APP 2</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2022-01-07 00:00:00 &#43;0000 UTC">7 January 2022</time>
+                    <time datetime="2022-04-17 00:00:00 &#43;0000 UTC">17 April 2022</time>
                   
                 </span>
               </span>
