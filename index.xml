@@ -7,16 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Wed, 11 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>일기장</title>
-      <link>https://yuchanjeong.github.io/diaries/1/</link>
-      <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/diaries/1/</guid>
-      <description>여기는 가볍게 일기장처럼 사용할 예정.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 09 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Debate-Ducks] 개선 프로젝트 시작</title>
       <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-1/</link>
