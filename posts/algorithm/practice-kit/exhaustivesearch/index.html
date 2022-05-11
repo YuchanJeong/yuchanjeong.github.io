@@ -103,7 +103,7 @@
     "keywords": ["Algorithm"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "634"
+    "wordCount": "648"
   }]
   </script>
 
@@ -373,19 +373,21 @@
   <span class="kr">const</span> <span class="nx">two</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
   <span class="kr">const</span> <span class="nx">three</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
 
-  <span class="kr">const</span> <span class="nx">func</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">num_arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">el</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">el</span> <span class="o">===</span> <span class="nx">num_arr</span><span class="p">[</span><span class="nx">idx</span> <span class="o">%</span> <span class="nx">num_arr</span><span class="p">.</span><span class="nx">length</span><span class="p">]).</span><span class="nx">length</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">func</span> <span class="o">=</span> <span class="p">(</span><span class="nx">answers</span><span class="p">,</span> <span class="nx">nums</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// Idea: 나머지로 반복되는 값 처리 가능.
+</span><span class="c1"></span>    <span class="k">return</span> <span class="nx">answers</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">answer</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">answer</span> <span class="o">===</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">idx</span> <span class="o">%</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="p">])</span>
+      <span class="p">.</span><span class="nx">length</span><span class="p">;</span>
   <span class="p">};</span>
 
-  <span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="nx">func</span><span class="p">(</span><span class="nx">answers</span><span class="p">,</span> <span class="nx">one</span><span class="p">)],</span>
     <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="nx">func</span><span class="p">(</span><span class="nx">answers</span><span class="p">,</span> <span class="nx">two</span><span class="p">)],</span>
     <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="nx">func</span><span class="p">(</span><span class="nx">answers</span><span class="p">,</span> <span class="nx">three</span><span class="p">)],</span>
   <span class="p">];</span>
 
-  <span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+  <span class="nx">result</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
 
-  <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">el</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">===</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]).</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">el</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+  <span class="k">return</span> <span class="nx">result</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">el</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">===</span> <span class="nx">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]).</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">el</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="2-소수-찾기-lv2-httpsprogrammerscokrlearncourses30lessons42839languagejavascript" class="relative group">2. 소수 찾기 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42839?language=javascript">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%ec%86%8c%ec%88%98-%ec%b0%be%ea%b8%b0-lv2-httpsprogrammerscokrlearncourses30lessons42839languagejavascript" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">numbers</span><span class="p">)</span> <span class="p">{</span>
@@ -396,8 +398,6 @@
     <span class="p">}</span>
     <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
   <span class="p">};</span>
-
-  <span class="kr">const</span> <span class="nx">nums</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
 
   <span class="kr">const</span> <span class="nx">getPermutation</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
@@ -412,12 +412,12 @@
     <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
   <span class="p">};</span>
 
-  <span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="nx">getPermutation</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
+  <span class="kr">const</span> <span class="nx">nums</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">permutations</span> <span class="o">=</span> <span class="nx">getPermutation</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">el</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">))</span>
     <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">el</span><span class="p">));</span>
-  <span class="kr">const</span> <span class="nx">unique_arr</span> <span class="o">=</span> <span class="p">[...</span><span class="k">new</span> <span class="nx">Set</span><span class="p">(</span><span class="nx">arr</span><span class="p">)];</span>
-
-  <span class="k">return</span> <span class="nx">unique_arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">isPrime</span><span class="p">(</span><span class="nx">el</span><span class="p">)).</span><span class="nx">length</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">uniquePermutations</span> <span class="o">=</span> <span class="p">[...</span><span class="k">new</span> <span class="nx">Set</span><span class="p">(</span><span class="nx">permutations</span><span class="p">)];</span>
+  <span class="k">return</span> <span class="nx">uniquePermutations</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">isPrime</span><span class="p">(</span><span class="nx">num</span><span class="p">)).</span><span class="nx">length</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="3-카펫-lv2-httpsprogrammerscokrlearncourses30lessons42842languagejavascript" class="relative group">3. 카펫 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42842?language=javascript">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%ec%b9%b4%ed%8e%ab-lv2-httpsprogrammerscokrlearncourses30lessons42842languagejavascript" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">brown</span><span class="p">,</span> <span class="nx">yellow</span><span class="p">)</span> <span class="p">{</span>
@@ -455,71 +455,84 @@
 <ul>
 <li>
 <p>조합</p>
+<ul>
+<li>
+<p>모든 조합</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">getCombination</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
 
-  <span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">head</span><span class="p">,</span> <span class="nx">idx</span><span class="p">,</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// 현재 요소 저장
+  <span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">head</span><span class="p">,</span> <span class="nx">idx</span><span class="p">,</span> <span class="nx">src</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// 현재 요소 저장.
 </span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">head</span><span class="p">);</span>
-    <span class="c1">// 현재 요소 뒤의 나머지 배열
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">rest_arr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-    <span class="c1">// 의 조합
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">rest_combination</span> <span class="o">=</span> <span class="nx">getCombination</span><span class="p">(</span><span class="nx">rest_arr</span><span class="p">);</span>
-    <span class="c1">// 현재 요소와 합쳐서 저장
-</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">rest_combination</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">tail</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">head</span><span class="p">,</span> <span class="p">...</span><span class="nx">tail</span><span class="p">]));</span>
-  <span class="p">});</span>
-
-  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
-<span class="p">};</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">getCombination</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">selected_num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="c1">// 마지막 값이 결정되고 순차적으로 값 결정
-</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">selected_num</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">el</span><span class="p">]);</span>
-
-  <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
-
-  <span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">head</span><span class="p">,</span> <span class="nx">idx</span><span class="p">,</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// 현재 요소 뒤의 나머지 배열
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">rest_arr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-    <span class="c1">// 의 조합
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">rest_combination</span> <span class="o">=</span> <span class="nx">getCombination</span><span class="p">(</span><span class="nx">rest_arr</span><span class="p">,</span> <span class="nx">selected_num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
-    <span class="c1">// 현재 요소와 합쳐서 저장
-</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">rest_combination</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">tail</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">head</span><span class="p">,</span> <span class="p">...</span><span class="nx">tail</span><span class="p">]));</span>
+    <span class="c1">// 현재 요소 뒤의 나머지 배열!!!
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">restArr</span> <span class="o">=</span> <span class="nx">src</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="c1">// 의 조합.
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">restCombination</span> <span class="o">=</span> <span class="nx">getCombination</span><span class="p">(</span><span class="nx">restArr</span><span class="p">);</span>
+    <span class="c1">// 현재 요소와 합쳐서 저장.
+</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">restCombination</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">tail</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">head</span><span class="p">,</span> <span class="p">...</span><span class="nx">tail</span><span class="p">]));</span>
   <span class="p">});</span>
 
   <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
 <span class="p">};</span>
 </code></pre></div></li>
 <li>
-<p>순열</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">getPermutation</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<p>특정 조합</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">getCombination</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">selected_num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// 마지막 값이 결정되고 순차적으로 값 결정!!
+</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">selected_num</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">el</span><span class="p">]);</span>
+
   <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
 
   <span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">head</span><span class="p">,</span> <span class="nx">idx</span><span class="p">,</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// 현재 요소 저장
-</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">head</span><span class="p">]);</span>
-    <span class="c1">// 현재 요소를 뺀 나머지 배열
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">rest_arr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">i</span> <span class="o">!==</span> <span class="nx">idx</span><span class="p">);</span>
-    <span class="c1">// 의 순열
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">rest_permutation</span> <span class="o">=</span> <span class="nx">getPermutation</span><span class="p">(</span><span class="nx">rest_arr</span><span class="p">);</span>
-    <span class="c1">// 현재 요소와 합쳐서 저장
-</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">rest_permutation</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">tail</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">head</span><span class="p">,</span> <span class="p">...</span><span class="nx">tail</span><span class="p">]));</span>
+    <span class="c1">// 현재 요소 뒤의 나머지 배열!!!
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">restArr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="c1">// 의 조합.
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">restCombination</span> <span class="o">=</span> <span class="nx">getCombination</span><span class="p">(</span><span class="nx">restArr</span><span class="p">,</span> <span class="nx">selected_num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="c1">// 현재 요소와 합쳐서 저장.
+</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">restCombination</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">tail</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">head</span><span class="p">,</span> <span class="p">...</span><span class="nx">tail</span><span class="p">]));</span>
   <span class="p">});</span>
 
   <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
 <span class="p">};</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">getPermutation</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">selected_num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>순열</p>
+<ul>
+<li>
+<p>모든 순열</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">getPermutation</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
 
-  <span class="c1">// 마지막 값이 결정되고 순차적으로 값 결정
+  <span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">head</span><span class="p">,</span> <span class="nx">idx</span><span class="p">,</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// 현재 요소 저장.
+</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">head</span><span class="p">]);</span>
+    <span class="c1">// 현재 요소를 뺀 나머지 배열!!!
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">restArr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">i</span> <span class="o">!==</span> <span class="nx">idx</span><span class="p">);</span>
+    <span class="c1">// 의 순열.
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">restPermutation</span> <span class="o">=</span> <span class="nx">getPermutation</span><span class="p">(</span><span class="nx">restArr</span><span class="p">);</span>
+    <span class="c1">// 현재 요소와 합쳐서 저장.
+</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">restPermutation</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">tail</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">head</span><span class="p">,</span> <span class="p">...</span><span class="nx">tail</span><span class="p">]));</span>
+  <span class="p">});</span>
+
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">getPermutation</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">selected_num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="c1">// 마지막 값이 결정되고 순차적으로 값 결정!!
 </span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">selected_num</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">el</span><span class="p">]);</span>
 
   <span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">head</span><span class="p">,</span> <span class="nx">idx</span><span class="p">,</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// 현재 요소를 뺀 나머지 배열
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">rest_arr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">i</span> <span class="o">!==</span> <span class="nx">idx</span><span class="p">);</span>
-    <span class="c1">// 의 순열
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">rest_permutation</span> <span class="o">=</span> <span class="nx">getPermutation</span><span class="p">(</span><span class="nx">rest_arr</span><span class="p">,</span> <span class="nx">selected_num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
-    <span class="c1">// 현재 요소와 합쳐서 저장
-</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">rest_permutation</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">tail</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">head</span><span class="p">,</span> <span class="p">...</span><span class="nx">tail</span><span class="p">]));</span>
+    <span class="c1">// 현재 요소를 뺀 나머지 배열!!!
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">restArr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">i</span> <span class="o">!==</span> <span class="nx">idx</span><span class="p">);</span>
+    <span class="c1">// 의 순열.
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">restPermutation</span> <span class="o">=</span> <span class="nx">getPermutation</span><span class="p">(</span><span class="nx">restArr</span><span class="p">,</span> <span class="nx">selected_num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="c1">// 현재 요소와 합쳐서 저장.
+</span><span class="c1"></span>    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">restPermutation</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">tail</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">head</span><span class="p">,</span> <span class="p">...</span><span class="nx">tail</span><span class="p">]));</span>
   <span class="p">});</span>
 
   <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
