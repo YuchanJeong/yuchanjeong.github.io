@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Next.js on Yuchan&#39;s hello world!</title>
-    <link>https://yuchanjeong.github.io/tags/next.js/</link>
-    <description>Recent content in Next.js on Yuchan&#39;s hello world!</description>
+    <title>&lt;Studies&gt; on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/categories/studies/</link>
+    <description>Recent content in &lt;Studies&gt; on Yuchan&#39;s hello world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/next.js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/studies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[React] React v18.0</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/react-v18/</link>
+      <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/studies/react/react-v18/</guid>
+      <description>React v18.</description>
+    </item>
+    
     <item>
       <title>[Next.js] Learn Course (4) - CREATE YOUR FIRST APP 2</title>
       <link>https://yuchanjeong.github.io/posts/studies/react/next.js-lc-4/</link>
@@ -42,15 +51,6 @@
       
       <guid>https://yuchanjeong.github.io/posts/studies/react/next.js-lc-1/</guid>
       <description>About Next.</description>
-    </item>
-    
-    <item>
-      <title>BC-15w-1 / {FC} Next.js로 블로그 만들기 - Next.js</title>
-      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-1/</link>
-      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-1/</guid>
-      <description>1. What is Next.</description>
     </item>
     
   </channel>
