@@ -103,7 +103,7 @@
     "keywords": ["Algorithm"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "277"
+    "wordCount": "372"
   }]
   </script>
 
@@ -382,82 +382,105 @@
 <h2 id="문제" class="relative group">문제 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c" aria-label="Anchor">#</a></span></h2>
 <h3 id="1-기능개발-lv2-httpsprogrammerscokrlearncourses30lessons42586languagejavascript" class="relative group">1. 기능개발 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42586?language=javascript">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ea%b8%b0%eb%8a%a5%ea%b0%9c%eb%b0%9c-lv2-httpsprogrammerscokrlearncourses30lessons42586languagejavascript" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">progresses</span><span class="p">,</span> <span class="nx">speeds</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">_progresses</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">progresses</span><span class="p">];</span>
-  <span class="kd">let</span> <span class="nx">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">day</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
   <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">{};</span>
 
-  <span class="k">while</span> <span class="p">(</span><span class="nx">_progresses</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">cnt</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="nx">_progresses</span> <span class="o">=</span> <span class="nx">_progresses</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">el</span> <span class="o">+</span> <span class="nx">speeds</span><span class="p">[</span><span class="nx">idx</span><span class="p">]);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">progresses</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">day</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nx">progresses</span> <span class="o">=</span> <span class="nx">progresses</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">el</span> <span class="o">+</span> <span class="nx">speeds</span><span class="p">[</span><span class="nx">idx</span><span class="p">]);</span>
 
-    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">_progresses</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">_progresses</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">_progresses</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">result</span><span class="p">[</span><span class="nx">cnt</span><span class="p">]</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">cnt</span><span class="p">]</span> <span class="o">?</span> <span class="nx">result</span><span class="p">[</span><span class="nx">cnt</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">progresses</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">progresses</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">progresses</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 같은 day(타입)에 추가 해줌
+</span><span class="c1"></span>        <span class="nx">result</span><span class="p">[</span><span class="nx">day</span><span class="p">]</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">day</span><span class="p">]</span> <span class="o">?</span> <span class="nx">result</span><span class="p">[</span><span class="nx">day</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="nx">_progresses</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">result</span><span class="p">[</span><span class="nx">cnt</span><span class="p">]);</span>
-    <span class="nx">speeds</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">result</span><span class="p">[</span><span class="nx">cnt</span><span class="p">]);</span>
+    <span class="nx">progresses</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">result</span><span class="p">[</span><span class="nx">day</span><span class="p">]);</span>
+    <span class="nx">speeds</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">result</span><span class="p">[</span><span class="nx">day</span><span class="p">]);</span>
   <span class="p">}</span>
 
   <span class="k">return</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="2-프린터-lv2-httpsprogrammerscokrlearncourses30lessons42587" class="relative group">2. 프린터 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42587">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%ed%94%84%eb%a6%b0%ed%84%b0-lv2-httpsprogrammerscokrlearncourses30lessons42587" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// location을 조정하는 idea!
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Idea: location 조정!!
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">priorities</span><span class="p">,</span> <span class="nx">location</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">let</span> <span class="nx">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
   <span class="k">while</span> <span class="p">(</span><span class="nx">priorities</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">priorities</span><span class="p">);</span>
-    <span class="kr">const</span> <span class="nx">num</span> <span class="o">=</span> <span class="nx">priorities</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+    <span class="kr">const</span> <span class="nx">maxPriority</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">priorities</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="nx">priority</span> <span class="o">=</span> <span class="nx">priorities</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">===</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">priority</span> <span class="o">===</span> <span class="nx">maxPriority</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">cnt</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
       <span class="k">if</span> <span class="p">(</span><span class="nx">location</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="nx">cnt</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">priorities</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+      <span class="nx">priorities</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">priority</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="nx">location</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">location</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 제일 뒤로 보냄.
+</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">location</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">location</span> <span class="o">=</span> <span class="nx">priorities</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="3-다리를-지나는-트럭-lv2-httpsprogrammerscokrlearncourses30lessons42583languagejavascript" class="relative group">3. 다리를 지나는 트럭 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42583?language=javascript">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%eb%8b%a4%eb%a6%ac%eb%a5%bc-%ec%a7%80%eb%82%98%eb%8a%94-%ed%8a%b8%eb%9f%ad-lv2-httpsprogrammerscokrlearncourses30lessons42583languagejavascript" aria-label="Anchor">#</a></span></h3>
-<ul>
-<li>다른 풀이 추가 필요!!! (시간 건너띄기 for 퍼포먼스)</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">bridge_length</span><span class="p">,</span> <span class="nx">weight</span><span class="p">,</span> <span class="nx">truck_weights</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="kr">const</span> <span class="nx">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">bridge_length</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-  <span class="kd">let</span> <span class="nx">buffet_size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="kr">const</span> <span class="nx">passed</span> <span class="o">=</span> <span class="p">[];</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Buffer
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">bridge_length</span><span class="p">,</span> <span class="nx">weight</span><span class="p">,</span> <span class="nx">truck_weights</span><span class="p">)</span> <span class="p">{</span>
   <span class="kr">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">truck_weights</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">time</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">bridge_length</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">bufferWeights</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">passedTrucks</span> <span class="o">=</span> <span class="p">[];</span>
 
-  <span class="k">while</span> <span class="p">(</span><span class="nx">passed</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">cnt</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">passedTrucks</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">time</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
 
-    <span class="c1">// buffer 맨앞 빼서, 0이 아닐 경우 passed에 저장
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">passed_truck</span> <span class="o">=</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
-    <span class="nx">buffet_size</span> <span class="o">-=</span> <span class="nx">passed_truck</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">passed_truck</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">passed</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">passed_truck</span><span class="p">);</span>
+    <span class="c1">// buffer 맨앞 빼서, 0이 아닐 경우 passedTrucks에 저장
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">passedTruck</span> <span class="o">=</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+    <span class="nx">bufferWeights</span> <span class="o">-=</span> <span class="nx">passedTruck</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">passedTruck</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">passedTrucks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">passedTruck</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="c1">// truck_weights 맨앞 빼서, weight 안넘을 경우 buffer에 저장
-</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">buffet_size</span> <span class="o">+</span> <span class="nx">truck_weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="nx">weight</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kr">const</span> <span class="nx">new_truck</span> <span class="o">=</span> <span class="nx">truck_weights</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
-      <span class="nx">buffet_size</span> <span class="o">+=</span> <span class="nx">new_truck</span><span class="p">;</span>
-      <span class="nx">buffer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">new_truck</span><span class="p">);</span>
+</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">bufferWeights</span> <span class="o">+</span> <span class="nx">truck_weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="nx">weight</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">newTruck</span> <span class="o">=</span> <span class="nx">truck_weights</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+      <span class="nx">bufferWeights</span> <span class="o">+=</span> <span class="nx">newTruck</span><span class="p">;</span>
+      <span class="nx">buffer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">newTruck</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="nx">buffer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
 
-  <span class="k">return</span> <span class="nx">cnt</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">time</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// better performance
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">bridge_length</span><span class="p">,</span> <span class="nx">weight</span><span class="p">,</span> <span class="nx">truck_weights</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">queue</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]];</span> <span class="c1">// [truckWeight, time]
+</span><span class="c1"></span>  <span class="kd">let</span> <span class="nx">time</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nx">weightOnBridge</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="nx">queue</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">truck_weights</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 현재 시간과 나갈 시간이 같으면 내보냄.
+</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">queue</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">===</span> <span class="nx">time</span><span class="p">)</span> <span class="nx">weightOnBridge</span> <span class="o">-=</span> <span class="nx">queue</span><span class="p">.</span><span class="nx">shift</span><span class="p">()[</span><span class="mi">0</span><span class="p">];</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">weightOnBridge</span> <span class="o">+</span> <span class="nx">truck_weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="nx">weight</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">weightOnBridge</span> <span class="o">+=</span> <span class="nx">truck_weights</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+      <span class="c1">// Idea: 나갈 시간을 미리 입력!
+</span><span class="c1"></span>      <span class="nx">queue</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">truck_weights</span><span class="p">.</span><span class="nx">shift</span><span class="p">(),</span> <span class="nx">time</span> <span class="o">+</span> <span class="nx">bridge_length</span><span class="p">]);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">// Idea: 새로운 트럭이 추가되지 않으면, 시간을 건너뜀!!! (뒤에서 +1이라 여기서 -1)
+</span><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="nx">queue</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="nx">time</span> <span class="o">=</span> <span class="nx">queue</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">time</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">time</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><hr>
 <p>*Ref. <a href="https://programmers.co.kr/learn/courses/30/parts/12081">프로그래머스 고득점 Kit - 스택/큐</a></p>
