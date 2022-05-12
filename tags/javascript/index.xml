@@ -125,5 +125,14 @@
       <description>Today I learned #변수 # 변수 기초  변수란 이름이 붙은 값 메모리에 저장된 변수(데이터)를 불러내서 활용 가능 카멜 케이스로 작성   선언과 할당  선언  let  재할당 가능   const  재할당 불가능     할당  (여기에) = (여기를 할당)   Ex.</description>
     </item>
     
+    <item>
+      <title>Node.js</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/nodejs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/nodejs/</guid>
+      <description>확장성 네트워크 애플리케이션(특히 서버 사이드) 개발에 사용되는 소프트웨어 플랫폼(런타임 환경) 작성 언어로 JavaScript를 활용하며, Non-blocking I/O과 Single thread Event loop를 통한 높은 처리 성능을 가짐  1.</description>
+    </item>
+    
   </channel>
 </rss>
