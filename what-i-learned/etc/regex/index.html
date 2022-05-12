@@ -13,8 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Linux Console &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="Linux Console &middot; Yuchan&#39;s hello world!" />
+  <title>Regular Expression &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="Regular Expression &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog of a developer who wants to help create a better world :)" />
   
@@ -66,8 +66,8 @@
   
   
   
-  <meta property="og:title" content="Linux Console" />
-<meta property="og:description" content="" />
+  <meta property="og:title" content="Regular Expression" />
+<meta property="og:description" content="*Ref. https://regexr." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/what-i-learned/etc/regex/" /><meta property="article:section" content="What I learned" />
 
@@ -75,8 +75,8 @@
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Linux Console"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Regular Expression"/>
+<meta name="twitter:description" content="*Ref. https://regexr."/>
 
   
   <script type="application/ld+json">
@@ -84,10 +84,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "What I learneds",
-    "name": "Linux Console",
-    "headline": "Linux Console",
+    "name": "Regular Expression",
+    "headline": "Regular Expression",
     
-    
+    "abstract": "*Ref. https:\/\/regexr.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/what-i-learned\/etc\/regex\/",
     "author" : {
@@ -103,7 +103,7 @@
     "keywords": ["Regular Expression"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "0"
+    "wordCount": "334"
   }]
   </script>
 
@@ -255,7 +255,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Linux Console
+        Regular Expression
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -323,8 +323,279 @@
     </header>
     <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       
+        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
+            <details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 lg:mt-3">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700"
+  >
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600"
+  >
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-표현-방식">1. 표현 방식</a></li>
+        <li><a href="#2-테스트">2. 테스트</a></li>
+        <li><a href="#3-플래그옵션">3. 플래그(옵션)</a></li>
+        <li><a href="#4-패턴">4. 패턴</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-w-0 min-h-0 max-w-prose">
-        
+        <p>*Ref. <a href="https://regexr.com/">https://regexr.com</a></p>
+<h3 id="1-표현-방식" class="relative group">1. 표현 방식 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ed%91%9c%ed%98%84-%eb%b0%a9%ec%8b%9d" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new RegExp(&ldquo;표현&rdquo;, &ldquo;옵션&rdquo;)</td>
+<td>생성자 함수 방식</td>
+</tr>
+<tr>
+<td>/표현/옵션</td>
+<td>리터럴 방식</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-테스트" class="relative group">2. 테스트 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%ed%85%8c%ec%8a%a4%ed%8a%b8" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>정규식.test(문자열)</td>
+<td>일치 여부 반환</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-플래그옵션" class="relative group">3. 플래그(옵션) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%ed%94%8c%eb%9e%98%ea%b7%b8%ec%98%b5%ec%85%98" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>g</td>
+<td>전역 검색 (global)</td>
+</tr>
+<tr>
+<td>i</td>
+<td>대소문자 구분 않고 검색 (ignore case)</td>
+</tr>
+<tr>
+<td>m</td>
+<td>다중행 검색 (multi line)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-패턴" class="relative group">4. 패턴 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-%ed%8c%a8%ed%84%b4" aria-label="Anchor">#</a></span></h3>
+<p>Anchors &amp; Escape</p>
+<table>
+<thead>
+<tr>
+<th>패턴</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td>입력의 시작 부분, 다중행 검색에선 각 줄의 시작 부분</td>
+</tr>
+<tr>
+<td>$</td>
+<td>입력의 끝 부분, 다중행 검색에선 각 줄의 끝 부분</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>공백과 개행문자</td>
+</tr>
+<tr>
+<td>\B</td>
+<td>공백과 개행문자가 아님</td>
+</tr>
+<tr>
+<td>\</td>
+<td>\일반 문자는 특별한 문자로 변경<br/>\특수 문자는 일반 문자로 변경</td>
+</tr>
+</tbody>
+</table>
+<p>Character classes</p>
+<table>
+<thead>
+<tr>
+<th>패턴</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>개행 문자를 제외한 모든 단일 문자 (공백, 특수문자 포함)</td>
+</tr>
+<tr>
+<td>[xyz]</td>
+<td>x 또는 y 또는 z</td>
+</tr>
+<tr>
+<td>[^xyz]</td>
+<td>x 와 y와 z를 제외한 문자</td>
+</tr>
+<tr>
+<td>[a-z]</td>
+<td>a부터 z 사이의 문자 구간 (영어 소문자)</td>
+</tr>
+<tr>
+<td>[A-Z]</td>
+<td>A부터 Z 사이의 문자 구간 (영어 대문자)</td>
+</tr>
+<tr>
+<td>[0-9]</td>
+<td>0부터 9 사이의 문자 구간 (숫자)</td>
+</tr>
+<tr>
+<td>[가-힣]</td>
+<td>가부터 힣 사이의 문자 구간 (한글)</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>63개 문자 (대소영문 52개+숫자 10개+_) = [A-Za-z0-9_]</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>63개 문자가 아님 = [^a-za-z0-9_]</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>숫자 = [0-9]</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>숫자가 아님 = [^0-9]</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>공백 (Space, Tap 등)</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>공백이 아님</td>
+</tr>
+</tbody>
+</table>
+<p>Quantifiers &amp; Alternations</p>
+<table>
+<thead>
+<tr>
+<th>패턴</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{n}</td>
+<td>앞의 표현식이 n회 연속으로 반복될 때만 대응</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>앞의 표현식이 n회 이상 연속으로 반복될 때만 대응</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>앞의 표현식이 n회 이상, m회 이하 연속으로 반복될 때만 대응</td>
+</tr>
+<tr>
+<td>*</td>
+<td>앞의 표현식이 0회 이상 연속으로 반복될 때만 대응 = {0,}</td>
+</tr>
+<tr>
+<td>+</td>
+<td>앞의 표현식이 1회 이상 연속으로 반복될 때만 대응 = {1,}</td>
+</tr>
+<tr>
+<td>?</td>
+<td>1. 앞의 표현식이 0 또는 1회 등장할 때만 대응 = {0, 1}<br/>2. 앞의 수량자({}, *, +, ?)를 가능한 한 적은 수의 문자와 일치<br/>ㅤ*수량자는 원래 가능한 한 많은 수의 문자와 일치</td>
+</tr>
+<tr>
+<td>|</td>
+<td>or</td>
+</tr>
+</tbody>
+</table>
+<p>Lookaround</p>
+<table>
+<thead>
+<tr>
+<th>패턴</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(?=xyz)</td>
+<td>앞의 표현식 다음에 xyz가 있을 때만 대응</td>
+</tr>
+<tr>
+<td>(?!xyz)</td>
+<td>앞의 표현식 다음에 xyz가 없을 때만 대응</td>
+</tr>
+<tr>
+<td>(?&lt;=xyz)</td>
+<td>뒤의 표현식 전에 xyz가 있을 때만 대응</td>
+</tr>
+<tr>
+<td>(?&lt;!xyz)</td>
+<td>뒤의 표현식 전에 xyz가 없을 때만 대응</td>
+</tr>
+</tbody>
+</table>
+<p>Groups &amp; References</p>
+<table>
+<thead>
+<tr>
+<th>패턴</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(xyz)</td>
+<td>괄호 안의 표현식을 하나의 단위로 취급(기억o)<br>*g옵션이 없을 때, match시 배열에 포함</td>
+</tr>
+<tr>
+<td>(?:xyz)</td>
+<td>괄호 안의 표현식을 하나의 단위로 취급(기억x)</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>n번째에 ()로 묶여서 기억된 문자열</td>
+</tr>
+</tbody>
+</table>
+
       </div>
     </section>
     <footer class="pt-8 max-w-prose">
@@ -427,6 +698,19 @@
     
   </article>
 
+      
+        <div
+          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
+        >
+          <a
+            href="#the-top"
+            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
       
     </main>
     <div
