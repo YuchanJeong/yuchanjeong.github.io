@@ -16,5 +16,14 @@
       <description>Root Selector #:root { --background-color: #f4f5f6; } body { background-color: var(--background-color); } Pseudo Selector #:is(section, article, aside, nav) :is(h1, h2, h3, h4, h5, h6) { color: #f4f5f6; } /* .</description>
     </item>
     
+    <item>
+      <title>HomeBrew</title>
+      <link>https://yuchanjeong.github.io/storage/etc/homebrew/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/storage/etc/homebrew/</guid>
+      <description>   Command Details     brew update brew 자체 업데이트   brew outdated 업데이트 필요한 파일 조회   brew upgrade [프로그램명] 프로그램 업그레이드   brew search [프로그램명] 프로그램 검색   brew info [프로그램명] 프로그램 정보 확인   brew install [프로그램명] 프로그램 설치   brew uninstall [프로그램명] 프로그램 삭제   brew list 설치된 프로그램 보기    </description>
+    </item>
+    
   </channel>
 </rss>

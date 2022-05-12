@@ -900,6 +900,15 @@
     </item>
     
     <item>
+      <title>HomeBrew</title>
+      <link>https://yuchanjeong.github.io/storage/etc/homebrew/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/storage/etc/homebrew/</guid>
+      <description>   Command Details     brew update brew 자체 업데이트   brew outdated 업데이트 필요한 파일 조회   brew upgrade [프로그램명] 프로그램 업그레이드   brew search [프로그램명] 프로그램 검색   brew info [프로그램명] 프로그램 정보 확인   brew install [프로그램명] 프로그램 설치   brew uninstall [프로그램명] 프로그램 삭제   brew list 설치된 프로그램 보기    </description>
+    </item>
+    
+    <item>
       <title>HTML(HyperText Markup Language)</title>
       <link>https://yuchanjeong.github.io/what-i-learned/html-css/html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -923,7 +932,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/what-i-learned/javascript/nodejs/</guid>
-      <description>확장성 네트워크 애플리케이션(특히 서버 사이드) 개발에 사용되는 소프트웨어 플랫폼(런타임 환경) 작성 언어로 JavaScript를 활용하며, Non-blocking I/O과 Single thread Event loop를 통한 높은 처리 성능을 가짐  1.</description>
+      <description>확장성 네트워크 애플리케이션(특히 서버 사이드) 개발에 사용되는 소프트웨어 플랫폼(런타임 환경).</description>
     </item>
     
     <item>
