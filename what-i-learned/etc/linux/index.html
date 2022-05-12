@@ -13,14 +13,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>What I learned (Summary) &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="What I learned (Summary) &middot; Yuchan&#39;s hello world!" />
+  <title>Linux Console &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="Linux Console &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog of a developer who wants to help create a better world :)" />
   
   
   
-  <link rel="canonical" href="https://yuchanjeong.github.io/wil/" />
+  <link rel="canonical" href="https://yuchanjeong.github.io/what-i-learned/etc/linux/" />
   
   
   
@@ -66,30 +66,30 @@
   
   
   
-  <meta property="og:title" content="What I learned (Summary)" />
-<meta property="og:description" content="JavaScript # JavaScript TypeScript Node." />
+  <meta property="og:title" content="Linux Console" />
+<meta property="og:description" content="리눅스 콘솔 명령어 추가 예정1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yuchanjeong.github.io/wil/" /><meta property="article:section" content="" />
+<meta property="og:url" content="https://yuchanjeong.github.io/what-i-learned/etc/linux/" /><meta property="article:section" content="What I learned" />
 
 <meta property="og:site_name" content="Yuchan&#39;s hello world!" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="What I learned (Summary)"/>
-<meta name="twitter:description" content="JavaScript # JavaScript TypeScript Node."/>
+<meta name="twitter:title" content="Linux Console"/>
+<meta name="twitter:description" content="리눅스 콘솔 명령어 추가 예정1."/>
 
   
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "",
-    "name": "What I learned (Summary)",
-    "headline": "What I learned (Summary)",
+    "articleSection": "What I learneds",
+    "name": "Linux Console",
+    "headline": "Linux Console",
     
-    "abstract": "JavaScript #\r JavaScript TypeScript Node.",
+    "abstract": "리눅스 콘솔 명령어 추가 예정\r\r1.",
     "inLanguage": "en",
-    "url" : "https:\/\/yuchanjeong.github.io\/wil\/",
+    "url" : "https:\/\/yuchanjeong.github.io\/what-i-learned\/etc\/linux\/",
     "author" : {
       "@type": "Person",
       "name": "Yuchan"
@@ -100,10 +100,10 @@
     
     
     
-    
+    "keywords": ["Linux"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "21"
+    "wordCount": "284"
   }]
   </script>
 
@@ -255,7 +255,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        What I learned (Summary)
+        Linux Console
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -296,7 +296,23 @@
     <div class="my-1 text-xs text-neutral-500 dark:text-neutral-400 ">
       
         
+          
+            <a
+              href="/categories/what-i-learned/"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >&lt;What I learned&gt;</a
+            >
+          
+        
       
+        
+          
+            <a
+              href="/tags/linux/"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Linux</a
+            >
+          
         
       
     </div>
@@ -307,27 +323,228 @@
     </header>
     <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       
+        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
+            <details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 lg:mt-3">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700"
+  >
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600"
+  >
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-기본-명령어">1. 기본 명령어</a></li>
+        <li><a href="#2-경로-탐색">2. 경로 탐색</a></li>
+        <li><a href="#3-파일폴더-생성-및-관리">3. 파일·폴더 생성 및 관리</a></li>
+        <li><a href="#4-환경-변수">4. 환경 변수</a></li>
+        <li><a href="#5-텍스트-에디터">5. 텍스트 에디터</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-w-0 min-h-0 max-w-prose">
-        <h2 id="javascript" class="relative group">JavaScript <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#javascript" aria-label="Anchor">#</a></span></h2>
-<ul>
-<li>JavaScript</li>
-<li>TypeScript</li>
-<li>Node.js</li>
-<li>React</li>
-<li>NextJS</li>
-<li>Redux-toolkit</li>
-</ul>
-<h2 id="html--css" class="relative group">HTML &amp; CSS <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#html--css" aria-label="Anchor">#</a></span></h2>
-<ul>
-<li><a href="/what-i-learned/html-css/html">HTML</a></li>
-<li><a href="/what-i-learned/html-css/css">CSS</a></li>
-</ul>
-<h2 id="etc" class="relative group">Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc" aria-label="Anchor">#</a></span></h2>
-<ul>
-<li><a href="/what-i-learned/etc/git">Git</a></li>
-<li><a href="/what-i-learned/etc/linux">Linux Console</a></li>
-<li>정규 표현식</li>
-</ul>
+        <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+  <span class="ltr:pr-3 rtl:pl-3 text-primary-400">
+    
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+
+  </span>
+
+
+  </span>
+  <span class="dark:text-neutral-300">리눅스 콘솔 명령어 추가 예정</span>
+</div>
+
+<h3 id="1-기본-명령어" class="relative group">1. 기본 명령어 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ea%b8%b0%eb%b3%b8-%eb%aa%85%eb%a0%b9%ec%96%b4" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>man [명령어]</td>
+<td>메뉴얼 보기</td>
+</tr>
+<tr>
+<td>clear</td>
+<td>터미널 창 정리</td>
+</tr>
+<tr>
+<td>open .</td>
+<td>현재 경로를 Finder에서 열기</td>
+</tr>
+<tr>
+<td>code .</td>
+<td>현재 경로를 VSC에서 열기</td>
+</tr>
+<tr>
+<td>sudo</td>
+<td>관리자 권한 획득</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-경로-탐색" class="relative group">2. 경로 탐색 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%ea%b2%bd%eb%a1%9c-%ed%83%90%ec%83%89" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pwd</td>
+<td>현재 절대 경로 보기</td>
+</tr>
+<tr>
+<td>ls<br/>ㅤ[경로명]<br/>ㅤ-l<br/>ㅤ-a</td>
+<td>현재 경로 목록 보기<br/>- 경로 지정<br/>- 자세히 보기<br/>- 숨겨진 목록 보기</td>
+</tr>
+<tr>
+<td>which [프로그램명]</td>
+<td>해당 프로그램의 실행 경로 보기</td>
+</tr>
+<tr>
+<td>cd<br/>ㅤ[경로명]<br/>ㅤ..<br/>ㅤ~<br/>ㅤ-</td>
+<td><br/>해당 경로로 이동<br/>상위 경로로 이동<br/>최상위 경로로 이동<br/>직전 경로로 이동</td>
+</tr>
+<tr>
+<td>find . -type directory|file -name &ldquo;[검색어]&rdquo;</td>
+<td>현재 및 하위 경로의 특정 폴더|파일 찾기<br/>(Ex. &ldquo;*A*&rdquo;, &ldquo;*.md&rdquo;)</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>권한 (ls -l로 볼 수 있음)</summary>
+사용 권한 (Ex. drwxr-xr-x)
+  <ul>
+    <li>d(directory) | -(non-directory)</li>
+    <li>user group other</li>
+    <li>r(read) | w(write) | x(execute)</li>
+  </ul>
+권한 변경: chmod
+  <ol>
+    <li>
+    Symbolic method (Ex. chmod a=r-x project)
+    <ul>
+      <li>u(user) | g(group) | o(other) | a(all)</li>
+      <li>+(add) | -(remove) | =(set exact)</li>
+      <li>r(read) | w(write) | x(execute)</li>
+    </ul>
+    </li>
+    <li>
+    Absolute form (Ex. chmod 740 index.js)
+    <ul>
+    <li>user group other</li>
+    <li>4(r)2(w)1(x)</li>
+    </ul>
+    </li>
+  </ol>
+</details>
+<h3 id="3-파일폴더-생성-및-관리" class="relative group">3. 파일·폴더 생성 및 관리 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%ed%8c%8c%ec%9d%bc%ed%8f%b4%eb%8d%94-%ec%83%9d%ec%84%b1-%eb%b0%8f-%ea%b4%80%eb%a6%ac" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mkdir<br/>ㅤ[경로명]<br/>ㅤ-p [경로명]</td>
+<td><br/>하위 폴더 만들기<br/>해당 경로를 따라 하위 폴더 만들기</td>
+</tr>
+<tr>
+<td>touch [파일명]</td>
+<td>파일 만들기</td>
+</tr>
+<tr>
+<td>echo<br/>ㅤ&quot;[문자열]&quot; &gt; [파일명]<br/>ㅤ&quot;[문자열]&quot; &raquo; [파일명]</td>
+<td><br/>문자열을 덮어쓰면서 파일 만들기<br/>문자열을 추가하면서 파일 만들기</td>
+</tr>
+<tr>
+<td>cat [파일명] (&hellip;)</td>
+<td>파일(들) 내용 확인</td>
+</tr>
+<tr>
+<td>mv<br>ㅤ[경로·파일명] (&hellip;) [경로]<br>ㅤ[경로·파일명] [경로·파일명]</td>
+<td><br>해당 폴더로 폴더·파일(들) 이동<br>이름 변경 (후자가 없는 경우)</td>
+</tr>
+<tr>
+<td>cp<br>ㅤ[파일명] [복사파일명]<br>ㅤ-r [경로명] [복사경로명]</td>
+<td><br>해당 파일 복사<br>해당 폴더 복사</td>
+</tr>
+<tr>
+<td>rm<br/>ㅤ[파일명]<br/>ㅤ-r [경로명]</td>
+<td><br/>해당 파일 삭제<br/>해당 폴더 삭세</td>
+</tr>
+<tr>
+<td>grep &ldquo;[검색어]&rdquo; [경로명]<br/>ㅤ-n<br/>ㅤ-i<br/>ㅤ-r</td>
+<td>특정 파일에서 특정 키워드 검색<br/>- 줄 표시<br/>- 대소문자 무시<br/>- 현재 및 하위경로 검색</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-환경-변수" class="relative group">4. 환경 변수 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-%ed%99%98%ea%b2%bd-%eb%b3%80%ec%88%98" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>export [환경변수]=[값]</td>
+<td>환경 변수 임시 저장</td>
+</tr>
+<tr>
+<td>unset [환경변수]</td>
+<td>해당 환경 변수 삭제</td>
+</tr>
+<tr>
+<td>env</td>
+<td>모든 환경 변수 보기</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-텍스트-에디터" class="relative group">5. 텍스트 에디터 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-%ed%85%8d%ec%8a%a4%ed%8a%b8-%ec%97%90%eb%94%94%ed%84%b0" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Command</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vim</td>
+<td>vi [파일명]</td>
+<td>i -&gt; esc -&gt; :wq</td>
+</tr>
+<tr>
+<td>nano</td>
+<td>nano [파일명]</td>
+<td>ctrl+X -&gt; Y -&gt; enter</td>
+</tr>
+</tbody>
+</table>
 
       </div>
     </section>
@@ -431,6 +648,19 @@
     
   </article>
 
+      
+        <div
+          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
+        >
+          <a
+            href="#the-top"
+            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
       
     </main>
     <div
