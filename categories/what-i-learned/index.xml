@@ -43,5 +43,14 @@
       <description>리눅스 콘솔 명령어 추가 예정1.</description>
     </item>
     
+    <item>
+      <title>Linux Console</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/etc/regex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/what-i-learned/etc/regex/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
