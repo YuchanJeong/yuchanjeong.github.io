@@ -392,7 +392,7 @@
     <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">progresses</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">if</span> <span class="p">(</span><span class="nx">progresses</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
       <span class="k">if</span> <span class="p">(</span><span class="nx">progresses</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// 같은 day(타입)에 추가 해줌
+        <span class="c1">// 같은 day(타입)에 추가 해줌.
 </span><span class="c1"></span>        <span class="nx">result</span><span class="p">[</span><span class="nx">day</span><span class="p">]</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">day</span><span class="p">]</span> <span class="o">?</span> <span class="nx">result</span><span class="p">[</span><span class="nx">day</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
@@ -439,14 +439,14 @@
   <span class="k">while</span> <span class="p">(</span><span class="nx">passedTrucks</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">time</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
 
-    <span class="c1">// buffer 맨앞 빼서, 0이 아닐 경우 passedTrucks에 저장
+    <span class="c1">// buffer 맨앞 빼서, 0이 아닐 경우 passedTrucks에 저장.
 </span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">passedTruck</span> <span class="o">=</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
     <span class="nx">bufferWeights</span> <span class="o">-=</span> <span class="nx">passedTruck</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">passedTruck</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">passedTrucks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">passedTruck</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="c1">// truck_weights 맨앞 빼서, weight 안넘을 경우 buffer에 저장
+    <span class="c1">// truck_weights 맨앞 빼서, weight 안넘을 경우 buffer에 저장.
 </span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">bufferWeights</span> <span class="o">+</span> <span class="nx">truck_weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="nx">weight</span><span class="p">)</span> <span class="p">{</span>
       <span class="kr">const</span> <span class="nx">newTruck</span> <span class="o">=</span> <span class="nx">truck_weights</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
       <span class="nx">bufferWeights</span> <span class="o">+=</span> <span class="nx">newTruck</span><span class="p">;</span>
