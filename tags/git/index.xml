@@ -17,5 +17,14 @@
       <description>Today I learned #Git 설치 # git config &amp;ndash;global core.</description>
     </item>
     
+    <item>
+      <title>Git</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/etc/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/what-i-learned/etc/git/</guid>
+      <description>Work Space -add-&amp;gt; Stage -commit-&amp;gt; Local Repo -push-&amp;gt; Remote Repo</description>
+    </item>
+    
   </channel>
 </rss>
