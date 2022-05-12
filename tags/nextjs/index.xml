@@ -9,7 +9,7 @@
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
     <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/nextjs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Next.js] Learn Course (4) - CREATE YOUR FIRST APP 2</title>
+      <title>[NextJS] Learn Course (4) - CREATE YOUR FIRST APP 2</title>
       <link>https://yuchanjeong.github.io/posts/studies/react/nextjs-lc-4/</link>
       <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
       
@@ -18,16 +18,16 @@
     </item>
     
     <item>
-      <title>[Next.js] Learn Course (2) - How Next.js Works</title>
+      <title>[NextJS] Learn Course (2) - How NextJS Works</title>
       <link>https://yuchanjeong.github.io/posts/studies/react/nextjs-lc-2/</link>
       <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/studies/react/nextjs-lc-2/</guid>
-      <description>How Next.</description>
+      <description>How NextJS Works #0.</description>
     </item>
     
     <item>
-      <title>[Next.js] Learn Course (3) - CREATE YOUR FIRST APP 1</title>
+      <title>[NextJS] Learn Course (3) - CREATE YOUR FIRST APP 1</title>
       <link>https://yuchanjeong.github.io/posts/studies/react/nextjs-lc-3/</link>
       <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
       
@@ -36,21 +36,21 @@
     </item>
     
     <item>
-      <title>[Next.js] Learn Course (1) - About Next.js</title>
+      <title>[NextJS] Learn Course (1) - About NextJS</title>
       <link>https://yuchanjeong.github.io/posts/studies/react/nextjs-lc-1/</link>
       <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/studies/react/nextjs-lc-1/</guid>
-      <description>About Next.</description>
+      <description>About NextJS #1.</description>
     </item>
     
     <item>
-      <title>BC-15w-1 / {FC} Next.js로 블로그 만들기 - NextJS</title>
+      <title>BC-15w-1 / {FC} NextJS로 블로그 만들기 - NextJS</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-1/</link>
       <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-1/</guid>
-      <description>1. What is Next.</description>
+      <description>1. What is NextJS # Image Optimization  Image and Automatic Image Optimization with instant builds.</description>
     </item>
     
   </channel>
