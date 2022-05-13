@@ -972,6 +972,15 @@
     </item>
     
     <item>
+      <title>Redux-toolkit</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/redux-toolkit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/redux-toolkit/</guid>
+      <description>*Ref. Redux-toolkit Usage Guide</description>
+    </item>
+    
+    <item>
       <title>Regular Expression</title>
       <link>https://yuchanjeong.github.io/what-i-learned/etc/regex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

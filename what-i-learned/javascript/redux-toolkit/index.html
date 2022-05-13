@@ -13,14 +13,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>TypeScript &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="TypeScript &middot; Yuchan&#39;s hello world!" />
+  <title>Redux-toolkit &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="Redux-toolkit &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog of a developer who wants to help create a better world :)" />
   
   
   
-  <link rel="canonical" href="https://yuchanjeong.github.io/what-i-learned/javascript/typescript/" />
+  <link rel="canonical" href="https://yuchanjeong.github.io/what-i-learned/javascript/redux-toolkit/" />
   
   
   
@@ -66,17 +66,17 @@
   
   
   
-  <meta property="og:title" content="TypeScript" />
-<meta property="og:description" content="*Ref. TypeScript Cheat sheets" />
+  <meta property="og:title" content="Redux-toolkit" />
+<meta property="og:description" content="*Ref. Redux-toolkit Usage Guide" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yuchanjeong.github.io/what-i-learned/javascript/typescript/" /><meta property="article:section" content="What I learned" />
+<meta property="og:url" content="https://yuchanjeong.github.io/what-i-learned/javascript/redux-toolkit/" /><meta property="article:section" content="What I learned" />
 
 <meta property="og:site_name" content="Yuchan&#39;s hello world!" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="TypeScript"/>
-<meta name="twitter:description" content="*Ref. TypeScript Cheat sheets"/>
+<meta name="twitter:title" content="Redux-toolkit"/>
+<meta name="twitter:description" content="*Ref. Redux-toolkit Usage Guide"/>
 
   
   <script type="application/ld+json">
@@ -84,12 +84,12 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "What I learneds",
-    "name": "TypeScript",
-    "headline": "TypeScript",
+    "name": "Redux-toolkit",
+    "headline": "Redux-toolkit",
     
-    "abstract": "*Ref. TypeScript Cheat sheets",
+    "abstract": "*Ref. Redux-toolkit Usage Guide",
     "inLanguage": "en",
-    "url" : "https:\/\/yuchanjeong.github.io\/what-i-learned\/javascript\/typescript\/",
+    "url" : "https:\/\/yuchanjeong.github.io\/what-i-learned\/javascript\/redux-toolkit\/",
     "author" : {
       "@type": "Person",
       "name": "Yuchan"
@@ -100,10 +100,10 @@
     
     
     
-    "keywords": ["TypeScript"],
+    "keywords": ["Redux"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "588"
+    "wordCount": "259"
   }]
   </script>
 
@@ -255,7 +255,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        TypeScript
+        Redux-toolkit
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -308,9 +308,9 @@
         
           
             <a
-              href="/tags/typescript/"
+              href="/tags/redux/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >TypeScript</a
+              >Redux</a
             >
           
         
@@ -336,29 +336,25 @@
   >
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#ts-init">TS Init</a>
+    <li><a href="#1-initial-setting">1. Initial Setting</a>
       <ul>
-        <li><a href="#1-설치-및-사용">1. 설치 및 사용</a></li>
-        <li><a href="#2-tsconfigjsonhttpswwwtypescriptlangorgdocshandbooktsconfig-jsonhtml">2. tsconfig.json<a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">^</a></a></li>
+        <li><a href="#1-rootreducer">1) rootReducer</a></li>
+        <li><a href="#2-store">2) store</a></li>
+        <li><a href="#3-provider">3) Provider</a></li>
       </ul>
     </li>
-    <li><a href="#ts-data-type">TS Data Type</a>
+    <li><a href="#2-reducer">2. Reducer</a>
       <ul>
-        <li><a href="#1-primitive-type">1. Primitive Type</a></li>
-        <li><a href="#2-non-primitive-type">2. Non-Primitive Type</a></li>
-        <li><a href="#3-union-type">3. Union Type</a></li>
-        <li><a href="#4-interaction-type">4. Interaction Type</a></li>
+        <li><a href="#1-createslice">1) createSlice()</a></li>
+        <li><a href="#2-createasyncthunk-httpsredux-toolkitjsorgapicreateasyncthunkexamples">2) createAsyncThunk() <a href="https://redux-toolkit.js.org/api/createAsyncThunk#examples">*</a></a></li>
       </ul>
     </li>
-    <li><a href="#ts-custom-type">TS Custom Type</a>
+    <li><a href="#3-component">3. Component</a>
       <ul>
-        <li><a href="#1-type-alias">1. Type alias</a></li>
-        <li><a href="#2-interface">2. Interface</a></li>
-        <li><a href="#3-class">3. Class</a></li>
-        <li><a href="#4-generichttpswwwtypescriptlangorgkodocshandbookutility-typeshtml-storagewiljavascriptex-typescriptgeneric">4. Generic<a href="https://www.typescriptlang.org/ko/docs/handbook/utility-types.html">^</a> <a href="/storage/wil/javascript/ex-typescript/#generic">⋯</a></a></li>
+        <li><a href="#1-useselect">1) useSelect</a></li>
+        <li><a href="#2-usedispatch">2) useDispatch</a></li>
       </ul>
     </li>
-    <li><a href="#ts-etc">TS Etc</a></li>
   </ul>
 </nav>
   </div>
@@ -368,315 +364,99 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <p>*Ref. <a href="https://www.typescriptlang.org/cheatsheets">TypeScript Cheat sheets</a></p>
-<h2 id="ts-init" class="relative group">TS Init <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ts-init" aria-label="Anchor">#</a></span></h2>
-<h3 id="1-설치-및-사용" class="relative group">1. 설치 및 사용 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ec%84%a4%ec%b9%98-%eb%b0%8f-%ec%82%ac%ec%9a%a9" aria-label="Anchor">#</a></span></h3>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>npm i -D typescript</td>
-<td>typescript 설치</td>
-</tr>
-<tr>
-<td>npx tsc &ndash;init <a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html">^</a></td>
-<td>tsconfig.json 생성</td>
-</tr>
-<tr>
-<td>npx tsc ([파일명])</td>
-<td>(해당 파일) 컴파일</td>
-</tr>
-<tr>
-<td>npx tsc -w</td>
-<td>자동 컴파일 모드</td>
-</tr>
-</tbody>
-</table>
-<h3 id="2-tsconfigjsonhttpswwwtypescriptlangorgdocshandbooktsconfig-jsonhtml" class="relative group">2. tsconfig.json<a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-tsconfigjsonhttpswwwtypescriptlangorgdocshandbooktsconfig-jsonhtml" aria-label="Anchor">#</a></span></h3>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&ldquo;compileOnSave&rdquo;</td>
-<td>저장 후 자동 컴파일</td>
-</tr>
-<tr>
-<td>&ldquo;extends&rdquo;</td>
-<td>컴파일러 옵션 상속 경로</td>
-</tr>
-<tr>
-<td>&ldquo;files&rdquo;</td>
-<td>컴파일 할 것들 배열 (&gt;exclude)</td>
-</tr>
-<tr>
-<td>&ldquo;include&rdquo;</td>
-<td>컴파일 할 것들 배열<br/>*확장자를 선언하지 않으면, .ts, .tsx, .d.ts만 포함</td>
-</tr>
-<tr>
-<td>&ldquo;exclude&rdquo;</td>
-<td>include에 포함된 것들 중 제외할 것들 배열<br/>*<em>설정하지 않으면, 4개 경로 자동 제외(<br/>node_modules, bower_components,<br/>jspm_packages, outDir)</em></td>
-</tr>
-</tbody>
-</table>
-<p>*<em>&ldquo;&ldquo;를 입력하면 최상위 프로퍼티 목록 확인 가능</em><br/>*<em>files, include, exclude를 셋다 설정하지 않으면 모든 관련 파일 컴파일</em><br/></p>
-<table>
-<thead>
-<tr>
-<th>&ldquo;compileOptions&rdquo;</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&ldquo;target&rdquo;</td>
-<td>빌드 결과물의 버전을 지정<br/>*<em>화살표 함수, 클래스는 es6 이상</em></td>
-</tr>
-<tr>
-<td>&ldquo;outDir&rdquo;</td>
-<td>컴파일 된 결과물을 모을 폴더 지정 (Ex. ./dist/)</td>
-</tr>
-<tr>
-<td>&ldquo;rootDir&rdquo;</td>
-<td>컴파일 할 소스를 모을 폴더 지정 (Ex. ./src/)</td>
-</tr>
-<tr>
-<td>&ldquo;strict&rdquo;</td>
-<td>엄격 모드</td>
-</tr>
-</tbody>
-</table>
-<h2 id="ts-data-type" class="relative group">TS Data Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ts-data-type" aria-label="Anchor">#</a></span></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="nx">data</span>: <span class="kt">valueType</span><span class="p">;</span> <span class="c1">//Type annotation
-</span></code></pre></div><h3 id="1-primitive-type" class="relative group">1. Primitive Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-primitive-type" aria-label="Anchor">#</a></span></h3>
-<ol>
-<li>: string</li>
-<li>: number</li>
-<li>: boolean</li>
-<li>: symbol (es6) <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol">^</a></li>
-<li>: null</li>
-<li>: undefined</li>
-</ol>
-<h3 id="2-non-primitive-type" class="relative group">2. Non-Primitive Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-non-primitive-type" aria-label="Anchor">#</a></span></h3>
-<ol>
-<li>object literal type
-<ul>
-<li>: { key1: Type1; key2: Type2; &hellip; }</li>
-</ul>
-</li>
-<li>array
-<ul>
-<li>: 타입[]</li>
-<li>: (타입1 | 타입2 | &hellip;)[]</li>
-</ul>
-</li>
-<li>tuple
-<ul>
-<li>: [타입1, 타입2, &hellip;]</li>
-</ul>
-</li>
-<li><del>: any</del></li>
-<li>: unknown<a href="/storage/wil/javascript/ex-typescript/#unknown">⋯</a>
-<ul>
-<li>타입을 확정한 뒤 할당 및 사용 가능</li>
-</ul>
-</li>
-<li>: never
-<ul>
-<li>항상 오류를 출력하거나, 절대 값을 반환하지 않는 함수의 리턴 타입</li>
-<li>모든 타입의 서브타입이며 어떤 타입도 할당 불가</li>
-</ul>
-</li>
-<li>: void
-<ul>
-<li>값을 반환하지 않는 함수의 리턴 타입</li>
-<li>undefined만 할당 가능</li>
-</ul>
-</li>
-</ol>
-<h3 id="3-union-type" class="relative group">3. Union Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-union-type" aria-label="Anchor">#</a></span></h3>
-<ul>
-<li>: 타입1 | 타입2 | &hellip;</li>
-</ul>
-<h3 id="4-interaction-type" class="relative group">4. Interaction Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-interaction-type" aria-label="Anchor">#</a></span></h3>
-<ul>
-<li>: 타입1 &amp; 타입2 &amp; &hellip;</li>
-</ul>
-<h2 id="ts-custom-type" class="relative group">TS Custom Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ts-custom-type" aria-label="Anchor">#</a></span></h2>
-<h3 id="1-type-alias" class="relative group">1. Type alias <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-type-alias" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">type</span> <span class="err">에일리아스</span> <span class="o">=</span> <span class="nx">union</span> <span class="o">|</span> <span class="nx">interaction</span> <span class="o">|</span> <span class="nx">tuple</span><span class="p">;</span>
-</code></pre></div><h3 id="2-interface" class="relative group">2. Interface <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-interface" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="cm">/* 인터페이스 */</span>
-<span class="kr">interface</span> <span class="err">인터페이스</span> <span class="p">{</span>
- <span class="nx">key</span>: <span class="kt">valueType</span>
- <span class="nx">method</span><span class="p">(</span><span class="nx">parameter</span>: <span class="kt">valueType</span><span class="p">,</span> <span class="p">...)</span><span class="o">:</span> <span class="nx">returnType</span>
-<span class="p">}</span>
+        <p>*Ref. <a href="https://redux-toolkit.js.org/usage/usage-guide">Redux-toolkit Usage Guide
+</a></p>
+<h2 id="1-initial-setting" class="relative group">1. Initial Setting <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-initial-setting" aria-label="Anchor">#</a></span></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm i redux @reduxjs/toolkit react-redux
+</code></pre></div><h3 id="1-rootreducer" class="relative group">1) rootReducer <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-rootreducer" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* redux/modules/rootReducer.js */</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">combineReducers</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux&#34;</span><span class="p">;</span>
 
-<span class="cm">/* 인터페이스 상속 */</span>
-<span class="kr">interface</span> <span class="err">하위</span><span class="nx">_인터페이스</span> <span class="kr">extends</span> <span class="err">상위</span><span class="nx">_인터페이스</span><span class="p">,</span> <span class="p">...</span> <span class="p">{</span> <span class="p">}</span>
+<span class="kr">const</span> <span class="nx">rootReducer</span> <span class="o">=</span> <span class="nx">combineReducers</span><span class="p">({});</span>
 
-<span class="cm">/* 인터페이스 -&gt; 클래스 */</span>
-<span class="kr">class</span> <span class="err">클래스</span> <span class="kr">implements</span> <span class="err">인터페이스</span> <span class="p">{</span> <span class="p">}</span>
-</code></pre></div><p>*<em>인터페이스는 중복 작성했을 때, 자동으로 병합됨 (Declaration Merging)</em></p>
-<h3 id="3-class" class="relative group">3. Class <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-class" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="cm">/*
-</span><span class="cm">class 클래스 {
-</span><span class="cm">   key: valueType // 초기값 필요(but, &#34;!:&#34;면 필요 X)
-</span><span class="cm">   constructor(parameter: valueType, ...) {
-</span><span class="cm">      this.key = parameter
-</span><span class="cm">   }
-</span><span class="cm">}
-</span><span class="cm">*/</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">rootReducer</span><span class="p">;</span>
+</code></pre></div><h3 id="2-store" class="relative group">2) store <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-store" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* redux/store.js */</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">configureStore</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;@reduxjs/toolkit&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">rootReducer</span> <span class="nx">from</span> <span class="s2">&#34;./modules/rootReducer&#34;</span><span class="p">;</span>
 
-<span class="c1">// this로 한 번 더 할당할 필요 X
-</span><span class="c1"></span><span class="kr">class</span> <span class="err">클래스</span> <span class="p">{</span>
-   <span class="kr">constructor</span><span class="p">(</span><span class="kr">public</span><span class="o">|</span><span class="kr">private</span><span class="o">|</span><span class="kr">protected</span> <span class="nx">parameter</span>: <span class="kt">valueType</span><span class="p">,</span> <span class="p">...)</span> <span class="p">{</span> <span class="p">}</span>
-<span class="p">}</span>
+<span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">configureStore</span><span class="p">({</span>
+  <span class="nx">reducer</span><span class="o">:</span> <span class="nx">rootReducer</span><span class="p">,</span>
+  <span class="c1">// middleware: [...getDefaultMiddleware()]
+</span><span class="c1"></span>  <span class="nx">devTools</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span> <span class="o">!==</span> <span class="s2">&#34;production&#34;</span><span class="p">,</span>
+<span class="p">});</span>
 
-<span class="kr">class</span> <span class="err">하위</span><span class="nx">_클래스</span> <span class="kr">extends</span> <span class="err">상위</span><span class="nx">_클래스</span> <span class="p">{</span>
-   <span class="kr">constructor</span><span class="p">(</span><span class="kr">public</span><span class="o">|</span><span class="kr">private</span><span class="o">|</span><span class="kr">protected</span> <span class="nx">parameter</span>: <span class="kt">valueType</span><span class="p">,</span> <span class="p">...)</span> <span class="p">{</span>
-      <span class="kr">super</span><span class="p">(</span><span class="cm">/* 상위_클래스_parameter */</span><span class="p">)</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><table>
-<thead>
-<tr>
-<th>Access Modifier</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>public</td>
-<td>외부에서도 접근 가능 (def)</td>
-</tr>
-<tr>
-<td>private</td>
-<td>내부에서만 접근 가능<br/>*<em>관습적으로 앞에 _사용</em></td>
-</tr>
-<tr>
-<td>protected</td>
-<td>내부와 하위 클래스에서만 접근 가능</td>
-</tr>
-<tr>
-<td>static</td>
-<td>클래스 자체에서만 호출 가능<br/>*<em>인스턴스에서 호출 불가능</em></td>
-</tr>
-<tr>
-<td>abstract</td>
-<td>추상 메서드는 정의만 되어있을 뿐 구현되어 있지 않음<br/>추상 클래스는 특정 클래스의 상속 대상이 되는 클래스</br>상속하는 클래스는 반듯이 정의된 추상 메서드를 구현해야 함<br/>추상 클레스는 인스턴스 생성 불가능</td>
-</tr>
-<tr>
-<td>readonly</td>
-<td>초깃값만 할당 가능</td>
-</tr>
-</tbody>
-</table>
-<p>*<em><a href="/storage/wil/javascript/ex-typescript/#getter--setter">getter &amp; setter 예제</a></em></p>
-<h3 id="4-generichttpswwwtypescriptlangorgkodocshandbookutility-typeshtml-storagewiljavascriptex-typescriptgeneric" class="relative group">4. Generic<a href="https://www.typescriptlang.org/ko/docs/handbook/utility-types.html">^</a> <a href="/storage/wil/javascript/ex-typescript/#generic">⋯</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-generichttpswwwtypescriptlangorgkodocshandbookutility-typeshtml-storagewiljavascriptex-typescriptgeneric" aria-label="Anchor">#</a></span></h3>
-<table>
-<thead>
-<tr>
-<th>Questions</th>
-<th>Answers</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>제네릭이란?</td>
-<td>일종의 타입 변수</td>
-</tr>
-<tr>
-<td>형태는?</td>
-<td>&lt;Type&gt;</td>
-</tr>
-<tr>
-<td>상속은?</td>
-<td>&lt;Type extends Super_Type&gt;</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Utility Types</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Partial&lt;Type&gt;</td>
-<td>Type의 모든 프로퍼티를 선택으로 설정한 타입 생성</td>
-</tr>
-<tr>
-<td>Required&lt;Type&gt;</td>
-<td>Type의 모든 프로퍼티를 필수로 설정한 타입 생성</td>
-</tr>
-<tr>
-<td>Readonly&lt;Type&gt;</td>
-<td>Type의 모든 프로퍼티를 읽기 전용으로 설정한 타입 생성</td>
-</tr>
-<tr>
-<td>Record&lt;Keys, Values&gt;</td>
-<td>키의 타입은 Keys, 값의 타입은 Values인 타입 생성</td>
-</tr>
-<tr>
-<td>Pick&lt;Type, Keys&gt;</td>
-<td>Type의 프로퍼티 중 Keys만 선택한 타입 생성</td>
-</tr>
-<tr>
-<td>Omit&lt;Type, Keys&gt;</td>
-<td>Type의 프로퍼티 중 Keys만 제외한 타입 생성</td>
-</tr>
-<tr>
-<td>Exclude&lt;Type1, Type2&gt;</td>
-<td>Type1의 유니온 멤버 중 Type2의 유니온 멤버만 제외한 타입 생성</td>
-</tr>
-<tr>
-<td>NonNullable&lt;Type&gt;</td>
-<td>Type에서 null과 undefined를 제외한 타입 생성</td>
-</tr>
-</tbody>
-</table>
-<h2 id="ts-etc" class="relative group">TS Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ts-etc" aria-label="Anchor">#</a></span></h2>
-<p><strong>1) Index Signatures</strong></p>
-<ul>
-<li>[index: string]: valueType</li>
-<li>이름, 존재 여부 상관없는 key들의 value의 타입 지정</li>
-</ul>
-<p><strong>2) Optional Type</strong></p>
-<ul>
-<li>?:</li>
-<li>해당 요소가 있어도 되고 없어도 됨</li>
-</ul>
-<p><strong>3) Non-Null Assertion Operator</strong><a href="https://www.typescriptlang.org/play?ssl=7&amp;ssc=66&amp;pln=3&amp;pc=1#code/MYewdgzgLgBAhgJwTAvDA2gbwG5wDYCuApgFwwCMAvgDQw77FkBMlAugNwBQoksAllCIBbVPCQA6AGZ8wAEwAURPKgB8MJeNyEiqFGiYBKLj2gwERCATyw0A4ZoY6A1BXYwA9O4AqAZXVIQBFoIGWAdOxE+CBh5fDwiAHMiWTwATwMYAAcQCBCAIzSYAjkiaTBkzm5wU3NLawB1AQALAHlMqD5wfFEIgH4HbRgXcjdPHw68ZTgwfwRAgEIYPoHiGCXo6D5JrJz8wuLZUpkKqt4zCysoRqhWzKIEOChAnsEheZXnVw93AEEm2hujwA5NEbjpwER5pwgA">^</a></p>
-<ul>
-<li>!.</li>
-<li>해당 피연산자가 null, undefined가 아니라고 단언</li>
-</ul>
-<p><strong>4) readonly &hellip;</strong></p>
-<ul>
-<li>해당 요소에 초기값만 할당 가능</li>
-</ul>
-<p><strong>5) keyof 타입</strong></p>
-<ul>
-<li>해당 타입의 모든 키값을 union 멤버로 반환</li>
-</ul>
-<p><strong>6)Type Assertion</strong></p>
-<ul>
-<li>&hellip; as 타입</li>
-<li>&hellip; as const (readonly) <a href="/storage/wil/javascript/ex-typescript/#as-const">⋯</a></li>
-</ul>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">store</span><span class="p">;</span>
+</code></pre></div><h3 id="3-provider" class="relative group">3) Provider <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-provider" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">ReactDOM</span> <span class="nx">from</span> <span class="s2">&#34;react-dom&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s2">&#34;./App&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">store</span> <span class="nx">from</span> <span class="s2">&#34;./redux/store&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Provider</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
 
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Provider</span> <span class="nx">store</span><span class="o">=</span><span class="p">{</span><span class="nx">store</span><span class="p">}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/Provider&gt;</span>
+  <span class="o">&lt;</span><span class="err">/React.StrictMode&gt;,</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;root&#34;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div><h2 id="2-reducer" class="relative group">2. Reducer <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-reducer" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-createslice" class="relative group">1) createSlice() <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-createslice" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* redux/modules/example.js */</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">createSlice</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;@reduxjs/toolkit&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">리듀서_슬라이스</span> <span class="o">=</span> <span class="nx">createSlice</span><span class="p">({</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;prefix로 사용됨&#34;</span><span class="p">,</span>
+  <span class="nx">initialState</span><span class="o">:</span> <span class="nx">초기_상태</span><span class="p">,</span>
+  <span class="nx">reducers</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">액션_생성자</span><span class="o">:</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// 상태 변경은 mutable, immutable 둘 다 가능
+</span><span class="c1"></span>      <span class="c1">// action.payload는 액션_생성자의 params
+</span><span class="c1"></span>      <span class="c1">// *state=...(x)
+</span><span class="c1"></span>    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">});</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">리듀서_슬라이스</span><span class="p">.</span><span class="nx">reducer</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="p">{</span> <span class="nx">액션_생성자</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">리듀서_슬라이스</span><span class="p">.</span><span class="nx">actions</span><span class="p">;</span>
+</code></pre></div><h3 id="2-createasyncthunk-httpsredux-toolkitjsorgapicreateasyncthunkexamples" class="relative group">2) createAsyncThunk() <a href="https://redux-toolkit.js.org/api/createAsyncThunk#examples">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-createasyncthunk-httpsredux-toolkitjsorgapicreateasyncthunkexamples" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createAsyncThunk</span><span class="p">,</span> <span class="nx">createSlice</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;@reduxjs/toolkit&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&#34;axios&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">비동기_액션_생성자</span> <span class="o">=</span> <span class="nx">createAsyncThunk</span><span class="p">(</span>
+  <span class="s2">&#34;리듀서/비동기_액션_생성자&#34;</span><span class="p">,</span>
+  <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">리듀서_슬라이스</span> <span class="o">=</span> <span class="nx">createSlice</span><span class="p">({</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;prefix로 사용됨&#34;</span><span class="p">,</span>
+  <span class="nx">initialState</span><span class="o">:</span> <span class="nx">초기_상태</span><span class="p">,</span>
+  <span class="nx">reducers</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="nx">extraReducers</span><span class="o">:</span> <span class="p">(</span><span class="nx">builder</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">builder</span><span class="p">.</span><span class="nx">addCase</span><span class="p">(</span><span class="nx">fetchExample</span><span class="p">.</span><span class="nx">pending</span><span class="p">,</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+    <span class="nx">builder</span><span class="p">.</span><span class="nx">addCase</span><span class="p">(</span><span class="nx">fetchExample</span><span class="p">.</span><span class="nx">fulfilled</span><span class="p">,</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+    <span class="nx">builder</span><span class="p">.</span><span class="nx">addCase</span><span class="p">(</span><span class="nx">fetchExample</span><span class="p">.</span><span class="nx">rejected</span><span class="p">,</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+  <span class="p">},</span>
+<span class="p">});</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">리듀서_슬라이스</span><span class="p">.</span><span class="nx">reducer</span><span class="p">;</span>
+</code></pre></div><h2 id="3-component" class="relative group">3. Component <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-component" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-useselect" class="relative group">1) useSelect <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-useselect" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useSelector</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">리듀서_상태</span> <span class="o">=</span> <span class="nx">useSelector</span><span class="p">((</span><span class="nx">store</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">store</span><span class="p">.</span><span class="nx">리듀서</span><span class="p">);</span>
+</code></pre></div><h3 id="2-usedispatch" class="relative group">2) useDispatch <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-usedispatch" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useDispatch</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">dispatch</span> <span class="o">=</span> <span class="nx">useDispatch</span><span class="p">();</span>
+
+<span class="nx">dispatch</span><span class="p">(</span><span class="nx">액션_생성자</span><span class="p">(</span><span class="nx">params</span><span class="p">));</span>
+</code></pre></div>
       </div>
     </section>
     <footer class="pt-8 max-w-prose">
