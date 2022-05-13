@@ -34,5 +34,14 @@
       <description>Data Immutability #// 원시 데이터 (불변) // string, number, boolean, undefined, null // |a: 1 |b: 3 // |a: 1 |b: 1 // |a: 1 |b: 5 // |a: 1 |b: 5 |c: 1 let a = 1; let b = 3; console.</description>
     </item>
     
+    <item>
+      <title>TS Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/javascript/ex-typescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-typescript/</guid>
+      <description>Unknown #declare const maybe: unknown; if (typeof maybe === &amp;#34;boolean&amp;#34;) { const aBoolean: boolean = maybe; } if (typeof maybe === &amp;#34;string&amp;#34;) { const aString: string = maybe; } </description>
+    </item>
+    
   </channel>
 </rss>

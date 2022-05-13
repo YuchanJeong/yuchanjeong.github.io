@@ -67,7 +67,7 @@
   
   
   <meta property="og:title" content="TypeScript" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="*Ref. TypeScript Cheat sheets" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/what-i-learned/javascript/typescript/" /><meta property="article:section" content="What I learned" />
 
@@ -76,7 +76,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="TypeScript"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="*Ref. TypeScript Cheat sheets"/>
 
   
   <script type="application/ld+json">
@@ -87,7 +87,7 @@
     "name": "TypeScript",
     "headline": "TypeScript",
     
-    
+    "abstract": "*Ref. TypeScript Cheat sheets",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/what-i-learned\/javascript\/typescript\/",
     "author" : {
@@ -103,7 +103,7 @@
     "keywords": ["TypeScript"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "0"
+    "wordCount": "598"
   }]
   </script>
 
@@ -323,8 +323,362 @@
     </header>
     <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       
+        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
+            <details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 lg:mt-3">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700"
+  >
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600"
+  >
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ts-init">TS Init</a>
+      <ul>
+        <li><a href="#1-설치-및-사용">1. 설치 및 사용</a></li>
+        <li><a href="#2-tsconfigjson-httpswwwtypescriptlangorgdocshandbooktsconfig-jsonhtml">2. tsconfig.json <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">*</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#ts-data-type">TS Data Type</a>
+      <ul>
+        <li><a href="#1-primitive-type">1. Primitive Type</a></li>
+        <li><a href="#2-non-primitive-type">2. Non-Primitive Type</a></li>
+        <li><a href="#3-union-type">3. Union Type</a></li>
+        <li><a href="#4-interaction-type">4. Interaction Type</a></li>
+      </ul>
+    </li>
+    <li><a href="#ts-custom-type">TS Custom Type</a>
+      <ul>
+        <li><a href="#1-type-alias">1. Type alias</a></li>
+        <li><a href="#2-interface">2. Interface</a></li>
+        <li><a href="#3-class">3. Class</a></li>
+        <li><a href="#4-generichttpswwwtypescriptlangorgkodocshandbookutility-typeshtml-httpsgithubcomyuchanjeong_wilblobmasterjavascriptexex-ts-genericmd">4. <a href="https://www.typescriptlang.org/ko/docs/handbook/utility-types.html">Generic</a> <a href="https://github.com/YuchanJeong/_WIL/blob/master/JavaScript/ex/ex-TS-Generic.md">^</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#ts-etc">TS Etc</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-w-0 min-h-0 max-w-prose">
-        
+        <p>*Ref. <a href="https://www.typescriptlang.org/cheatsheets">TypeScript Cheat sheets</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="nx">data</span>: <span class="kt">valueType</span><span class="p">;</span> <span class="c1">//Type annotation
+</span></code></pre></div><h2 id="ts-init" class="relative group">TS Init <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ts-init" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-설치-및-사용" class="relative group">1. 설치 및 사용 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ec%84%a4%ec%b9%98-%eb%b0%8f-%ec%82%ac%ec%9a%a9" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>npm i -D typescript</td>
+<td>typescript 설치</td>
+</tr>
+<tr>
+<td>npx tsc &ndash;init <a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html">*</a></td>
+<td>tsconfig.json 생성</td>
+</tr>
+<tr>
+<td>npx tsc ([파일명])</td>
+<td>(해당 파일) 컴파일</td>
+</tr>
+<tr>
+<td>npx tsc -w</td>
+<td>자동 컴파일 모드</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-tsconfigjson-httpswwwtypescriptlangorgdocshandbooktsconfig-jsonhtml" class="relative group">2. tsconfig.json <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-tsconfigjson-httpswwwtypescriptlangorgdocshandbooktsconfig-jsonhtml" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;compileOnSave&rdquo;</td>
+<td>저장 후 자동 컴파일</td>
+</tr>
+<tr>
+<td>&ldquo;extends&rdquo;</td>
+<td>컴파일러 옵션 상속 경로</td>
+</tr>
+<tr>
+<td>&ldquo;files&rdquo;</td>
+<td>컴파일 할 것들 배열 (&gt;exclude)</td>
+</tr>
+<tr>
+<td>&ldquo;include&rdquo;</td>
+<td>컴파일 할 것들 배열<br/>*확장자를 선언하지 않으면, .ts, .tsx, .d.ts만 포함</td>
+</tr>
+<tr>
+<td>&ldquo;exclude&rdquo;</td>
+<td>include에 포함된 것들 중 제외할 것들 배열<br/>*설정하지 않으면, 4개 경로 자동 제외(<br/>node_modules, bower_components,<br/>jspm_packages, outDir)</td>
+</tr>
+</tbody>
+</table>
+<p>*&ldquo;&ldquo;를 입력하면 최상위 프로퍼티 목록 확인 가능<br/>
+*files, include, exclude를 셋다 설정하지 않으면 모든 관련 파일 컴파일<br/></p>
+<table>
+<thead>
+<tr>
+<th>&ldquo;compileOptions&rdquo;</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;target&rdquo;</td>
+<td>빌드 결과물의 버전을 지정<br/>*화살표 함수, 클래스는 es6 이상</td>
+</tr>
+<tr>
+<td>&ldquo;outDir&rdquo;</td>
+<td>컴파일 된 결과물을 모을 폴더 지정 (Ex. ./dist/)</td>
+</tr>
+<tr>
+<td>&ldquo;rootDir&rdquo;</td>
+<td>컴파일 할 소스를 모을 폴더 지정 (Ex. ./src/)</td>
+</tr>
+<tr>
+<td>&ldquo;strict&rdquo;</td>
+<td>엄격 모드</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ts-data-type" class="relative group">TS Data Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ts-data-type" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-primitive-type" class="relative group">1. Primitive Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-primitive-type" aria-label="Anchor">#</a></span></h3>
+<ol>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>symbol (es6) <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol">*</a></li>
+<li>null</li>
+<li>undefined</li>
+</ol>
+<h3 id="2-non-primitive-type" class="relative group">2. Non-Primitive Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-non-primitive-type" aria-label="Anchor">#</a></span></h3>
+<ol>
+<li>object literal type
+<ul>
+<li>: { key1: Type1; key2: Type2; &hellip; }</li>
+</ul>
+</li>
+<li>array
+<ul>
+<li>: 타입[]</li>
+<li>: (타입1 | 타입2 | &hellip;)[]</li>
+</ul>
+</li>
+<li>tuple
+<ul>
+<li>: [타입1, 타입2, &hellip;]</li>
+</ul>
+</li>
+<li><del>any</del></li>
+<li>unknown <a href="/storage/wil/javascript/ex-typescript">^</a>
+<ul>
+<li>타입을 확정한 뒤 할당 및 사용 가능</li>
+</ul>
+</li>
+<li>never
+<ul>
+<li>항상 오류를 출력하거나, 절대 값을 반환하지 않는 함수의 리턴 타입</li>
+<li>모든 타입의 서브타입이며 어떤 타입도 할당 불가</li>
+</ul>
+</li>
+<li>void
+<ul>
+<li>값을 반환하지 않는 함수의 리턴 타입</li>
+<li>undefined만 할당 가능</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-union-type" class="relative group">3. Union Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-union-type" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>: 타입1 | 타입2 | &hellip;</li>
+</ul>
+<h3 id="4-interaction-type" class="relative group">4. Interaction Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-interaction-type" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>: 타입1 &amp; 타입2 &amp; &hellip;</li>
+</ul>
+<h2 id="ts-custom-type" class="relative group">TS Custom Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ts-custom-type" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-type-alias" class="relative group">1. Type alias <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-type-alias" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">type</span> <span class="err">에일리아스</span> <span class="o">=</span> <span class="nx">union</span> <span class="o">|</span> <span class="nx">interaction</span> <span class="o">|</span> <span class="nx">tuple</span><span class="p">;</span>
+</code></pre></div><h3 id="2-interface" class="relative group">2. Interface <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-interface" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="cm">/* 인터페이스 */</span>
+<span class="kr">interface</span> <span class="err">인터페이스</span> <span class="p">{</span>
+ <span class="nx">key</span>: <span class="kt">valueType</span>
+ <span class="nx">method</span><span class="p">(</span><span class="nx">parameter</span>: <span class="kt">valueType</span><span class="p">,</span> <span class="p">...)</span><span class="o">:</span> <span class="nx">returnType</span>
+<span class="p">}</span>
+
+<span class="cm">/* 인터페이스 상속 */</span>
+<span class="kr">interface</span> <span class="err">하위</span><span class="nx">_인터페이스</span> <span class="kr">extends</span> <span class="err">상위</span><span class="nx">_인터페이스</span><span class="p">,</span> <span class="p">...</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="cm">/* 인터페이스 -&gt; 클래스 */</span>
+<span class="kr">class</span> <span class="err">클래스</span> <span class="kr">implements</span> <span class="err">인터페이스</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre></div><p>*인터페이스는 중복 작성했을 때, 자동으로 병합됨(Declaration Merging)</p>
+<h3 id="3-class" class="relative group">3. Class <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-class" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="cm">/*
+</span><span class="cm">class 클래스 {
+</span><span class="cm">   key: valueType // 초기값 필요(but, &#34;!:&#34;면 필요 X)
+</span><span class="cm">   constructor(parameter: valueType, ...) {
+</span><span class="cm">      this.key = parameter
+</span><span class="cm">   }
+</span><span class="cm">}
+</span><span class="cm">*/</span>
+
+<span class="c1">// this로 한 번 더 할당할 필요 X
+</span><span class="c1"></span><span class="kr">class</span> <span class="err">클래스</span> <span class="p">{</span>
+   <span class="kr">constructor</span><span class="p">(</span><span class="kr">public</span><span class="o">|</span><span class="kr">private</span><span class="o">|</span><span class="kr">protected</span> <span class="nx">parameter</span>: <span class="kt">valueType</span><span class="p">,</span> <span class="p">...)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">class</span> <span class="err">하위</span><span class="nx">_클래스</span> <span class="kr">extends</span> <span class="err">상위</span><span class="nx">_클래스</span> <span class="p">{</span>
+   <span class="kr">constructor</span><span class="p">(</span><span class="kr">public</span><span class="o">|</span><span class="kr">private</span><span class="o">|</span><span class="kr">protected</span> <span class="nx">parameter</span>: <span class="kt">valueType</span><span class="p">,</span> <span class="p">...)</span> <span class="p">{</span>
+      <span class="kr">super</span><span class="p">(</span><span class="cm">/* 상위_클래스_parameter */</span><span class="p">)</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th>접근 제어자</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public</td>
+<td>- 외부에서 접근 가능<br/>- default 값</td>
+</tr>
+<tr>
+<td>private</td>
+<td>- 내부에서만 접근 가능<br/>- 관습적으로 앞에 _사용</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>- 정의만 있을 뿐 구현되어 있지 않음<br>- 추상을 상속하는 클래스는 추상 클래스에 정의된<br>ㅤ추상 메서드를 반드시 구현해야 함</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>static
+<ul>
+<li>클래스 자체에서만 호출 가능<br>
+(생성자로 생성한 객체에서 호출 불가능)</li>
+</ul>
+</li>
+<li>abstract
+<ul>
+<li>추상 클래스는 특정 클래스의 상속 대상이 되는 클래스</li>
+<li>추상 클래스를 상속하는 클래스는 추상 클래스에 정의된<br>
+추상 메서드를 반드시 구현해야 함</li>
+</ul>
+</li>
+<li>getter &amp; setter <a href="https://github.com/YuchanJeong/_WIL/blob/master/JavaScript/ex/ex-TS-GetterSetter.md">^</a></li>
+</ul>
+<h3 id="4-generichttpswwwtypescriptlangorgkodocshandbookutility-typeshtml-httpsgithubcomyuchanjeong_wilblobmasterjavascriptexex-ts-genericmd" class="relative group">4. <a href="https://www.typescriptlang.org/ko/docs/handbook/utility-types.html">Generic</a> <a href="https://github.com/YuchanJeong/_WIL/blob/master/JavaScript/ex/ex-TS-Generic.md">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-generichttpswwwtypescriptlangorgkodocshandbookutility-typeshtml-httpsgithubcomyuchanjeong_wilblobmasterjavascriptexex-ts-genericmd" aria-label="Anchor">#</a></span></h3>
+<blockquote>
+<p>Type Parameter (Obvious naming is needed)</p>
+</blockquote>
+<ul>
+<li>&lt;Type&gt;</li>
+<li>&lt;Type extends 타입&gt;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Utility Types</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Partial&lt;Type&gt;</td>
+<td>Type의 모든 프로퍼티를 선택으로 설정한 타입 생성</td>
+</tr>
+<tr>
+<td>Required&lt;Type&gt;</td>
+<td>Type의 모든 프로퍼티를 필수로 설정한 타입 생성</td>
+</tr>
+<tr>
+<td>Readonly&lt;Type&gt;</td>
+<td>Type의 모든 프로퍼티를 읽기 전용으로 설정한 타입 생성</td>
+</tr>
+<tr>
+<td>Record&lt;Keys, Values&gt;</td>
+<td>키의 타입은 Keys, 값의 타입은 Values인 타입 생성</td>
+</tr>
+<tr>
+<td>Pick&lt;Type, Keys&gt;</td>
+<td>Type의 프로퍼티 중 Keys만 선택한 타입 생성</td>
+</tr>
+<tr>
+<td>Omit&lt;Type, Keys&gt;</td>
+<td>Type의 프로퍼티 중 Keys만 제외한 타입 생성</td>
+</tr>
+<tr>
+<td>Exclude&lt;Type1, Type2&gt;</td>
+<td>Type1의 유니온 멤버 중 Type2의 유니온 멤버만 제외한 타입 생성</td>
+</tr>
+<tr>
+<td>NonNullable&lt;Type&gt;</td>
+<td>Type에서 null과 undefined를 제외한 타입 생성</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ts-etc" class="relative group">TS Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ts-etc" aria-label="Anchor">#</a></span></h2>
+<ul>
+<li>Index Signatures
+<ul>
+<li>[index: string]: valueType</li>
+<li>이름, 존재 여부 상관없는 key들의 value의 타입 지정</li>
+</ul>
+</li>
+<li>Optional Type
+<ul>
+<li>?:</li>
+<li>해당 요소가 있어도 되고 없어도 됨</li>
+</ul>
+</li>
+<li>Non-Null Assertion Operator
+<ul>
+<li>!.</li>
+<li>해당 피연산자가 null, undefined가 아니라고 단언</li>
+<li><a href="https://www.typescriptlang.org/play?ssl=7&amp;ssc=66&amp;pln=3&amp;pc=1#code/MYewdgzgLgBAhgJwTAvDA2gbwG5wDYCuApgFwwCMAvgDQw77FkBMlAugNwBQoksAllCIBbVPCQA6AGZ8wAEwAURPKgB8MJeNyEiqFGiYBKLj2gwERCATyw0A4ZoY6A1BXYwA9O4AqAZXVIQBFoIGWAdOxE+CBh5fDwiAHMiWTwATwMYAAcQCBCAIzSYAjkiaTBkzm5wU3NLawB1AQALAHlMqD5wfFEIgH4HbRgXcjdPHw68ZTgwfwRAgEIYPoHiGCXo6D5JrJz8wuLZUpkKqt4zCysoRqhWzKIEOChAnsEheZXnVw93AEEm2hujwA5NEbjpwER5pwgA">Non-Null Assertion Operator와 Optional Chaining의 차이</a></li>
+</ul>
+</li>
+<li>readonly &hellip;
+<ul>
+<li>해당 요소에 초기값만 할당 가능</li>
+</ul>
+</li>
+<li>keyof 타입
+<ul>
+<li>해당 타입의 모든 키값을 union 멤버로 반환</li>
+</ul>
+</li>
+<li>Type Assertion
+<ul>
+<li>&hellip; as 타입</li>
+<li>&hellip; as const (readonly) <a href="https://github.com/YuchanJeong/_WIL/blob/master/JavaScript/ex/ex-TS-as_const.md">^</a>
+<ul>
+<li>선언의 타입 추론 시 정확하게 해당 값으로 추론</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
       </div>
     </section>
     <footer class="pt-8 max-w-prose">
@@ -427,6 +781,19 @@
     
   </article>
 
+      
+        <div
+          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
+        >
+          <a
+            href="#the-top"
+            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
       
     </main>
     <div
