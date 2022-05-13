@@ -977,7 +977,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-redux/</guid>
-      <description></description>
+      <description>Redux Basic #1) Action #// 1) Action Type 정의 export const ADD_TODO = &amp;#34;ADD_TODO&amp;#34;; export const COMPLETE_TODO = &amp;#34;COMPLETE_TODO&amp;#34;; export const SHOW_ALL = &amp;#34;SHOW_ALL&amp;#34;; export const SHOW_COMPLETE = &amp;#34;SHOW_COMPLETE&amp;#34;; // 2) Action Creator(Action 객체 반환) 작성 export function addTodo(text) { return { type: ADD_TODO, text }; // { type: ADD_TODO, text: &amp;#34;todo&amp;#34; } } export function completeTodo(index) { return { type: COMPLETE_TODO, index }; // { type: COMPLETE_TODO, index: num } } export function showAll() { return { type: SHOW_ALL }; // { type: SHOW_ALL } } export function showComplete() { return { type: SHOW_COMPLETE }; // { type: SHOW_COMPLETE } 2) Reducer #// 3) reducers 작성 // redux/modules/reducers.</description>
     </item>
     
     <item>

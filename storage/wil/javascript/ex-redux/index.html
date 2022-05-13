@@ -67,7 +67,7 @@
   
   
   <meta property="og:title" content="Redux Example" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Redux Basic #1) Action #// 1) Action Type 정의 export const ADD_TODO = &#34;ADD_TODO&#34;; export const COMPLETE_TODO = &#34;COMPLETE_TODO&#34;; export const SHOW_ALL = &#34;SHOW_ALL&#34;; export const SHOW_COMPLETE = &#34;SHOW_COMPLETE&#34;; // 2) Action Creator(Action 객체 반환) 작성 export function addTodo(text) { return { type: ADD_TODO, text }; // { type: ADD_TODO, text: &#34;todo&#34; } } export function completeTodo(index) { return { type: COMPLETE_TODO, index }; // { type: COMPLETE_TODO, index: num } } export function showAll() { return { type: SHOW_ALL }; // { type: SHOW_ALL } } export function showComplete() { return { type: SHOW_COMPLETE }; // { type: SHOW_COMPLETE } 2) Reducer #// 3) reducers 작성 // redux/modules/reducers." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/storage/wil/javascript/ex-redux/" /><meta property="article:section" content="storage" />
 
@@ -76,7 +76,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Redux Example"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="Redux Basic #1) Action #// 1) Action Type 정의 export const ADD_TODO = &#34;ADD_TODO&#34;; export const COMPLETE_TODO = &#34;COMPLETE_TODO&#34;; export const SHOW_ALL = &#34;SHOW_ALL&#34;; export const SHOW_COMPLETE = &#34;SHOW_COMPLETE&#34;; // 2) Action Creator(Action 객체 반환) 작성 export function addTodo(text) { return { type: ADD_TODO, text }; // { type: ADD_TODO, text: &#34;todo&#34; } } export function completeTodo(index) { return { type: COMPLETE_TODO, index }; // { type: COMPLETE_TODO, index: num } } export function showAll() { return { type: SHOW_ALL }; // { type: SHOW_ALL } } export function showComplete() { return { type: SHOW_COMPLETE }; // { type: SHOW_COMPLETE } 2) Reducer #// 3) reducers 작성 // redux/modules/reducers."/>
 
   
   <script type="application/ld+json">
@@ -87,7 +87,7 @@
     "name": "Redux Example",
     "headline": "Redux Example",
     
-    
+    "abstract": "Redux Basic #\r1) Action #\r\/\/ 1) Action Type 정의 export const ADD_TODO = \u0026#34;ADD_TODO\u0026#34;; export const COMPLETE_TODO = \u0026#34;COMPLETE_TODO\u0026#34;; export const SHOW_ALL = \u0026#34;SHOW_ALL\u0026#34;; export const SHOW_COMPLETE = \u0026#34;SHOW_COMPLETE\u0026#34;; \/\/ 2) Action Creator(Action 객체 반환) 작성 export function addTodo(text) { return { type: ADD_TODO, text }; \/\/ { type: ADD_TODO, text: \u0026#34;todo\u0026#34; } } export function completeTodo(index) { return { type: COMPLETE_TODO, index }; \/\/ { type: COMPLETE_TODO, index: num } } export function showAll() { return { type: SHOW_ALL }; \/\/ { type: SHOW_ALL } } export function showComplete() { return { type: SHOW_COMPLETE }; \/\/ { type: SHOW_COMPLETE } 2) Reducer #\r\/\/ 3) reducers 작성 \/\/ redux\/modules\/reducers.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/storage\/wil\/javascript\/ex-redux\/",
     "author" : {
@@ -103,7 +103,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "0"
+    "wordCount": "776"
   }]
   </script>
 
@@ -307,8 +307,338 @@
     </header>
     <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       
+        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
+            <details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 lg:mt-3">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700"
+  >
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600"
+  >
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#redux-basic">Redux Basic</a>
+          <ul>
+            <li><a href="#1-action">1) Action</a></li>
+            <li><a href="#2-reducer">2) Reducer</a></li>
+            <li><a href="#3-store">3) Store</a></li>
+            <li><a href="#4-provider">4) Provider</a></li>
+            <li><a href="#5-usage">5) Usage</a></li>
+          </ul>
+        </li>
+        <li><a href="#redux-thunk">Redux-thunk</a></li>
+        <li><a href="#connected-react-router">connected-react-router</a>
+          <ul>
+            <li><a href="#1-setting">1) Setting</a></li>
+            <li><a href="#2-usage">2) Usage</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-w-0 min-h-0 max-w-prose">
-        
+        <h3 id="redux-basic" class="relative group">Redux Basic <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#redux-basic" aria-label="Anchor">#</a></span></h3>
+<h4 id="1-action" class="relative group">1) Action <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-action" aria-label="Anchor">#</a></span></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 1) Action Type 정의
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">ADD_TODO</span> <span class="o">=</span> <span class="s2">&#34;ADD_TODO&#34;</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">COMPLETE_TODO</span> <span class="o">=</span> <span class="s2">&#34;COMPLETE_TODO&#34;</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">SHOW_ALL</span> <span class="o">=</span> <span class="s2">&#34;SHOW_ALL&#34;</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">SHOW_COMPLETE</span> <span class="o">=</span> <span class="s2">&#34;SHOW_COMPLETE&#34;</span><span class="p">;</span>
+
+<span class="c1">// 2) Action Creator(Action 객체 반환) 작성
+</span><span class="c1"></span><span class="kr">export</span> <span class="kd">function</span> <span class="nx">addTodo</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">ADD_TODO</span><span class="p">,</span> <span class="nx">text</span> <span class="p">};</span>
+  <span class="c1">// { type: ADD_TODO, text: &#34;todo&#34; }
+</span><span class="c1"></span><span class="p">}</span>
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">completeTodo</span><span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">COMPLETE_TODO</span><span class="p">,</span> <span class="nx">index</span> <span class="p">};</span>
+  <span class="c1">// { type: COMPLETE_TODO, index: num }
+</span><span class="c1"></span><span class="p">}</span>
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">showAll</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">SHOW_ALL</span> <span class="p">};</span>
+  <span class="c1">// { type: SHOW_ALL }
+</span><span class="c1"></span><span class="p">}</span>
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">showComplete</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">SHOW_COMPLETE</span> <span class="p">};</span>
+  <span class="c1">// { type: SHOW_COMPLETE }
+</span></code></pre></div><h4 id="2-reducer" class="relative group">2) Reducer <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-reducer" aria-label="Anchor">#</a></span></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 3) reducers 작성
+</span><span class="c1">// redux/modules/reducers.js
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">combineReducers</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">todos</span> <span class="nx">from</span> <span class="s2">&#34;./modules/todos&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">filter</span> <span class="nx">from</span> <span class="s2">&#34;./modules/filter&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">reducers</span> <span class="o">=</span> <span class="nx">combineReducers</span><span class="p">({</span>
+  <span class="nx">todos</span><span class="p">,</span>
+  <span class="nx">filter</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">reducers</span><span class="p">;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 4-1) 개별 Reducer 작성
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">initState1</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">todos</span><span class="p">(</span><span class="nx">state</span> <span class="o">=</span> <span class="nx">initState1</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="nx">ADD_TODO</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">[...</span><span class="nx">state</span><span class="p">,</span> <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">text</span><span class="p">,</span> <span class="nx">completed</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}];</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="nx">COMPLETE_TODO</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">todo</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">index</span> <span class="o">===</span> <span class="nx">action</span><span class="p">.</span><span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">{</span> <span class="p">...</span><span class="nx">todo</span><span class="p">,</span> <span class="nx">completed</span><span class="o">:</span> <span class="kc">true</span> <span class="p">};</span>
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="nx">todo</span><span class="p">;</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">state</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 4-2) 개별 Reducer 작성
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">initState2</span> <span class="o">=</span> <span class="s2">&#34;ALL&#34;</span><span class="p">;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">filter</span><span class="p">(</span><span class="nx">state</span> <span class="o">=</span> <span class="nx">initState2</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="nx">SHOW_ALL</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&#34;ALL&#34;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="nx">SHOW_COMPLETE</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&#34;COMPLETE&#34;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">state</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h4 id="3-store" class="relative group">3) Store <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-store" aria-label="Anchor">#</a></span></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 5) reducers로 store 생성
+</span><span class="c1">// redux/store.js
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">createStore</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">reducers</span> <span class="nx">from</span> <span class="s2">&#34;./modules/reducers&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">reducers</span><span class="p">);</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">store</span><span class="p">;</span>
+</code></pre></div><h4 id="4-provider" class="relative group">4) Provider <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-provider" aria-label="Anchor">#</a></span></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 6) Provider로 App 전체에 전달
+</span><span class="c1">// index.js
+</span><span class="c1"></span><span class="p">...</span>
+<span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s2">&#34;./App&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">store</span> <span class="nx">from</span> <span class="s2">&#34;./redux/store&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Provider</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Provider</span> <span class="nx">store</span><span class="o">=</span><span class="p">{</span><span class="nx">store</span><span class="p">}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/Provider&gt;</span>
+  <span class="o">&lt;</span><span class="err">/React.StrictMode&gt;,</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;root&#34;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div><h4 id="5-usage" class="relative group">5) Usage <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-usage" aria-label="Anchor">#</a></span></h4>
+<p>Container</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// containers/TodoListContainer.jsx
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">TodoList</span> <span class="nx">from</span> <span class="s2">&#34;../components/TodoList&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useSelector</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">TodoListContainer</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">todos</span> <span class="o">=</span> <span class="nx">useSelector</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">todos</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">TodoList</span> <span class="nx">todos</span><span class="o">=</span><span class="p">{</span><span class="nx">todos</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// containers/TodoFormContainer.jsx
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">TodoForm</span> <span class="nx">from</span> <span class="s2">&#34;../components/TodoForm&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useDispatch</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useCallback</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">addTodo</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;../redux/modules/todos&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">TodoFormContainer</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">dispatch</span> <span class="o">=</span> <span class="nx">useDispatch</span><span class="p">();</span>
+
+  <span class="kr">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="nx">useCallback</span><span class="p">(</span>
+    <span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">dispatch</span><span class="p">(</span><span class="nx">addTodo</span><span class="p">(</span><span class="nx">text</span><span class="p">));</span>
+    <span class="p">},</span>
+    <span class="p">[</span><span class="nx">dispatch</span><span class="p">]</span>
+  <span class="p">);</span>
+
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">TodoForm</span> <span class="nx">add</span><span class="o">=</span><span class="p">{</span><span class="nx">add</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>Component</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">// components/TodoList.jsx
+</span><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">TodoList</span><span class="p">({</span> <span class="nx">todos</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+      <span class="p">{</span><span class="nx">todos</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">todo</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;{</span><span class="nx">todo</span><span class="p">.</span><span class="nx">text</span><span class="p">}&lt;/</span><span class="nt">li</span><span class="p">&gt;;</span>
+      <span class="p">})}</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// components/TodoForm.jsx
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">useRef</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">TodoForm</span><span class="p">({</span> <span class="nx">add</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">inputRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">inputRef</span><span class="p">}</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">click</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">add</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+
+  <span class="kd">function</span> <span class="nx">click</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">add</span><span class="p">(</span><span class="nx">inputRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="redux-thunk" class="relative group">Redux-thunk <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#redux-thunk" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// redux/store.js
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">reducer</span> <span class="nx">from</span> <span class="s2">&#34;./reducer/reducer&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">applyMiddleware</span><span class="p">,</span> <span class="nx">createStore</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">composeWithDevTools</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux-devtools-extension&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">thunk</span> <span class="nx">from</span> <span class="s2">&#34;redux-thunk&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">reducer</span><span class="p">,</span> <span class="nx">composeWithDevTools</span><span class="p">(</span><span class="nx">applyMiddleware</span><span class="p">(</span><span class="nx">thunk</span><span class="p">)));</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">store</span><span class="p">;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// redux/actions.js
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&#34;axios&#34;</span><span class="p">;</span>
+
+<span class="p">...</span>
+
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">getUsersStart</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="nx">GET_USERS_START</span><span class="p">,</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">getUsersSuccess</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="nx">GET_USERS_SUCCESS</span><span class="p">,</span>
+    <span class="nx">data</span><span class="p">,</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">getUsersFail</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="nx">GET_USERS_FAIL</span><span class="p">,</span>
+    <span class="nx">error</span><span class="p">,</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">getUsersThunk</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="nx">dispatch</span><span class="p">(</span><span class="nx">getUsersStart</span><span class="p">());</span>
+      <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;https://api.github.com/users&#34;</span><span class="p">);</span>
+      <span class="nx">dispatch</span><span class="p">(</span><span class="nx">getUsersSuccess</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">dispatch</span><span class="p">(</span><span class="nx">getUsersFail</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// components/UserListContainer.jsx
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">UserList</span> <span class="nx">from</span> <span class="s2">&#34;../components/UserList&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useSelector</span><span class="p">,</span> <span class="nx">useDispatch</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useCallback</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">getUsersThunk</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;../redux/actions&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">UserListContainer</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">users</span> <span class="o">=</span> <span class="nx">useSelector</span><span class="p">((</span><span class="nx">store</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">store</span><span class="p">.</span><span class="nx">users</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">dispatch</span> <span class="o">=</span> <span class="nx">useDispatch</span><span class="p">();</span>
+
+  <span class="kr">const</span> <span class="nx">getUsers</span> <span class="o">=</span> <span class="nx">useCallback</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">dispatch</span><span class="p">(</span><span class="nx">getUsersThunk</span><span class="p">());</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">dispatch</span><span class="p">]);</span>
+
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">UserList</span> <span class="nx">users</span><span class="o">=</span><span class="p">{</span><span class="nx">users</span><span class="p">}</span> <span class="nx">getUsers</span><span class="o">=</span><span class="p">{</span><span class="nx">getUsers</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="connected-react-router" class="relative group">connected-react-router <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#connected-react-router" aria-label="Anchor">#</a></span></h3>
+<h4 id="1-setting" class="relative group">1) Setting <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-setting" aria-label="Anchor">#</a></span></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 1) history.js
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">createBrowserHistory</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;history&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">history</span> <span class="o">=</span> <span class="nx">createBrowserHistory</span><span class="p">();</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">history</span><span class="p">;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 2) redux/store.js
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">reducers</span> <span class="nx">from</span> <span class="s2">&#34;./modules/reducers&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">applyMiddleware</span><span class="p">,</span> <span class="nx">createStore</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">composeWithDevTools</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux-devtools-extension&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">history</span> <span class="nx">from</span> <span class="s2">&#34;../history&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">routerMiddleware</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;connected-react-router&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">sagaMiddleware</span> <span class="o">=</span> <span class="nx">createSagaMiddleware</span><span class="p">();</span>
+
+<span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span>
+  <span class="nx">reducers</span><span class="p">,</span>
+  <span class="nx">composeWithDevTools</span><span class="p">(</span><span class="nx">applyMiddleware</span><span class="p">(</span><span class="nx">routerMiddleware</span><span class="p">(</span><span class="nx">history</span><span class="p">)))</span>
+<span class="p">);</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">store</span><span class="p">;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 3) redux/modules/reducers.js
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">combineReducers</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">history</span> <span class="nx">from</span> <span class="s2">&#34;../../history&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">connectRouter</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;connected-react-router&#34;</span><span class="p">;</span>
+<span class="p">...</span>
+
+<span class="kr">const</span> <span class="nx">reducers</span> <span class="o">=</span> <span class="nx">combineReducers</span><span class="p">({</span>
+  <span class="nx">router</span><span class="o">:</span> <span class="nx">connectRouter</span><span class="p">(</span><span class="nx">history</span><span class="p">),</span>
+  <span class="p">...</span>
+<span class="p">});</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">reducers</span><span class="p">;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 4) index.js
+</span><span class="c1"></span><span class="p">...</span>
+<span class="kr">import</span> <span class="nx">store</span> <span class="nx">from</span> <span class="s2">&#34;./redux/store&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Provider</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">history</span> <span class="nx">from</span> <span class="s2">&#34;./history&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">ConnectedRouter</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;connected-react-router&#34;</span><span class="p">;</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Provider</span> <span class="nx">store</span><span class="o">=</span><span class="p">{</span><span class="nx">store</span><span class="p">}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ConnectedRouter</span> <span class="nx">history</span><span class="o">=</span><span class="p">{</span><span class="nx">history</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/ConnectedRouter&gt;</span>
+    <span class="o">&lt;</span><span class="err">/Provider&gt;</span>
+  <span class="o">&lt;</span><span class="err">/React.StrictMode&gt;,</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;root&#34;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div><h4 id="2-usage" class="relative group">2) Usage <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-usage" aria-label="Anchor">#</a></span></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// pages/home.jsx
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">useDispatch</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Link</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-router-dom&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">push</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;connected-react-router&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Home</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">dispatch</span> <span class="o">=</span> <span class="nx">useDispatch</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Home</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="s2">&#34;/todos&#34;</span><span class="o">&gt;</span><span class="nx">Todos</span><span class="o">&lt;</span><span class="err">/Link&gt;</span>
+        <span class="o">&lt;</span><span class="err">/li&gt;</span>
+        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="s2">&#34;/users&#34;</span><span class="o">&gt;</span><span class="nx">Users</span><span class="o">&lt;</span><span class="err">/Link&gt;</span>
+        <span class="o">&lt;</span><span class="err">/li&gt;</span>
+      <span class="o">&lt;</span><span class="err">/ul&gt;</span>
+      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">click</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">todos로</span> <span class="nx">이동</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+
+  <span class="kd">function</span> <span class="nx">click</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">dispatch</span><span class="p">(</span><span class="nx">push</span><span class="p">(</span><span class="s2">&#34;/todos&#34;</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
       </div>
     </section>
     <footer class="pt-8 max-w-prose">
@@ -322,6 +652,19 @@
     
   </article>
 
+      
+        <div
+          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
+        >
+          <a
+            href="#the-top"
+            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
       
     </main>
     <div
