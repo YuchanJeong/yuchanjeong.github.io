@@ -13,14 +13,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Node.js &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="Node.js &middot; Yuchan&#39;s hello world!" />
+  <title>TypeScript &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="TypeScript &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog of a developer who wants to help create a better world :)" />
   
   
   
-  <link rel="canonical" href="https://yuchanjeong.github.io/what-i-learned/javascript/nodejs/" />
+  <link rel="canonical" href="https://yuchanjeong.github.io/what-i-learned/javascript/typescript/" />
   
   
   
@@ -66,17 +66,17 @@
   
   
   
-  <meta property="og:title" content="Node.js" />
-<meta property="og:description" content="확장성 네트워크 애플리케이션(특히 서버 사이드) 개발에 사용되는 소프트웨어 플랫폼(런타임 환경)." />
+  <meta property="og:title" content="TypeScript" />
+<meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yuchanjeong.github.io/what-i-learned/javascript/nodejs/" /><meta property="article:section" content="What I learned" />
+<meta property="og:url" content="https://yuchanjeong.github.io/what-i-learned/javascript/typescript/" /><meta property="article:section" content="What I learned" />
 
 <meta property="og:site_name" content="Yuchan&#39;s hello world!" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Node.js"/>
-<meta name="twitter:description" content="확장성 네트워크 애플리케이션(특히 서버 사이드) 개발에 사용되는 소프트웨어 플랫폼(런타임 환경)."/>
+<meta name="twitter:title" content="TypeScript"/>
+<meta name="twitter:description" content=""/>
 
   
   <script type="application/ld+json">
@@ -84,12 +84,12 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "What I learneds",
-    "name": "Node.js",
-    "headline": "Node.js",
+    "name": "TypeScript",
+    "headline": "TypeScript",
     
-    "abstract": "확장성 네트워크 애플리케이션(특히 서버 사이드) 개발에 사용되는 소프트웨어 플랫폼(런타임 환경).",
+    
     "inLanguage": "en",
-    "url" : "https:\/\/yuchanjeong.github.io\/what-i-learned\/javascript\/nodejs\/",
+    "url" : "https:\/\/yuchanjeong.github.io\/what-i-learned\/javascript\/typescript\/",
     "author" : {
       "@type": "Person",
       "name": "Yuchan"
@@ -100,10 +100,10 @@
     
     
     
-    "keywords": ["JavaScript"],
+    "keywords": ["TypeScript"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "177"
+    "wordCount": "0"
   }]
   </script>
 
@@ -255,7 +255,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Node.js
+        TypeScript
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -308,9 +308,9 @@
         
           
             <a
-              href="/tags/javascript/"
+              href="/tags/typescript/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >JavaScript</a
+              >TypeScript</a
             >
           
         
@@ -323,124 +323,8 @@
     </header>
     <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       
-        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
-          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
-            <details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 lg:mt-3">
-  <summary
-    class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700"
-  >
-    Table of Contents
-  </summary>
-  <div
-    class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600"
-  >
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#nvmnode-version-manager">NVM(Node Version Manager)</a></li>
-    <li><a href="#npmnode-package-manager">NPM(Node Package Manager)</a></li>
-    <li><a href="#package">PACKAGE</a></li>
-  </ul>
-</nav>
-  </div>
-</details>
-
-          </div>
-        </div>
-      
       <div class="min-w-0 min-h-0 max-w-prose">
-        <blockquote>
-<p>확장성 네트워크 애플리케이션(특히 서버 사이드) 개발에 사용되는 소프트웨어 플랫폼(<strong>런타임 환경</strong>). 작성 언어로 JavaScript를 활용하며, <code>Non-blocking I/O</code>과 <code>Single thread Event loop</code>를 통한 높은 처리 성능을 가짐.</p>
-</blockquote>
-<h2 id="nvmnode-version-manager" class="relative group">NVM(Node Version Manager) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nvmnode-version-manager" aria-label="Anchor">#</a></span></h2>
-<ol>
-<li>Home Brew 설치 <a href="/storage/wil/etc/homebrew">^</a>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/bin/bash -c <span class="s2">&#34;\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&#34;</span>
-</code></pre></div></li>
-<li>Error Handling
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># command not found: brew</span>
-<span class="nb">eval</span> <span class="k">$(</span>/opt/homebrew/bin/brew shellenv<span class="k">)</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># nvm install</span>
-arch -x86_64 zsh
-</code></pre></div></li>
-<li>Node.js 설치
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">brew install node
-</code></pre></div></li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>node &ndash;version</td>
-<td>node 버전</td>
-</tr>
-<tr>
-<td>nvm &ndash;version</td>
-<td>nvm 버전</td>
-</tr>
-<tr>
-<td>nvm install [버전]</td>
-<td>특정 버전 node 설치</td>
-</tr>
-<tr>
-<td>nvm uninstall [버전]</td>
-<td>특정 버전 node 삭제</td>
-</tr>
-<tr>
-<td>nvm ls</td>
-<td>node 목록</td>
-</tr>
-<tr>
-<td>nvm use [버전]</td>
-<td>특정 버전 node 사용</td>
-</tr>
-</tbody>
-</table>
-<h2 id="npmnode-package-manager" class="relative group">NPM(Node Package Manager) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#npmnode-package-manager" aria-label="Anchor">#</a></span></h2>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>npm init -y</td>
-<td>package.json 생성</td>
-</tr>
-<tr>
-<td>npm install<br/>npm i (-D) [패키지명]</td>
-<td>package.json에 기록된 패키지 설치<br/>일반(개발) 의존성 패키지 설치</td>
-</tr>
-<tr>
-<td>npm update [패키지명]</td>
-<td>같은 major의 최신 버전으로 업데이트 <br/>*^major.minor.patch일 때만 가능</td>
-</tr>
-<tr>
-<td>npm run [명령]</td>
-<td>package.json의 script에 &ldquo;명령&rdquo;: &ldquo;명령어&rdquo; 등록 후 사용</td>
-</tr>
-<tr>
-<td>npx [명령어]</td>
-<td>패키지의 명령어 바로 사용</td>
-</tr>
-</tbody>
-</table>
-<p>*[패키지명]@[패키지 버전]으로 특정 버전 패키지 설치 가능<br/>
-*.cache/, dist/, node_modules/는 package.json에 기록되어 있어서 버전 관리 제외 필요</p>
-<h2 id="package" class="relative group">PACKAGE <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#package" aria-label="Anchor">#</a></span></h2>
-<ul>
-<li>npm i -g <a href="https://www.npmjs.com/package/nodemon">nodemon</a></li>
-<li>npm i <a href="https://lodash.com/docs">lodash</a></li>
-<li>npm i -D <a href="https://parceljs.org/docs/">parcel-bundler</a></li>
-<li>npm i <a href="https://www.npmjs.com/package/nanoid">nanoid</a></li>
-</ul>
-
+        
       </div>
     </section>
     <footer class="pt-8 max-w-prose">

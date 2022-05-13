@@ -17,5 +17,14 @@
       <description>Today I learned #DOM API 정리 # childrenNodes는 텍스트와 태그가 섞여 있을 때 사용 dataset  &amp;lt;tag data-user|role|user-id=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/tag&amp;gt;</description>
     </item>
     
+    <item>
+      <title>TypeScript</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/typescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/typescript/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

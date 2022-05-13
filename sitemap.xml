@@ -756,7 +756,7 @@
   
     
       <url>
-            <loc>https://yuchanjeong.github.io/storage/html-css/ex-css/</loc>
+            <loc>https://yuchanjeong.github.io/storage/wil/html-css/ex-css/</loc>
           </url>
     
   
@@ -768,7 +768,7 @@
   
     
       <url>
-            <loc>https://yuchanjeong.github.io/storage/etc/homebrew/</loc>
+            <loc>https://yuchanjeong.github.io/storage/wil/etc/homebrew/</loc>
           </url>
     
   
@@ -786,7 +786,7 @@
   
     
       <url>
-            <loc>https://yuchanjeong.github.io/storage/javascript/ex-javascript/</loc>
+            <loc>https://yuchanjeong.github.io/storage/wil/javascript/ex-javascript/</loc>
           </url>
     
   
@@ -813,6 +813,12 @@
     
       <url>
             <loc>https://yuchanjeong.github.io/storage/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://yuchanjeong.github.io/what-i-learned/javascript/typescript/</loc>
           </url>
     
   
