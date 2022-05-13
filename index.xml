@@ -918,6 +918,24 @@
     </item>
     
     <item>
+      <title>JavaScript</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/javascript/</guid>
+      <description>JS Data #1.</description>
+    </item>
+    
+    <item>
+      <title>JS Example</title>
+      <link>https://yuchanjeong.github.io/storage/javascript/ex-javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/storage/javascript/ex-javascript/</guid>
+      <description>Data Immutability #// 원시 데이터 (불변) // string, number, boolean, undefined, null // |a: 1 |b: 3 // |a: 1 |b: 1 // |a: 1 |b: 5 // |a: 1 |b: 5 |c: 1 let a = 1; let b = 3; console.</description>
+    </item>
+    
+    <item>
       <title>Linux Console</title>
       <link>https://yuchanjeong.github.io/what-i-learned/etc/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -950,7 +968,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/wil/</guid>
-      <description>JavaScript # JavaScript TypeScript Node.</description>
+      <description>JavaScript # Node.</description>
     </item>
     
   </channel>
