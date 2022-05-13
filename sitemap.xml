@@ -84,7 +84,7 @@
   
     
       <url>
-            <loc>https://yuchanjeong.github.io/posts/studies/react/react-v18/</loc>
+            <loc>https://yuchanjeong.github.io/posts/studies/react/react-v18.0/</loc>
             <lastmod>2022-04-18T00:00:00+00:00</lastmod>
           </url>
     
@@ -799,6 +799,18 @@
     
       <url>
             <loc>https://yuchanjeong.github.io/what-i-learned/javascript/nodejs/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://yuchanjeong.github.io/what-i-learned/javascript/react/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://yuchanjeong.github.io/storage/wil/javascript/ex-react/</loc>
           </url>
     
   

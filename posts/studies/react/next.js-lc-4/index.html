@@ -342,11 +342,11 @@
   <ul>
     <li><a href="#4-pre-rendering-and-data-fetching">4. Pre-rendering and Data Fetching</a>
       <ul>
-        <li><a href="#getstaticpropshttpsnextjsorgdocsbasic-featuresdata-fetchingget-static-props">getStaticProps<a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">*</a></a></li>
-        <li><a href="#getserversidepropshttpsnextjsorgdocsbasic-featuresdata-fetchingget-server-side-props">getServerSideProps<a href="https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props">*</a></a></li>
+        <li><a href="#getstaticpropshttpsnextjsorgdocsbasic-featuresdata-fetchingget-static-props">getStaticProps<a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">^</a></a></li>
+        <li><a href="#getserversidepropshttpsnextjsorgdocsbasic-featuresdata-fetchingget-server-side-props">getServerSideProps<a href="https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props">^</a></a></li>
       </ul>
     </li>
-    <li><a href="#5-dynamic-routeshttpsnextjsorgdocsroutingdynamic-routes">5. Dynamic Routes<a href="https://nextjs.org/docs/routing/dynamic-routes">*</a></a>
+    <li><a href="#5-dynamic-routeshttpsnextjsorgdocsroutingdynamic-routes">5. Dynamic Routes<a href="https://nextjs.org/docs/routing/dynamic-routes">^</a></a>
       <ul>
         <li><a href="#render-markdown">Render Markdown</a></li>
         <li><a href="#polishing-the-post-page">Polishing the Post Page</a></li>
@@ -354,11 +354,11 @@
         <li><a href="#dynamic-routes-details">Dynamic Routes Details</a></li>
       </ul>
     </li>
-    <li><a href="#6-api-routeshttpsnextjsorgdocsapi-routesintroduction">6. API Routes<a href="https://nextjs.org/docs/api-routes/introduction">*</a></a></li>
+    <li><a href="#6-api-routeshttpsnextjsorgdocsapi-routesintroduction">6. API Routes<a href="https://nextjs.org/docs/api-routes/introduction">^</a></a></li>
     <li><a href="#7-deploying-your-nextjs-app">7. Deploying Your Next.js App</a>
       <ul>
         <li><a href="#deploy-to-vercel">Deploy to Vercel</a></li>
-        <li><a href="#nextjs-and-vercelhttpsvercelcomdocs">Next.js and Vercel<a href="https://vercel.com/docs">*</a></a></li>
+        <li><a href="#nextjs-and-vercelhttpsvercelcomdocs">Next.js and Vercel<a href="https://vercel.com/docs">^</a></a></li>
         <li><a href="#preview-deployment-for-every-push-develop-preview-ship">Preview Deployment for Every Push (Develop, Preview, Ship)</a></li>
       </ul>
     </li>
@@ -381,7 +381,7 @@
 <li>We recommend using <strong>SSG</strong> whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.</li>
 <li>If your page shows frequently updated data, and the page content changes on every request, you can use <strong>SSR</strong>. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use <strong>CSR</strong> to populate frequently updated data.</li>
 </ul>
-<h3 id="getstaticpropshttpsnextjsorgdocsbasic-featuresdata-fetchingget-static-props" class="relative group">getStaticProps<a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#getstaticpropshttpsnextjsorgdocsbasic-featuresdata-fetchingget-static-props" aria-label="Anchor">#</a></span></h3>
+<h3 id="getstaticpropshttpsnextjsorgdocsbasic-featuresdata-fetchingget-static-props" class="relative group">getStaticProps<a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#getstaticpropshttpsnextjsorgdocsbasic-featuresdata-fetchingget-static-props" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Home</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
 
 <span class="kr">export</span> <span class="kr">async</span> <span class="kd">function</span> <span class="nx">getStaticProps</span><span class="p">()</span> <span class="p">{</span>
@@ -493,7 +493,7 @@ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 <span class="p">}</span>
 </code></pre></div></li>
 </ul>
-<h3 id="getserversidepropshttpsnextjsorgdocsbasic-featuresdata-fetchingget-server-side-props" class="relative group">getServerSideProps<a href="https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#getserversidepropshttpsnextjsorgdocsbasic-featuresdata-fetchingget-server-side-props" aria-label="Anchor">#</a></span></h3>
+<h3 id="getserversidepropshttpsnextjsorgdocsbasic-featuresdata-fetchingget-server-side-props" class="relative group">getServerSideProps<a href="https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#getserversidepropshttpsnextjsorgdocsbasic-featuresdata-fetchingget-server-side-props" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">export</span> <span class="kr">async</span> <span class="kd">function</span> <span class="nx">getServerSideProps</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">{</span>
     <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
@@ -503,7 +503,7 @@ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 <span class="p">}</span>
 </code></pre></div><p>Because getServerSideProps is called at request time, its parameter (context) contains request specific parameters.</p>
 <p>You should use getServerSideProps only if you need to pre-render a page whose data must be fetched at request time.</p>
-<h2 id="5-dynamic-routeshttpsnextjsorgdocsroutingdynamic-routes" class="relative group">5. Dynamic Routes<a href="https://nextjs.org/docs/routing/dynamic-routes">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-dynamic-routeshttpsnextjsorgdocsroutingdynamic-routes" aria-label="Anchor">#</a></span></h2>
+<h2 id="5-dynamic-routeshttpsnextjsorgdocsroutingdynamic-routes" class="relative group">5. Dynamic Routes<a href="https://nextjs.org/docs/routing/dynamic-routes">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-dynamic-routeshttpsnextjsorgdocsroutingdynamic-routes" aria-label="Anchor">#</a></span></h2>
 <p>Create a page at /pages/posts/[id].js</p>
 <ol>
 <li>A React component to render this page</li>
@@ -789,7 +789,7 @@ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 <span class="p">}</span>
 </code></pre></div></li>
 </ul>
-<h2 id="6-api-routeshttpsnextjsorgdocsapi-routesintroduction" class="relative group">6. API Routes<a href="https://nextjs.org/docs/api-routes/introduction">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#6-api-routeshttpsnextjsorgdocsapi-routesintroduction" aria-label="Anchor">#</a></span></h2>
+<h2 id="6-api-routeshttpsnextjsorgdocsapi-routesintroduction" class="relative group">6. API Routes<a href="https://nextjs.org/docs/api-routes/introduction">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#6-api-routeshttpsnextjsorgdocsapi-routesintroduction" aria-label="Anchor">#</a></span></h2>
 <ul>
 <li>Create <code>pages/api/hello.js</code>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">handler</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
@@ -831,7 +831,7 @@ git push -u origin main
 <ul>
 <li><a href="https://nextjs-blog-sample-omega.vercel.app/">nextjs-blog-sample</a></li>
 </ul>
-<h3 id="nextjs-and-vercelhttpsvercelcomdocs" class="relative group">Next.js and Vercel<a href="https://vercel.com/docs">*</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nextjs-and-vercelhttpsvercelcomdocs" aria-label="Anchor">#</a></span></h3>
+<h3 id="nextjs-and-vercelhttpsvercelcomdocs" class="relative group">Next.js and Vercel<a href="https://vercel.com/docs">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nextjs-and-vercelhttpsvercelcomdocs" aria-label="Anchor">#</a></span></h3>
 <ul>
 <li>Default features:
 <ul>
@@ -985,7 +985,7 @@ git push -u origin main
         </span>
         <span>
           
-            <a class="flex text-right group" href="/posts/studies/react/react-v18/">
+            <a class="flex text-right group" href="/posts/studies/react/react-v18.0/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"

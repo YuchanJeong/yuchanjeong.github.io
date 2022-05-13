@@ -103,7 +103,7 @@
     "keywords": ["CSS"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "762"
+    "wordCount": "753"
   }]
   </script>
 
@@ -699,7 +699,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>position</code> <a href="https://developer.mozilla.org/ko/docs/Web/CSS/position">*</a><br/>: relative;<br/>: absolute;<br/>: fixed;<br/>: sticky;<br/>: -webkit-sticky;</td>
+<td><code>position</code><a href="https://developer.mozilla.org/ko/docs/Web/CSS/position">^</a><br/>: relative;<br/>: absolute;<br/>: fixed;<br/>: sticky;<br/>: -webkit-sticky;</td>
 <td>기준<br/>: 자신 기준<br/>: 부모(position 필요) 기준<br/>: 뷰포트 기준 고정<br/>: 스크롤 시 뷰포트 기준 고정<br/>: 사파리에 sticky 적용</td>
 </tr>
 <tr>
@@ -781,7 +781,7 @@
 <td>auto</td>
 </tr>
 <tr>
-<td><code>flex</code> <a href="https://developer.mozilla.org/ko/docs/Web/CSS/flex">*</a></td>
+<td><code>flex</code><a href="https://developer.mozilla.org/ko/docs/Web/CSS/flex">^</a></td>
 <td>grow, shrink, basis의 단축 속성</td>
 <td>1 1 auto</td>
 </tr>
@@ -813,7 +813,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>transition</code> <a href="https://developer.mozilla.org/ko/docs/Web/CSS/transition">*</a><br/>: property duration timing-function delay</td>
+<td><code>transition</code><a href="https://developer.mozilla.org/ko/docs/Web/CSS/transition">^</a><br/>: property duration timing-function delay</td>
 <td>해당 요소 변화 시 전환 효과<br/>└ timing-function - ease | linear | ease-in | ease-out</td>
 </tr>
 </tbody>
@@ -828,7 +828,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>transform</code> <a href="https://developer.mozilla.org/ko/docs/Web/CSS/transform">*</a><br/>: scale(xy | x, y);<br/>: translate(x | x, y);<br/>: skew(x | x, y);<br/>: rotate(deg);<br/>: perspective(n);<br/>: rotateX/Y(deg);</td>
+<td><code>transform</code><a href="https://developer.mozilla.org/ko/docs/Web/CSS/transform">^</a><br/>: scale(xy | x, y);<br/>: translate(x | x, y);<br/>: skew(x | x, y);<br/>: rotate(deg);<br/>: perspective(n);<br/>: rotateX/Y(deg);</td>
 <td>형태 변환<br/>: 크기 변환<br/>: 위치 변환<br/>: 기울기 변환<br/>: 2d 회전<br/>: 3d 원근감 (먼저 작성 필요)<br/>: 3d 회전</td>
 </tr>
 <tr>
@@ -847,7 +847,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>cursor</code> <a href="https://developer.mozilla.org/ko/docs/Web/CSS/cursor">*</a></td>
+<td><code>cursor</code><a href="https://developer.mozilla.org/ko/docs/Web/CSS/cursor">^</a></td>
 <td>커서 모양</td>
 </tr>
 <tr>
@@ -855,7 +855,7 @@
 <td>사용자가 텍스트 선택 못함</td>
 </tr>
 <tr>
-<td><code>scroll-snap-type</code> : x/y mandatory; | proximity; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">*</a><br><code>scroll-snap-align</code>: start; | end; | center;</td>
+<td><code>scroll-snap-type</code> : x/y mandatory; | proximity; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">^</a><br><code>scroll-snap-align</code>: start; | end; | center;</td>
 <td>snap 축 (부모요소에 입력)<br>snap 위치 (자식요소에 입력)</td>
 </tr>
 </tbody>
@@ -863,7 +863,7 @@
 <h2 id="etc" class="relative group">Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc" aria-label="Anchor">#</a></span></h2>
 <ol>
 <li>
-<p><code>@media</code> <a href="https://developer.mozilla.org/ko/docs/Web/CSS/@media">*</a></p>
+<p><code>@media</code><a href="https://developer.mozilla.org/ko/docs/Web/CSS/@media">^</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="c">/* 데스크탑 스타일 */</span>
 <span class="p">@</span><span class="k">media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
   <span class="c">/* 모바일 스타일 */</span>
@@ -877,13 +877,13 @@
 <span class="p">}</span>
 </code></pre></div></li>
 <li>
-<p><code>:root</code> <a href="/storage/wil/html-css/ex-css/#root-selector">^</a></p>
+<p><code>:root</code><a href="/storage/wil/html-css/ex-css/#root-selector">⋯</a></p>
 </li>
 <li>
-<p><code>:is()</code> <a href="/storage/wil/html-css/ex-css/#pseudo-selector">^</a></p>
+<p><code>:is()</code><a href="/storage/wil/html-css/ex-css/#pseudo-selector">⋯</a></p>
 </li>
 <li>
-<p>module.css <a href="/storage/wil/html-css/ex-css/#css-module--classnames">^</a></p>
+<p>module.css<a href="/storage/wil/html-css/ex-css/#css-module--classnames">⋯</a></p>
 </li>
 <li>
 <p>Etc</p>
