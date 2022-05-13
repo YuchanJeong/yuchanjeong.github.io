@@ -40,7 +40,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-react/</guid>
-      <description>useEffect() #import { useState, useEffect } from &amp;#34;react&amp;#34;; export default function Component() { const [name, setName] = useState(&amp;#34;&amp;#34;); const [count, setCount] = useState(0); const handleChangeName = (e) =&amp;gt; setName(e.</description>
+      <description>useEffect #import { useState, useEffect } from &amp;#34;react&amp;#34;; export default function Component() { const [name, setName] = useState(&amp;#34;&amp;#34;); const [count, setCount] = useState(0); const handleChangeName = (e) =&amp;gt; setName(e.</description>
     </item>
     
     <item>
