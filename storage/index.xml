@@ -40,7 +40,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-typescript/</guid>
-      <description>Unknown #declare const maybe: unknown; if (typeof maybe === &amp;#34;boolean&amp;#34;) { const aBoolean: boolean = maybe; } if (typeof maybe === &amp;#34;string&amp;#34;) { const aString: string = maybe; } </description>
+      <description>Unknown #declare const maybe: unknown; if (typeof maybe === &amp;#34;boolean&amp;#34;) { const aBoolean: boolean = maybe; } if (typeof maybe === &amp;#34;string&amp;#34;) { const aString: string = maybe; } Getter &amp;amp; Setter #class Person { constructor(private _name: string, private _age: number) {} // 추가로 뭔가 할 수 있음  /* Getter */ get name() { return `Mr.</description>
     </item>
     
   </channel>
