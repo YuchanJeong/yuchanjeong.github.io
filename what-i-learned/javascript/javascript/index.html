@@ -103,7 +103,7 @@
     "keywords": ["JavaScript"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1887"
+    "wordCount": "1878"
   }]
   </script>
 
@@ -383,7 +383,7 @@
 </tr>
 <tr>
 <td>number</td>
-<td>- Number(str)로 숫자화<br>ㅤ*숫자가 아닌 문자열이 있으면 NaN<br>- parseInt(str)로 정수화, parseFloat(str)으로 숫자화<br>ㅤ*숫자가 아닌 문자열이 뒤에 있으면 숫자인 부분까지 숫자화</td>
+<td>- Number(str)로 숫자화<br>ㅤ*<em>숫자가 아닌 문자열이 있으면 NaN</em><br>- parseInt(str)로 정수화, parseFloat(str)으로 숫자화<br>ㅤ*<em>숫자가 아닌 문자열이 뒤에 있으면 숫자인 부분까지 숫자화</em></td>
 </tr>
 <tr>
 <td>boolean</td>
@@ -391,7 +391,7 @@
 </tr>
 <tr>
 <td>array</td>
-<td>- [&hellip;, &hellip;]로 표현<br>- arr[i]로 element 읽음<br>- arr[i] = value로 arr의 i 인덱스에 value 할당<br>- new Array(n).fill(element)로 n개의 element를 가진 배열 생성<br >ㅤ└ .map(() =&gt; Array())로 이중 배열 생성<br>- [&hellip;new Set(arr)]로 중복 요소를 제거한 새로운 Set 객체 생성 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set">*</a></td>
+<td>- [&hellip;, &hellip;]로 표현<br>- arr[i]로 element 읽음<br>- arr[i] = value로 arr의 i 인덱스에 value 할당<br>- new Array(n).fill(element)로 n개의 element를 가진 배열 생성<br >ㅤ└ .map(() =&gt; Array())로 이중 배열 생성<br>- [&hellip;new Set(arr)]로 중복 요소를 제거한 새로운 Set 객체 생성 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set">^</a></td>
 </tr>
 <tr>
 <td>object</td>
@@ -407,8 +407,11 @@
 </tr>
 </tbody>
 </table>
-<p>*<strong>falsy</strong>: false, null, undefined, &ldquo;&rdquo;, 0, NaN (나머지는 truthy)</p>
-<p>*<strong>typeof</strong><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/typeof">^</a></p>
+<p><strong>falsy</strong></p>
+<ul>
+<li>false, null, undefined, &ldquo;&rdquo;, 0, NaN (나머지는 truthy)</li>
+</ul>
+<p><strong>typeof</strong><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/typeof">^</a></p>
 <ul>
 <li>평가 전 데이터 타입을 string으로 반환</li>
 <li>function은 &ldquo;function&rdquo;</li>
@@ -434,7 +437,7 @@
     </tr>
     <tr>
       <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf</a>(searchValue[, fromIndex])</td>
-      <td>searchValue의 첫 번째 등장 인덱스,<br>찾을 수 없으면 -1<br>*.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf">lastIndexOf</a>()는 마지막 등장 인덱스</td>
+      <td>searchValue의 첫 번째 등장 인덱스,<br>찾을 수 없으면 -1<br><span style="font-style: italic;">*.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf">lastIndexOf</a>()는 마지막 등장 인덱스</span></td>
     </tr>
     <tr>
       <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/includes">includes</a>(searchValue[, fromIndex])</td>
@@ -450,11 +453,11 @@
     </tr>
     <tr>
       <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/match">match</a>(<a href="https://github.com/YuchanJeong/_WIL/blob/master/Etc/Regex.md">regexp</a>)</td>
-      <td>정규식과 일치하는 문자열을 포함하는 array,<br>찾을 수 없으면 null<br>*g옵션이 없을 때, 캡처된 그룹 및 정보도 배열에 포함</td>
+      <td>정규식과 일치하는 문자열을 포함하는 array,<br>찾을 수 없으면 null<br><span style="font-style: italic;">*g옵션이 없을 때 캡처된 그룹 및 정보도 배열에 포함</span></td>
     </tr>
     <tr>
       <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace</a>(regexp|subStr, newSubStr|function)</td>
-      <td>패턴과 처음 일치하는 부분이 교체된 새로운 string<br>*.<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll">replaceAll</a>()은 모든 일치 문자 교체</td>
+      <td>패턴과 처음 일치하는 부분이 교체된 새로운 string<br><span style="font-style: italic;">*.<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll">replaceAll</a>()은 모든 일치 문자 교체</span></td>
     </tr>
       <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase">toUpperCase</a>()<br>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase</a>()</td>
       <td>모두 대문자로 바꾼 string<br>모두 소문자로 바꾼 string</td>
@@ -474,7 +477,7 @@
   <tbody>
     <tr>
       <td>num.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">toFixed</a>([digits])</td>
-      <td>고정 소수점 표기법을 사용하여 나타낸 수의 string<br>*digits: 소수점 뒤에 나타날 자릿수, 기본값 0</td>
+      <td>고정 소수점 표기법을 사용하여 나타낸 수의 string<br><span style="font-style: italic;">*digits: 소수점 뒤에 나타날 자릿수, 기본값 0</span></td>
     </tr>
     <tr>
       <td>Math.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/abs">abs</a>(x)</td>
@@ -511,11 +514,11 @@
   <tbody>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/length">length</a></td>
-      <td>배열 안의 요소 수<br>*arr.length === 0은 빈 배열</td>
+      <td>배열 안의 요소 수<br><span style="font-style: italic;">*arr.length === 0은 빈 배열</span></td>
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">indexOf</a>(searchValue[, beginIndex])</td>
-      <td>searchValue의 첫 번째 등장 인덱스,<br>찾을 수 없으면 -1<br>*.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf">lastIndexOf</a>()는 마지막 등장 인덱스</td>
+      <td>searchValue의 첫 번째 등장 인덱스,<br>찾을 수 없으면 -1<br><span style="font-style: italic;">*.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf">lastIndexOf</a>()는 마지막 등장 인덱스</span></td>
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">includes</a>(searchValue[, beginIndex])</td>
@@ -527,7 +530,7 @@
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join</a>([separator])</td>
-      <td>모든 요소를 separator로 구분지어 연결한 string<br>*separator를 생략하면 쉼표(,)로 구분</td>
+      <td>모든 요소를 separator로 구분지어 연결한 string<br><span style="font-style: italic;">*separator를 생략하면 쉼표(,)로 구분</span></td>
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/concat">concat</a>([value1[, ...[, valueN]]])</td>
@@ -535,7 +538,7 @@
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a>(callback(currentValue<br>[, index[, array]])[, thisArg])</td>
-      <td>undefined<br>*콜백 함수를 각 요소에 대해 실행</td>
+      <td>undefined<br><span style="font-style: italic;">*콜백 함수를 각 요소에 대해 실행</span></td>
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(callback(currentValue<br>[, index[, array]])[, thisArg])</td>
@@ -555,11 +558,11 @@
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce">reduce</a>(callback(accValue[, curValue<br>[, curIndex[, array)[, initialValue]]]])</td>
-      <td>콜백 함수의 누적 결과 값(last accValue)<br>*initialValue는 첫 accValue의 값이며,<br>생략 시 arr[0]이 첫 accValue, arr[1]이 첫 curValue</td>
+      <td>콜백 함수의 누적 결과 값(last accValue)<br><span style="font-style: italic;">*initialValue는 첫 accValue의 값이며,<br>생략 시 arr[0]이 첫 accValue, arr[1]이 첫 curValue</span></td>
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">sort</a>([compareFunction])</td>
-      <td>정열된 array(원본)<br>*Ex. [3,2,1].sort((a, b) => a - b) -> [1,2,3]</td>
+      <td>정열된 array(원본)</td>
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">reverse</a>()</td>
@@ -567,23 +570,24 @@
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">splice</a>(beginIndex[, deleteCount<br>[, item1[, ...[, itemN]]]])</td>
-      <td>제거한 요소를 담은 array<br>*배열(원본)의 요소를 교체<br>*deleteCount를 생략하면 배열(원본)의 마지막까지 삭제</td>
+      <td>제거한 요소를 담은 array<br><span style="font-style: italic;">*배열(원본)의 요소를 교체<br>*deleteCount를 생략하면 배열(원본)의 마지막까지 삭제</span></td>
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push</a>(item1[, ...[, itemN]])</td>
-      <td>요소가 추가된 배열의 새로운 length<br>*배열(원본)의 끝에 하나 이상의 요소를 추가<br>*.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift">unshift</a>()는 배열(원본)의 앞에 추가</td>
+      <td>요소가 추가된 배열의 새로운 length<br><span style="font-style: italic;">*배열(원본)의 끝에 하나 이상의 요소를 추가<br>*.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift">unshift</a>()는 배열(원본)의 앞에 추가</span></td>
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">pop</a>(item1[, ...[, itemN]])</td>
-      <td>배열의 마지막 item<br>*배열(원본)의 마지막 요소 삭제<br>*.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">shift</a>()는 배열(원본)의 첫 번째 요소 삭제</td>
+      <td>배열의 마지막 item<br><span style="font-style: italic;">*배열(원본)의 마지막 요소 삭제<br>*.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">shift</a>()는 배열(원본)의 첫 번째 요소 삭제</span></td>
     </tr>
     <tr>
       <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">flat</a>([depth])</td>
-      <td>depth 번 만큼 다차원 배열을 푼 array<br>*depth 기본값은 1</td>
+      <td>depth 번 만큼 다차원 배열을 푼 array<br><span style="font-style: italic;">*depth 기본값은 1</span></td>
     </tr>
   </tbody>
 </table>
-<div>*beginIndex, endIndex의 값이 음수일 때, 끝에서부터의 위치를 의미</div><br>
+<p>*<em>beginIndex, endIndex의 값이 음수일 때, 끝에서부터의 위치를 의미</em>
+<br></p>
 <p><strong>4) <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong></p>
 <table>
   <thead>
@@ -593,15 +597,15 @@
   <tbody>
     <tr>
       <td>Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">assign</a>(target, ...sources)</td>
-      <td>출처 객체들로부터 하나 이상의 속성들이 복사된 목표 object<br>*동일한 키를 갖는 속성은 뒤의 출처 값으로 덮어쓰여짐</td>
+      <td>출처 객체들로부터 하나 이상의 속성들이 복사된 목표 object<br><span style="font-style: italic;">*동일한 키를 갖는 속성은 뒤의 출처 값으로 덮어쓰여짐</span></td>
     </tr>
     <tr>
       <td>Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">keys</a>(obj)</td>
-      <td>모든 속성의 키(문자열)를 반환한 array<br>*Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/values">values</a>(obj)는 값의 array</td>
+      <td>모든 속성의 키(문자열)를 반환한 array<br><span style="font-style: italic;">*Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/values">values</a>(obj)는 값의 array</span></td>
     </tr>
     <tr>
       <td>Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries">fromEntries</a>(arr)</td>
-      <td>[key, value] 형태의 다차원 배열을 변환한 object<br>*Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/entries">entries</a>(obj)는 [key, value] 형태의 이차원 array</td>
+      <td>[key, value] 형태의 다차원 배열을 변환한 object<br><span style="font-style: italic;">*Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/entries">entries</a>(obj)는 [key, value] 형태의 이차원 array</span></td>
     </tr>
     <tr>
       <td>Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a>(key)</td>
@@ -828,7 +832,7 @@
     <span class="k">break</span><span class="p">;</span>
   <span class="k">default</span><span class="o">:</span> <span class="nx">해당</span> <span class="nx">케이스가</span> <span class="nx">없을</span> <span class="nx">때</span>
 <span class="p">}</span>
-</code></pre></div><p>*switch문은 case가 문자열이나 정수일 때 주로 사용</p>
+</code></pre></div><p>*<em>switch문은 case가 문자열이나 정수일 때 주로 사용</em></p>
 <p><strong>2) Iterative Statement</strong></p>
 <p>for 반복문</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="k">for</span> <span class="p">(</span><span class="nx">초기값</span><span class="p">;</span> <span class="nx">반복</span> <span class="nx">조건</span><span class="p">;</span> <span class="nx">증감값</span><span class="p">)</span> <span class="p">{</span>
@@ -878,7 +882,7 @@
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><p>*while문은 반복 횟수가 정해져있지 않을 때 주로 사용</p>
+</code></pre></div><p>*<em>while문은 반복 횟수가 정해져있지 않을 때 주로 사용</em></p>
 <h2 id="js-function" class="relative group">JS Function <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#js-function" aria-label="Anchor">#</a></span></h2>
 <p><strong>1) 함수 작성</strong></p>
 <ol>
@@ -966,7 +970,7 @@
 <li>공통 메서드 함수는 생성자의 prototype에 할당해서 메모리 절약</li>
 <li>해당 객체 -&gt; 생성자 -&gt; 상위 생성자 -&gt; Object (Prototype chain)</li>
 </ul>
-<p>*<a href="/storage/wil/javascript/ex-javascript/#class">JS Class 예시</a></p>
+<p>*<em><a href="/storage/wil/javascript/ex-javascript/#class">JS Class 예시</a></em></p>
 <h2 id="js-asynchronous" class="relative group">JS Asynchronous <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#js-asynchronous" aria-label="Anchor">#</a></span></h2>
 <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
   <span class="ltr:pr-3 rtl:pl-3 text-primary-400">
@@ -998,19 +1002,19 @@
 </tr>
 <tr>
 <td>document.<a href="https://developer.mozilla.org/ko/docs/Web/API/Document/querySelectorAll">querySelectorAll</a>(&ldquo;selector&rdquo;)</td>
-<td>문서 내에서 selector와 일치하는 NodeList<br>*NodeList[i]로 개별 요소 선택<br>*for이나 forEach로 요소들 반복처리</td>
+<td>문서 내에서 selector와 일치하는 NodeList<br>*<em>NodeList[i]로 개별 요소 선택</em><br>*<em>for이나 forEach로 요소들 반복처리</em></td>
 </tr>
 <tr>
 <td>document.<a href="https://developer.mozilla.org/ko/docs/Web/API/Document/createElement">createElement</a>(&ldquo;tag&rdquo;)</td>
-<td>문서 내에 해당 tag 요소 생성<br>*아직 DOM tree에 연결 X</td>
+<td>문서 내에 해당 tag 요소 생성<br>*<em>아직 DOM tree에 연결 X</em></td>
 </tr>
 <tr>
 <td>.<a href="https://developer.mozilla.org/ko/docs/Web/API/Node/appendChild">appendChild</a>(aChild)</td>
-<td>대상의 마지막 자식 노드로 붙임<br>*DOM tree에 연결</td>
+<td>대상의 마지막 자식 노드로 붙임<br>*D<em>OM tree에 연결</em></td>
 </tr>
 <tr>
 <td>.<a href="https://developer.mozilla.org/ko/docs/Web/API/EventTarget/addEventListener">addEventListener</a>(&ldquo;event&rdquo;, functionRef)</td>
-<td>이벤트 발생 시 함수 호출<br>*<a href="https://developer.mozilla.org/ko/docs/Web/Events">event</a>: click|focus|blur|scroll<br>*<a href="https://developer.mozilla.org/ko/docs/Web/API/Event/target">event.target</a>은 이벤트의 대상 요소</td>
+<td>이벤트 발생 시 함수 호출<br>*<em><a href="https://developer.mozilla.org/ko/docs/Web/Events">event</a>: click|focus|blur|scroll</em><br>*<em><a href="https://developer.mozilla.org/ko/docs/Web/API/Event/target">event.target</a>은 이벤트의 대상 요소</em></td>
 </tr>
 <tr>
 <td>.<a href="https://developer.mozilla.org/ko/docs/Web/API/GlobalEventHandlers/onclick">onclick</a> = functionRef</td>
@@ -1030,7 +1034,7 @@
 </tr>
 <tr>
 <td>.<a href="https://developer.mozilla.org/ko/docs/Web/API/Node/textContent">textContent</a> = &ldquo;content&rdquo;</td>
-<td>내용 할당<br>*<a href="https://developer.mozilla.org/ko/docs/Web/API/HTMLElement/innerText"><del>innerText</del></a>(보안상 사용 금지)와 유사</td>
+<td>내용 할당<br>*<em><a href="https://developer.mozilla.org/ko/docs/Web/API/HTMLElement/innerText"><del>innerText</del></a>(보안상 사용 금지)와 유사</em></td>
 </tr>
 <tr>
 <td>.remove()</td>
@@ -1042,7 +1046,7 @@
 </tr>
 <tr>
 <td>.children</td>
-<td>자식 요소 목록<br>*.firstElementChild는 첫 번째 자식<br>*.lastElementChild는 마지막 자식</td>
+<td>자식 요소 목록<br>*<em>.firstElementChild는 첫 번째 자식</em><br>*<em>.lastElementChild는 마지막 자식</em></td>
 </tr>
 <tr>
 <td>.parentsElement</td>
@@ -1050,7 +1054,7 @@
 </tr>
 </tbody>
 </table>
-<p>*<strong>functionRef</strong> (Event Handler)</p>
+<p><strong>functionRef</strong> (Event Handler)</p>
 <ul>
 <li>함수의 실행이 아닌 함수 자체를 넣어야함</li>
 <li>아무런 인자를 담지 않으면 event 객체만 전달</li>
@@ -1083,8 +1087,8 @@
 </tr>
 </tbody>
 </table>
-<p>*Scope Chaining (하위 스코프 우선)<br>
-*Lexical Scoping은 선언(호출 X)된 위치에 따라 상위 스코프 결정</p>
+<p>*<em>Scope Chaining (하위 스코프 우선)</em><br>
+*<em>Lexical Scoping은 선언(호출 X)된 위치에 따라 상위 스코프 결정</em></p>
 <h3 id="3-this" class="relative group">3. This <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-this" aria-label="Anchor">#</a></span></h3>
 <table>
 <thead>
@@ -1107,7 +1111,7 @@
 </tr>
 </tbody>
 </table>
-<p>*<a href="/storage/wil/javascript/ex-javascript/#this">This 예제</a></p>
+<p><em>*</em><a href="/storage/wil/javascript/ex-javascript/#this">This 예제</a>_</p>
 <h3 id="4-json" class="relative group">4. JSON <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-json" aria-label="Anchor">#</a></span></h3>
 <table>
 <thead>
@@ -1127,7 +1131,7 @@
 </tr>
 </tbody>
 </table>
-<p>*JSON(JavaScript Object Notation)문자열은 쌍따옴표(&quot;&quot;)만 사용 가능</p>
+<p>*<em>JSON(JavaScript Object Notation)문자열은 쌍따옴표(&quot;&quot;)만 사용 가능</em></p>
 <h3 id="5-export--import" class="relative group">5. Export &amp; Import <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-export--import" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 이름 필수 X, 파일 하나당 하나만 가능
 </span><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="nx">데이터</span>

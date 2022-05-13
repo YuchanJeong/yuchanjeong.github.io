@@ -103,7 +103,7 @@
     "keywords": ["React"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "492"
+    "wordCount": "490"
   }]
   </script>
 
@@ -446,7 +446,7 @@
   <span class="cm">/* useState */</span>
   <span class="kr">const</span> <span class="p">[</span><span class="nx">state</span><span class="p">,</span> <span class="nx">setState</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="nx">initialState</span><span class="p">);</span>
 
-  <span class="c1">// setState
+  <span class="c1">// setState로만 state 변경 가능
 </span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">setStateFunc</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="nx">setState</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
   <span class="p">};</span>
@@ -462,7 +462,7 @@
 </span><span class="c1"></span><span class="kr">const</span> <span class="p">[</span><span class="nx">state</span><span class="p">,</span> <span class="nx">setState</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">({});</span>
 
 <span class="nx">setState</span><span class="p">((</span><span class="nx">prevState</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="p">...</span><span class="nx">prevState</span><span class="p">,</span> <span class="p">...</span><span class="nx">updatedValues</span> <span class="p">}));</span>
-</code></pre></div><p>*참조형 데이터 요소의 값은 변경해도 감지하지 못함</p>
+</code></pre></div><p>*참조형 데이터의 요소는 변경해도 재랜더링이 일어나지 않음</p>
 <h2 id="react-hooks" class="relative group">React Hooks <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#react-hooks" aria-label="Anchor">#</a></span></h2>
 <h3 id="1-useeffecthttpskoreactjsorgdocshooks-referencehtmluseeffect-storagewiljavascriptex-reactuseeffect" class="relative group">1. useEffect()<a href="https://ko.reactjs.org/docs/hooks-reference.html#useeffect">^</a> <a href="/storage/wil/javascript/ex-react/#useeffect">⋯</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-useeffecthttpskoreactjsorgdocshooks-referencehtmluseeffect-storagewiljavascriptex-reactuseeffect" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="cm">/* useEffect */</span>
@@ -471,18 +471,14 @@
   <span class="p">[</span><span class="k">return</span> <span class="nx">clean</span><span class="o">-</span><span class="nx">up</span>
 <span class="p">}[,</span> <span class="p">[</span><span class="nx">dependency</span><span class="p">]]])</span>
 </code></pre></div><ul>
-<li>side-effect를 다룸</li>
-<li>최초 수행 후 &ldquo;부모 컴포넌트 재랜더링&rdquo; 혹은 &ldquo;props 및 state의 변화&rdquo; 시마다 수행</li>
-<li>useEffect의 effect를 정리(clean-up)하는 함수 반환 가능</li>
-<li>dependency가 []일 때, 최초에만 수행</li>
-<li>dependency가 있을 때, 최초 수행 후 dependency의 요소 변화 시마다 수행</li>
+<li>Side Effect를 다룸</li>
+<li>최초 수행 후 컴포넌트 재랜더링 마다 수행<br>
+*<em>부모 컴포넌트 재랜더링, props 및 state 변경</em></li>
+<li>useEffect의 effect를 정리하는 함수 반환 가능 (clean-up)</li>
+<li>최초 수행 후 dependency 요소 변화 시만 수행<br>
+*<em>dependency가 []일 때는 최초에만 수행</em></li>
 </ul>
-<p>*Primitive Type의 변화만 감지 가능</p>
 <h3 id="2-userefhttpskoreactjsorgdocshooks-referencehtmluseref-httpsgithubcomyuchanjeong_wilblobmasterjavascriptexex-react-userefmd" class="relative group">2. useRef()<a href="https://ko.reactjs.org/docs/hooks-reference.html#useref">^</a> <a href="https://github.com/YuchanJeong/_WIL/blob/master/JavaScript/ex/ex-React-UseRef.md">⋯</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-userefhttpskoreactjsorgdocshooks-referencehtmluseref-httpsgithubcomyuchanjeong_wilblobmasterjavascriptexex-react-userefmd" aria-label="Anchor">#</a></span></h3>
-<blockquote>
-<p>리액트에서 DOM에 접근 가능<br>
-*ref.current는 값이 변해도 재랜더링이 일어나지 않아, 변화가 일어나면 안 되는 값을 저장할 때도 사용</p>
-</blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="cm">/* 1) useRef */</span>
 <span class="kr">const</span> <span class="nx">containerRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">(</span><span class="nx">initialValue</span><span class="p">);</span>
 
@@ -495,7 +491,11 @@
 
 <span class="c1">// 3) .current
 </span><span class="c1"></span><span class="kr">const</span> <span class="nx">currentDom</span> <span class="o">=</span> <span class="nx">ContainerRef</span><span class="p">.</span><span class="nx">current</span><span class="p">;</span>
-</code></pre></div><h3 id="3-usecallbackhttpskoreactjsorgdocshooks-referencehtmlusecallback--usememohttpskoreactjsorgdocshooks-referencehtmlusememo-httpsgithubcomyuchanjeong_wilblobmasterjavascriptexex-react-usecallbackmemomd" class="relative group">3) <a href="https://ko.reactjs.org/docs/hooks-reference.html#usecallback">useCallback</a>() &amp; <a href="https://ko.reactjs.org/docs/hooks-reference.html#usememo">useMemo</a>() <a href="https://github.com/YuchanJeong/_WIL/blob/master/JavaScript/ex/ex-React-useCallbackMemo.md">⋯</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-usecallbackhttpskoreactjsorgdocshooks-referencehtmlusecallback--usememohttpskoreactjsorgdocshooks-referencehtmlusememo-httpsgithubcomyuchanjeong_wilblobmasterjavascriptexex-react-usecallbackmemomd" aria-label="Anchor">#</a></span></h3>
+</code></pre></div><ul>
+<li>리액트에서 DOM에 접근 가능</li>
+<li>ref.current는 값이 변해도 재랜더링이 일어나지 않아, 변화가 일어나면 안 되는 값을 저장할 때도 사용</li>
+</ul>
+<h3 id="3-usecallbackhttpskoreactjsorgdocshooks-referencehtmlusecallback--usememohttpskoreactjsorgdocshooks-referencehtmlusememo-httpsgithubcomyuchanjeong_wilblobmasterjavascriptexex-react-usecallbackmemomd" class="relative group">3) <a href="https://ko.reactjs.org/docs/hooks-reference.html#usecallback">useCallback</a>() &amp; <a href="https://ko.reactjs.org/docs/hooks-reference.html#usememo">useMemo</a>() <a href="https://github.com/YuchanJeong/_WIL/blob/master/JavaScript/ex/ex-React-useCallbackMemo.md">⋯</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-usecallbackhttpskoreactjsorgdocshooks-referencehtmlusecallback--usememohttpskoreactjsorgdocshooks-referencehtmlusememo-httpsgithubcomyuchanjeong_wilblobmasterjavascriptexex-react-usecallbackmemomd" aria-label="Anchor">#</a></span></h3>
 <blockquote>
 <p>특정 함수나 결과값을 재사용<br>
 *profile 진행 후 사용 추천</p>

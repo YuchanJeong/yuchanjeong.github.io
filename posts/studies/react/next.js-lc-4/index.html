@@ -412,7 +412,7 @@ date: &#34;2020-01-02&#34;
 ---
 
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</code></pre></div><p>*Each markdown file has a metadata section at the top containing title and date. This is called <strong>YAML Front Matter</strong>, which can be parsed using a library called <strong>gray-matter</strong>.</p>
+</code></pre></div><p>*<em>Each markdown file has a metadata section at the top containing title and date. This is called <strong>YAML Front Matter</strong>, which can be parsed using a library called <strong>gray-matter</strong>.</em></p>
 <pre tabindex="0"><code>npm install gray-matter
 </code></pre></li>
 <li>
@@ -454,7 +454,7 @@ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     <span class="p">}</span>
   <span class="p">});</span>
 <span class="p">}</span>
-</code></pre></div><p>*It&rsquo;s usually convention to use lib or utils</p>
+</code></pre></div><p>*<em>It&rsquo;s usually convention to use lib or utils.</em></p>
 </li>
 <li>
 <p>Update <code>pages/index.js</code></p>
@@ -540,7 +540,7 @@ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     <span class="p">...</span><span class="nx">matterResult</span><span class="p">.</span><span class="nx">data</span><span class="p">,</span>
   <span class="p">};</span>
 <span class="p">}</span>
-</code></pre></div><p>*<strong>Important</strong>: Each object must have the <code>params</code> key and contain an object with the <code>id</code> key (because we’re using <code>[id]</code> in the file name). Otherwise, getStaticPaths will fail.</p>
+</code></pre></div><p>*<em><strong>Important</strong>: Each object must have the <code>params</code> key and contain an object with the <code>id</code> key (because we’re using <code>[id]</code> in the file name). Otherwise, getStaticPaths will fail.</em></p>
 </li>
 <li>
 <p>Create <code>pages/posts/[id].js</code></p>

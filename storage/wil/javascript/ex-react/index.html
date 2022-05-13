@@ -67,7 +67,7 @@
   
   
   <meta property="og:title" content="React Example" />
-<meta property="og:description" content="useEffect() #" />
+<meta property="og:description" content="useEffect() #import { useState, useEffect } from &#34;react&#34;; export default function Component() { const [name, setName] = useState(&#34;&#34;); const [count, setCount] = useState(0); const handleChangeName = (e) =&gt; setName(e." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/storage/wil/javascript/ex-react/" /><meta property="article:section" content="storage" />
 
@@ -76,7 +76,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="React Example"/>
-<meta name="twitter:description" content="useEffect() #"/>
+<meta name="twitter:description" content="useEffect() #import { useState, useEffect } from &#34;react&#34;; export default function Component() { const [name, setName] = useState(&#34;&#34;); const [count, setCount] = useState(0); const handleChangeName = (e) =&gt; setName(e."/>
 
   
   <script type="application/ld+json">
@@ -87,7 +87,7 @@
     "name": "React Example",
     "headline": "React Example",
     
-    "abstract": "useEffect() #\r",
+    "abstract": "useEffect() #\rimport { useState, useEffect } from \u0026#34;react\u0026#34;; export default function Component() { const [name, setName] = useState(\u0026#34;\u0026#34;); const [count, setCount] = useState(0); const handleChangeName = (e) =\u0026gt; setName(e.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/storage\/wil\/javascript\/ex-react\/",
     "author" : {
@@ -103,7 +103,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2"
+    "wordCount": "81"
   }]
   </script>
 
@@ -309,7 +309,37 @@
       
       <div class="min-w-0 min-h-0 max-w-prose">
         <h3 id="useeffect" class="relative group">useEffect() <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#useeffect" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
 
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Component</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">name</span><span class="p">,</span> <span class="nx">setName</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">count</span><span class="p">,</span> <span class="nx">setCount</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+  <span class="kr">const</span> <span class="nx">handleChangeName</span> <span class="o">=</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">setName</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">handleCountUp</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">setCount</span><span class="p">(</span><span class="nx">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="cm">/* useEffect */</span>
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// effect
+</span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span> <span class="nx">count</span><span class="p">,</span> <span class="nx">name</span> <span class="p">});</span>
+    <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+
+    <span class="c1">// clean-up
+</span><span class="c1"></span>    <span class="k">return</span> <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">setTimeout</span><span class="p">);</span>
+    <span class="c1">// dependency
+</span><span class="c1"></span>  <span class="p">},</span> <span class="p">[</span><span class="nx">count</span><span class="p">]);</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="nx">Name</span><span class="o">:</span> <span class="p">{</span><span class="nx">name</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;text&#34;</span><span class="p">}</span> <span class="na">value</span><span class="o">=</span><span class="p">{</span><span class="nx">name</span><span class="p">}</span> <span class="na">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">handleChangeName</span><span class="p">}</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="nx">Count</span> <span class="o">:</span> <span class="p">{</span><span class="nx">count</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleCountUp</span><span class="p">}&gt;</span><span class="nx">up</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
       </div>
     </section>
     <footer class="pt-8 max-w-prose">

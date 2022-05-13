@@ -103,7 +103,7 @@
     "keywords": ["Next.js"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1183"
+    "wordCount": "1184"
   }]
   </script>
 
@@ -372,7 +372,7 @@
 <li>
 <p>Create a Next.js App</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npx create-next-app nextjs-blog --use-npm --example <span class="s2">&#34;https://github.com/vercel/next-learn/tree/master/basics/learn-starter&#34;</span>
-</code></pre></div><p>*If it doesn’t work, please take a look at this <a href="https://github.com/vercel/next-learn/blob/master/basics/errors/install.md">page</a>.</p>
+</code></pre></div><p>*<em>If it doesn’t work, please take a look at this <a href="https://github.com/vercel/next-learn/blob/master/basics/errors/install.md">page</a>.</em></p>
 </li>
 <li>
 <p>Run the development server</p>
@@ -400,7 +400,7 @@ Pages are associated with a route based on their file name. For example, in deve
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">FirstPost</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">First</span> <span class="nx">Post</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
 <span class="p">}</span>
-</code></pre></div><p>*The component can have any name, but you must export it as a default export.</p>
+</code></pre></div><p>*<em>The component can have any name, but you must export it as a default export.</em></p>
 </li>
 </ul>
 <h3 id="link-component" class="relative group">Link Component <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#link-component" aria-label="Anchor">#</a></span></h3>
@@ -415,7 +415,7 @@ Pages are associated with a route based on their file name. For example, in deve
     <span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span><span class="k">this</span> <span class="nx">page</span><span class="o">!</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">Link</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</code></pre></div><p>*<code>{' '}</code> adds an empty space, which is used to divide text over multiple lines.</p>
+</code></pre></div><p>*<em><code>{' '}</code> adds an empty space, which is used to divide text over multiple lines.</em></p>
 </li>
 <li>
 <p>pages/posts/first-post.js</p>
@@ -435,8 +435,8 @@ Pages are associated with a route based on their file name. For example, in deve
 <span class="p">}</span>
 </code></pre></div></li>
 </ul>
-<p>*If you need to add attributes like, for example, className, add it to the a tag, not to the Link tag. <a href="https://github.com/vercel/next-learn/blob/master/basics/snippets/link-classname-example.js">Here’s an example</a>.<br>
-*You can learn more about the Link component <a href="https://nextjs.org/docs/api-reference/next/link">in the API reference for next/link</a> and routing in general <a href="https://nextjs.org/docs/routing/introduction">in the routing documentation</a>.</p>
+<p>*<em>If you need to add attributes like, for example, className, add it to the a tag, not to the Link tag. <a href="https://github.com/vercel/next-learn/blob/master/basics/snippets/link-classname-example.js">Here’s an example</a>.</em><br>
+*<em>You can learn more about the Link component <a href="https://nextjs.org/docs/api-reference/next/link">in the API reference for next/link</a> and routing in general <a href="https://nextjs.org/docs/routing/introduction">in the routing documentation</a>.</em></p>
 <h3 id="code-splitting-and-prefetching" class="relative group">Code splitting and prefetching <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#code-splitting-and-prefetching" aria-label="Anchor">#</a></span></h3>
 <p>Next.js does code splitting automatically, so each page only loads what’s necessary for that page. Only loading the code for the page you request also means that pages become isolated. If a certain page throws an error, the rest of the application would still work.</p>
 <p>Furthermore, in a production build of Next.js, whenever Link components appear in the browser’s viewport, Next.js automatically prefetches the code for the linked page in the background. By the time you click the link, the code for the destination page will already be loaded in the background, and the page transition will be near-instant.</p>
@@ -458,8 +458,8 @@ Pages are associated with a route based on their file name. For example, in deve
 <span class="p">);</span>
 </code></pre></div></li>
 </ul>
-<p>*To learn more about Automatic Image Optimization, check out the <a href="https://nextjs.org/docs/basic-features/image-optimization">documentation</a>.<br>
-*To learn more about the Image component, check out the <a href="https://nextjs.org/docs/api-reference/next/image">API reference for next/image</a>.</p>
+<p>*<em>To learn more about Automatic Image Optimization, check out the <a href="https://nextjs.org/docs/basic-features/image-optimization">documentation</a>.</em><br>
+*<em>To learn more about the Image component, check out the <a href="https://nextjs.org/docs/api-reference/next/image">API reference for next/image</a>.</em></p>
 <h3 id="metadata" class="relative group">Metadata <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#metadata" aria-label="Anchor">#</a></span></h3>
 <ul>
 <li>
@@ -471,8 +471,8 @@ Pages are associated with a route based on their file name. For example, in deve
 <span class="p">&lt;/</span><span class="nt">Head</span><span class="p">&gt;</span>
 </code></pre></div></li>
 </ul>
-<p>*To learn more about the Head component, check out the <a href="https://nextjs.org/docs/api-reference/next/head">API reference for next/head</a>.<br>
-*If you want to customize the &lt;html&gt; tag, for example to add the lang attribute, you can do so by creating a <code>pages/\_document.js</code> file. Learn more in the <a href="https://nextjs.org/docs/advanced-features/custom-document">custom Document documentation</a>.</p>
+<p>*<em>To learn more about the Head component, check out the <a href="https://nextjs.org/docs/api-reference/next/head">API reference for next/head</a>.</em><br>
+*<em>If you want to customize the &lt;html&gt; tag, for example to add the lang attribute, you can do so by creating a <code>pages/\_document.js</code> file. Learn more in the <a href="https://nextjs.org/docs/advanced-features/custom-document">custom Document documentation</a>.</em></p>
 <h3 id="third-party-javascript" class="relative group">Third-Party JavaScript <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#third-party-javascript" aria-label="Anchor">#</a></span></h3>
 <p>In addition to metadata, scripts that need to load and execute as soon as possible are usually added within the &lt;head&gt; of a page. Using a regular HTML &lt;script&gt; element, an external script would be added as follows:</p>
 <ul>
@@ -492,7 +492,7 @@ Pages are associated with a route based on their file name. For example, in deve
 </ul>
 </li>
 </ul>
-<p>*To learn more about the Script component, check out the <a href="https://nextjs.org/docs/basic-features/script">documentation</a>.</p>
+<p>*<em>To learn more about the Script component, check out the <a href="https://nextjs.org/docs/basic-features/script">documentation</a>.</em></p>
 <h3 id="layout-component" class="relative group">Layout Component <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#layout-component" aria-label="Anchor">#</a></span></h3>
 <ul>
 <li>
@@ -543,7 +543,7 @@ Pages are associated with a route based on their file name. For example, in deve
 <span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">App</span><span class="p">({</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">pageProps</span> <span class="p">})</span> <span class="p">{</span>
   <span class="k">return</span> <span class="o">&lt;</span><span class="nx">Component</span> <span class="p">{...</span><span class="nx">pageProps</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><p>*You need to restart the development server when you add pages/_app.js.</p>
+</code></pre></div><p>*<em>You need to restart the development server when you add pages/_app.js.</em></p>
 </li>
 <li>
 <p>styles/global.css</p>
@@ -574,7 +574,7 @@ Pages are associated with a route based on their file name. For example, in deve
   <span class="k">max-width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
   <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><p>*Only inside pages/_app.js you can import global CSS files.</p>
+</code></pre></div><p>*<em>Only inside pages/_app.js you can import global CSS files.</em></p>
 </li>
 </ul>
 <h3 id="polishing-layout" class="relative group">Polishing Layout <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#polishing-layout" aria-label="Anchor">#</a></span></h3>
@@ -752,9 +752,9 @@ Pages are associated with a route based on their file name. For example, in deve
 <span class="p">}</span>
 </code></pre></div></li>
 </ul>
-<p>*<a href="https://nextjs.org/learn/basics/assets-metadata-css/styling-tips">Styling Tips</a></p>
 <hr>
-<p>*Ref. <a href="https://nextjs.org/learn/basics/create-nextjs-app">https://nextjs.org/learn/basics/create-nextjs-app</a></p>
+<p>*Ps. <a href="https://nextjs.org/learn/basics/assets-metadata-css/styling-tips">Styling Tips</a><br>
+*Ref. <a href="https://nextjs.org/learn/basics/create-nextjs-app">https://nextjs.org/learn/basics/create-nextjs-app</a></p>
 
       </div>
     </section>

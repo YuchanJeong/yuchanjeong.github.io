@@ -497,8 +497,8 @@
 <li><code>createRoot</code>: 루트를 만드는 새로운 방법. <code>ReactDOM.render</code> 대신 사용.</li>
 <li><code>hydrateRoot</code>: 서버 렌더링 응용 프로그램을 hydrate 하는 새로운 방법. 새로운 React DOM Server API와 함께 <code>ReactDOM.hydrate</code> 대신 사용.</li>
 </ul>
-<p>*hydrate란? Server에서 렌더링 된 HTML 코드를 Client에서 JS 코드와 매칭 시키는 것.<br>
-*createRoot와 hydrateRoot 모두 &ldquo;렌더링 중 오류에서 복구&rdquo; 또는 &ldquo;로깅을 위한 수화&rdquo; 시 알림을 받기를 원하는 경우 <code>onRecoverableError</code>라는 새로운 옵션을 허용.</p>
+<p>*<em>hydrate란? Server에서 렌더링 된 HTML 코드를 Client에서 JS 코드와 매칭 시키는 것.</em><br>
+*<em>createRoot와 hydrateRoot 모두 &ldquo;렌더링 중 오류에서 복구&rdquo; 또는 &ldquo;로깅을 위한 수화&rdquo; 시 알림을 받기를 원하는 경우 <code>onRecoverableError</code>라는 새로운 옵션을 허용.</em></p>
 </li>
 </ul>
 <h4 id="react-dom-serverhttpsreactjsorgdocsreact-dom-serverhtml" class="relative group">React DOM Server<a href="https://reactjs.org/docs/react-dom-server.html">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#react-dom-serverhttpsreactjsorgdocsreact-dom-serverhtml" aria-label="Anchor">#</a></span></h4>
@@ -509,7 +509,7 @@
 <li><code>renderToPipeableStream</code>: Node 환경용.</li>
 <li><code>renderToReadableStream</code>: Deno와 Cloudflare workers 같은 최신 Edge runtime 환경용.</li>
 </ul>
-<p>*기존 <code>renderToString</code>은 작동하지만 권장하지 않음.</p>
+<p>*<em>기존 <code>renderToString</code>은 작동하지만 권장하지 않음.</em></p>
 </li>
 </ul>
 <h3 id="5-strict-modehttpsreactjsorgdocsstrict-modehtmlensuring-reusable-state" class="relative group">5. Strict Mode<a href="https://reactjs.org/docs/strict-mode.html#ensuring-reusable-state">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-strict-modehttpsreactjsorgdocsstrict-modehtmlensuring-reusable-state" aria-label="Anchor">#</a></span></h3>
@@ -552,7 +552,7 @@
 </ul>
 <h4 id="usetransitionhttpsreactjsorgdocshooks-referencehtmlusetransition" class="relative group">useTransition<a href="https://reactjs.org/docs/hooks-reference.html#usetransition">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#usetransitionhttpsreactjsorgdocshooks-referencehtmlusetransition" aria-label="Anchor">#</a></span></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="p">[</span><span class="nx">isPending</span><span class="p">,</span> <span class="nx">startTransition</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useTransition</span><span class="p">();</span>
-</code></pre></div><p>*앞선 <a href="#2-transitions-httpsreactjsorgdocsreact-apihtmltransitions">Transitions</a>에서 설명.</p>
+</code></pre></div><p>*<em>앞선 <a href="#2-transitions-httpsreactjsorgdocsreact-apihtmltransitions">Transitions</a>에서 설명.</em></p>
 <h4 id="usedeferredvaluehttpsreactjsorgdocshooks-referencehtmlusedeferredvalue" class="relative group">useDeferredValue<a href="https://reactjs.org/docs/hooks-reference.html#usedeferredvalue">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#usedeferredvaluehttpsreactjsorgdocshooks-referencehtmlusedeferredvalue" aria-label="Anchor">#</a></span></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">deferredValue</span> <span class="o">=</span> <span class="nx">useDeferredValue</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
 </code></pre></div><ul>
