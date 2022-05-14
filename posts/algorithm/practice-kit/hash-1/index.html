@@ -67,7 +67,9 @@
   
   
   <meta property="og:title" content="[Practice Kit] Hash" />
-<meta property="og:description" content="개념 정리 #Hash Table # key, value 쌍으로 데이터를 배열(bucket, slot)에 저장하는 자료 구조." />
+<meta property="og:description" content="개념 정리 #
+Hash Table #
+ key, value 쌍으로 데이터를 배열(bucket, slot)에 저장하는 자료 구조." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/algorithm/practice-kit/hash-1/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-02T00:00:00+00:00" />
@@ -76,7 +78,9 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Practice Kit] Hash"/>
-<meta name="twitter:description" content="개념 정리 #Hash Table # key, value 쌍으로 데이터를 배열(bucket, slot)에 저장하는 자료 구조."/>
+<meta name="twitter:description" content="개념 정리 #
+Hash Table #
+ key, value 쌍으로 데이터를 배열(bucket, slot)에 저장하는 자료 구조."/>
 
   
   <script type="application/ld+json">
@@ -351,9 +355,9 @@
         <li><a href="#hash-table">Hash Table</a></li>
         <li><a href="#hash-function">Hash Function</a></li>
         <li><a href="#hash-collision">Hash Collision</a></li>
-      </ul>
-    </li>
-    <li><a href="#문제">문제</a>
+      </ul>(Lv.
+    </li>(Lv.
+    <li><a href="#문제">문제</a>(Lv.
       <ul>
         <li><a href="#1-완주하지-못한-선수-lv1-httpsprogrammerscokrlearncourses30lessons42576languagejavascript">1. 완주하지 못한 선수 (Lv.1) <a href="https://programmers.co.kr/learn/courses/30/lessons/42576?language=javascript#">*</a></a></li>
         <li><a href="#2-위장-lv2-httpsprogrammerscokrlearncourses30lessons42578languagejavascript">2. 위장 (Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42578?language=javascript">*</a></a></li>
@@ -437,7 +441,7 @@
 <li>비어있는 해시 테이블의 공간을 활용.</li>
 <li>해시 함수로 얻은 주소가 아닌, 다른 주소에 데이터를 저장.</li>
 <li>메모리 문제가 발생하지 않으나 해시 충돌이 생길 수 있음.</li>
-</ul>
+</ul>(Lv.
 </li>
 </ol>
 <h2 id="문제" class="relative group">문제 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c" aria-label="Anchor">#</a></span></h2>
@@ -503,7 +507,7 @@
     <span class="nx">participant_obj</span><span class="p">[</span><span class="nx">el</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
   <span class="p">});</span>
 
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">participant_obj</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">key</span> <span class="k">in</s(Lv.<span class="nx">participant_obj</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">participant_obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nx">key</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -555,7 +559,7 @@
 
   <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">clothes_obj</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">count</span> <span class="o">*=</span> <span class="nx">clothes_obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="p">}</span>
+  <span class="p">}</span>(Lv.
 
   <span class="k">return</span> <span class="nx">count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
