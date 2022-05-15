@@ -103,7 +103,7 @@
     "keywords": ["Algorithm"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "311"
+    "wordCount": "444"
   }]
   </script>
 
@@ -438,6 +438,117 @@
   <span class="k">return</span> <span class="nx">upDownCnt</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(...</span><span class="nx">leftRightArr</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="3-큰-수-만들기lv2-httpsprogrammerscokrlearncourses30lessons42883languagejavascript" class="relative group">3. 큰 수 만들기(Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42883?language=javascript">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%ed%81%b0-%ec%88%98-%eb%a7%8c%eb%93%a4%ea%b8%b0lv2-httpsprogrammerscokrlearncourses30lessons42883languagejavascript" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">number</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">nums</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">number</span><span class="p">].</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">num</span><span class="p">));</span>
+  <span class="kd">let</span> <span class="nx">stack</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="kd">let</span> <span class="nx">deleteCount</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">num</span> <span class="k">of</span> <span class="nx">nums</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Idea: deleteCount 조정!
+</span><span class="c1"></span>    <span class="k">while</span> <span class="p">(</span><span class="nx">deleteCount</span> <span class="o">&lt;</span> <span class="nx">k</span> <span class="o">&amp;&amp;</span> <span class="nx">num</span> <span class="o">&gt;</span> <span class="nx">stack</span><span class="p">[</span><span class="nx">stack</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">stack</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+      <span class="nx">deleteCount</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Edge: deleteCount가 k보다 작게 남았을 경우!!!
+</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">stack</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">number</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nx">k</span><span class="p">)</span> <span class="nx">stack</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">stack</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>Ex. &ldquo;98675&rdquo;, 2</p>
+<ul>
+<li>
+<p>Edge Case를 처리했을 경우</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>num</td>
+<td>0</td>
+<td>9</td>
+<td>8</td>
+<td>6</td>
+<td>7</td>
+<td>5</td>
+</tr>
+<tr>
+<td>stack</td>
+<td>[0]</td>
+<td>[9]</td>
+<td>[9, 8]</td>
+<td>[9, 8, 6]</td>
+<td>[9, 8, 7]</td>
+<td>[9, 8, 7]</td>
+</tr>
+<tr>
+<td>deleteCount</td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Edge Case를 처리하지 않았을 경우</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>num</td>
+<td>0</td>
+<td>9</td>
+<td>8</td>
+<td>6</td>
+<td>7</td>
+<td>5</td>
+</tr>
+<tr>
+<td>stack</td>
+<td>[0]</td>
+<td>[9]</td>
+<td>[9, 8]</td>
+<td>[9, 8, 6]</td>
+<td>[9, 8, 7]</td>
+<td>[9, 8, 7, 5]</td>
+</tr>
+<tr>
+<td>deleteCount</td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
 
       </div>
     </section>
