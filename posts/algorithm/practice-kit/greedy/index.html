@@ -103,7 +103,7 @@
     "keywords": ["Algorithm"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "444"
+    "wordCount": "506"
   }]
   </script>
 
@@ -346,6 +346,7 @@
         <li><a href="#1-체육복lv1httpsprogrammerscokrlearncourses30lessons42862">1. 체육복(Lv.1)<a href="https://programmers.co.kr/learn/courses/30/lessons/42862">^</a></a></li>
         <li><a href="#2-조이스틱lv2httpsprogrammerscokrlearncourses30lessons42860">2. 조이스틱(Lv.2)<a href="https://programmers.co.kr/learn/courses/30/lessons/42860">^</a></a></li>
         <li><a href="#3-큰-수-만들기lv2-httpsprogrammerscokrlearncourses30lessons42883languagejavascript">3. 큰 수 만들기(Lv.2) <a href="https://programmers.co.kr/learn/courses/30/lessons/42883?language=javascript">^</a></a></li>
+        <li><a href="#4-구명보트lv2httpsprogrammerscokrlearncourses30lessons42885">4. 구명보트(Lv.2)<a href="https://programmers.co.kr/learn/courses/30/lessons/42885">^</a></a></li>
       </ul>
     </li>
   </ul>
@@ -549,7 +550,30 @@
 </table>
 </li>
 </ul>
+<h3 id="4-구명보트lv2httpsprogrammerscokrlearncourses30lessons42885" class="relative group">4. 구명보트(Lv.2)<a href="https://programmers.co.kr/learn/courses/30/lessons/42885">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-%ea%b5%ac%eb%aa%85%eb%b3%b4%ed%8a%b8lv2httpsprogrammerscokrlearncourses30lessons42885" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">people</span><span class="p">,</span> <span class="nx">limit</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">people</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
+  <span class="k">while</span> <span class="p">(</span><span class="nx">people</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/*
+</span><span class="cm">    if (people[0] + people[people.length - 1] &lt;= limit) {
+</span><span class="cm">      people.pop();
+</span><span class="cm">      people.shift();
+</span><span class="cm">    } else {
+</span><span class="cm">      people.pop();
+</span><span class="cm">    }
+</span><span class="cm">    cnt += 1;
+</span><span class="cm">    */</span>
+    <span class="kd">let</span> <span class="nx">person</span> <span class="o">=</span> <span class="nx">people</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+    <span class="nx">person</span> <span class="o">+=</span> <span class="nx">people</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">person</span> <span class="o">&lt;=</span> <span class="nx">limit</span><span class="p">)</span> <span class="nx">people</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+    <span class="nx">cnt</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">cnt</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
       </div>
     </section>
     <footer class="pt-8 max-w-prose">
