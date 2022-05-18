@@ -18,12 +18,30 @@
     </item>
     
     <item>
+      <title>[Practice Kit] 탐욕법(Greedy)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</guid>
+      <description>부분적인 최적해가 전체적인 최적해가 되는 마법.</description>
+    </item>
+    
+    <item>
       <title>[Socket.io] Nest.js에서 Socket.io 연결 기초</title>
       <link>https://yuchanjeong.github.io/posts/studies/socket.io/socket.io-nest.js/</link>
       <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/studies/socket.io/socket.io-nest.js/</guid>
       <description>설치 #npm i @nestjs/websockets @nestjs/platform-socket.</description>
+    </item>
+    
+    <item>
+      <title>[Practice Kit] 스택/큐(Stack/Queue)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/stack-queue/</link>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/stack-queue/</guid>
+      <description>LIFO, FIFO, push &amp;amp; pop!</description>
     </item>
     
     <item>
@@ -36,27 +54,9 @@
     </item>
     
     <item>
-      <title>[Practice Kit] 탐욕법(Greedy)</title>
-      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</link>
-      <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</guid>
-      <description>부분적인 최적해가 전체적인 최적해가 되는 마법.</description>
-    </item>
-    
-    <item>
-      <title>[Practice Kit] 스택/큐(Stack/Queue)</title>
-      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/stack-queue/</link>
-      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/stack-queue/</guid>
-      <description>LIFO, FIFO, push &amp;amp; pop!</description>
-    </item>
-    
-    <item>
       <title>[Practice Kit] 깊이/너비 우선 탐색(DFS/BFS)</title>
       <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/dfs-bfs/</link>
-      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/dfs-bfs/</guid>
       <description>깊이/너비 우선 탐색을 사용해 원하는 답을 찾아보세요.</description>
@@ -65,7 +65,7 @@
     <item>
       <title>[Practice Kit] 완전탐색(Exhaustive Search, Brute-force Search)</title>
       <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/exhaustivesearch/</link>
-      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/exhaustivesearch/</guid>
       <description>무식해 보여도 사실은 최고의 방법일 때가 있지요.</description>
@@ -101,10 +101,19 @@
     <item>
       <title>[Next.js] Learn Course (4) - CREATE YOUR FIRST APP 2</title>
       <link>https://yuchanjeong.github.io/posts/studies/react/next.js-lc-4/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/studies/react/next.js-lc-4/</guid>
       <description>CREATE YOUR FIRST APP #4.</description>
+    </item>
+    
+    <item>
+      <title>[Next.js] Learn Course (3) - CREATE YOUR FIRST APP 1</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/next.js-lc-3/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/studies/react/next.js-lc-3/</guid>
+      <description>CREATE YOUR FIRST APP #1.</description>
     </item>
     
     <item>
@@ -114,15 +123,6 @@
       
       <guid>https://yuchanjeong.github.io/posts/studies/react/next.js-lc-2/</guid>
       <description>How Next.</description>
-    </item>
-    
-    <item>
-      <title>[Next.js] Learn Course (3) - CREATE YOUR FIRST APP 1</title>
-      <link>https://yuchanjeong.github.io/posts/studies/react/next.js-lc-3/</link>
-      <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/posts/studies/react/next.js-lc-3/</guid>
-      <description>CREATE YOUR FIRST APP #1.</description>
     </item>
     
     <item>
