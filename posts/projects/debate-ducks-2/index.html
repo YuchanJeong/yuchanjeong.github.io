@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "240"
+    "wordCount": "305"
   }]
   </script>
 
@@ -364,8 +364,27 @@
 <p>Nest.js에 대한 지식 없이 Socket.io를 적용시키려고 하니 어려움을 겪었다. 그래서 공식 문서를 통해 Nest.js에 대한 기본적인 학습을 하고, Youtube에 올라와 있는 강의를 바탕으로 WebSocket 서버를 열었다.</p>
 <p>아직은 기본적인 형태만 갖추어져있고, Debate-Ducks 프로젝트에 필요 없는 부분들도 작성되어 있어 추후 여러 테스트를 거쳐 프로젝트에 맞게 최적화 시킬 예정이다.</p>
 <h2 id="websocket-클라이언트" class="relative group">WebSocket 클라이언트 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#websocket-%ed%81%b4%eb%9d%bc%ec%9d%b4%ec%96%b8%ed%8a%b8" aria-label="Anchor">#</a></span></h2>
-<p>Next.js를 사용하였지만 이미 충분히 학습 하였고, 기본적으로 React에서의 사용법과 크게 다르지 않아 쉽게 적용할 수 있었다.</p>
-<p>*<em>환경 변수로 NEXT_PUBLIC_&hellip; 사용</em><br>
+<p>Next.js를 사용하였지만 이미 충분히 학습하였고, 기본적으로 React에서의 사용법과 크게 다르지 않아 쉽게 적용할 수 있었다. 다만 TypeScript를 실전에서 처음 써봐서 아직은 조금 적응이 덜 되었다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useRouter</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;next/router&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">io</span><span class="p">,</span> <span class="nx">Socket</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;socket.io-client&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Debateroom() {</span>
+  <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="p">{</span> <span class="nx">debateId</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">router</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">socket</span><span class="p">,</span> <span class="nx">setSocket</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">&lt;</span><span class="nt">Socket</span> <span class="err">|</span> <span class="na">undefined</span><span class="p">&gt;();</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setSocket</span><span class="p">(</span><span class="nx">io</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NEXT_PUBLIC_API_URL</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
+  <span class="p">},</span> <span class="p">[]);</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Debateroom</span><span class="o">:</span> <span class="p">{</span><span class="nx">debateId</span><span class="p">}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>*<em>환경 변수로 NEXT_PUBLIC_&hellip; 사용</em><br>
 *<em>import 순서 컨벤션</em><br>
 - 패키지, 라이브러리 &gt; api, styles, utils &gt; components &gt; Etc<br>
 - 각 순서마다 개행으로 구분</p>
