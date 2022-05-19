@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "414"
+    "wordCount": "412"
   }]
   </script>
 
@@ -419,7 +419,7 @@
 <span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Debateroom() {</span>
   <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
   <span class="kr">const</span> <span class="p">{</span> <span class="nx">debateId</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">router</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
-  <span class="kr">const</span> <span class="nx">socketRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">&lt;</span><span class="nt">Socket</span> <span class="err">|</span> <span class="na">undefined</span><span class="p">&gt;(</span><span class="kc">undefined</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">socketRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">&lt;</span><span class="nt">Socket</span><span class="p">&gt;();</span>
 
   <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">socketRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">=</span> <span class="nx">io</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NEXT_PUBLIC_API_URL</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
