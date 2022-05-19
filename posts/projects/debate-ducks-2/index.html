@@ -349,7 +349,7 @@
     <li><a href="#websocket-서버">WebSocket 서버</a></li>
     <li><a href="#websocket-클라이언트">WebSocket 클라이언트</a></li>
     <li><a href="#문제-해결">문제 해결</a></li>
-    <li><a href="#잘못한-점">잘못한 점</a></li>
+    <li><a href="#반성할-점">반성할 점</a></li>
   </ul>
 </nav>
   </div>
@@ -392,7 +392,7 @@
 <p>처음 Youtube의 강의만 보고 서버를 열었을 때 CORS 에러가 발생하였다. 기본 express에서는 <code>new Server</code>에 <code>{ cors: { origin: &quot;...&quot; } }</code>을 설정해서 해결했었던 문제였다. Nest.js에서는 <code>@WebSocketGateway</code>에 <code>{ cors: { origin: &quot;...&quot; } }</code>을 설정해서 해결하였다.</p>
 <img width="400" alt="CORS 에러" src="https://user-images.githubusercontent.com/84524514/168922191-7982a7bd-418e-45a3-b390-021ee9e06b91.png">
 <img width="400" alt="CORS 에러 해결" src="https://user-images.githubusercontent.com/84524514/168922409-6cc999cd-3592-4402-a5d7-e99aaf5ab40d.png">
-<h2 id="잘못한-점" class="relative group">잘못한 점 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%98%eb%aa%bb%ed%95%9c-%ec%a0%90" aria-label="Anchor">#</a></span></h2>
+<h2 id="반성할-점" class="relative group">반성할 점 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b0%98%ec%84%b1%ed%95%a0-%ec%a0%90" aria-label="Anchor">#</a></span></h2>
 <p>이전 프로젝트 때 <code>package-lock.json</code>이 자주 충돌이 났다. <code>package-lock.json</code>이 <code>package.json</code>의 보조하는 역할이라고 대충 알고 있던 우리는 둘을 함께 버전 관리에서 제외하였다. 프로젝트는 아무 이상이 없었고, 그래서 이번에도 <code>package-lock.json</code>을 버전 관리에서 제외하였다.</p>
 <p>하지만 문득 어떤 역할을 하는지 정확히 모르는데 버전 관리에서 제외하는 게 맞는 걸까 싶었고 관련 정보를 찾아보았다. <code>package-lock.json</code>은 의존성 트리를 정확히 저장하여 메이저 미만의 업데이트 시 혹시 모를 오류를 대비하는 역할을 하였다. 그래서 급하게 다시 <code>package-lock.json</code>을 버전 관리에 추가하였다.</p>
 <p>다음부터는 어떤 결정을 내리기 전에 미리 꼼꼼히 확인하고 결정을 내릴 것이다. 또한 한 번 이상이 없었다고 이상이 계속 없을 것이라는 안일한 생각을 버릴 것이다.</p>
