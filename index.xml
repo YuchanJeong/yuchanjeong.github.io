@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Debate-Ducks] WebSocket Room</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-3/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-3/</guid>
+      <description>서버 방 입장 코드 #import { SubscribeMessage, WebSocketGateway, WebSocketServer, OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect, ConnectedSocket, MessageBody, } from &amp;#34;@nestjs/websockets&amp;#34;; import { Server, Socket } from &amp;#34;socket.</description>
+    </item>
+    
+    <item>
+      <title>[Practice Kit] 탐욕법(Greedy)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</guid>
+      <description>부분적인 최적해가 전체적인 최적해가 되는 마법.</description>
+    </item>
+    
     <item>
       <title>[Debate-Ducks] WebSocket 연결</title>
       <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-2/</link>
@@ -18,12 +36,12 @@
     </item>
     
     <item>
-      <title>[Practice Kit] 탐욕법(Greedy)</title>
-      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</link>
+      <title>[Practice Kit] 힙(Heap)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/heap/</link>
       <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</guid>
-      <description>부분적인 최적해가 전체적인 최적해가 되는 마법.</description>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/heap/</guid>
+      <description>힙은 특정한 규칙을 가지는 트리로, 힙을 이용해서 우선순위 큐를 구현할 수 있습니다.</description>
     </item>
     
     <item>

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Debate-Ducks] WebSocket Room</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-3/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-3/</guid>
+      <description>서버 방 입장 코드 #import { SubscribeMessage, WebSocketGateway, WebSocketServer, OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect, ConnectedSocket, MessageBody, } from &amp;#34;@nestjs/websockets&amp;#34;; import { Server, Socket } from &amp;#34;socket.</description>
+    </item>
+    
     <item>
       <title>[Debate-Ducks] WebSocket 연결</title>
       <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-2/</link>
