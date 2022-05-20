@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Thu, 19 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Debate-Ducks] WebSocket - WebRTC</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-4/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-4/</guid>
+      <description>문제 및 문제 해결 #문제 1 - WebSocket Issue #이전에 작성한 코드에서 WebRTC를 적용하기 위해 추가로 코드를 작성하였는데 제대로 작동하지 않았다.</description>
+    </item>
+    
     <item>
       <title>[Practice Kit] 힙(Heap)</title>
       <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/heap/</link>
@@ -18,7 +27,7 @@
     </item>
     
     <item>
-      <title>[Debate-Ducks] WebSocket 방 입장</title>
+      <title>[Debate-Ducks] WebSocket - Room</title>
       <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-3/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
@@ -27,7 +36,7 @@
     </item>
     
     <item>
-      <title>[Debate-Ducks] WebSocket 연결</title>
+      <title>[Debate-Ducks] WebSocket - Init</title>
       <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-2/</link>
       <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
       

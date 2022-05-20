@@ -13,14 +13,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>[Debate-Ducks] WebSocket - Room &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="[Debate-Ducks] WebSocket - Room &middot; Yuchan&#39;s hello world!" />
+  <title>[Debate-Ducks] WebSocket - WebRTC &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[Debate-Ducks] WebSocket - WebRTC &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog of a developer who wants to help create a better world :)" />
   
   
   
-  <link rel="canonical" href="https://yuchanjeong.github.io/posts/projects/debate-ducks-3/" />
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/projects/debate-ducks-4/" />
   
   
   
@@ -66,17 +66,17 @@
   
   
   
-  <meta property="og:title" content="[Debate-Ducks] WebSocket - Room" />
-<meta property="og:description" content="서버 방 입장 코드 #import { SubscribeMessage, WebSocketGateway, WebSocketServer, OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect, ConnectedSocket, MessageBody, } from &#34;@nestjs/websockets&#34;; import { Server, Socket } from &#34;socket." />
+  <meta property="og:title" content="[Debate-Ducks] WebSocket - WebRTC" />
+<meta property="og:description" content="문제 및 문제 해결 #문제 1 - WebSocket Issue #이전에 작성한 코드에서 WebRTC를 적용하기 위해 추가로 코드를 작성하였는데 제대로 작동하지 않았다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks-3/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-05-18T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-05-18T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks-4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-20T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[Debate-Ducks] WebSocket - Room"/>
-<meta name="twitter:description" content="서버 방 입장 코드 #import { SubscribeMessage, WebSocketGateway, WebSocketServer, OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect, ConnectedSocket, MessageBody, } from &#34;@nestjs/websockets&#34;; import { Server, Socket } from &#34;socket."/>
+<meta name="twitter:title" content="[Debate-Ducks] WebSocket - WebRTC"/>
+<meta name="twitter:description" content="문제 및 문제 해결 #문제 1 - WebSocket Issue #이전에 작성한 코드에서 WebRTC를 적용하기 위해 추가로 코드를 작성하였는데 제대로 작동하지 않았다."/>
 
   
   <script type="application/ld+json">
@@ -84,26 +84,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "[Debate-Ducks] WebSocket - Room",
-    "headline": "[Debate-Ducks] WebSocket - Room",
+    "name": "[Debate-Ducks] WebSocket - WebRTC",
+    "headline": "[Debate-Ducks] WebSocket - WebRTC",
     
-    "abstract": "서버 방 입장 코드 #\rimport { SubscribeMessage, WebSocketGateway, WebSocketServer, OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect, ConnectedSocket, MessageBody, } from \u0026#34;@nestjs\/websockets\u0026#34;; import { Server, Socket } from \u0026#34;socket.",
+    "abstract": "문제 및 문제 해결 #\r문제 1 - WebSocket Issue #\r이전에 작성한 코드에서 WebRTC를 적용하기 위해 추가로 코드를 작성하였는데 제대로 작동하지 않았다.",
     "inLanguage": "en",
-    "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks-3\/",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks-4\/",
     "author" : {
       "@type": "Person",
       "name": "Yuchan"
     },
     "copyrightYear": "2022",
-    "dateCreated": "2022-05-18T00:00:00\u002b00:00",
-    "datePublished": "2022-05-18T00:00:00\u002b00:00",
+    "dateCreated": "2022-05-20T00:00:00\u002b00:00",
+    "datePublished": "2022-05-20T00:00:00\u002b00:00",
     
-    "dateModified": "2022-05-18T00:00:00\u002b00:00",
+    "dateModified": "2022-05-20T00:00:00\u002b00:00",
     
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "411"
+    "wordCount": "424"
   }]
   </script>
 
@@ -255,7 +255,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        [Debate-Ducks] WebSocket - Room
+        [Debate-Ducks] WebSocket - WebRTC
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -288,7 +288,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2022-05-18 00:00:00 &#43;0000 UTC">18 May 2022</time>
+      <time datetime="2022-05-20 00:00:00 &#43;0000 UTC">20 May 2022</time>
     
 
     
@@ -346,10 +346,12 @@
   >
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#서버-방-입장-코드">서버 방 입장 코드</a></li>
-    <li><a href="#클라이언트-방-입장-코드">클라이언트 방 입장 코드</a></li>
-    <li><a href="#문제-및-문제-해결">문제 및 문제 해결</a></li>
-    <li><a href="#반성할-점">반성할 점</a></li>
+    <li><a href="#문제-및-문제-해결">문제 및 문제 해결</a>
+      <ul>
+        <li><a href="#문제-1---websocket-issue">문제 1 - WebSocket Issue</a></li>
+        <li><a href="#문제-2---type-error">문제 2 - Type Error</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -359,126 +361,49 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <h2 id="서버-방-입장-코드" class="relative group">서버 방 입장 코드 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%84%9c%eb%b2%84-%eb%b0%a9-%ec%9e%85%ec%9e%a5-%ec%bd%94%eb%93%9c" aria-label="Anchor">#</a></span></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span>
-  <span class="nx">SubscribeMessage</span><span class="p">,</span>
-  <span class="nx">WebSocketGateway</span><span class="p">,</span>
-  <span class="nx">WebSocketServer</span><span class="p">,</span>
-  <span class="nx">OnGatewayInit</span><span class="p">,</span>
-  <span class="nx">OnGatewayConnection</span><span class="p">,</span>
-  <span class="nx">OnGatewayDisconnect</span><span class="p">,</span>
-  <span class="nx">ConnectedSocket</span><span class="p">,</span>
-  <span class="nx">MessageBody</span><span class="p">,</span>
-<span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;@nestjs/websockets&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">Server</span><span class="p">,</span> <span class="nx">Socket</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;socket.io&#34;</span><span class="p">;</span>
-
-<span class="kd">@WebSocketGateway</span><span class="p">({</span> <span class="nx">cors</span><span class="o">:</span> <span class="p">{</span> <span class="nx">origin</span><span class="o">:</span> <span class="s2">&#34;*&#34;</span> <span class="p">}</span> <span class="p">})</span>
-<span class="kr">export</span> <span class="kr">class</span> <span class="nx">EventsGateway</span>
-  <span class="kr">implements</span> <span class="nx">OnGatewayInit</span><span class="p">,</span> <span class="nx">OnGatewayConnection</span><span class="p">,</span> <span class="nx">OnGatewayDisconnect</span>
-<span class="p">{</span>
-  <span class="kd">@WebSocketServer</span><span class="p">()</span> <span class="kr">public</span> <span class="nx">server</span>: <span class="kt">Server</span><span class="p">;</span>
-
-  <span class="c1">// 클라이언트에서 &#34;connect&#34; 후 방(debateId)에 &#34;join&#34; 시도
-</span><span class="c1"></span>  <span class="kd">@SubscribeMessage</span><span class="p">(</span><span class="s2">&#34;join&#34;</span><span class="p">)</span>
-  <span class="nx">handleJoin</span><span class="p">(</span>
-    <span class="kd">@ConnectedSocket</span><span class="p">()</span> <span class="nx">socket</span>: <span class="kt">Socket</span><span class="p">,</span>
-    <span class="kd">@MessageBody</span><span class="p">()</span> <span class="nx">debateId</span>: <span class="kt">string</span>
-  <span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// 현제 방에 몇명이 있는지 파악
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">roomSize</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">server</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">adapter</span><span class="p">.</span><span class="nx">rooms</span><span class="p">.</span><span class="kr">get</span><span class="p">(</span><span class="nx">debateId</span><span class="p">)</span><span class="o">?</span><span class="p">.</span><span class="nx">size</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="c1">// 2명 (찬성, 반대) 미만일 때 입장
-</span><span class="c1"></span>    <span class="c1">// 2명 이상이면 입장 거절
-</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">roomSize</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">socket</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">debateId</span><span class="p">);</span>
-      <span class="nx">socket</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="nx">debateId</span><span class="p">).</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&#34;guestJoin&#34;</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&#34;overcapacity&#34;</span><span class="p">);</span>
+        <h2 id="문제-및-문제-해결" class="relative group">문제 및 문제 해결 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-%eb%b0%8f-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0" aria-label="Anchor">#</a></span></h2>
+<h3 id="문제-1---websocket-issue" class="relative group">문제 1 - WebSocket Issue <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-1---websocket-issue" aria-label="Anchor">#</a></span></h3>
+<p><a href="/posts/projects/debate-ducks-3">이전에 작성한 코드</a>에서 WebRTC를 적용하기 위해 추가로 코드를 작성하였는데 제대로 작동하지 않았다.</p>
+<p>이 프로젝트에서 WebRTC의 연결 과정은 다음과 같다. 사용자가 웹 소켓 서버와 연결됨과 동시에 방(<code>debateId</code>)에 입장을 요청하고, 인원이 다 차지 않았을 경우 방에 입장한다. 이때 먼저 방에 입장해있는 호스트에게 게스트가 입장했다고 알려주고, 호스트는 연결을 제안한다. 게스트는 제안을 받은 뒤 응답을 보내면 게스트와 호스트는 1 대 1로 연결이 된다.</p>
+<p>그러나 실제로 실행했을 때 &ldquo;게스트가 제안을 받지 못하는 문제&quot;가 발생하였다. 우선 클라이언트에서 이벤트를 수신하지 못하는지 알아보기 위해 서버 측에서 제안 코드를 이동해 보았다. 그러자 클라이언트 측에서는 정상적으로 제안을 받았다. 다음으로는 서버 측에 콘솔을 찍어보았는데, 서버 측에서도 정상적으로 제안을 받았다. 결국 서버 측에서 제안을 보내는 부분에 문제가 있다는 소리였다.</p>
+<p>그래서 서버 측 코드를 <code>handleConnection()</code> 안으로 옮겨도 보고, <code>handleOffer()</code> 코드도 계속해서 수정해 보았다. 이 과정에서 문제를 해결하지는 못하였으나 문제의 원인은 파악하였다. 게스트가 방에 추가로 입장해야 하는데 그러지 않고 이미 있던 호스트를 덮어쓰는 것이 문제였다.</p>
+<img width="464" alt="offer problem" src="https://user-images.githubusercontent.com/84524514/169584200-946cc59e-2d58-4b34-a3d3-aa743ec3c465.png">
+<p>그제서야 서버 측 코드가 아니라 클라이언트 측 코드가 문제가 있다는 것을 깨닫고 클라이언트 측 코드를 유심히 살펴보기 시작하였다. &ldquo;join&quot;을 &ldquo;connect&rdquo; 내부에서 <code>emit</code>한 것이 문제였다. 이 때문에 새로운 연결 후 방에 입장하게 되어 방을 덮어쓰는 것처럼 작동하는 것 같다. 하지만 아직 정확한 이유는 파악하지 못하였다. (이유를 알게 되면 추가로 작성할 예정)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="nx">socket</span><span class="o">?</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;connect&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&#34;join&#34;</span><span class="p">,</span> <span class="nx">debateId</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;connect&#34;</span><span class="p">,</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div><p>그래서 외부의 &ldquo;connect&quot;를 제거해 주니 정상적으로 제안을 주고받았다. 하지만 아직 연결이 여러 번 되는 문제가 남아 있었다.</p>
+<img width="241" alt="connect1" src="https://user-images.githubusercontent.com/84524514/169588184-7df52673-9394-43aa-8236-acbba9ebec6f.png">
+<img width="242" alt="connect2" src="https://user-images.githubusercontent.com/84524514/169588175-b29388e2-7647-4683-a948-b3f364bb0654.png">
+<p>이 문제의 이유는 명확했다. <code>useEffect()</code>의 dependency에 들어있는 <code>debateId</code>와 <code>socket</code>의 값이 변하기 때문에 재랜더링이 일어나 생기는 문제였다. 처음에는 <code>debateroom/[debateId].tsc</code> 페이지에서 <code>Room.tsx</code> 컴포넌트를 연결할 때 조건을 <code>debateId</code>와 <code>socket</code> 모두 undefined가 아닐 때로 하였다. 그래도 문제는 해결되지 않았고, <code>useRef()</code>를 사용해서 <code>debateId</code>를 관리하였을 때도 마찬가지였다. 결국은 <code>debateId</code>를 <code>useRouter()</code>로 받는 과정에서 재랜더링이 한 번 이상은 발생하기 때문이었다.</p>
+<img width="245" alt="connect3" src="https://user-images.githubusercontent.com/84524514/169591943-9910dccc-3765-4f61-94a2-5906b711b5d8.png">
+<img width="243" alt="connect4" src="https://user-images.githubusercontent.com/84524514/169591961-9098ed5c-9004-4f75-83ad-21c6299a6efc.png">
+<p>그래서 이번에는 <code>Room.tsc</code> 컴포넌트의 <code>useEffect()</code> 내부에서 <code>if</code> 문을 통해 소켓 이벤트 발동 및 추가의 조건을 <code>debateId</code>와 <code>socket</code> 모두 undefined가 아닐 때로 하였다. 그러자 문제가 말끔히 해결 되었다.</p>
+<img width="236" alt="success1" src="https://user-images.githubusercontent.com/84524514/169594975-7bdcea51-325a-4c4d-b34a-fc6b41cbdf2c.png">
+<img width="237" alt="success2" src="https://user-images.githubusercontent.com/84524514/169594913-ff0ed3a7-0b94-46e5-89f9-be0c7553335a.png">
+<h3 id="문제-2---type-error" class="relative group">문제 2 - Type Error <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-2---type-error" aria-label="Anchor">#</a></span></h3>
+<p>addTrack 내부의 myStreamRef.current에 타입 에러가 발생하였다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">myStreamRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">&lt;</span><span class="nt">MediaStream</span><span class="p">&gt;();</span>
+<span class="p">...</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">getTracks</span><span class="p">().</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">track</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">addTrack</span><span class="p">(</span><span class="nx">track</span><span class="p">,</span> <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Argument of <span class="nb">type</span> <span class="s1">&#39;MediaStream | undefined&#39;</span> is not assignable to parameter of <span class="nb">type</span> <span class="s1">&#39;MediaStream&#39;</span>.
+Type <span class="s1">&#39;undefined&#39;</span> is not assignable to <span class="nb">type</span> <span class="s1">&#39;MediaStream&#39;</span>.
+</code></pre></div><p>아래와 같이 <code>if</code> 문으로 한 번 더 undefined 일 가능성을 없애주면 더 이상 에러가 나지 않는다. 하지만 이미 제일 바깥에서 <code>if</code> 문으로 undefined 일 가능성을 없애주었는데 왜 한 번 더 묶어줘야 하는지 아직 모르겠다. 그래서 Issue를 통해 팀원들과 공유하고, 동시에 Stackoverflow에도 질문을 게시하였다. (이유를 알게 되면 추가로 작성할 예정)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">myStreamRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">&lt;</span><span class="nt">MediaStream</span><span class="p">&gt;();</span>
+<span class="p">...</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">getTracks</span><span class="p">().</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">track</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">addTrack</span><span class="p">(</span><span class="nx">track</span><span class="p">,</span> <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">);</span>
     <span class="p">}</span>
-  <span class="p">}</span>
-
-  <span class="nx">afterInit</span><span class="p">()</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;WebSocket Server Init&#34;</span><span class="p">);</span>
-  <span class="p">}</span>
-
-  <span class="nx">handleConnection</span><span class="p">(</span><span class="kd">@ConnectedSocket</span><span class="p">()</span> <span class="nx">socket</span>: <span class="kt">Socket</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;connected&#34;</span><span class="p">,</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
-  <span class="p">}</span>
-
-  <span class="nx">handleDisconnect</span><span class="p">(</span><span class="kd">@ConnectedSocket</span><span class="p">()</span> <span class="nx">socket</span>: <span class="kt">Socket</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;disconnected&#34;</span><span class="p">,</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
-  <span class="p">}</span>
+  <span class="p">});</span>
 <span class="p">}</span>
-</code></pre></div><h2 id="클라이언트-방-입장-코드" class="relative group">클라이언트 방 입장 코드 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%81%b4%eb%9d%bc%ec%9d%b4%ec%96%b8%ed%8a%b8-%eb%b0%a9-%ec%9e%85%ec%9e%a5-%ec%bd%94%eb%93%9c" aria-label="Anchor">#</a></span></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// debateroom/[debateId].tsx
-</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">useRouter</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;next/router&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useRef</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">io</span><span class="p">,</span> <span class="nx">Socket</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;socket.io-client&#34;</span><span class="p">;</span>
-
-<span class="kr">import</span> <span class="nx">Room</span> <span class="kr">from</span> <span class="s2">&#34;../../../components/debateroom/Room&#34;</span><span class="p">;</span>
-
-<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Debateroom() {</span>
-  <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
-  <span class="kr">const</span> <span class="p">{</span> <span class="nx">debateId</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">router</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
-  <span class="kr">const</span> <span class="nx">socketRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">&lt;</span><span class="nt">Socket</span><span class="p">&gt;();</span>
-
-  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">socketRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">=</span> <span class="nx">io</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NEXT_PUBLIC_API_URL</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-  <span class="p">},</span> <span class="p">[]);</span>
-
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="p">&lt;&gt;</span>
-      <span class="p">&lt;</span><span class="nt">Room</span> <span class="na">debateId</span><span class="o">=</span><span class="p">{</span><span class="nx">debateId</span><span class="p">}</span> <span class="na">socket</span><span class="o">=</span><span class="p">{</span><span class="nx">socketRef</span><span class="p">.</span><span class="nx">current</span><span class="p">}</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;/&gt;</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// Room.tsx
-</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">Socket</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;socket.io-client&#34;</span><span class="p">;</span>
-
-<span class="kr">interface</span> <span class="nx">IRoom</span> <span class="p">{</span>
-  <span class="nx">debateId</span>: <span class="kt">string</span> <span class="o">|</span> <span class="kt">string</span><span class="p">[]</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">;</span>
-  <span class="nx">socket</span>: <span class="kt">Socket</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Room</span><span class="p">({</span> <span class="nx">debateId</span><span class="p">,</span> <span class="nx">socket</span> <span class="p">}</span><span class="o">:</span> <span class="nx">IRoom</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// &#34;connect&#34; 후 방(debateId)에 &#34;join&#34; 시도
-</span><span class="c1"></span>    <span class="nx">socket</span><span class="o">?</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;connect&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&#34;join&#34;</span><span class="p">,</span> <span class="nx">debateId</span><span class="p">);</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;connect&#34;</span><span class="p">,</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
-    <span class="p">});</span>
-
-    <span class="nx">socket</span><span class="o">?</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;overcapacity&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;overcapacity&#34;</span><span class="p">);</span>
-    <span class="p">});</span>
-
-    <span class="nx">socket</span><span class="o">?</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;guestJoin&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;room&#34;</span><span class="p">,</span> <span class="nx">debateId</span><span class="p">);</span>
-    <span class="p">});</span>
-  <span class="p">},</span> <span class="p">[</span><span class="nx">debateId</span><span class="p">,</span> <span class="nx">socket</span><span class="p">]);</span>
-
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Room</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><h2 id="문제-및-문제-해결" class="relative group">문제 및 문제 해결 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-%eb%b0%8f-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0" aria-label="Anchor">#</a></span></h2>
-<p>처음에는 <code>useEffect()</code> 내부에서 <code>setState</code>로 socket을 받아서 저장했다. 그러자 한 번의 입장에 여러 번의 연결 시도를 하는 문제가 있었다. <em>(bcs, 재랜더링)</em></p>
-<img width="246" alt="useState 1번" src="https://user-images.githubusercontent.com/84524514/169258595-7a513e2f-ae1e-4c94-8eac-e9481ab0a68f.png">
-<img width="231" alt="useState 2번" src="https://user-images.githubusercontent.com/84524514/169258523-c649af87-a15e-4f78-8b71-68ebcefe2726.png">
-<p>두 번째에는 <code>useEffect()</code> 내부에서 바로 const로 socket을 저장한 다음 내부에서 바로 socket의 event를 작성 하였다. 하지만 <code>useState()</code>를 사용했을 때와 같은 문제가 여전히 발생 하였고, 두 번째 브라우저에서 입장하자 이미 정원을 초과하였다고 입장을 거절당하는 추가적인 문제도 발생하였다.</p>
-<img width="232" alt="const 1번" src="https://user-images.githubusercontent.com/84524514/169260185-921edb9f-0616-46f3-9758-89c8d1d4ce1d.png">
-<img width="240" alt="const 2번" src="https://user-images.githubusercontent.com/84524514/169260201-590ee288-4893-48d2-b9bd-7fdd873fe170.png">
-<p>그래서 cleanUp으로 연결 해제 처리를 해주었더니 위에서 언급한 문제는 모두 해결되었다. 하지만 연결을 하기 전에 해제된다는 경고가 뜨기 시작하였다.</p>
-<img width="245" alt="const 3번" src="https://user-images.githubusercontent.com/84524514/169260664-c8d58982-e2c7-4466-9060-afd7030033a0.png">
-<p>마지막으로 <code>useState()</code> 대신에 <code>useRef()</code>를 사용하였다. <em>(bcs, useRef는 재랜더링이 일어나지 않음)</em> 그러자 모든 문제가 말끔히 해결되었다.</p>
-<img width="244" alt="useRef 1번" src="https://user-images.githubusercontent.com/84524514/169261494-559f58d4-e37f-4ec3-af48-7fdc5006824f.png">
-<img width="242" alt="useRef 2번" src="https://user-images.githubusercontent.com/84524514/169261521-436df3de-09c4-4e13-8a3d-56c358b60346.png">
-<h2 id="반성할-점" class="relative group">반성할 점 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b0%98%ec%84%b1%ed%95%a0-%ec%a0%90" aria-label="Anchor">#</a></span></h2>
-<p>이전에 한번 만든 적 있는 기능이다 보니 이전의 코드를 참조하면서 만들고 있다. 참조만 하고 더 많이 생각하며 발전시킨 코드를 작성해야 하는데 이전의 코드를 답습하며 현재의 스택에 맞게 적용만 하고 있었다.</p>
-<p>이제부터는 지난 프로젝트 이후에 배운 내용들을 활용하고 더 많이 생각하며 발전된 코드를 작성할 것이다. 🔥🔥🔥</p>
-
+</code></pre></div>
       </div>
     </section>
     <footer class="pt-8 max-w-prose">
@@ -585,7 +510,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group" href="/posts/projects/debate-ducks-2/">
+            <a class="flex group" href="/posts/algorithm/practice-kit/heap/">
               <span
                 class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -597,23 +522,6 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >[Debate-Ducks] WebSocket - Init</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2022-05-17 00:00:00 &#43;0000 UTC">17 May 2022</time>
-                  
-                </span>
-              </span>
-            </a>
-          
-        </span>
-        <span>
-          
-            <a class="flex text-right group" href="/posts/algorithm/practice-kit/heap/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
                   >[Practice Kit] 힙(Heap)</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
@@ -622,15 +530,10 @@
                   
                 </span>
               </span>
-              <span
-                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
             </a>
+          
+        </span>
+        <span>
           
         </span>
       </div>
