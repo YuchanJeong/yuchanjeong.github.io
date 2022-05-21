@@ -14,7 +14,7 @@
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-4/</guid>
-      <description>문제 및 문제 해결 #문제 1 - WebSocket Issue #이전에 작성한 코드에서 WebRTC를 적용하기 위해 추가로 코드를 작성하였는데 제대로 작동하지 않았다.</description>
+      <description>클라이언트 WebRTC 코드 #기존에 한 파일에 작성했던 코드를 외부 파일로 이동해 가독성을 높였다.</description>
     </item>
     
     <item>
