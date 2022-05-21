@@ -14,7 +14,7 @@
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-4/</guid>
-      <description>클라이언트 WebRTC 코드 #기존에 한 파일에 작성했던 코드를 외부 파일로 이동해 가독성을 높였다.</description>
+      <description>개요 #simple-peer를 사용해서 사용자를 1 대 1로 연결하여 서로의 미디어를 주고받을 수 있게 만들었다.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-3/</guid>
-      <description>서버 방 입장 코드 #import { SubscribeMessage, WebSocketGateway, WebSocketServer, OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect, ConnectedSocket, MessageBody, } from &amp;#34;@nestjs/websockets&amp;#34;; import { Server, Socket } from &amp;#34;socket.</description>
+      <description>개요 #WebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 만들었다.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
       <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-2/</guid>
-      <description>WebSocket 서버 #*&amp;quot;[Socket.</description>
+      <description>개요 #socket.</description>
     </item>
     
     <item>

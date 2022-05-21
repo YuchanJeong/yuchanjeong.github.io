@@ -67,7 +67,7 @@
   
   
   <meta property="og:title" content="[Debate-Ducks] WebSocket - WebRTC" />
-<meta property="og:description" content="클라이언트 WebRTC 코드 #기존에 한 파일에 작성했던 코드를 외부 파일로 이동해 가독성을 높였다." />
+<meta property="og:description" content="개요 #simple-peer를 사용해서 사용자를 1 대 1로 연결하여 서로의 미디어를 주고받을 수 있게 만들었다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks-4/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-20T00:00:00+00:00" />
@@ -76,7 +76,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Debate-Ducks] WebSocket - WebRTC"/>
-<meta name="twitter:description" content="클라이언트 WebRTC 코드 #기존에 한 파일에 작성했던 코드를 외부 파일로 이동해 가독성을 높였다."/>
+<meta name="twitter:description" content="개요 #simple-peer를 사용해서 사용자를 1 대 1로 연결하여 서로의 미디어를 주고받을 수 있게 만들었다."/>
 
   
   <script type="application/ld+json">
@@ -87,7 +87,7 @@
     "name": "[Debate-Ducks] WebSocket - WebRTC",
     "headline": "[Debate-Ducks] WebSocket - WebRTC",
     
-    "abstract": "클라이언트 WebRTC 코드 #\r기존에 한 파일에 작성했던 코드를 외부 파일로 이동해 가독성을 높였다.",
+    "abstract": "개요 #\rsimple-peer를 사용해서 사용자를 1 대 1로 연결하여 서로의 미디어를 주고받을 수 있게 만들었다.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks-4\/",
     "author" : {
@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "728"
+    "wordCount": "743"
   }]
   </script>
 
@@ -346,6 +346,7 @@
   >
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#개요">개요</a></li>
     <li><a href="#클라이언트-webrtc-코드">클라이언트 WebRTC 코드</a></li>
     <li><a href="#문제-및-문제-해결">문제 및 문제 해결</a>
       <ul>
@@ -364,7 +365,9 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <img width="1440" alt="WebRTC" src="https://user-images.githubusercontent.com/84524514/169651461-ce53935d-9bb4-476f-88bf-dfdcdbcaca94.png">
+        <h2 id="개요" class="relative group">개요 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ea%b0%9c%ec%9a%94" aria-label="Anchor">#</a></span></h2>
+<p>simple-peer를 사용해서 사용자를 1 대 1로 연결하여 서로의 미디어를 주고받을 수 있게 만들었다.</p>
+<img width="1440" alt="WebRTC" src="https://user-images.githubusercontent.com/84524514/169651461-ce53935d-9bb4-476f-88bf-dfdcdbcaca94.png">
 <h2 id="클라이언트-webrtc-코드" class="relative group">클라이언트 WebRTC 코드 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%81%b4%eb%9d%bc%ec%9d%b4%ec%96%b8%ed%8a%b8-webrtc-%ec%bd%94%eb%93%9c" aria-label="Anchor">#</a></span></h2>
 <p>기존에 한 파일에 작성했던 코드를 외부 파일로 이동해 가독성을 높였다. 또한 <code>useRef()</code>를 적극 활용해 불필요한 재랜더링을 방지하였다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// Room.tst 일부
