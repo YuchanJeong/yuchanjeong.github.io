@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Sat, 21 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/debate-ducks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/debate-ducks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Debate-Ducks] WebSocket - Canvas</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-6/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-6/</guid>
+      <description>개요 #문제 및 문제 해결 #문제 1 - useRef에 할당 불가능 #캔버스에 사용자의 미디어와 공유 화면을 각각 그리기 위해 useInterval Hook 작성 중 Cannot assign to &#39;current&#39; because it is a read-only property.</description>
+    </item>
+    
     <item>
       <title>[Debate-Ducks] WebSocket - Stream</title>
       <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-5/</link>
