@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "743"
+    "wordCount": "751"
   }]
   </script>
 
@@ -449,7 +449,7 @@
 <img width="236" alt="success1" src="https://user-images.githubusercontent.com/84524514/169594975-7bdcea51-325a-4c4d-b34a-fc6b41cbdf2c.png">
 <img width="237" alt="success2" src="https://user-images.githubusercontent.com/84524514/169594913-ff0ed3a7-0b94-46e5-89f9-be0c7553335a.png">
 <h3 id="문제-2---type-error" class="relative group">문제 2 - Type Error <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-2---type-error" aria-label="Anchor">#</a></span></h3>
-<p>addTrack 내부의 myStreamRef.current에 타입 에러가 발생하였다.</p>
+<p><code>addTrack</code> 내부의 <code>myStreamRef.current</code>에 타입 에러가 발생하였다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">myStreamRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">&lt;</span><span class="nt">MediaStream</span><span class="p">&gt;();</span>
 <span class="p">...</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
@@ -459,7 +459,7 @@
 <span class="p">}</span>
 </code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Argument of <span class="nb">type</span> <span class="s1">&#39;MediaStream | undefined&#39;</span> is not assignable to parameter of <span class="nb">type</span> <span class="s1">&#39;MediaStream&#39;</span>.
 Type <span class="s1">&#39;undefined&#39;</span> is not assignable to <span class="nb">type</span> <span class="s1">&#39;MediaStream&#39;</span>.
-</code></pre></div><p>아래와 같이 <code>if</code> 문으로 한 번 더 undefined 일 가능성을 없애주면 더 이상 에러가 나지 않는다. 하지만 이미 제일 바깥에서 <code>if</code> 문으로 undefined 일 가능성을 없애주었는데 왜 한 번 더 묶어줘야 하는지 아직 모르겠다. 그래서 Issue를 통해 팀원들과 공유하고, 동시에 Stackoverflow에도 질문을 게시하였다. (이유를 알게 되면 추가로 작성할 예정)</p>
+</code></pre></div><p>아래와 같이 <code>if</code> 문으로 한 번 더 undefined 일 가능성을 없애주면 더 이상 에러가 나지 않는다. 하지만 이미 제일 바깥에서 <code>if</code> 문으로 undefined 일 가능성을 없애주었는데 왜 한 번 더 묶어줘야 하는지 아직 모르겠다. 그래서 Issue를 통해 팀원들과 공유하고, 동시에 Stackoverflow에도 질문을 게시하였다. (<del>이유를 알게 되면 추가로 작성할 예정</del> <a href="/posts/projects/debate-ducks-5/#%EB%AC%B8%EC%A0%9C-2---type-error">같은 문제(참조)</a>가 한 번 더 발생하였고 이유를 찾음)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">myStreamRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">&lt;</span><span class="nt">MediaStream</span><span class="p">&gt;();</span>
 <span class="p">...</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
@@ -609,6 +609,28 @@ npm i -D @types/simple-peer
           
         </span>
         <span>
+          
+            <a class="flex text-right group" href="/posts/projects/debate-ducks-5/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >[Debate-Ducks] WebSocket - Stream</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-05-21 00:00:00 &#43;0000 UTC">21 May 2022</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>
