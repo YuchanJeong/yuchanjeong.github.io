@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redux</title>
+      <link>https://yuchanjeong.github.io/tags/redux/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/redux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>&#39;Debate-Ducks&#39;</title>
       <link>https://yuchanjeong.github.io/tags/debate-ducks/</link>
@@ -131,15 +140,6 @@
       <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/tags/database/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Redux</title>
-      <link>https://yuchanjeong.github.io/tags/redux/</link>
-      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/tags/redux/</guid>
       <description></description>
     </item>
     

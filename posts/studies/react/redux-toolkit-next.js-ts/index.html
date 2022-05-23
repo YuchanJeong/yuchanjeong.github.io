@@ -13,14 +13,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Redux-toolkit &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="Redux-toolkit &middot; Yuchan&#39;s hello world!" />
+  <title>[Redux] Redux-toolkit in Next.js and TypeScript &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[Redux] Redux-toolkit in Next.js and TypeScript &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog of a developer who wants to help create a better world :)" />
   
   
   
-  <link rel="canonical" href="https://yuchanjeong.github.io/what-i-learned/javascript/redux-toolkit/" />
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/studies/react/redux-toolkit-next.js-ts/" />
   
   
   
@@ -66,44 +66,44 @@
   
   
   
-  <meta property="og:title" content="Redux-toolkit" />
-<meta property="og:description" content="Next." />
+  <meta property="og:title" content="[Redux] Redux-toolkit in Next.js and TypeScript" />
+<meta property="og:description" content="npm i @reduxjs/toolkit react-redux next-redux-wrapper npm i -D @types/react-redux redux/store." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yuchanjeong.github.io/what-i-learned/javascript/redux-toolkit/" /><meta property="article:section" content="What I learned" />
-
-<meta property="og:site_name" content="Yuchan&#39;s hello world!" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/studies/react/redux-toolkit-next.js-ts/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-23T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Redux-toolkit"/>
-<meta name="twitter:description" content="Next."/>
+<meta name="twitter:title" content="[Redux] Redux-toolkit in Next.js and TypeScript"/>
+<meta name="twitter:description" content="npm i @reduxjs/toolkit react-redux next-redux-wrapper npm i -D @types/react-redux redux/store."/>
 
   
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "What I learneds",
-    "name": "Redux-toolkit",
-    "headline": "Redux-toolkit",
+    "articleSection": "Posts",
+    "name": "[Redux] Redux-toolkit in Next.js and TypeScript",
+    "headline": "[Redux] Redux-toolkit in Next.js and TypeScript",
     
-    "abstract": "Next.",
+    "abstract": "npm i @reduxjs\/toolkit react-redux next-redux-wrapper npm i -D @types\/react-redux redux\/store.",
     "inLanguage": "en",
-    "url" : "https:\/\/yuchanjeong.github.io\/what-i-learned\/javascript\/redux-toolkit\/",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/studies\/react\/redux-toolkit-next.js-ts\/",
     "author" : {
       "@type": "Person",
       "name": "Yuchan"
     },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-05-23T00:00:00\u002b00:00",
+    "datePublished": "2022-05-23T00:00:00\u002b00:00",
     
+    "dateModified": "2022-05-23T00:00:00\u002b00:00",
     
-    
-    
-    
-    
-    "keywords": ["(Summary)","Redux"],
+    "keywords": ["Redux"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "295"
+    "wordCount": "255"
   }]
   </script>
 
@@ -255,7 +255,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Redux-toolkit
+        [Redux] Redux-toolkit in Next.js and TypeScript
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -273,6 +273,8 @@
 
   
   
+    
+  
 
   
 
@@ -286,6 +288,8 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
+      <time datetime="2022-05-23 00:00:00 &#43;0000 UTC">23 May 2022</time>
+    
 
     
     
@@ -298,20 +302,14 @@
         
           
             <a
-              href="/categories/what-i-learned/"
+              href="/categories/studies/"
               class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >&lt;What I learned&gt;</a
+              >&lt;Studies&gt;</a
             >
           
         
       
         
-          
-            <a
-              href="/tags/summary/"
-              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >(Summary)</a
-            >
           
             <a
               href="/tags/redux/"
@@ -342,23 +340,13 @@
   >
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#init">Init</a>
+    <li>
       <ul>
-        <li><a href="#1-provider">1. Provider</a></li>
-        <li><a href="#2-store">2. store</a></li>
-        <li><a href="#3-rootreducer">3. rootReducer</a></li>
-      </ul>
-    </li>
-    <li><a href="#reducer">Reducer</a>
-      <ul>
-        <li><a href="#1-createslice">1. createSlice</a></li>
-        <li><a href="#2-createasyncthunkhttpsredux-toolkitjsorgapicreateasyncthunkexamples">2) createAsyncThunk<a href="https://redux-toolkit.js.org/api/createAsyncThunk#examples">^</a></a></li>
-      </ul>
-    </li>
-    <li><a href="#component">Component</a>
-      <ul>
-        <li><a href="#1-useselect">1) useSelect</a></li>
-        <li><a href="#2-usedispatch">2) useDispatch</a></li>
+        <li><a href="#reduxstorets">redux/store.ts</a></li>
+        <li><a href="#reduxmodulesexamplets">redux/modules/example.ts</a></li>
+        <li><a href="#utilsusereduxtoolkitts">utils/useReduxToolkit.ts</a></li>
+        <li><a href="#pages_appts">pages/_app.ts</a></li>
+        <li><a href="#usage">Usage</a></li>
       </ul>
     </li>
   </ul>
@@ -370,124 +358,84 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
-  <span class="ltr:pr-3 rtl:pl-3 text-primary-400">
-    
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
-
-  </span>
-
-
-  </span>
-  <span class="dark:text-neutral-300">Next.js 및 TS 환경에서 설정 추가 예정</span>
-</div>
-
-<p>Ref. <a href="https://redux-toolkit.js.org/usage/usage-guide">Redux-toolkit Usage Guide
-</a><br/>*<em><a href="/storage/wil/javascript/ex-redux-toolkit">Redux-toolkit 예시</a></em></p>
-<h2 id="init" class="relative group">Init <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#init" aria-label="Anchor">#</a></span></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm i @reduxjs/toolkit react-redux
-</code></pre></div><h3 id="1-provider" class="relative group">1. Provider <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-provider" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="nx">ReactDOM</span> <span class="nx">from</span> <span class="s2">&#34;react-dom&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s2">&#34;./App&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="nx">store</span> <span class="nx">from</span> <span class="s2">&#34;./redux/store&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">Provider</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
-
-<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
-  <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">Provider</span> <span class="nx">store</span><span class="o">=</span><span class="p">{</span><span class="nx">store</span><span class="p">}</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span>
-    <span class="o">&lt;</span><span class="err">/Provider&gt;</span>
-  <span class="o">&lt;</span><span class="err">/React.StrictMode&gt;,</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;root&#34;</span><span class="p">)</span>
-<span class="p">);</span>
-</code></pre></div><h3 id="2-store" class="relative group">2. store <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-store" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* redux/index */</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">configureStore</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;@reduxjs/toolkit&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="nx">rootReducer</span> <span class="nx">from</span> <span class="s2">&#34;./modules&#34;</span><span class="p">;</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm i @reduxjs/toolkit react-redux next-redux-wrapper
+npm i -D @types/react-redux
+</code></pre></div><h3 id="reduxstorets" class="relative group">redux/store.ts <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reduxstorets" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Action</span><span class="p">,</span> <span class="nx">configureStore</span><span class="p">,</span> <span class="nx">ThunkAction</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;@reduxjs/toolkit&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">example</span> <span class="kr">from</span> <span class="s2">&#34;./modules/example&#34;</span><span class="p">;</span>
 
 <span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">configureStore</span><span class="p">({</span>
-  <span class="nx">reducer</span><span class="o">:</span> <span class="nx">rootReducer</span><span class="p">,</span>
-  <span class="c1">// middleware: [],
-</span><span class="c1"></span>  <span class="c1">// devTools: process.env.NODE_ENV !== &#34;production&#34;,
-</span><span class="c1"></span><span class="p">});</span>
-
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">store</span><span class="p">;</span>
-</code></pre></div><h3 id="3-rootreducer" class="relative group">3. rootReducer <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-rootreducer" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* redux/modules/index */</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">combineReducers</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="nx">reducer</span> <span class="nx">from</span> <span class="s2">&#34;./reducer&#34;</span><span class="p">;</span>
-
-<span class="kr">const</span> <span class="nx">rootReducer</span> <span class="o">=</span> <span class="nx">combineReducers</span><span class="p">({</span>
-  <span class="nx">reducer</span><span class="p">,</span>
+  <span class="nx">reducer</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">example</span><span class="p">,</span>
+  <span class="p">},</span>
 <span class="p">});</span>
 
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">rootReducer</span><span class="p">;</span>
-</code></pre></div><h2 id="reducer" class="relative group">Reducer <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reducer" aria-label="Anchor">#</a></span></h2>
-<h3 id="1-createslice" class="relative group">1. createSlice <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-createslice" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* redux/modules/reducer */</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">createSlice</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;@reduxjs/toolkit&#34;</span><span class="p">;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">store</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">type</span> <span class="nx">AppDispatch</span> <span class="o">=</span> <span class="k">typeof</span> <span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">type</span> <span class="nx">RootState</span> <span class="o">=</span> <span class="nx">ReturnType</span><span class="p">&lt;</span><span class="nt">typeof</span> <span class="na">store.getState</span><span class="p">&gt;;</span>
+<span class="kr">export</span> <span class="kr">type</span> <span class="nx">AppThunk</span><span class="p">&lt;</span><span class="nt">ReturnType</span> <span class="err">=</span> <span class="na">void</span><span class="p">&gt;</span> <span class="o">=</span> <span class="nx">ThunkAction</span><span class="o">&lt;</span>
+  <span class="nx">ReturnType</span><span class="p">,</span>
+  <span class="nx">RootState</span><span class="p">,</span>
+  <span class="kt">unknown</span><span class="p">,</span>
+  <span class="nx">Action</span><span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span>
+<span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div><h3 id="reduxmodulesexamplets" class="relative group">redux/modules/example.ts <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reduxmodulesexamplets" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">RootState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;./../store&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">createSlice</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;@reduxjs/toolkit&#34;</span><span class="p">;</span>
 
-<span class="kr">const</span> <span class="nx">reducerSlice</span> <span class="o">=</span> <span class="nx">createSlice</span><span class="p">({</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;reducer&#34;</span><span class="p">,</span>
-  <span class="nx">initialState</span><span class="o">:</span> <span class="nx">initial_state</span><span class="p">,</span>
+<span class="kr">const</span> <span class="nx">example</span> <span class="o">=</span> <span class="nx">createSlice</span><span class="p">({</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;example&#34;</span><span class="p">,</span>
+  <span class="nx">initialState</span><span class="o">:</span> <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="s2">&#34;...&#34;</span> <span class="p">},</span>
   <span class="nx">reducers</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">actionCreator</span><span class="o">:</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="c1">// action.payload는 action_creator의 params
+    <span class="nx">actionCreator</span><span class="o">:</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// action.payload는 actionCreator의 params
 </span><span class="c1"></span>      <span class="c1">// state 변경은 mutable, immutable 둘 다 가능
 </span><span class="c1"></span>      <span class="c1">// state=value로 직접 변경은 안됨
 </span><span class="c1"></span>    <span class="p">},</span>
   <span class="p">},</span>
 <span class="p">});</span>
 
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">reducerSlice</span><span class="p">.</span><span class="nx">reducer</span><span class="p">;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">example</span><span class="p">.</span><span class="nx">reducer</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">selectExample</span> <span class="o">=</span> <span class="p">(</span><span class="nx">state</span>: <span class="kt">RootState</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
 <span class="kr">export</span> <span class="kr">const</span> <span class="p">{</span> <span class="nx">actionCreator</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">reducerSlice</span><span class="p">.</span><span class="nx">actions</span><span class="p">;</span>
-</code></pre></div><h3 id="2-createasyncthunkhttpsredux-toolkitjsorgapicreateasyncthunkexamples" class="relative group">2) createAsyncThunk<a href="https://redux-toolkit.js.org/api/createAsyncThunk#examples">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-createasyncthunkhttpsredux-toolkitjsorgapicreateasyncthunkexamples" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createAsyncThunk</span><span class="p">,</span> <span class="nx">createSlice</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;@reduxjs/toolkit&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&#34;axios&#34;</span><span class="p">;</span>
+</code></pre></div><h3 id="utilsusereduxtoolkitts" class="relative group">utils/useReduxToolkit.ts <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#utilsusereduxtoolkitts" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">TypedUseSelectorHook</span><span class="p">,</span> <span class="nx">useDispatch</span><span class="p">,</span> <span class="nx">useSelector</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">AppDispatch</span><span class="p">,</span> <span class="nx">RootState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;../redux/store&#34;</span><span class="p">;</span>
 
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">asyncActionCreator</span> <span class="o">=</span> <span class="nx">createAsyncThunk</span><span class="p">(</span>
-  <span class="s2">&#34;reducer/asyncActionCreator&#34;</span><span class="p">,</span>
-  <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useAppDispatch</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">useDispatch</span><span class="p">&lt;</span><span class="nt">AppDispatch</span><span class="p">&gt;();</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useAppSelector</span>: <span class="kt">TypedUseSelectorHook</span><span class="p">&lt;</span><span class="nt">RootState</span><span class="p">&gt;</span> <span class="o">=</span> <span class="nx">useSelector</span><span class="p">;</span>
+</code></pre></div><h3 id="pages_appts" class="relative group">pages/_app.ts <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#pages_appts" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">AppProps</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;next/app&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Provider</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="nx">store</span> <span class="kr">from</span> <span class="s2">&#34;../redux/store&#34;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">MyApp</span><span class="p">({</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">pageProps</span> <span class="p">}</span><span class="o">:</span> <span class="nx">AppProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">Provider</span> <span class="na">store</span><span class="o">=</span><span class="p">{</span><span class="nx">store</span><span class="p">}&gt;</span>
+      <span class="p">&lt;</span><span class="nt">Component</span> <span class="p">{</span><span class="na">...pageProps</span><span class="p">}</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">Provider</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">MyApp</span><span class="p">;</span>
+</code></pre></div><h3 id="usage" class="relative group">Usage <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#usage" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useAppSelector</span><span class="p">,</span> <span class="nx">useAppDispatch</span>  <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;../utils/useReduxToolkit&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">exampleSelector</span><span class="p">,</span> <span class="nx">actionCreator</span>  <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;../redux/modules/example&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Example() {</span>
+  <span class="kr">const</span> <span class="nx">dispatch</span> <span class="o">=</span> <span class="nx">useAppDispatch</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="nx">useAppSelector</span><span class="p">(</span><span class="nx">exampleSelector</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">event</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">dispatch</span><span class="p">(</span><span class="nx">actionCreator</span><span class="p">)</span>
   <span class="p">}</span>
-<span class="p">);</span>
 
-<span class="kr">const</span> <span class="nx">asyncReducerSlice</span> <span class="o">=</span> <span class="nx">createSlice</span><span class="p">({</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;asyncReducer&#34;</span><span class="p">,</span>
-  <span class="nx">initialState</span><span class="o">:</span> <span class="p">{</span> <span class="nx">loading</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">error</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">data</span><span class="o">:</span> <span class="nx">initial_data</span> <span class="p">}</span>
-  <span class="nx">reducers</span><span class="o">:</span> <span class="p">{},</span>
-  <span class="nx">extraReducers</span><span class="o">:</span> <span class="p">(</span><span class="nx">builder</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">builder</span><span class="p">.</span><span class="nx">addCase</span><span class="p">(</span><span class="nx">asyncActionCreator</span><span class="p">.</span><span class="nx">pending</span><span class="p">,</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">state</span><span class="p">.</span><span class="nx">loading</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="p">});</span>
-    <span class="nx">builder</span><span class="p">.</span><span class="nx">addCase</span><span class="p">(</span><span class="nx">asyncActionCreator</span><span class="p">.</span><span class="nx">fulfilled</span><span class="p">,</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">state</span><span class="p">.</span><span class="nx">loading</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-      <span class="nx">state</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">;</span>
-    <span class="p">});</span>
-    <span class="nx">builder</span><span class="p">.</span><span class="nx">addCase</span><span class="p">(</span><span class="nx">asyncActionCreator</span><span class="p">.</span><span class="nx">rejected</span><span class="p">,</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">state</span><span class="p">.</span><span class="nx">loading</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-      <span class="nx">state</span><span class="p">.</span><span class="nx">error</span> <span class="o">=</span> <span class="nx">action</span><span class="p">.</span><span class="nx">error</span><span class="p">;</span>
-    <span class="p">});</span>
-  <span class="p">},</span>
-<span class="p">});</span>
+  <span class="k">return</span> <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div><hr>
+<p>Ref. <a href="https://www.merixstudio.com/blog/introduction-using-redux-toolkit-nextjs-and-typescript/">Introduction to using Redux Toolkit in Next.js and TypeScript</a></p>
 
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">asyncReducerSlice</span><span class="p">.</span><span class="nx">reducer</span><span class="p">;</span>
-</code></pre></div><h2 id="component" class="relative group">Component <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#component" aria-label="Anchor">#</a></span></h2>
-<h3 id="1-useselect" class="relative group">1) useSelect <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-useselect" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useSelector</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
-
-<span class="kr">const</span> <span class="nx">reducerState</span> <span class="o">=</span> <span class="nx">useSelector</span><span class="p">((</span><span class="nx">store</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">store</span><span class="p">.</span><span class="nx">reducer</span><span class="p">);</span>
-</code></pre></div><h3 id="2-usedispatch" class="relative group">2) useDispatch <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-usedispatch" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useDispatch</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
-
-<span class="kr">const</span> <span class="nx">dispatch</span> <span class="o">=</span> <span class="nx">useDispatch</span><span class="p">();</span>
-
-<span class="nx">dispatch</span><span class="p">(</span><span class="nx">actionCreator</span><span class="p">(</span><span class="nx">params</span><span class="p">));</span>
-</code></pre></div>
       </div>
     </section>
     <footer class="pt-8 max-w-prose">
@@ -585,6 +533,45 @@
       
 
       
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group" href="/posts/projects/debate-ducks-6/">
+              <span
+                class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >[Debate-Ducks] WebSocket - Canvas</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-05-22 00:00:00 &#43;0000 UTC">22 May 2022</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
 
     </footer>
     

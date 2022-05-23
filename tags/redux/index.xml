@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Sun, 19 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/redux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/redux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Redux] Redux-toolkit in Next.js and TypeScript</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/redux-toolkit-next.js-ts/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/studies/react/redux-toolkit-next.js-ts/</guid>
+      <description>npm i @reduxjs/toolkit react-redux next-redux-wrapper npm i -D @types/react-redux redux/store.</description>
+    </item>
+    
     <item>
       <title>BC-12w-7 / {FC} Redux-saga</title>
       <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-7/</link>
