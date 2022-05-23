@@ -103,7 +103,7 @@
     "keywords": ["Redux"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "255"
+    "wordCount": "266"
   }]
   </script>
 
@@ -380,12 +380,20 @@ npm i -D @types/react-redux
   <span class="nx">Action</span><span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;</span>
 <span class="o">&gt;</span><span class="p">;</span>
 </code></pre></div><h3 id="reduxmodulesexamplets" class="relative group">redux/modules/example.ts <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reduxmodulesexamplets" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">RootState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;./../store&#34;</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">RootState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;../store&#34;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">createSlice</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;@reduxjs/toolkit&#34;</span><span class="p">;</span>
 
-<span class="kr">const</span> <span class="nx">example</span> <span class="o">=</span> <span class="nx">createSlice</span><span class="p">({</span>
+<span class="kr">export</span> <span class="kr">interface</span> <span class="nx">IExample</span> <span class="p">{</span>
+  <span class="nx">value</span>: <span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">initialState</span>: <span class="kt">IExample</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">value</span><span class="o">:</span> <span class="s2">&#34;...&#34;</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">exampleSlice</span> <span class="o">=</span> <span class="nx">createSlice</span><span class="p">({</span>
   <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;example&#34;</span><span class="p">,</span>
-  <span class="nx">initialState</span><span class="o">:</span> <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="s2">&#34;...&#34;</span> <span class="p">},</span>
+  <span class="nx">initialState</span><span class="p">,</span>
   <span class="nx">reducers</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">actionCreator</span><span class="o">:</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="c1">// action.payload는 actionCreator의 params
