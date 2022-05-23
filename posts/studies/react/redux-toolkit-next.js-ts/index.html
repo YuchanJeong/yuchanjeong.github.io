@@ -436,7 +436,7 @@ npm i -D @types/react-redux
   <span class="kr">const</span> <span class="nx">dispatch</span> <span class="o">=</span> <span class="nx">useAppDispatch</span><span class="p">();</span>
   <span class="kr">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="nx">useAppSelector</span><span class="p">(</span><span class="nx">exampleSelector</span><span class="p">);</span>
   <span class="kr">const</span> <span class="nx">event</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">dispatch</span><span class="p">(</span><span class="nx">actionCreator</span><span class="p">)</span>
+    <span class="nx">dispatch</span><span class="p">(</span><span class="nx">actionCreator</span><span class="p">(</span><span class="cm">/*action.payload*/</span><span class="p">))</span>
   <span class="p">}</span>
 
   <span class="k">return</span> <span class="p">...</span>
