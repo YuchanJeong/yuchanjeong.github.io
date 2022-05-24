@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "598"
+    "wordCount": "597"
   }]
   </script>
 
@@ -352,7 +352,7 @@
         <li><a href="#캔버스-및-비디오">캔버스 및 비디오</a></li>
         <li><a href="#카메라-연결-상태">카메라 연결 상태</a></li>
         <li><a href="#캔버스에-그리기">캔버스에 그리기</a></li>
-        <li><a href="#props-type-정리">Props Type 정리</a></li>
+        <li><a href="#props-타입-정리">Props 타입 정리</a></li>
       </ul>
     </li>
     <li><a href="#문제-및-문제-해결">문제 및 문제 해결</a>
@@ -446,8 +446,8 @@
     <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillRect</span><span class="p">(</span><span class="nx">dx</span><span class="p">,</span> <span class="nx">dy</span><span class="p">,</span> <span class="nx">w</span><span class="p">,</span> <span class="nx">h</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">};</span>
-</code></pre></div><h3 id="props-type-정리" class="relative group">Props Type 정리 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#props-type-%ec%a0%95%eb%a6%ac" aria-label="Anchor">#</a></span></h3>
-<p>Props를 넘길 때마다 Props의 타입을 하나하나 작성해 주어야 해서 시간이 조금 소요되었다. Props의 타입을 <code>interface</code>로 모두 저장해두고 <code>Pick</code>을 이용해서 뽑아서 사용하니 편리하고 시간도 절약되었다.</p>
+</code></pre></div><h3 id="props-타입-정리" class="relative group">Props 타입 정리 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#props-%ed%83%80%ec%9e%85-%ec%a0%95%eb%a6%ac" aria-label="Anchor">#</a></span></h3>
+<p>Props를 넘길 때마다 Props의 타입을 하나하나 작성해 주어야 해서 시간이 조금 소요되었다. Props의 타입을 <code>interface</code>로 모두 저장해두고 <code>Pick</code>으로 뽑아서 사용하니 편리하고 시간도 절약되었다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Buttons</span><span class="p">({</span>
   <span class="nx">peer</span><span class="p">,</span>
   <span class="nx">streamRef</span><span class="p">,</span>
