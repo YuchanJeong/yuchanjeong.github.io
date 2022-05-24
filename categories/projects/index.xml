@@ -9,12 +9,12 @@
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
     <lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Debate-Ducks] WebSocket - Canvas</title>
+      <title>[Debate-Ducks] WebSocket - Canvas 1</title>
       <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-6/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-6/</guid>
-      <description>개요 #문제 및 문제 해결 #문제 1 - PR의 커밋 중첩 ## 문제</description>
+      <description>개요 #캔버스에 여러 요소들(비디오, 공유 화면, 각종 정보 등)을 그리고 녹화할 수 있게 만들었다.</description>
     </item>
     
     <item>
