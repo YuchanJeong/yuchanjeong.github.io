@@ -7,14 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/devlog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/devlog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Debate-Ducks] WebSocket - Canvas 1</title>
+      <title>[Debate-Ducks] WebSocket - Disconnect</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-7/</link>
+      <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-7/</guid>
+      <description>개요 #작업 내용 #</description>
+    </item>
+    
+    <item>
+      <title>[Debate-Ducks] WebSocket - Canvas</title>
       <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-6/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-6/</guid>
-      <description>개요 #캔버스에 여러 요소들(비디오, 공유 화면, 각종 정보 등)을 그리고 녹화할 수 있게 만들었다.</description>
+      <description>개요 #캔버스에 여러 비디오 및 공유 화면를 포함한 요소들을 그리고 녹화할 수 있게 만들었다.</description>
     </item>
     
     <item>

@@ -13,14 +13,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>[Debate-Ducks] WebSocket - Stream &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="[Debate-Ducks] WebSocket - Stream &middot; Yuchan&#39;s hello world!" />
+  <title>[Debate-Ducks] WebSocket - Disconnect &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[Debate-Ducks] WebSocket - Disconnect &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog of a developer who wants to help create a better world :)" />
   
   
   
-  <link rel="canonical" href="https://yuchanjeong.github.io/posts/projects/debate-ducks-5/" />
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/projects/debate-ducks-7/" />
   
   
   
@@ -66,17 +66,17 @@
   
   
   
-  <meta property="og:title" content="[Debate-Ducks] WebSocket - Stream" />
-<meta property="og:description" content="개요 #오디오 및 비디오의 끄기/켜기 기능과 화면 공유 기능을 추가했다." />
+  <meta property="og:title" content="[Debate-Ducks] WebSocket - Disconnect" />
+<meta property="og:description" content="개요 #작업 내용 #" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks-5/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-05-21T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-05-21T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks-7/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-25T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[Debate-Ducks] WebSocket - Stream"/>
-<meta name="twitter:description" content="개요 #오디오 및 비디오의 끄기/켜기 기능과 화면 공유 기능을 추가했다."/>
+<meta name="twitter:title" content="[Debate-Ducks] WebSocket - Disconnect"/>
+<meta name="twitter:description" content="개요 #작업 내용 #"/>
 
   
   <script type="application/ld+json">
@@ -84,26 +84,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "[Debate-Ducks] WebSocket - Stream",
-    "headline": "[Debate-Ducks] WebSocket - Stream",
+    "name": "[Debate-Ducks] WebSocket - Disconnect",
+    "headline": "[Debate-Ducks] WebSocket - Disconnect",
     
-    "abstract": "개요 #\r오디오 및 비디오의 끄기\/켜기 기능과 화면 공유 기능을 추가했다.",
+    "abstract": "개요 #\r작업 내용 #\r",
     "inLanguage": "en",
-    "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks-5\/",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks-7\/",
     "author" : {
       "@type": "Person",
       "name": "Yuchan"
     },
     "copyrightYear": "2022",
-    "dateCreated": "2022-05-21T00:00:00\u002b00:00",
-    "datePublished": "2022-05-21T00:00:00\u002b00:00",
+    "dateCreated": "2022-05-25T00:00:00\u002b00:00",
+    "datePublished": "2022-05-25T00:00:00\u002b00:00",
     
-    "dateModified": "2022-05-21T00:00:00\u002b00:00",
+    "dateModified": "2022-05-25T00:00:00\u002b00:00",
     
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "407"
+    "wordCount": "5"
   }]
   </script>
 
@@ -255,7 +255,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        [Debate-Ducks] WebSocket - Stream
+        [Debate-Ducks] WebSocket - Disconnect
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -288,7 +288,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2022-05-21 00:00:00 &#43;0000 UTC">21 May 2022</time>
+      <time datetime="2022-05-25 00:00:00 &#43;0000 UTC">25 May 2022</time>
     
 
     
@@ -347,13 +347,7 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#개요">개요</a></li>
-    <li><a href="#문제-및-문제-해결">문제 및 문제 해결</a>
-      <ul>
-        <li><a href="#문제-1---useref를-하위-요소로-보낼-때">문제 1 - useRef를 하위 요소로 보낼 때</a></li>
-        <li><a href="#문제-2---type-error">문제 2 - Type Error</a></li>
-        <li><a href="#문제-3---화면공유-시스템-거절">문제 3 - 화면공유 시스템 거절</a></li>
-      </ul>
-    </li>
+    <li><a href="#작업-내용">작업 내용</a></li>
   </ul>
 </nav>
   </div>
@@ -364,66 +358,7 @@
       
       <div class="min-w-0 min-h-0 max-w-prose">
         <h2 id="개요" class="relative group">개요 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ea%b0%9c%ec%9a%94" aria-label="Anchor">#</a></span></h2>
-<p>오디오 및 비디오의 끄기/켜기 기능과 화면 공유 기능을 추가했다.</p>
-<img width="800" alt="details" src="https://user-images.githubusercontent.com/84524514/169694021-488bfbde-4488-4e95-bafa-0b9472e6fc9c.png">
-<h2 id="문제-및-문제-해결" class="relative group">문제 및 문제 해결 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-%eb%b0%8f-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0" aria-label="Anchor">#</a></span></h2>
-<h3 id="문제-1---useref를-하위-요소로-보낼-때" class="relative group">문제 1 - useRef를 하위 요소로 보낼 때 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-1---useref%eb%a5%bc-%ed%95%98%ec%9c%84-%ec%9a%94%ec%86%8c%eb%a1%9c-%eb%b3%b4%eb%82%bc-%eb%95%8c" aria-label="Anchor">#</a></span></h3>
-<p><code>useRef()</code>로 <code>streamRef</code>에 사용자의 스트림을 저장해서 사용하였다. 그리고 비디오 끄기/켜기 버튼을 하위 컴포넌트로 사용하면서 <code>stream={streamRef.current}</code>로 props를 넘겨주었다.</p>
-<p>끄기/켜기 기능은 <code>stream</code>이 있는 경우에만 작동하게 해두었는데, 이미 사용자의 스트림을 받아서 비디오로 표시하고 있음에도 제대로 작동하지 않았다. 콘솔을 찍어보니 여전히 <code>stream</code>이 undefined였다. <code>useRef()</code>의 변경은 재랜더링을 일으키지 않기 때문이었다.</p>
-<p>그래서 <code>streamRef={streamRef}</code>로 직접 넘겨준 뒤 하위 컴포넌트에서 <code>stream.current</code>로 사용하자 문제가 말끔히 해결되었다.</p>
-<p>Ps. 다른 이유로 재랜더링이 일어날 경우 코드는 정상 작동한다. 그래서 이 기능을 독립적으로 확인해 보기 전까지는 정상적으로 작동한다는 착각을 하게 되었다. 안전성을 위해서 <code>useRef()</code>를 하위 요소로 넘길 때는 <code>ref.current</code>가 아닌 <code>ref</code> 자체를 넘기는 것을 추천한다.</p>
-<h3 id="문제-2---type-error" class="relative group">문제 2 - Type Error <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-2---type-error" aria-label="Anchor">#</a></span></h3>
-<p>화면 공유 기능을 개발할 때 <code>if (peerRef.current &amp;&amp; myStreamRef.current &amp;&amp; myVideoRef.current) {...}</code>로 한번 falsy 일 가능성을 제거해 줬음에도 <code>screenStream.getTracks()[0].onended</code> 내부의 <code>... Ref.current</code>가 falsy 일 가능성이 있다고 타입 에러가 떴다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="nx">navigator</span><span class="p">.</span><span class="nx">mediaDevices</span><span class="p">.</span><span class="nx">getDisplayMedia</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">screenStream</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">&amp;&amp;</span> <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">&amp;&amp;</span> <span class="nx">myVideoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">replaceTrack</span><span class="p">(</span>
-      <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
-      <span class="nx">screenStream</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
-      <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span>
-    <span class="p">);</span>
-    <span class="nx">myVideoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">srcObject</span> <span class="o">=</span> <span class="nx">screenStream</span><span class="p">;</span>
-  <span class="p">}</span>
-
-  <span class="nx">screenStream</span><span class="p">.</span><span class="nx">getTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">].</span><span class="nx">onended</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">replaceTrack</span><span class="p">(</span>
-      <span class="nx">screenStream</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
-      <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
-      <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span>
-    <span class="p">);</span>
-    <span class="nx">myVideoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">srcObject</span> <span class="o">=</span> <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">;</span>
-  <span class="p">};</span>
-<span class="p">});</span>
-</code></pre></div><p><a href="/posts/projects/debate-ducks-4/#%EB%AC%B8%EC%A0%9C-2---type-error">같은 문제</a>가 이전에 발생했었는데 한 번 더 같은 문제가 다른 형태로 발생하니 이유를 알 수 있었다. 이미 <code>if</code> 문으로 falsy 일 가능성을 없앴어도 <code>.onended</code>에 추가하는 함수는 독립적으로 작동하기 때문이다. 즉, <code>.onended</code>에 추가하는 함수 내부에서도 falsy 일 가능성을 다시 없애주어야 한다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="nx">navigator</span><span class="p">.</span><span class="nx">mediaDevices</span><span class="p">.</span><span class="nx">getDisplayMedia</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">screenStream</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">&amp;&amp;</span> <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">&amp;&amp;</span> <span class="nx">myVideoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">replaceTrack</span><span class="p">(</span>
-      <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
-      <span class="nx">screenStream</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
-      <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span>
-    <span class="p">);</span>
-    <span class="nx">myVideoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">srcObject</span> <span class="o">=</span> <span class="nx">screenStream</span><span class="p">;</span>
-  <span class="p">}</span>
-
-  <span class="nx">screenStream</span><span class="p">.</span><span class="nx">getTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">].</span><span class="nx">onended</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">&amp;&amp;</span> <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">&amp;&amp;</span> <span class="nx">myVideoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">replaceTrack</span><span class="p">(</span>
-        <span class="nx">screenStream</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
-        <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
-        <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span>
-      <span class="p">);</span>
-      <span class="nx">myVideoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">srcObject</span> <span class="o">=</span> <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">};</span>
-<span class="p">});</span>
-</code></pre></div><p>Ps. 위 코드의 경우 WebRTC 연결을 하지 않았을 때 화면 공유를 하지 못한다는 문제가 추가로 발생하였다. 조건문 안의 <code>peerRef.current</code>를 따로 조건처리 하여 해결하였다.</p>
-<h3 id="문제-3---화면공유-시스템-거절" class="relative group">문제 3 - 화면공유 시스템 거절 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-3---%ed%99%94%eb%a9%b4%ea%b3%b5%ec%9c%a0-%ec%8b%9c%ec%8a%a4%ed%85%9c-%ea%b1%b0%ec%a0%88" aria-label="Anchor">#</a></span></h3>
-<p><a href="/posts/projects/debate-ducks-5/#%EB%AC%B8%EC%A0%9C-2---type-error">문제 2</a>의 코드로 화면 공유를 실행 하였을 때 Chrome 탭 공유는 정상적으로 실행 되지만 전체 화면과 창 공유는 정상적으로 실행되지 않았다.</p>
-<img width="800" alt="screenshot error 1" src="https://user-images.githubusercontent.com/84524514/169689617-7ccddf0a-8580-471a-852d-57efc2d78090.gif">
-<img width="515" alt="screenshot error 2" src="https://user-images.githubusercontent.com/84524514/169689263-28a256c2-0aaa-4985-a93f-98ed029245ce.png">
-<p>system denied 문제라서 우선은 크롬의 설정을 하나씩 살펴보았다. 하지만 모든 권한은 허가 또는 요청으로 되어 있었고, 인터넷 사용 기록을 삭제해 보아도 문제가 해결되지 않았다.</p>
-<p>다음으로는 코드를 살펴보았다. <code>.getDisplayMedia()</code>에 옵션도 넣어보고 콘솔도 찍으면서 확인해 보았지만 여전히 해결의 기미가 보이지 않았다.</p>
-<p>마지막으로 내 컴퓨터의 문제는 아닐까 생각해서 관련 권한들을 살펴보았다. 화면 기록 권한에 크롬이 체크해제되어 있는 것을 보고 순간 이거다 싶었고 정답이었다. 아마 내가 예전에 권한을 거절한 적이 있었고 그래서 권한 요청 조자 오지 않고 시스템이 알아서 거절한 것이었다. 다른 사용자도 비슷한 경험을 할 수 있기 때문에 이 내용도 안내할 것이다.</p>
-<img width="515" alt="screenshot error 3" src="https://user-images.githubusercontent.com/84524514/169690444-8a6265f7-364f-4582-a41f-f856376ff9a0.png">
+<h2 id="작업-내용" class="relative group">작업 내용 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%91%ec%97%85-%eb%82%b4%ec%9a%a9" aria-label="Anchor">#</a></span></h2>
 
       </div>
     </section>
@@ -531,7 +466,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group" href="/posts/projects/debate-ducks-4/">
+            <a class="flex group" href="/posts/studies/react/redux-toolkit-next.js-ts/">
               <span
                 class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -543,11 +478,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >[Debate-Ducks] WebSocket - WebRTC</span
+                  >[Redux] Redux-toolkit in Next.js and TypeScript</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2022-05-20 00:00:00 &#43;0000 UTC">20 May 2022</time>
+                    <time datetime="2022-05-23 00:00:00 &#43;0000 UTC">23 May 2022</time>
                   
                 </span>
               </span>
@@ -555,28 +490,6 @@
           
         </span>
         <span>
-          
-            <a class="flex text-right group" href="/posts/projects/debate-ducks-6/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >[Debate-Ducks] WebSocket - Canvas</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2022-05-22 00:00:00 &#43;0000 UTC">22 May 2022</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
           
         </span>
       </div>
@@ -588,19 +501,6 @@
     
   </article>
 
-      
-        <div
-          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
-        >
-          <a
-            href="#the-top"
-            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="Scroll to top"
-            title="Scroll to top"
-          >
-            &uarr;
-          </a>
-        </div>
       
     </main>
     <div
