@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "407"
+    "wordCount": "401"
   }]
   </script>
 
@@ -349,9 +349,9 @@
     <li><a href="#개요">개요</a></li>
     <li><a href="#문제-및-문제-해결">문제 및 문제 해결</a>
       <ul>
-        <li><a href="#문제-1---useref를-하위-요소로-보낼-때">문제 1 - useRef를 하위 요소로 보낼 때</a></li>
-        <li><a href="#문제-2---type-error">문제 2 - Type Error</a></li>
-        <li><a href="#문제-3---화면공유-시스템-거절">문제 3 - 화면공유 시스템 거절</a></li>
+        <li><a href="#1-useref를-하위-요소로-보낼-때">1. useRef를 하위 요소로 보낼 때</a></li>
+        <li><a href="#2-type-error">2. Type Error</a></li>
+        <li><a href="#3-화면공유-시스템-거절">3. 화면공유 시스템 거절</a></li>
       </ul>
     </li>
   </ul>
@@ -367,12 +367,12 @@
 <p>오디오 및 비디오의 끄기/켜기 기능과 화면 공유 기능을 추가했다.</p>
 <img width="800" alt="details" src="https://user-images.githubusercontent.com/84524514/169694021-488bfbde-4488-4e95-bafa-0b9472e6fc9c.png">
 <h2 id="문제-및-문제-해결" class="relative group">문제 및 문제 해결 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-%eb%b0%8f-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0" aria-label="Anchor">#</a></span></h2>
-<h3 id="문제-1---useref를-하위-요소로-보낼-때" class="relative group">문제 1 - useRef를 하위 요소로 보낼 때 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-1---useref%eb%a5%bc-%ed%95%98%ec%9c%84-%ec%9a%94%ec%86%8c%eb%a1%9c-%eb%b3%b4%eb%82%bc-%eb%95%8c" aria-label="Anchor">#</a></span></h3>
+<h3 id="1-useref를-하위-요소로-보낼-때" class="relative group">1. useRef를 하위 요소로 보낼 때 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-useref%eb%a5%bc-%ed%95%98%ec%9c%84-%ec%9a%94%ec%86%8c%eb%a1%9c-%eb%b3%b4%eb%82%bc-%eb%95%8c" aria-label="Anchor">#</a></span></h3>
 <p><code>useRef()</code>로 <code>streamRef</code>에 사용자의 스트림을 저장해서 사용하였다. 그리고 비디오 끄기/켜기 버튼을 하위 컴포넌트로 사용하면서 <code>stream={streamRef.current}</code>로 props를 넘겨주었다.</p>
 <p>끄기/켜기 기능은 <code>stream</code>이 있는 경우에만 작동하게 해두었는데, 이미 사용자의 스트림을 받아서 비디오로 표시하고 있음에도 제대로 작동하지 않았다. 콘솔을 찍어보니 여전히 <code>stream</code>이 undefined였다. <code>useRef()</code>의 변경은 재랜더링을 일으키지 않기 때문이었다.</p>
 <p>그래서 <code>streamRef={streamRef}</code>로 직접 넘겨준 뒤 하위 컴포넌트에서 <code>stream.current</code>로 사용하자 문제가 말끔히 해결되었다.</p>
 <p>Ps. 다른 이유로 재랜더링이 일어날 경우 코드는 정상 작동한다. 그래서 이 기능을 독립적으로 확인해 보기 전까지는 정상적으로 작동한다는 착각을 하게 되었다. 안전성을 위해서 <code>useRef()</code>를 하위 요소로 넘길 때는 <code>ref.current</code>가 아닌 <code>ref</code> 자체를 넘기는 것을 추천한다.</p>
-<h3 id="문제-2---type-error" class="relative group">문제 2 - Type Error <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-2---type-error" aria-label="Anchor">#</a></span></h3>
+<h3 id="2-type-error" class="relative group">2. Type Error <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-type-error" aria-label="Anchor">#</a></span></h3>
 <p>화면 공유 기능을 개발할 때 <code>if (peerRef.current &amp;&amp; myStreamRef.current &amp;&amp; myVideoRef.current) {...}</code>로 한번 falsy 일 가능성을 제거해 줬음에도 <code>screenStream.getTracks()[0].onended</code> 내부의 <code>... Ref.current</code>가 falsy 일 가능성이 있다고 타입 에러가 떴다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="nx">navigator</span><span class="p">.</span><span class="nx">mediaDevices</span><span class="p">.</span><span class="nx">getDisplayMedia</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">screenStream</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">&amp;&amp;</span> <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">&amp;&amp;</span> <span class="nx">myVideoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
@@ -416,7 +416,7 @@
   <span class="p">};</span>
 <span class="p">});</span>
 </code></pre></div><p>Ps. 위 코드의 경우 WebRTC 연결을 하지 않았을 때 화면 공유를 하지 못한다는 문제가 추가로 발생하였다. 조건문 안의 <code>peerRef.current</code>를 따로 조건처리 하여 해결하였다.</p>
-<h3 id="문제-3---화면공유-시스템-거절" class="relative group">문제 3 - 화면공유 시스템 거절 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-3---%ed%99%94%eb%a9%b4%ea%b3%b5%ec%9c%a0-%ec%8b%9c%ec%8a%a4%ed%85%9c-%ea%b1%b0%ec%a0%88" aria-label="Anchor">#</a></span></h3>
+<h3 id="3-화면공유-시스템-거절" class="relative group">3. 화면공유 시스템 거절 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%ed%99%94%eb%a9%b4%ea%b3%b5%ec%9c%a0-%ec%8b%9c%ec%8a%a4%ed%85%9c-%ea%b1%b0%ec%a0%88" aria-label="Anchor">#</a></span></h3>
 <p><a href="/posts/projects/debate-ducks-5/#%EB%AC%B8%EC%A0%9C-2---type-error">문제 2</a>의 코드로 화면 공유를 실행 하였을 때 Chrome 탭 공유는 정상적으로 실행 되지만 전체 화면과 창 공유는 정상적으로 실행되지 않았다.</p>
 <img width="800" alt="screenshot error 1" src="https://user-images.githubusercontent.com/84524514/169689617-7ccddf0a-8580-471a-852d-57efc2d78090.gif">
 <img width="515" alt="screenshot error 2" src="https://user-images.githubusercontent.com/84524514/169689263-28a256c2-0aaa-4985-a93f-98ed029245ce.png">

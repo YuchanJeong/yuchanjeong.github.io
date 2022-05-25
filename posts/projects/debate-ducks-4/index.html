@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "751"
+    "wordCount": "762"
   }]
   </script>
 
@@ -350,8 +350,8 @@
     <li><a href="#클라이언트-webrtc-코드">클라이언트 WebRTC 코드</a></li>
     <li><a href="#문제-및-문제-해결">문제 및 문제 해결</a>
       <ul>
-        <li><a href="#문제-1---websocket-issue">문제 1 - WebSocket Issue</a></li>
-        <li><a href="#문제-2---type-error">문제 2 - Type Error</a></li>
+        <li><a href="#1-websocket-issue">1. WebSocket Issue</a></li>
+        <li><a href="#2-type-error">2. Type Error</a></li>
       </ul>
     </li>
     <li><a href="#simple-peer-사용-이유">&ldquo;simple-peer&rdquo; 사용 이유</a></li>
@@ -428,7 +428,7 @@
   <span class="p">});</span>
 <span class="p">};</span>
 </code></pre></div><h2 id="문제-및-문제-해결" class="relative group">문제 및 문제 해결 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-%eb%b0%8f-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0" aria-label="Anchor">#</a></span></h2>
-<h3 id="문제-1---websocket-issue" class="relative group">문제 1 - WebSocket Issue <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-1---websocket-issue" aria-label="Anchor">#</a></span></h3>
+<h3 id="1-websocket-issue" class="relative group">1. WebSocket Issue <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-websocket-issue" aria-label="Anchor">#</a></span></h3>
 <p><a href="/posts/projects/debate-ducks-3">이전에 작성한 코드</a>에서 WebRTC를 적용하기 위해 추가로 코드를 작성하였는데 제대로 작동하지 않았다.</p>
 <p>이 프로젝트에서 WebRTC의 연결 과정은 다음과 같다. 사용자가 웹 소켓 서버와 연결됨과 동시에 방(<code>debateId</code>)에 입장을 요청하고, 인원이 다 차지 않았을 경우 방에 입장한다. 이때 먼저 방에 입장해있는 호스트에게 게스트가 입장했다고 알려주고, 호스트는 연결을 제안한다. 게스트는 제안을 받은 뒤 응답을 보내면 게스트와 호스트는 1 대 1로 연결이 된다.</p>
 <p>그러나 실제로 실행했을 때 &ldquo;게스트가 제안을 받지 못하는 문제&quot;가 발생하였다. 우선 클라이언트에서 이벤트를 수신하지 못하는지 알아보기 위해 서버 측에서 제안 코드를 이동해 보았다. 그러자 클라이언트 측에서는 정상적으로 제안을 받았다. 다음으로는 서버 측에 콘솔을 찍어보았는데, 서버 측에서도 정상적으로 제안을 받았다. 결국 서버 측에서 제안을 보내는 부분에 문제가 있다는 소리였다.</p>
@@ -448,7 +448,7 @@
 <p>그래서 이번에는 <code>Room.tsc</code> 컴포넌트의 <code>useEffect()</code> 내부에서 <code>if</code> 문을 통해 소켓 이벤트 발동 및 추가의 조건을 <code>debateId</code>와 <code>socket</code> 모두 undefined가 아닐 때로 하였다. 그러자 문제가 말끔히 해결 되었다.</p>
 <img width="236" alt="success1" src="https://user-images.githubusercontent.com/84524514/169594975-7bdcea51-325a-4c4d-b34a-fc6b41cbdf2c.png">
 <img width="237" alt="success2" src="https://user-images.githubusercontent.com/84524514/169594913-ff0ed3a7-0b94-46e5-89f9-be0c7553335a.png">
-<h3 id="문제-2---type-error" class="relative group">문제 2 - Type Error <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-2---type-error" aria-label="Anchor">#</a></span></h3>
+<h3 id="2-type-error" class="relative group">2. Type Error <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-type-error" aria-label="Anchor">#</a></span></h3>
 <p><code>addTrack</code> 내부의 <code>myStreamRef.current</code>에 타입 에러가 발생하였다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">myStreamRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">&lt;</span><span class="nt">MediaStream</span><span class="p">&gt;();</span>
 <span class="p">...</span>
@@ -475,7 +475,7 @@ npm i -D @types/simple-peer
 </code></pre></div><p>기본 WebRTC로 코드를 작성하였을 때, 연결될 때까지 &ldquo;IceCandidate&quot;를 socket을 통해 여러번 주고받아야 했다. (물론 해결 방법이 있겠지만 나는 구현하는데 실패하였다. 😢😢😢) 그래서 조금 더 효율적으로 코드를 작성하기 위해 관련 라이브러리를 찾아보았다. 그중 &ldquo;simple-peer&quot;를 선택하였는데 그 이유는 우선 가장 많이 설치된 라이브러리라서이고, 또 공식 문서를 확인하였을 때 사용 방법을 가장 쉽게 이해할 수 있었기 때문이다.</p>
 <img width="1323" alt="WebRTC Libraries" src="https://user-images.githubusercontent.com/84524514/169651454-5df86c85-47f6-4caf-bdab-681e4156c011.png">
 <h2 id="typescript-사용-후기" class="relative group">&ldquo;TypeScript&rdquo; 사용 후기 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#typescript-%ec%82%ac%ec%9a%a9-%ed%9b%84%ea%b8%b0" aria-label="Anchor">#</a></span></h2>
-<p>TypeScript를 사용하면서 장점들을 체감하였고 매우 마음에 들었다. 단순히 데이터의 타입을 정해둘 뿐이지만 이 덕분에 코드의 구조와 작동 원리를 더 쉽고 명확하게 파악할 수 있었다.</p>
+<p>TypeScript를 사용하면서 장점들을 체감하였고 매우 마음에 들었다. 단순히 데이터의 타입을 정해둘 뿐이지만 이 덕분에 코드의 구조와 작동 원리를 더 쉽고 명확하게 파악할 수 있었다. TypeScript가 아니었다면 수많은 에러들을 모르고 지나쳤을 것이다. (이전 코드에 문제가 많았지만 JS에서는 오류를 확인하지 못하였음)</p>
 <p>특히 서버 코드와 클라이언트 코드를 각각 작성할 때 TypeScript의 이점이 두드러졌다. 사실 지금 WebSocket 기능을 혼자서 구현하고 있기 때문에 엄청 큰 이점으로 작용하지는 않지만, 그럼에도 구조를 헷갈리지 않고 서버 코드와 클라이언트 코드를 좀 더 쉽게 연동시킬 수 있었다. 서버와 클라이언트를 각각 작업하게 되는 상황에서는 훨씬 유용할 것이다.</p>
 <p>❗️ 추천 이유: 안정성 up, 작업시간 down 👍👍👍</p>
 

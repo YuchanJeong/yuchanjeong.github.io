@@ -9,12 +9,12 @@
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
     <lastBuildDate>Wed, 25 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Debate-Ducks] WebSocket - Disconnect</title>
+      <title>[Debate-Ducks] WebSocket - Reconnect</title>
       <link>https://yuchanjeong.github.io/posts/projects/debate-ducks-7/</link>
       <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-7/</guid>
-      <description>개요 #작업 내용 #</description>
+      <description>개요 #WebRTC 재연결 시 발생하는 여러 문제들을 해결하였다.</description>
     </item>
     
     <item>
