@@ -67,7 +67,7 @@
   
   
   <meta property="og:title" content="[Debate-Ducks] WebSocket - Canvas" />
-<meta property="og:description" content="개요 #캔버스에 여러 비디오 및 공유 화면를 포함한 요소들을 그리고 녹화할 수 있게 만들었다." />
+<meta property="og:description" content="Summary #캔버스에 여러 비디오 및 공유 화면를 포함한 요소들을 그리고 녹화할 수 있게 만들었다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks-6/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-22T00:00:00+00:00" />
@@ -76,7 +76,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Debate-Ducks] WebSocket - Canvas"/>
-<meta name="twitter:description" content="개요 #캔버스에 여러 비디오 및 공유 화면를 포함한 요소들을 그리고 녹화할 수 있게 만들었다."/>
+<meta name="twitter:description" content="Summary #캔버스에 여러 비디오 및 공유 화면를 포함한 요소들을 그리고 녹화할 수 있게 만들었다."/>
 
   
   <script type="application/ld+json">
@@ -87,7 +87,7 @@
     "name": "[Debate-Ducks] WebSocket - Canvas",
     "headline": "[Debate-Ducks] WebSocket - Canvas",
     
-    "abstract": "개요 #\r캔버스에 여러 비디오 및 공유 화면를 포함한 요소들을 그리고 녹화할 수 있게 만들었다.",
+    "abstract": "Summary #\r캔버스에 여러 비디오 및 공유 화면를 포함한 요소들을 그리고 녹화할 수 있게 만들었다.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks-6\/",
     "author" : {
@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "712"
+    "wordCount": "705"
   }]
   </script>
 
@@ -346,8 +346,8 @@
   >
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#개요">개요</a></li>
-    <li><a href="#작업-내용">작업 내용</a>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#details">Details</a>
       <ul>
         <li><a href="#캔버스-및-비디오-크기">캔버스 및 비디오 크기</a></li>
         <li><a href="#카메라-연결-상태">카메라 연결 상태</a></li>
@@ -356,13 +356,13 @@
         <li><a href="#props-타입-정리">Props 타입 정리</a></li>
       </ul>
     </li>
-    <li><a href="#문제-및-문제-해결">문제 및 문제 해결</a>
+    <li><a href="#problems">Problems</a>
       <ul>
-        <li><a href="#1-pr의-커밋-중첩">1. PR의 커밋 중첩</a></li>
-        <li><a href="#2-useref에-할당-불가능">2. useRef에 할당 불가능</a></li>
+        <li><a href="#pr의-커밋-중첩">PR의 커밋 중첩</a></li>
+        <li><a href="#useref에-할당-불가능">useRef에 할당 불가능</a></li>
       </ul>
     </li>
-    <li><a href="#발전한-점">발전한 점</a></li>
+    <li><a href="#reflections">Reflections</a></li>
   </ul>
 </nav>
   </div>
@@ -372,10 +372,10 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <h2 id="개요" class="relative group">개요 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ea%b0%9c%ec%9a%94" aria-label="Anchor">#</a></span></h2>
+        <h2 id="summary" class="relative group">Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#summary" aria-label="Anchor">#</a></span></h2>
 <p>캔버스에 여러 비디오 및 공유 화면를 포함한 요소들을 그리고 녹화할 수 있게 만들었다.</p>
 <img src="https://user-images.githubusercontent.com/84524514/170090866-8df029df-795f-4632-a3fd-ad033abe965c.gif" alt="test"/>
-<h2 id="작업-내용" class="relative group">작업 내용 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%91%ec%97%85-%eb%82%b4%ec%9a%a9" aria-label="Anchor">#</a></span></h2>
+<h2 id="details" class="relative group">Details <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#details" aria-label="Anchor">#</a></span></h2>
 <h3 id="캔버스-및-비디오-크기" class="relative group">캔버스 및 비디오 크기 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%ba%94%eb%b2%84%ec%8a%a4-%eb%b0%8f-%eb%b9%84%eb%94%94%ec%98%a4-%ed%81%ac%ea%b8%b0" aria-label="Anchor">#</a></span></h3>
 <p>이전 프로젝트에서 동일한 동영상 퀄리티를 위해서 캔버스에 고정 크기를 사용했었다. 그래서 화면을 줄이거나 모바일에서 보게 되면 캔버스가 잘리는 문제가 있었다. 이번에는 이런 문제를 해결하고 싶었다. 그래서 스타일(임시로 인라인 스타일 사용)로 보여지는 캔버스의 크기를 바꾼 다음 녹화 테스트를 하자 보여지는 캔버스의 크기와는 상관 없이 캔버스의 고정 크기에 맞게 녹화되었다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="p">&lt;</span><span class="nt">canvas</span>
@@ -476,8 +476,8 @@
   <span class="o">|</span> <span class="s2">&#34;setIsScreenOn&#34;</span>
 <span class="o">&gt;</span><span class="p">)</span> <span class="p">{...}</span>
 </code></pre></div><p>Ps. 색상도 따로 객체 형태로 만들어 유지 보수의 편리성을 높혔다.</p>
-<h2 id="문제-및-문제-해결" class="relative group">문제 및 문제 해결 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-%eb%b0%8f-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0" aria-label="Anchor">#</a></span></h2>
-<h3 id="1-pr의-커밋-중첩" class="relative group">1. PR의 커밋 중첩 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-pr%ec%9d%98-%ec%bb%a4%eb%b0%8b-%ec%a4%91%ec%b2%a9" aria-label="Anchor">#</a></span></h3>
+<h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
+<h3 id="pr의-커밋-중첩" class="relative group">PR의 커밋 중첩 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#pr%ec%9d%98-%ec%bb%a4%eb%b0%8b-%ec%a4%91%ec%b2%a9" aria-label="Anchor">#</a></span></h3>
 <p># 문제</p>
 <p>PR이 쌓이게 되면 커밋과 변경된 파일이 중첩되는 문제가 있었다. 바로바로 리뷰 후 Merge를 하면 문제가 발생하지 않지만 현실적으로는 쉽지 않다. (bcs 주말, 새벽 PR 등) 또 중첩이 될 경우 앞의 PR은 반려하고 뒤의 PR만 Merge 하는 방법도 있지만, PR은 변경 사항을 쉽게 파악할 수 있어야 하기 때문에 너무 많아지거나 다양한 기능이 있는 건 지양해야 한다.</p>
 <img width="800" alt="PR1" src="https://user-images.githubusercontent.com/84524514/169761520-8fd9e5ca-c01c-4969-8740-ef430427fe5e.png">
@@ -486,10 +486,10 @@
 <p>앞의 PR을 Merge 한 뒤 다음 PR을 Merge 하기 전에 Edit을 통해 브랜치를 재설정 해주면 PR이 중첩되지 않고 해당 PR의 변경 사항만 기록된다.</p>
 <img width="800" alt="PR3" src="https://user-images.githubusercontent.com/84524514/169777664-3d19858d-7d0d-48d8-bec9-5aa80f085bb3.png">
 <img width="576" alt="PR4" src="https://user-images.githubusercontent.com/84524514/169777698-8d8e8245-f2f7-4886-b1e5-fd3c01762fa0.png">
-<h3 id="2-useref에-할당-불가능" class="relative group">2. useRef에 할당 불가능 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-useref%ec%97%90-%ed%95%a0%eb%8b%b9-%eb%b6%88%ea%b0%80%eb%8a%a5" aria-label="Anchor">#</a></span></h3>
+<h3 id="useref에-할당-불가능" class="relative group">useRef에 할당 불가능 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#useref%ec%97%90-%ed%95%a0%eb%8b%b9-%eb%b6%88%ea%b0%80%eb%8a%a5" aria-label="Anchor">#</a></span></h3>
 <p>캔버스에 사용자의 미디어와 공유 화면을 각각 그리기 위해 <code>useInterval Hook</code> 작성 중 <code>Cannot assign to 'current' because it is a read-only property.</code> 에러가 발생하였다. 이유는 초깃값으로 null을 지닐 때 제네릭에 null을 포함하지 않으면 변경할 수 없는 객체를 생성하기 때문이다.</p>
 <p>Ref. <a href="https://bobbyhadz.com/blog/react-cannot-assign-to-current-because-read-only-property">(useRef) Cannot assign to &lsquo;current&rsquo; because it is read-only property</a></p>
-<h2 id="발전한-점" class="relative group">발전한 점 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b0%9c%ec%a0%84%ed%95%9c-%ec%a0%90" aria-label="Anchor">#</a></span></h2>
+<h2 id="reflections" class="relative group">Reflections <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reflections" aria-label="Anchor">#</a></span></h2>
 <p>아직 많이 부족하지만 중복 작성되는 요소들을 최대한 공통으로 묶어서 빼는 노력을 통해 코드의 가독성과 유지 보수의 편리성이 많이 늘어났다. 또한 만나는 이슈나 개발과정의 기록을 통해 코드를 이전보다 더 확실하게 이해하게 되었다. 특히 이전에는 내가 작성한 코드를 팀원에게 설명해 줄 때 많은 어려움을 겪었는데, 기록을 하면서 코드를 인간의 언어로 설명하는 과정을 연습할 수 있게 되었고 (이전에는 인간의 언어를 코드로 작성하는 부분만 집중적으로 함), 이제는 팀원들에게 내 코드를 설명하는데 큰 어려움이 없다.</p>
 
       </div>

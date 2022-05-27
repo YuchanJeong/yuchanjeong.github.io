@@ -67,7 +67,7 @@
   
   
   <meta property="og:title" content="[Debate-Ducks] WebSocket - Reconnect" />
-<meta property="og:description" content="개요 #WebRTC 재연결 시 발생하는 여러 문제들을 해결하였다." />
+<meta property="og:description" content="Summary #WebRTC 재연결 시 발생하는 여러 문제들을 해결하였다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks-7/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-25T00:00:00+00:00" />
@@ -76,7 +76,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Debate-Ducks] WebSocket - Reconnect"/>
-<meta name="twitter:description" content="개요 #WebRTC 재연결 시 발생하는 여러 문제들을 해결하였다."/>
+<meta name="twitter:description" content="Summary #WebRTC 재연결 시 발생하는 여러 문제들을 해결하였다."/>
 
   
   <script type="application/ld+json">
@@ -87,7 +87,7 @@
     "name": "[Debate-Ducks] WebSocket - Reconnect",
     "headline": "[Debate-Ducks] WebSocket - Reconnect",
     
-    "abstract": "개요 #\rWebRTC 재연결 시 발생하는 여러 문제들을 해결하였다.",
+    "abstract": "Summary #\rWebRTC 재연결 시 발생하는 여러 문제들을 해결하였다.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks-7\/",
     "author" : {
@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "556"
+    "wordCount": "555"
   }]
   </script>
 
@@ -346,14 +346,18 @@
   >
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#개요">개요</a></li>
-    <li><a href="#문제-및-문제-해결">문제 및 문제 해결</a>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#problems">Problems</a>
       <ul>
-        <li><a href="#1-webrtc-재연결">1. WebRTC 재연결</a></li>
-        <li><a href="#2-재연결-시-화면-공유">2. 재연결 시 화면 공유</a></li>
+        <li><a href="#webrtc-재연결-문제">WebRTC 재연결 문제</a></li>
+        <li><a href="#화면-공유-중-재연결-문제">화면 공유 중 재연결 문제</a></li>
       </ul>
     </li>
-    <li><a href="#작업-방식-제안">작업 방식 제안</a></li>
+    <li><a href="#etc">Etc</a>
+      <ul>
+        <li><a href="#작업-방식-제안">작업 방식 제안</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -363,18 +367,18 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <h2 id="개요" class="relative group">개요 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ea%b0%9c%ec%9a%94" aria-label="Anchor">#</a></span></h2>
+        <h2 id="summary" class="relative group">Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#summary" aria-label="Anchor">#</a></span></h2>
 <p>WebRTC 재연결 시 발생하는 여러 문제들을 해결하였다.</p>
 <p><img src="https://user-images.githubusercontent.com/84524514/170385170-08048515-eaea-4bf5-85c1-355e80a8957e.gif" alt="reconnect"></img></p>
-<h2 id="문제-및-문제-해결" class="relative group">문제 및 문제 해결 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c-%eb%b0%8f-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0" aria-label="Anchor">#</a></span></h2>
-<h3 id="1-webrtc-재연결" class="relative group">1. WebRTC 재연결 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-webrtc-%ec%9e%ac%ec%97%b0%ea%b2%b0" aria-label="Anchor">#</a></span></h3>
+<h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
+<h3 id="webrtc-재연결-문제" class="relative group">WebRTC 재연결 문제 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#webrtc-%ec%9e%ac%ec%97%b0%ea%b2%b0-%eb%ac%b8%ec%a0%9c" aria-label="Anchor">#</a></span></h3>
 <p>WebRTC가 이미 연결되어 있는 상태에서 한쪽이 재접속을 시도할 때 <code>cannot signal</code> 에러가 발생하였다. 이전 프로젝트 때도 발생했던 에러인데 그때는 문제가 발생하는 이유조차 제대로 이해할 수 없어서 뒤로 가기를 막고, 한쪽 연결이 끊겼을 때 다른 쪽의 연결도 끊고 종료 시켜버리는 방식으로 문제를 회피하였다. 보통의 영상 통화라면 위의 방식으로도 충분했겠지만 토론을 진행하며 녹화까지 하는 프로젝트의 특징상 안정성을 위해서 반듯이 해결되어야 할 문제였다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Error cannot signal after peer is destroyed
 </code></pre></div><img width="800" alt="peer" src="https://user-images.githubusercontent.com/84524514/170372767-d1964811-287f-42c9-9872-759b7f99927b.png">
 <p>소켓과 리액트의 구조에 대해서 어느 정도 이해하고 있는 지금은 소켓의 이벤트에 재접속을 시도하지 않은 쪽의 peer가 남아있어서 생기는 문제라는 것을 금방 파악하였다.</p>
 <p>우선 한쪽의 연결이 끊어졌을 때 다른 쪽에 이벤트를 발동시키기 위해 <code>handleDisconnect()</code>를 사용하였다. 이때 이전의 코드를 살펴보니 이 부분이 엄청나게 잘못되어 있었다. 한쪽이 나갔을 때 모든 방에 <code>peerDisconnect</code> 이벤트를 발동 시키게 되어 있었다. 테스트를 할 때 동시에 하나 이상의 토론을 진행한 적이 없어서 발견하지 못했던 문제였다.</p>
 <p>처음에는 <code>this.server.sockets.adapter.rooms</code>에 <code>forEach</code>를 사용해 정보를 찾으려고 하였다. 하지만 <code>handleDisconnect()</code>는 연결이 끊어진 후 발동하는 이벤트라 해당 <code>socket.id</code>는 WebSocket 서버에 남아있지 않았고 정보를 찾기는 어려웠다.</p>
-<p>그래서 <code>join</code> 이벤트가 발동할 때 해당 <code>socket.id</code>에 방의 정보를 담아서 서버 측에 저장해 두고 <code>handleDisconnect()</code>에서 정보를 할당한 다음 삭제하는 방식으로 해결하였다.</p>
+<p>그래서 <code>join</code> 이벤트가 발동할 때 해당 <code>socket.id</code>에 방의 정보를 담아서 서버 측에 저장해 두고 <code>handleDisconnect()</code>에서 정보를 할당한 다음 삭제하는 방식으로 변경하였다.</p>
 <p>그 후 <code>peerDisconnect</code> 이벤트에서 <code>peer.destroy()</code>로 peer를 삭제한 뒤 <code>setPeer(undefined)</code>로 peer를 초기화 시키는 방식으로 접근하였으나 이번에는 <code>Failed to set remote answer sdp</code> 에러가 발생하였다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">DOMException: Failed to execute <span class="s1">&#39;setRemoteDescription&#39;</span> on <span class="s1">&#39;RTCPeerConnection&#39;</span>: Failed to <span class="nb">set</span> remote answer sdp: Called in wrong state: stable
 </code></pre></div><p>이번에는 소켓의 연결이 그대로 남아있는 게 문제의 원인이어서 <code>peerDisconnect</code> 이벤트에서 <code>socket.current.disconnect()</code>로 소켓의 연결을 끊은 다음 새로운 소켓을 연결한 뒤 <code>join</code> 이벤트를 발동시켰다. 그러자
@@ -384,11 +388,12 @@
   at RTCPeerConnection.Peer._pc.onconnectionstatechange
 </code></pre></div><p>새로 생성된 소켓에 peer를 연결하는 이벤트가 작성되어 있지 않기 때문이었다. 그래서 <code>peerDisconnect</code> 이벤트에서 <code>setReConnect(!reConnect)</code>로 <code>reConnect</code>의 값이 변하게 하고, <code>useEffect()</code>의 dependency에 추가하는 방식으로 재연결이 가능하게 만들었다.</p>
 <p>Ps. 빈 배열 dependency로 첫 연결 시에는 비디오 화면이 꺼진 상태로 연결되고, 상대방이 재연 결의 시도했을 때는 현제의 비디오 상태가 유지된다.</p>
-<h3 id="2-재연결-시-화면-공유" class="relative group">2. 재연결 시 화면 공유 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%ec%9e%ac%ec%97%b0%ea%b2%b0-%ec%8b%9c-%ed%99%94%eb%a9%b4-%ea%b3%b5%ec%9c%a0" aria-label="Anchor">#</a></span></h3>
+<h3 id="화면-공유-중-재연결-문제" class="relative group">화면 공유 중 재연결 문제 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%99%94%eb%a9%b4-%ea%b3%b5%ec%9c%a0-%ec%a4%91-%ec%9e%ac%ec%97%b0%ea%b2%b0-%eb%ac%b8%ec%a0%9c" aria-label="Anchor">#</a></span></h3>
 <p>화면 공유 상태에서 다른쪽이 재연결을 시도하면 에러가 발생하였다. 공유 화면의 종료 함수에 이미 종료된 peer가 남아있어서 발생하는 문제였다. 그래서 공유 화면의 스트림을 <code>useRef()</code>에 저장하여 <code>screenStreamRef.current.getTracks()[0].stop()</code>으로 종료 시켜주었다.</p>
 <img width="800" alt="screenshare" src="https://user-images.githubusercontent.com/84524514/170372966-b59370d6-aa5e-47b7-82fa-07e276115632.png">
 <p>Ps. 저장해둔 peer의 정보들도 초기화 시켜주었다.</p>
-<h2 id="작업-방식-제안" class="relative group">작업 방식 제안 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%91%ec%97%85-%eb%b0%a9%ec%8b%9d-%ec%a0%9c%ec%95%88" aria-label="Anchor">#</a></span></h2>
+<h2 id="etc" class="relative group">Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc" aria-label="Anchor">#</a></span></h2>
+<h3 id="작업-방식-제안" class="relative group">작업 방식 제안 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%91%ec%97%85-%eb%b0%a9%ec%8b%9d-%ec%a0%9c%ec%95%88" aria-label="Anchor">#</a></span></h3>
 <p>*<a href="https://github.com/SuSang-YuHee/Debate-Ducks-Client/issues/20">Suggestion Issue</a></p>
 <p>다른 팀원들의 개인 사정으로 인해 현재 나만 개발을 진행하고 있다. 그러던 중 백엔드를 담당하는 팀원이 곧 개발을 시작할 수 있는데, 기본적인 로그인 기능부터 우선으로 작업할 거 같다며 로그인 기능을 먼저 같이 개발하자고 제안하였다. 이전 프로젝트에서 주로 이런 식으로 서버 측과 클라이언트 측이 동시간대에 같은 기능을 작업하였는데 개인적으로 몇 가지 불편함을 느꼈다.</p>
 <p>우선 개발하면서 생기는 변경 사항으로 인한 끊임없는 수정이다. 의사소통에 신경 쓰면서 개발을 해도 실시간 수정 사항으로 인해 &ldquo;이렇게 하기로 한거 아니었냐? 나는 이미 이렇게 했다.&rdquo; 하는 문제로 시간을 꽤나 소모하였다.</p>
@@ -527,6 +532,28 @@
           
         </span>
         <span>
+          
+            <a class="flex text-right group" href="/posts/projects/debate-ducks-8/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >[Debate-Ducks] WebSocket - Debate</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-05-27 00:00:00 &#43;0000 UTC">27 May 2022</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>
