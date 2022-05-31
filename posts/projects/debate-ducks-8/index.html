@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1050"
+    "wordCount": "1071"
   }]
   </script>
 
@@ -488,7 +488,8 @@
     <span class="nx">roomDebates</span><span class="p">[</span><span class="nx">data</span><span class="p">.</span><span class="nx">debateId</span><span class="p">].</span><span class="nx">timer</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
+</code></pre></div><p>Ps. 남은 시간이 10초 일 때와 3초 일 때 경고음이 울리게 만들었다. 10초는 발언을 마무리하라는 신호이고, 3초는 차례가 곧 종료된다는 신호이다.</p>
+<h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
 <h3 id="토론-일시-중단-시-clearinterval-문제" class="relative group">토론 일시 중단 시 clearInterval 문제 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%86%a0%eb%a1%a0-%ec%9d%bc%ec%8b%9c-%ec%a4%91%eb%8b%a8-%ec%8b%9c-clearinterval-%eb%ac%b8%ec%a0%9c" aria-label="Anchor">#</a></span></h3>
 <p>토론은 <code>setInterval</code>을 활용해 1초마다 토론 함수를 실행하는 것으로 진행된다. 일시 중단의 경우 찬반 양측이 모두 방에서 나간 경우 <code>roomDebates.isPause</code>를 true로 변경해 실행했다.</p>
 <p>하지만 이전에 WebRTC 재연결 시 발생하는 에러를 해결하기 위해 한 측의 연결이 끊기면 다른 측의 연결도 파괴한 뒤 재연결 되도록 했다. 그래서 한 측의 연결만 끊겨도 일시 중단이 반듯이 잠시라도 실행된다.</p>
