@@ -67,7 +67,9 @@
   
   
   <meta property="og:title" content="BC-4w-5 / [React] props, state" />
-<meta property="og:description" content="Today I learned #React props &amp; state #  props" />
+<meta property="og:description" content="Today I learned #
+React props &amp; state #
+  props" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/bootcamp/cb-4w-5/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-09-17T00:00:00+00:00" />
@@ -76,7 +78,9 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="BC-4w-5 / [React] props, state"/>
-<meta name="twitter:description" content="Today I learned #React props &amp; state #  props"/>
+<meta name="twitter:description" content="Today I learned #
+React props &amp; state #
+  props"/>
 
   
   <script type="application/ld+json">
@@ -512,7 +516,7 @@
 <p>My Page</p>
 <ul>
 <li>
-<p>과제를 끝내고 나서 다시 둘러보니 MyPage 부분이 마음에 들지 않았다. MyPage는 내가 작성한 글만 보여주는 것인데, 미리 정보가 입력되어있는 dummyData에서 정보를 끌어왔다. 그래서 내가 Tweet 부분에서 새로 만든 state가 반영되지 않았다. 하향식 단방향 데이터 흐름을 지닌 React에서는 데이터를 형제 요소에게 보내는 것이 힘들었다. 잠시 생각해보니 반대로 부모 요소가 데이터를 가지고 있으면 해결될 문제였다. 그래서 부모 요소인 App에서 Hook(useState)을 걸어, 그 state와 setState를 하위 요소로 props로 보내서 사용하였다.</p>
+<p>과제를 끝내고 나서 다시 둘러보니 MyPage 부분이 마음에 들지 않았다. MyPage는 내가 작성한 글만 보여주는 것인데, 미리 정보가 입력되어있는 dummyData에서 정보를 끌어왔다. 그래서 내가 Tweet 부분에서 새로 만든 state가 반영되지 않았다. 하향식 단방향 데이터 흐름을 지닌 React에서는 데이터를 형제 요소에게 보내는 것이 힘들었다. 잠시 생각해보니 반대로 부모 요소가 데이터를 가지고 있으면 해결될 문제였다. 그래서 부모 요소인 App에서 Hook(useState)을 걸어, 그 state와 setState를 하위 요소로 props로 보내서 사용했다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// App.js
 </span><span class="c1"></span><span class="kr">const</span> <span class="p">[</span><span class="nx">tweets</span><span class="p">,</span> <span class="nx">setTweets</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="nx">dummyTweets</span><span class="p">);</span>
 <span class="kr">const</span> <span class="p">[</span><span class="nx">username</span><span class="p">,</span> <span class="nx">setUsername</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&#34;parkhacker&#34;</span><span class="p">);</span>
@@ -537,7 +541,7 @@
   <span class="nx">props</span><span class="p">.</span><span class="nx">setMsg</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
 <span class="p">};</span>
 
-<span class="c1">// MyPage.js
+<span class="c1">// MyPage.js줬다
 </span><span class="c1"></span><span class="kr">const</span> <span class="nx">filteredTweets</span> <span class="o">=</span> <span class="nx">props</span><span class="p">.</span><span class="nx">tweets</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">username</span> <span class="o">===</span> <span class="nx">props</span><span class="p">.</span><span class="nx">username</span><span class="p">);</span>
 </code></pre></div></li>
 <li>

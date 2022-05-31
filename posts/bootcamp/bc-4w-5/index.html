@@ -536,7 +536,7 @@
 <p>My Page</p>
 <ul>
 <li>
-<p>과제를 끝내고 나서 다시 둘러보니 MyPage 부분이 마음에 들지 않았다. MyPage는 내가 작성한 글만 보여주는 것인데, 미리 정보가 입력되어있는 dummyData에서 정보를 끌어왔다. 그래서 내가 Tweet 부분에서 새로 만든 state가 반영되지 않았다. 하향식 단방향 데이터 흐름을 지닌 React에서는 데이터를 형제 요소에게 보내는 것이 힘들었다. 잠시 생각해보니 반대로 부모 요소가 데이터를 가지고 있으면 해결될 문제였다. 그래서 부모 요소인 App에서 Hook(useState)을 걸어, 그 state와 setState를 하위 요소로 props로 보내서 사용하였다.</p>
+<p>과제를 끝내고 나서 다시 둘러보니 MyPage 부분이 마음에 들지 않았다. MyPage는 내가 작성한 글만 보여주는 것인데, 미리 정보가 입력되어있는 dummyData에서 정보를 끌어왔다. 그래서 내가 Tweet 부분에서 새로 만든 state가 반영되지 않았다. 하향식 단방향 데이터 흐름을 지닌 React에서는 데이터를 형제 요소에게 보내는 것이 힘들었다. 잠시 생각해보니 반대로 부모 요소가 데이터를 가지고 있으면 해결될 문제였다. 그래서 부모 요소인 App에서 Hook(useState)을 걸어, 그 state와 setState를 하위 요소로 props로 보내서 사용했다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// App.js
 </span><span class="c1"></span><span class="kr">const</span> <span class="p">[</span><span class="nx">tweets</span><span class="p">,</span> <span class="nx">setTweets</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="nx">dummyTweets</span><span class="p">);</span>
 <span class="kr">const</span> <span class="p">[</span><span class="nx">username</span><span class="p">,</span> <span class="nx">setUsername</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&#34;parkhacker&#34;</span><span class="p">);</span>
@@ -567,7 +567,7 @@
 <span class="p">);</span>
 </code></pre></div></li>
 <li>
-<p>추가로 MyPage의 필터를 사용자가 입력한 props.username으로 하였는데 이때, username만 바꾸고 tweet을 보내지 않은 다음에 마이페이지를 누르면 에러가 났다(아직 입력되어있는 username은 정보를 전혀 가지고 있지 않아서). 그래서 초기값을 삼항 연산자를 이용해 정해주었다.</p>
+<p>추가로 MyPage의 필터를 사용자가 입력한 props.username으로 하였는데 이때, username만 바꾸고 tweet을 보내지 않은 다음에 마이페이지를 누르면 에러가 났다(아직 입력되어있는 username은 정보를 전혀 가지고 있지 않아서). 그래서 초기값을 삼항 연산자를 이용해 정해줬다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">profile</span> <span class="o">=</span> <span class="nx">filteredTweets</span><span class="p">.</span><span class="nx">length</span> <span class="o">!==</span> <span class="mi">0</span> <span class="o">?</span>
     <span class="nx">filteredTweets</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">picture</span>
     <span class="o">:</span> <span class="s1">&#39;https://randomuser.me/api/portraits/men/98.jpg&#39;</span><span class="err">​</span>
