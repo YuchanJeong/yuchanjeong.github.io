@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "978"
+    "wordCount": "1050"
   }]
   </script>
 
@@ -353,6 +353,7 @@
         <li><a href="#토론-진행-방식">토론 진행 방식</a></li>
         <li><a href="#토론-진행">토론 진행</a></li>
         <li><a href="#차례에-맞는-마이크-및-화면-공유">차례에 맞는 마이크 및 화면 공유</a></li>
+        <li><a href="#남은-시간-생략">남은 시간 생략</a></li>
       </ul>
     </li>
     <li><a href="#problems">Problems</a>
@@ -469,7 +470,25 @@
 <p>또한 입론과 반론 및 요약 단계에서의 발언권 보장을 위해 해당 단계에서 상대측의 마이크를 끄고, 마이크 버튼 및 화면 공유 버튼을 비활성화 시켰다. 그리고 각 단계가 전환될 때 화면 공유를 끄고, 차례에 맞게 마이크를 전환시켰다.</p>
 <p>처음에는 교차 조사 단계에서 질문자가 마이크를 껐을 경우에만 답변자의 마이크를 켜서 답변이 가능하게 했다. 하지만 질문자가 &ldquo;답변 감사드립니다. 이제 다음 질문으로 넘어가겠습니다.&ldquo;라고 양해를 구하고 답변을 종료 시키는 것이 마이크를 뚝 하고 끊어버리는 것보다 훨씬 낫다고 판단하여 마이크는 자유롭게 끄고 켜는 것이 가능하게 했다.</p>
 <img width="800px" alt="debate-turn" src="https://user-images.githubusercontent.com/84524514/171024576-1de410a5-9b50-4551-b949-45748871d9af.gif">
-<h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
+<h3 id="남은-시간-생략" class="relative group">남은 시간 생략 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%82%a8%ec%9d%80-%ec%8b%9c%ea%b0%84-%ec%83%9d%eb%9e%b5" aria-label="Anchor">#</a></span></h3>
+<p>발언이 끝난 경우 억지로 남은 시간 동안 더 발언하지 않고 넘어갈 수 있게 남은 시간 생략 기능을 만들었다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kd">@SubscribeMessage</span><span class="p">(</span><span class="s2">&#34;skip&#34;</span><span class="p">)</span>
+<span class="nx">handleSkip</span><span class="p">(</span><span class="kd">@MessageBody</span><span class="p">()</span> <span class="nx">data</span><span class="o">:</span> <span class="p">{</span> <span class="nx">debateId</span>: <span class="kt">string</span><span class="p">;</span> <span class="nx">isPros</span>: <span class="kt">boolean</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span>
+    <span class="nx">roomDebates</span><span class="p">[</span><span class="nx">data</span><span class="p">.</span><span class="nx">debateId</span><span class="p">].</span><span class="nx">timer</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="o">&amp;&amp;</span>
+    <span class="p">((</span><span class="nx">data</span><span class="p">.</span><span class="nx">isPros</span> <span class="o">&amp;&amp;</span>
+      <span class="p">(</span><span class="nx">roomDebates</span><span class="p">[</span><span class="nx">data</span><span class="p">.</span><span class="nx">debateId</span><span class="p">].</span><span class="nx">turn</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">||</span>
+        <span class="nx">roomDebates</span><span class="p">[</span><span class="nx">data</span><span class="p">.</span><span class="nx">debateId</span><span class="p">].</span><span class="nx">turn</span> <span class="o">===</span> <span class="mi">4</span> <span class="o">||</span>
+        <span class="nx">roomDebates</span><span class="p">[</span><span class="nx">data</span><span class="p">.</span><span class="nx">debateId</span><span class="p">].</span><span class="nx">turn</span> <span class="o">===</span> <span class="mi">5</span><span class="p">))</span> <span class="o">||</span>
+      <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">.</span><span class="nx">isPros</span> <span class="o">&amp;&amp;</span>
+        <span class="p">(</span><span class="nx">roomDebates</span><span class="p">[</span><span class="nx">data</span><span class="p">.</span><span class="nx">debateId</span><span class="p">].</span><span class="nx">turn</span> <span class="o">===</span> <span class="mi">2</span> <span class="o">||</span>
+          <span class="nx">roomDebates</span><span class="p">[</span><span class="nx">data</span><span class="p">.</span><span class="nx">debateId</span><span class="p">].</span><span class="nx">turn</span> <span class="o">===</span> <span class="mi">3</span> <span class="o">||</span>
+          <span class="nx">roomDebates</span><span class="p">[</span><span class="nx">data</span><span class="p">.</span><span class="nx">debateId</span><span class="p">].</span><span class="nx">turn</span> <span class="o">===</span> <span class="mi">6</span><span class="p">)))</span>
+  <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">roomDebates</span><span class="p">[</span><span class="nx">data</span><span class="p">.</span><span class="nx">debateId</span><span class="p">].</span><span class="nx">timer</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
 <h3 id="토론-일시-중단-시-clearinterval-문제" class="relative group">토론 일시 중단 시 clearInterval 문제 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%86%a0%eb%a1%a0-%ec%9d%bc%ec%8b%9c-%ec%a4%91%eb%8b%a8-%ec%8b%9c-clearinterval-%eb%ac%b8%ec%a0%9c" aria-label="Anchor">#</a></span></h3>
 <p>토론은 <code>setInterval</code>을 활용해 1초마다 토론 함수를 실행하는 것으로 진행된다. 일시 중단의 경우 찬반 양측이 모두 방에서 나간 경우 <code>roomDebates.isPause</code>를 true로 변경해 실행했다.</p>
 <p>하지만 이전에 WebRTC 재연결 시 발생하는 에러를 해결하기 위해 한 측의 연결이 끊기면 다른 측의 연결도 파괴한 뒤 재연결 되도록 했다. 그래서 한 측의 연결만 끊겨도 일시 중단이 반듯이 잠시라도 실행된다.</p>
