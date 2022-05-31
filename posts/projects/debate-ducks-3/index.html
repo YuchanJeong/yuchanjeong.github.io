@@ -67,7 +67,7 @@
   
   
   <meta property="og:title" content="[Debate-Ducks] Debateroom - Room" />
-<meta property="og:description" content="Summary #WebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 만들었다." />
+<meta property="og:description" content="Summary #WebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 함." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks-3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-18T00:00:00+00:00" />
@@ -76,7 +76,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Debate-Ducks] Debateroom - Room"/>
-<meta name="twitter:description" content="Summary #WebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 만들었다."/>
+<meta name="twitter:description" content="Summary #WebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 함."/>
 
   
   <script type="application/ld+json">
@@ -87,7 +87,7 @@
     "name": "[Debate-Ducks] Debateroom - Room",
     "headline": "[Debate-Ducks] Debateroom - Room",
     
-    "abstract": "Summary #\rWebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 만들었다.",
+    "abstract": "Summary #\rWebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 함.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks-3\/",
     "author" : {
@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "427"
+    "wordCount": "435"
   }]
   </script>
 
@@ -353,7 +353,11 @@
         <li><a href="#클라이언트-방-입장-코드">클라이언트 방 입장 코드</a></li>
       </ul>
     </li>
-    <li><a href="#problems">Problems</a></li>
+    <li><a href="#problems">Problems</a>
+      <ul>
+        <li><a href="#방-입장-시-발생하는-문제-1">방 입장 시 발생하는 문제 1</a></li>
+      </ul>
+    </li>
     <li><a href="#reflections">Reflections</a></li>
   </ul>
 </nav>
@@ -365,7 +369,7 @@
       
       <div class="min-w-0 min-h-0 max-w-prose">
         <h2 id="summary" class="relative group">Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#summary" aria-label="Anchor">#</a></span></h2>
-<p>WebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 만들었다. (한 방에 최대 2명)</p>
+<p>WebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 함. (한 방에 최대 2명)</p>
 <h2 id="details" class="relative group">Details <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#details" aria-label="Anchor">#</a></span></h2>
 <h3 id="서버-방-입장-코드" class="relative group">서버 방 입장 코드 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%84%9c%eb%b2%84-%eb%b0%a9-%ec%9e%85%ec%9e%a5-%ec%bd%94%eb%93%9c" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span>
@@ -472,20 +476,21 @@
   <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
-<p>처음에는 <code>useEffect()</code> 내부에서 <code>setState</code>로 socket을 받아서 저장했다. 그러자 한 번의 입장에 여러 번의 연결 시도를 하는 문제가 있었다. <em>(bcs, 재랜더링)</em></p>
-<img width="246" alt="useState 1번" src="https://user-images.githubusercontent.com/84524514/169258595-7a513e2f-ae1e-4c94-8eac-e9481ab0a68f.png">
-<img width="231" alt="useState 2번" src="https://user-images.githubusercontent.com/84524514/169258523-c649af87-a15e-4f78-8b71-68ebcefe2726.png">
-<p>두 번째에는 <code>useEffect()</code> 내부에서 바로 const로 socket을 저장한 다음 내부에서 바로 socket의 event를 작성 하였다. 하지만 <code>useState()</code>를 사용했을 때와 같은 문제가 여전히 발생 하였고, 두 번째 브라우저에서 입장하자 이미 정원을 초과하였다고 입장을 거절당하는 추가적인 문제도 발생하였다.</p>
-<img width="232" alt="const 1번" src="https://user-images.githubusercontent.com/84524514/169260185-921edb9f-0616-46f3-9758-89c8d1d4ce1d.png">
+<h3 id="방-입장-시-발생하는-문제-1" class="relative group">방 입장 시 발생하는 문제 1 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b0%a9-%ec%9e%85%ec%9e%a5-%ec%8b%9c-%eb%b0%9c%ec%83%9d%ed%95%98%eb%8a%94-%eb%ac%b8%ec%a0%9c-1" aria-label="Anchor">#</a></span></h3>
+<p>처음에는 <code>useEffect</code> 내부에서 <code>setState</code>로 socket을 받아서 저장했다. 그러자 한 번의 입장에 여러 번의 연결 시도를 하는 문제가 있었다. <em>(bcs, 재랜더링)</em></p>
+<img width="240" alt="useState 1번" src="https://user-images.githubusercontent.com/84524514/169258595-7a513e2f-ae1e-4c94-8eac-e9481ab0a68f.png">
+<img width="240" alt="useState 2번" src="https://user-images.githubusercontent.com/84524514/169258523-c649af87-a15e-4f78-8b71-68ebcefe2726.png">
+<p>두 번째에는 <code>useEffect</code> 내부에서 바로 const로 socket을 저장한 다음 내부에서 바로 socket의 event를 작성 했다. 하지만 <code>useState</code>를 사용했을 때와 같은 문제가 여전히 발생 하였고, 두 번째 브라우저에서 입장하자 이미 정원을 초과하였다고 입장을 거절당하는 추가적인 문제도 발생했다.</p>
+<img width="240" alt="const 1번" src="https://user-images.githubusercontent.com/84524514/169260185-921edb9f-0616-46f3-9758-89c8d1d4ce1d.png">
 <img width="240" alt="const 2번" src="https://user-images.githubusercontent.com/84524514/169260201-590ee288-4893-48d2-b9bd-7fdd873fe170.png">
-<p>그래서 cleanUp으로 연결 해제 처리를 해주었더니 위에서 언급한 문제는 모두 해결되었다. 하지만 연결을 하기 전에 해제된다는 경고가 뜨기 시작하였다.</p>
-<img width="245" alt="const 3번" src="https://user-images.githubusercontent.com/84524514/169260664-c8d58982-e2c7-4466-9060-afd7030033a0.png">
-<p>마지막으로 <code>useState()</code> 대신에 <code>useRef()</code>를 사용하였다. <em>(bcs, useRef는 재랜더링이 일어나지 않음)</em> 그러자 모든 문제가 말끔히 해결되었다.</p>
-<img width="244" alt="useRef 1번" src="https://user-images.githubusercontent.com/84524514/169261494-559f58d4-e37f-4ec3-af48-7fdc5006824f.png">
-<img width="242" alt="useRef 2번" src="https://user-images.githubusercontent.com/84524514/169261521-436df3de-09c4-4e13-8a3d-56c358b60346.png">
+<p>그래서 cleanUp으로 연결 해제 처리를 해주었더니 위에서 언급한 문제는 모두 해결됬다. 하지만 연결을 하기 전에 해제된다는 경고가 뜨기 시작했다.</p>
+<img width="240" alt="const 3번" src="https://user-images.githubusercontent.com/84524514/169260664-c8d58982-e2c7-4466-9060-afd7030033a0.png">
+<p>마지막으로 <code>useState</code> 대신에 <code>useRef</code>를 사용했다. <em>(bcs, useRef는 재랜더링이 일어나지 않음)</em> 그러자 모든 문제가 말끔히 해결됬다.</p>
+<img width="240" alt="useRef 1번" src="https://user-images.githubusercontent.com/84524514/169261494-559f58d4-e37f-4ec3-af48-7fdc5006824f.png">
+<img width="240" alt="useRef 2번" src="https://user-images.githubusercontent.com/84524514/169261521-436df3de-09c4-4e13-8a3d-56c358b60346.png">
 <h2 id="reflections" class="relative group">Reflections <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reflections" aria-label="Anchor">#</a></span></h2>
 <p>이전에 한번 만든 적 있는 기능이다 보니 이전의 코드를 참조하면서 만들고 있다. 참조만 하고 더 많이 생각하며 발전시킨 코드를 작성해야 하는데 이전의 코드를 답습하며 현재의 스택에 맞게 적용만 하고 있었다.</p>
-<p>이제부터는 지난 프로젝트 이후에 배운 내용들을 활용하고 더 많이 생각하며 발전된 코드(가독성, 안정성 그리고 효율성)를 작성할 것이다. 🔥🔥🔥</p>
+<p>이제부터는 지난 프로젝트 이후에 배운 내용들을 활용하고 더 많이 생각하며 발전된 코드(가독성, 안정성 그리고 효율성 면에서)를 작성할 것이다. 🔥🔥🔥</p>
 
       </div>
     </section>

@@ -14,7 +14,7 @@
       <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-8/</guid>
-      <description>Summary #추가 작성 예정</description>
+      <description>Summary #토론 시작, 일시 중단, 단계별 안내 및 권한 그리고 화면 공유 방식 변경.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-7/</guid>
-      <description>Summary #WebRTC 재연결 시 발생하는 여러 문제들을 해결하였다.</description>
+      <description>Summary #WebRTC 재연결 시 발생하는 여러 문제들 해결.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-6/</guid>
-      <description>Summary #캔버스에 여러 비디오 및 공유 화면를 포함한 요소들을 그리고 녹화할 수 있게 만들었다.</description>
+      <description>Summary #캔버스에 비디오 및 공유 화면를 포함한 여러 요소들을 그리고 녹화할 수 있게 만듦.</description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@
       <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-5/</guid>
-      <description>Summary #오디오 및 비디오의 끄기/켜기 기능과 화면 공유 기능을 추가했다.</description>
+      <description>Summary #마이크 및 비디오 끄기/켜기 기능 및 화면 공유 기능 추가.</description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-4/</guid>
-      <description>Summary #simple-peer를 사용해서 사용자를 1 대 1로 연결하여 서로의 미디어를 주고받을 수 있게 만들었다.</description>
+      <description>Summary #WebRTC(simple-peer)로 사용자를 1 대 1로 연결해 서로의 미디어를 빠르게 주고받을 수 있게 만듦.</description>
     </item>
     
     <item>
@@ -59,7 +59,7 @@
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks-3/</guid>
-      <description>Summary #WebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 만들었다.</description>
+      <description>Summary #WebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 함.</description>
     </item>
     
     <item>

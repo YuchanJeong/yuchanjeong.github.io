@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "316"
+    "wordCount": "287"
   }]
   </script>
 
@@ -353,7 +353,11 @@
         <li><a href="#websocket-클라이언트">WebSocket 클라이언트</a></li>
       </ul>
     </li>
-    <li><a href="#problems">Problems</a></li>
+    <li><a href="#problems">Problems</a>
+      <ul>
+        <li><a href="#websocket-cors-error">WebSocket CORS Error</a></li>
+      </ul>
+    </li>
     <li><a href="#reflections">Reflections</a></li>
   </ul>
 </nav>
@@ -365,14 +369,13 @@
       
       <div class="min-w-0 min-h-0 max-w-prose">
         <h2 id="summary" class="relative group">Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#summary" aria-label="Anchor">#</a></span></h2>
-<p>socket.io를 사용해 WebSocket 서버를 구축하고 클라이언트에서 접속 가능하게 만들었다.</p>
+<p>socket.io를 사용해 WebSocket 서버를 구축하고 클라이언트에서 접속 가능하게 만듦.</p>
 <h2 id="details" class="relative group">Details <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#details" aria-label="Anchor">#</a></span></h2>
 <h3 id="websocket-서버" class="relative group">WebSocket 서버 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#websocket-%ec%84%9c%eb%b2%84" aria-label="Anchor">#</a></span></h3>
 <p>*<em><a href="/posts/studies/socket.io/socket.io-nest.js">&quot;[Socket.io] Nest.js에서 Socket.io 연결 기초&quot;</a> 참조</em></p>
-<p>Nest.js에 대한 지식 없이 Socket.io를 적용시키려고 하니 어려움을 겪었다. 그래서 공식 문서를 통해 Nest.js에 대한 기본적인 학습을 하고, Youtube에 올라와 있는 강의를 바탕으로 WebSocket 서버를 열었다.</p>
-<p>아직은 기본적인 형태만 갖추어져있고, Debate-Ducks 프로젝트에 필요 없는 부분들도 작성되어 있어 추후 여러 테스트를 거쳐 프로젝트에 맞게 최적화 시킬 예정이다.</p>
+<p>새로운 스택인 Nest.js에 대한 지식 없이 Socket.io를 적용시키려고 하니 어려움을 겪었다. 그래서 공식 문서를 통해 Nest.js에 대한 기본적인 학습을 하고, Youtube에 올라와 있는 강의를 바탕으로 WebSocket 서버를 구축했다.</p>
 <h3 id="websocket-클라이언트" class="relative group">WebSocket 클라이언트 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#websocket-%ed%81%b4%eb%9d%bc%ec%9d%b4%ec%96%b8%ed%8a%b8" aria-label="Anchor">#</a></span></h3>
-<p>Next.js를 사용하였지만 이미 충분히 학습하였고, 기본적으로 React에서의 사용법과 크게 다르지 않아 쉽게 적용할 수 있었다. 다만 TypeScript를 실전에서 처음 써봐서 아직은 조금 적응이 덜 되었다.</p>
+<p>새로운 스택인 Next.js를 사용하였지만 이미 충분히 학습하였고, React의 사용법과 크게 다르지 않아 쉽게 적용할 수 있었다. 다만 TypeScript를 실전에서 처음 써봐서 아직은 적응이 덜 되었다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useRouter</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;next/router&#34;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">io</span><span class="p">,</span> <span class="nx">Socket</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;socket.io-client&#34;</span><span class="p">;</span>
@@ -392,19 +395,17 @@
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div><p>*<em>환경 변수로 NEXT_PUBLIC_&hellip; 사용</em><br>
-*<em>import 순서 컨벤션</em><br>
-- 패키지, 라이브러리 &gt; api, styles, utils &gt; components &gt; Etc<br>
-- 각 순서마다 개행으로 구분</p>
+</code></pre></div><p>*<em>환경 변수로 NEXT_PUBLIC_&hellip; 사용</em></p>
 <h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
-<p>처음 Youtube의 강의만 보고 서버를 열었을 때 CORS 에러가 발생하였다. 기본 express에서는 <code>new Server</code>에 <code>{ cors: { origin: &quot;...&quot; } }</code>을 설정해서 해결했었던 문제였다. Nest.js에서는 <code>@WebSocketGateway</code>에 <code>{ cors: { origin: &quot;...&quot; } }</code>을 설정해서 해결하였다.</p>
+<h3 id="websocket-cors-error" class="relative group">WebSocket CORS Error <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#websocket-cors-error" aria-label="Anchor">#</a></span></h3>
+<p>처음 Youtube의 강의만 보고 서버를 구축했을 때 CORS 에러가 발생하였다. 기본 express에서는 <code>new Server</code>에 <code>{ cors: { origin: &quot;...&quot; } }</code>을 설정해서 해결했던 문제였다. Nest.js에서는 <code>@WebSocketGateway</code>에 <code>{ cors: { origin: &quot;...&quot; } }</code>을 설정해서 해결했다.</p>
 <img width="400" alt="CORS 에러" src="https://user-images.githubusercontent.com/84524514/168922191-7982a7bd-418e-45a3-b390-021ee9e06b91.png">
 <img width="400" alt="CORS 에러 해결" src="https://user-images.githubusercontent.com/84524514/168922409-6cc999cd-3592-4402-a5d7-e99aaf5ab40d.png">
 <h2 id="reflections" class="relative group">Reflections <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reflections" aria-label="Anchor">#</a></span></h2>
-<p>이전 프로젝트 때 <code>package-lock.json</code>이 자주 충돌이 났다. <code>package-lock.json</code>이 <code>package.json</code>의 보조하는 역할이라고 대충 알고 있던 우리는 둘을 함께 버전 관리에서 제외하였다. 프로젝트는 아무 이상이 없었고, 그래서 이번에도 <code>package-lock.json</code>을 버전 관리에서 제외하였다.</p>
-<p>하지만 문득 어떤 역할을 하는지 정확히 모르는데 버전 관리에서 제외하는 게 맞는 걸까 싶었고 관련 정보를 찾아보았다. <code>package-lock.json</code>은 의존성 트리를 정확히 저장하여 메이저 미만의 업데이트 시 혹시 모를 오류를 대비하는 역할을 하였다. 그래서 급하게 다시 <code>package-lock.json</code>을 버전 관리에 추가하였다.</p>
-<p>다음부터는 어떤 결정을 내리기 전에 미리 꼼꼼히 확인하고 결정을 내릴 것이다. 또한 한 번 이상이 없었다고 이상이 계속 없을 것이라는 안일한 생각을 버릴 것이다.</p>
-<p>Ps. 성급함에 대한 반성 🙏🙏🙏</p>
+<p>이전 프로젝트 때 <code>package-lock.json</code>이 자주 충돌이 났다. <code>package-lock.json</code>이 <code>package.json</code>의 보조하는 역할이라고 대충 알고 있던 우리는 둘을 함께 버전 관리에서 제외했다. 그 후 프로젝트를 진행 하는데 아무런 이상이 없었다. 그래서 이번에도 <code>package-lock.json</code>을 버전 관리에서 제외했다.</p>
+<p>하지만 문득 어떤 역할을 하는지 정확히 모르는데 버전 관리에서 제외하는 게 맞는 걸까 싶었고 관련 정보를 찾아봤다. <code>package-lock.json</code>은 의존성 트리를 정확히 저장하여 메이저 미만의 업데이트 시 혹시 모를 문제를 대비하는 역할을 했다. 그래서 급하게 다시 <code>package-lock.json</code>을 버전 관리에 추가했다.</p>
+<p>다음부터는 어떤 결정을 내리기 전에 미리 꼼꼼히 확인하고 결정을 내릴 것이다. 또한 한 번 이상이 없었다고 계속 이상이 없을 것이라는 안일한 생각을 버릴 것이다.</p>
+<p>❗️ 성급함에 대한 반성 🙏🙏🙏</p>
 <hr>
 <p>Ref. <a href="https://hyunjun19.github.io/2018/03/23/package-lock-why-need/">package-lock.json은 왜 필요할까?</a></p>
 
