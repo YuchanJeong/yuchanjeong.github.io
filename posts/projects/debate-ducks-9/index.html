@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "492"
+    "wordCount": "493"
   }]
   </script>
 
@@ -401,7 +401,7 @@
 <p>우선 재연결 시 상대방 비디오의 현재 상태와 상관없이 <code>useRef(false)</code>로 인해 꺼져있는 상태로 인식하는 문제가 있었다. 이 문제는 비디오의 상태를 보내는 <code>useEffect</code>의 dependency에 peerStream을 추가하는 것으로 쉽게 해결했다.</p>
 <p>화면 공유의 경우는 재연결 시 상대방 화면 공유가 켜져 있어도 인식하지 못하는 문제와 이 상태에서 화면 공유를 끌 경우 <code>Error: Cannot replace track that was never added.</code> 에러가 발생하는 문제가 있었다.</p>
 <img width="800" alt="reconnect-screen_share-error-1" src="https://user-images.githubusercontent.com/84524514/171619486-b947bdfd-3053-4965-a66a-a7fb2ac142da.png">
-<p>그래서 상대방 재연결 시 화면 공유를 꺼주는 방식을 생각했다. 처음에는 <code>offScreen</code> 함수를 peerStream이 변경될 때 적용하는 방식을 사용했지만 화면 종료 시 발생하는 에러가 여전히 발생했다.</p>
+<p>그래서 상대방 재연결 시 화면 공유를 꺼주는 방식으로 해결해야겠다고 생각했다. 처음에는 <code>offScreen</code> 함수를 peerStream이 변경될 때 적용하는 방식을 사용했지만 화면 종료 시 발생하는 에러가 여전히 발생했다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// Bad1!!
 </span><span class="c1"></span><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">offScreen</span><span class="p">(</span><span class="nx">peerRef</span><span class="p">,</span> <span class="nx">stream</span><span class="p">,</span> <span class="nx">videoRef</span><span class="p">,</span> <span class="nx">screenStreamRef</span><span class="p">,</span> <span class="nx">setIsScreenOn</span><span class="p">);</span>
