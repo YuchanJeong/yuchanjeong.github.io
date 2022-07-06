@@ -20,7 +20,7 @@
   
   
   
-  <link rel="canonical" href="https://yuchanjeong.github.io/posts/projects/debate-ducks-4/" />
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/projects/debate-ducks/debate-ducks-4/" />
   
   
   
@@ -67,8 +67,9 @@
   
   
   <meta property="og:title" content="[Debate-Ducks] Debateroom - WebRTC" />
-<meta property="og:description" content="Summary #WebRTC(simple-peer)로 사용자를 1 대 1로 연결해 서로의 미디어를 빠르게 주고받을 수 있게 만듦." />
-<meta property="og:type" content="article" />
+<meta property="og:description" content="Summary #
+WebRTC(simple-peer)로 사용자를 1 대 1로 연결해 서로의 미디어를 빠르게 주고받을 수 있게 만듦." />
+<meta property="og:type" content="article" />/posts/projects/debate-ducks/debate-ducks
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks-4/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-20T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-05-20T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
@@ -76,7 +77,8 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Debate-Ducks] Debateroom - WebRTC"/>
-<meta name="twitter:description" content="Summary #WebRTC(simple-peer)로 사용자를 1 대 1로 연결해 서로의 미디어를 빠르게 주고받을 수 있게 만듦."/>
+<meta name="twitter:description" content="Summary #
+WebRTC(simple-peer)로 사용자를 1 대 1로 연결해 서로의 미디어를 빠르게 주고받을 수 있게 만듦."/>
 
   
   <script type="application/ld+json">
@@ -434,7 +436,7 @@
     <span class="nx">simplePeer</span><span class="p">.</span><span class="nx">signal</span><span class="p">(</span><span class="nx">signal</span><span class="p">);</span>
   <span class="p">});</span>
 <span class="p">};</span>
-</code></pre></div><h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
+</code></pre/posts/projects/debate-ducks/debate-ducksss="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
 <h3 id="방-입장-시-발생하는-문제-2" class="relative group">방 입장 시 발생하는 문제 2 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b0%a9-%ec%9e%85%ec%9e%a5-%ec%8b%9c-%eb%b0%9c%ec%83%9d%ed%95%98%eb%8a%94-%eb%ac%b8%ec%a0%9c-2" aria-label="Anchor">#</a></span></h3>
 <p><a href="/posts/projects/debate-ducks-3">이전에 작성한 코드</a>에서 WebRTC를 적용하기 위해 추가로 코드를 작성했는데 제대로 작동하지 않았다.</p>
 <p>이 프로젝트에서 WebRTC의 연결 과정은 다음과 같다. 사용자가 웹 소켓 서버와 연결됨과 동시에 방에 입장을 요청하고, 인원이 다 차지 않았을 경우 방에 입장한다. 이때 먼저 방에 입장해있는 호스트에게 게스트가 입장했다고 알려주고, 호스트는 연결을 제안한다. 게스트는 제안을 받은 뒤 응답을 보내면 게스트와 호스트는 1 대 1로 연결이 된다.</p>
@@ -467,7 +469,7 @@
     <span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">addTrack</span><span class="p">(</span><span class="nx">track</span><span class="p">,</span> <span class="nx">myStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">);</span>
   <span class="p">});</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Argument of <span class="nb">type</span> <span class="s1">&#39;MediaStream | undefined&#39;</span> is not assignable to parameter of <span class="nb">type</span> <span class="s1">&#39;MediaStream&#39;</span>.
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Argument of <span class="nb">type</span> <span class="s1">&#39;MediaStream | undefined&#39;</span> is not assignable to parameter of <span class="nb">type</sp/posts/projects/debate-ducks/debate-ducksdiaStream&#39;</span>.
 Type <span class="s1">&#39;undefined&#39;</span> is not assignable to <span class="nb">type</span> <span class="s1">&#39;MediaStream&#39;</span>.
 </code></pre></div><p>아래와 같이 if 조건문으로 한 번 더 undefined 일 가능성을 없애주면 더 이상 에러가 나지 않는다. 하지만 이미 밖에서 if 조건문으로 undefined 일 가능성을 없애주었는데 왜 한 번 더 묶어줘야 하는지 아직 모르겠다. 그래서 Issue를 통해 팀원들과 공유하고, 동시에 Stackoverflow에도 질문을 게시했다. (<del>이유를 알게 되면 추가로 작성할 예정</del> 같은 문제가 한 번 더 발생하였고 이유를 찾았으니 <a href="/posts/projects/debate-ducks-5/#if-%EC%A1%B0%EA%B1%B4%EB%AC%B8-type-error-2">참고</a> 바람)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">myStreamRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">&lt;</span><span class="nt">MediaStream</span><span class="p">&gt;();</span>
@@ -619,7 +621,7 @@ npm i -D @types/simple-peer
             </a>
           
         </span>
-        <span>
+        <span>/posts/projects/debate-ducks/debate-ducks
           
             <a class="flex text-right group" href="/posts/projects/debate-ducks-5/">
               <span class="flex flex-col">
