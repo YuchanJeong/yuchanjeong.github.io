@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Debate-Ducks] Debateroom - Record2</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/10/</link>
+      <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/10/</guid>
+      <description>귀국, 입원 및 수술 등의 이유로 한 달 동안 중지되었던 개발 재개Summary #토론 녹화 및 임시 다운로드 기능 재작업.</description>
+    </item>
+    
     <item>
       <title>[Debate-Ducks] Debateroom - Record</title>
       <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/9/</link>

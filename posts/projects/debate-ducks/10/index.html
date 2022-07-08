@@ -13,14 +13,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>[Debate-Ducks] Debateroom - Record &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="[Debate-Ducks] Debateroom - Record &middot; Yuchan&#39;s hello world!" />
+  <title>[Debate-Ducks] Debateroom - Record2 &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[Debate-Ducks] Debateroom - Record2 &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog of a developer who wants to help create a better world :)" />
   
   
   
-  <link rel="canonical" href="https://yuchanjeong.github.io/posts/projects/debate-ducks/9/" />
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/projects/debate-ducks/10/" />
   
   
   
@@ -66,17 +66,17 @@
   
   
   
-  <meta property="og:title" content="[Debate-Ducks] Debateroom - Record" />
-<meta property="og:description" content="Summary #토론 녹화 및 임시 다운로드 기능 추가." />
+  <meta property="og:title" content="[Debate-Ducks] Debateroom - Record2" />
+<meta property="og:description" content="귀국, 입원 및 수술 등의 이유로 한 달 동안 중지되었던 개발 재개Summary #토론 녹화 및 임시 다운로드 기능 재작업." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks/9/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-06-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-06-01T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks/10/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-05T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[Debate-Ducks] Debateroom - Record"/>
-<meta name="twitter:description" content="Summary #토론 녹화 및 임시 다운로드 기능 추가."/>
+<meta name="twitter:title" content="[Debate-Ducks] Debateroom - Record2"/>
+<meta name="twitter:description" content="귀국, 입원 및 수술 등의 이유로 한 달 동안 중지되었던 개발 재개Summary #토론 녹화 및 임시 다운로드 기능 재작업."/>
 
   
   <script type="application/ld+json">
@@ -84,26 +84,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "[Debate-Ducks] Debateroom - Record",
-    "headline": "[Debate-Ducks] Debateroom - Record",
+    "name": "[Debate-Ducks] Debateroom - Record2",
+    "headline": "[Debate-Ducks] Debateroom - Record2",
     
-    "abstract": "Summary #\r토론 녹화 및 임시 다운로드 기능 추가.",
+    "abstract": "귀국, 입원 및 수술 등의 이유로 한 달 동안 중지되었던 개발 재개\r\rSummary #\r토론 녹화 및 임시 다운로드 기능 재작업.",
     "inLanguage": "en",
-    "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks\/9\/",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks\/10\/",
     "author" : {
       "@type": "Person",
       "name": "Yuchan"
     },
     "copyrightYear": "2022",
-    "dateCreated": "2022-06-01T00:00:00\u002b00:00",
-    "datePublished": "2022-06-01T00:00:00\u002b00:00",
+    "dateCreated": "2022-07-05T00:00:00\u002b00:00",
+    "datePublished": "2022-07-05T00:00:00\u002b00:00",
     
-    "dateModified": "2022-06-01T00:00:00\u002b00:00",
+    "dateModified": "2022-07-05T00:00:00\u002b00:00",
     
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "572"
+    "wordCount": "139"
   }]
   </script>
 
@@ -255,7 +255,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        [Debate-Ducks] Debateroom - Record
+        [Debate-Ducks] Debateroom - Record2
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         
@@ -288,7 +288,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2022-06-01 00:00:00 &#43;0000 UTC">1 June 2022</time>
+      <time datetime="2022-07-05 00:00:00 &#43;0000 UTC">5 July 2022</time>
     
 
     
@@ -347,23 +347,11 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#summary">Summary</a></li>
-    <li><a href="#problems">Problems</a>
-      <ul>
-        <li><a href="#변수가-할당되기-전에-사용됨">변수가 할당되기 전에 사용됨</a></li>
-        <li><a href="#최초-연결-시-마이크-꺼짐">최초 연결 시 마이크 꺼짐</a></li>
-        <li><a href="#재연결-시-비디오-및-화면-공유-오작동">재연결 시 비디오 및 화면 공유 오작동</a></li>
-      </ul>
-    </li>
-    <li><a href="#reason-for-feature-deletion">Reason for feature deletion</a>
-      <ul>
-        <li><a href="#서버에-blobs-저장">서버에 Blobs 저장</a></li>
-        <li><a href="#녹화-영상-깨짐-현상">녹화 영상 깨짐 현상</a></li>
-      </ul>
-    </li>
+    <li><a href="#details">Details</a></li>
     <li><a href="#etc">Etc</a>
       <ul>
-        <li><a href="#usestate와-useref">useState와 useRef</a></li>
-        <li><a href="#작성된-코드에는-이유가-필요하다">작성된 코드에는 이유가 필요하다</a></li>
+        <li><a href="#ispros-변경">isPros 변경</a></li>
+        <li><a href="#코드-정돈">코드 정돈</a></li>
       </ul>
     </li>
   </ul>
@@ -375,86 +363,42 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <h2 id="summary" class="relative group">Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#summary" aria-label="Anchor">#</a></span></h2>
-<p>토론 녹화 및 임시 다운로드 기능 추가. (삭제 후 재작업 예정)</p>
-<h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
-<h3 id="변수가-할당되기-전에-사용됨" class="relative group">변수가 할당되기 전에 사용됨 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b3%80%ec%88%98%ea%b0%80-%ed%95%a0%eb%8b%b9%eb%90%98%ea%b8%b0-%ec%a0%84%ec%97%90-%ec%82%ac%ec%9a%a9%eb%90%a8" aria-label="Anchor">#</a></span></h3>
-<p>조건부로 변수에 값을 할당하고 해당 변수를 다음 변수에 활용했다. 이때 변수가 할당되기 전에 사용된다는 에러가 떴다. 해당 변수의 타입에 undefined를 포함하면 해결되는 간단한 문제였다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Variable <span class="s1">&#39;mergedStream&#39;</span> is used before being assigned.
-</code></pre></div><h3 id="최초-연결-시-마이크-꺼짐" class="relative group">최초 연결 시 마이크 꺼짐 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%b5%9c%ec%b4%88-%ec%97%b0%ea%b2%b0-%ec%8b%9c-%eb%a7%88%ec%9d%b4%ed%81%ac-%ea%ba%bc%ec%a7%90" aria-label="Anchor">#</a></span></h3>
-<p>마이크는 켜진 상태로 연결되게 했었는데 최초 연결 시 꺼져있었다. 이유는 간단했다. 단계 전환 시 자신의 차례일 때는 마이크를 켜고 아닐 때는 꺼지게 해뒀는데 최초의 단계는 찬반 양측 모두에게 자신의 턴이 아니라 마이크가 꺼진 것이었다. 그래서 최초의 차례일 때를 조건에 추가해 해결했다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// Good!!
-</span><span class="c1"></span><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">turn</span> <span class="o">===</span> <span class="s2">&#34;none&#34;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">isPros</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">turn</span> <span class="o">===</span> <span class="s2">&#34;pros&#34;</span> <span class="o">||</span> <span class="nx">turn</span> <span class="o">===</span> <span class="s2">&#34;prosCross&#34;</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">toggleMic</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">setIsMicOn</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">toggleMic</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">setIsMicOn</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">turn</span> <span class="o">===</span> <span class="s2">&#34;cons&#34;</span> <span class="o">||</span> <span class="nx">turn</span> <span class="o">===</span> <span class="s2">&#34;consCross&#34;</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">toggleMic</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">setIsMicOn</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">toggleMic</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">setIsMicOn</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  <span class="nx">offScreen</span><span class="p">(</span><span class="nx">peerRef</span><span class="p">,</span> <span class="nx">stream</span><span class="p">,</span> <span class="nx">videoRef</span><span class="p">,</span> <span class="nx">screenStreamRef</span><span class="p">,</span> <span class="nx">setIsScreenOn</span><span class="p">);</span>
-<span class="p">},</span> <span class="p">[</span><span class="nx">stream</span><span class="p">,</span> <span class="nx">turn</span><span class="p">,</span> <span class="nx">isPros</span><span class="p">]);</span>
-</code></pre></div><h3 id="재연결-시-비디오-및-화면-공유-오작동" class="relative group">재연결 시 비디오 및 화면 공유 오작동 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%ac%ec%97%b0%ea%b2%b0-%ec%8b%9c-%eb%b9%84%eb%94%94%ec%98%a4-%eb%b0%8f-%ed%99%94%eb%a9%b4-%ea%b3%b5%ec%9c%a0-%ec%98%a4%ec%9e%91%eb%8f%99" aria-label="Anchor">#</a></span></h3>
-<p>우선 재연결 시 상대방 비디오의 현재 상태와 상관없이 <code>useRef(false)</code>로 인해 꺼져있는 상태로 인식하는 문제가 있었다. 이 문제는 비디오의 상태를 보내는 <code>useEffect</code>의 dependency에 peerStream을 추가하는 것으로 쉽게 해결했다.</p>
-<p>화면 공유의 경우는 재연결 시 상대방 화면 공유가 켜져 있어도 인식하지 못하는 문제와 이 상태에서 화면 공유를 끌 경우 <code>Error: Cannot replace track that was never added.</code> 에러가 발생하는 문제가 있었다.</p>
-<img width="800" alt="reconnect-screen_share-error-1" src="https://user-images.githubusercontent.com/84524514/171619486-b947bdfd-3053-4965-a66a-a7fb2ac142da.png">
-<p>그래서 상대방 재연결 시 화면 공유를 꺼주는 방식으로 해결해야겠다고 생각했다. 처음에는 <code>offScreen</code> 함수를 peerStream이 변경될 때 적용하는 방식을 사용했지만 화면 종료 시 발생하는 에러가 여전히 발생했다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// Bad1!!
-</span><span class="c1"></span><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">offScreen</span><span class="p">(</span><span class="nx">peerRef</span><span class="p">,</span> <span class="nx">stream</span><span class="p">,</span> <span class="nx">videoRef</span><span class="p">,</span> <span class="nx">screenStreamRef</span><span class="p">,</span> <span class="nx">setIsScreenOn</span><span class="p">);</span>
-<span class="p">},</span> <span class="p">[</span><span class="nx">stream</span><span class="p">,</span> <span class="nx">peerStream</span><span class="p">]);</span>
-</code></pre></div><p>이번에는 자신의 화면을 끄는 부분만 peerStream이 변경될 때 적용했다. 그러자 상대방의 마지막 공유 화면이 상대방의 비디오를 대체하는 문제와 자신의 비디오를 표시하지 못하는 문제가 동시에 발생했다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// Bad2!!
-</span><span class="c1"></span><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">stream</span> <span class="o">&amp;&amp;</span> <span class="nx">screenStreamRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">&amp;&amp;</span> <span class="nx">videoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">screenStreamRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">getTracks</span><span class="p">()[</span><span class="mi">0</span><span class="p">].</span><span class="nx">stop</span><span class="p">();</span>
-    <span class="nx">videoRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">srcObject</span> <span class="o">=</span> <span class="nx">stream</span><span class="p">;</span>
-    <span class="nx">setIsScreenOn</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-    <span class="nx">screenStreamRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">},</span> <span class="p">[</span><span class="nx">stream</span><span class="p">,</span> <span class="nx">peerStream</span><span class="p">]);</span>
-</code></pre></div><img width="800" alt="reconnect-screen_share-error-2" src="https://user-images.githubusercontent.com/84524514/171620807-06efbe51-54c5-4373-895b-9f5ff1005a30.png">
-<p>이유는 화면 공유 시 <code>.onended</code>에 <code>peerRef.current?.replaceTrack()</code>이 등록되는 것이었다. 처음 화면 공유를 켤때는 상대방이 없어서 <code>replaceTrack</code>이 작동하지 않지만 <code>.onended</code>의 <code>replaceTrack</code>이 작동하는 시점에는 상대방이 있어서 문제가 생겼다.</p>
-<p>그래서 화면 공유 함수 자체에서 상대방이 있을 때와 없을 때로 조건을 나누어 문제를 해결했다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// Good!!
-</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">screenShare</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span>
-  <span class="p">...</span>
-<span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">try</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">screenStream</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">mediaDevices</span><span class="p">.</span><span class="nx">getDisplayMedia</span><span class="p">({</span>
-      <span class="nx">video</span>: <span class="kt">true</span><span class="p">,</span>
-      <span class="nx">audio</span>: <span class="kt">false</span><span class="p">,</span>
-    <span class="p">});</span>
-    <span class="c1">// * Peer가 있을 때
-</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
-      <span class="p">...</span>
-    <span class="c1">// * Peer가 없을 때
-</span><span class="c1"></span>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="p">...</span>
-    <span class="p">}</span>
-  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div><h2 id="reason-for-feature-deletion" class="relative group">Reason for feature deletion <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reason-for-feature-deletion" aria-label="Anchor">#</a></span></h2>
-<h3 id="서버에-blobs-저장" class="relative group">서버에 Blobs 저장 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%84%9c%eb%b2%84%ec%97%90-blobs-%ec%a0%80%ec%9e%a5" aria-label="Anchor">#</a></span></h3>
-<p>재연결 시 녹화의 안정적인 유지를 위해 서버에 Blobs를 저장하였는데 최종적으로 AWS의 S3에 저장되기 때문에 서버를 거치는 것이 비효율적인 방법이라고 생각해 수정할 예정이다. (클라이언트에서 바로 처리하면서도 안정성을 높일 방법 고안 필요)</p>
-<h3 id="녹화-영상-깨짐-현상" class="relative group">녹화 영상 깨짐 현상 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%85%b9%ed%99%94-%ec%98%81%ec%83%81-%ea%b9%a8%ec%a7%90-%ed%98%84%ec%83%81" aria-label="Anchor">#</a></span></h3>
-<p>토론이 중단된 후 재시작 되었을 때 재시작 이후의 녹화 영상이 깨지는 현상이 발생한다.</p>
-<img width="800" alt="1" src="https://user-images.githubusercontent.com/84524514/177230570-faf74cc0-b0e5-48d2-8ae7-086322ccc403.png">
-<p>재연결 과정에서 녹화의 대상이 변경되기 때문에 발생하는 문제라 추측되나 현제의 재연결 기능에서는 확인하기 어려워 수정할 예정이다.</p>
+        <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+  <span class="ltr:pr-3 rtl:pl-3 text-primary-400">
+    
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
+
+  </span>
+
+
+  </span>
+  <span class="dark:text-neutral-300">귀국, 입원 및 수술 등의 이유로 한 달 동안 중지되었던 개발 재개</span>
+</div>
+
+<h2 id="summary" class="relative group">Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#summary" aria-label="Anchor">#</a></span></h2>
+<p>토론 녹화 및 임시 다운로드 기능 재작업.</p>
+<h2 id="details" class="relative group">Details <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#details" aria-label="Anchor">#</a></span></h2>
 <h2 id="etc" class="relative group">Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc" aria-label="Anchor">#</a></span></h2>
-<h3 id="usestate와-useref" class="relative group">useState와 useRef <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#usestate%ec%99%80-useref" aria-label="Anchor">#</a></span></h3>
-<p>저장해둔 값이 변경될 때 <code>useState</code>는 재랜더링을 일으키고 <code>useRef</code>는 재랜더링을 일으키지 않는다. 나는 이 프로젝트를 진행할 때 기본적으로는 재랜더링을 일으키지 않는 <code>useRef</code>를 사용했고 재랜더링이 필요할 경우 <code>useState</code>를 사용했다.</p>
-<h3 id="작성된-코드에는-이유가-필요하다" class="relative group">작성된 코드에는 이유가 필요하다 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%91%ec%84%b1%eb%90%9c-%ec%bd%94%eb%93%9c%ec%97%90%eb%8a%94-%ec%9d%b4%ec%9c%a0%ea%b0%80-%ed%95%84%ec%9a%94%ed%95%98%eb%8b%a4" aria-label="Anchor">#</a></span></h3>
-<p>좋은 코드를 작성하기 위한 하나의 노력으로 코드를 한 줄 한 줄 복기하면서 &ldquo;왜 이 코드가 필요한가?&ldquo;를 스스로 생각해 보는 시간을 가졌다. 그러자 중간에 기능을 수정하면서 필요 없어진 부분들이 하나 둘 발견되었다. 또한 쓸데없이 복잡하게 작성된 부분들도 있었다. 이를 수정하면서 코드에 대한 이해가 한층 깊어짐을 느꼈다. 앞으로도 주기적으로 내가 작성한 코드를 복기하는 데 시간을 투자할 것이다.</p>
+<h3 id="ispros-변경" class="relative group">isPros 변경 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ispros-%eb%b3%80%ea%b2%bd" aria-label="Anchor">#</a></span></h3>
+<p>기존에는 isPros(임시 변수)를 버튼을 통해 변경할 수 있는 변수로 관리했으나, 실사용 시와 좀 더 유사하게 쿼리를 통해 변경되지 않는 props로 관리하게 변경했다.</p>
+<h3 id="코드-정돈" class="relative group">코드 정돈 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%bd%94%eb%93%9c-%ec%a0%95%eb%8f%88" aria-label="Anchor">#</a></span></h3>
+<p>컴포넌트 props의 타입은 Pick으로 뽑아서 사용하고 있었지만 함수는 각 인자와 타입을 따로 적어서 사용하고 있었다. Pick으로 뽑아서 사용할 인자를 중괄호로 묶어서 객체 형태로 만들어 주면 된다는 간단한 사실을 늦게 떠올렸다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// Example
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">screenShare</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">({</span>
+  <span class="nx">peerRef</span><span class="p">,</span>
+  <span class="nx">stream</span><span class="p">,</span>
+  <span class="nx">videoRef</span><span class="p">,</span>
+  <span class="nx">screenStreamRef</span><span class="p">,</span>
+  <span class="nx">setIsScreenOn</span><span class="p">,</span>
+<span class="p">}</span><span class="o">:</span> <span class="nx">Pick</span><span class="o">&lt;</span>
+  <span class="nx">IDebateroom</span><span class="p">,</span>
+  <span class="s2">&#34;peerRef&#34;</span> <span class="o">|</span> <span class="s2">&#34;stream&#34;</span> <span class="o">|</span> <span class="s2">&#34;videoRef&#34;</span> <span class="o">|</span> <span class="s2">&#34;screenStreamRef&#34;</span> <span class="o">|</span> <span class="s2">&#34;setIsScreenOn&#34;</span>
+<span class="o">&gt;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div><p>Ps. 필요 없는 코드들이 여전히 발견된다. 코드 한 줄 한 줄을 보면서 &ldquo;이 코드가 왜 필요한지? 또 이게 최선인지?&ldquo;를 생각해 보는 시간을 통해서 이를 줄여나가고 있다.</p>
 
       </div>
     </section>
@@ -562,7 +506,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group" href="/posts/projects/debate-ducks/8/">
+            <a class="flex group" href="/posts/projects/debate-ducks/9/">
               <span
                 class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -574,11 +518,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >[Debate-Ducks] Debateroom - Debate</span
+                  >[Debate-Ducks] Debateroom - Record</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2022-05-27 00:00:00 &#43;0000 UTC">27 May 2022</time>
+                    <time datetime="2022-06-01 00:00:00 &#43;0000 UTC">1 June 2022</time>
                   
                 </span>
               </span>
@@ -586,28 +530,6 @@
           
         </span>
         <span>
-          
-            <a class="flex text-right group" href="/posts/projects/debate-ducks/10/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >[Debate-Ducks] Debateroom - Record2</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2022-07-05 00:00:00 &#43;0000 UTC">5 July 2022</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
           
         </span>
       </div>
@@ -619,19 +541,6 @@
     
   </article>
 
-      
-        <div
-          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
-        >
-          <a
-            href="#the-top"
-            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="Scroll to top"
-            title="Scroll to top"
-          >
-            &uarr;
-          </a>
-        </div>
       
     </main>
     <div
