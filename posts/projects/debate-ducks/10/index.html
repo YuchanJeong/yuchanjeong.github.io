@@ -67,7 +67,7 @@
   
   
   <meta property="og:title" content="[Debate-Ducks] Debateroom - Record2" />
-<meta property="og:description" content="귀국, 입원 및 수술 등의 이유로 한 달 동안 중지되었던 개발 재개Summary #토론 녹화 및 임시 다운로드 기능 재작업." />
+<meta property="og:description" content="귀국, 입원 및 수술 등의 이유로 한 달 동안 중지됐던 개발 재개Summary #토론 녹화 및 임시 다운로드 기능 재작업." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks/10/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-05T00:00:00+00:00" />
@@ -76,7 +76,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Debate-Ducks] Debateroom - Record2"/>
-<meta name="twitter:description" content="귀국, 입원 및 수술 등의 이유로 한 달 동안 중지되었던 개발 재개Summary #토론 녹화 및 임시 다운로드 기능 재작업."/>
+<meta name="twitter:description" content="귀국, 입원 및 수술 등의 이유로 한 달 동안 중지됐던 개발 재개Summary #토론 녹화 및 임시 다운로드 기능 재작업."/>
 
   
   <script type="application/ld+json">
@@ -87,7 +87,7 @@
     "name": "[Debate-Ducks] Debateroom - Record2",
     "headline": "[Debate-Ducks] Debateroom - Record2",
     
-    "abstract": "귀국, 입원 및 수술 등의 이유로 한 달 동안 중지되었던 개발 재개\r\rSummary #\r토론 녹화 및 임시 다운로드 기능 재작업.",
+    "abstract": "귀국, 입원 및 수술 등의 이유로 한 달 동안 중지됐던 개발 재개\r\rSummary #\r토론 녹화 및 임시 다운로드 기능 재작업.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks\/10\/",
     "author" : {
@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "139"
+    "wordCount": "358"
   }]
   </script>
 
@@ -348,10 +348,17 @@
   <ul>
     <li><a href="#summary">Summary</a></li>
     <li><a href="#details">Details</a></li>
+    <li><a href="#problems">Problems</a>
+      <ul>
+        <li><a href="#녹화-영상-깨짐-현상">녹화 영상 깨짐 현상</a></li>
+        <li><a href="#heading">???</a></li>
+      </ul>
+    </li>
     <li><a href="#etc">Etc</a>
       <ul>
         <li><a href="#ispros-변경">isPros 변경</a></li>
         <li><a href="#코드-정돈">코드 정돈</a></li>
+        <li><a href="#blob-in-data-channel">Blob in Data channel</a></li>
       </ul>
     </li>
   </ul>
@@ -374,12 +381,67 @@
 
 
   </span>
-  <span class="dark:text-neutral-300">귀국, 입원 및 수술 등의 이유로 한 달 동안 중지되었던 개발 재개</span>
+  <span class="dark:text-neutral-300">귀국, 입원 및 수술 등의 이유로 한 달 동안 중지됐던 개발 재개</span>
 </div>
 
 <h2 id="summary" class="relative group">Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#summary" aria-label="Anchor">#</a></span></h2>
 <p>토론 녹화 및 임시 다운로드 기능 재작업.</p>
 <h2 id="details" class="relative group">Details <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#details" aria-label="Anchor">#</a></span></h2>
+<h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
+<h3 id="녹화-영상-깨짐-현상" class="relative group">녹화 영상 깨짐 현상 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%85%b9%ed%99%94-%ec%98%81%ec%83%81-%ea%b9%a8%ec%a7%90-%ed%98%84%ec%83%81" aria-label="Anchor">#</a></span></h3>
+<p># 문제</p>
+<p>토론이 중단된 후 재시작 됐을 때 재시작 이후의 녹화 영상이 깨지는 현상이 발생한다.</p>
+<img width="800" alt="1" src="https://user-images.githubusercontent.com/84524514/177230570-faf74cc0-b0e5-48d2-8ae7-086322ccc403.png">
+<p># 원인</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kd">function</span> <span class="nx">record</span><span class="p">({</span>
+  <span class="nx">canvasRef</span><span class="p">,</span>
+  <span class="nx">mergedAudio</span><span class="p">,</span>
+  <span class="nx">setRecorder</span><span class="p">,</span>
+  <span class="nx">blobsRef</span><span class="p">,</span>
+<span class="p">}</span><span class="o">:</span> <span class="nx">Pick</span><span class="o">&lt;</span>
+  <span class="nx">IDebateroom</span><span class="p">,</span>
+  <span class="s2">&#34;canvasRef&#34;</span> <span class="o">|</span> <span class="s2">&#34;mergedAudio&#34;</span> <span class="o">|</span> <span class="s2">&#34;setRecorder&#34;</span> <span class="o">|</span> <span class="s2">&#34;blobsRef&#34;</span>
+<span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">canvasStream</span> <span class="o">=</span> <span class="nx">canvasRef</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">captureStream</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">canvasStream</span> <span class="o">||</span> <span class="o">!</span><span class="nx">mergedAudio</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+  <span class="kr">const</span> <span class="nx">mergedTracks</span> <span class="o">=</span> <span class="nx">canvasStream</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">().</span><span class="nx">concat</span><span class="p">(</span><span class="nx">mergedAudio</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">mergedTracks</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+  <span class="kr">const</span> <span class="nx">mergedStream</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MediaStream</span><span class="p">(</span><span class="nx">mergedTracks</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">mergedStream</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+  <span class="kr">const</span> <span class="nx">recorder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MediaRecorder</span><span class="p">(</span><span class="nx">mergedStream</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">mimeType</span><span class="o">:</span> <span class="s2">&#34;video/webm&#34;</span><span class="p">,</span>
+  <span class="p">});</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">recorder</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+  <span class="nx">recorder</span><span class="p">.</span><span class="nx">ondataavailable</span> <span class="o">=</span> <span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">blobsRef</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">ev</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">};</span>
+  <span class="nx">setRecorder</span><span class="p">(</span><span class="nx">recorder</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isStart</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">recorder</span><span class="o">?</span><span class="p">.</span><span class="nx">state</span> <span class="o">===</span> <span class="s2">&#34;recording&#34;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">recorder</span><span class="o">?</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="nx">recorder</span><span class="o">?</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="mi">1000</span> <span class="o">/</span> <span class="mi">30</span><span class="p">);</span>
+<span class="p">},</span> <span class="p">[</span><span class="nx">isStart</span><span class="p">,</span> <span class="nx">recorder</span><span class="p">]);</span>
+</code></pre></div><p>recorder가 변경됐을 때 녹화를 중지하고 다시 시작하게 했으나, 이미 recorder는 변경되어 record 내부의 기존 recorder는 종료되지 않고 계속 작동하기 때문에 문제가 발생한다.</p>
+<h3 id="heading" class="relative group">??? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#heading" aria-label="Anchor">#</a></span></h3>
+<p>문제 잘 안됨</p>
+<p>두번째 사람 들어올 떄 이미 있던 blobs를 보내주려 했는데 연결되는데 시간이 걸려서 에러 뜨는거</p>
+<p>이건 connect 안에 send를 넣어서 해결</p>
+<p>그러자 다음 에러</p>
+<p>이건 blob을 흠</p>
+<p>이전에 문자열 테스트 했을 때 arraybuffer로 전송 되는거 확인 그래서 이번에는 변경해서 하니까 전송은 성공 하지만 아직 이해도가 높지 않아서 추가로 공부할 것임.</p>
+<p>문제는 순서데로 들어오는거</p>
 <h2 id="etc" class="relative group">Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc" aria-label="Anchor">#</a></span></h2>
 <h3 id="ispros-변경" class="relative group">isPros 변경 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ispros-%eb%b3%80%ea%b2%bd" aria-label="Anchor">#</a></span></h3>
 <p>기존에는 isPros(임시 변수)를 버튼을 통해 변경할 수 있는 변수로 관리했으나, 실사용 시와 좀 더 유사하게 쿼리를 통해 변경되지 않는 props로 관리하게 변경했다.</p>
@@ -399,7 +461,21 @@
   <span class="p">...</span>
 <span class="p">}</span>
 </code></pre></div><p>Ps. 필요 없는 코드들이 여전히 발견된다. 코드 한 줄 한 줄을 보면서 &ldquo;이 코드가 왜 필요한지? 또 이게 최선인지?&ldquo;를 생각해 보는 시간을 통해서 이를 줄여나가고 있다.</p>
+<h3 id="blob-in-data-channel" class="relative group">Blob in Data channel <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#blob-in-data-channel" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"> <span class="kr">const</span> <span class="nx">blobs</span> <span class="o">=</span> <span class="nx">blobsRef</span><span class="p">.</span><span class="nx">current</span><span class="p">;</span>
+    <span class="nx">blobs</span><span class="p">.</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">blob</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="nx">blob</span><span class="p">).</span><span class="nx">arrayBuffer</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">arrayBuffer</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">arrayBuffer</span><span class="p">);</span>
+      <span class="p">});</span>
 
+
+    <span class="nx">simplePeer</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;data&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">arrayBuffer</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="k">new</span> <span class="nx">Uint8Array</span><span class="p">(</span><span class="nx">arrayBuffer</span><span class="p">)],</span> <span class="p">{</span>
+      <span class="kr">type</span><span class="o">:</span> <span class="s2">&#34;video/x-matroska;codecs=avc1,opus&#34;</span><span class="p">,</span>
+    <span class="p">});</span>
+    <span class="nx">blobsRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre></div>
       </div>
     </section>
     <footer class="pt-8 max-w-prose">
@@ -541,6 +617,19 @@
     
   </article>
 
+      
+        <div
+          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
+        >
+          <a
+            href="#the-top"
+            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
       
     </main>
     <div

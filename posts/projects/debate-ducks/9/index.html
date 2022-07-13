@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "572"
+    "wordCount": "661"
   }]
   </script>
 
@@ -347,6 +347,7 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#summary">Summary</a></li>
+    <li><a href="#details">Details</a></li>
     <li><a href="#problems">Problems</a>
       <ul>
         <li><a href="#변수가-할당되기-전에-사용됨">변수가 할당되기 전에 사용됨</a></li>
@@ -357,7 +358,7 @@
     <li><a href="#reason-for-feature-deletion">Reason for feature deletion</a>
       <ul>
         <li><a href="#서버에-blobs-저장">서버에 Blobs 저장</a></li>
-        <li><a href="#녹화-영상-깨짐-현상">녹화 영상 깨짐 현상</a></li>
+        <li><a href="#녹화-영상-깨짐-현상-해결-x">녹화 영상 깨짐 현상 (해결 X)</a></li>
       </ul>
     </li>
     <li><a href="#etc">Etc</a>
@@ -377,6 +378,11 @@
       <div class="min-w-0 min-h-0 max-w-prose">
         <h2 id="summary" class="relative group">Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#summary" aria-label="Anchor">#</a></span></h2>
 <p>토론 녹화 및 임시 다운로드 기능 추가. (삭제 후 재작업 예정)</p>
+<h2 id="details" class="relative group">Details <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#details" aria-label="Anchor">#</a></span></h2>
+<p>토론 시 매 순간 서버로 blob을 보내서 저장해 재연결 시에도 녹화가 유지되게 했다. (안정성과 효율성 중 안정성을 선택)</p>
+<p>연결이 끊어진 경우 해당 유저의 연결을 끊은 횟수를 세서 일정 수 이상이 되면 해당 유저의 패배로 토론이 끝나게 만들었다. 또한 타이머 함수를 이용해 일정 시간 이내에 재연결을 하지 않을 경우 접속하지 않은 유저의 패배로 토론이 끝나게 만들었다.</p>
+<p>그리고 토론 종료 시 서버의 blobs를 클라이언트로 전달한 다음 하나로 합치고 해당 영상을 다운로드할 수 있게 만들었다. (임시 확인용)</p>
+<p>하지만 <a href="/posts/projects/debate-ducks/9/#reason-for-feature-deletion">다음과 같은 이유</a>로 해당 부분을 삭제하고 재작업 할 예정이다.</p>
 <h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
 <h3 id="변수가-할당되기-전에-사용됨" class="relative group">변수가 할당되기 전에 사용됨 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b3%80%ec%88%98%ea%b0%80-%ed%95%a0%eb%8b%b9%eb%90%98%ea%b8%b0-%ec%a0%84%ec%97%90-%ec%82%ac%ec%9a%a9%eb%90%a8" aria-label="Anchor">#</a></span></h3>
 <p>조건부로 변수에 값을 할당하고 해당 변수를 다음 변수에 활용했다. 이때 변수가 할당되기 전에 사용된다는 에러가 떴다. 해당 변수의 타입에 undefined를 포함하면 해결되는 간단한 문제였다.</p>
@@ -445,16 +451,17 @@
 <span class="p">};</span>
 </code></pre></div><h2 id="reason-for-feature-deletion" class="relative group">Reason for feature deletion <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reason-for-feature-deletion" aria-label="Anchor">#</a></span></h2>
 <h3 id="서버에-blobs-저장" class="relative group">서버에 Blobs 저장 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%84%9c%eb%b2%84%ec%97%90-blobs-%ec%a0%80%ec%9e%a5" aria-label="Anchor">#</a></span></h3>
-<p>재연결 시 녹화의 안정적인 유지를 위해 서버에 Blobs를 저장하였는데 최종적으로 AWS의 S3에 저장되기 때문에 서버를 거치는 것이 비효율적인 방법이라고 생각해 수정할 예정이다. (클라이언트에서 바로 처리하면서도 안정성을 높일 방법 고안 필요)</p>
-<h3 id="녹화-영상-깨짐-현상" class="relative group">녹화 영상 깨짐 현상 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%85%b9%ed%99%94-%ec%98%81%ec%83%81-%ea%b9%a8%ec%a7%90-%ed%98%84%ec%83%81" aria-label="Anchor">#</a></span></h3>
-<p>토론이 중단된 후 재시작 되었을 때 재시작 이후의 녹화 영상이 깨지는 현상이 발생한다.</p>
+<p>재연결 시 녹화의 안정적인 유지를 위해 서버에 Blobs를 저장했는데 최종적으로 AWS의 S3에 저장되기 때문에 서버를 거치는 것이 비효율적인 방법이라고 생각해 수정할 예정이다. (클라이언트에서 바로 처리하면서도 안정성을 높일 방법 고안 필요)</p>
+<h3 id="녹화-영상-깨짐-현상-해결-x" class="relative group">녹화 영상 깨짐 현상 (해결 X) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%85%b9%ed%99%94-%ec%98%81%ec%83%81-%ea%b9%a8%ec%a7%90-%ed%98%84%ec%83%81-%ed%95%b4%ea%b2%b0-x" aria-label="Anchor">#</a></span></h3>
+<p>토론이 중단된 후 재시작 됐을 때 재시작 이후의 녹화 영상이 깨지는 현상이 발생한다.</p>
 <img width="800" alt="1" src="https://user-images.githubusercontent.com/84524514/177230570-faf74cc0-b0e5-48d2-8ae7-086322ccc403.png">
-<p>재연결 과정에서 녹화의 대상이 변경되기 때문에 발생하는 문제라 추측되나 현제의 재연결 기능에서는 확인하기 어려워 수정할 예정이다.</p>
+<p>재연결 과정에서 녹화의 대상이 변경되기 때문에 발생하는 문제라 추측되나 코드가 너무 복잡하게 작성되어 있어 확인이 힘들다.</p>
+<p><em>*<a href="/posts/projects/debate-ducks/10/#%EB%85%B9%ED%99%94-%EC%98%81%EC%83%81-%EA%B9%A8%EC%A7%90-%ED%98%84%EC%83%81">해결법</a></em></p>
 <h2 id="etc" class="relative group">Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc" aria-label="Anchor">#</a></span></h2>
 <h3 id="usestate와-useref" class="relative group">useState와 useRef <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#usestate%ec%99%80-useref" aria-label="Anchor">#</a></span></h3>
 <p>저장해둔 값이 변경될 때 <code>useState</code>는 재랜더링을 일으키고 <code>useRef</code>는 재랜더링을 일으키지 않는다. 나는 이 프로젝트를 진행할 때 기본적으로는 재랜더링을 일으키지 않는 <code>useRef</code>를 사용했고 재랜더링이 필요할 경우 <code>useState</code>를 사용했다.</p>
 <h3 id="작성된-코드에는-이유가-필요하다" class="relative group">작성된 코드에는 이유가 필요하다 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%91%ec%84%b1%eb%90%9c-%ec%bd%94%eb%93%9c%ec%97%90%eb%8a%94-%ec%9d%b4%ec%9c%a0%ea%b0%80-%ed%95%84%ec%9a%94%ed%95%98%eb%8b%a4" aria-label="Anchor">#</a></span></h3>
-<p>좋은 코드를 작성하기 위한 하나의 노력으로 코드를 한 줄 한 줄 복기하면서 &ldquo;왜 이 코드가 필요한가?&ldquo;를 스스로 생각해 보는 시간을 가졌다. 그러자 중간에 기능을 수정하면서 필요 없어진 부분들이 하나 둘 발견되었다. 또한 쓸데없이 복잡하게 작성된 부분들도 있었다. 이를 수정하면서 코드에 대한 이해가 한층 깊어짐을 느꼈다. 앞으로도 주기적으로 내가 작성한 코드를 복기하는 데 시간을 투자할 것이다.</p>
+<p>좋은 코드를 작성하기 위한 하나의 노력으로 코드를 한 줄 한 줄 복기하면서 &ldquo;왜 이 코드가 필요한가?&ldquo;를 스스로 생각해 보는 시간을 가졌다. 그러자 중간에 기능을 수정하면서 필요 없어진 부분들이 하나 둘 발견됐다. 또한 쓸데없이 복잡하게 작성된 부분들도 있었다. 이를 수정하면서 코드에 대한 이해가 한층 깊어짐을 느꼈다. 앞으로도 주기적으로 내가 작성한 코드를 복기하는 데 시간을 투자할 것이다.</p>
 
       </div>
     </section>
