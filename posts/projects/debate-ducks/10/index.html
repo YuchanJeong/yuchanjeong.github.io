@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "887"
+    "wordCount": "955"
   }]
   </script>
 
@@ -350,6 +350,7 @@
     <li><a href="#details">Details</a>
       <ul>
         <li><a href="#data-channel">Data channel</a></li>
+        <li><a href="#녹화-영상-유지-기능-삭제">녹화 영상 유지 기능 삭제</a></li>
       </ul>
     </li>
     <li><a href="#problems">Problems</a>
@@ -405,7 +406,10 @@
   <span class="p">});</span>
   <span class="nx">blobsRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
 <span class="p">});</span>
-</code></pre></div><h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
+</code></pre></div><h3 id="녹화-영상-유지-기능-삭제" class="relative group">녹화 영상 유지 기능 삭제 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%85%b9%ed%99%94-%ec%98%81%ec%83%81-%ec%9c%a0%ec%a7%80-%ea%b8%b0%eb%8a%a5-%ec%82%ad%ec%a0%9c" aria-label="Anchor">#</a></span></h3>
+<p>녹화 영상 유지 기능을 삭제했기 때문에 토론 중에 한쪽의 연결이 끊겼을 경우 남아있는 사용자가 해당 시점까지 진행된 토론의 녹화 영상을 올리고 토론을 종료시킬지 아니면 토론을 처음부터 다시 시작할지 선택할 수 있게 만들었다.</p>
+<p>Ps. 스킵을 1분 미만일 때만 가능하게 변경했다. 매초 재랜더링이 일어나는 것을 방지하기 위해 시간은 useRef로 관리하며 스킵이 가능하지 않을 때는 따로 안내하게 만들었다. (버튼 비활성화를 위해서는 useState로 변경을 추적해야 함)</p>
+<h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
 <h3 id="녹화-영상-깨짐-현상" class="relative group">녹화 영상 깨짐 현상 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%85%b9%ed%99%94-%ec%98%81%ec%83%81-%ea%b9%a8%ec%a7%90-%ed%98%84%ec%83%81" aria-label="Anchor">#</a></span></h3>
 <p><strong># 문제</strong></p>
 <p>토론이 중단된 후 재시작 됐을 때 재시작 이후의 녹화 영상이 깨지는 현상이 발생한다.</p>
