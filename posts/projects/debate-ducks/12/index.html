@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "638"
+    "wordCount": "641"
   }]
   </script>
 
@@ -450,6 +450,7 @@ Ps. stale 상태일 때 다음의 경우 refetch가 일어남. (fresh 상태일 
     <span class="nb">Error</span>
   <span class="o">&gt;</span><span class="p">([</span><span class="s2">&#34;debate&#34;</span><span class="p">,</span> <span class="nx">debateId</span><span class="p">],</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">getDebate</span><span class="p">(</span><span class="nx">debateId</span><span class="p">));</span>
 
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="sb">`/debates`</span><span class="p">);</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">isLoading</span><span class="p">)</span> <span class="k">return</span> <span class="p">&lt;&gt;</span><span class="nx">loading</span><span class="p">...&lt;/&gt;;</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="k">return</span> <span class="p">&lt;&gt;</span><span class="nx">error</span><span class="p">&lt;/&gt;;</span>
 
