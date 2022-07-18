@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React-query on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/react-query/</link>
+    <description>Recent content in React-query on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Mon, 18 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/react-query/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[React-query] React Query와 상태관리 :: 2월 우아한테크세미나</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/react-query-1/</link>
+      <pubDate>Mon, 18 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/studies/react/react-query-1/</guid>
+      <description>정리 필요상태관리 #상태란?</description>
+    </item>
+    
+  </channel>
+</rss>
