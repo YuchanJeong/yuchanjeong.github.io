@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "557"
+    "wordCount": "555"
   }]
   </script>
 
@@ -350,7 +350,7 @@
     <li><a href="#details">Details</a>
       <ul>
         <li><a href="#확인용-모달">확인용 모달</a></li>
-        <li><a href="#입력-관련-사용자-hook">입력 관련 사용자 Hook</a></li>
+        <li><a href="#입력-관련-커스텀훅">입력 관련 커스텀훅</a></li>
         <li><a href="#유효성-검사">유효성 검사</a></li>
       </ul>
     </li>
@@ -410,7 +410,7 @@
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div><h3 id="입력-관련-사용자-hook" class="relative group">입력 관련 사용자 Hook <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%85%eb%a0%a5-%ea%b4%80%eb%a0%a8-%ec%82%ac%ec%9a%a9%ec%9e%90-hook" aria-label="Anchor">#</a></span></h3>
+</code></pre></div><h3 id="입력-관련-커스텀훅" class="relative group">입력 관련 커스텀훅 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%85%eb%a0%a5-%ea%b4%80%eb%a0%a8-%ec%bb%a4%ec%8a%a4%ed%85%80%ed%9b%85" aria-label="Anchor">#</a></span></h3>
 <p>컴포넌트에서 사용할 때 쉽게 사용할 수 있게 필요한 속성을 정리해서 return 해줬다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">ChangeEvent</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
 
@@ -534,7 +534,7 @@
 <span class="p">});</span>
 </code></pre></div><h2 id="etc" class="relative group">Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc" aria-label="Anchor">#</a></span></h2>
 <h3 id="재사용성" class="relative group">재사용성 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%ac%ec%82%ac%ec%9a%a9%ec%84%b1" aria-label="Anchor">#</a></span></h3>
-<p>이전 프로젝트에서 재사용이 가능한 사용자 Hook이나 컴포넌트를 만들 때 다양한 기능을 한 번에 처리할 수 있게 만들었다. 그래서 오히려 재사용성과 확장성을 잃어버렸다. 이번에는 기능별로 조금 더 작은 단위로 쪼개서 만들 것이다.</p>
+<p>이전 프로젝트에서 재사용이 가능한 커스텀훅이나 컴포넌트를 만들 때 다양한 기능을 한 번에 처리할 수 있게 만들었다. 그래서 오히려 재사용성과 확장성을 잃어버렸다. 이번에는 기능별로 조금 더 작은 단위로 쪼개서 만들 것이다.</p>
 <p>예전에 책에서 &ldquo;한 가지 함수는 한 가지 기능을 해야 한다.&ldquo;라고 본 적이 있다. 이때까지는 여러 기능이 합쳐져서 한 가지 기능을 할 때 최종 기능만을 한 가지 기능으로 봤었다. 이제는 재사용성과 확장성을 고려해서 좀 더 낮은 단계의 기능들을 각각 한 가지 기능으로 볼 것이다.</p>
 
       </div>
@@ -672,7 +672,7 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >[Debate-Ducks] Debateroom - React Query</span
+                  >[Debate-Ducks] Debateroom - React Query 기초</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
