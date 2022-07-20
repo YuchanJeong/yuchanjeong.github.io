@@ -103,7 +103,7 @@
     "keywords": ["'Debate-Ducks'","(Devlog)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "680"
+    "wordCount": "785"
   }]
   </script>
 
@@ -353,6 +353,11 @@
         <li><a href="#생성과-수정의-공통요소">생성과 수정의 공통요소</a></li>
       </ul>
     </li>
+    <li><a href="#problems">Problems</a>
+      <ul>
+        <li><a href="#작동-순서-문제">작동 순서 문제</a></li>
+      </ul>
+    </li>
     <li><a href="#etc">Etc</a>
       <ul>
         <li><a href="#typescript-및-react-query">TypeScript 및 React Query</a></li>
@@ -374,18 +379,18 @@
 <p>useQuery과 useMutation을 커스텀훅으로 만들어 재사용성과 안정성을 높였다. 성공 시와 에러 발생 시의 로직도 미리 작성해뒀다.</p>
 <p>Ps. usePatchDebate의 isEdit으로 토론 게시물을 수정할 때와 토론에 참여할 때를 구분했다. (토론에 참여할 때 토론 테이블의 participant_id를 업데이트함)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">useGetDebate</span> <span class="o">=</span> <span class="p">(</span>
-  <span class="nx">debateId</span>: <span class="kt">string</span> <span class="o">|</span> <span class="kt">string</span><span class="p">[]</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">,</span>
+  <span class="nx">debateId</span>: <span class="kt">number</span><span class="p">,</span>
   <span class="nx">options?</span>: <span class="kt">UseQueryOptions</span><span class="p">&lt;</span><span class="nt">Debate</span><span class="err">,</span> <span class="na">AxiosError</span><span class="p">&gt;</span>
 <span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
   <span class="kr">const</span> <span class="p">{</span> <span class="nx">isLoading</span><span class="p">,</span> <span class="nx">data</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useQuery</span><span class="p">&lt;</span><span class="nt">Debate</span><span class="err">,</span> <span class="na">AxiosError</span><span class="p">&gt;(</span>
-    <span class="p">[</span><span class="s2">&#34;debate&#34;</span><span class="p">,</span> <span class="nx">debateId</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&#34;debate&#34;</span><span class="p">,</span> <span class="sb">`</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">`</span><span class="p">],</span>
     <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">getDebate</span><span class="p">(</span><span class="nx">debateId</span><span class="p">),</span>
     <span class="p">{</span>
       <span class="p">...</span><span class="nx">options</span><span class="p">,</span>
       <span class="nx">onError</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&#34;/error&#34;</span><span class="p">);</span>
-      <span class="p">},</span>
+        <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">);</span> <span class="c1">//Todo: 에러 페이지로 이동
+</span><span class="c1"></span>      <span class="p">},</span>
     <span class="p">}</span>
   <span class="p">);</span>
 
@@ -393,12 +398,11 @@
 <span class="p">};</span>
 
 <span class="kr">export</span> <span class="kr">const</span> <span class="nx">usePostDebate</span> <span class="o">=</span> <span class="p">(</span>
-  <span class="nx">debate</span>: <span class="kt">DebatePost</span><span class="p">,</span>
   <span class="nx">setIsErrorModalOn</span>: <span class="kt">Dispatch</span><span class="p">&lt;</span><span class="nt">SetStateAction</span><span class="err">&lt;</span><span class="na">boolean</span><span class="p">&gt;</span><span class="o">&gt;</span>
 <span class="p">)</span><span class="o">:</span> <span class="nx">UseMutationResult</span><span class="p">&lt;</span><span class="nt">DebatePost</span><span class="err">,</span> <span class="na">AxiosError</span><span class="err">,</span> <span class="na">DebatePost</span><span class="p">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
   <span class="kr">const</span> <span class="nx">queryClient</span> <span class="o">=</span> <span class="nx">useQueryClient</span><span class="p">();</span>
-  <span class="k">return</span> <span class="nx">useMutation</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">postDebate</span><span class="p">(</span><span class="nx">debate</span><span class="p">),</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">useMutation</span><span class="p">((</span><span class="nx">debate</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">postDebate</span><span class="p">(</span><span class="nx">debate</span><span class="p">),</span> <span class="p">{</span>
     <span class="nx">onSuccess</span><span class="o">:</span> <span class="p">(</span><span class="nx">debateId</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nx">queryClient</span><span class="p">.</span><span class="nx">invalidateQueries</span><span class="p">([</span><span class="s2">&#34;debates&#34;</span><span class="p">]);</span>
       <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="sb">`/debates/</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
@@ -410,16 +414,31 @@
 <span class="p">};</span>
 
 <span class="kr">export</span> <span class="kr">const</span> <span class="nx">usePatchDebate</span> <span class="o">=</span> <span class="p">(</span>
-  <span class="nx">debate</span>: <span class="kt">DebatePatch</span><span class="p">,</span>
   <span class="nx">setIsErrorModalOn</span>: <span class="kt">Dispatch</span><span class="p">&lt;</span><span class="nt">SetStateAction</span><span class="err">&lt;</span><span class="na">boolean</span><span class="p">&gt;</span><span class="o">&gt;</span><span class="p">,</span>
   <span class="nx">isEdit?</span>: <span class="kt">boolean</span>
 <span class="p">)</span><span class="o">:</span> <span class="nx">UseMutationResult</span><span class="p">&lt;</span><span class="nt">DebatePatch</span><span class="err">,</span> <span class="na">AxiosError</span><span class="err">,</span> <span class="na">DebatePatch</span><span class="p">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
   <span class="kr">const</span> <span class="nx">queryClient</span> <span class="o">=</span> <span class="nx">useQueryClient</span><span class="p">();</span>
-  <span class="k">return</span> <span class="nx">useMutation</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">patchDebate</span><span class="p">(</span><span class="nx">debate</span><span class="p">),</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">useMutation</span><span class="p">((</span><span class="nx">debate</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">patchDebate</span><span class="p">(</span><span class="nx">debate</span><span class="p">),</span> <span class="p">{</span>
     <span class="nx">onSuccess</span><span class="o">:</span> <span class="p">(</span><span class="nx">debateId</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nx">queryClient</span><span class="p">.</span><span class="nx">invalidateQueries</span><span class="p">([</span><span class="s2">&#34;debate&#34;</span><span class="p">,</span> <span class="sb">`</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">`</span><span class="p">]);</span>
       <span class="k">if</span> <span class="p">(</span><span class="nx">isEdit</span><span class="p">)</span> <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="sb">`/debates/</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="nx">onError</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">setIsErrorModalOn</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+    <span class="p">},</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useDeleteDebate</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="nx">setIsErrorModalOn</span>: <span class="kt">Dispatch</span><span class="p">&lt;</span><span class="nt">SetStateAction</span><span class="err">&lt;</span><span class="na">boolean</span><span class="p">&gt;</span><span class="o">&gt;</span>
+<span class="p">)</span><span class="o">:</span> <span class="nx">UseMutationResult</span><span class="p">&lt;</span><span class="nt">number</span><span class="err">,</span> <span class="na">AxiosError</span><span class="err">,</span> <span class="na">number</span><span class="p">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="nx">queryClient</span> <span class="o">=</span> <span class="nx">useQueryClient</span><span class="p">();</span>
+  <span class="k">return</span> <span class="nx">useMutation</span><span class="p">((</span><span class="nx">debateId</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">deleteDebate</span><span class="p">(</span><span class="nx">debateId</span><span class="p">),</span> <span class="p">{</span>
+    <span class="nx">onSuccess</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">queryClient</span><span class="p">.</span><span class="nx">invalidateQueries</span><span class="p">([</span><span class="s2">&#34;debates&#34;</span><span class="p">]);</span>
+      <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="sb">`/debates`</span><span class="p">);</span>
     <span class="p">},</span>
     <span class="nx">onError</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nx">setIsErrorModalOn</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
@@ -434,7 +453,9 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// edit/[debateId].tsx
 </span><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Edit() {</span>
   <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
-  <span class="kr">const</span> <span class="p">{</span> <span class="nx">debateId</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">router</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">param</span> <span class="o">=</span> <span class="nx">router</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">debateId</span> <span class="o">=</span>
+    <span class="k">typeof</span> <span class="nx">param</span><span class="o">?</span><span class="p">.</span><span class="nx">debateId</span> <span class="o">===</span> <span class="s2">&#34;string&#34;</span> <span class="o">?</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">param</span><span class="o">?</span><span class="p">.</span><span class="nx">debateId</span><span class="p">)</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
   <span class="kr">const</span> <span class="p">{</span> <span class="nx">data</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useGetDebate</span><span class="p">(</span><span class="nx">debateId</span><span class="p">);</span>
 
   <span class="kr">const</span> <span class="p">[</span><span class="nx">isSameModal</span><span class="p">,</span> <span class="nx">setIsSameModal</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">&lt;</span><span class="nt">boolean</span><span class="p">&gt;(</span><span class="kc">false</span><span class="p">);</span>
@@ -446,10 +467,12 @@
   <span class="kr">const</span> <span class="nx">titleInput</span> <span class="o">=</span> <span class="nx">useInput</span><span class="p">(</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">);</span>
   <span class="kr">const</span> <span class="nx">categorySelect</span> <span class="o">=</span> <span class="nx">useSelect</span><span class="p">(</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">category</span> <span class="o">||</span> <span class="nx">CATEGORIES</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
   <span class="kr">const</span> <span class="nx">prosConsRadio</span> <span class="o">=</span> <span class="nx">useRadio</span><span class="p">(</span>
-    <span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">author_pros</span> <span class="o">?</span> <span class="sb">`</span><span class="si">${</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">author_pros</span><span class="si">}</span><span class="sb">`</span> <span class="o">:</span> <span class="s2">&#34;true&#34;</span><span class="p">,</span>
+    <span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">author_pros</span> <span class="o">?</span> <span class="sb">`</span><span class="si">${</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">author_pros</span><span class="si">}</span><span class="sb">`</span> <span class="o">:</span> <span class="s2">&#34;false&#34;</span><span class="p">,</span>
     <span class="s2">&#34;prosCons&#34;</span>
   <span class="p">);</span>
-  <span class="kr">const</span> <span class="nx">contentsInput</span> <span class="o">=</span> <span class="nx">useInput</span><span class="p">(</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">contentsInput</span> <span class="o">=</span> <span class="nx">useInput</span><span class="p">(</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">contents</span> <span class="o">||</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">);</span>
+
+  <span class="kr">const</span> <span class="nx">postDebate</span> <span class="o">=</span> <span class="nx">usePatchDebate</span><span class="p">(</span><span class="nx">setIsErrorModalOn</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
 
   <span class="kr">const</span> <span class="nx">debate</span>: <span class="kt">DebatePatch</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">title</span>: <span class="kt">titleInput.value</span><span class="p">,</span>
@@ -459,32 +482,26 @@
     <span class="nx">id</span>: <span class="kt">data?.id</span> <span class="o">||</span> <span class="mi">0</span><span class="p">,</span>
   <span class="p">};</span>
 
-  <span class="kr">const</span> <span class="nx">postDebate</span> <span class="o">=</span> <span class="nx">usePatchDebate</span><span class="p">(</span><span class="nx">debate</span><span class="p">,</span> <span class="nx">setIsErrorModalOn</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-
   <span class="kr">const</span> <span class="nx">edit</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// Edit의 고유한 조건
-</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span>
-      <span class="nx">data</span><span class="p">.</span><span class="nx">title</span> <span class="o">!==</span> <span class="nx">debate</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span>
-      <span class="nx">data</span><span class="p">.</span><span class="nx">author_pros</span> <span class="o">!==</span> <span class="nx">debate</span><span class="p">.</span><span class="nx">author_pros</span> <span class="o">||</span>
-      <span class="nx">data</span><span class="p">.</span><span class="nx">category</span> <span class="o">!==</span> <span class="nx">debate</span><span class="p">.</span><span class="nx">category</span> <span class="o">||</span>
-      <span class="nx">data</span><span class="p">.</span><span class="nx">contents</span> <span class="o">!==</span> <span class="nx">debate</span><span class="p">.</span><span class="nx">contents</span>
+      <span class="c1">// Edit 고유 로직
+</span><span class="c1"></span>      <span class="nx">data</span><span class="p">.</span><span class="nx">title</span> <span class="o">===</span> <span class="nx">debate</span><span class="p">.</span><span class="nx">title</span> <span class="o">&amp;&amp;</span>
+      <span class="nx">data</span><span class="p">.</span><span class="nx">author_pros</span> <span class="o">===</span> <span class="nx">debate</span><span class="p">.</span><span class="nx">author_pros</span> <span class="o">&amp;&amp;</span>
+      <span class="nx">data</span><span class="p">.</span><span class="nx">category</span> <span class="o">===</span> <span class="nx">debate</span><span class="p">.</span><span class="nx">category</span> <span class="o">&amp;&amp;</span>
+      <span class="nx">data</span><span class="p">.</span><span class="nx">contents</span> <span class="o">===</span> <span class="nx">debate</span><span class="p">.</span><span class="nx">contents</span>
     <span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// 공통 함수
-</span><span class="c1"></span>      <span class="nx">createOrEdit</span><span class="p">(</span>
-        <span class="nx">titleRef</span><span class="p">,</span>
-        <span class="nx">setValidateNotice</span><span class="p">,</span>
-        <span class="nx">titleInput</span><span class="p">,</span>
-        <span class="nx">contentsInput</span><span class="p">,</span>
-        <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-          <span class="nx">postDebate</span><span class="p">.</span><span class="nx">mutate</span><span class="p">(</span><span class="nx">debate</span><span class="p">);</span>
-        <span class="p">}</span>
-      <span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="nx">setIsSameModal</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">// 공통 함수
+</span><span class="c1"></span>      <span class="nx">createOrEdit</span><span class="p">(</span><span class="nx">titleRef</span><span class="p">,</span> <span class="nx">setValidateNotice</span><span class="p">,</span> <span class="nx">titleInput</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">postDebate</span><span class="p">.</span><span class="nx">mutate</span><span class="p">(</span><span class="nx">debate</span><span class="p">);</span>
+      <span class="p">});</span>
     <span class="p">}</span>
   <span class="p">};</span>
 
+  <span class="c1">// 공통 HTML
+</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span> <span class="p">&lt;&gt;</span><span class="mi">404</span><span class="p">&lt;/&gt;;</span>
   <span class="k">return</span> <span class="p">(</span>
     <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
       <span class="p">{</span><span class="nx">isSameModal</span> <span class="o">?</span> <span class="p">(</span>
@@ -497,14 +514,14 @@
           <span class="p">}}</span>
         <span class="p">/&gt;</span>
       <span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">}</span>
-      <span class="c1">// 공통 HTML 요소
-</span><span class="c1"></span>      <span class="p">&lt;</span><span class="nt">CreateOrEdit</span>
+      <span class="p">&lt;</span><span class="nt">CreateOrEdit</span>
         <span class="na">isErrorModalOn</span><span class="o">=</span><span class="p">{</span><span class="nx">isErrorModalOn</span><span class="p">}</span>
         <span class="na">setIsErrorModalOn</span><span class="o">=</span><span class="p">{</span><span class="nx">setIsErrorModalOn</span><span class="p">}</span>
         <span class="na">isCancelModalOn</span><span class="o">=</span><span class="p">{</span><span class="nx">isCancelModalOn</span><span class="p">}</span>
         <span class="na">setIsCancelModalOn</span><span class="o">=</span><span class="p">{</span><span class="nx">setIsCancelModalOn</span><span class="p">}</span>
         <span class="na">titleRef</span><span class="o">=</span><span class="p">{</span><span class="nx">titleRef</span><span class="p">}</span>
         <span class="na">validateNotice</span><span class="o">=</span><span class="p">{</span><span class="nx">validateNotice</span><span class="p">}</span>
+        <span class="na">setValidateNotice</span><span class="o">=</span><span class="p">{</span><span class="nx">setValidateNotice</span><span class="p">}</span>
         <span class="na">titleInput</span><span class="o">=</span><span class="p">{</span><span class="nx">titleInput</span><span class="p">}</span>
         <span class="na">categorySelect</span><span class="o">=</span><span class="p">{</span><span class="nx">categorySelect</span><span class="p">}</span>
         <span class="na">prosConsRadio</span><span class="o">=</span><span class="p">{</span><span class="nx">prosConsRadio</span><span class="p">}</span>
@@ -517,6 +534,12 @@
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">);</span>
 <span class="p">}</span>
+</code></pre></div><h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
+<h3 id="작동-순서-문제" class="relative group">작동 순서 문제 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%91%eb%8f%99-%ec%88%9c%ec%84%9c-%eb%ac%b8%ec%a0%9c" aria-label="Anchor">#</a></span></h3>
+<p><code>createOrEdit</code> 함수 내에서 좌우 여백을 <code>trim</code>하고 <code>debate</code>를 변경한 다음 post 하는 로직을 만들었으나, <code>postDebate.mutate(debate)</code>를 콜백함수로 넘기는 시점에서 <code>trim</code> 되지 않은 <code>debate</code>가 넘어가서 원하는데로 작동하지 않았다. 그래서 우선은 <code>createOrEdit</code> 내에서 유효성 검사를 통해 걸러주는 방식을 선택했다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="nx">createOrEdit</span><span class="p">(</span><span class="nx">titleRef</span><span class="p">,</span> <span class="nx">setValidateNotice</span><span class="p">,</span> <span class="nx">titleInput</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">postDebate</span><span class="p">.</span><span class="nx">mutate</span><span class="p">(</span><span class="nx">debate</span><span class="p">);</span> <span class="c1">// 내부에서 debate를 변경해도 이 시점에서 변경되기 이전의 debate가 넘어감
+</span><span class="c1"></span><span class="p">});</span>
 </code></pre></div><h2 id="etc" class="relative group">Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc" aria-label="Anchor">#</a></span></h2>
 <h3 id="typescript-및-react-query" class="relative group">TypeScript 및 React Query <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#typescript-%eb%b0%8f-react-query" aria-label="Anchor">#</a></span></h3>
 <p>타입 스크립트가 가끔 귀찮은 상황을 만들기도 하지만 그만큼 안정적이라 기본 CRUD 작업에 들어간 다음에는 에러를 거의 못 보고 있다. 특히 타입이 명확히 정해져 있다 보니 오타로 인한 에러 방지에 탁월했다.</p>
