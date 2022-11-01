@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Mon, 31 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Blog Submodule Error</title>
+      <link>https://yuchanjeong.github.io/posts/error/1/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/error/1/</guid>
+      <description>현재 HUGO와 github.</description>
+    </item>
+    
     <item>
       <title>Git</title>
       <link>https://yuchanjeong.github.io/posts/summary/git/</link>
