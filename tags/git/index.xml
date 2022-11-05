@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Sun, 30 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>깃허브 블로그 서브 모듈 문제</title>
+      <link>https://yuchanjeong.github.io/posts/etc/1/</link>
+      <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/etc/1/</guid>
+      <description>배경 #취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 때문에 만나게 된 서브 모듈 관련 문제와 이 문제에 대한 해결 과정을 기록했다.</description>
+    </item>
+    
     <item>
       <title>Git</title>
       <link>https://yuchanjeong.github.io/posts/summary/git/</link>
@@ -15,15 +24,6 @@
       
       <guid>https://yuchanjeong.github.io/posts/summary/git/</guid>
       <description>1) 기본 설정 #   Command Details     git init 깃 추적 시작   git config --global --list 기본 설정 보기   git config --global core.</description>
-    </item>
-    
-    <item>
-      <title>깃허브 블로그 서브 모듈 문제</title>
-      <link>https://yuchanjeong.github.io/posts/etc/1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/posts/etc/1/</guid>
-      <description>배경 #취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 때문에 만나게 된 서브 모듈 관련 문제와 이 문제에 대한 해결 과정을 기록했다.</description>
     </item>
     
   </channel>

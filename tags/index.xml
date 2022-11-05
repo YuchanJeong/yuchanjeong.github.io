@@ -27,9 +27,18 @@
     </item>
     
     <item>
+      <title>error</title>
+      <link>https://yuchanjeong.github.io/tags/error/</link>
+      <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/error/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>git</title>
       <link>https://yuchanjeong.github.io/tags/git/</link>
-      <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/tags/git/</guid>
       <description></description>
@@ -41,15 +50,6 @@
       <pubDate>Sat, 29 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/tags/convention/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>error</title>
-      <link>https://yuchanjeong.github.io/tags/error/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/tags/error/</guid>
       <description></description>
     </item>
     
