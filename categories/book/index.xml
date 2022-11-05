@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>&lt;book&gt; on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/categories/book/</link>
+    <description>Recent content in &lt;book&gt; on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Sat, 29 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/book/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>개발자의 글쓰기 - 김철수</title>
+      <link>https://yuchanjeong.github.io/posts/book/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EA%B8%80%EC%93%B0%EA%B8%B0/</link>
+      <pubDate>Sat, 29 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/book/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EA%B8%80%EC%93%B0%EA%B8%B0/</guid>
+      <description>개발자의 글쓰기는 &amp;lsquo;정확&amp;rsquo;하고 &amp;lsquo;간결&amp;rsquo;하고 &amp;lsquo;가독성&amp;rsquo;이 높아야 한다.</description>
+    </item>
+    
+  </channel>
+</rss>

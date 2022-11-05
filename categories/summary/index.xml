@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>&lt;summary&gt; on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/categories/summary/</link>
+    <description>Recent content in &lt;summary&gt; on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Sun, 30 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/summary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git</title>
+      <link>https://yuchanjeong.github.io/posts/summary/git/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/summary/git/</guid>
+      <description>1) 기본 설정 #   Command Details     git init 깃 추적 시작   git config --global --list 기본 설정 보기   git config --global core.</description>
+    </item>
+    
+  </channel>
+</rss>
