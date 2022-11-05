@@ -862,12 +862,12 @@
 </span></span><span class="line"><span class="cl"><span class="c1"># 구글 스프레드 시트에서 번역을 받아옴</span>
 </span></span><span class="line"><span class="cl">yarn download:i18n
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Trans</span><span class="p">,</span> <span class="nx">useTranslation</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react-i18next&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">Ii18Next</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;i18n&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Example() {</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">i18next</span> <span class="o">=</span> <span class="nx">useTranslation</span><span class="p">();</span> <span class="c1">// scan을 위한 자체 컨벤션으로 &#34;i18next&#34; 사용
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">getTabList</span> <span class="o">=</span> <span class="p">(</span><span class="nx">i18next</span>: <span class="kt">Ii18Next</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">id</span>: <span class="kt">1</span><span class="p">,</span> <span class="nx">label</span>: <span class="kt">i18next.t</span><span class="p">(</span><span class="s2">&#34;예시 1&#34;</span><span class="p">)</span> <span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">id</span>: <span class="kt">2</span><span class="p">,</span> <span class="nx">label</span>: <span class="kt">i18next.t</span><span class="p">(</span><span class="s2">&#34;예시 2&#34;</span><span class="p">)</span> <span class="p">},</span>
