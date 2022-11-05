@@ -70,7 +70,7 @@
   
   
   <meta property="og:title" content="깃허브 블로그 서브 모듈 문제" />
-<meta property="og:description" content="배경 #취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 때문에 만나게 된 서브 모듈 관련 문제와 이 문제에 대한 해결 과정을 기록했다." />
+<meta property="og:description" content="배경 #취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 과정에서 서브 모듈 관련 문제를 만났다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/etc/1/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-10-31T00:00:00+00:00" />
@@ -79,7 +79,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="깃허브 블로그 서브 모듈 문제"/>
-<meta name="twitter:description" content="배경 #취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 때문에 만나게 된 서브 모듈 관련 문제와 이 문제에 대한 해결 과정을 기록했다."/>
+<meta name="twitter:description" content="배경 #취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 과정에서 서브 모듈 관련 문제를 만났다."/>
 
   
   <script type="application/ld+json">
@@ -90,7 +90,7 @@
     "name": "깃허브 블로그 서브 모듈 문제",
     "headline": "깃허브 블로그 서브 모듈 문제",
     
-    "abstract": "배경 #\r취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 때문에 만나게 된 서브 모듈 관련 문제와 이 문제에 대한 해결 과정을 기록했다.",
+    "abstract": "배경 #\r취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 과정에서 서브 모듈 관련 문제를 만났다.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/posts\/etc\/1\/",
     "author" : {
@@ -106,7 +106,7 @@
     "keywords": ["git","error"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "172"
+    "wordCount": "185"
   }]
   </script>
 
@@ -336,11 +336,11 @@
       
       <div class="min-w-0 min-h-0 max-w-prose">
         <h2 id="배경" class="relative group">배경 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b0%b0%ea%b2%bd" aria-label="Anchor">#</a></span></h2>
-<p>취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 때문에 만나게 된 서브 모듈 관련 문제와 이 문제에 대한 해결 과정을 기록했다.</p>
+<p>취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 과정에서 서브 모듈 관련 문제를 만났다.</p>
 <h2 id="문제" class="relative group">문제 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%ac%b8%ec%a0%9c" aria-label="Anchor">#</a></span></h2>
-<p><code>blog</code> 저장소에는 블로그 설정, 테마 등의 모든 요소가 저장되고 <code>yuchanjeong.github.io</code> 저장소에는 빌드 된 정적 파일들만 저장되고 있다. blog에서 블로그에 관한 모든 것들을 관리하고 yuchanjeong.github.io는 서브 모듈로 관리하고 있는데 <code>git clone</code>을 한 뒤 <code>push</code>를 했을 때 blog에는 정상적으로 반영되나 yuchanjeong.github.io에는 반영이 되지 않는 문제가 발생했다.</p>
+<p><code>blog</code> 저장소에는 블로그 설정, 테마 등의 모든 요소가 저장되고 <code>yuchanjeong.github.io</code> 저장소에는 빌드 된 정적 파일들만 저장되고 있다. blog 저장소에서 블로그에 관한 모든 것들을 관리하고 yuchanjeong.github.io 저장소는 서브 모듈로 관리하고 있는데 <code>git clone</code>을 한 뒤 <code>push</code>를 했을 때 blog 저장소에는 정상적으로 반영이 되나 yuchanjeong.github.io 저장소에는 전혀 반영이 되지 않는 문제가 발생했다.</p>
 <h2 id="해결" class="relative group">해결 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%95%b4%ea%b2%b0" aria-label="Anchor">#</a></span></h2>
-<p>문제의 원인은 일반 클론 시 서브 모듈까지 클론하지 않기 때문이었다. 그래서 <code>git clone --recurse-submodules</code>를 통해 서브 모듈까지 클론했다. 하지만 여전히 문제가 해결되지 않았다. <code>cd public</code>을 통해 서브 모듈로 이동한 뒤 확인해 보자 브랜치가 <code>main</code>이 아니었다. 서브 모듈의 브랜치를 메인으로 이동해 주자 문제가 해결되었다.</p>
+<p>문제의 원인은 일반 클론 시 서브 모듈까지 클론하지 않기 때문이었다. 그래서 <code>git clone --recurse-submodules</code>를 통해 서브 모듈까지 클론해 줬다. 하지만 여전히 문제가 해결되지 않았고, <code>cd public</code>을 통해 서브 모듈로 이동한 뒤 확인해 보자 서브 모듈의 현재 브랜치가 <code>main</code>이 아니었다. 그래서 서브 모듈의 브랜치를 main으로 변경해 주자 문제가 해결되었다.</p>
 <p>*<em>만약 기존 폴더를 그대로 사용한다면 <code>git pull origin main --rebase</code>를 통해 변경사항을 당겨 받은 뒤 서브 모듈로 이동해 <code>git pull origin main -f</code>를 통해 서브 모듈의 변경사항도 당겨 받으면 된다.</em></p>
 <h2 id="etc" class="relative group">Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc" aria-label="Anchor">#</a></span></h2>
 <ul>
@@ -350,6 +350,10 @@
 <li>원격 저장소의 서브 모듈로 업데이트 하기
 <pre tabindex="0"><code>git submodule update --remote
 </code></pre></li>
+<li>스크립트의 개행 제거
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vi -b up.sh
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">:%s/control+v -&gt; control+m//g
+</code></pre></div></li>
 </ul>
 
       </div>
