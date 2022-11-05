@@ -9,12 +9,12 @@
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
     <lastBuildDate>Sat, 05 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>다국어 처리 (react-i18next)</title>
-      <link>https://yuchanjeong.github.io/posts/work/2/</link>
+      <title>별점 만들기</title>
+      <link>https://yuchanjeong.github.io/posts/work/1/</link>
       <pubDate>Sat, 05 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/work/2/</guid>
-      <description>배경 #새로 진행하고 있는 B2B 프로젝트에 글로벌 진출 기회가 생겨서 다국어 처리를 할 필요가 생겼다.</description>
+      <guid>https://yuchanjeong.github.io/posts/work/1/</guid>
+      <description>배경 #기존에 제품 상세 페이지는 정적인 이미지로만 구성되어 있었다.</description>
     </item>
     
     <item>
