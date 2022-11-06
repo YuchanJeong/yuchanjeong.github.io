@@ -7,13 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Sat, 05 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>i18next</title>
+      <link>https://yuchanjeong.github.io/tags/i18next/</link>
+      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/i18next/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>react</title>
       <link>https://yuchanjeong.github.io/tags/react/</link>
-      <pubDate>Sat, 05 Nov 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react-i18next</title>
+      <link>https://yuchanjeong.github.io/tags/react-i18next/</link>
+      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/react-i18next/</guid>
       <description></description>
     </item>
     
