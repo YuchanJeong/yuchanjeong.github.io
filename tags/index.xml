@@ -9,11 +9,11 @@
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
     <lastBuildDate>Sun, 06 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>i18next</title>
-      <link>https://yuchanjeong.github.io/tags/i18next/</link>
+      <title>i18n</title>
+      <link>https://yuchanjeong.github.io/tags/i18n/</link>
       <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/tags/i18next/</guid>
+      <guid>https://yuchanjeong.github.io/tags/i18n/</guid>
       <description></description>
     </item>
     
@@ -23,15 +23,6 @@
       <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/tags/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>react-i18next</title>
-      <link>https://yuchanjeong.github.io/tags/react-i18next/</link>
-      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/tags/react-i18next/</guid>
       <description></description>
     </item>
     
