@@ -15,8 +15,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>평균 별점 표현 (소수점 반영) &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="평균 별점 표현 (소수점 반영) &middot; Yuchan&#39;s hello world!" />
+  <title>평균 별점 (소수점 반영) &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="평균 별점 (소수점 반영) &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog from a developer who loves &#39;Why?&#39; :)" />
   
@@ -69,7 +69,7 @@
   
   
   
-  <meta property="og:title" content="평균 별점 표현 (소수점 반영)" />
+  <meta property="og:title" content="평균 별점 (소수점 반영)" />
 <meta property="og:description" content="배경 #제품 상세페이지의 제품 이미지 바로 아래에 해당 제품의 평균 별점이 보이면 좋겠다는 의견이 나와서 이를 반영하기로 했다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/work/1/" /><meta property="article:section" content="posts" />
@@ -78,7 +78,7 @@
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="평균 별점 표현 (소수점 반영)"/>
+<meta name="twitter:title" content="평균 별점 (소수점 반영)"/>
 <meta name="twitter:description" content="배경 #제품 상세페이지의 제품 이미지 바로 아래에 해당 제품의 평균 별점이 보이면 좋겠다는 의견이 나와서 이를 반영하기로 했다."/>
 
   
@@ -87,8 +87,8 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "평균 별점 표현 (소수점 반영)",
-    "headline": "평균 별점 표현 (소수점 반영)",
+    "name": "평균 별점 (소수점 반영)",
+    "headline": "평균 별점 (소수점 반영)",
     
     "abstract": "배경 #\r제품 상세페이지의 제품 이미지 바로 아래에 해당 제품의 평균 별점이 보이면 좋겠다는 의견이 나와서 이를 반영하기로 했다.",
     "inLanguage": "en",
@@ -106,7 +106,7 @@
     "keywords": ["react","sass"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "550"
+    "wordCount": "556"
   }]
   </script>
 
@@ -231,7 +231,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        평균 별점 표현 (소수점 반영)
+        평균 별점 (소수점 반영)
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -346,7 +346,7 @@
 <h2 id="시행착오" class="relative group">시행착오 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%8b%9c%ed%96%89%ec%b0%a9%ec%98%a4" aria-label="Anchor">#</a></span></h2>
 <p>처음에는 별 5개가 나란히 있는 이미지를 받은 다음 아래에는 비어있는 별을, 위에는 채워져 있는 별을 겹쳐서 배치한 다음 채워져 있는 별의 부모 요소 넓이를 백분율에 따라 줄이고 <code>overflow: hidden;</code> 스타일을 적용하는 것으로 쉽게 구현했었다. 하지만 별 사이의 간격까지 백분율에 반영해 버리는 문제점을 지니고 있었다.</p>
 <h2 id="구현" class="relative group">구현 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ea%b5%ac%ed%98%84" aria-label="Anchor">#</a></span></h2>
-<p>문제점을 해결하기 위해 별 하나하나를 정수로 구분하고 별 내부를 소수로 구분하는 방법을 사용했다. 그리고 소수점 단위의 스타일 적용을 sass에서 구현하기 위해서 <a href="https://www.sassmeister.com/">https://www.sassmeister.com/</a> 사이트를 참조해가며 반복문을 작성했다. (styled-component의 props가 잠시 그리워지는 시점이었다.) 마지막으로 별의 일부만 채우는 기능을 구현하기 위해 <code>&lt;svg/&gt;</code>에 <code>margin-left: ...;</code>를 마이너스 단위로 줘서 이동시킨 다음 내부의 <code>&lt;path/&gt;</code>를 <code>transform: translateX(...);</code>로 다시 이동시키는 방법을 사용했다.</p>
+<p>문제점을 해결하기 위해서 별 하나하나를 정수로 구분하고 별 내부를 소수점으로 구분하는 방법을 사용했다. 그리고 소수점 단위의 스타일 적용을 sass에서 구현하기 위해서 <a href="https://www.sassmeister.com/">https://www.sassmeister.com/</a> 사이트를 참조해가며 반복문을 작성했다. (styled-component의 props가 잠시 그리워지는 시점이었다.) 마지막으로 별의 일부만 채우는 기능을 구현하기 위해 <code>&lt;svg/&gt;</code>에 <code>margin-left: ...;</code>를 마이너스 단위로 줘서 이동시킨 다음 내부의 <code>&lt;path/&gt;</code>를 <code>transform: translateX(...);</code>로 다시 이동시키는 방법을 사용했다.</p>
 <img width="250px" alt="react-i18next vs react-intl" src="/assets/work/1-1.png"/>
 <img width="250px" alt="react-i18next vs react-intl" src="/assets/work/1-2.png"/>
 <h3 id="별점-리뷰-컴포넌트" class="relative group">별점 리뷰 컴포넌트 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b3%84%ec%a0%90-%eb%a6%ac%eb%b7%b0-%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8" aria-label="Anchor">#</a></span></h3>
@@ -440,8 +440,9 @@
 </span></span><span class="line"><span class="cl">  <span class="o">/&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/svg&gt;</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">export</span> <span class="p">{</span> <span class="nx">ReactComponent</span> <span class="nx">as</span> <span class="nx">StarSvg</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./star.svg&#34;</span><span class="p">;</span>
-</span></span></code></pre></div><h2 id="참조" class="relative group">참조 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%b0%b8%ec%a1%b0" aria-label="Anchor">#</a></span></h2>
-<p>출근 첫날 회사의 코드를 뜯어보는 과정에서 이 코드를 보고는 &ldquo;이런 식으로 sass에서 반복문을 활용하는구나&quot;를 알게 되었고 메모장에 메모해 뒀었다. (취업 전에는 styled-component와 tailwind-CSS를 주로 사용해서 sass에 대한 이해도가 상대적으로 부족했다.) 그리고 별점의 소수점을 어떻게 sass에서 반영할 수 있을까 고민하는 과정에서 이 코드가 떠올랐고 덕분에 쉽게 문제를 해결할 수 있었다.</p>
+</span></span></code></pre></div><p>*<em>CRA 시에만 <code>ReactComponent</code> 사용 가능</em></p>
+<h2 id="참조" class="relative group">참조 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%b0%b8%ec%a1%b0" aria-label="Anchor">#</a></span></h2>
+<p>출근 첫날 회사의 코드를 뜯어보는 과정에서 이 코드를 보고는 &ldquo;이런 식으로 sass에서 반복문을 활용하는구나&quot;를 알게 되었고 메모장에 메모해 뒀었다. (취업 전에는 styled-component와 tailwind-CSS를 주로 사용해서 sass에 대한 이해도가 상대적으로 부족했다.) 그리고 별점의 소수점을 어떻게 sass에서 반영할 수 있을까를 고민하는 과정에서 이 코드가 떠올랐고 이를 참조해서 문제를 쉽게 해결할 수 있었다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$spacesPx</span><span class="o">:</span> <span class="p">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">60</span><span class="o">,</span> <span class="mi">70</span><span class="o">,</span> <span class="mi">80</span><span class="o">,</span> <span class="mi">90</span><span class="o">,</span> <span class="mi">100</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$space</span> <span class="ow">in</span> <span class="nv">$spacesPx</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nc">.mt</span><span class="si">#{</span><span class="nv">$space</span><span class="si">}</span> <span class="p">{</span>
