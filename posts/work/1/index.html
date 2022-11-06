@@ -41,7 +41,7 @@
   />
   
   
-  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
+  <script type="text/javascript" src="/js/appearance.min.4df8309499991be53c71b2b39ba0f5d5e77ea7d411d0710ce48c24218e7cc24ded28f19e85838fdc56db2306195cb001f049f577be0cf0ffb2dd6e2037ede1b9.js" integrity="sha512-TfgwlJmZG&#43;U8cbKzm6D11ed&#43;p9QR0HEM5IwkIY58wk3tKPGehYOP3FbbIwYZXLAB8En1d74M8P&#43;y3W4gN&#43;3huQ=="></script>
   
     
     
@@ -54,7 +54,7 @@
   
   
     
-    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.826a5fe6c278891cf13a6dfb6037ca860e91f5003747dba9d6252c7c6552553ff07cf6a2442897103d53a3f8804a6bcb83fe629aa23072ccccb993d082e7017b.js" integrity="sha512-gmpf5sJ4iRzxOm37YDfKhg6R9QA3R9up1iUsfGVSVT/wfPaiRCiXED1To/iASmvLg/5imqIwcszMuZPQgucBew==" data-copy="Copy" data-copied="Copied"></script>
+    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.30c6d45c2db7032188db44fddef5b4ff42b36191b9f0487b941af1e74397887ca05e0bec63d6d87c541dc5d551d37496d64c4875e975ab930a727752880706aa.js" integrity="sha512-MMbUXC23AyGI20T93vW0/0KzYZG58Eh7lBrx50OXiHygXgvsY9bYfFQdxdVR03SW1kxIdel1q5MKcndSiAcGqg==" data-copy="Copy" data-copied="Copied"></script>
   
   
   
@@ -350,115 +350,115 @@
 <img width="250px" alt="react-i18next vs react-intl" src="/assets/work/1-1.png"/>
 <img width="250px" alt="react-i18next vs react-intl" src="/assets/work/1-2.png"/>
 <h3 id="별점-리뷰-컴포넌트" class="relative group">별점 리뷰 컴포넌트 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b3%84%ec%a0%90-%eb%a6%ac%eb%b7%b0-%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">StarSvg</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;src/assets/index&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">styles</span> <span class="kr">from</span> <span class="s2">&#34;./StarReview.module.scss&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">interface</span> <span class="nx">IStarsProps</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">score</span>: <span class="kt">number</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">size</span>: <span class="kt">string</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">emptyColor</span>: <span class="kt">string</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">filledColor</span>: <span class="kt">string</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="cm">/**
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * 5점 만점의 별점 리뷰 컴포넌트 `★★★★☆`
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @score 별점(1~5점) e.g. `4.3`
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @size 크기 e.g. `4vw`
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @emptyColor 비었을 때 색상 e.g. `&#34;#EEEDEF&#34;`
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @filledColor 찼을 때 색상 e.g. `&#34;#6435C7&#34;`
-</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">StarReview</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">score</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">size</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">emptyColor</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">filledColor</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="nx">IStarsProps</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">_score</span> <span class="o">=</span> <span class="nx">score</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">integer</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">_score</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">decimal</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">((</span><span class="nb">Number</span><span class="p">(</span><span class="nx">_score</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">-</span> <span class="nx">integer</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">container</span><span class="p">}&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">stars</span><span class="p">}&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">StarSvg</span> <span class="na">width</span><span class="o">=</span><span class="p">{</span><span class="nx">size</span><span class="p">}</span> <span class="na">height</span><span class="o">=</span><span class="p">{</span><span class="nx">size</span><span class="p">}</span> <span class="na">fill</span><span class="o">=</span><span class="p">{</span><span class="nx">emptyColor</span><span class="p">}</span> <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span><span class="p">}</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">))}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="o">!</span><span class="nx">_score</span> <span class="o">||</span> <span class="nx">_score</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">_score</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">?</span> <span class="kc">null</span> <span class="o">:</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">stars</span><span class="p">}</span> <span class="na">data</span><span class="err">-</span><span class="na">type</span><span class="o">=</span><span class="s">&#34;filled&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span><span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span>
-</span></span><span class="line"><span class="cl">              <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">              <span class="na">data</span><span class="err">-</span><span class="na">decimal</span><span class="o">=</span><span class="p">{</span><span class="nx">decimal</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">              <span class="na">data</span><span class="err">-</span><span class="na">index</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span> <span class="o">===</span> <span class="nx">integer</span> <span class="o">?</span> <span class="s2">&#34;true&#34;</span> <span class="o">:</span> <span class="s2">&#34;false&#34;</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">              <span class="na">data</span><span class="err">-</span><span class="na">empty</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span> <span class="o">&gt;</span> <span class="nx">integer</span> <span class="o">?</span> <span class="s2">&#34;true&#34;</span> <span class="o">:</span> <span class="s2">&#34;false&#34;</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">              <span class="p">&lt;</span><span class="nt">StarSvg</span> <span class="na">width</span><span class="o">=</span><span class="p">{</span><span class="nx">size</span><span class="p">}</span> <span class="na">height</span><span class="o">=</span><span class="p">{</span><span class="nx">size</span><span class="p">}</span> <span class="na">fill</span><span class="o">=</span><span class="p">{</span><span class="nx">filledColor</span><span class="p">}</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">))}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">)}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="별점-리뷰-스타일" class="relative group">별점 리뷰 스타일 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b3%84%ec%a0%90-%eb%a6%ac%eb%b7%b0-%ec%8a%a4%ed%83%80%ec%9d%bc" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.container</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">position</span><span class="o">:</span> <span class="ni">relative</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="nc">.stars</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="na">display</span><span class="o">:</span> <span class="ni">flex</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="na">gap</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">&amp;</span><span class="o">[</span><span class="nt">data-type</span><span class="o">=</span><span class="s2">&#34;filled&#34;</span><span class="o">]</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="na">top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="na">position</span><span class="o">:</span> <span class="ni">absolute</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="mi">0</span> <span class="ow">through</span> <span class="mi">9</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="o">&gt;</span> <span class="nt">div</span><span class="o">[</span><span class="nt">data-decimal</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="s2">&#34;</span><span class="o">][</span><span class="nt">data-index</span><span class="o">=</span><span class="s2">&#34;true&#34;</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nt">svg</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="na">margin-left</span><span class="o">:</span> <span class="nf">-</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span> <span class="o">-</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$i</span> <span class="o">*</span> <span class="mi">0</span><span class="mf">.1</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">          <span class="o">&gt;</span> <span class="nt">path</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="na">transform</span><span class="o">:</span> <span class="nf">translateX</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span> <span class="o">-</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$i</span> <span class="o">*</span> <span class="mi">0</span><span class="mf">.1</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="o">&gt;</span> <span class="nt">div</span><span class="o">[</span><span class="nt">data-empty</span><span class="o">=</span><span class="s2">&#34;true&#34;</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nt">svg</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="na">display</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="별-이미지-svg" class="relative group">별 이미지 (svg) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b3%84-%ec%9d%b4%eb%af%b8%ec%a7%80-svg" aria-label="Anchor">#</a></span></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">svg</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">width</span><span class="o">=</span><span class="s2">&#34;current&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">height</span><span class="o">=</span><span class="s2">&#34;current&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">viewBox</span><span class="o">=</span><span class="s2">&#34;0 0 16 16&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">fill</span><span class="o">=</span><span class="s2">&#34;none&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">xmlns</span><span class="o">=</span><span class="s2">&#34;http://www.w3.org/2000/svg&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="nx">path</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">d</span><span class="o">=</span><span class="s2">&#34;M7.71663 0.815216C7.81002 0.546548 8.18998 0.546548 8.28337 0.815216L9.81237 5.21396C9.85357 5.33248 9.96418 5.41284 10.0896 5.4154L14.7456 5.51028C15.0299 5.51608 15.1474 5.87744 14.9207 6.04928L11.2097 8.86273C11.1097 8.93854 11.0675 9.06857 11.1038 9.18867L12.4524 13.6461C12.5347 13.9183 12.2273 14.1416 11.9939 13.9792L8.17135 11.3192C8.06836 11.2476 7.93164 11.2476 7.82865 11.3192L4.00614 13.9792C3.77267 14.1416 3.46527 13.9183 3.54764 13.6461L4.89617 9.18867C4.9325 9.06857 4.89025 8.93854 4.79027 8.86273L1.0793 6.04928C0.852639 5.87744 0.970053 5.51608 1.25443 5.51028L5.91037 5.4154C6.03582 5.41284 6.14643 5.33248 6.18763 5.21396L7.71663 0.815216Z&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">fill</span><span class="o">=</span><span class="s2">&#34;current&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="o">/&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/svg&gt;</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">export</span> <span class="p">{</span> <span class="nx">ReactComponent</span> <span class="nx">as</span> <span class="nx">StarSvg</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./star.svg&#34;</span><span class="p">;</span>
-</span></span></code></pre></div><p>*<em>CRA 시에만 <code>ReactComponent</code> 사용 가능</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">StarSvg</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;src/assets/index&#34;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="nx">styles</span> <span class="kr">from</span> <span class="s2">&#34;./StarReview.module.scss&#34;</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">IStarsProps</span> <span class="p">{</span>
+  <span class="nx">score</span>: <span class="kt">number</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">;</span>
+  <span class="nx">size</span>: <span class="kt">string</span><span class="p">;</span>
+  <span class="nx">emptyColor</span>: <span class="kt">string</span><span class="p">;</span>
+  <span class="nx">filledColor</span>: <span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+</span><span class="cm"> * 5점 만점의 별점 리뷰 컴포넌트 `★★★★☆`
+</span><span class="cm"> * @score 별점(1~5점) e.g. `4.3`
+</span><span class="cm"> * @size 크기 e.g. `4vw`
+</span><span class="cm"> * @emptyColor 비었을 때 색상 e.g. `&#34;#EEEDEF&#34;`
+</span><span class="cm"> * @filledColor 찼을 때 색상 e.g. `&#34;#6435C7&#34;`
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">StarReview</span><span class="p">({</span>
+  <span class="nx">score</span><span class="p">,</span>
+  <span class="nx">size</span><span class="p">,</span>
+  <span class="nx">emptyColor</span><span class="p">,</span>
+  <span class="nx">filledColor</span><span class="p">,</span>
+<span class="p">}</span><span class="o">:</span> <span class="nx">IStarsProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">_score</span> <span class="o">=</span> <span class="nx">score</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">integer</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">_score</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">decimal</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">((</span><span class="nb">Number</span><span class="p">(</span><span class="nx">_score</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">-</span> <span class="nx">integer</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">container</span><span class="p">}&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">stars</span><span class="p">}&gt;</span>
+        <span class="p">{</span><span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+          <span class="p">&lt;</span><span class="nt">StarSvg</span> <span class="na">width</span><span class="o">=</span><span class="p">{</span><span class="nx">size</span><span class="p">}</span> <span class="na">height</span><span class="o">=</span><span class="p">{</span><span class="nx">size</span><span class="p">}</span> <span class="na">fill</span><span class="o">=</span><span class="p">{</span><span class="nx">emptyColor</span><span class="p">}</span> <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span><span class="p">}</span> <span class="p">/&gt;</span>
+        <span class="p">))}</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">{</span><span class="o">!</span><span class="nx">_score</span> <span class="o">||</span> <span class="nx">_score</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">_score</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">?</span> <span class="kc">null</span> <span class="o">:</span> <span class="p">(</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">stars</span><span class="p">}</span> <span class="na">data</span><span class="err">-</span><span class="na">type</span><span class="o">=</span><span class="s">&#34;filled&#34;</span><span class="p">&gt;</span>
+          <span class="p">{</span><span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span>
+              <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span><span class="p">}</span>
+              <span class="na">data</span><span class="err">-</span><span class="na">decimal</span><span class="o">=</span><span class="p">{</span><span class="nx">decimal</span><span class="p">}</span>
+              <span class="na">data</span><span class="err">-</span><span class="na">index</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span> <span class="o">===</span> <span class="nx">integer</span> <span class="o">?</span> <span class="s2">&#34;true&#34;</span> <span class="o">:</span> <span class="s2">&#34;false&#34;</span><span class="p">}</span>
+              <span class="na">data</span><span class="err">-</span><span class="na">empty</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span> <span class="o">&gt;</span> <span class="nx">integer</span> <span class="o">?</span> <span class="s2">&#34;true&#34;</span> <span class="o">:</span> <span class="s2">&#34;false&#34;</span><span class="p">}</span>
+            <span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">StarSvg</span> <span class="na">width</span><span class="o">=</span><span class="p">{</span><span class="nx">size</span><span class="p">}</span> <span class="na">height</span><span class="o">=</span><span class="p">{</span><span class="nx">size</span><span class="p">}</span> <span class="na">fill</span><span class="o">=</span><span class="p">{</span><span class="nx">filledColor</span><span class="p">}</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">))}</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">)}</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="별점-리뷰-스타일" class="relative group">별점 리뷰 스타일 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b3%84%ec%a0%90-%eb%a6%ac%eb%b7%b0-%ec%8a%a4%ed%83%80%ec%9d%bc" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.container</span> <span class="p">{</span>
+  <span class="na">position</span><span class="o">:</span> <span class="ni">relative</span><span class="p">;</span>
+  <span class="nc">.stars</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="ni">flex</span><span class="p">;</span>
+    <span class="na">gap</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">&amp;</span><span class="o">[</span><span class="nt">data-type</span><span class="o">=</span><span class="s2">&#34;filled&#34;</span><span class="o">]</span> <span class="p">{</span>
+      <span class="na">top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="na">position</span><span class="o">:</span> <span class="ni">absolute</span><span class="p">;</span>
+      <span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="mi">0</span> <span class="ow">through</span> <span class="mi">9</span> <span class="p">{</span>
+        <span class="o">&gt;</span> <span class="nt">div</span><span class="o">[</span><span class="nt">data-decimal</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="s2">&#34;</span><span class="o">][</span><span class="nt">data-index</span><span class="o">=</span><span class="s2">&#34;true&#34;</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nt">svg</span> <span class="p">{</span>
+          <span class="na">margin-left</span><span class="o">:</span> <span class="nf">-</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span> <span class="o">-</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$i</span> <span class="o">*</span> <span class="mi">0</span><span class="mf">.1</span><span class="p">));</span>
+          <span class="o">&gt;</span> <span class="nt">path</span> <span class="p">{</span>
+            <span class="na">transform</span><span class="o">:</span> <span class="nf">translateX</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span> <span class="o">-</span> <span class="nf">percentage</span><span class="p">(</span><span class="nv">$i</span> <span class="o">*</span> <span class="mi">0</span><span class="mf">.1</span><span class="p">));</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="o">&gt;</span> <span class="nt">div</span><span class="o">[</span><span class="nt">data-empty</span><span class="o">=</span><span class="s2">&#34;true&#34;</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nt">svg</span> <span class="p">{</span>
+        <span class="na">display</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="별-이미지-svg" class="relative group">별 이미지 (svg) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b3%84-%ec%9d%b4%eb%af%b8%ec%a7%80-svg" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">svg</span>
+  <span class="nx">width</span><span class="o">=</span><span class="s2">&#34;current&#34;</span>
+  <span class="nx">height</span><span class="o">=</span><span class="s2">&#34;current&#34;</span>
+  <span class="nx">viewBox</span><span class="o">=</span><span class="s2">&#34;0 0 16 16&#34;</span>
+  <span class="nx">fill</span><span class="o">=</span><span class="s2">&#34;none&#34;</span>
+  <span class="nx">xmlns</span><span class="o">=</span><span class="s2">&#34;http://www.w3.org/2000/svg&#34;</span>
+<span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">path</span>
+    <span class="nx">d</span><span class="o">=</span><span class="s2">&#34;M7.71663 0.815216C7.81002 0.546548 8.18998 0.546548 8.28337 0.815216L9.81237 5.21396C9.85357 5.33248 9.96418 5.41284 10.0896 5.4154L14.7456 5.51028C15.0299 5.51608 15.1474 5.87744 14.9207 6.04928L11.2097 8.86273C11.1097 8.93854 11.0675 9.06857 11.1038 9.18867L12.4524 13.6461C12.5347 13.9183 12.2273 14.1416 11.9939 13.9792L8.17135 11.3192C8.06836 11.2476 7.93164 11.2476 7.82865 11.3192L4.00614 13.9792C3.77267 14.1416 3.46527 13.9183 3.54764 13.6461L4.89617 9.18867C4.9325 9.06857 4.89025 8.93854 4.79027 8.86273L1.0793 6.04928C0.852639 5.87744 0.970053 5.51608 1.25443 5.51028L5.91037 5.4154C6.03582 5.41284 6.14643 5.33248 6.18763 5.21396L7.71663 0.815216Z&#34;</span>
+    <span class="nx">fill</span><span class="o">=</span><span class="s2">&#34;current&#34;</span>
+  <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="err">/svg&gt;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">export</span> <span class="p">{</span> <span class="nx">ReactComponent</span> <span class="nx">as</span> <span class="nx">StarSvg</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./star.svg&#34;</span><span class="p">;</span>
+</code></pre></div><p>*<em>CRA 시에만 <code>ReactComponent</code> 사용 가능</em></p>
 <h2 id="참조" class="relative group">참조 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%b0%b8%ec%a1%b0" aria-label="Anchor">#</a></span></h2>
 <p>출근 첫날 회사의 코드를 뜯어보는 과정에서 이 코드를 보고는 &ldquo;이런 식으로 sass에서 반복문을 활용하는구나&quot;를 알게 되었고 메모장에 메모해 뒀었다. (취업 전에는 styled-component와 tailwind-CSS를 주로 사용해서 sass에 대한 이해도가 상대적으로 부족했다.) 그리고 별점의 소수점을 어떻게 sass에서 반영할 수 있을까를 고민하는 과정에서 이 코드가 떠올랐고 이를 참조해서 문제를 쉽게 해결할 수 있었다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$spacesPx</span><span class="o">:</span> <span class="p">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">60</span><span class="o">,</span> <span class="mi">70</span><span class="o">,</span> <span class="mi">80</span><span class="o">,</span> <span class="mi">90</span><span class="o">,</span> <span class="mi">100</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$space</span> <span class="ow">in</span> <span class="nv">$spacesPx</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nc">.mt</span><span class="si">#{</span><span class="nv">$space</span><span class="si">}</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="na">margin-top</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$space</span><span class="si">}</span><span class="n">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="nc">.mr</span><span class="si">#{</span><span class="nv">$space</span><span class="si">}</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="na">margin-right</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$space</span><span class="si">}</span><span class="n">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="nc">.mb</span><span class="si">#{</span><span class="nv">$space</span><span class="si">}</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="na">margin-bottom</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$space</span><span class="si">}</span><span class="n">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="nc">.ml</span><span class="si">#{</span><span class="nv">$space</span><span class="si">}</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="na">margin-left</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$space</span><span class="si">}</span><span class="n">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$spacesPx</span><span class="o">:</span> <span class="p">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">60</span><span class="o">,</span> <span class="mi">70</span><span class="o">,</span> <span class="mi">80</span><span class="o">,</span> <span class="mi">90</span><span class="o">,</span> <span class="mi">100</span><span class="p">);</span>
+<span class="k">@each</span> <span class="nv">$space</span> <span class="ow">in</span> <span class="nv">$spacesPx</span> <span class="p">{</span>
+  <span class="nc">.mt</span><span class="si">#{</span><span class="nv">$space</span><span class="si">}</span> <span class="p">{</span>
+    <span class="na">margin-top</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$space</span><span class="si">}</span><span class="n">px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.mr</span><span class="si">#{</span><span class="nv">$space</span><span class="si">}</span> <span class="p">{</span>
+    <span class="na">margin-right</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$space</span><span class="si">}</span><span class="n">px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.mb</span><span class="si">#{</span><span class="nv">$space</span><span class="si">}</span> <span class="p">{</span>
+    <span class="na">margin-bottom</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$space</span><span class="si">}</span><span class="n">px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.ml</span><span class="si">#{</span><span class="nv">$space</span><span class="si">}</span> <span class="p">{</span>
+    <span class="na">margin-left</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$space</span><span class="si">}</span><span class="n">px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
       </div>
     </section>
     <footer class="pt-8 max-w-prose print:hidden">
@@ -624,31 +624,19 @@
             <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
             <div class="pt-3">
               <div id="disqus_thread"></div>
-
 <script>
+    
 
+    
 
-
-
-
-
-
-(function() { 
-
-var d = document, s = d.createElement('script');
-
-s.src = 'https://yuchans-hello-world-5.disqus.com/embed.js';
-
-s.setAttribute('data-timestamp', +new Date());
-
-(d.head || d.body).appendChild(s);
-
-})();
-
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yuchans-hello-world-5.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 </script>
-
 <script id="dsq-count-scr" src="//yuchans-hello-world-5.disqus.com/count.js" async></script>
-
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
           </div>

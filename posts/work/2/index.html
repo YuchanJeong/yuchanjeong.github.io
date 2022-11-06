@@ -41,7 +41,7 @@
   />
   
   
-  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
+  <script type="text/javascript" src="/js/appearance.min.4df8309499991be53c71b2b39ba0f5d5e77ea7d411d0710ce48c24218e7cc24ded28f19e85838fdc56db2306195cb001f049f577be0cf0ffb2dd6e2037ede1b9.js" integrity="sha512-TfgwlJmZG&#43;U8cbKzm6D11ed&#43;p9QR0HEM5IwkIY58wk3tKPGehYOP3FbbIwYZXLAB8En1d74M8P&#43;y3W4gN&#43;3huQ=="></script>
   
     
     
@@ -54,7 +54,7 @@
   
   
     
-    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.826a5fe6c278891cf13a6dfb6037ca860e91f5003747dba9d6252c7c6552553ff07cf6a2442897103d53a3f8804a6bcb83fe629aa23072ccccb993d082e7017b.js" integrity="sha512-gmpf5sJ4iRzxOm37YDfKhg6R9QA3R9up1iUsfGVSVT/wfPaiRCiXED1To/iASmvLg/5imqIwcszMuZPQgucBew==" data-copy="Copy" data-copied="Copied"></script>
+    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.30c6d45c2db7032188db44fddef5b4ff42b36191b9f0487b941af1e74397887ca05e0bec63d6d87c541dc5d551d37496d64c4875e975ab930a727752880706aa.js" integrity="sha512-MMbUXC23AyGI20T93vW0/0KzYZG58Eh7lBrx50OXiHygXgvsY9bYfFQdxdVR03SW1kxIdel1q5MKcndSiAcGqg==" data-copy="Copy" data-copied="Copied"></script>
   
   
   
@@ -358,173 +358,173 @@
 </li>
 </ol>
 <p><strong>설치</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn add react-i18next i18next @types/react-i18next @types/i18next i18next-scanner google-spreadsheet
-</span></span></code></pre></div><p><strong>설정</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">yarn add react-i18next i18next @types/react-i18next @types/i18next i18next-scanner google-spreadsheet
+</code></pre></div><p><strong>설정</strong></p>
 <details>
 <summary>src/i18n/index.ts</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">i18n</span> <span class="kr">from</span> <span class="s2">&#34;i18next&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">initReactI18next</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react-i18next&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">enUS</span> <span class="kr">from</span> <span class="s2">&#34;./locales/en-US/translation.json&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">esES</span> <span class="kr">from</span> <span class="s2">&#34;./locales/es-ES/translation.json&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">jaJP</span> <span class="kr">from</span> <span class="s2">&#34;./locales/ja-JP/translation.json&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">koKR</span> <span class="kr">from</span> <span class="s2">&#34;./locales/ko-KR/translation.json&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">viVN</span> <span class="kr">from</span> <span class="s2">&#34;./locales/vi-VN/translation.json&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">//TODO: 언어 추가 시 폴더 및 파일 추가 후 작성 필요
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">resources</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">ko</span><span class="o">:</span> <span class="p">{</span> <span class="nx">translation</span>: <span class="kt">koKR</span> <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">en</span><span class="o">:</span> <span class="p">{</span> <span class="nx">translation</span>: <span class="kt">enUS</span> <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">ja</span><span class="o">:</span> <span class="p">{</span> <span class="nx">translation</span>: <span class="kt">jaJP</span> <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">vi</span><span class="o">:</span> <span class="p">{</span> <span class="nx">translation</span>: <span class="kt">viVN</span> <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">es</span><span class="o">:</span> <span class="p">{</span> <span class="nx">translation</span>: <span class="kt">esES</span> <span class="p">},</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">browserLang</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">language</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;-&#34;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">userLanguage</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;i18nLng&#34;</span><span class="p">)</span> <span class="o">??</span> <span class="nx">browserLang</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// eslint-disable-next-line import/no-named-as-default-member
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">i18n</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">initReactI18next</span><span class="p">).</span><span class="nx">init</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">resources</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">lng</span>: <span class="kt">userLanguage</span> <span class="o">||</span> <span class="s2">&#34;ko&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">fallbackLng</span><span class="o">:</span> <span class="s2">&#34;ko&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">debug</span>: <span class="kt">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">defaultNS</span><span class="o">:</span> <span class="s2">&#34;translation&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">ns</span><span class="o">:</span> <span class="s2">&#34;translation&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">keySeparator</span>: <span class="kt">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">interpolation</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">escapeValue</span>: <span class="kt">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">alwaysFormat</span>: <span class="kt">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">format</span><span class="p">,</span> <span class="nx">lng</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">format</span> <span class="o">===</span> <span class="s2">&#34;uppercase&#34;</span><span class="p">)</span> <span class="k">return</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">value</span> <span class="o">===</span> <span class="s2">&#34;number&#34;</span><span class="p">)</span> <span class="k">return</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toLocaleString</span><span class="p">(</span><span class="nx">lng</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">react</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">defaultTransParent</span><span class="o">:</span> <span class="s2">&#34;div&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">transEmptyNodeValue</span><span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">transSupportBasicHtmlNodes</span>: <span class="kt">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">transKeepBasicHtmlNodesFor</span><span class="o">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">      <span class="s2">&#34;br&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="s2">&#34;strong&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="s2">&#34;i&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="s2">&#34;button&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="s2">&#34;a&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="s2">&#34;span&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="s2">&#34;div&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="s2">&#34;input&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">transWrapTextNodes</span><span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">nsSeparator</span><span class="o">:</span> <span class="s2">&#34;=&gt;&#34;</span><span class="p">,</span> <span class="c1">// default: &#34;:&#34;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">i18n</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">Ii18Next</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// eslint-disable-next-line @typescript-eslint/ban-types
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">t</span><span class="o">:</span> <span class="p">(</span><span class="nx">str</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">option?</span>: <span class="kt">Object</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="kt">string</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">i18nextScanKey</span> <span class="o">=</span> <span class="p">(</span><span class="nx">key</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="kt">string</span> <span class="o">=&gt;</span> <span class="nx">key</span><span class="p">;</span>
-</span></span></code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="nx">i18n</span> <span class="kr">from</span> <span class="s2">&#34;i18next&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">initReactI18next</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react-i18next&#34;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="nx">enUS</span> <span class="kr">from</span> <span class="s2">&#34;./locales/en-US/translation.json&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">esES</span> <span class="kr">from</span> <span class="s2">&#34;./locales/es-ES/translation.json&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">jaJP</span> <span class="kr">from</span> <span class="s2">&#34;./locales/ja-JP/translation.json&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">koKR</span> <span class="kr">from</span> <span class="s2">&#34;./locales/ko-KR/translation.json&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">viVN</span> <span class="kr">from</span> <span class="s2">&#34;./locales/vi-VN/translation.json&#34;</span><span class="p">;</span>
+
+<span class="c1">//TODO: 언어 추가 시 폴더 및 파일 추가 후 작성 필요
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">resources</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">ko</span><span class="o">:</span> <span class="p">{</span> <span class="nx">translation</span>: <span class="kt">koKR</span> <span class="p">},</span>
+  <span class="nx">en</span><span class="o">:</span> <span class="p">{</span> <span class="nx">translation</span>: <span class="kt">enUS</span> <span class="p">},</span>
+  <span class="nx">ja</span><span class="o">:</span> <span class="p">{</span> <span class="nx">translation</span>: <span class="kt">jaJP</span> <span class="p">},</span>
+  <span class="nx">vi</span><span class="o">:</span> <span class="p">{</span> <span class="nx">translation</span>: <span class="kt">viVN</span> <span class="p">},</span>
+  <span class="nx">es</span><span class="o">:</span> <span class="p">{</span> <span class="nx">translation</span>: <span class="kt">esES</span> <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">browserLang</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">language</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;-&#34;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+
+<span class="kr">const</span> <span class="nx">userLanguage</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;i18nLng&#34;</span><span class="p">)</span> <span class="o">??</span> <span class="nx">browserLang</span><span class="p">;</span>
+
+<span class="c1">// eslint-disable-next-line import/no-named-as-default-member
+</span><span class="c1"></span><span class="nx">i18n</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">initReactI18next</span><span class="p">).</span><span class="nx">init</span><span class="p">({</span>
+  <span class="nx">resources</span><span class="p">,</span>
+  <span class="nx">lng</span>: <span class="kt">userLanguage</span> <span class="o">||</span> <span class="s2">&#34;ko&#34;</span><span class="p">,</span>
+  <span class="nx">fallbackLng</span><span class="o">:</span> <span class="s2">&#34;ko&#34;</span><span class="p">,</span>
+  <span class="nx">debug</span>: <span class="kt">false</span><span class="p">,</span>
+  <span class="nx">defaultNS</span><span class="o">:</span> <span class="s2">&#34;translation&#34;</span><span class="p">,</span>
+  <span class="nx">ns</span><span class="o">:</span> <span class="s2">&#34;translation&#34;</span><span class="p">,</span>
+  <span class="nx">keySeparator</span>: <span class="kt">false</span><span class="p">,</span>
+  <span class="nx">interpolation</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">escapeValue</span>: <span class="kt">false</span><span class="p">,</span>
+    <span class="nx">alwaysFormat</span>: <span class="kt">true</span><span class="p">,</span>
+    <span class="nx">format</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">format</span><span class="p">,</span> <span class="nx">lng</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">format</span> <span class="o">===</span> <span class="s2">&#34;uppercase&#34;</span><span class="p">)</span> <span class="k">return</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
+      <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">value</span> <span class="o">===</span> <span class="s2">&#34;number&#34;</span><span class="p">)</span> <span class="k">return</span> <span class="nx">value</span><span class="p">.</span><span class="nx">toLocaleString</span><span class="p">(</span><span class="nx">lng</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+  <span class="nx">react</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">defaultTransParent</span><span class="o">:</span> <span class="s2">&#34;div&#34;</span><span class="p">,</span>
+    <span class="nx">transEmptyNodeValue</span><span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+    <span class="nx">transSupportBasicHtmlNodes</span>: <span class="kt">true</span><span class="p">,</span>
+    <span class="nx">transKeepBasicHtmlNodesFor</span><span class="o">:</span> <span class="p">[</span>
+      <span class="s2">&#34;br&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;strong&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;i&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;button&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;a&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;span&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;div&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;input&#34;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="nx">transWrapTextNodes</span><span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">nsSeparator</span><span class="o">:</span> <span class="s2">&#34;=&gt;&#34;</span><span class="p">,</span> <span class="c1">// default: &#34;:&#34;
+</span><span class="c1"></span><span class="p">});</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">i18n</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kr">interface</span> <span class="nx">Ii18Next</span> <span class="p">{</span>
+  <span class="c1">// eslint-disable-next-line @typescript-eslint/ban-types
+</span><span class="c1"></span>  <span class="nx">t</span><span class="o">:</span> <span class="p">(</span><span class="nx">str</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">option?</span>: <span class="kt">Object</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">i18nextScanKey</span> <span class="o">=</span> <span class="p">(</span><span class="nx">key</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="kt">string</span> <span class="o">=&gt;</span> <span class="nx">key</span><span class="p">;</span>
+</code></pre></div></div>
 </details>
 <details>
 <summary>i18next-scanner.config.js</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* eslint-disable import/order */</span>
-</span></span><span class="line"><span class="cl"><span class="cm">/* eslint-disable no-undef */</span>
-</span></span><span class="line"><span class="cl"><span class="cm">/* eslint-disable @typescript-eslint/no-var-requires */</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;path&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">typescript</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;typescript&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">COMMON_EXTENSIONS</span> <span class="o">=</span> <span class="s2">&#34;/**/*.{js,jsx,ts,tsx,vue,html}&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">input</span><span class="o">:</span> <span class="p">[</span><span class="sb">`./src/</span><span class="si">${</span><span class="nx">COMMON_EXTENSIONS</span><span class="si">}</span><span class="sb">`</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">debug</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">removeUnusedKeys</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">defaultLng</span><span class="o">:</span> <span class="s2">&#34;ko-KR&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">//TODO-i18next: 언어 추가 시 작성 필요
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">lngs</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;ko-KR&#34;</span><span class="p">,</span> <span class="s2">&#34;ko-KR&#34;</span><span class="p">,</span> <span class="s2">&#34;en-US&#34;</span><span class="p">,</span> <span class="s2">&#34;ja-JP&#34;</span><span class="p">,</span> <span class="s2">&#34;vi-VN&#34;</span><span class="p">,</span> <span class="s2">&#34;es-ES&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">func</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">list</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;i18next.t&#34;</span><span class="p">,</span> <span class="s2">&#34;i18n.t&#34;</span><span class="p">,</span> <span class="s2">&#34;$i18n.t&#34;</span><span class="p">,</span> <span class="s2">&#34;$i18next.t&#34;</span><span class="p">,</span> <span class="s2">&#34;i18nextScanKey&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;.js&#34;</span><span class="p">,</span> <span class="s2">&#34;.jsx&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">trans</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">component</span><span class="o">:</span> <span class="s2">&#34;Trans&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">i18nKey</span><span class="o">:</span> <span class="s2">&#34;i18nKey&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">defaultsKey</span><span class="o">:</span> <span class="s2">&#34;defaults&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;.js&#34;</span><span class="p">,</span> <span class="s2">&#34;.jsx&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">fallbackKey</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">ns</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">acorn</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">ecmaVersion</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">sourceType</span><span class="o">:</span> <span class="s2">&#34;module&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">resource</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">loadPath</span><span class="o">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s2">&#34;/src/i18n/locales/{{lng}}/{{ns}}.json&#34;</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">savePath</span><span class="o">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s2">&#34;/src/i18n/locales/{{lng}}/{{ns}}.json&#34;</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">defaultValue</span><span class="p">(</span><span class="nx">lng</span><span class="p">,</span> <span class="nx">ns</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">keyAsDefaultValue</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;ko-KR&#34;</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">keyAsDefaultValue</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">lng</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">separator</span> <span class="o">=</span> <span class="s2">&#34;html&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">key</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">separator</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;&#34;</span> <span class="o">:</span> <span class="nx">key</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="s2">&#34;[Fill in]&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">keySeparator</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">nsSeparator</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">prefix</span><span class="o">:</span> <span class="s2">&#34;{{&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">suffix</span><span class="o">:</span> <span class="s2">&#34;}}&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">transform</span><span class="o">:</span> <span class="p">(</span><span class="kd">function</span> <span class="nx">typescriptTransform</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">tsOptions</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">target</span><span class="o">:</span> <span class="s2">&#34;es2018&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;.ts&#34;</span><span class="p">,</span> <span class="s2">&#34;.tsx&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kd">function</span> <span class="nx">transform</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="nx">enc</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="p">{</span> <span class="nx">base</span><span class="p">,</span> <span class="nx">ext</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">file</span><span class="p">.</span><span class="nx">path</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">options</span><span class="p">.</span><span class="nx">extensions</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">ext</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
-</span></span><span class="line"><span class="cl">        <span class="o">!</span><span class="nx">base</span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s2">&#34;.d.ts&#34;</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">base</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&#34;reportWebVitals.ts&#34;</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">      <span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">file</span><span class="p">.</span><span class="nx">path</span><span class="p">,</span> <span class="nx">enc</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="p">{</span> <span class="nx">outputText</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">typescript</span><span class="p">.</span><span class="nx">transpileModule</span><span class="p">(</span><span class="nx">content</span><span class="p">,</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">compilerOptions</span><span class="o">:</span> <span class="nx">options</span><span class="p">.</span><span class="nx">tsOptions</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">fileName</span><span class="o">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">basename</span><span class="p">(</span><span class="nx">file</span><span class="p">.</span><span class="nx">path</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">        <span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="nx">parser</span><span class="p">.</span><span class="nx">parseTransFromString</span><span class="p">(</span><span class="nx">outputText</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="nx">parser</span><span class="p">.</span><span class="nx">parseFuncFromString</span><span class="p">(</span><span class="nx">outputText</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="nx">done</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="p">};</span>
-</span></span><span class="line"><span class="cl">  <span class="p">})({</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;.tsx&#34;</span><span class="p">,</span> <span class="s2">&#34;.ts&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">tsOptions</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">target</span><span class="o">:</span> <span class="s2">&#34;es5&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">module</span><span class="o">:</span> <span class="s2">&#34;esnext&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}),</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* eslint-disable import/order */</span>
+<span class="cm">/* eslint-disable no-undef */</span>
+<span class="cm">/* eslint-disable @typescript-eslint/no-var-requires */</span>
+<span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;path&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">typescript</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;typescript&#34;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">COMMON_EXTENSIONS</span> <span class="o">=</span> <span class="s2">&#34;/**/*.{js,jsx,ts,tsx,vue,html}&#34;</span><span class="p">;</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">input</span><span class="o">:</span> <span class="p">[</span><span class="sb">`./src/</span><span class="si">${</span><span class="nx">COMMON_EXTENSIONS</span><span class="si">}</span><span class="sb">`</span><span class="p">],</span>
+  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">debug</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">removeUnusedKeys</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">defaultLng</span><span class="o">:</span> <span class="s2">&#34;ko-KR&#34;</span><span class="p">,</span>
+    <span class="c1">//TODO-i18next: 언어 추가 시 작성 필요
+</span><span class="c1"></span>    <span class="nx">lngs</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;ko-KR&#34;</span><span class="p">,</span> <span class="s2">&#34;ko-KR&#34;</span><span class="p">,</span> <span class="s2">&#34;en-US&#34;</span><span class="p">,</span> <span class="s2">&#34;ja-JP&#34;</span><span class="p">,</span> <span class="s2">&#34;vi-VN&#34;</span><span class="p">,</span> <span class="s2">&#34;es-ES&#34;</span><span class="p">],</span>
+    <span class="nx">func</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">list</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;i18next.t&#34;</span><span class="p">,</span> <span class="s2">&#34;i18n.t&#34;</span><span class="p">,</span> <span class="s2">&#34;$i18n.t&#34;</span><span class="p">,</span> <span class="s2">&#34;$i18next.t&#34;</span><span class="p">,</span> <span class="s2">&#34;i18nextScanKey&#34;</span><span class="p">],</span>
+      <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;.js&#34;</span><span class="p">,</span> <span class="s2">&#34;.jsx&#34;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="nx">trans</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">component</span><span class="o">:</span> <span class="s2">&#34;Trans&#34;</span><span class="p">,</span>
+      <span class="nx">i18nKey</span><span class="o">:</span> <span class="s2">&#34;i18nKey&#34;</span><span class="p">,</span>
+      <span class="nx">defaultsKey</span><span class="o">:</span> <span class="s2">&#34;defaults&#34;</span><span class="p">,</span>
+      <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;.js&#34;</span><span class="p">,</span> <span class="s2">&#34;.jsx&#34;</span><span class="p">],</span>
+      <span class="nx">fallbackKey</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">ns</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
+      <span class="p">},</span>
+      <span class="nx">acorn</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">ecmaVersion</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="nx">sourceType</span><span class="o">:</span> <span class="s2">&#34;module&#34;</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="nx">resource</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">loadPath</span><span class="o">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s2">&#34;/src/i18n/locales/{{lng}}/{{ns}}.json&#34;</span><span class="p">),</span>
+      <span class="nx">savePath</span><span class="o">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s2">&#34;/src/i18n/locales/{{lng}}/{{ns}}.json&#34;</span><span class="p">),</span>
+    <span class="p">},</span>
+    <span class="nx">defaultValue</span><span class="p">(</span><span class="nx">lng</span><span class="p">,</span> <span class="nx">ns</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">keyAsDefaultValue</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;ko-KR&#34;</span><span class="p">];</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">keyAsDefaultValue</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">lng</span><span class="p">))</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">separator</span> <span class="o">=</span> <span class="s2">&#34;html&#34;</span><span class="p">;</span>
+        <span class="kr">const</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">key</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">separator</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;&#34;</span> <span class="o">:</span> <span class="nx">key</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="s2">&#34;[Fill in]&#34;</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="nx">keySeparator</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">nsSeparator</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">prefix</span><span class="o">:</span> <span class="s2">&#34;{{&#34;</span><span class="p">,</span>
+    <span class="nx">suffix</span><span class="o">:</span> <span class="s2">&#34;}}&#34;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">transform</span><span class="o">:</span> <span class="p">(</span><span class="kd">function</span> <span class="nx">typescriptTransform</span><span class="p">(</span>
+    <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">tsOptions</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">target</span><span class="o">:</span> <span class="s2">&#34;es2018&#34;</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;.ts&#34;</span><span class="p">,</span> <span class="s2">&#34;.tsx&#34;</span><span class="p">],</span>
+    <span class="p">}</span>
+  <span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kd">function</span> <span class="nx">transform</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="nx">enc</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="p">{</span> <span class="nx">base</span><span class="p">,</span> <span class="nx">ext</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">file</span><span class="p">.</span><span class="nx">path</span><span class="p">);</span>
+
+      <span class="k">if</span> <span class="p">(</span>
+        <span class="nx">options</span><span class="p">.</span><span class="nx">extensions</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">ext</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
+        <span class="o">!</span><span class="nx">base</span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s2">&#34;.d.ts&#34;</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
+        <span class="nx">base</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&#34;reportWebVitals.ts&#34;</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span>
+      <span class="p">)</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">file</span><span class="p">.</span><span class="nx">path</span><span class="p">,</span> <span class="nx">enc</span><span class="p">);</span>
+
+        <span class="kr">const</span> <span class="p">{</span> <span class="nx">outputText</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">typescript</span><span class="p">.</span><span class="nx">transpileModule</span><span class="p">(</span><span class="nx">content</span><span class="p">,</span> <span class="p">{</span>
+          <span class="nx">compilerOptions</span><span class="o">:</span> <span class="nx">options</span><span class="p">.</span><span class="nx">tsOptions</span><span class="p">,</span>
+          <span class="nx">fileName</span><span class="o">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">basename</span><span class="p">(</span><span class="nx">file</span><span class="p">.</span><span class="nx">path</span><span class="p">),</span>
+        <span class="p">});</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">parser</span><span class="p">.</span><span class="nx">parseTransFromString</span><span class="p">(</span><span class="nx">outputText</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">parser</span><span class="p">.</span><span class="nx">parseFuncFromString</span><span class="p">(</span><span class="nx">outputText</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="nx">done</span><span class="p">();</span>
+    <span class="p">};</span>
+  <span class="p">})({</span>
+    <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;.tsx&#34;</span><span class="p">,</span> <span class="s2">&#34;.ts&#34;</span><span class="p">],</span>
+    <span class="nx">tsOptions</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">target</span><span class="o">:</span> <span class="s2">&#34;es5&#34;</span><span class="p">,</span>
+      <span class="nx">module</span><span class="o">:</span> <span class="s2">&#34;esnext&#34;</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">}),</span>
+<span class="p">};</span>
+</code></pre></div></div>
 </details>
 <details>
 <summary>translate/.credentials/...</summary>
@@ -533,382 +533,382 @@
 <li>.gitignore에 translate/.credentials 추가</li>
 <li>서비스 계정에서 받은 JSON 키 파일을 <code>translate/.credentials</code>에 저장</li>
 <li><code>translate/.credentials/index.js</code>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">CREDS</span><span class="o">:</span> <span class="s2">&#34;서비스 계정에서 받은 JSON 키 파일 이름&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// 구글 스프레드 시트 주소에 나와 있음
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">SHEET_DOC_ID</span><span class="o">:</span> <span class="s2">&#34;...&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">SHEET_ID</span><span class="o">:</span> <span class="s2">&#34;...&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">CREDS</span><span class="o">:</span> <span class="s2">&#34;서비스 계정에서 받은 JSON 키 파일 이름&#34;</span><span class="p">,</span>
+  <span class="c1">// 구글 스프레드 시트 주소에 나와 있음
+</span><span class="c1"></span>  <span class="nx">SHEET_DOC_ID</span><span class="o">:</span> <span class="s2">&#34;...&#34;</span><span class="p">,</span>
+  <span class="nx">SHEET_ID</span><span class="o">:</span> <span class="s2">&#34;...&#34;</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div></li>
 </ul>
 </div>
 </details>
 <details>
 <summary>translate/index.js</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* eslint-disable import/order */</span>
-</span></span><span class="line"><span class="cl"><span class="cm">/* eslint-disable no-undef */</span>
-</span></span><span class="line"><span class="cl"><span class="cm">/* eslint-disable @typescript-eslint/no-var-requires */</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span> <span class="nx">GoogleSpreadsheet</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;google-spreadsheet&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">ENV</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./.credentials/index.js&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">creds</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./.credentials/&#34;</span> <span class="o">+</span> <span class="nx">ENV</span><span class="p">.</span><span class="nx">CREDS</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">i18nextConfig</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;../i18next-scanner.config&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">spreadsheetDocId</span> <span class="o">=</span> <span class="nx">ENV</span><span class="p">.</span><span class="nx">SHEET_DOC_ID</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">ns</span> <span class="o">=</span> <span class="s2">&#34;translation&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">lngs</span> <span class="o">=</span> <span class="nx">i18nextConfig</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">lngs</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">loadPath</span> <span class="o">=</span> <span class="nx">i18nextConfig</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">resource</span><span class="p">.</span><span class="nx">loadPath</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">localesPath</span> <span class="o">=</span> <span class="nx">loadPath</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&#34;/{{lng}}/{{ns}}.json&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">rePluralPostfix</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="sr">/_plural|_[\d]/g</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">sheetId</span> <span class="o">=</span> <span class="nx">ENV</span><span class="p">.</span><span class="nx">SHEET_ID</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">NOT_AVAILABLE_CELL</span> <span class="o">=</span> <span class="s2">&#34;_N/A&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//TODO-i18next: 언어 추가 시 작성 필요
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">columnKeyToHeader</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">key</span><span class="o">:</span> <span class="s2">&#34;key&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;ko-KR&#34;</span><span class="o">:</span> <span class="s2">&#34;ko-KR&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;en-US&#34;</span><span class="o">:</span> <span class="s2">&#34;en-US&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;ja-JP&#34;</span><span class="o">:</span> <span class="s2">&#34;ja-JP&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;vi-VN&#34;</span><span class="o">:</span> <span class="s2">&#34;vi-VN&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;es-ES&#34;</span><span class="o">:</span> <span class="s2">&#34;es-ES&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">loadSpreadsheet</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// eslint-disable-next-line no-console
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;\u001B[32m&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;=====================================================================================================================\n&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;# i18next auto-sync using Spreadsheet\n\n&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;  * Download translation resources from Spreadsheet and make /src/i18n/locales/{{lng}}/{{ns}}.json\n&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;  * Upload translation resources to Spreadsheet.\n\n&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="sb">`The Spreadsheet for translation is here (\u001B[34mhttps://docs.google.com/spreadsheets/d/</span><span class="si">${</span><span class="nx">spreadsheetDocId</span><span class="si">}</span><span class="sb">/#gid=</span><span class="si">${</span><span class="nx">sheetId</span><span class="si">}</span><span class="sb">\u001B[0m)\n`</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;=====================================================================================================================&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;\u001B[0m&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GoogleSpreadsheet</span><span class="p">(</span><span class="nx">spreadsheetDocId</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">await</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">useServiceAccountAuth</span><span class="p">(</span><span class="nx">creds</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">await</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">loadInfo</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">doc</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">getPureKey</span><span class="p">(</span><span class="nx">key</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">key</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">rePluralPostfix</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">localesPath</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">loadSpreadsheet</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">getPureKey</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">ns</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">lngs</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">sheetId</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">columnKeyToHeader</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">NOT_AVAILABLE_CELL</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* eslint-disable import/order */</span>
+<span class="cm">/* eslint-disable no-undef */</span>
+<span class="cm">/* eslint-disable @typescript-eslint/no-var-requires */</span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">GoogleSpreadsheet</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;google-spreadsheet&#34;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">ENV</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./.credentials/index.js&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">creds</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./.credentials/&#34;</span> <span class="o">+</span> <span class="nx">ENV</span><span class="p">.</span><span class="nx">CREDS</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">i18nextConfig</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;../i18next-scanner.config&#34;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">spreadsheetDocId</span> <span class="o">=</span> <span class="nx">ENV</span><span class="p">.</span><span class="nx">SHEET_DOC_ID</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">ns</span> <span class="o">=</span> <span class="s2">&#34;translation&#34;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">lngs</span> <span class="o">=</span> <span class="nx">i18nextConfig</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">lngs</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">loadPath</span> <span class="o">=</span> <span class="nx">i18nextConfig</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">resource</span><span class="p">.</span><span class="nx">loadPath</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">localesPath</span> <span class="o">=</span> <span class="nx">loadPath</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&#34;/{{lng}}/{{ns}}.json&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">rePluralPostfix</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="sr">/_plural|_[\d]/g</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">sheetId</span> <span class="o">=</span> <span class="nx">ENV</span><span class="p">.</span><span class="nx">SHEET_ID</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">NOT_AVAILABLE_CELL</span> <span class="o">=</span> <span class="s2">&#34;_N/A&#34;</span><span class="p">;</span>
+<span class="c1">//TODO-i18next: 언어 추가 시 작성 필요
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">columnKeyToHeader</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">key</span><span class="o">:</span> <span class="s2">&#34;key&#34;</span><span class="p">,</span>
+  <span class="s2">&#34;ko-KR&#34;</span><span class="o">:</span> <span class="s2">&#34;ko-KR&#34;</span><span class="p">,</span>
+  <span class="s2">&#34;en-US&#34;</span><span class="o">:</span> <span class="s2">&#34;en-US&#34;</span><span class="p">,</span>
+  <span class="s2">&#34;ja-JP&#34;</span><span class="o">:</span> <span class="s2">&#34;ja-JP&#34;</span><span class="p">,</span>
+  <span class="s2">&#34;vi-VN&#34;</span><span class="o">:</span> <span class="s2">&#34;vi-VN&#34;</span><span class="p">,</span>
+  <span class="s2">&#34;es-ES&#34;</span><span class="o">:</span> <span class="s2">&#34;es-ES&#34;</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">loadSpreadsheet</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// eslint-disable-next-line no-console
+</span><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span>
+    <span class="s2">&#34;\u001B[32m&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;=====================================================================================================================\n&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;# i18next auto-sync using Spreadsheet\n\n&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;  * Download translation resources from Spreadsheet and make /src/i18n/locales/{{lng}}/{{ns}}.json\n&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;  * Upload translation resources to Spreadsheet.\n\n&#34;</span><span class="p">,</span>
+    <span class="sb">`The Spreadsheet for translation is here (\u001B[34mhttps://docs.google.com/spreadsheets/d/</span><span class="si">${</span><span class="nx">spreadsheetDocId</span><span class="si">}</span><span class="sb">/#gid=</span><span class="si">${</span><span class="nx">sheetId</span><span class="si">}</span><span class="sb">\u001B[0m)\n`</span><span class="p">,</span>
+    <span class="s2">&#34;=====================================================================================================================&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;\u001B[0m&#34;</span>
+  <span class="p">);</span>
+
+  <span class="kr">const</span> <span class="nx">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GoogleSpreadsheet</span><span class="p">(</span><span class="nx">spreadsheetDocId</span><span class="p">);</span>
+
+  <span class="kr">await</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">useServiceAccountAuth</span><span class="p">(</span><span class="nx">creds</span><span class="p">);</span>
+
+  <span class="kr">await</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">loadInfo</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="nx">doc</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">getPureKey</span><span class="p">(</span><span class="nx">key</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">key</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">rePluralPostfix</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">localesPath</span><span class="p">,</span>
+  <span class="nx">loadSpreadsheet</span><span class="p">,</span>
+  <span class="nx">getPureKey</span><span class="p">,</span>
+  <span class="nx">ns</span><span class="p">,</span>
+  <span class="nx">lngs</span><span class="p">,</span>
+  <span class="nx">sheetId</span><span class="p">,</span>
+  <span class="nx">columnKeyToHeader</span><span class="p">,</span>
+  <span class="nx">NOT_AVAILABLE_CELL</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div></div>
 </details>
 <details>
 <summary>translate/upload.js</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* eslint-disable no-undef */</span>
-</span></span><span class="line"><span class="cl"><span class="cm">/* eslint-disable @typescript-eslint/no-var-requires */</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">loadSpreadsheet</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">localesPath</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">getPureKey</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">ns</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">lngs</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">sheetId</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">columnKeyToHeader</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">NOT_AVAILABLE_CELL</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./index&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">//TODO-i18next: 언어 추가 시 작성 필요
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">headerValues</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;key&#34;</span><span class="p">,</span> <span class="s2">&#34;ko-KR&#34;</span><span class="p">,</span> <span class="s2">&#34;en-US&#34;</span><span class="p">,</span> <span class="s2">&#34;ja-JP&#34;</span><span class="p">,</span> <span class="s2">&#34;vi-VN&#34;</span><span class="p">,</span> <span class="s2">&#34;es-ES&#34;</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">addNewSheet</span><span class="p">(</span><span class="nx">doc</span><span class="p">,</span> <span class="nx">title</span><span class="p">,</span> <span class="nx">sheetId</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">addSheet</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">sheetId</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">headerValues</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">sheet</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">updateTranslationsFromKeyMapToSheet</span><span class="p">(</span><span class="nx">doc</span><span class="p">,</span> <span class="nx">keyMap</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">title</span> <span class="o">=</span> <span class="s2">&#34;시트 제목&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">sheetsById</span><span class="p">[</span><span class="nx">sheetId</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">sheet</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">sheet</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">addNewSheet</span><span class="p">(</span><span class="nx">doc</span><span class="p">,</span> <span class="nx">title</span><span class="p">,</span> <span class="nx">sheetId</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">rows</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getRows</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">exsitKeys</span> <span class="o">=</span> <span class="p">{};</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">addedRows</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">rows</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">row</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="nx">row</span><span class="p">[</span><span class="nx">columnKeyToHeader</span><span class="p">.</span><span class="nx">key</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">keyMap</span><span class="p">[</span><span class="nx">key</span><span class="p">])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">exsitKeys</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="p">[</span><span class="nx">key</span><span class="p">,</span> <span class="nx">translations</span><span class="p">]</span> <span class="k">of</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">keyMap</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">exsitKeys</span><span class="p">[</span><span class="nx">key</span><span class="p">])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">row</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="nx">columnKeyToHeader</span><span class="p">.</span><span class="nx">key</span><span class="p">]</span><span class="o">:</span> <span class="nx">key</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="p">...</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">translations</span><span class="p">).</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">result</span><span class="p">,</span> <span class="nx">lng</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="kr">const</span> <span class="nx">header</span> <span class="o">=</span> <span class="nx">columnKeyToHeader</span><span class="p">[</span><span class="nx">lng</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">result</span><span class="p">[</span><span class="nx">header</span><span class="p">]</span> <span class="o">=</span> <span class="nx">translations</span><span class="p">[</span><span class="nx">lng</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">          <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span> <span class="p">{}),</span>
-</span></span><span class="line"><span class="cl">      <span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="nx">addedRows</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">row</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">await</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">addRows</span><span class="p">(</span><span class="nx">addedRows</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">toJson</span><span class="p">(</span><span class="nx">keyMap</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="p">{};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">keyMap</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(([,</span> <span class="nx">keysByPlural</span><span class="p">])</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="p">[</span><span class="nx">keyWithPostfix</span><span class="p">,</span> <span class="nx">translations</span><span class="p">]</span> <span class="k">of</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">keysByPlural</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">json</span><span class="p">[</span><span class="nx">keyWithPostfix</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="p">...</span><span class="nx">translations</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="p">};</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">gatherKeyMap</span><span class="p">(</span><span class="nx">keyMap</span><span class="p">,</span> <span class="nx">lng</span><span class="p">,</span> <span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="p">[</span><span class="nx">keyWithPostfix</span><span class="p">,</span> <span class="nx">translated</span><span class="p">]</span> <span class="k">of</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">json</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="nx">getPureKey</span><span class="p">(</span><span class="nx">keyWithPostfix</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">keyMap</span><span class="p">[</span><span class="nx">key</span><span class="p">])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">keyMap</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">keyMapWithLng</span> <span class="o">=</span> <span class="nx">keyMap</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">keyMapWithLng</span><span class="p">[</span><span class="nx">keyWithPostfix</span><span class="p">])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">keyMapWithLng</span><span class="p">[</span><span class="nx">keyWithPostfix</span><span class="p">]</span> <span class="o">=</span> <span class="nx">lngs</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">initObj</span><span class="p">,</span> <span class="nx">lng</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">initObj</span><span class="p">[</span><span class="nx">lng</span><span class="p">]</span> <span class="o">=</span> <span class="nx">NOT_AVAILABLE_CELL</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">initObj</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="p">{});</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nx">keyMapWithLng</span><span class="p">[</span><span class="nx">keyWithPostfix</span><span class="p">][</span><span class="nx">lng</span><span class="p">]</span> <span class="o">=</span> <span class="nx">translated</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">updateSheetFromJson</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">doc</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">loadSpreadsheet</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="nx">localesPath</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">lngs</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="nx">error</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">keyMap</span> <span class="o">=</span> <span class="p">{};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nx">lngs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">lng</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">localeJsonFilePath</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">localesPath</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">lng</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">ns</span><span class="si">}</span><span class="sb">.json`</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="c1">// eslint-disable-next-line no-sync
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">localeJsonFilePath</span><span class="p">,</span> <span class="s2">&#34;utf8&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="nx">gatherKeyMap</span><span class="p">(</span><span class="nx">keyMap</span><span class="p">,</span> <span class="nx">lng</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">json</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nx">updateTranslationsFromKeyMapToSheet</span><span class="p">(</span><span class="nx">doc</span><span class="p">,</span> <span class="nx">toJson</span><span class="p">(</span><span class="nx">keyMap</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">updateSheetFromJson</span><span class="p">();</span>
-</span></span></code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* eslint-disable no-undef */</span>
+<span class="cm">/* eslint-disable @typescript-eslint/no-var-requires */</span>
+<span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="p">{</span>
+  <span class="nx">loadSpreadsheet</span><span class="p">,</span>
+  <span class="nx">localesPath</span><span class="p">,</span>
+  <span class="nx">getPureKey</span><span class="p">,</span>
+  <span class="nx">ns</span><span class="p">,</span>
+  <span class="nx">lngs</span><span class="p">,</span>
+  <span class="nx">sheetId</span><span class="p">,</span>
+  <span class="nx">columnKeyToHeader</span><span class="p">,</span>
+  <span class="nx">NOT_AVAILABLE_CELL</span><span class="p">,</span>
+<span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./index&#34;</span><span class="p">);</span>
+
+<span class="c1">//TODO-i18next: 언어 추가 시 작성 필요
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">headerValues</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;key&#34;</span><span class="p">,</span> <span class="s2">&#34;ko-KR&#34;</span><span class="p">,</span> <span class="s2">&#34;en-US&#34;</span><span class="p">,</span> <span class="s2">&#34;ja-JP&#34;</span><span class="p">,</span> <span class="s2">&#34;vi-VN&#34;</span><span class="p">,</span> <span class="s2">&#34;es-ES&#34;</span><span class="p">];</span>
+
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">addNewSheet</span><span class="p">(</span><span class="nx">doc</span><span class="p">,</span> <span class="nx">title</span><span class="p">,</span> <span class="nx">sheetId</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">addSheet</span><span class="p">({</span>
+    <span class="nx">sheetId</span><span class="p">,</span>
+    <span class="nx">title</span><span class="p">,</span>
+    <span class="nx">headerValues</span><span class="p">,</span>
+  <span class="p">});</span>
+
+  <span class="k">return</span> <span class="nx">sheet</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">updateTranslationsFromKeyMapToSheet</span><span class="p">(</span><span class="nx">doc</span><span class="p">,</span> <span class="nx">keyMap</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">title</span> <span class="o">=</span> <span class="s2">&#34;시트 제목&#34;</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">sheetsById</span><span class="p">[</span><span class="nx">sheetId</span><span class="p">];</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">sheet</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">sheet</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">addNewSheet</span><span class="p">(</span><span class="nx">doc</span><span class="p">,</span> <span class="nx">title</span><span class="p">,</span> <span class="nx">sheetId</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="kr">const</span> <span class="nx">rows</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getRows</span><span class="p">();</span>
+
+  <span class="kr">const</span> <span class="nx">exsitKeys</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="kr">const</span> <span class="nx">addedRows</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="nx">rows</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">row</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="nx">row</span><span class="p">[</span><span class="nx">columnKeyToHeader</span><span class="p">.</span><span class="nx">key</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">keyMap</span><span class="p">[</span><span class="nx">key</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">exsitKeys</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="p">[</span><span class="nx">key</span><span class="p">,</span> <span class="nx">translations</span><span class="p">]</span> <span class="k">of</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">keyMap</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">exsitKeys</span><span class="p">[</span><span class="nx">key</span><span class="p">])</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">row</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="p">[</span><span class="nx">columnKeyToHeader</span><span class="p">.</span><span class="nx">key</span><span class="p">]</span><span class="o">:</span> <span class="nx">key</span><span class="p">,</span>
+        <span class="p">...</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">translations</span><span class="p">).</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">result</span><span class="p">,</span> <span class="nx">lng</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="kr">const</span> <span class="nx">header</span> <span class="o">=</span> <span class="nx">columnKeyToHeader</span><span class="p">[</span><span class="nx">lng</span><span class="p">];</span>
+          <span class="nx">result</span><span class="p">[</span><span class="nx">header</span><span class="p">]</span> <span class="o">=</span> <span class="nx">translations</span><span class="p">[</span><span class="nx">lng</span><span class="p">];</span>
+
+          <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+        <span class="p">},</span> <span class="p">{}),</span>
+      <span class="p">};</span>
+
+      <span class="nx">addedRows</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">row</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="kr">await</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">addRows</span><span class="p">(</span><span class="nx">addedRows</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">toJson</span><span class="p">(</span><span class="nx">keyMap</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="p">{};</span>
+
+  <span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">keyMap</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(([,</span> <span class="nx">keysByPlural</span><span class="p">])</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="p">[</span><span class="nx">keyWithPostfix</span><span class="p">,</span> <span class="nx">translations</span><span class="p">]</span> <span class="k">of</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">keysByPlural</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nx">json</span><span class="p">[</span><span class="nx">keyWithPostfix</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="p">...</span><span class="nx">translations</span><span class="p">,</span>
+      <span class="p">};</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+  <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">gatherKeyMap</span><span class="p">(</span><span class="nx">keyMap</span><span class="p">,</span> <span class="nx">lng</span><span class="p">,</span> <span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="p">[</span><span class="nx">keyWithPostfix</span><span class="p">,</span> <span class="nx">translated</span><span class="p">]</span> <span class="k">of</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">json</span><span class="p">))</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="nx">getPureKey</span><span class="p">(</span><span class="nx">keyWithPostfix</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">keyMap</span><span class="p">[</span><span class="nx">key</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">keyMap</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="p">}</span>
+
+    <span class="kr">const</span> <span class="nx">keyMapWithLng</span> <span class="o">=</span> <span class="nx">keyMap</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">keyMapWithLng</span><span class="p">[</span><span class="nx">keyWithPostfix</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">keyMapWithLng</span><span class="p">[</span><span class="nx">keyWithPostfix</span><span class="p">]</span> <span class="o">=</span> <span class="nx">lngs</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">initObj</span><span class="p">,</span> <span class="nx">lng</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">initObj</span><span class="p">[</span><span class="nx">lng</span><span class="p">]</span> <span class="o">=</span> <span class="nx">NOT_AVAILABLE_CELL</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="nx">initObj</span><span class="p">;</span>
+      <span class="p">},</span> <span class="p">{});</span>
+    <span class="p">}</span>
+
+    <span class="nx">keyMapWithLng</span><span class="p">[</span><span class="nx">keyWithPostfix</span><span class="p">][</span><span class="nx">lng</span><span class="p">]</span> <span class="o">=</span> <span class="nx">translated</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">updateSheetFromJson</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">doc</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">loadSpreadsheet</span><span class="p">();</span>
+
+  <span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="nx">localesPath</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">lngs</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">throw</span> <span class="nx">error</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kr">const</span> <span class="nx">keyMap</span> <span class="o">=</span> <span class="p">{};</span>
+
+    <span class="nx">lngs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">lng</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">localeJsonFilePath</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">localesPath</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">lng</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">ns</span><span class="si">}</span><span class="sb">.json`</span><span class="p">;</span>
+
+      <span class="c1">// eslint-disable-next-line no-sync
+</span><span class="c1"></span>      <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">localeJsonFilePath</span><span class="p">,</span> <span class="s2">&#34;utf8&#34;</span><span class="p">);</span>
+
+      <span class="nx">gatherKeyMap</span><span class="p">(</span><span class="nx">keyMap</span><span class="p">,</span> <span class="nx">lng</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">json</span><span class="p">));</span>
+    <span class="p">});</span>
+
+    <span class="nx">updateTranslationsFromKeyMapToSheet</span><span class="p">(</span><span class="nx">doc</span><span class="p">,</span> <span class="nx">toJson</span><span class="p">(</span><span class="nx">keyMap</span><span class="p">));</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">updateSheetFromJson</span><span class="p">();</span>
+</code></pre></div></div>
 </details>
 <details>
 <summary>translate/download.js</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* eslint-disable no-undef */</span>
-</span></span><span class="line"><span class="cl"><span class="cm">/* eslint-disable @typescript-eslint/no-var-requires */</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">mkdirp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;mkdirp&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">loadSpreadsheet</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">localesPath</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">ns</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">lngs</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">sheetId</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">columnKeyToHeader</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">NOT_AVAILABLE_CELL</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./index&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="cm">/**
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * fetch translations from google spread sheet and transform to json
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {GoogleSpreadsheet} doc GoogleSpreadsheet document
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns [object] translation map
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * {
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *   &#34;ko-KR&#34;: {
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     &#34;key&#34;: &#34;value&#34;
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *   },
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *   &#34;en-US&#34;: {
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     &#34;key&#34;: &#34;value&#34;
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *   },
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * }
-</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
-</span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">fetchTranslationsFromSheetToJson</span><span class="p">(</span><span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">sheetsById</span><span class="p">[</span><span class="nx">sheetId</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">sheet</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{};</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">lngsMap</span> <span class="o">=</span> <span class="p">{};</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">rows</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getRows</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">rows</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">row</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="nx">row</span><span class="p">[</span><span class="nx">columnKeyToHeader</span><span class="p">.</span><span class="nx">key</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">lngs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">lng</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">translation</span> <span class="o">=</span> <span class="nx">row</span><span class="p">[</span><span class="nx">columnKeyToHeader</span><span class="p">[</span><span class="nx">lng</span><span class="p">]];</span>
-</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">translation</span> <span class="o">===</span> <span class="nx">NOT_AVAILABLE_CELL</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">lngsMap</span><span class="p">[</span><span class="nx">lng</span><span class="p">])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">lngsMap</span><span class="p">[</span><span class="nx">lng</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="nx">lngsMap</span><span class="p">[</span><span class="nx">lng</span><span class="p">][</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">translation</span> <span class="o">||</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">lngsMap</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">checkAndMakeLocaleDir</span><span class="p">(</span><span class="nx">dirPath</span><span class="p">,</span> <span class="nx">subDirs</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">subDirs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">subDir</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">mkdirp</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">dirPath</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">subDir</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">index</span> <span class="o">===</span> <span class="nx">subDirs</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">resolve</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">});</span>
-</span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">updateJsonFromSheet</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">await</span> <span class="nx">checkAndMakeLocaleDir</span><span class="p">(</span><span class="nx">localesPath</span><span class="p">,</span> <span class="nx">lngs</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">doc</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">loadSpreadsheet</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">lngsMap</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetchTranslationsFromSheetToJson</span><span class="p">(</span><span class="nx">doc</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="nx">localesPath</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">lngs</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="nx">error</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nx">lngs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">lng</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">localeJsonFilePath</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">localesPath</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">lng</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">ns</span><span class="si">}</span><span class="sb">.json`</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">jsonString</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">lngsMap</span><span class="p">[</span><span class="nx">lng</span><span class="p">],</span> <span class="kc">null</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="nx">fs</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="nx">localeJsonFilePath</span><span class="p">,</span> <span class="nx">jsonString</span><span class="p">,</span> <span class="s2">&#34;utf8&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">});</span>
-</span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">updateJsonFromSheet</span><span class="p">();</span>
-</span></span></code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* eslint-disable no-undef */</span>
+<span class="cm">/* eslint-disable @typescript-eslint/no-var-requires */</span>
+<span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">mkdirp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;mkdirp&#34;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="p">{</span>
+  <span class="nx">loadSpreadsheet</span><span class="p">,</span>
+  <span class="nx">localesPath</span><span class="p">,</span>
+  <span class="nx">ns</span><span class="p">,</span>
+  <span class="nx">lngs</span><span class="p">,</span>
+  <span class="nx">sheetId</span><span class="p">,</span>
+  <span class="nx">columnKeyToHeader</span><span class="p">,</span>
+  <span class="nx">NOT_AVAILABLE_CELL</span><span class="p">,</span>
+<span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;./index&#34;</span><span class="p">);</span>
+
+<span class="cm">/**
+</span><span class="cm"> * fetch translations from google spread sheet and transform to json
+</span><span class="cm"> * @param {GoogleSpreadsheet} doc GoogleSpreadsheet document
+</span><span class="cm"> * @returns [object] translation map
+</span><span class="cm"> * {
+</span><span class="cm"> *   &#34;ko-KR&#34;: {
+</span><span class="cm"> *     &#34;key&#34;: &#34;value&#34;
+</span><span class="cm"> *   },
+</span><span class="cm"> *   &#34;en-US&#34;: {
+</span><span class="cm"> *     &#34;key&#34;: &#34;value&#34;
+</span><span class="cm"> *   },
+</span><span class="cm"> * }
+</span><span class="cm"> */</span>
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">fetchTranslationsFromSheetToJson</span><span class="p">(</span><span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">sheetsById</span><span class="p">[</span><span class="nx">sheetId</span><span class="p">];</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">sheet</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{};</span>
+  <span class="p">}</span>
+
+  <span class="kr">const</span> <span class="nx">lngsMap</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="kr">const</span> <span class="nx">rows</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getRows</span><span class="p">();</span>
+
+  <span class="nx">rows</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">row</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="nx">row</span><span class="p">[</span><span class="nx">columnKeyToHeader</span><span class="p">.</span><span class="nx">key</span><span class="p">];</span>
+    <span class="nx">lngs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">lng</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">translation</span> <span class="o">=</span> <span class="nx">row</span><span class="p">[</span><span class="nx">columnKeyToHeader</span><span class="p">[</span><span class="nx">lng</span><span class="p">]];</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">translation</span> <span class="o">===</span> <span class="nx">NOT_AVAILABLE_CELL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">lngsMap</span><span class="p">[</span><span class="nx">lng</span><span class="p">])</span> <span class="p">{</span>
+        <span class="nx">lngsMap</span><span class="p">[</span><span class="nx">lng</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
+      <span class="p">}</span>
+
+      <span class="nx">lngsMap</span><span class="p">[</span><span class="nx">lng</span><span class="p">][</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">translation</span> <span class="o">||</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+
+  <span class="k">return</span> <span class="nx">lngsMap</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">checkAndMakeLocaleDir</span><span class="p">(</span><span class="nx">dirPath</span><span class="p">,</span> <span class="nx">subDirs</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">subDirs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">subDir</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">mkdirp</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">dirPath</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">subDir</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">index</span> <span class="o">===</span> <span class="nx">subDirs</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">resolve</span><span class="p">();</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">updateJsonFromSheet</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">await</span> <span class="nx">checkAndMakeLocaleDir</span><span class="p">(</span><span class="nx">localesPath</span><span class="p">,</span> <span class="nx">lngs</span><span class="p">);</span>
+
+  <span class="kr">const</span> <span class="nx">doc</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">loadSpreadsheet</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="nx">lngsMap</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetchTranslationsFromSheetToJson</span><span class="p">(</span><span class="nx">doc</span><span class="p">);</span>
+
+  <span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="nx">localesPath</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">lngs</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">throw</span> <span class="nx">error</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">lngs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">lng</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">localeJsonFilePath</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">localesPath</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">lng</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">ns</span><span class="si">}</span><span class="sb">.json`</span><span class="p">;</span>
+
+      <span class="kr">const</span> <span class="nx">jsonString</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">lngsMap</span><span class="p">[</span><span class="nx">lng</span><span class="p">],</span> <span class="kc">null</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+
+      <span class="nx">fs</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="nx">localeJsonFilePath</span><span class="p">,</span> <span class="nx">jsonString</span><span class="p">,</span> <span class="s2">&#34;utf8&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">updateJsonFromSheet</span><span class="p">();</span>
+</code></pre></div></div>
 </details>
 <details>
 <summary>src/index.tsx</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="s2">&#34;i18n&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">...</span>
-</span></span></code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">import</span> <span class="s2">&#34;i18n&#34;</span><span class="p">;</span>
+<span class="p">...</span>
+</code></pre></div></div>
 </details>
 <details>
 <summary>package.json</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="err">...,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;scan:i18n&#34;</span><span class="p">:</span> <span class="s2">&#34;i18next-scanner --config i18next-scanner.config.js&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;upload:i18n&#34;</span><span class="p">:</span> <span class="s2">&#34;yarn run scan:i18n &amp;&amp; node translate/upload.js&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;download:i18n&#34;</span><span class="p">:</span> <span class="s2">&#34;node translate/download.js&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span><span class="err">,</span>
-</span></span></code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="err">...,</span>
+    <span class="nt">&#34;scan:i18n&#34;</span><span class="p">:</span> <span class="s2">&#34;i18next-scanner --config i18next-scanner.config.js&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;upload:i18n&#34;</span><span class="p">:</span> <span class="s2">&#34;yarn run scan:i18n &amp;&amp; node translate/upload.js&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;download:i18n&#34;</span><span class="p">:</span> <span class="s2">&#34;node translate/download.js&#34;</span>
+  <span class="p">}</span><span class="err">,</span>
+</code></pre></div></div>
 </details>
 <h2 id="사용법" class="relative group">사용법 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%82%ac%ec%9a%a9%eb%b2%95" aria-label="Anchor">#</a></span></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># i18next.t()로 감싸져 있는 키를 스캔 후 업로드</span>
-</span></span><span class="line"><span class="cl">yarn upload:i18n
-</span></span><span class="line"><span class="cl"><span class="c1"># 구글 스프레드 시트에서 번역을 받아옴</span>
-</span></span><span class="line"><span class="cl">yarn download:i18n
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Trans</span><span class="p">,</span> <span class="nx">useTranslation</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react-i18next&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">Ii18Next</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;i18n&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Example() {</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">i18next</span> <span class="o">=</span> <span class="nx">useTranslation</span><span class="p">();</span> <span class="c1">// scan을 위한 자체 컨벤션으로 &#34;i18next&#34; 사용
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">getTabList</span> <span class="o">=</span> <span class="p">(</span><span class="nx">i18next</span>: <span class="kt">Ii18Next</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">id</span>: <span class="kt">1</span><span class="p">,</span> <span class="nx">label</span>: <span class="kt">i18next.t</span><span class="p">(</span><span class="s2">&#34;예시 1&#34;</span><span class="p">)</span> <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">id</span>: <span class="kt">2</span><span class="p">,</span> <span class="nx">label</span>: <span class="kt">i18next.t</span><span class="p">(</span><span class="s2">&#34;예시 2&#34;</span><span class="p">)</span> <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">id</span>: <span class="kt">3</span><span class="p">,</span> <span class="nx">label</span>: <span class="kt">i18next.t</span><span class="p">(</span><span class="s2">&#34;예시 3&#34;</span><span class="p">)</span> <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="p">];</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">tabList</span> <span class="o">=</span> <span class="nx">getTabList</span><span class="p">(</span><span class="nx">i18next</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">// 1) 일반 사용
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">{</span><span class="nx">i18next</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s2">&#34;이메일&#34;</span><span class="p">)}</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">// 2) 변수 사용
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">{</span><span class="nx">i18next</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">        <span class="sb">`이메일은 &#34;{{email}}&#34;이고 , 비밀번호는 &#34;{{password}}&#34;이다.`</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span> <span class="nx">email</span><span class="o">:</span> <span class="s2">&#34;example@gmail.com&#34;</span><span class="p">,</span> <span class="nx">password</span><span class="o">:</span> <span class="s2">&#34;1234&#34;</span> <span class="p">},</span>
-</span></span><span class="line"><span class="cl">      <span class="p">)}</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">// 3) 단수・복수 사용; 변수명으로 count를 사용 해야함
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">{</span><span class="nx">i18next</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="sb">`같은 명의로 만들어진 아이디는 {{count}}개입니다.`</span><span class="p">,</span> <span class="p">{</span> <span class="nx">count</span>: <span class="kt">3</span> <span class="p">})}</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">// 4) html 태그 사용; i18nKey에 &#34;html&#34;을 포함 해야함(scan을 위한 자체 컨벤션)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">&lt;</span><span class="nt">Trans</span> <span class="na">i18nKey</span><span class="o">=</span><span class="s">&#34;예시 html&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;정유찬&#34;</span> <span class="p">}}</span><span class="err">님은</span> <span class="nx">i18next를</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="err">사용할</span> <span class="err">수</span> <span class="err">있습니다</span><span class="p">.</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">Trans</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">// 5) return 외부에서 사용
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">{</span><span class="nx">tabList</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">tab</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span><span class="nx">tab</span><span class="p">.</span><span class="nx">label</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">))}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><img width="650px" alt="react-i18next vs react-intl" src="/assets/work/2-2.png"/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># i18next.t()로 감싸져 있는 키를 스캔 후 업로드</span>
+yarn upload:i18n
+<span class="c1"># 구글 스프레드 시트에서 번역을 받아옴</span>
+yarn download:i18n
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Trans</span><span class="p">,</span> <span class="nx">useTranslation</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react-i18next&#34;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">Ii18Next</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;i18n&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Example() {</span>
+  <span class="kr">const</span> <span class="nx">i18next</span> <span class="o">=</span> <span class="nx">useTranslation</span><span class="p">();</span> <span class="c1">// scan을 위한 자체 컨벤션으로 &#34;i18next&#34; 사용
+</span><span class="c1"></span>
+  <span class="kr">const</span> <span class="nx">getTabList</span> <span class="o">=</span> <span class="p">(</span><span class="nx">i18next</span>: <span class="kt">Ii18Next</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="nx">id</span>: <span class="kt">1</span><span class="p">,</span> <span class="nx">label</span>: <span class="kt">i18next.t</span><span class="p">(</span><span class="s2">&#34;예시 1&#34;</span><span class="p">)</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="nx">id</span>: <span class="kt">2</span><span class="p">,</span> <span class="nx">label</span>: <span class="kt">i18next.t</span><span class="p">(</span><span class="s2">&#34;예시 2&#34;</span><span class="p">)</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="nx">id</span>: <span class="kt">3</span><span class="p">,</span> <span class="nx">label</span>: <span class="kt">i18next.t</span><span class="p">(</span><span class="s2">&#34;예시 3&#34;</span><span class="p">)</span> <span class="p">},</span>
+  <span class="p">];</span>
+
+  <span class="kr">const</span> <span class="nx">tabList</span> <span class="o">=</span> <span class="nx">getTabList</span><span class="p">(</span><span class="nx">i18next</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="c1">// 1) 일반 사용
+</span><span class="c1"></span>      <span class="p">{</span><span class="nx">i18next</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s2">&#34;이메일&#34;</span><span class="p">)}</span>
+      <span class="c1">// 2) 변수 사용
+</span><span class="c1"></span>      <span class="p">{</span><span class="nx">i18next</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span>
+        <span class="sb">`이메일은 &#34;{{email}}&#34;이고 , 비밀번호는 &#34;{{password}}&#34;이다.`</span><span class="p">,</span>
+        <span class="p">{</span> <span class="nx">email</span><span class="o">:</span> <span class="s2">&#34;example@gmail.com&#34;</span><span class="p">,</span> <span class="nx">password</span><span class="o">:</span> <span class="s2">&#34;1234&#34;</span> <span class="p">},</span>
+      <span class="p">)}</span>
+      <span class="c1">// 3) 단수・복수 사용; 변수명으로 count를 사용 해야함
+</span><span class="c1"></span>      <span class="p">{</span><span class="nx">i18next</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="sb">`같은 명의로 만들어진 아이디는 {{count}}개입니다.`</span><span class="p">,</span> <span class="p">{</span> <span class="nx">count</span>: <span class="kt">3</span> <span class="p">})}</span>
+      <span class="c1">// 4) html 태그 사용; i18nKey에 &#34;html&#34;을 포함 해야함(scan을 위한 자체 컨벤션)
+</span><span class="c1"></span>      <span class="p">&lt;</span><span class="nt">Trans</span> <span class="na">i18nKey</span><span class="o">=</span><span class="s">&#34;예시 html&#34;</span><span class="p">&gt;</span>
+        <span class="p">{{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;정유찬&#34;</span> <span class="p">}}</span><span class="err">님은</span> <span class="nx">i18next를</span>
+        <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+        <span class="err">사용할</span> <span class="err">수</span> <span class="err">있습니다</span><span class="p">.</span>
+      <span class="p">&lt;/</span><span class="nt">Trans</span><span class="p">&gt;</span>
+      <span class="c1">// 5) return 외부에서 사용
+</span><span class="c1"></span>      <span class="p">{</span><span class="nx">tabList</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">tab</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">{</span><span class="nx">tab</span><span class="p">.</span><span class="nx">label</span><span class="p">}</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">))}</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
+  <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><img width="650px" alt="react-i18next vs react-intl" src="/assets/work/2-2.png"/>
 <p><em>*조건부 서식 활용해서 작업이 필요한 부분의 가시성을 높혔다.</em></p>
 <hr>
 <p>Reference.</p>
@@ -1064,31 +1064,19 @@
             <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
             <div class="pt-3">
               <div id="disqus_thread"></div>
-
 <script>
+    
 
+    
 
-
-
-
-
-
-(function() { 
-
-var d = document, s = d.createElement('script');
-
-s.src = 'https://yuchans-hello-world-5.disqus.com/embed.js';
-
-s.setAttribute('data-timestamp', +new Date());
-
-(d.head || d.body).appendChild(s);
-
-})();
-
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yuchans-hello-world-5.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 </script>
-
 <script id="dsq-count-scr" src="//yuchans-hello-world-5.disqus.com/count.js" async></script>
-
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
           </div>
