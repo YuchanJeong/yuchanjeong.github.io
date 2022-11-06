@@ -9,21 +9,21 @@
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
     <lastBuildDate>Sun, 06 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Custom Hook</title>
+      <link>https://yuchanjeong.github.io/posts/summary/custom-hook/</link>
+      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/summary/custom-hook/</guid>
+      <description>내가 자주 사용하는 커스텀 훅들을 모아둔 게시물이다.</description>
+    </item>
+    
+    <item>
       <title>다국어 처리 (react-i18next)</title>
       <link>https://yuchanjeong.github.io/posts/work/2/</link>
       <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/work/2/</guid>
       <description>배경 #새로 진행하고 있는 B2B 프로젝트에 글로벌 진출 기회가 생겨서 다국어 처리를 할 필요가 생겼다.</description>
-    </item>
-    
-    <item>
-      <title>커스텀 훅 (Custom Hook)</title>
-      <link>https://yuchanjeong.github.io/posts/summary/custom-hook/</link>
-      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/posts/summary/custom-hook/</guid>
-      <description></description>
     </item>
     
     <item>

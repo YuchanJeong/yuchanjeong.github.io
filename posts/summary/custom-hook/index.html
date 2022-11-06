@@ -15,8 +15,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>커스텀 훅 (Custom Hook) &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="커스텀 훅 (Custom Hook) &middot; Yuchan&#39;s hello world!" />
+  <title>Custom Hook &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="Custom Hook &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog from a developer who loves &#39;Why?&#39; :)" />
   
@@ -69,8 +69,8 @@
   
   
   
-  <meta property="og:title" content="커스텀 훅 (Custom Hook)" />
-<meta property="og:description" content="" />
+  <meta property="og:title" content="Custom Hook" />
+<meta property="og:description" content="내가 자주 사용하는 커스텀 훅들을 모아둔 게시물이다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/summary/custom-hook/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-11-06T00:00:00+00:00" />
@@ -78,8 +78,8 @@
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="커스텀 훅 (Custom Hook)"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Custom Hook"/>
+<meta name="twitter:description" content="내가 자주 사용하는 커스텀 훅들을 모아둔 게시물이다."/>
 
   
   <script type="application/ld+json">
@@ -87,10 +87,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "커스텀 훅 (Custom Hook)",
-    "headline": "커스텀 훅 (Custom Hook)",
+    "name": "Custom Hook",
+    "headline": "Custom Hook",
     
-    
+    "abstract": "내가 자주 사용하는 커스텀 훅들을 모아둔 게시물이다.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/posts\/summary\/custom-hook\/",
     "author" : {
@@ -106,7 +106,7 @@
     "keywords": ["react"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "0"
+    "wordCount": "934"
   }]
   </script>
 
@@ -231,7 +231,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        커스텀 훅 (Custom Hook)
+        Custom Hook
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -304,7 +304,401 @@
     <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        
+        <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+  <span class="text-primary-400 ltr:pr-3 rtl:pl-3">
+    
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+
+  </span>
+
+
+  </span>
+  <span class="dark:text-neutral-300">내가 자주 사용하는 커스텀 훅들을 모아둔 게시물이다.</span>
+</div>
+
+<br/>
+<details>
+<summary><strong>useCheckbox.ts</strong></summary>
+<div markdown="1">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">ChangeEvent</span><span class="p">,</span> <span class="nx">Dispatch</span><span class="p">,</span> <span class="nx">SetStateAction</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="cm">/**
+</span><span class="cm"> * @param allList 체크 박스에 포함할 요소 값들
+</span><span class="cm"> * @param limit ? 체크 가능 개수; `null`
+</span><span class="cm"> * @param initialCheckedList ? 초기에 체크되어 있는 요소 값들; `[]`
+</span><span class="cm"> * @returns `{ attribute, checkedList, setCheckedList }`
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useCheckbox</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="nx">allList</span>: <span class="kt">string</span><span class="p">[],</span>
+  <span class="nx">limit</span>: <span class="kt">number</span> <span class="o">|</span> <span class="kc">null</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nx">initialCheckedList?</span>: <span class="kt">string</span><span class="p">[]</span>
+<span class="p">)</span><span class="o">:</span> <span class="nx">IUseCheckboxResult</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">checkedList</span><span class="p">,</span> <span class="nx">setCheckedList</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="nx">initialCheckedList</span> <span class="o">||</span> <span class="p">[]);</span>
+
+  <span class="kr">const</span> <span class="nx">onChange</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="nx">event</span>: <span class="kt">ChangeEvent</span><span class="p">&lt;</span><span class="nt">HTMLInputElement</span> <span class="err">|</span> <span class="na">HTMLTextAreaElement</span><span class="p">&gt;</span>
+  <span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="o">===</span> <span class="s2">&#34;allCheck&#34;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">limit</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nx">checkedList</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="nx">allList</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">setCheckedList</span><span class="p">([]);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">setCheckedList</span><span class="p">([...</span><span class="nx">allList</span><span class="p">]);</span>
+      <span class="p">}</span>
+      <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">checkedList</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">value</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nx">setCheckedList</span><span class="p">((</span><span class="nx">prevCheckedList</span><span class="p">)</span> <span class="o">=&gt;</span>
+        <span class="nx">prevCheckedList</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">checkedValue</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">checkedValue</span> <span class="o">!==</span> <span class="nx">value</span><span class="p">)</span>
+      <span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">limit</span> <span class="o">!==</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="nx">checkedList</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="nx">limit</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">setCheckedList</span><span class="p">((</span><span class="nx">prevCheckedList</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">[</span>
+          <span class="p">...</span><span class="nx">prevCheckedList</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">idx</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="p">]);</span>
+      <span class="p">}</span>
+      <span class="nx">setCheckedList</span><span class="p">((</span><span class="nx">prevCheckedList</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">[...</span><span class="nx">prevCheckedList</span><span class="p">,</span> <span class="nx">value</span><span class="p">]);</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">attribute</span><span class="o">:</span> <span class="p">{</span> <span class="kr">type</span><span class="o">:</span> <span class="s2">&#34;checkbox&#34;</span><span class="p">,</span> <span class="nx">onChange</span> <span class="p">},</span>
+    <span class="nx">checkedList</span><span class="p">,</span>
+    <span class="nx">setCheckedList</span><span class="p">,</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+
+<span class="c1">// ========== usage ========== //
+</span><span class="c1"></span><span class="cm">/* 
+</span><span class="cm">const EXAMPLES = [&#34;a&#34;,&#34;b&#34;,&#34;c&#34;]
+</span><span class="cm">const EXAMPLE_LABELS: { [key: string]: string } = {
+</span><span class="cm">  &#34;a&#34;: &#34;가&#34;,
+</span><span class="cm">  &#34;b&#34;: &#34;나&#34;,
+</span><span class="cm">  &#34;c&#34;: &#34;다&#34;,
+</span><span class="cm">}
+</span><span class="cm">const exampleCheckbox = useCheckbox(EXAMPLES)
+</span><span class="cm">return (
+</span><span class="cm">  &lt;div&gt;
+</span><span class="cm">    &lt;label
+</span><span class="cm">      data-is-checked={
+</span><span class="cm">        EXAMPLES.length === exampleCheckbox.checkedList.length
+</span><span class="cm">      }
+</span><span class="cm">    &gt;
+</span><span class="cm">      전체 선택
+</span><span class="cm">      &lt;input
+</span><span class="cm">        {...exampleCheckbox.attribute}
+</span><span class="cm">        value=&#34;allCheck&#34;
+</span><span class="cm">        // checked={EXAMPLES.length === exampleCheckbox.checkedList.length}
+</span><span class="cm">      /&gt;
+</span><span class="cm">    &lt;/label&gt;
+</span><span class="cm">    {EXAMPLES.map((example) =&gt; (
+</span><span class="cm">      &lt;label
+</span><span class="cm">        key={example}
+</span><span class="cm">        data-is-checked={exampleCheckbox.checkedList.includes(example)}
+</span><span class="cm">      &gt;
+</span><span class="cm">        {EXAMPLE_LABELS[example]}
+</span><span class="cm">        &lt;input
+</span><span class="cm">          {...exampleCheckbox.attribute}
+</span><span class="cm">          value={example}
+</span><span class="cm">          // checked={exampleCheckbox.checkedList.includes(example)}
+</span><span class="cm">        /&gt;
+</span><span class="cm">      &lt;/label&gt;
+</span><span class="cm">    ))}
+</span><span class="cm">    &lt;div&gt;{exampleCheckbox.checkedList}&lt;/div&gt;
+</span><span class="cm">  &lt;/div&gt;
+</span><span class="cm">)
+</span><span class="cm">*/</span>
+<span class="cm">/*
+</span><span class="cm">input[type=&#34;checkbox&#34;] {
+</span><span class="cm">  display: none;
+</span><span class="cm">}
+</span><span class="cm">label {
+</span><span class="cm">  ...
+</span><span class="cm">  &amp;[data-is-checked=&#34;true&#34;] {
+</span><span class="cm">    ...
+</span><span class="cm">  }
+</span><span class="cm">}
+</span><span class="cm">*/</span>
+
+<span class="c1">// ========== types ========== //
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">IUseCheckboxResult</span> <span class="p">{</span>
+  <span class="nx">attribute</span><span class="o">:</span> <span class="p">{</span>
+    <span class="kr">type</span><span class="o">:</span> <span class="s2">&#34;checkbox&#34;</span><span class="p">;</span>
+    <span class="nx">onChange</span><span class="o">:</span> <span class="p">(</span><span class="nx">event</span>: <span class="kt">ChangeEvent</span><span class="p">&lt;</span><span class="nt">HTMLInputElement</span><span class="p">&gt;)</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">;</span>
+  <span class="p">};</span>
+  <span class="nx">checkedList</span>: <span class="kt">string</span><span class="p">[];</span>
+  <span class="nx">setCheckedList</span>: <span class="kt">Dispatch</span><span class="p">&lt;</span><span class="nt">SetStateAction</span><span class="err">&lt;</span><span class="na">string</span><span class="err">[]</span><span class="p">&gt;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+</details>
+<details>
+<summary><strong>useSelect.ts</strong></summary>
+<div markdown="1">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">ChangeEvent</span><span class="p">,</span> <span class="nx">Dispatch</span><span class="p">,</span> <span class="nx">SetStateAction</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="cm">/**
+</span><span class="cm"> * @param initialValue ? 초기값; `&#34;&#34;`
+</span><span class="cm"> * @returns `{ attribute, value, setValue }`
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useSelect</span> <span class="o">=</span> <span class="p">(</span><span class="nx">initialValue</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">)</span><span class="o">:</span> <span class="nx">IUseSelectResult</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">value</span><span class="p">,</span> <span class="nx">setValue</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="nx">initialValue</span><span class="p">);</span>
+
+  <span class="kr">const</span> <span class="nx">onChange</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span>: <span class="kt">ChangeEvent</span><span class="p">&lt;</span><span class="nt">HTMLSelectElement</span><span class="p">&gt;)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span> <span class="o">!==</span> <span class="nx">value</span><span class="p">)</span> <span class="nx">setValue</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">attribute</span><span class="o">:</span> <span class="p">{</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">onChange</span> <span class="p">},</span>
+    <span class="nx">value</span><span class="p">,</span>
+    <span class="nx">setValue</span><span class="p">,</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+
+<span class="c1">// ========== usage ========== //
+</span><span class="c1"></span><span class="cm">/*
+</span><span class="cm">const EXAMPLES = [
+</span><span class="cm">  { value: &#34;a&#34;, label: &#34;가&#34; },
+</span><span class="cm">  { value: &#34;b&#34;, label: &#34;나&#34; },
+</span><span class="cm">  { value: &#34;c&#34;, label: &#34;다&#34; },
+</span><span class="cm">]
+</span><span class="cm">const exampleSelect = useSelect(EXAMPLES[0].value)
+</span><span class="cm">return (
+</span><span class="cm">  &lt;select {...exampleSelect.attribute}&gt;
+</span><span class="cm">    {EXAMPLES.map((example) =&gt; (
+</span><span class="cm">      &lt;option key={example.value} value={example.value}&gt;
+</span><span class="cm">        {example.label}
+</span><span class="cm">      &lt;/option&gt;
+</span><span class="cm">    ))}
+</span><span class="cm">  &lt;/ select&gt;
+</span><span class="cm">)
+</span><span class="cm">*/</span>
+
+<span class="c1">// ========== types ========== //
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">IUseSelectResult</span> <span class="p">{</span>
+  <span class="nx">attribute</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">value</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="nx">onChange</span><span class="o">:</span> <span class="p">(</span><span class="nx">event</span>: <span class="kt">ChangeEvent</span><span class="p">&lt;</span><span class="nt">HTMLSelectElement</span><span class="p">&gt;)</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">;</span>
+  <span class="p">};</span>
+  <span class="nx">value</span>: <span class="kt">string</span><span class="p">;</span>
+  <span class="nx">setValue</span>: <span class="kt">Dispatch</span><span class="p">&lt;</span><span class="nt">SetStateAction</span><span class="err">&lt;</span><span class="na">string</span><span class="p">&gt;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+</details>
+<details>
+<summary><strong>useInput.ts</strong></summary>
+<div markdown="1">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">ChangeEvent</span><span class="p">,</span> <span class="nx">Dispatch</span><span class="p">,</span> <span class="nx">SetStateAction</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="cm">/**
+</span><span class="cm"> * @param initialValue ? 초기값; `&#34;&#34;`
+</span><span class="cm"> * @param placeholder ? 표시자; `&#34;&#34;`
+</span><span class="cm"> * @returns `{ attribute, value, setValue }`
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useInput</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="nx">initialValue</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+  <span class="nx">placeholder</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+<span class="p">)</span><span class="o">:</span> <span class="nx">IUseInputResult</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">value</span><span class="p">,</span> <span class="nx">setValue</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="nx">initialValue</span><span class="p">);</span>
+
+  <span class="kr">const</span> <span class="nx">onChange</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="nx">event</span>: <span class="kt">ChangeEvent</span><span class="p">&lt;</span><span class="nt">HTMLInputElement</span> <span class="err">|</span> <span class="na">HTMLTextAreaElement</span><span class="p">&gt;</span>
+  <span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setValue</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">attribute</span><span class="o">:</span> <span class="p">{</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">placeholder</span><span class="p">,</span> <span class="nx">onChange</span> <span class="p">},</span>
+    <span class="nx">value</span><span class="p">,</span>
+    <span class="nx">setValue</span><span class="p">,</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+
+<span class="c1">// ========== usage ========== //
+</span><span class="c1"></span><span class="cm">/*
+</span><span class="cm">const exampleInput = useInput(&#34;&#34;, &#34;&#34;)
+</span><span class="cm">return (
+</span><span class="cm">  &lt;input {...exampleInput.attribute} /&gt;` 
+</span><span class="cm">)
+</span><span class="cm">*/</span>
+
+<span class="c1">// ========== types ========== //
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">IUseInputResult</span> <span class="p">{</span>
+  <span class="nx">attribute</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">value</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="nx">placeholder</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="nx">onChange</span><span class="o">:</span> <span class="p">(</span>
+      <span class="nx">event</span>: <span class="kt">ChangeEvent</span><span class="p">&lt;</span><span class="nt">HTMLInputElement</span> <span class="err">|</span> <span class="na">HTMLTextAreaElement</span><span class="p">&gt;</span>
+    <span class="p">)</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">;</span>
+  <span class="p">};</span>
+  <span class="nx">value</span>: <span class="kt">string</span><span class="p">;</span>
+  <span class="nx">setValue</span>: <span class="kt">Dispatch</span><span class="p">&lt;</span><span class="nt">SetStateAction</span><span class="err">&lt;</span><span class="na">string</span><span class="p">&gt;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+</details>
+<details>
+<summary><strong>useIntersectionObserver.ts</strong></summary>
+<div markdown="1">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">RefObject</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="cm">/**
+</span><span class="cm"> * @param targetRef 관측 대상
+</span><span class="cm"> * @param targetMargin ? 관측 범위; `&#34;0%&#34;`
+</span><span class="cm"> * @param isFreezeOnceVisible ? 한번 이상 관측 안 함 여부; `false`
+</span><span class="cm"> * @returns 관측 여부
+</span><span class="cm"> */</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useIntersectionObserver</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="nx">targetRef</span>: <span class="kt">RefObject</span><span class="p">&lt;</span><span class="nt">HTMLDivElement</span><span class="p">&gt;,</span>
+  <span class="nx">targetMargin</span> <span class="o">=</span> <span class="s2">&#34;0%&#34;</span><span class="p">,</span>
+  <span class="nx">isFreezeOnceVisible</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="p">)</span><span class="o">:</span> <span class="kr">boolean</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">entry</span><span class="p">,</span> <span class="nx">setEntry</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">&lt;</span><span class="nt">IntersectionObserverEntry</span><span class="p">&gt;();</span>
+
+  <span class="kr">const</span> <span class="nx">isFrozen</span> <span class="o">=</span> <span class="nx">entry</span><span class="o">?</span><span class="p">.</span><span class="nx">isIntersecting</span> <span class="o">&amp;&amp;</span> <span class="nx">isFreezeOnceVisible</span><span class="p">;</span>
+
+  <span class="kr">const</span> <span class="nx">updateEntry</span> <span class="o">=</span> <span class="p">([</span><span class="nx">entry</span><span class="p">]</span><span class="o">:</span> <span class="nx">IntersectionObserverEntry</span><span class="p">[])</span><span class="o">:</span> <span class="k">void</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setEntry</span><span class="p">(</span><span class="nx">entry</span><span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">target</span> <span class="o">=</span> <span class="nx">targetRef</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="p">;</span>
+    <span class="kr">const</span> <span class="nx">hasIOSupport</span> <span class="o">=</span> <span class="o">!!</span><span class="nb">window</span><span class="p">.</span><span class="nx">IntersectionObserver</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">hasIOSupport</span> <span class="o">||</span> <span class="nx">isFrozen</span> <span class="o">||</span> <span class="o">!</span><span class="nx">target</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+    <span class="kr">const</span> <span class="nx">observerParams</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">threshold</span>: <span class="kt">0</span><span class="p">,</span>
+      <span class="nx">root</span>: <span class="kt">null</span><span class="p">,</span>
+      <span class="nx">rootMargin</span>: <span class="kt">targetMargin</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="kr">const</span> <span class="nx">observer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IntersectionObserver</span><span class="p">(</span><span class="nx">updateEntry</span><span class="p">,</span> <span class="nx">observerParams</span><span class="p">);</span>
+
+    <span class="nx">observer</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">observer</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">();</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">targetRef</span><span class="o">?</span><span class="p">.</span><span class="nx">current</span><span class="p">,</span> <span class="nx">targetMargin</span><span class="p">,</span> <span class="nx">isFrozen</span><span class="p">]);</span>
+
+  <span class="k">return</span> <span class="o">!!</span><span class="nx">entry</span><span class="o">?</span><span class="p">.</span><span class="nx">isIntersecting</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// ========== usage ========== //
+</span><span class="c1"></span><span class="cm">/*
+</span><span class="cm">const exampleRef = useRef&lt;HTMLDivElement&gt;(null);
+</span><span class="cm">const isVisible = useIntersectionObserver(exampleRef);
+</span><span class="cm">return (
+</span><span class="cm">  &lt;div&gt;
+</span><span class="cm">    &lt;div&gt;{isVisible ? &#34;보임&#34; : &#34;안보임&#34;}&lt;/div&gt;
+</span><span class="cm">    &lt;div ref={exampleRef}&gt;example&lt;/div&gt;
+</span><span class="cm">  &lt;/div&gt;
+</span><span class="cm">)
+</span><span class="cm">*/</span>
+</code></pre></div></div>
+</details>
+<details>
+<summary><strong>useDetectOutsideClick.ts</strong></summary>
+<div markdown="1">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">Dispatch</span><span class="p">,</span> <span class="nx">SetStateAction</span><span class="p">,</span> <span class="nx">RefObject</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="cm">/**
+</span><span class="cm"> * @param targetRef 관측 대상
+</span><span class="cm"> * @param initialValue ? 초기값; `false`
+</span><span class="cm"> * @returns `[isOpen, setIsOpen]`
+</span><span class="cm"> * */</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useDetectOutsideClick</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="nx">targetRef</span>: <span class="kt">RefObject</span><span class="p">&lt;</span><span class="nt">HTMLDivElement</span><span class="p">&gt;,</span>
+  <span class="nx">initialValue</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="p">)</span><span class="o">:</span> <span class="nx">TUseDetectOutsideClickResult</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">isOpen</span><span class="p">,</span> <span class="nx">setIsOpen</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="nx">initialValue</span><span class="p">);</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">onClick</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span>: <span class="kt">MouseEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span>
+        <span class="nx">targetRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">!==</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span>
+        <span class="o">!</span><span class="nx">targetRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span> <span class="kr">as</span> <span class="nx">Node</span><span class="p">)</span>
+      <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">setIsOpen</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">isOpen</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span> <span class="nx">onClick</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nb">window</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span> <span class="nx">onClick</span><span class="p">);</span>
+    <span class="p">};</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">isOpen</span><span class="p">]);</span>
+
+  <span class="k">return</span> <span class="p">[</span><span class="nx">isOpen</span><span class="p">,</span> <span class="nx">setIsOpen</span><span class="p">];</span>
+<span class="p">};</span>
+
+<span class="c1">// ========== usage ========== //
+</span><span class="c1"></span><span class="cm">/*
+</span><span class="cm">const exampleRef = useRef&lt;HTMLDivElement&gt;(null);
+</span><span class="cm">const [isOpen, setIsOpen] = useDetectOutsideClick(exampleRef);
+</span><span class="cm">const openModal = () =&gt; {
+</span><span class="cm">  setIsOpen(true);
+</span><span class="cm">};
+</span><span class="cm">return (
+</span><span class="cm">  &lt;div ref={exampleRef}&gt;
+</span><span class="cm">    &lt;div onClick={openModal}&gt;열기&lt;/div&gt;
+</span><span class="cm">    {isOpen ? &lt;div&gt;모달&lt;/div&gt; : null}
+</span><span class="cm">  &lt;/div&gt;
+</span><span class="cm">);
+</span><span class="cm">*/</span>
+
+<span class="c1">// ========== types ========== //
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">type</span> <span class="nx">TUseDetectOutsideClickResult</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="kr">boolean</span><span class="p">,</span>
+  <span class="nx">Dispatch</span><span class="p">&lt;</span><span class="nt">SetStateAction</span><span class="err">&lt;</span><span class="na">boolean</span><span class="p">&gt;</span><span class="o">&gt;</span>
+<span class="p">];</span>
+</code></pre></div></div>
+</details>
+<details>
+<summary><strong>useImageElement.ts</strong></summary>
+<div markdown="1">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useImageElement</span> <span class="o">=</span> <span class="p">(</span><span class="nx">url</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">TUseImageElementResult</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">imageElement</span><span class="p">,</span> <span class="nx">setImageElement</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">&lt;</span><span class="nt">HTMLImageElement</span><span class="p">&gt;();</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">isErr</span><span class="p">,</span> <span class="nx">setIsErr</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">&lt;</span><span class="nt">boolean</span><span class="p">&gt;(</span><span class="kc">false</span><span class="p">);</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">image</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">window</span><span class="p">.</span><span class="nx">Image</span><span class="p">();</span>
+    <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+
+    <span class="nx">image</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">setImageElement</span><span class="p">(</span><span class="nx">image</span><span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="nx">image</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">setIsErr</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+    <span class="p">};</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">url</span><span class="p">]);</span>
+
+  <span class="k">return</span> <span class="p">[</span><span class="nx">imageElement</span><span class="p">,</span> <span class="nx">isErr</span><span class="p">];</span>
+<span class="p">};</span>
+
+<span class="c1">// ========== types ========== //
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">type</span> <span class="nx">TUseImageElementResult</span> <span class="o">=</span> <span class="p">[</span><span class="nx">HTMLImageElement</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">,</span> <span class="kr">boolean</span><span class="p">];</span>
+</code></pre></div></div>
+</details>
+
       </div>
     </section>
     <footer class="pt-8 max-w-prose print:hidden">
@@ -411,7 +805,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group" href="/posts/work/1/">
+            <a class="flex group" href="/posts/work/2/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -423,23 +817,6 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >평균 별점 (소수점 반영)</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2022-11-05 00:00:00 &#43;0000 UTC">5 November 2022</time>
-                  
-                </span>
-              </span>
-            </a>
-          
-        </span>
-        <span>
-          
-            <a class="flex text-right group" href="/posts/work/2/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
                   >다국어 처리 (react-i18next)</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
@@ -448,15 +825,10 @@
                   
                 </span>
               </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
             </a>
+          
+        </span>
+        <span>
           
         </span>
       </div>
@@ -491,6 +863,19 @@
     </footer>
   </article>
 
+        
+          <div
+            class="pointer-events-none absolute top-[100vh] bottom-0 w-12 ltr:right-0 rtl:left-0"
+          >
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
         
       </main><footer class="py-10 print:hidden">
   
