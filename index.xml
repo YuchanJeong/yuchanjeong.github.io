@@ -18,7 +18,7 @@
     </item>
     
     <item>
-      <title>별점 만들기</title>
+      <title>평균 별점 표현 (소수점 반영)</title>
       <link>https://yuchanjeong.github.io/posts/work/1/</link>
       <pubDate>Sat, 05 Nov 2022 00:00:00 +0000</pubDate>
       
@@ -41,7 +41,7 @@
       <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/summary/git/</guid>
-      <description>1) 기본 설정 #   Command Details     git init 깃 추적 시작   git config --global --list 기본 설정 보기   git config --global core.</description>
+      <description>1) 기본 설정 #Command Details git init 깃 추적 시작 git config --global --list 기본 설정 보기 git config --global core.</description>
     </item>
     
     <item>
