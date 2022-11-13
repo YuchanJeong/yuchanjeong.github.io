@@ -9,12 +9,21 @@
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
     <lastBuildDate>Mon, 07 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Custom Hook</title>
-      <link>https://yuchanjeong.github.io/posts/summary/custom-hook/</link>
+      <title>Custom Hooks</title>
+      <link>https://yuchanjeong.github.io/posts/summary/custom-hooks/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/summary/custom-hook/</guid>
-      <description>useCheckbox.</description>
+      <guid>https://yuchanjeong.github.io/posts/summary/custom-hooks/</guid>
+      <description>useInput.</description>
+    </item>
+    
+    <item>
+      <title>[프로젝트 초기 설정] 컨벤션</title>
+      <link>https://yuchanjeong.github.io/posts/work/3/</link>
+      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/work/3/</guid>
+      <description>배경 # 입사 직후 팀원들에게 코드 컨벤션을 물어보자 딱히 정해진 것이 없다는 답변을 들었다.</description>
     </item>
     
     <item>
@@ -23,7 +32,7 @@
       <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/work/2/</guid>
-      <description>배경 #새로 진행하고 있는 B2B 프로젝트에 글로벌 진출 기회가 생겨서 다국어 처리를 할 필요가 생겼다.</description>
+      <description>배경 # 새로 진행하고 있는 B2B 프로젝트에 글로벌 진출 기회가 생겨서 다국어 처리를 할 필요가 생겼다.</description>
     </item>
     
     <item>
@@ -32,7 +41,7 @@
       <pubDate>Sat, 05 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/work/1/</guid>
-      <description>배경 #제품 상세페이지의 제품 이미지 바로 아래에 해당 제품의 평균 별점이 보이면 좋겠다는 의견이 나와서 이를 반영하기로 했다.</description>
+      <description>배경 # 제품 상세페이지의 제품 이미지 바로 아래에 해당 제품의 평균 별점이 보이면 좋겠다는 의견이 나와서 이를 반영하기로 했다.</description>
     </item>
     
     <item>
@@ -41,7 +50,7 @@
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/etc/1/</guid>
-      <description>배경 #취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 과정에서 서브 모듈 관련 문제를 만났다.</description>
+      <description>배경 # 취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 과정에서 서브 모듈 관련 문제를 만났다.</description>
     </item>
     
     <item>
@@ -50,7 +59,7 @@
       <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/summary/git/</guid>
-      <description>1) 기본 설정 #Command Details git init 깃 추적 시작 git config --global --list 기본 설정 보기 git config --global core.</description>
+      <description>1) 기본 설정 # Command Details git init 깃 추적 시작 git config --global --list 기본 설정 보기 git config --global core.</description>
     </item>
     
     <item>
