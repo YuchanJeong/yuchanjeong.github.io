@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Sat, 05 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/sass/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/sass/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[프로젝트 초기 설정] 코드 스플리팅 &amp; SASS</title>
+      <link>https://yuchanjeong.github.io/posts/work/4/</link>
+      <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/work/4/</guid>
+      <description>코드 스플리팅 # 리액트에서 활용 가능한 여러 방식의 코드 스플리팅이 있지만 우선 회사의 다른 프로젝트에서 사용하고 있는 loadable component를 활용한 페이지(라우팅) 기반의 코드 스플리팅만 적용 했다.</description>
+    </item>
+    
     <item>
       <title>평균 별점 (소수점 반영)</title>
       <link>https://yuchanjeong.github.io/posts/work/1/</link>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>react-query on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/react-query/</link>
+    <description>Recent content in react-query on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Sun, 13 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/react-query/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[프로젝트 초기 설정] Axios Instance &amp; React Query</title>
+      <link>https://yuchanjeong.github.io/posts/work/5/</link>
+      <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/work/5/</guid>
+      <description>Axios Instance # base url 설정, 헤더에 액세스 토큰 포함, 액세스 토큰 만료 시 재발급 그리고 리프레시 토큰 만료 시 로그아웃을 axiosInstance를 통해 공통 설정으로 처리했다.</description>
+    </item>
+    
+  </channel>
+</rss>

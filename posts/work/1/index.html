@@ -451,7 +451,7 @@
 <h2 id="주의사항" class="relative group">주의사항 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%a3%bc%ec%9d%98%ec%82%ac%ed%95%ad" aria-label="Anchor">#</a></span></h2>
 <p>해당 코드를 다른 프로젝트에 적용할 때 제대로 적용되지 않는 문제가 발생했다. 문제를 해결하기 위해 개발자 모드에서 스타일을 하나하나 꺼보면서 원인을 파악했다. 원인은 문제가 발생하는 프로젝트에 전역으로 <code>text-align: center;</code> 스타일이 먹혀있는 것이었다. 이 경험 덕에 전역으로 스타일을 먹이는 것은 위험하다는 것과 svg도 <code>text-align</code>이 먹힌다는 것을 배웠다.</p>
 <h2 id="참조" class="relative group">참조 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%b0%b8%ec%a1%b0" aria-label="Anchor">#</a></span></h2>
-<p>출근 첫날 회사의 코드를 뜯어보는 과정에서 이 코드를 보고는 &ldquo;이런 식으로 sass에서 반복문을 활용하는구나&quot;를 알게 되었고 메모장에 메모해 뒀었다. (취업 전에는 styled-component와 tailwind-CSS를 주로 사용해서 sass에 대한 이해도가 상대적으로 부족했다.) 그리고 별점의 소수점을 어떻게 sass에서 반영할 수 있을까를 고민하는 과정에서 이 코드가 떠올랐고 이를 참조해서 문제를 쉽게 해결할 수 있었다.</p>
+<p>출근 첫날 회사의 코드를 살펴보는 과정에서 이 코드를 보고는 &ldquo;이런 식으로 sass에서 반복문을 활용하는구나&quot;를 알게 되었고 메모장에 메모해 뒀었다. (취업 전에는 styled-component와 tailwind-CSS를 주로 사용해서 sass에 대한 이해도가 상대적으로 부족했다.) 그리고 별점의 소수점을 어떻게 sass에서 반영할 수 있을까를 고민하는 과정에서 이 코드가 떠올랐고 이를 참조해서 문제를 쉽게 해결할 수 있었다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$spacesPx</span><span class="o">:</span> <span class="p">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">60</span><span class="o">,</span> <span class="mi">70</span><span class="o">,</span> <span class="mi">80</span><span class="o">,</span> <span class="mi">90</span><span class="o">,</span> <span class="mi">100</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$space</span> <span class="ow">in</span> <span class="nv">$spacesPx</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nc">.mt</span><span class="si">#{</span><span class="nv">$space</span><span class="si">}</span> <span class="p">{</span>
@@ -603,7 +603,7 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >다국어 처리 (react-i18next)</span
+                  >FE 컨벤션</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   

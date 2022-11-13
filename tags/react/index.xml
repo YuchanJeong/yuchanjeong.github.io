@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Mon, 07 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[프로젝트 초기 설정] 코드 스플리팅 &amp; SASS</title>
+      <link>https://yuchanjeong.github.io/posts/work/4/</link>
+      <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/work/4/</guid>
+      <description>코드 스플리팅 # 리액트에서 활용 가능한 여러 방식의 코드 스플리팅이 있지만 우선 회사의 다른 프로젝트에서 사용하고 있는 loadable component를 활용한 페이지(라우팅) 기반의 코드 스플리팅만 적용 했다.</description>
+    </item>
+    
+    <item>
+      <title>[프로젝트 초기 설정] 협업 준비</title>
+      <link>https://yuchanjeong.github.io/posts/work/3/</link>
+      <pubDate>Fri, 11 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/work/3/</guid>
+      <description>배경 # 다른 팀원들이 기존 업무로 바빴기 때문에 신규 B2B 프로젝트에 나만 우선 투입되었다.</description>
+    </item>
+    
     <item>
       <title>Custom Hooks</title>
       <link>https://yuchanjeong.github.io/posts/summary/custom-hooks/</link>
@@ -15,15 +33,6 @@
       
       <guid>https://yuchanjeong.github.io/posts/summary/custom-hooks/</guid>
       <description>useInput.</description>
-    </item>
-    
-    <item>
-      <title>다국어 처리 (react-i18next)</title>
-      <link>https://yuchanjeong.github.io/posts/work/2/</link>
-      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/posts/work/2/</guid>
-      <description>배경 # 새로 진행하고 있는 B2B 프로젝트에 글로벌 진출 기회가 생겨서 다국어 처리를 할 필요가 생겼다.</description>
     </item>
     
     <item>
