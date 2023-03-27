@@ -14,7 +14,7 @@
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/etc/1/</guid>
-      <description>배경 #취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 과정에서 서브 모듈 관련 문제를 만났다.</description>
+      <description>배경 # 취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 과정에서 서브 모듈 관련 문제를 만났다.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/summary/git/</guid>
-      <description>1) 기본 설정 #Command Details git init 깃 추적 시작 git config --global --list 기본 설정 보기 git config --global core.</description>
+      <description>1) 기본 설정 # Command Details git init 깃 추적 시작 git config --global --list 기본 설정 보기 git config --global core.</description>
     </item>
     
   </channel>

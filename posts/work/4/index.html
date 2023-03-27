@@ -15,8 +15,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>[프로젝트 초기 설정] 코드 스플리팅 & SASS &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="[프로젝트 초기 설정] 코드 스플리팅 & SASS &middot; Yuchan&#39;s hello world!" />
+  <title>[프로젝트 초기 설정] Axios Instance & React Query &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[프로젝트 초기 설정] Axios Instance & React Query &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog from a developer who loves &#39;Why?&#39; :)" />
   
@@ -36,8 +36,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.b08adc5557ec0a1142f6cb82c1a3522d7f73d24e399329243bddaa49fde40cfadc7a3a0a1eec9d9b12e4bcc44b9efd19efb20a840684b3f79e9a56886576aad4.css"
-    integrity="sha512-sIrcVVfsChFC9suCwaNSLX9z0k45kykkO92qSf3kDPrcejoKHuydmxLkvMRLnv0Z77IKhAaEs/eemlaIZXaq1A=="
+    href="/css/main.bundle.min.3552466d62941f854cc764b706ab5b2e3616325dd23313577f99ff83f095a09e436d4734656eb0ab9f588d93c251fdf636660a728c2f6ccb49697325daac8a6c.css"
+    integrity="sha512-NVJGbWKUH4VMx2S3BqtbLjYWMl3SMxNXf5n/g/CVoJ5DbUc0ZW6wq59YjZPCUf32NmYKcowvbMtJaXMl2qyKbA=="
   />
   
   
@@ -54,7 +54,7 @@
   
   
     
-    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.826a5fe6c278891cf13a6dfb6037ca860e91f5003747dba9d6252c7c6552553ff07cf6a2442897103d53a3f8804a6bcb83fe629aa23072ccccb993d082e7017b.js" integrity="sha512-gmpf5sJ4iRzxOm37YDfKhg6R9QA3R9up1iUsfGVSVT/wfPaiRCiXED1To/iASmvLg/5imqIwcszMuZPQgucBew==" data-copy="Copy" data-copied="Copied"></script>
+    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.15ae6e2c9b1ac24a9ccf40003fa689efb1a18db1ee9b73d780b01a6c31b150441415862513e93184f68fe385759e4698b8763cba6a0f79493c1fed99ad5868d4.js" integrity="sha512-Fa5uLJsawkqcz0AAP6aJ77GhjbHum3PXgLAabDGxUEQUFYYlE&#43;kxhPaP44V1nkaYuHY8umoPeUk8H&#43;2ZrVho1A==" data-copy="Copy" data-copied="Copied"></script>
   
   
   
@@ -69,17 +69,17 @@
   
   
   
-  <meta property="og:title" content="[프로젝트 초기 설정] 코드 스플리팅 &amp; SASS" />
-<meta property="og:description" content="코드 스플리팅 #리액트에서 활용 가능한 여러 방식의 코드 스플리팅이 있지만 우선 회사의 다른 프로젝트에서 사용하고 있는 loadable component를 활용한 페이지(라우팅) 기반의 코드 스플리팅만 적용 했다." />
+  <meta property="og:title" content="[프로젝트 초기 설정] Axios Instance &amp; React Query" />
+<meta property="og:description" content="Axios Instance # base url 설정, 헤더에 액세스 토큰 포함, 액세스 토큰 만료 시 재발급 그리고 리프레시 토큰 만료 시 로그아웃을 axiosInstance를 통해 공통 설정으로 처리했다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/work/4/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-11-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-11-12T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
+<meta property="article:published_time" content="2022-11-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-11-13T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[프로젝트 초기 설정] 코드 스플리팅 &amp; SASS"/>
-<meta name="twitter:description" content="코드 스플리팅 #리액트에서 활용 가능한 여러 방식의 코드 스플리팅이 있지만 우선 회사의 다른 프로젝트에서 사용하고 있는 loadable component를 활용한 페이지(라우팅) 기반의 코드 스플리팅만 적용 했다."/>
+<meta name="twitter:title" content="[프로젝트 초기 설정] Axios Instance &amp; React Query"/>
+<meta name="twitter:description" content="Axios Instance # base url 설정, 헤더에 액세스 토큰 포함, 액세스 토큰 만료 시 재발급 그리고 리프레시 토큰 만료 시 로그아웃을 axiosInstance를 통해 공통 설정으로 처리했다."/>
 
   
   <script type="application/ld+json">
@@ -87,10 +87,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "[프로젝트 초기 설정] 코드 스플리팅 \u0026 SASS",
-    "headline": "[프로젝트 초기 설정] 코드 스플리팅 \u0026 SASS",
+    "name": "[프로젝트 초기 설정] Axios Instance \u0026 React Query",
+    "headline": "[프로젝트 초기 설정] Axios Instance \u0026 React Query",
     
-    "abstract": "코드 스플리팅 #\r리액트에서 활용 가능한 여러 방식의 코드 스플리팅이 있지만 우선 회사의 다른 프로젝트에서 사용하고 있는 loadable component를 활용한 페이지(라우팅) 기반의 코드 스플리팅만 적용 했다.",
+    "abstract": "Axios Instance # base url 설정, 헤더에 액세스 토큰 포함, 액세스 토큰 만료 시 재발급 그리고 리프레시 토큰 만료 시 로그아웃을 axiosInstance를 통해 공통 설정으로 처리했다.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/posts\/work\/4\/",
     "author" : {
@@ -98,15 +98,15 @@
       "name": "Yuchan"
     },
     "copyrightYear": "2022",
-    "dateCreated": "2022-11-12T00:00:00\u002b00:00",
-    "datePublished": "2022-11-12T00:00:00\u002b00:00",
+    "dateCreated": "2022-11-13T00:00:00\u002b00:00",
+    "datePublished": "2022-11-13T00:00:00\u002b00:00",
     
-    "dateModified": "2022-11-12T00:00:00\u002b00:00",
+    "dateModified": "2022-11-13T00:00:00\u002b00:00",
     
-    "keywords": ["react","sass"],
+    "keywords": ["react","axios","react-query"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "539"
+    "wordCount": "566"
   }]
   </script>
 
@@ -140,20 +140,20 @@
   
 </head>
 <body
-    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
   >
     <div id="the-top" class="absolute flex self-center">
       <a
-        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 dark:bg-neutral-600 focus:translate-y-0"
         href="#main-content"
-        ><span class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400"
+        ><span class="font-bold ltr:pr-2 rtl:pl-2 text-primary-600 dark:text-primary-400"
           >&darr;</span
         >Skip to main content</a
       >
     </div>
     
     
-      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral print:hidden sm:py-10">
+      <header class="py-6 font-semibold sm:py-10 text-neutral-900 dark:text-neutral print:hidden">
   <nav class="flex justify-between">
     
     <div>
@@ -231,7 +231,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        [프로젝트 초기 설정] 코드 스플리팅 & SASS
+        [프로젝트 초기 설정] Axios Instance & React Query
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -264,7 +264,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2022-11-12 00:00:00 &#43;0000 UTC">12 November 2022</time>
+      <time datetime="2022-11-13 00:00:00 &#43;0000 UTC">13 November 2022</time>
     
 
     
@@ -279,7 +279,7 @@
           
             <a
               href="/categories/work/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
               >&lt;work&gt;</a
             >
           
@@ -289,14 +289,20 @@
           
             <a
               href="/tags/react/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
               >react</a
             >
           
             <a
-              href="/tags/sass/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >sass</a
+              href="/tags/axios/"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >axios</a
+            >
+          
+            <a
+              href="/tags/react-query/"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >react-query</a
             >
           
         
@@ -307,23 +313,23 @@
 
       </div>
     </header>
-    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       
-        <div class="order-first px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
-          <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
-            <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5">
+        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10 print:hidden">
+            <details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5">
   <summary
-    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+    class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700"
   >
     Table of Contents
   </summary>
   <div
-    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600"
+    class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600"
   >
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#코드-스플리팅">코드 스플리팅</a></li>
-    <li><a href="#sassscss">SASS(SCSS)</a></li>
+    <li><a href="#axios-instance">Axios Instance</a></li>
+    <li><a href="#react-query">React Query</a></li>
   </ul>
 </nav>
   </div>
@@ -333,273 +339,229 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <h2 id="코드-스플리팅" class="relative group">코드 스플리팅 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%bd%94%eb%93%9c-%ec%8a%a4%ed%94%8c%eb%a6%ac%ed%8c%85" aria-label="Anchor">#</a></span></h2>
-<p>리액트에서 활용 가능한 여러 방식의 코드 스플리팅이 있지만 우선 회사의 다른 프로젝트에서 사용하고 있는 <code>loadable component</code>를 활용한 페이지(라우팅) 기반의 코드 스플리팅만 적용 했다.</p>
-<ol>
-<li>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn add @loadable/component @types/loadable__component
-</span></span></code></pre></div></li>
-<li>
-<p>App.tsx</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"> <span class="kr">import</span> <span class="nx">loadable</span> <span class="kr">from</span> <span class="s2">&#34;@loadable/component&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">...</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="kr">const</span> <span class="nx">ExamplePage</span> <span class="o">=</span> <span class="nx">loadable</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="s2">&#34;pages/ExamplePage&#34;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"> <span class="p">...</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="kd">function</span> <span class="nx">App() {</span>
-</span></span><span class="line"><span class="cl">   <span class="k">return</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">     <span class="p">&lt;</span><span class="nt">Router</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">       <span class="p">&lt;</span><span class="nt">Routes</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">         <span class="p">&lt;</span><span class="nt">Route</span> <span class="na">path</span><span class="o">=</span><span class="s">&#34;/example&#34;</span> <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">ExamplePage</span> <span class="p">/&gt;}</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">         <span class="p">...</span>
-</span></span><span class="line"><span class="cl">         <span class="p">&lt;</span><span class="nt">Route</span> <span class="na">path</span><span class="o">=</span><span class="s">&#34;*&#34;</span> <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">NotFound</span> <span class="p">/&gt;}</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">       <span class="p">&lt;/</span><span class="nt">Routes</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">     <span class="p">&lt;/</span><span class="nt">Router</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">   <span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
-</span></span></code></pre></div></li>
-</ol>
-<h2 id="sassscss" class="relative group">SASS(SCSS) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sassscss" aria-label="Anchor">#</a></span></h2>
-<p>main.scss</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// ========== 1. reset =========== //
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;reset&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// ========== 2. constants =========== //
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;constants/colors&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;constants/fonts&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// ========== 3. basic =========== //
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;basic&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// ========== 4. mixins =========== //
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;mixins/flexBox&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;mixins/font&#34;</span><span class="p">;</span>
+        <h2 id="axios-instance" class="relative group">Axios Instance <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#axios-instance" aria-label="Anchor">#</a></span></h2>
+<p>base url 설정, 헤더에 액세스 토큰 포함, 액세스 토큰 만료 시 재발급 그리고 리프레시 토큰 만료 시 로그아웃을 <code>axiosInstance</code>를 통해 공통 설정으로 처리했다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn add axios
 </span></span></code></pre></div><details>
-<summary>_reset.scss</summary>
+<summary>axiosInstance.ts</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="o">*</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">font</span><span class="o">:</span> <span class="ni">inherit</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="ni">inherit</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">*,</span>
-</span></span><span class="line"><span class="cl"><span class="nd">:after</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nd">:before</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">box-sizing</span><span class="o">:</span> <span class="ni">border-box</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">flex-shrink</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">-moz-tab-size</span><span class="o">:</span> <span class="mi">4</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">tab-size</span><span class="o">:</span> <span class="mi">4</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="ni">default</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// 모바일에서 꾹 클릭 시 색상 변경 방지
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="ni">transparent</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// 내용 선택 방지
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">-webkit-touch-callout</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">-webkit-user-select</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">-ms-user-select</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">user-select</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// 모바일에서 폰트 크기 조정 방지
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">-webkit-text-size-adjust</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">-moz-text-size-adjust</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">text-size-adjust</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// 글이 상자 벗어나는 거 방지
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">overflow-wrap</span><span class="o">:</span> <span class="ni">break-word</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">word-break</span><span class="o">:</span> <span class="ni">break-all</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// 폰트 랜더링 부드럽게 만들기
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">-moz-osx-font-smoothing</span><span class="o">:</span> <span class="ni">grayscale</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">-webkit-font-smoothing</span><span class="o">:</span> <span class="n">antialiased</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="nt">html</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// 최상위 부모 요소 기본 크기 설정
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">62</span><span class="mf">.5</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// 1rem === 10px
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">font-weight</span><span class="o">:</span> <span class="mi">400</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">font-style</span><span class="o">:</span> <span class="ni">normal</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="nt">img</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">picture</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">video</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">canvas</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">svg</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// 위치값을 가지고 상자 벗어나는거 방지
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">display</span><span class="o">:</span> <span class="ni">block</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">max-width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//# Chrome 자동 완성 배경색 지우기
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">input</span><span class="nd">:-webkit-autofill</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">30</span><span class="kt">px</span> <span class="ni">transparent</span> <span class="ni">inset</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="na">input</span><span class="o">:-</span><span class="n">webkit-autofill</span><span class="o">,</span><span class="na">
-</span></span></span><span class="line"><span class="cl"><span class="na">input</span><span class="o">:-</span><span class="na">webkit-autofill</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span><span class="na">
-</span></span></span><span class="line"><span class="cl"><span class="na">input</span><span class="o">:-</span><span class="na">webkit-autofill</span><span class="o">:</span><span class="ni">focus</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="n">input</span><span class="o">:-</span><span class="n">webkit-autofill</span><span class="o">:</span><span class="n">active</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">transition</span><span class="o">:</span> <span class="n">background-color</span> <span class="mi">5000</span><span class="kt">s</span> <span class="ni">ease-in-out</span> <span class="mi">0</span><span class="kt">s</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//# 선택 및 입력 스타일 초기화
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">button</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">input</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">select</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="ni">transparent</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">border</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">&amp;</span><span class="o">:</span><span class="ni">focus</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="o">&amp;:</span><span class="n">active</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="na">outline</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="na">box-shadow</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">axios</span> <span class="kr">from</span> <span class="s2">&#34;axios&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAccessToken</span><span class="p">,</span> <span class="nx">logout</span><span class="p">,</span> <span class="nx">TOKEN_INFO</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;modules/account/apis&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">AxiosRequestConfig</span><span class="p">,</span> <span class="nx">AxiosResponse</span><span class="p">,</span> <span class="nx">AxiosError</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;axios&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ===== Setting ===== //
+</span></span></span><span class="line"><span class="cl"><span class="c1">//# Set URL
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">config</span>: <span class="kt">AxiosRequestConfig</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">baseURL</span><span class="o">:</span> <span class="sb">`https://</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_BRANCH</span><span class="si">}</span><span class="sb">.becon-api.com`</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">axiosInstance</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//# Set Authorization
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">setAxiosHeader</span> <span class="o">=</span> <span class="p">(</span><span class="nx">accessToken</span>: <span class="kt">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">common</span><span class="p">.</span><span class="nx">Authorization</span> <span class="o">=</span> <span class="sb">`Bearer </span><span class="si">${</span><span class="nx">accessToken</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ===== Preprocessing ===== //
+</span></span></span><span class="line"><span class="cl"><span class="c1">//# Fulfilled Response (200번대 응답)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">onFulfilled</span> <span class="o">=</span> <span class="p">(</span><span class="nx">res</span>: <span class="kt">AxiosResponse</span><span class="p">)</span><span class="o">:</span> <span class="nx">AxiosResponse</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//# Rejected Response (200번대 외 응답)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">onRejected</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">err</span>: <span class="kt">AxiosError</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">AxiosResponse</span><span class="p">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">{</span> <span class="nx">config</span><span class="p">,</span> <span class="nx">response</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">err</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">config</span><span class="p">)</span> <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="c1">// [edge-case] 요청의 설정이 없을 시
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//## Access Token 만료 시
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="o">?</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">401</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">tokenInfoStr</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">TOKEN_INFO</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">tokenInfoStr</span><span class="p">)</span> <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="c1">// [edge-case] Local Storage에 정보가 없을 시
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">tokenInfo</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">accessToken</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">refreshToken</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">tokenInfoStr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 0. Refresh Token으로 새로운 Access Token 획득
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kr">const</span> <span class="nx">newAccessToken</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getAccessToken</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">refreshToken</span>: <span class="kt">tokenInfo.refreshToken</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="c1">// 1. 권한 부여 헤더의 Access Token 교체
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">setAxiosHeader</span><span class="p">(</span><span class="nx">newAccessToken</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="c1">// 2. Local Storage의 Access Token 교체
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">TOKEN_INFO</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">          <span class="p">...</span><span class="nx">tokenInfo</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">accessToken</span>: <span class="kt">newAccessToken</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">      <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="c1">// 3. 현재 요청의 Access Token 교체
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">config</span><span class="p">.</span><span class="nx">headers</span><span class="p">)</span> <span class="nx">config</span><span class="p">.</span><span class="nx">headers</span> <span class="o">=</span> <span class="p">{};</span> <span class="c1">// [edge-case] 요청에 헤더가 없을 시
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">      <span class="nx">config</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">Authorization</span> <span class="o">=</span> <span class="sb">`Bearer </span><span class="si">${</span><span class="nx">newAccessToken</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">axiosInstance</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span>: <span class="kt">unknown</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// [edge-case] Refresh Token 만료 시
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">logout</span><span class="p">({</span> <span class="nx">isExpired</span>: <span class="kt">true</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="nt">textarea</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">&amp;</span><span class="o">:</span><span class="ni">focus</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="o">&amp;:</span><span class="n">active</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="na">box-shadow</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="na">outline</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//# 입력 대상 커서 텍스트로 변경
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">input</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">textarea</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="ni">text</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//#  선택 대상 커서 포인터로 변경
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">button</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">select</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&#34;checkbox&#34;</span><span class="o">],</span>
-</span></span><span class="line"><span class="cl"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&#34;radio&#34;</span><span class="o">],</span>
-</span></span><span class="line"><span class="cl"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&#34;range&#34;</span><span class="o">],</span>
-</span></span><span class="line"><span class="cl"><span class="nt">label</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="ni">pointer</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//# 링크 스타일 초기화 및 커서 포인터로 변경
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">a</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">text-decoration</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="ni">pointer</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//# 표 스타일 초기와
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">table</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">border-collapse</span><span class="o">:</span> <span class="ni">collapse</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">border-spacing</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//# 목록 스타일 초기화
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">ul</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">ol</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">padding-left</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">list-style</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">onFulfilled</span><span class="p">,</span> <span class="nx">onRejected</span><span class="p">);</span>
 </span></span></code></pre></div></div>
 </details>
 <details>
-<summary>_basic.scss</summary>
+<summary>account/apis/index.ts</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">font-family</span><span class="o">:</span> <span class="nv">$font-main</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.6</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nv">$color-primary-black</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="nv">$color-gray-light-2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">ID</span> <span class="o">=</span> <span class="s2">&#34;withbecon_id&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">TOKEN_INFO</span> <span class="o">=</span> <span class="s2">&#34;withbecon_token_info&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">EXPIRED</span> <span class="o">=</span> <span class="s2">&#34;withbecon_expired&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">INVALID</span> <span class="o">=</span> <span class="s2">&#34;withbecon_invalid&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** 이메일 로그인 */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">emailLogin</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">email</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">password</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">email</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">password</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">post</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">result</span>: <span class="kt">TLogin</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&#34;/account/auth&#34;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">email</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">password</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">tokenInfo</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">accessToken</span>: <span class="kt">res.data.result.access_token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">refreshToken</span>: <span class="kt">res.data.result.refresh_token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setAxiosHeader</span><span class="p">(</span><span class="nx">tokenInfo</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">ID</span><span class="p">,</span> <span class="nx">email</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">TOKEN_INFO</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">tokenInfo</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** 휴대폰번호 로그인 */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">phoneNumberLogin</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">phone_number</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">password</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">phone_number</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">password</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">post</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">result</span>: <span class="kt">TLogin</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;/account/auth/phone&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">phone_number</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">password</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">tokenInfo</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">accessToken</span>: <span class="kt">res.data.result.access_token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">refreshToken</span>: <span class="kt">res.data.result.refresh_token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setAxiosHeader</span><span class="p">(</span><span class="nx">tokenInfo</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">ID</span><span class="p">,</span> <span class="nx">phone_number</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">TOKEN_INFO</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">tokenInfo</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** 로그아웃 (query X) */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">logout</span> <span class="o">=</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isExpired</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isInvalid</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isExpired?</span>: <span class="kt">boolean</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isInvalid?</span>: <span class="kt">boolean</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="o">=</span> <span class="p">{})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">isExpired</span><span class="p">)</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">EXPIRED</span><span class="p">,</span> <span class="nx">EXPIRED</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">isInvalid</span><span class="p">)</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">INVALID</span><span class="p">,</span> <span class="nx">INVALID</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="nx">TOKEN_INFO</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">origin</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** 엑세스 토큰 조회 (query X) */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">getAccessToken</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">refreshToken</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">refreshToken</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">post</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">access_token</span>: <span class="kt">string</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;account/auth/refresh&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">refresh_token</span>: <span class="kt">refreshToken</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">access_token</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** 어카운트 정보 조회 */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">getAccount</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="kr">get</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">account</span>: <span class="kt">TAccount</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&#34;my/account&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">account</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div></div>
 </details>
-<details>
-<summary>constants/_colors.scss</summary>
+<h2 id="react-query" class="relative group">React Query <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#react-query" aria-label="Anchor">#</a></span></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn add @tanstack/react-query @tanstack/react-query-devtools
+</span></span></code></pre></div><details>
+<summary>index.tsx</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">//# primary color
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$color-primary-purple</span><span class="o">:</span> <span class="mh">#6435c7</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-primary-black</span><span class="o">:</span> <span class="mh">#000000</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-primary-purple-dark</span><span class="o">:</span> <span class="mh">#351083</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-primary-lavender</span><span class="o">:</span> <span class="mh">#eeedef</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-primary-light</span><span class="o">:</span> <span class="mh">#f4eeff</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//# secondary color
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$color-secondary-yellow</span><span class="o">:</span> <span class="mh">#ffa500</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-secondary-orange</span><span class="o">:</span> <span class="mh">#fd5e02</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-secondary-red</span><span class="o">:</span> <span class="mh">#ff0000</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-secondary-light</span><span class="o">:</span> <span class="mh">#fbece4</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">//# gray color
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$color-gray-dark-gray-deep</span><span class="o">:</span> <span class="mh">#3d3d3d</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-gray-dark-gray</span><span class="o">:</span> <span class="mh">#727272</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-gray-medium-gray</span><span class="o">:</span> <span class="mh">#939393</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-gray-original</span><span class="o">:</span> <span class="mh">#afafaf</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-gray-light</span><span class="o">:</span> <span class="mh">#cecece</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-gray-light-2</span><span class="o">:</span> <span class="mh">#f8f8f8</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$color-gray-white</span><span class="o">:</span> <span class="mh">#ffffff</span><span class="p">;</span>
-</span></span></code></pre></div></div>
-</details>
-<details>
-<summary>constants/_fonts.scss</summary>
-<div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$font-main</span><span class="o">:</span> <span class="s2">&#34;Noto Sans KR&#34;</span><span class="o">,</span> <span class="ni">sans-serif</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$font-sub</span><span class="o">:</span> <span class="s2">&#34;S-Core Dream-4&#34;</span><span class="o">,</span> <span class="ni">sans-serif</span><span class="p">;</span>
-</span></span></code></pre></div></div>
-</details>
-<details>
-<summary>mixins/_flexBox.scss</summary>
-<div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$flex-position-map</span><span class="o">:</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="na">start</span><span class="o">:</span> <span class="ni">flex-start</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">end</span><span class="o">:</span> <span class="ni">flex-end</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">between</span><span class="o">:</span> <span class="ni">space-between</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">around</span><span class="o">:</span> <span class="ni">space-around</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">stretch</span><span class="o">:</span> <span class="ni">stretch</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">center</span><span class="o">:</span> <span class="ni">center</span><span class="o">,</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;root&#34;</span><span class="p">)</span> <span class="kr">as</span> <span class="nx">HTMLElement</span>
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> flex-box-j-a-g</span><span class="p">(</span><span class="nv">$justify-content</span><span class="o">:</span> <span class="ni">center</span><span class="o">,</span> <span class="nv">$align-items</span><span class="o">:</span> <span class="ni">center</span><span class="o">,</span> <span class="nv">$gap</span><span class="o">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">display</span><span class="o">:</span> <span class="ni">flex</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">justify-content</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$flex-position-map</span><span class="o">,</span> <span class="nv">$justify-content</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="na">align-items</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$flex-position-map</span><span class="o">,</span> <span class="nv">$align-items</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="na">gap</span><span class="o">:</span> <span class="nv">$gap</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">@content</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> flex-box-column-j-a-g</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">$justify-content</span><span class="o">:</span> <span class="ni">center</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">$align-items</span><span class="o">:</span> <span class="ni">center</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">$gap</span><span class="o">:</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">display</span><span class="o">:</span> <span class="ni">flex</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">flex-direction</span><span class="o">:</span> <span class="ni">column</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">justify-content</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$flex-position-map</span><span class="o">,</span> <span class="nv">$justify-content</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="na">align-items</span><span class="o">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$flex-position-map</span><span class="o">,</span> <span class="nv">$align-items</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="na">gap</span><span class="o">:</span> <span class="nv">$gap</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">@content</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">QueryClientProvider</span> <span class="na">client</span><span class="o">=</span><span class="p">{</span><span class="nx">queryClient</span><span class="p">}&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">App</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ReactQueryDevtools</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">QueryClientProvider</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span></code></pre></div></div>
 </details>
 <details>
-<summary>mixins/_font.scss</summary>
+<summary>queryClient.tsx</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> font-size-color-weight-style</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">$size</span><span class="o">:</span> <span class="ni">inherit</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">$color</span><span class="o">:</span> <span class="ni">inherit</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">$weight</span><span class="o">:</span> <span class="mi">400</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">$style</span><span class="o">:</span> <span class="ni">normal</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">font-size</span><span class="o">:</span> <span class="nv">$size</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">font-weight</span><span class="o">:</span> <span class="nv">$weight</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">font-style</span><span class="o">:</span> <span class="nv">$style</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">@content</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">generateQueryClient</span> <span class="o">=</span> <span class="p">()</span><span class="o">:</span> <span class="nx">QueryClient</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nx">QueryClient</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">defaultOptions</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">queries</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">suspense</span>: <span class="kt">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">refetchOnWindowFocus</span>: <span class="kt">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">retry</span>: <span class="kt">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">onError</span>: <span class="kt">queryErrorHandler</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">mutations</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">onError</span>: <span class="kt">queryErrorHandler</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">queryClient</span> <span class="o">=</span> <span class="nx">generateQueryClient</span><span class="p">();</span>
 </span></span></code></pre></div></div>
 </details>
-<p>*<em>_(underscore)를 scss 파일 이름 앞에 붙일 경우 부분 파일로 취급해서 작업 시점에는 모듈화되어 있지만 실제로 사용되는 시점에는 <code>main.scss</code> 파일 하나에 작성된다.</em></p>
-<hr>
-<p>Reference.</p>
-<ul>
-<li>코드 스플리팅
-<ul>
-<li><a href="https://velog.io/@velopert/react-code-splitting">https://velog.io/@velopert/react-code-splitting</a></li>
-</ul>
-</li>
-<li>SCSS
-<ul>
-<li><a href="https://www.joshwcomeau.com/css/custom-css-reset/">https://www.joshwcomeau.com/css/custom-css-reset/</a></li>
-<li><a href="https://velog.io/@teo/2022-CSS-Reset-%EB%8B%A4%EC%8B%9C-%EC%8D%A8%EB%B3%B4%EA%B8%B0">2022 CSS Reset 다시 써보기!</a></li>
-<li><a href="https://fresh-mint.tistory.com/entry/css-%EB%93%9C%EB%9E%98%EA%B7%B8-%EB%B0%A9%EC%A7%80">[css-real] 드래그(drag) 막기</a></li>
-</ul>
-</li>
-</ul>
+<details>
+<summary>queryErrorHandler.ts</summary>
+<div markdown="1">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">queryErrorHandler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">err</span>: <span class="kt">unknown</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">alert</span><span class="p">(</span><span class="sb">`withbecon server error -&gt; </span><span class="si">${</span><span class="nx">err</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">origin</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">queryErrorHandler</span><span class="p">;</span>
+</span></span></code></pre></div></div>
+</details>
 
       </div>
     </section>
@@ -611,7 +573,7 @@
       
         
         <img
-          class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4"
+          class="w-24 h-24 !mt-0 !mb-0 ltr:mr-4 rtl:ml-4 rounded-full"
           width="96"
           height="96"
           alt="Yuchan"
@@ -621,7 +583,7 @@
     
     <div class="place-self-center">
       
-        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        <div class="text-[0.6rem] leading-3 text-neutral-500 dark:text-neutral-400 uppercase">
           Author
         </div>
         <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
@@ -709,21 +671,21 @@
           
             <a class="flex group" href="/posts/work/3/">
               <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&larr;</span
               >
               <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                class="ml-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&rarr;</span
               >
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >[프로젝트 초기 설정] 협업 준비</span
+                  >[프로젝트 초기 설정] 코드 스플리팅 & SASS</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2022-11-11 00:00:00 &#43;0000 UTC">11 November 2022</time>
+                    <time datetime="2022-11-12 00:00:00 &#43;0000 UTC">12 November 2022</time>
                   
                 </span>
               </span>
@@ -736,20 +698,20 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >[프로젝트 초기 설정] Axios Instance & React Query</span
+                  >다국어 처리 (react-i18next)</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2022-11-13 00:00:00 &#43;0000 UTC">13 November 2022</time>
+                    <time datetime="2022-11-14 00:00:00 &#43;0000 UTC">14 November 2022</time>
                   
                 </span>
               </span>
               <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&rarr;</span
               >
               <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&larr;</span
               >
             </a>
@@ -801,11 +763,11 @@ s.setAttribute('data-timestamp', +new Date());
 
         
           <div
-            class="pointer-events-none absolute top-[100vh] bottom-0 w-12 ltr:right-0 rtl:left-0"
+            class="absolute top-[100vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
           >
             <a
               href="#the-top"
-              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5.5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
               aria-label="Scroll to top"
               title="Scroll to top"
             >
@@ -837,35 +799,30 @@ s.setAttribute('data-timestamp', +new Date());
     
     
       <div
-        class="ltr:mr-14 rtl:ml-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-14 rtl:ml-14"
       >
-        <button id="appearance-switcher" type="button">
-          <div
-            class="flex items-center justify-center w-12 h-12 dark:hidden"
-            title="Switch to dark appearance"
-          >
-            
+        <button
+          id="appearance-switcher"
+          class="w-12 h-12 "
+          type="button"
+          title="Switch to dark appearance"
+        >
+          <span class="inline dark:hidden">
 
   <span class="relative inline-block align-text-bottom icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
 
   </span>
 
-
-          </div>
-          <div
-            class="items-center justify-center hidden w-12 h-12 dark:flex"
-            title="Switch to light appearance"
-          >
-            
+</span>
+          <span class="hidden dark:inline">
 
   <span class="relative inline-block align-text-bottom icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
 
   </span>
 
-
-          </div>
+</span>
         </button>
       </div>
     
@@ -875,12 +832,12 @@ s.setAttribute('data-timestamp', +new Date());
 </footer>
 <div
   id="search-wrapper"
-  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  class="fixed inset-0 z-50 flex flex-col p-4 sm:p-6 md:p-[10vh] lg:p-[12vh] w-screen h-screen cursor-default bg-neutral-500/50 backdrop-blur-sm dark:bg-neutral-900/50 invisible"
   data-url="https://yuchanjeong.github.io/"
 >
   <div
     id="search-modal"
-    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg border-neutral-200 top-20 bg-neutral dark:bg-neutral-800 dark:border-neutral-700"
   >
     <header class="relative z-10 flex items-center justify-between flex-none px-2">
       <form class="flex items-center flex-auto min-w-0">
@@ -897,14 +854,14 @@ s.setAttribute('data-timestamp', +new Date());
         <input
           type="search"
           id="search-query"
-          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-transparent focus:outline-2"
           placeholder="Search"
           tabindex="0"
         />
       </form>
       <button
         id="close-search-button"
-        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
         title="Close (Esc)"
       >
         

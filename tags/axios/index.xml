@@ -10,11 +10,11 @@
     <lastBuildDate>Sun, 13 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/axios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[프로젝트 초기 설정] Axios Instance &amp; React Query</title>
-      <link>https://yuchanjeong.github.io/posts/work/5/</link>
+      <link>https://yuchanjeong.github.io/posts/work/4/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/work/5/</guid>
-      <description>Axios Instance #base url 설정, 헤더에 액세스 토큰 포함, 액세스 토큰 만료 시 재발급 그리고 리프레시 토큰 만료 시 로그아웃을 axiosInstance를 통해 공통 설정으로 처리했다.</description>
+      <guid>https://yuchanjeong.github.io/posts/work/4/</guid>
+      <description>Axios Instance # base url 설정, 헤더에 액세스 토큰 포함, 액세스 토큰 만료 시 재발급 그리고 리프레시 토큰 만료 시 로그아웃을 axiosInstance를 통해 공통 설정으로 처리했다.</description>
     </item>
     
   </channel>
