@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Mon, 14 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>node.js</title>
+      <link>https://yuchanjeong.github.io/tags/node.js/</link>
+      <pubDate>Thu, 30 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/node.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node.js 교과서</title>
+      <link>https://yuchanjeong.github.io/tags/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/</link>
+      <pubDate>Thu, 30 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>조현영(zerocho)</title>
+      <link>https://yuchanjeong.github.io/tags/%EC%A1%B0%ED%98%84%EC%98%81zerocho/</link>
+      <pubDate>Thu, 30 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/%EC%A1%B0%ED%98%84%EC%98%81zerocho/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>i18n</title>
       <link>https://yuchanjeong.github.io/tags/i18n/</link>
@@ -122,6 +149,24 @@
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>개발자의 글쓰기</title>
+      <link>https://yuchanjeong.github.io/tags/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EA%B8%80%EC%93%B0%EA%B8%B0/</link>
+      <pubDate>Sat, 29 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EA%B8%80%EC%93%B0%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>김철수</title>
+      <link>https://yuchanjeong.github.io/tags/%EA%B9%80%EC%B2%A0%EC%88%98/</link>
+      <pubDate>Sat, 29 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/%EA%B9%80%EC%B2%A0%EC%88%98/</guid>
       <description></description>
     </item>
     

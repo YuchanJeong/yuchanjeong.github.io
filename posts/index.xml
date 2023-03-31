@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Mon, 14 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Node.js 교과서]</title>
+      <link>https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/1/</link>
+      <pubDate>Thu, 30 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/1/</guid>
+      <description>1장 Node.</description>
+    </item>
+    
     <item>
       <title>다국어 처리 (react-i18next)</title>
       <link>https://yuchanjeong.github.io/posts/work/5/</link>
@@ -64,19 +73,19 @@
     
     <item>
       <title>Git</title>
-      <link>https://yuchanjeong.github.io/posts/summary/git/</link>
+      <link>https://yuchanjeong.github.io/posts/summaries/git/</link>
       <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/summary/git/</guid>
-      <description>1) 기본 설정 # Command Details git init 깃 추적 시작 git config --global --list 기본 설정 보기 git config --global core.</description>
+      <guid>https://yuchanjeong.github.io/posts/summaries/git/</guid>
+      <description>1) 기본 설정 #    Command Details     git init 깃 추적 시작   git config --global --list 기본 설정 보기   git config --global core.</description>
     </item>
     
     <item>
       <title>개발자의 글쓰기 - 김철수</title>
-      <link>https://yuchanjeong.github.io/posts/book/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EA%B8%80%EC%93%B0%EA%B8%B0/</link>
+      <link>https://yuchanjeong.github.io/posts/books/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EA%B8%80%EC%93%B0%EA%B8%B0/</link>
       <pubDate>Sat, 29 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/posts/book/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EA%B8%80%EC%93%B0%EA%B8%B0/</guid>
+      <guid>https://yuchanjeong.github.io/posts/books/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EA%B8%80%EC%93%B0%EA%B8%B0/</guid>
       <description>개발자의 글쓰기는 &amp;lsquo;정확&amp;rsquo;하고 &amp;lsquo;간결&amp;rsquo;하고 &amp;lsquo;가독성&amp;rsquo;이 높아야 한다.</description>
     </item>
     

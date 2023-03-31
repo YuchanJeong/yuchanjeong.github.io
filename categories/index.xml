@@ -7,40 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Mon, 14 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>&lt;work&gt;</title>
-      <link>https://yuchanjeong.github.io/categories/work/</link>
+      <title>\lectures</title>
+      <link>https://yuchanjeong.github.io/categories/%5Clectures/</link>
+      <pubDate>Thu, 30 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/categories/%5Clectures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>\work</title>
+      <link>https://yuchanjeong.github.io/categories/%5Cwork/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/categories/work/</guid>
+      <guid>https://yuchanjeong.github.io/categories/%5Cwork/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>&lt;etc&gt;</title>
-      <link>https://yuchanjeong.github.io/categories/etc/</link>
+      <title>\etc</title>
+      <link>https://yuchanjeong.github.io/categories/%5Cetc/</link>
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/categories/etc/</guid>
+      <guid>https://yuchanjeong.github.io/categories/%5Cetc/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>&lt;summary&gt;</title>
-      <link>https://yuchanjeong.github.io/categories/summary/</link>
+      <title>\summaries</title>
+      <link>https://yuchanjeong.github.io/categories/%5Csummaries/</link>
       <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/categories/summary/</guid>
+      <guid>https://yuchanjeong.github.io/categories/%5Csummaries/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>&lt;book&gt;</title>
-      <link>https://yuchanjeong.github.io/categories/book/</link>
+      <title>\books</title>
+      <link>https://yuchanjeong.github.io/categories/%5Cbooks/</link>
       <pubDate>Sat, 29 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yuchanjeong.github.io/categories/book/</guid>
+      <guid>https://yuchanjeong.github.io/categories/%5Cbooks/</guid>
       <description></description>
     </item>
     
