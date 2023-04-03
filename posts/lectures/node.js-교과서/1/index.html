@@ -41,7 +41,7 @@
   />
   
   
-  <script type="text/javascript" src="/js/appearance.min.4df8309499991be53c71b2b39ba0f5d5e77ea7d411d0710ce48c24218e7cc24ded28f19e85838fdc56db2306195cb001f049f577be0cf0ffb2dd6e2037ede1b9.js" integrity="sha512-TfgwlJmZG&#43;U8cbKzm6D11ed&#43;p9QR0HEM5IwkIY58wk3tKPGehYOP3FbbIwYZXLAB8En1d74M8P&#43;y3W4gN&#43;3huQ=="></script>
+  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
   
     
     
@@ -54,7 +54,7 @@
   
   
     
-    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.bbbc21fe00162ca986299c3aa2587e88662408cef57709874b7c316048a5ff80b7e342fc03812cff1393cb2be2ce65593299494d88df71ec6eb48ee261fc0fd6.js" integrity="sha512-u7wh/gAWLKmGKZw6olh&#43;iGYkCM71dwmHS3wxYEil/4C340L8A4Es/xOTyyvizmVZMplJTYjfcexutI7iYfwP1g==" data-copy="Copy" data-copied="Copied"></script>
+    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.15ae6e2c9b1ac24a9ccf40003fa689efb1a18db1ee9b73d780b01a6c31b150441415862513e93184f68fe385759e4698b8763cba6a0f79493c1fed99ad5868d4.js" integrity="sha512-Fa5uLJsawkqcz0AAP6aJ77GhjbHum3PXgLAabDGxUEQUFYYlE&#43;kxhPaP44V1nkaYuHY8umoPeUk8H&#43;2ZrVho1A==" data-copy="Copy" data-copied="Copied"></script>
   
   
   
@@ -70,7 +70,7 @@
   
   
   <meta property="og:title" content="[Node.js 교과서]" />
-<meta property="og:description" content="1장 Node." />
+<meta property="og:description" content="제 1장." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/1/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-03-30T00:00:00+00:00" />
@@ -79,7 +79,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Node.js 교과서]"/>
-<meta name="twitter:description" content="1장 Node."/>
+<meta name="twitter:description" content="제 1장."/>
 
   
   <script type="application/ld+json">
@@ -90,7 +90,7 @@
     "name": "[Node.js 교과서]",
     "headline": "[Node.js 교과서]",
     
-    "abstract": "1장 Node.",
+    "abstract": "제 1장.",
     "inLanguage": "en",
     "url" : "https:\/\/yuchanjeong.github.io\/posts\/lectures\/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C\/1\/",
     "author" : {
@@ -106,7 +106,7 @@
     "keywords": ["node.js","Node.js 교과서","조현영(zerocho)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "319"
+    "wordCount": "729"
   }]
   </script>
 
@@ -328,11 +328,18 @@
   >
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1장-nodejs란">1장 Node.js란</a>
+    <li><a href="#제-1장-nodejs란">제 1장. Node.js란</a>
       <ul>
-        <li><a href="#1-nodejs의-정의">1. Node.js의 정의</a></li>
-        <li><a href="#2-nodejs의-특성">2. Node.js의 특성</a></li>
-        <li><a href="#3-nodejs로-만든-서버">3. Node.js로 만든 서버</a></li>
+        <li><a href="#1-노드의-정의">1) 노드의 정의</a></li>
+        <li><a href="#2-노드의-특성">2) 노드의 특성</a></li>
+        <li><a href="#3-노드로-만든-서버">3) 노드로 만든 서버</a></li>
+      </ul>
+    </li>
+    <li><a href="#제-2장-javascript-기본">제 2장. Javascript 기본</a>
+      <ul>
+        <li><a href="#1-콜-스택과-이벤트-루프">1) 콜 스택과 이벤트 루프</a></li>
+        <li><a href="#2-js-기본-문법">2) JS 기본 문법</a></li>
+        <li><a href="#3-템플릿-문자열-객체-리터럴">3) 템플릿 문자열, 객체 리터럴</a></li>
       </ul>
     </li>
     <li><a href="#부록">부록</a>
@@ -350,15 +357,16 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <h2 id="1장-nodejs란" class="relative group">1장 Node.js란 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1%ec%9e%a5-nodejs%eb%9e%80" aria-label="Anchor">#</a></span></h2>
-<h3 id="1-nodejs의-정의" class="relative group">1. Node.js의 정의 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-nodejs%ec%9d%98-%ec%a0%95%ec%9d%98" aria-label="Anchor">#</a></span></h3>
+        <h2 id="제-1장-nodejs란" class="relative group">제 1장. Node.js란 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%a0%9c-1%ec%9e%a5-nodejs%eb%9e%80" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-노드의-정의" class="relative group">1) 노드의 정의 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%eb%85%b8%eb%93%9c%ec%9d%98-%ec%a0%95%ec%9d%98" aria-label="Anchor">#</a></span></h3>
 <ul>
 <li><code>Chrome V8 엔진</code><sup>[1]</sup>으로 빌드된 자바스크립트 <code>런타임 환경</code><sup>[2]</sup></li>
-<li><code>libuv</code>(이벤트 기반의 비동기 I/O 라이브러리)를 내장</li>
+<li><code>libuv</code><sup>[3]</sup>를 내장</li>
 </ul>
-<p><sup>[1]</sup> Chrome V8 엔진: C++로 작성된 오픈소스 자바스크립트 엔진 / 자바스크립트 코드를 기계어로 변환하여 실행시키는 <code>JIT 컴파일러</code>를 내장 / <code>가비지 컬렉터</code>를 내장하고 있어 메모리 관리에 대한 개발자의 부담을 덜어줌</p>
+<p><sup>[1]</sup> Chrome V8 엔진: C++로 작성된 오픈소스 자바스크립트 엔진, 자바스크립트 코드를 기계어로 변환하여 실행시키는 <code>JIT 컴파일러</code>를 내장, <code>가비지 컬렉터</code>를 내장하고 있어 메모리 관리에 대한 개발자의 부담을 덜어줌</p>
 <p><sup>[2]</sup> 런타임 환경: 응용 프로그램이 운영체제(OS)의 <code>시스템 리소스</code>(e.g. RAM, 시스템 변수, 환경 변수)에 엑세스 할 수 있도록 해주는 실행 환경</p>
-<h3 id="2-nodejs의-특성" class="relative group">2. Node.js의 특성 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-nodejs%ec%9d%98-%ed%8a%b9%ec%84%b1" aria-label="Anchor">#</a></span></h3>
+<p><sup>[3]</sup> libuv: 이벤트 기반의 비동기 I/O 라이브러리, 이벤트 루프 제공</p>
+<h3 id="2-노드의-특성" class="relative group">2) 노드의 특성 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%eb%85%b8%eb%93%9c%ec%9d%98-%ed%8a%b9%ec%84%b1" aria-label="Anchor">#</a></span></h3>
 <ol>
 <li>이벤트 기반
 <ul>
@@ -375,7 +383,7 @@
 <li>Single Tread
 <ul>
 <li>노드 프로세스는 멀티 스레드지만 직접 다룰 수 있는 스레드는 하나라서 싱글 스레드라고 표현</li>
-<li>노드14 버전부터 worker threads 모듈로 멀티 스레드 사용 가능</li>
+<li>노드 14 버전부터 worker threads 모듈로 멀티 스레드 사용 가능</li>
 </ul>
 </li>
 </ol>
@@ -389,7 +397,7 @@
 <li>멀티 프로세싱: 여러 개의 프로세스 사용, I/O 요청이 많을 때 사용, 프로그래밍이 쉬움, 리소스를 적게 사용</li>
 <li>멀티 스레딩: 하나의 프로세스 안에서 여러개의 스레드 사용, CPU 작업이 많을 때 사용, 프로그래밍이 어려움, 리소스를 많이 사용</li>
 </ul>
-<h3 id="3-nodejs로-만든-서버" class="relative group">3. Node.js로 만든 서버 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-nodejs%eb%a1%9c-%eb%a7%8c%eb%93%a0-%ec%84%9c%eb%b2%84" aria-label="Anchor">#</a></span></h3>
+<h3 id="3-노드로-만든-서버" class="relative group">3) 노드로 만든 서버 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%eb%85%b8%eb%93%9c%eb%a1%9c-%eb%a7%8c%eb%93%a0-%ec%84%9c%eb%b2%84" aria-label="Anchor">#</a></span></h3>
 <table>
 <thead>
 <tr>
@@ -421,6 +429,106 @@
 </tbody>
 </table>
 <p>*CPU 작업을 위해 AWS Lamda, Google Cloud Functions 같은 별도 서비스 사용 권장</p>
+<h2 id="제-2장-javascript-기본" class="relative group">제 2장. Javascript 기본 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%a0%9c-2%ec%9e%a5-javascript-%ea%b8%b0%eb%b3%b8" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-콜-스택과-이벤트-루프" class="relative group">1) 콜 스택과 이벤트 루프 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ec%bd%9c-%ec%8a%a4%ed%83%9d%ea%b3%bc-%ec%9d%b4%eb%b2%a4%ed%8a%b8-%eb%a3%a8%ed%94%84" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>
+<p>콜 스택</p>
+<ul>
+<li>가장 먼저 anonymous<sup>[1]</sup>가 쌓임</li>
+<li>호출 순서대로 쌓이고, 역순으로 실행</li>
+</ul>
+</li>
+<li>
+<p>이벤트 루프</p>
+<ol>
+<li><code>콜 스택</code>에 쌓인 함수 중 논-블로킹으로 실행되는 함수들<sup>[2]</sup>을 <code>백그라운드</code>로 보냄</li>
+<li>백그라운드에서 해당 함수가 완료되면 <code>태스크 큐</code>로 이동해서 대기</li>
+<li>콜 스택이 비는 순간 <code>이벤트 루프</code>가 콜 스택으로 태스크를 이동 시켜서 실행
+<ol>
+<li>매크로 태스크<sup>[3]</sup> 큐(이벤트 큐, 콜백 큐)에서 가장 오래된 태스크를 실행</li>
+<li>마이크로 태스크<sup>[4]</sup> 큐(잡 큐)의 모든 태스크를 오래된 순으로 실행</li>
+<li>랜더링</li>
+<li>매크로 태스크 큐 확인 및 대기</li>
+</ol>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// example.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;script start&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;setTimeout&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;promise1&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;promise2&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;script end&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># console.log</span>
+</span></span><span class="line"><span class="cl">script start
+</span></span><span class="line"><span class="cl">script end
+</span></span><span class="line"><span class="cl">promise1
+</span></span><span class="line"><span class="cl">promise2
+</span></span><span class="line"><span class="cl">setTimeout
+</span></span></code></pre></div><p>*여기서 setTimeout이 첫 번째 매크로 태스크가 아니라 실행중인 스크립트(이벤트)가 첫 번째 매크로 태스크 (JS에서는 이벤트가 발생하지 않으면 코드가 실행되지 않기 때문)</p>
+</li>
+</ul>
+<p><sup>[1]</sup> anonymous: 모듈 스코프 외부에서 선언된 변수, 전역 변수로 취급</p>
+<p><sup>[2]</sup> 논-블로킹으로 실행되는 함수들: <code>타이머 함수</code>, <code>파일 시스템 접근(fs)</code>, <code>네트워크 요청</code>, <code>압축(zlib)</code>, <code>암호화(crypto)</code></p>
+<p><sup>[3]</sup> 매크로 태스크: requestAnimationFrame, <code>I/O</code>, <code>UI rendering</code>, <code>setTimeout</code>, <code>setInterval</code>, <code>setImmediate</code></p>
+<p><sup>[4]</sup> 마이크로 태스크: <code>process.nextTick</code>, <code>Promises</code>, queueMicrotask(f), MutationObserver</p>
+<p>*백그라운드와 태스크 큐는 자바스크립트가 아님</p>
+<p>*프로미스 내부는 동기, then/catch/finally는 비동기</p>
+<h3 id="2-js-기본-문법" class="relative group">2) JS 기본 문법 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-js-%ea%b8%b0%eb%b3%b8-%eb%ac%b8%eb%b2%95" aria-label="Anchor">#</a></span></h3>
+<p>내가 원래 정리해둔거 찾아오자</p>
+<h3 id="3-템플릿-문자열-객체-리터럴" class="relative group">3) 템플릿 문자열, 객체 리터럴 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%ed%85%9c%ed%94%8c%eb%a6%bf-%eb%ac%b8%ec%9e%90%ec%97%b4-%ea%b0%9d%ec%b2%b4-%eb%a6%ac%ed%84%b0%eb%9f%b4" aria-label="Anchor">#</a></span></h3>
+<p>fn`` tagged template literal</p>
+<p>const food1 = &lsquo;피자&rsquo;;
+const food2 = &lsquo;치킨&rsquo;;</p>
+<p>const foodMsg = (texts, &hellip;values) =&gt; {
+console.log(texts);
+console.log(values);
+};
+foodMsg<code>제가 어제 먹은 음식은 ${food1}그리고 ${food2}입니다.</code>;</p>
+<p>// (3) [ &lsquo;제가 어제 먹은 음식은 &lsquo;, &lsquo;그리고 &lsquo;, &lsquo;입니다.&rsquo;, raw: Array(3) ]
+// (2) [ &lsquo;피자&rsquo;, &lsquo;치킨&rsquo; ]</p>
+<p><br>- [&hellip;new Set(arr)]로 중복 요소를 제거한 새로운 Set 객체 생성 가능</p>
+<p>축약 가능
+[변수 + 값] 동적 속성</p>
+<p>화살표 함수의 this는 부모의 this, function은 자신의 this를 가짐</p>
+<p>this에 구조분해 할당 하면 문제가 생긴다!!! 하지만</p>
+<p>클래스가 프로토타입??? 뭔말이야 옛날에 이상한거를 클래스로 묶어서 잘 만들어 준거임</p>
+<p>resolve (성공) -&gt; then으로 연결</p>
+<p>async도 프로미스다&hellip;</p>
+<p>map은 생성자</p>
+<p>map은 1대1 매칭</p>
+<p>일반 객체는 심볼이나 스트링만 됨</p>
+<p>참조값을 같은 참조를 해야 객체 키를</p>
+<p>반복적인거 강화</p>
+<p>좀 좋아보이네??</p>
+<p>set은 중복을 허용하지 않는 배열 생성자</p>
+<p>자료형이 다르면 됨</p>
+<p>배열에서 중복 제거하고 싶을 때
+s2 = new Set([&hellip;])</p>
+<p>Array.from(s2)</p>
+<p>WeakMap 좀 써봄
+WeakSet 안써봄</p>
+<p>가비지 컬렉팅이 잘된다. 메모리에서 잘 날라간다.</p>
+<p>즉 객체를 키로 쓸 때나 뭐 이럴 때
+객체는 널이 되어도 맵이 살아있으면 안지워짐
+구지 필요는 없음</p>
+<p>const user = {name: &ldquo;adw&rdquo;, age: 29}</p>
+<!-- user.married = false -->
+<p>const userWeakMap = new WeakMap()
+userWeakMap.set(user, {married: false})</p>
+<p>객체를 건드리지 않고, 가비지 컬렉팅을 부가적인 정보 추가</p>
+<p>user = null 일 때 날라감</p>
+<p>위크셋을 쓸 일이 아예 없다!!!</p>
+<hr>
+<p>ES2020에서 추가</p>
+<p>근데 AJAX가 뭐야?</p>
 <h2 id="부록" class="relative group">부록 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b6%80%eb%a1%9d" aria-label="Anchor">#</a></span></h2>
 <h3 id="cli" class="relative group">CLI <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cli" aria-label="Anchor">#</a></span></h3>
 <table>
@@ -465,6 +573,7 @@
 <blockquote>
 <p>생각의 비중이 높아야 한다. 그렇지 않다면 가치가 크지 않은 일을 하고 있을 가능성이 크다.</p>
 </blockquote>
+<p><a href="https://blog.bitsrc.io/microtask-and-macrotask-a-hands-on-approach-5d77050e2168">https://blog.bitsrc.io/microtask-and-macrotask-a-hands-on-approach-5d77050e2168</a></p>
 
       </div>
     </section>
@@ -609,19 +718,31 @@
             <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
             <div class="pt-3">
               <div id="disqus_thread"></div>
+
 <script>
-    
 
-    
 
-    (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = 'https://yuchans-hello-world-5.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
+
+
+
+
+
+(function() { 
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://yuchans-hello-world-5.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
 </script>
+
 <script id="dsq-count-scr" src="//yuchans-hello-world-5.disqus.com/count.js" async></script>
+
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
           </div>

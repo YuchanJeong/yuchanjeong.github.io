@@ -41,7 +41,7 @@
   />
   
   
-  <script type="text/javascript" src="/js/appearance.min.4df8309499991be53c71b2b39ba0f5d5e77ea7d411d0710ce48c24218e7cc24ded28f19e85838fdc56db2306195cb001f049f577be0cf0ffb2dd6e2037ede1b9.js" integrity="sha512-TfgwlJmZG&#43;U8cbKzm6D11ed&#43;p9QR0HEM5IwkIY58wk3tKPGehYOP3FbbIwYZXLAB8En1d74M8P&#43;y3W4gN&#43;3huQ=="></script>
+  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
   
     
     
@@ -54,7 +54,7 @@
   
   
     
-    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.bbbc21fe00162ca986299c3aa2587e88662408cef57709874b7c316048a5ff80b7e342fc03812cff1393cb2be2ce65593299494d88df71ec6eb48ee261fc0fd6.js" integrity="sha512-u7wh/gAWLKmGKZw6olh&#43;iGYkCM71dwmHS3wxYEil/4C340L8A4Es/xOTyyvizmVZMplJTYjfcexutI7iYfwP1g==" data-copy="Copy" data-copied="Copied"></script>
+    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.15ae6e2c9b1ac24a9ccf40003fa689efb1a18db1ee9b73d780b01a6c31b150441415862513e93184f68fe385759e4698b8763cba6a0f79493c1fed99ad5868d4.js" integrity="sha512-Fa5uLJsawkqcz0AAP6aJ77GhjbHum3PXgLAabDGxUEQUFYYlE&#43;kxhPaP44V1nkaYuHY8umoPeUk8H&#43;2ZrVho1A==" data-copy="Copy" data-copied="Copied"></script>
   
   
   
@@ -106,7 +106,7 @@
     "keywords": ["react","sass"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "370"
+    "wordCount": "372"
   }]
   </script>
 
@@ -337,152 +337,152 @@
 <p>리액트에서 활용 가능한 여러 방식의 코드 스플리팅이 있지만 우선 회사의 다른 프로젝트에서 사용하고 있는 <code>loadable component</code>를 활용한 페이지(라우팅) 기반의 코드 스플리팅만 적용 했다.</p>
 <ol>
 <li>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">yarn add @loadable/component @types/loadable__component
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn add @loadable/component @types/loadable__component
+</span></span></code></pre></div></li>
 <li>
 <p>App.tsx</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"> <span class="kr">import</span> <span class="nx">loadable</span> <span class="kr">from</span> <span class="s2">&#34;@loadable/component&#34;</span><span class="p">;</span>
- <span class="p">...</span>
-
- <span class="kr">const</span> <span class="nx">ExamplePage</span> <span class="o">=</span> <span class="nx">loadable</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="s2">&#34;pages/ExamplePage&#34;</span><span class="p">))</span>
- <span class="p">...</span>
-
- <span class="kd">function</span> <span class="nx">App() {</span>
-   <span class="k">return</span> <span class="p">(</span>
-     <span class="p">&lt;</span><span class="nt">Router</span><span class="p">&gt;</span>
-       <span class="p">&lt;</span><span class="nt">Routes</span><span class="p">&gt;</span>
-         <span class="p">&lt;</span><span class="nt">Route</span> <span class="na">path</span><span class="o">=</span><span class="s">&#34;/example&#34;</span> <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">ExamplePage</span> <span class="p">/&gt;}</span> <span class="p">/&gt;</span>
-         <span class="p">...</span>
-         <span class="p">&lt;</span><span class="nt">Route</span> <span class="na">path</span><span class="o">=</span><span class="s">&#34;*&#34;</span> <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">NotFound</span> <span class="p">/&gt;}</span> <span class="p">/&gt;</span>
-       <span class="p">&lt;/</span><span class="nt">Routes</span><span class="p">&gt;</span>
-     <span class="p">&lt;/</span><span class="nt">Router</span><span class="p">&gt;</span>
-   <span class="p">)</span>
- <span class="p">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"> <span class="kr">import</span> <span class="nx">loadable</span> <span class="kr">from</span> <span class="s2">&#34;@loadable/component&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kr">const</span> <span class="nx">ExamplePage</span> <span class="o">=</span> <span class="nx">loadable</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="s2">&#34;pages/ExamplePage&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"> <span class="p">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">function</span> <span class="nx">App() {</span>
+</span></span><span class="line"><span class="cl">   <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;</span><span class="nt">Router</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="p">&lt;</span><span class="nt">Routes</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">&lt;</span><span class="nt">Route</span> <span class="na">path</span><span class="o">=</span><span class="s">&#34;/example&#34;</span> <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">ExamplePage</span> <span class="p">/&gt;}</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">...</span>
+</span></span><span class="line"><span class="cl">         <span class="p">&lt;</span><span class="nt">Route</span> <span class="na">path</span><span class="o">=</span><span class="s">&#34;*&#34;</span> <span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">NotFound</span> <span class="p">/&gt;}</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="p">&lt;/</span><span class="nt">Routes</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;/</span><span class="nt">Router</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span></code></pre></div></li>
 </ol>
 <h2 id="sassscss" class="relative group">SASS(SCSS) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sassscss" aria-label="Anchor">#</a></span></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="cm">/* ===== 1) reset ===== */</span>
-<span class="k">@import</span> <span class="s2">&#34;base/reset&#34;</span><span class="p">;</span>
-<span class="cm">/* ... */</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="o">*</span> <span class="p">{</span>
-  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="na">font</span><span class="o">:</span> <span class="ni">inherit</span><span class="p">;</span>
-  <span class="na">color</span><span class="o">:</span> <span class="ni">inherit</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="o">*,</span>
-<span class="nd">:after</span><span class="o">,</span>
-<span class="nd">:before</span> <span class="p">{</span>
-  <span class="na">box-sizing</span><span class="o">:</span> <span class="ni">border-box</span><span class="p">;</span>
-  <span class="na">flex-shrink</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nd">:root</span> <span class="p">{</span>
-  <span class="na">line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="p">;</span>
-  <span class="na">-moz-tab-size</span><span class="o">:</span> <span class="mi">4</span><span class="p">;</span>
-  <span class="na">tab-size</span><span class="o">:</span> <span class="mi">4</span><span class="p">;</span>
-  <span class="na">cursor</span><span class="o">:</span> <span class="ni">default</span><span class="p">;</span>
-  <span class="c1">// 모바일에서 꾹 클릭 시 색상 변경 방지
-</span><span class="c1"></span>  <span class="na">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="ni">transparent</span><span class="p">;</span>
-  <span class="c1">// 내용 선택 방지
-</span><span class="c1"></span>  <span class="na">-webkit-touch-callout</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-  <span class="na">-webkit-user-select</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-  <span class="na">-ms-user-select</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-  <span class="na">user-select</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-  <span class="c1">// 모바일에서 폰트 크기 조정 방지
-</span><span class="c1"></span>  <span class="na">-webkit-text-size-adjust</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-  <span class="na">-moz-text-size-adjust</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-  <span class="na">text-size-adjust</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-  <span class="c1">// 글이 상자 벗어나는 거 방지
-</span><span class="c1"></span>  <span class="na">overflow-wrap</span><span class="o">:</span> <span class="ni">break-word</span><span class="p">;</span>
-  <span class="c1">// 폰트 랜더링 부드럽게 만들기
-</span><span class="c1"></span>  <span class="na">-moz-osx-font-smoothing</span><span class="o">:</span> <span class="ni">grayscale</span><span class="p">;</span>
-  <span class="na">-webkit-font-smoothing</span><span class="o">:</span> <span class="n">antialiased</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">html</span><span class="o">,</span>
-<span class="nt">body</span> <span class="p">{</span>
-  <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// 최상위 부모 요소 기본 크기 설정
-</span><span class="c1"></span>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">62</span><span class="mf">.5</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// 1rem === 10px
-</span><span class="c1"></span>  <span class="na">font-weight</span><span class="o">:</span> <span class="mi">400</span><span class="p">;</span>
-  <span class="na">font-style</span><span class="o">:</span> <span class="ni">normal</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">img</span> <span class="p">{</span>
-  <span class="na">-webkit-user-drag</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">img</span><span class="o">,</span>
-<span class="nt">picture</span><span class="o">,</span>
-<span class="nt">video</span><span class="o">,</span>
-<span class="nt">canvas</span><span class="o">,</span>
-<span class="nt">svg</span> <span class="p">{</span>
-  <span class="c1">// 위치값을 가지고 상자 벗어나는거 방지
-</span><span class="c1"></span>  <span class="na">display</span><span class="o">:</span> <span class="ni">block</span><span class="p">;</span>
-  <span class="na">max-width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="c1">// Chrome 자동 완성 배경색 지우기
-</span><span class="c1"></span><span class="nt">input</span><span class="nd">:-webkit-autofill</span> <span class="p">{</span>
-  <span class="na">box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">30</span><span class="kt">px</span> <span class="ni">transparent</span> <span class="ni">inset</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="na">input</span><span class="o">:-</span><span class="n">webkit-autofill</span><span class="o">,</span><span class="na">
-</span><span class="na">input</span><span class="o">:-</span><span class="na">webkit-autofill</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span><span class="na">
-</span><span class="na">input</span><span class="o">:-</span><span class="na">webkit-autofill</span><span class="o">:</span><span class="ni">focus</span><span class="o">,</span>
-<span class="n">input</span><span class="o">:-</span><span class="n">webkit-autofill</span><span class="o">:</span><span class="n">active</span> <span class="p">{</span>
-  <span class="na">transition</span><span class="o">:</span> <span class="n">background-color</span> <span class="mi">5000</span><span class="kt">s</span> <span class="ni">ease-in-out</span> <span class="mi">0</span><span class="kt">s</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="c1">// 선택 및 입력 스타일 초기화
-</span><span class="c1"></span><span class="nt">button</span><span class="o">,</span>
-<span class="nt">input</span><span class="o">,</span>
-<span class="nt">select</span><span class="o">,</span>
-<span class="nt">progress</span> <span class="p">{</span>
-  <span class="na">appearance</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-  <span class="na">-webkit-appearance</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-  <span class="na">background-color</span><span class="o">:</span> <span class="ni">transparent</span><span class="p">;</span>
-  <span class="na">border</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="na">&amp;</span><span class="o">:</span><span class="ni">focus</span><span class="o">,</span>
-  <span class="o">&amp;:</span><span class="n">active</span> <span class="p">{</span>
-    <span class="na">outline</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-    <span class="na">box-shadow</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="nt">meter</span> <span class="p">{</span>
-  <span class="na">border</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">textarea</span> <span class="p">{</span>
-  <span class="na">&amp;</span><span class="o">:</span><span class="ni">focus</span><span class="o">,</span>
-  <span class="o">&amp;:</span><span class="n">active</span> <span class="p">{</span>
-    <span class="na">box-shadow</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-    <span class="na">outline</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="c1">// 입력 대상 커서 텍스트로 변경
-</span><span class="c1"></span><span class="nt">input</span><span class="o">,</span>
-<span class="nt">textarea</span> <span class="p">{</span>
-  <span class="na">cursor</span><span class="o">:</span> <span class="ni">text</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="c1">// 선택 대상 커서 포인터로 변경
-</span><span class="c1"></span><span class="nt">a</span><span class="o">,</span>
-<span class="nt">button</span><span class="o">,</span>
-<span class="nt">select</span><span class="o">,</span>
-<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&#34;checkbox&#34;</span><span class="o">],</span>
-<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&#34;radio&#34;</span><span class="o">],</span>
-<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&#34;range&#34;</span><span class="o">],</span>
-<span class="nt">label</span> <span class="p">{</span>
-  <span class="na">cursor</span><span class="o">:</span> <span class="ni">pointer</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="c1">// 링크 스타일 초기화
-</span><span class="c1"></span><span class="nt">a</span> <span class="p">{</span>
-  <span class="na">text-decoration</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="c1">// 표 스타일 초기와
-</span><span class="c1"></span><span class="nt">table</span> <span class="p">{</span>
-  <span class="na">border-collapse</span><span class="o">:</span> <span class="ni">collapse</span><span class="p">;</span>
-  <span class="na">border-spacing</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="c1">// 목록 스타일 초기화
-</span><span class="c1"></span><span class="nt">ul</span><span class="o">,</span>
-<span class="nt">ol</span> <span class="p">{</span>
-  <span class="na">padding-left</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="na">list-style</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><p>*<em>_(underscore)를 scss 파일 이름 앞에 붙일 경우 부분 파일로 취급해서 작업 시점에는 모듈화되어 있지만 실제로 사용되는 시점에는 <code>main.scss</code> 파일 하나에 작성된다.</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="cm">/* ===== 1) reset ===== */</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;base/reset&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* ... */</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="o">*</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">font</span><span class="o">:</span> <span class="ni">inherit</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="ni">inherit</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">*,</span>
+</span></span><span class="line"><span class="cl"><span class="nd">:after</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nd">:before</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">box-sizing</span><span class="o">:</span> <span class="ni">border-box</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">flex-shrink</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">-moz-tab-size</span><span class="o">:</span> <span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">tab-size</span><span class="o">:</span> <span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="ni">default</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 모바일에서 꾹 클릭 시 색상 변경 방지
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="ni">transparent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 내용 선택 방지
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">-webkit-touch-callout</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">-webkit-user-select</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">-ms-user-select</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">user-select</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 모바일에서 폰트 크기 조정 방지
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">-webkit-text-size-adjust</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">-moz-text-size-adjust</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">text-size-adjust</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 글이 상자 벗어나는 거 방지
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">overflow-wrap</span><span class="o">:</span> <span class="ni">break-word</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 폰트 랜더링 부드럽게 만들기
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">-moz-osx-font-smoothing</span><span class="o">:</span> <span class="ni">grayscale</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">-webkit-font-smoothing</span><span class="o">:</span> <span class="n">antialiased</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">html</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// 최상위 부모 요소 기본 크기 설정
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">62</span><span class="mf">.5</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// 1rem === 10px
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">font-weight</span><span class="o">:</span> <span class="mi">400</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">font-style</span><span class="o">:</span> <span class="ni">normal</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">img</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">-webkit-user-drag</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">img</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">picture</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">video</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">canvas</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">svg</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 위치값을 가지고 상자 벗어나는거 방지
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">display</span><span class="o">:</span> <span class="ni">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">max-width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Chrome 자동 완성 배경색 지우기
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">input</span><span class="nd">:-webkit-autofill</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">30</span><span class="kt">px</span> <span class="ni">transparent</span> <span class="ni">inset</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="na">input</span><span class="o">:-</span><span class="n">webkit-autofill</span><span class="o">,</span><span class="na">
+</span></span></span><span class="line"><span class="cl"><span class="na">input</span><span class="o">:-</span><span class="na">webkit-autofill</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span><span class="na">
+</span></span></span><span class="line"><span class="cl"><span class="na">input</span><span class="o">:-</span><span class="na">webkit-autofill</span><span class="o">:</span><span class="ni">focus</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="n">input</span><span class="o">:-</span><span class="n">webkit-autofill</span><span class="o">:</span><span class="n">active</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">transition</span><span class="o">:</span> <span class="n">background-color</span> <span class="mi">5000</span><span class="kt">s</span> <span class="ni">ease-in-out</span> <span class="mi">0</span><span class="kt">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 선택 및 입력 스타일 초기화
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">button</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">input</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">select</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">progress</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">appearance</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">-webkit-appearance</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="ni">transparent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">border</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">&amp;</span><span class="o">:</span><span class="ni">focus</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&amp;:</span><span class="n">active</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">outline</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">box-shadow</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">meter</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">border</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">textarea</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">&amp;</span><span class="o">:</span><span class="ni">focus</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&amp;:</span><span class="n">active</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">box-shadow</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">outline</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 입력 대상 커서 텍스트로 변경
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">input</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">textarea</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="ni">text</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 선택 대상 커서 포인터로 변경
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">a</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">button</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">select</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&#34;checkbox&#34;</span><span class="o">],</span>
+</span></span><span class="line"><span class="cl"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&#34;radio&#34;</span><span class="o">],</span>
+</span></span><span class="line"><span class="cl"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&#34;range&#34;</span><span class="o">],</span>
+</span></span><span class="line"><span class="cl"><span class="nt">label</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="ni">pointer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 링크 스타일 초기화
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">a</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">text-decoration</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 표 스타일 초기와
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">table</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">border-collapse</span><span class="o">:</span> <span class="ni">collapse</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">border-spacing</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 목록 스타일 초기화
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">ul</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">ol</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">padding-left</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">list-style</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>*<em>_(underscore)를 scss 파일 이름 앞에 붙일 경우 부분 파일로 취급해서 작업 시점에는 모듈화되어 있지만 실제로 사용되는 시점에는 <code>main.scss</code> 파일 하나에 작성된다.</em></p>
 <hr>
 <p>Reference.</p>
 <ul>
@@ -665,19 +665,31 @@
             <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
             <div class="pt-3">
               <div id="disqus_thread"></div>
+
 <script>
-    
 
-    
 
-    (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = 'https://yuchans-hello-world-5.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
+
+
+
+
+
+(function() { 
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://yuchans-hello-world-5.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
 </script>
+
 <script id="dsq-count-scr" src="//yuchans-hello-world-5.disqus.com/count.js" async></script>
+
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
           </div>

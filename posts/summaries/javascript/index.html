@@ -1,0 +1,1675 @@
+
+
+<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head>
+  <meta charset="utf-8" />
+  
+    <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Javascript &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="Javascript &middot; Yuchan&#39;s hello world!" />
+  
+  <meta name="description" content="The blog from a developer who loves &#39;Why?&#39; :)" />
+  
+  
+  
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/summaries/javascript/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.3552466d62941f854cc764b706ab5b2e3616325dd23313577f99ff83f095a09e436d4734656eb0ab9f588d93c251fdf636660a728c2f6ccb49697325daac8a6c.css"
+    integrity="sha512-NVJGbWKUH4VMx2S3BqtbLjYWMl3SMxNXf5n/g/CVoJ5DbUc0ZW6wq59YjZPCUf32NmYKcowvbMtJaXMl2qyKbA=="
+  />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
+  
+    
+    
+    
+  
+  
+    
+    
+  
+  
+  
+    
+    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.15ae6e2c9b1ac24a9ccf40003fa689efb1a18db1ee9b73d780b01a6c31b150441415862513e93184f68fe385759e4698b8763cba6a0f79493c1fed99ad5868d4.js" integrity="sha512-Fa5uLJsawkqcz0AAP6aJ77GhjbHum3PXgLAabDGxUEQUFYYlE&#43;kxhPaP44V1nkaYuHY8umoPeUk8H&#43;2ZrVho1A==" data-copy="Copy" data-copied="Copied"></script>
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Javascript" />
+<meta property="og:description" content="JS Data # 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/summaries/javascript/" /><meta property="article:section" content="posts" />
+
+<meta property="og:site_name" content="Yuchan&#39;s hello world!" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Javascript"/>
+<meta name="twitter:description" content="JS Data # 1."/>
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Javascript",
+    "headline": "Javascript",
+    
+    "abstract": "JS Data # 1.",
+    "inLanguage": "en",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/summaries\/javascript\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Yuchan"
+    },
+    
+    
+    
+    
+    
+    
+    "keywords": ["javascript"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2411"
+  }]
+  </script>
+
+
+  
+  <meta name="author" content="Yuchan" />
+  
+    
+      <link href="mailto:yuchanjeong0923@gmail.com" rel="me" />
+    
+      <link href="https://github.com/YuchanJeong" rel="me" />
+    
+      <link href="https://stackoverflow.com/users/16967930/yuchanjeong" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 dark:bg-neutral-600 focus:translate-y-0"
+        href="#main-content"
+        ><span class="font-bold ltr:pr-2 rtl:pl-2 text-primary-600 dark:text-primary-400"
+          >&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold sm:py-10 text-neutral-900 dark:text-neutral print:hidden">
+  <nav class="flex justify-between">
+    
+    <div>
+      
+        <a
+          class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+          rel="me"
+          href="/"
+          >Yuchan&rsquo;s hello world!</a
+        >
+      
+
+    </div>
+    
+    
+      <ul class="flex flex-col list-none ltr:text-right rtl:text-left sm:flex-row">
+        
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/posts/"
+                title="Posts"
+                >Posts</a
+              >
+            </li>
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/categories/"
+                title="Categories"
+                >Categories</a
+              >
+            </li>
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/tags/"
+                title="Tags"
+                >Tags</a
+              >
+            </li>
+          
+        
+        
+          <li class="ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+            <button
+              id="search-button"
+              class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+              title="Search (/)"
+            >
+              
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+          </li>
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Javascript
+      </h1>
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 text-xs text-neutral-500 dark:text-neutral-400 ">
+      
+        
+          
+            <a
+              href="/categories/%5Csummaries/"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >\summaries</a
+            >
+          
+        
+      
+        
+          
+            <a
+              href="/tags/javascript/"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >javascript</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+      </div>
+    </header>
+    <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
+      
+        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10 print:hidden">
+            <details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700"
+  >
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600"
+  >
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#js-data">JS Data</a>
+      <ul>
+        <li><a href="#1-type">1. Type</a></li>
+        <li><a href="#2-properties--methods">2. Properties &amp; Methods</a>
+          <ul>
+            <li><a href="#1-a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsstringstringa">1) <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></a></li>
+            <li><a href="#2-a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsnumbernumbera--a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsmathmatha">2) <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> &amp; <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a></a></li>
+            <li><a href="#3-a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsarrayarraya">3) <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></a></li>
+            <li><a href="#4-a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsobjectobjecta">4) <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></a></li>
+          </ul>
+        </li>
+        <li><a href="#3-etc">3. Etc</a></li>
+      </ul>
+    </li>
+    <li><a href="#js-operator">JS Operator</a></li>
+    <li><a href="#js-control-statement">JS Control Statement</a></li>
+    <li><a href="#js-function">JS Function</a></li>
+    <li><a href="#js-class">JS Class</a></li>
+    <li><a href="#js-asynchronous">JS Asynchronous</a></li>
+    <li><a href="#js-etc">JS Etc</a>
+      <ul>
+        <li><a href="#1-dom">1. DOM</a></li>
+        <li><a href="#2-scope--declarations">2. Scope &amp; Declarations</a></li>
+        <li><a href="#3-this">3. This</a></li>
+        <li><a href="#4-json">4. JSON</a></li>
+        <li><a href="#5-export--import">5. Export &amp; Import</a></li>
+        <li><a href="#6-web-storage웹-저장소">6. Web Storage(웹 저장소)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-w-0 min-h-0 max-w-prose">
+        <h2 id="js-data" class="relative group">JS Data <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#js-data" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-type" class="relative group">1. Type <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-type" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>- 쌍따음표(&quot;&quot;)나 따음표(&rsquo;&rsquo;)로 감싸서 표현<br>- Template literals(`${변수}`)로 변수 사용 가능<br>- +로 합치기 가능(이때 다른 타입은 문자화)<br>- str[n]으로 character 읽기 가능(read only)<br>- String(data), data.toString()으로 문자화 가능<br>*<em>Escape Sequence</em><br>ㅤ└ \n (new line)<br>ㅤ└ \t (tap)</td>
+</tr>
+<tr>
+<td>number</td>
+<td>- Number(str)로 숫자화 가능<br>ㅤ*<em>숫자가 아닌 문자열이 있으면 NaN</em><br>- parseInt(str)로 정수화 가능, parseFloat(str)으로 숫자화 가능<br>ㅤ*<em>숫자가 아닌 문자열이 뒤에 있으면 숫자인 부분까지 숫자화</em></td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>true | false</td>
+</tr>
+<tr>
+<td>array</td>
+<td>- 대괄호([])로 감싸서 표현<br>- arr[i]로 element 읽기 가능<br>- arr[i] = value로 arr의 i index에 value 할당 가능<br>- <code>new Array.from({ length: n })</code>으로 n개의 undefined를 가진 배열 생성 가능<br>- <code>new Array(n).fill(element)</code>로 n개의 element를 가진 배열 생성 가능</td>
+</tr>
+<tr>
+<td>object</td>
+<td>- 중괄호({})로 감싸서 표현<br>- odj.key와 obj[str]으로 value 읽기 가능<br>- odj.key = value와 obj[str] = value로 obj의 key에 value (생성)할당 가능<br>- delete obj[str]로 key-value 삭제 가능<br>- <code>str in obj</code>로 key 존재 여부 판단 가능<br >*<em>Optional Chaining</em><br >ㅤ└ obj.key1?.key2는 key1이 있을 때만 key2 확인</td>
+</tr>
+<tr>
+<td>null</td>
+<td>의도적으로 비움</td>
+</tr>
+<tr>
+<td>undefined</td>
+<td>값이 할당되지 않음</td>
+</tr>
+</tbody>
+</table>
+<p>*falsy</p>
+<ul>
+<li>false, null, undefined, &ldquo;&rdquo;, 0, NaN (나머지는 truthy)</li>
+</ul>
+<p>*<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></p>
+<ul>
+<li>평가 전 데이터 타입을 string으로 반환</li>
+<li>function은 &ldquo;function&rdquo;</li>
+<li>undeclared variable은 &ldquo;undefined&rdquo;</li>
+<li>null과 array는 &ldquo;object&rdquo;
+<ul>
+<li>null은 data === null로 판단</li>
+<li>array는 Array.isArray(data)로 판단</li>
+</ul>
+</li>
+<li>NaN은 isNaN(number)으로 판단</li>
+</ul>
+<h3 id="2-properties--methods" class="relative group">2. Properties &amp; Methods <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-properties--methods" aria-label="Anchor">#</a></span></h3>
+<h4 id="1-a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsstringstringa" class="relative group">1) <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsstringstringa" aria-label="Anchor">#</a></span></h4>
+<table>
+  <thead>
+    <th>Properties & Methods</th>
+    <th>Return</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/length">length</a></td>
+      <td>문자열 안의 코드 유닛 수</td>
+    </tr>
+    <tr>
+      <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf</a>(searchValue[, fromIndex])</td>
+      <td>searchValue의 첫 번째 등장 인덱스,<br>찾을 수 없으면 -1<br><span style="font-style: italic;">*.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf">lastIndexOf</a>()는 마지막 등장 인덱스</span></td>
+    </tr>
+    <tr>
+      <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/includes">includes</a>(searchValue[, fromIndex])</td>
+      <td>searchValue를 포함하고 있는지 여부</td>
+    </tr>
+    <tr>
+      <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/slice">slice</a>(beginIndex[, endIndex])</td>
+      <td>추출된 부분(~이상~미만)을 담는 새로운 string</td>
+    </tr>
+    <tr>
+      <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split">split</a>([separator[, limit]])</td>
+      <td>separator(문자열|정규식)로 끊은 문자열들의 array</td>
+    </tr>
+    <tr>
+      <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/match">match</a>(<a href="https://github.com/YuchanJeong/_WIL/blob/master/Etc/Regex.md">regexp</a>)</td>
+      <td>정규식과 일치하는 문자열을 포함하는 array,<br>찾을 수 없으면 null<br><span style="font-style: italic;">*g옵션이 없을 때 캡처된 그룹 및 정보도 배열에 포함</span></td>
+    </tr>
+    <tr>
+      <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace</a>(regexp|subStr, newSubStr|function)</td>
+      <td>패턴과 처음 일치하는 부분이 교체된 새로운 string<br><span style="font-style: italic;">*.<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll">replaceAll</a>()은 모든 일치 문자 교체</span></td>
+    </tr>
+      <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase">toUpperCase</a>()<br>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase</a>()</td>
+      <td>모두 대문자로 바꾼 string<br>모두 소문자로 바꾼 string</td>
+    </tr>
+    </tr>
+      <td>str.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/trim">trim</a>()</td>
+      <td>양끝의 공백을 제거한 string</td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="2-a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsnumbernumbera--a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsmathmatha" class="relative group">2) <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> &amp; <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsnumbernumbera--a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsmathmatha" aria-label="Anchor">#</a></span></h4>
+<table>
+  <thead>
+    <th>Properties & Methods</th>
+    <th>Return</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>num.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">toFixed</a>([digits])</td>
+      <td>고정 소수점 표기법을 사용하여 나타낸 수의 string<br><span style="font-style: italic;">*digits: 소수점 뒤에 나타날 자릿수, 기본값 0</span></td>
+    </tr>
+    <tr>
+      <td>Math.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/abs">abs</a>(x)</td>
+      <td>숫자의 절댓값</td>
+    </tr>
+    <tr>
+      <td>Math.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/max">max</a>([x[, y[, …]]])<br>Math.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/min">min</a>([x[, y[, …]]])</td>
+      <td>0개 이상의 인수 중에서 제일 큰 수<br>0개 이상의 인수 중에서 제일 작은 수</td>
+    </tr>
+    <tr>
+      <td>Math.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil">ceil</a>(x)<br>Math.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">floor</a>(x)<br>Math.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/round">round</a>(x)</td>
+      <td>인수보다 크거나 같은 수 중에서 가장 작은 정수<br>인수보다 작거나 같은 수 중에서 가장 큰 정수<br>인수에 가장 가까운 정수</td>
+    </tr>
+    <tr>
+      <td>Math.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt">sqrt</a>(x)</td>
+      <td>√x</td>
+    </tr>
+    <tr>
+      <td>Math.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/pow">pow</a>(x, n)</td>
+      <td>x의 n제곱값</td>
+    </tr>
+    <tr>
+      <td>Math.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/random">random</a>()</td>
+      <td>0 이상 1 미만의 부동소수점 의사 난수</td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="3-a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsarrayarraya" class="relative group">3) <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsarrayarraya" aria-label="Anchor">#</a></span></h4>
+<table>
+  <thead>
+    <th>Properties & Methods</th>
+    <th>Return</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/length">length</a></td>
+      <td>배열 안의 요소 수<br><span style="font-style: italic;">*arr.length === 0은 빈 배열</span></td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">indexOf</a>(searchValue[, beginIndex])</td>
+      <td>searchValue의 첫 번째 등장 인덱스,<br>찾을 수 없으면 -1<br><span style="font-style: italic;">*.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf">lastIndexOf</a>()는 마지막 등장 인덱스</span></td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">includes</a>(searchValue[, beginIndex])</td>
+      <td>searchValue를 요소로 포함하고 있는지 여부</td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">slice</a>(beginIndex[, endIndex])</td>
+      <td>추출된 부분(~이상~미만)을 담는 array</td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join</a>([separator])</td>
+      <td>모든 요소를 separator로 구분지어 연결한 string<br><span style="font-style: italic;">*separator를 생략하면 쉼표(,)로 구분</span></td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/concat">concat</a>([value1[, ...[, valueN]]])</td>
+      <td>콜백 배열이나 값들을 기존 배열에 합친 array</td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a>(callback(currentValue<br>[, index[, array]])[, thisArg])</td>
+      <td>undefined<br><span style="font-style: italic;">*콜백 함수를 각 요소에 대해 실행</span></td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(callback(currentValue<br>[, index[, array]])[, thisArg])</td>
+      <td>콜백 함수를 각 요소에 대해 실행한 결과의 array</td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter</a>(callback(currentValue<br>[, index[, array]])[, thisArg])</td>
+      <td>콜백 함수의 결과가 참인 요소의 array</td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/find">find</a>(callback(currentValue<br>[, index[, array]])[, thisArg])</td>
+      <td>콜백 함수의 결과가 참인 요소 중 첫 번째 item,<br>찾을 수 없으면 undefined</td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex">findIndex</a>(callback(currentValue<br>[, index[, array]])[, thisArg])</td>
+      <td>콜백 함수의 결과가 참인 요소 중 첫 번째 요소의 인덱스,<br>찾을 수 없으면 -1</td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce">reduce</a>(callback(accValue[, curValue<br>[, curIndex[, array)[, initialValue]]]])</td>
+      <td>콜백 함수의 누적 결과 값(last accValue)<br><span style="font-style: italic;">*initialValue는 첫 accValue의 값이며,<br>생략 시 arr[0]이 첫 accValue, arr[1]이 첫 curValue</span></td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">sort</a>([compareFunction])</td>
+      <td>정열된 array(원본)</td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">reverse</a>()</td>
+      <td>순서가 반전된 array(원본)</td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">splice</a>(beginIndex[, deleteCount<br>[, item1[, ...[, itemN]]]])</td>
+      <td>제거한 요소를 담은 array<br><span style="font-style: italic;">*배열(원본)의 요소를 교체<br>*deleteCount를 생략하면 배열(원본)의 마지막까지 삭제</span></td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push</a>(item1[, ...[, itemN]])</td>
+      <td>요소가 추가된 배열의 새로운 length<br><span style="font-style: italic;">*배열(원본)의 끝에 하나 이상의 요소를 추가<br>*.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift">unshift</a>()는 배열(원본)의 앞에 추가</span></td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">pop</a>(item1[, ...[, itemN]])</td>
+      <td>배열의 마지막 item<br><span style="font-style: italic;">*배열(원본)의 마지막 요소 삭제<br>*.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">shift</a>()는 배열(원본)의 첫 번째 요소 삭제</span></td>
+    </tr>
+    <tr>
+      <td>arr.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">flat</a>([depth])</td>
+      <td>depth 번 만큼 다차원 배열을 푼 array<br><span style="font-style: italic;">*depth의 기본값은 1</span></td>
+    </tr>
+  </tbody>
+</table>
+<p>*<em>beginIndex, endIndex의 값이 음수일 때, 끝에서부터의 위치를 의미</em>
+<br></p>
+<h4 id="4-a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsobjectobjecta" class="relative group">4) <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-a-hrefhttpsdevelopermozillaorgkodocswebjavascriptreferenceglobal_objectsobjectobjecta" aria-label="Anchor">#</a></span></h4>
+<table>
+  <thead>
+    <th>Properties & Methods</th>
+    <th>Return</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">assign</a>(target, ...sources)</td>
+      <td>출처 객체들로부터 하나 이상의 속성들이 복사된 목표 object<br><span style="font-style: italic;">*동일한 키를 갖는 속성은 뒤의 출처 값으로 덮어쓰여짐</span></td>
+    </tr>
+    <tr>
+      <td>Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">keys</a>(obj)</td>
+      <td>모든 속성의 키(문자열)를 반환한 array<br><span style="font-style: italic;">*Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/values">values</a>(obj)는 값의 array</span></td>
+    </tr>
+    <tr>
+      <td>Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries">fromEntries</a>(arr)</td>
+      <td>[key, value] 형태의 다차원 배열을 변환한 object<br><span style="font-style: italic;">*Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/entries">entries</a>(obj)는 [key, value] 형태의 이차원 array</span></td>
+    </tr>
+    <tr>
+      <td>Object.<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a>(key)</td>
+      <td>특정 프로퍼티를 가지고 있는지 여부</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="3-etc" class="relative group">3. Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-etc" aria-label="Anchor">#</a></span></h3>
+<p><strong>1) Destructuring Assignment(구조 분해 할당)</strong></p>
+<blockquote>
+<p>배열/객체의 속성을 해체 후 그 값을 개별 변수에 할당하는 표현식</p>
+</blockquote>
+<ul>
+<li>Array
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="p">...</span><span class="nx">rest</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// a는 1, b는 3, rest는 [4, 5]
+</span></span></span></code></pre></div></li>
+<li>Object
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;X&#34;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">gender</span><span class="o">:</span> <span class="s2">&#34;male&#34;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">gender</span><span class="o">:</span> <span class="nx">sex</span><span class="p">,</span> <span class="nx">address</span> <span class="o">=</span> <span class="s2">&#34;Korea&#34;</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// name는 &#34;X&#34;, sex는 &#34;male&#34;, address는 &#34;Korea&#34;
+</span></span></span></code></pre></div></li>
+</ul>
+<p><strong>2) Spread Syntax(전개 구문)</strong></p>
+<blockquote>
+<p>&hellip;data의 형태로 문자열·배열·객체를 펼치는 표현식</p>
+</blockquote>
+<ul>
+<li>String
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&#34;Che&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [...str]는 [&#34;C&#34;, &#34;h&#34;, &#34;e&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="c1">// {...str}는 { &#34;0&#34;: &#34;C&#34;, &#34;1&#34;: &#34;h&#34;, &#34;2&#34;: &#34;e&#34; }
+</span></span></span></code></pre></div></li>
+<li>Array
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [...arr1]은 [1, 2, 3], !== arr1
+</span></span></span><span class="line"><span class="cl"><span class="c1">// {...arr1}는 { &#34;0&#34;: 1, &#34;1&#34;: 2, &#34;2&#34;: 3 }
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [...arr1, ...arr2]는 [1, 2, 3, 4, 5, 6]
+</span></span></span></code></pre></div></li>
+<li>Object
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">c</span><span class="o">:</span> <span class="mi">3</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// {...obj1}은 { &#34;a&#34;: 1, &#34;b&#34;: 2, &#34;c&#34;: 3 }, !== obj1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">c</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">d</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">e</span><span class="o">:</span> <span class="mi">3</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// {...obj1, ...obj2}는 { &#34;a&#34;: 1, &#34;b&#34;: 2, &#34;c&#34;: 1, &#34;d&#34;: 2, &#34;e&#34;: 3}
+</span></span></span></code></pre></div></li>
+<li><code>Rest Prams</code>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">func</span> <span class="o">=</span> <span class="p">(</span><span class="nx">team</span><span class="p">,</span> <span class="p">...</span><span class="nx">members</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">팀</span><span class="o">:</span> <span class="nx">team</span><span class="p">,</span> <span class="nx">멤버</span><span class="o">:</span> <span class="nx">members</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myTeam</span> <span class="o">=</span> <span class="nx">func</span><span class="p">(</span><span class="s2">&#34;KT&#34;</span><span class="p">,</span> <span class="s2">&#34;Smeb&#34;</span><span class="p">,</span> <span class="s2">&#34;Score&#34;</span><span class="p">,</span> <span class="s2">&#34;Ucal&#34;</span><span class="p">,</span> <span class="s2">&#34;Deft&#34;</span><span class="p">,</span> <span class="s2">&#34;Mata&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* 
+</span></span></span><span class="line"><span class="cl"><span class="cm">myTeam은 {
+</span></span></span><span class="line"><span class="cl"><span class="cm">  팀: &#34;KT&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="cm">  멤버: [&#34;Smeb&#34;, &#34;Score&#34;, &#34;Ucal&#34;, &#34;Deft&#34;, &#34;Mata&#34;],
+</span></span></span><span class="line"><span class="cl"><span class="cm">};
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span>
+</span></span></code></pre></div></li>
+</ul>
+<p><strong>3) Immutability(불변성)</strong></p>
+<ul>
+<li>Primitive Type(원시 타입)
+<ul>
+<li>string, number, boolean, undefined, null</li>
+<li>변수에 값을 저장</li>
+<li>immutable</li>
+</ul>
+</li>
+<li>Reference Type(참조형 타입)
+<ul>
+<li>array, object, function</li>
+<li>변수에 heap의 주소를 저장, 값은 heap에 저장</li>
+<li>같은 주소(heap)를 참조할 때 하나 변화 시 일괄 변화</li>
+<li>mutable</li>
+</ul>
+</li>
+</ul>
+<p><strong>4) Shallow Copy(얕은 복사) &amp; Deep Copy(깊은 복사)</strong></p>
+<ul>
+<li>Shallow Copy
+<ul>
+<li>복사한 참조형 데이터 내부의 참조형 데이터는 같은 주소 참조</li>
+</ul>
+</li>
+<li>Deep Copy
+<ul>
+<li>복사한 참조형 데이터 내부의 참조형 데이터도 다른 주소 참조</li>
+</ul>
+</li>
+</ul>
+<h2 id="js-operator" class="relative group">JS Operator <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#js-operator" aria-label="Anchor">#</a></span></h2>
+<p><strong>1) Ternary Operator(삼항 연산자)</strong></p>
+<ul>
+<li>조건 ? 조건이 true일 때 : 조건이 false일 때</li>
+</ul>
+<p><strong>2) Logical Operator(논리 연산자)</strong></p>
+<table>
+  <thead>
+    <th>Operator</th>
+    <th>Details</th>
+  </thead>
+<tbody>
+  <tr>
+    <td>&&</td>
+    <td>- and (모두 truthy일 때 true)<br>- leftExpr && rightExpr<br>ㅤ└ leftExpr이 truthy일 때, rightExpr<br>ㅤ└ leftExpr이 falsy일 때, leftExpr</td>
+  </tr>
+  <tr>
+    <td>||</td>
+    <td>- or (하나라도 truthy일 때 true)<br>- leftExpr || rightExpr<br>ㅤ└ leftExpr이 truthy일 때, leftExpr<br>ㅤ└ leftExpr이 falsy일 때, rightExpr</td>
+  </tr>
+  <tr>
+    <td>??</td>
+    <td>- leftExpr ?? rightExpr (nullish coalescing(널 병합))<br>ㅤ└ leftExpr이 null 혹은 undefined가 아닐 때, leftExpr <br>ㅤ└ leftExpr이 null 혹은 undefined 때, rightExpr</td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>- not (falsy일 때 true)</td>
+  </tr>
+</tbody>
+</table>
+<p><strong>3) Comparison Operator(비교 연산자)</strong></p>
+<table>
+  <thead>
+    <th>Operator</th>
+    <th>Details</th>
+  </thead>
+<tbody>
+  <tr>
+    <td>a === b</td>
+    <td>값과 타입이 같을 때 true</td>
+  </tr>
+  <tr>
+    <td>a !== b</td>
+    <td>값이나 타입이 다를 때 true</td>
+  </tr>
+  <tr>
+    <td>a > b</td>
+    <td>a > b일 때 true</td>
+  </tr>
+  <tr>
+    <td>a < b</td>
+    <td>a < b일 때 true</td>
+  </tr>
+  <tr>
+    <td>a >= b</td>
+    <td>a >= b일 때 true</td>
+  </tr>
+  <tr>
+    <td>a <= b</td>
+    <td>a <= b일 때 true</td>
+  </tr>
+</tbody>
+</table>
+<p><strong>4) Arithmetic Operator(산술 연산자)</strong></p>
+<table>
+  <thead>
+    <th>Operator</th>
+    <th>Details</th>
+  </thead>
+<tbody>
+  <tr>
+    <td>a + b</td>
+    <td>덧셈</td>
+  </tr>
+  <tr>
+    <td>a - b</td>
+    <td>뺄셈</td>
+  </tr>
+  <tr>
+    <td>a * b</td>
+    <td>곱셈</td>
+  </tr>
+  <tr>
+    <td>a / b</td>
+    <td>나눗셈</td>
+  </tr>
+  <tr>
+    <td>a % b</td>
+    <td>나머지</td>
+  </tr>
+</tbody>
+</table>
+</details>
+<p><strong>5) Assignment Operator(할당 연산자)</strong></p>
+<table>
+  <thead>
+    <th>Operator</th>
+    <th>Details</th>
+  </thead>
+<tbody>
+  <tr>
+    <td>a += b</td>
+    <td>a = a + b</td>
+  </tr>
+  <tr>
+    <td>a -= b</td>
+    <td>a = a - b</td>
+  </tr>
+  <tr>
+    <td>a *= b</td>
+    <td>a = a * b</td>
+  </tr>
+  <tr>
+    <td>a /= b</td>
+    <td>a = a / b</td>
+  </tr>
+  <tr>
+    <td>a %= b</td>
+    <td>a = a % b</td>
+  </tr>
+</tbody>
+</table>
+<p><strong>6) Increment Operator(증감 연산자)</strong></p>
+<table>
+  <thead>
+    <th>Operator</th>
+    <th>Details</th>
+  </thead>
+<tbody>
+  <tr>
+    <td>a++/--</td>
+    <td>연산 후 1증가/감소</td>
+  </tr>
+  <tr>
+    <td>++/--a</td>
+    <td>1증가/감소 후 연산</td>
+  </tr>
+</tbody>
+</table>
+<h2 id="js-control-statement" class="relative group">JS Control Statement <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#js-control-statement" aria-label="Anchor">#</a></span></h2>
+<p><strong>1) Conditional Statement(조건문)</strong></p>
+<ul>
+<li>if 조건문
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">조건1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">조건1이</span> <span class="nx">truthy일</span> <span class="nx">때</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">조건n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">조건n이</span> <span class="nx">truthy일</span> <span class="nx">때</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">조건이</span> <span class="nx">모두</span> <span class="nx">falsy일</span> <span class="nx">때</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>switch 조건문
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">switch</span> <span class="p">(</span><span class="nx">대상</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="nx">케이스n</span><span class="o">:</span> <span class="nx">대상이</span> <span class="nx">케이스n일</span> <span class="nx">때</span>
+</span></span><span class="line"><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">default</span><span class="o">:</span> <span class="nx">해당</span> <span class="nx">케이스가</span> <span class="nx">없을</span> <span class="nx">때</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ul>
+<p><strong>2) Iterative Statement(반복문)</strong></p>
+<ul>
+<li>
+<p>for 반복문</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="nx">초기값</span><span class="p">;</span> <span class="nx">반복</span> <span class="nx">조건</span><span class="p">;</span> <span class="nx">증감값</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">반복내용</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// for of 배열
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">item</span> <span class="k">of</span> <span class="nx">iterator</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">반복내용</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// for in 객체
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">object</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">반복내용</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>while 반복문</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="nx">반복</span> <span class="nx">조건</span><span class="p">)</span> <span class="p">{</span> <span class="nx">반복</span> <span class="nx">내용</span> <span class="p">}</span>
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th>Escape</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>해당 반복문 종료</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>해당 반복 내용을 종료하고 다음 반복으로 넘어감</td>
+</tr>
+<tr>
+<td><em>label</em></td>
+<td>해당 label의 반복문을 대상으로 함</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">outer</span><span class="o">:</span> <span class="k">for</span> <span class="p">(</span><span class="nx">item</span> <span class="k">of</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">inner</span><span class="o">:</span> <span class="k">for</span> <span class="p">(</span><span class="nx">el</span> <span class="k">of</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">el</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">break</span> <span class="nx">outer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">el</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">continue</span> <span class="nx">inner</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="js-function" class="relative group">JS Function <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#js-function" aria-label="Anchor">#</a></span></h2>
+<p><strong>1) 함수 작성</strong></p>
+<ol>
+<li>
+<p>Named Function Declaration(기명 함수 선언)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">함수</span><span class="p">()</span> <span class="p">{}</span>
+</span></span></code></pre></div><ul>
+<li>호이스팅 시 <code>일시적 사각지대</code>(코드 실행 전까지 초기화가 일어나지 않음)에 빠지지 않음</li>
+</ul>
+</li>
+<li>
+<p>Anonymous Function Expression(익명 함수 표현)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">변수</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{};</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Arrow Function(화살표 함수)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">변수</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{};</span>
+</span></span></code></pre></div><ul>
+<li>인자가 하나일 때, 인자의 소괄호 생략 가능</li>
+<li>{ return } 생략 가능</li>
+<li>객체 데이터는 소괄호로 묶어야 함</li>
+<li><code>메서드 함수로 적합하지 않음</code></li>
+<li><code>생성자 함수로 사용할 수 없음</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>2) 고차 함수</strong></p>
+<ol>
+<li>
+<p>Timer Function(타이머 함수)</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setTimeout(함수, ms)</td>
+<td>일정 시간 후 함수 실핼</td>
+</tr>
+<tr>
+<td>setInterval(함수, ms)</td>
+<td>일정 시간 마다 함수 실행</td>
+</tr>
+<tr>
+<td>clearTimeout(변수)</td>
+<td>해당 Timeout 함수를 종료</td>
+</tr>
+<tr>
+<td>clearInterval(변수)</td>
+<td>해당 Interval 함수를 종료</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Callback Function(콜백 함수)</p>
+<ul>
+<li>함수의 「인자」로 사용되는 함수</li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">timeout</span><span class="p">(</span><span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;start&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 함수의 실행 위치 보장
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">cb</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">timeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;done&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><code>Closure Function</code>(클로저 함수)</p>
+<ul>
+<li>함수를 return하는 함수</li>
+<li>외부 함수의 「변수」를 내부 함수에서 재사용</li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">makeCounter</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 함수 변경 없이 value에 할당 불가능 (캡슐화)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 내부함수 여러개 생성 가능
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 스코프 체이닝 (하위 스코프 우선)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">up</span><span class="o">:</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">value</span> <span class="o">+=</span> <span class="nx">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">down</span><span class="o">:</span> <span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">value</span> <span class="o">-=</span> <span class="nx">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 함수 재활용 가능
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">counter1</span> <span class="o">=</span> <span class="nx">makeCounter</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">counter2</span> <span class="o">=</span> <span class="nx">makeCounter</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">counter1</span><span class="p">.</span><span class="nx">up</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span> <span class="c1">// -&gt; 8
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">counter2</span><span class="p">.</span><span class="nx">down</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span> <span class="c1">// -&gt; -5
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">counter2</span><span class="p">.</span><span class="nx">up</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span> <span class="c1">// -&gt; 2
+</span></span></span><span class="line"><span class="cl"><span class="c1">// counter1과 counter2의 value는 서로에게 영향 X
+</span></span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><code>Curry Function</code>(커리 함수)</p>
+<ul>
+<li>함수를 return하는 함수</li>
+<li>외부 함수의 「인자」를 내부 함수에서 재사용</li>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="sb">`</span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 함수 재활용 가능
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">hello</span> <span class="o">=</span> <span class="nx">greeting</span><span class="p">(</span><span class="s2">&#34;Hello&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">goodMorning</span> <span class="o">=</span> <span class="nx">greeting</span><span class="p">(</span><span class="s2">&#34;goodMorning&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">hello</span><span class="p">(</span><span class="s2">&#34;guys&#34;</span><span class="p">);</span> <span class="c1">// -&gt; &#39;Hello guys&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">hello</span><span class="p">(</span><span class="s2">&#34;ladies&#34;</span><span class="p">);</span> <span class="c1">// -&gt; &#39;Hello ladies&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">goodMorning</span><span class="p">(</span><span class="s2">&#34;guys&#34;</span><span class="p">);</span> <span class="c1">// -&gt; &#39;goodMorning guys&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">goodMorning</span><span class="p">(</span><span class="s2">&#34;ladies&#34;</span><span class="p">);</span> <span class="c1">// -&gt; &#39;goodMorning ladies&#39;
+</span></span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h2 id="js-class" class="relative group">JS Class <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#js-class" aria-label="Anchor">#</a></span></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* 1) 클래스 */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Vehicle</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//# constructor: 클래스의 파라미터
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">wheel</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">wheel</span> <span class="o">=</span> <span class="nx">wheel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">//# static property: 클래스에서 참조 가능한 프로퍼티
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">static</span> <span class="nx">hi</span> <span class="o">=</span> <span class="s2">&#34;hi&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">//# static method: 클래스에서 호출 가능한 메서드
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">static</span> <span class="nx">isVehicle</span><span class="p">(</span><span class="nx">vehicle</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">vehicle</span> <span class="k">instanceof</span> <span class="nx">Vehicle</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">//# (public) property: 내부 및 인스턴스 참조 가능한 프로퍼티
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">bye</span><span class="o">:</span> <span class="s2">&#34;bye&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">//# (public) method: 내부 및 인스턴스에서 호출 가능한 메서드
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">beep</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;beep!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* 2) 클래스 상속 */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Car</span> <span class="kr">extends</span> <span class="nx">Vehicle</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">wheel</span><span class="p">,</span> <span class="nx">year</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//# super-1: 상위 클래스의 파라미터
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">super</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">wheel</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">year</span> <span class="o">=</span> <span class="nx">year</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">getWheel</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//# super-2: 상위 클래스의 메서드
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">super</span><span class="p">.</span><span class="nx">beep</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`wheel: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">wheel</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* 3) prototype */</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 공통 메서드 함수는 생성자의 prototype에 할당해서 메모리 절약
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Prototype chain : 해당 객체 -&gt; 생성자 -&gt; 상위 생성자 -&gt; Object
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Vehicle</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getInfo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">(</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">year</span><span class="si">}</span><span class="sb">)`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* 4) 클래스로 인스턴스(객체) 생성 */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myCar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">(</span><span class="s2">&#34;벤츠&#34;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&#34;2016&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">yourCar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">(</span><span class="s2">&#34;BMW&#34;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&#34;2020&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ========== //
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">Vehicle</span><span class="p">.</span><span class="nx">hi</span><span class="p">;</span> <span class="c1">// &#34;hi&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Vehicle</span><span class="p">.</span><span class="nx">isVehicle</span><span class="p">(</span><span class="nx">myCar</span><span class="p">);</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">myCar</span><span class="p">.</span><span class="nx">bye</span><span class="p">;</span> <span class="c1">// &#34;bye&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">myCar</span><span class="p">.</span><span class="nx">beep</span><span class="p">;</span> <span class="c1">// -&gt; beep!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">myCar</span><span class="p">.</span><span class="nx">getWheel</span><span class="p">();</span> <span class="c1">// -&gt; beep! -&gt; wheel: 4
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">myCar</span><span class="p">.</span><span class="nx">getInfo</span><span class="p">();</span> <span class="c1">// -&gt; 벤츠(2016)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">yourCar</span><span class="p">.</span><span class="nx">getInfo</span><span class="p">();</span> <span class="c1">// -&gt; BMW(2020)
+</span></span></span></code></pre></div><h2 id="js-asynchronous" class="relative group">JS Asynchronous <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#js-asynchronous" aria-label="Anchor">#</a></span></h2>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+  <span class="ltr:pr-3 rtl:pl-3 text-primary-400">
+    
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+
+  </span>
+
+
+  </span>
+  <span class="dark:text-neutral-300">추가 예정</span>
+</div>
+
+<h2 id="js-etc" class="relative group">JS Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#js-etc" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-dom" class="relative group">1. DOM <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-dom" aria-label="Anchor">#</a></span></h3>
+<blockquote>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model">DOM(문서 객체 모델)</a>은 메모리에 웹 페이지 문서 구조를 표현함으로써 스크립트 및 프로그래밍 언어와 페이지를 연결함</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Methods</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>document.<a href="https://developer.mozilla.org/ko/docs/Web/API/Document/querySelector">querySelector</a>(&ldquo;selector&rdquo;)</td>
+<td>문서 내에서 selector와 일치하는 첫 번째 요소</td>
+</tr>
+<tr>
+<td>document.<a href="https://developer.mozilla.org/ko/docs/Web/API/Document/querySelectorAll">querySelectorAll</a>(&ldquo;selector&rdquo;)</td>
+<td>문서 내에서 selector와 일치하는 NodeList<br>*<em>NodeList[i]로 개별 요소 선택</em><br>*<em>for이나 forEach로 요소들 반복처리</em></td>
+</tr>
+<tr>
+<td>document.<a href="https://developer.mozilla.org/ko/docs/Web/API/Document/createElement">createElement</a>(&ldquo;tag&rdquo;)</td>
+<td>문서 내에 해당 tag 요소 생성<br>*<em>아직 DOM tree에 연결 X</em></td>
+</tr>
+<tr>
+<td>.<a href="https://developer.mozilla.org/ko/docs/Web/API/Node/appendChild">appendChild</a>(aChild)</td>
+<td>대상의 마지막 자식 노드로 붙임<br>*D<em>OM tree에 연결</em></td>
+</tr>
+<tr>
+<td>.<a href="https://developer.mozilla.org/ko/docs/Web/API/EventTarget/addEventListener">addEventListener</a>(&ldquo;event&rdquo;, functionRef*)</td>
+<td>이벤트 발생 시 함수 호출<br>*<em><a href="https://developer.mozilla.org/ko/docs/Web/Events">event</a>: click|focus|blur|scroll</em><br>*<em><a href="https://developer.mozilla.org/ko/docs/Web/API/Event/target">event.target</a>은 이벤트의 대상 요소</em></td>
+</tr>
+<tr>
+<td>.<a href="https://developer.mozilla.org/ko/docs/Web/API/GlobalEventHandlers/onclick">onclick</a> = functionRef*</td>
+<td>대상 클릭 시 함수 호출</td>
+</tr>
+<tr>
+<td>.<a href="https://developer.mozilla.org/ko/docs/Web/API/Element/classList">classList</a><br>ㅤ.add(String [, String [, &hellip;]])<br>ㅤ.remove(String [, String [, &hellip;]])<br>ㅤ.contains(String)</td>
+<td><br>클래스 추가<br>클래스 삭제<br>클래스 포함 여부</td>
+</tr>
+<tr>
+<td>.<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute">setAttribute</a>(&ldquo;attribute&rdquo;, &ldquo;value&rdquo;)<br>.[attribute] = &ldquo;value&rdquo;</td>
+<td>속성(HTML) 할당</td>
+</tr>
+<tr>
+<td>.<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style">style</a>.[property] = &ldquo;value&rdquo;</td>
+<td>특성(CSS) 할당</td>
+</tr>
+<tr>
+<td>.<a href="https://developer.mozilla.org/ko/docs/Web/API/Node/textContent">textContent</a> = &ldquo;content&rdquo;</td>
+<td>내용 할당<br>*<em><a href="https://developer.mozilla.org/ko/docs/Web/API/HTMLElement/innerText"><del>innerText</del></a>(보안상 사용 금지)와 유사</em></td>
+</tr>
+<tr>
+<td>.remove()</td>
+<td>노드를 메모리에서 삭제</td>
+</tr>
+<tr>
+<td>.removeChild(aChild)</td>
+<td>대상과 자식 노드의 연결을 끊음</td>
+</tr>
+<tr>
+<td>.children</td>
+<td>자식 요소 목록<br>*<em>.firstElementChild는 첫 번째 자식</em><br>*<em>.lastElementChild는 마지막 자식</em></td>
+</tr>
+<tr>
+<td>.parentsElement</td>
+<td>부모 요소</td>
+</tr>
+</tbody>
+</table>
+<p>*functionRef(Event Handler):</p>
+<ul>
+<li>함수의 실행이 아닌 함수 자체를 넣어야함</li>
+<li>아무런 인자를 담지 않으면 event 객체만 전달</li>
+<li>특정 인자를 전달하기 위해서는 콜백함수 사용<br>
+ㅤEx. eventHandler={(e) =&gt; (param, &hellip;, e) =&gt; {}};</li>
+<li><code>e.preventDefault();</code> (고유 동작을 막음)</li>
+<li><code>e.stopPropagation();</code> (이벤트 전파를 막음)</li>
+<li>if (e.target !== e.currentTarget) return; (해당 요소만 이벤트의 대상)</li>
+</ul>
+<h3 id="2-scope--declarations" class="relative group">2. Scope &amp; Declarations <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-scope--declarations" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global Scope</td>
+<td>window(브라우저의 객체)에 저장</td>
+</tr>
+<tr>
+<td><del>Function Level Scope</del></td>
+<td><del><strong>var</strong></del><br/><del>중복 선언 가능</del></td>
+</tr>
+<tr>
+<td>Block Level Scope</td>
+<td><strong>let</strong><br/>ㅤ중복 선언 불가능<br/>ㅤ값의 재할당 가능<br/><strong>const</strong><br/>ㅤ중복 선언 불가능<br/>ㅤ값의 재할당 불가능, 초기화 필수<br/>ㅤ참조형 데이터의 요소는 재할당, 추가, 삭제 가능ㅤ</td>
+</tr>
+</tbody>
+</table>
+<p>*<em>하위 스코프 우선(Scope Chaining)</em><br>
+*<em>선언(호출 X)된 위치에 따라 상위 스코프 결정(Lexical Scoping)</em></p>
+<h3 id="3-this" class="relative group">3. This <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-this" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Condition</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>일반 함수</td>
+<td>호출</td>
+<td>1. 일반 호출: 전역 객체<br/>2. 메서드 호출: 호출 객체</td>
+</tr>
+<tr>
+<td>화살표 함수</td>
+<td>선언</td>
+<td>화살표 함수를 감싸고 있는 외부 함수의 객체</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>example</summary>
+<div markdown=1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">normal</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">arrow</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">obj1</span><span class="p">.</span><span class="nx">normal</span><span class="p">();</span> <span class="c1">// 메서드 호출, this === obj1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">obj11</span> <span class="o">=</span> <span class="nx">obj1</span><span class="p">.</span><span class="nx">normal</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">obj11</span><span class="p">();</span> <span class="c1">// 일반 호출, this === window
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">obj1</span><span class="p">.</span><span class="nx">arrow</span><span class="p">();</span> <span class="c1">// this === { }
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// ========== //
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">normal</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">arrow</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">obj2</span><span class="p">.</span><span class="nx">normal</span><span class="p">();</span> <span class="c1">// this === window
+</span></span></span><span class="line"><span class="cl"><span class="c1">// obj2의 normal을 메서드 호출
+</span></span></span><span class="line"><span class="cl"><span class="c1">// -&gt; normal의 setTimeout함수(내부함수)를 일반 호출
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">obj2</span><span class="p">.</span><span class="nx">arrow</span><span class="p">();</span> <span class="c1">// this === obj2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// ========== //
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">obj3</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;yuchan&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">outer</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span> <span class="c1">// --- (1)obj3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">innerFunc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span> <span class="c1">// --- (2)window (3)obj4
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">innerFunc</span><span class="p">();</span> <span class="c1">// --- (2)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">obj4</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;che&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">innerMethod</span><span class="o">:</span> <span class="nx">innerFunc</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">obj4</span><span class="p">.</span><span class="nx">innerMethod</span><span class="p">();</span> <span class="c1">// --- (3)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">obj3</span><span class="p">.</span><span class="nx">outer</span><span class="p">();</span> <span class="c1">// --- (1)
+</span></span></span><span class="line"><span class="cl"><span class="c1">// (1)메서드 호출 (2)일반 호출 (3)메서드 호출
+</span></span></span></code></pre></div></div>
+</details>
+<h3 id="4-json" class="relative group">4. JSON <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-json" aria-label="Anchor">#</a></span></h3>
+<table>
+<thead>
+<tr>
+<th>Methods</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JSON.stringify(obj)</td>
+<td>obj -&gt; jsonStr, 직렬화(serialize)</td>
+</tr>
+<tr>
+<td>JSON.parse(jsonSrt)</td>
+<td>jsonStr -&gt; obj, 역직렬화(deserialize)</td>
+</tr>
+</tbody>
+</table>
+<p>*<em>JSON(JavaScript Object Notation)문자열은 쌍따옴표(&quot;&quot;)만 사용 가능</em></p>
+<h3 id="5-export--import" class="relative group">5. Export &amp; Import <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-export--import" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 이름 필수 X, 파일 하나당 하나만 가능
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="nx">데이터</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 이름 필수 O, 파일 하나당 여러개 가능
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="nx">데이터</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// export default
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">임의_데이터명</span> <span class="nx">from</span> <span class="s2">&#34;경로&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// export
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">데이터명</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;경로&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">데이터명</span> <span class="nx">as</span> <span class="nx">임의_데이터명</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;경로&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">임의_객체명</span> <span class="nx">from</span> <span class="s2">&#34;경로&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="6-web-storage웹-저장소" class="relative group">6. Web Storage(웹 저장소) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#6-web-storage%ec%9b%b9-%ec%a0%80%ec%9e%a5%ec%86%8c" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>
+<p>vs Cookie</p>
+<ul>
+<li>클라이언트에 정보만 존재 &lt;-&gt; 요청 마다 서버에 함께 전송 (성능 저하 원인, 탈취 위험 높음)</li>
+<li>용량 제한이 없음 &lt;-&gt; 있음</li>
+<li>만료일이 없음 &lt;-&gt; 있음</li>
+</ul>
+</li>
+<li>
+<p>Local Storage</p>
+<ul>
+<li>별도로 삭제할 때까지 영구 유지</li>
+<li>도메인만 같으면 전역 공유 가능</li>
+<li>
+<table>
+<thead>
+<tr>
+<th>Methods</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>localStorage.setItem(&ldquo;key&rdquo;, &ldquo;value&rdquo;)</td>
+<td>데이터 저장</td>
+</tr>
+<tr>
+<td>localStorage.getItem(&ldquo;key&rdquo;)</td>
+<td>데이터 불러오기</td>
+</tr>
+<tr>
+<td>localStorage.removeItem(&ldquo;key&rdquo;)</td>
+<td>데이터 삭제</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>Session Storage</p>
+<ul>
+<li>탭이나 브라우저가 종료되면 삭제</li>
+<li>같은 도메인이라도 다른 탭이나 브라우저면 공유 불가능</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  <div class="flex">
+    
+      
+      
+        
+        <img
+          class="w-24 h-24 !mt-0 !mb-0 ltr:mr-4 rtl:ml-4 rounded-full"
+          width="96"
+          height="96"
+          alt="Yuchan"
+          src="/img/MyLogo_hue585f61b28a74a671118de43150c5d63_71237_192x192_fill_q75_box_smart1.jpeg"
+        />
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] leading-3 text-neutral-500 dark:text-neutral-400 uppercase">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Yuchan
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">A developer who loves &lsquo;Why?&rsquo; :)</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:yuchanjeong0923@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/YuchanJeong"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://stackoverflow.com/users/16967930/yuchanjeong"
+          target="_blank"
+          aria-label="Stack-Overflow"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group" href="/posts/summaries/git/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Git</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+        
+          <div class="pt-3">
+            <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+            <div class="pt-3">
+              <div id="disqus_thread"></div>
+
+<script>
+
+
+
+
+
+
+
+(function() { 
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://yuchans-hello-world-5.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<script id="dsq-count-scr" src="//yuchans-hello-world-5.disqus.com/count.js" async></script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+          </div>
+        
+      
+    </footer>
+  </article>
+
+        
+          <div
+            class="absolute top-[100vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
+          >
+            <a
+              href="#the-top"
+              class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5.5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
+        
+      </main><footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2021 Yuchan&rsquo;s hello world!
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    
+    
+      <div
+        class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-14 rtl:ml-14"
+      >
+        <button
+          id="appearance-switcher"
+          class="w-12 h-12 "
+          type="button"
+          title="Switch to dark appearance"
+        >
+          <span class="inline dark:hidden">
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+</span>
+          <span class="hidden dark:inline">
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+</span>
+        </button>
+      </div>
+    
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="fixed inset-0 z-50 flex flex-col p-4 sm:p-6 md:p-[10vh] lg:p-[12vh] w-screen h-screen cursor-default bg-neutral-500/50 backdrop-blur-sm dark:bg-neutral-900/50 invisible"
+  data-url="https://yuchanjeong.github.io/"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg border-neutral-200 top-20 bg-neutral dark:bg-neutral-800 dark:border-neutral-700"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-transparent focus:outline-2"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

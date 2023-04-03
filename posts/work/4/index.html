@@ -41,7 +41,7 @@
   />
   
   
-  <script type="text/javascript" src="/js/appearance.min.4df8309499991be53c71b2b39ba0f5d5e77ea7d411d0710ce48c24218e7cc24ded28f19e85838fdc56db2306195cb001f049f577be0cf0ffb2dd6e2037ede1b9.js" integrity="sha512-TfgwlJmZG&#43;U8cbKzm6D11ed&#43;p9QR0HEM5IwkIY58wk3tKPGehYOP3FbbIwYZXLAB8En1d74M8P&#43;y3W4gN&#43;3huQ=="></script>
+  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
   
     
     
@@ -54,7 +54,7 @@
   
   
     
-    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.bbbc21fe00162ca986299c3aa2587e88662408cef57709874b7c316048a5ff80b7e342fc03812cff1393cb2be2ce65593299494d88df71ec6eb48ee261fc0fd6.js" integrity="sha512-u7wh/gAWLKmGKZw6olh&#43;iGYkCM71dwmHS3wxYEil/4C340L8A4Es/xOTyyvizmVZMplJTYjfcexutI7iYfwP1g==" data-copy="Copy" data-copied="Copied"></script>
+    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.15ae6e2c9b1ac24a9ccf40003fa689efb1a18db1ee9b73d780b01a6c31b150441415862513e93184f68fe385759e4698b8763cba6a0f79493c1fed99ad5868d4.js" integrity="sha512-Fa5uLJsawkqcz0AAP6aJ77GhjbHum3PXgLAabDGxUEQUFYYlE&#43;kxhPaP44V1nkaYuHY8umoPeUk8H&#43;2ZrVho1A==" data-copy="Copy" data-copied="Copied"></script>
   
   
   
@@ -341,226 +341,226 @@
       <div class="min-w-0 min-h-0 max-w-prose">
         <h2 id="axios-instance" class="relative group">Axios Instance <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#axios-instance" aria-label="Anchor">#</a></span></h2>
 <p>base url 설정, 헤더에 액세스 토큰 포함, 액세스 토큰 만료 시 재발급 그리고 리프레시 토큰 만료 시 로그아웃을 <code>axiosInstance</code>를 통해 공통 설정으로 처리했다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">yarn add axios
-</code></pre></div><details>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn add axios
+</span></span></code></pre></div><details>
 <summary>axiosInstance.ts</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="nx">axios</span> <span class="kr">from</span> <span class="s2">&#34;axios&#34;</span><span class="p">;</span>
-
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">getAccessToken</span><span class="p">,</span> <span class="nx">logout</span><span class="p">,</span> <span class="nx">TOKEN_INFO</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;modules/account/apis&#34;</span><span class="p">;</span>
-
-<span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">AxiosRequestConfig</span><span class="p">,</span> <span class="nx">AxiosResponse</span><span class="p">,</span> <span class="nx">AxiosError</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;axios&#34;</span><span class="p">;</span>
-
-<span class="c1">// ===== Setting ===== //
-</span><span class="c1">//# Set URL
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">config</span>: <span class="kt">AxiosRequestConfig</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">baseURL</span><span class="o">:</span> <span class="sb">`https://</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_BRANCH</span><span class="si">}</span><span class="sb">.becon-api.com`</span><span class="p">,</span>
-<span class="p">};</span>
-
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">axiosInstance</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
-
-<span class="c1">//# Set Authorization
-</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">setAxiosHeader</span> <span class="o">=</span> <span class="p">(</span><span class="nx">accessToken</span>: <span class="kt">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">common</span><span class="p">.</span><span class="nx">Authorization</span> <span class="o">=</span> <span class="sb">`Bearer </span><span class="si">${</span><span class="nx">accessToken</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="c1">// ===== Preprocessing ===== //
-</span><span class="c1">//# Fulfilled Response (200번대 응답)
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">onFulfilled</span> <span class="o">=</span> <span class="p">(</span><span class="nx">res</span>: <span class="kt">AxiosResponse</span><span class="p">)</span><span class="o">:</span> <span class="nx">AxiosResponse</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">res</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="c1">//# Rejected Response (200번대 외 응답)
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">onRejected</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">err</span>: <span class="kt">AxiosError</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">AxiosResponse</span><span class="p">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="p">{</span> <span class="nx">config</span><span class="p">,</span> <span class="nx">response</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">err</span><span class="p">;</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">config</span><span class="p">)</span> <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="c1">// [edge-case] 요청의 설정이 없을 시
-</span><span class="c1"></span>
-  <span class="c1">//## Access Token 만료 시
-</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="o">?</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">401</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">tokenInfoStr</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">TOKEN_INFO</span><span class="p">);</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">tokenInfoStr</span><span class="p">)</span> <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="c1">// [edge-case] Local Storage에 정보가 없을 시
-</span><span class="c1"></span>
-    <span class="kr">const</span> <span class="nx">tokenInfo</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">accessToken</span>: <span class="kt">string</span><span class="p">;</span>
-      <span class="nx">refreshToken</span>: <span class="kt">string</span><span class="p">;</span>
-    <span class="p">}</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">tokenInfoStr</span><span class="p">);</span>
-
-    <span class="k">try</span> <span class="p">{</span>
-      <span class="c1">// 0. Refresh Token으로 새로운 Access Token 획득
-</span><span class="c1"></span>      <span class="kr">const</span> <span class="nx">newAccessToken</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getAccessToken</span><span class="p">({</span>
-        <span class="nx">refreshToken</span>: <span class="kt">tokenInfo.refreshToken</span><span class="p">,</span>
-      <span class="p">});</span>
-
-      <span class="c1">// 1. 권한 부여 헤더의 Access Token 교체
-</span><span class="c1"></span>      <span class="nx">setAxiosHeader</span><span class="p">(</span><span class="nx">newAccessToken</span><span class="p">);</span>
-
-      <span class="c1">// 2. Local Storage의 Access Token 교체
-</span><span class="c1"></span>      <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span>
-        <span class="nx">TOKEN_INFO</span><span class="p">,</span>
-        <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
-          <span class="p">...</span><span class="nx">tokenInfo</span><span class="p">,</span>
-          <span class="nx">accessToken</span>: <span class="kt">newAccessToken</span><span class="p">,</span>
-        <span class="p">})</span>
-      <span class="p">);</span>
-
-      <span class="c1">// 3. 현재 요청의 Access Token 교체
-</span><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">config</span><span class="p">.</span><span class="nx">headers</span><span class="p">)</span> <span class="nx">config</span><span class="p">.</span><span class="nx">headers</span> <span class="o">=</span> <span class="p">{};</span> <span class="c1">// [edge-case] 요청에 헤더가 없을 시
-</span><span class="c1"></span>
-      <span class="nx">config</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">Authorization</span> <span class="o">=</span> <span class="sb">`Bearer </span><span class="si">${</span><span class="nx">newAccessToken</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-
-      <span class="k">return</span> <span class="nx">axiosInstance</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span>: <span class="kt">unknown</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// [edge-case] Refresh Token 만료 시
-</span><span class="c1"></span>      <span class="nx">logout</span><span class="p">({</span> <span class="nx">isExpired</span>: <span class="kt">true</span> <span class="p">});</span>
-      <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-
-  <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-<span class="p">};</span>
-
-<span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">onFulfilled</span><span class="p">,</span> <span class="nx">onRejected</span><span class="p">);</span>
-</code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">axios</span> <span class="kr">from</span> <span class="s2">&#34;axios&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">getAccessToken</span><span class="p">,</span> <span class="nx">logout</span><span class="p">,</span> <span class="nx">TOKEN_INFO</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;modules/account/apis&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="kr">type</span> <span class="p">{</span> <span class="nx">AxiosRequestConfig</span><span class="p">,</span> <span class="nx">AxiosResponse</span><span class="p">,</span> <span class="nx">AxiosError</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;axios&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ===== Setting ===== //
+</span></span></span><span class="line"><span class="cl"><span class="c1">//# Set URL
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">config</span>: <span class="kt">AxiosRequestConfig</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">baseURL</span><span class="o">:</span> <span class="sb">`https://</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_BRANCH</span><span class="si">}</span><span class="sb">.becon-api.com`</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">axiosInstance</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//# Set Authorization
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">setAxiosHeader</span> <span class="o">=</span> <span class="p">(</span><span class="nx">accessToken</span>: <span class="kt">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">common</span><span class="p">.</span><span class="nx">Authorization</span> <span class="o">=</span> <span class="sb">`Bearer </span><span class="si">${</span><span class="nx">accessToken</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ===== Preprocessing ===== //
+</span></span></span><span class="line"><span class="cl"><span class="c1">//# Fulfilled Response (200번대 응답)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">onFulfilled</span> <span class="o">=</span> <span class="p">(</span><span class="nx">res</span>: <span class="kt">AxiosResponse</span><span class="p">)</span><span class="o">:</span> <span class="nx">AxiosResponse</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//# Rejected Response (200번대 외 응답)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">onRejected</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">err</span>: <span class="kt">AxiosError</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">AxiosResponse</span><span class="p">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">{</span> <span class="nx">config</span><span class="p">,</span> <span class="nx">response</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">err</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">config</span><span class="p">)</span> <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="c1">// [edge-case] 요청의 설정이 없을 시
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//## Access Token 만료 시
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="o">?</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">401</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">tokenInfoStr</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">TOKEN_INFO</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">tokenInfoStr</span><span class="p">)</span> <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="c1">// [edge-case] Local Storage에 정보가 없을 시
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">tokenInfo</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">accessToken</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">refreshToken</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">tokenInfoStr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 0. Refresh Token으로 새로운 Access Token 획득
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kr">const</span> <span class="nx">newAccessToken</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getAccessToken</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">refreshToken</span>: <span class="kt">tokenInfo.refreshToken</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="c1">// 1. 권한 부여 헤더의 Access Token 교체
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">setAxiosHeader</span><span class="p">(</span><span class="nx">newAccessToken</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="c1">// 2. Local Storage의 Access Token 교체
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">TOKEN_INFO</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">          <span class="p">...</span><span class="nx">tokenInfo</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">accessToken</span>: <span class="kt">newAccessToken</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">      <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="c1">// 3. 현재 요청의 Access Token 교체
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">config</span><span class="p">.</span><span class="nx">headers</span><span class="p">)</span> <span class="nx">config</span><span class="p">.</span><span class="nx">headers</span> <span class="o">=</span> <span class="p">{};</span> <span class="c1">// [edge-case] 요청에 헤더가 없을 시
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">      <span class="nx">config</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">Authorization</span> <span class="o">=</span> <span class="sb">`Bearer </span><span class="si">${</span><span class="nx">newAccessToken</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">axiosInstance</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span>: <span class="kt">unknown</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// [edge-case] Refresh Token 만료 시
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">logout</span><span class="p">({</span> <span class="nx">isExpired</span>: <span class="kt">true</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">onFulfilled</span><span class="p">,</span> <span class="nx">onRejected</span><span class="p">);</span>
+</span></span></code></pre></div></div>
 </details>
 <details>
 <summary>account/apis/index.ts</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">ID</span> <span class="o">=</span> <span class="s2">&#34;withbecon_id&#34;</span><span class="p">;</span>
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">TOKEN_INFO</span> <span class="o">=</span> <span class="s2">&#34;withbecon_token_info&#34;</span><span class="p">;</span>
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">EXPIRED</span> <span class="o">=</span> <span class="s2">&#34;withbecon_expired&#34;</span><span class="p">;</span>
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">INVALID</span> <span class="o">=</span> <span class="s2">&#34;withbecon_invalid&#34;</span><span class="p">;</span>
-
-<span class="cm">/** 이메일 로그인 */</span>
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">emailLogin</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">({</span>
-  <span class="nx">email</span><span class="p">,</span>
-  <span class="nx">password</span><span class="p">,</span>
-<span class="p">}</span><span class="o">:</span> <span class="p">{</span>
-  <span class="nx">email</span>: <span class="kt">string</span><span class="p">;</span>
-  <span class="nx">password</span>: <span class="kt">string</span><span class="p">;</span>
-<span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">post</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">result</span>: <span class="kt">TLogin</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&#34;/account/auth&#34;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">email</span><span class="p">,</span>
-    <span class="nx">password</span><span class="p">,</span>
-  <span class="p">});</span>
-  <span class="kr">const</span> <span class="nx">tokenInfo</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">accessToken</span>: <span class="kt">res.data.result.access_token</span><span class="p">,</span>
-    <span class="nx">refreshToken</span>: <span class="kt">res.data.result.refresh_token</span><span class="p">,</span>
-  <span class="p">};</span>
-  <span class="nx">setAxiosHeader</span><span class="p">(</span><span class="nx">tokenInfo</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">);</span>
-  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">ID</span><span class="p">,</span> <span class="nx">email</span><span class="p">);</span>
-  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">TOKEN_INFO</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">tokenInfo</span><span class="p">));</span>
-  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="cm">/** 휴대폰번호 로그인 */</span>
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">phoneNumberLogin</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">({</span>
-  <span class="nx">phone_number</span><span class="p">,</span>
-  <span class="nx">password</span><span class="p">,</span>
-<span class="p">}</span><span class="o">:</span> <span class="p">{</span>
-  <span class="nx">phone_number</span>: <span class="kt">string</span><span class="p">;</span>
-  <span class="nx">password</span>: <span class="kt">string</span><span class="p">;</span>
-<span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">post</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">result</span>: <span class="kt">TLogin</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(</span>
-    <span class="s2">&#34;/account/auth/phone&#34;</span><span class="p">,</span>
-    <span class="p">{</span>
-      <span class="nx">phone_number</span><span class="p">,</span>
-      <span class="nx">password</span><span class="p">,</span>
-    <span class="p">}</span>
-  <span class="p">);</span>
-  <span class="kr">const</span> <span class="nx">tokenInfo</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">accessToken</span>: <span class="kt">res.data.result.access_token</span><span class="p">,</span>
-    <span class="nx">refreshToken</span>: <span class="kt">res.data.result.refresh_token</span><span class="p">,</span>
-  <span class="p">};</span>
-  <span class="nx">setAxiosHeader</span><span class="p">(</span><span class="nx">tokenInfo</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">);</span>
-  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">ID</span><span class="p">,</span> <span class="nx">phone_number</span><span class="p">);</span>
-  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">TOKEN_INFO</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">tokenInfo</span><span class="p">));</span>
-  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="cm">/** 로그아웃 (query X) */</span>
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">logout</span> <span class="o">=</span> <span class="p">({</span>
-  <span class="nx">isExpired</span><span class="p">,</span>
-  <span class="nx">isInvalid</span><span class="p">,</span>
-<span class="p">}</span><span class="o">:</span> <span class="p">{</span>
-  <span class="nx">isExpired?</span>: <span class="kt">boolean</span><span class="p">;</span>
-  <span class="nx">isInvalid?</span>: <span class="kt">boolean</span><span class="p">;</span>
-<span class="p">}</span> <span class="o">=</span> <span class="p">{})</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">isExpired</span><span class="p">)</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">EXPIRED</span><span class="p">,</span> <span class="nx">EXPIRED</span><span class="p">);</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">isInvalid</span><span class="p">)</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">INVALID</span><span class="p">,</span> <span class="nx">INVALID</span><span class="p">);</span>
-  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="nx">TOKEN_INFO</span><span class="p">);</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">origin</span><span class="p">);</span>
-<span class="p">};</span>
-
-<span class="cm">/** 엑세스 토큰 조회 (query X) */</span>
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">getAccessToken</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">({</span>
-  <span class="nx">refreshToken</span><span class="p">,</span>
-<span class="p">}</span><span class="o">:</span> <span class="p">{</span>
-  <span class="nx">refreshToken</span>: <span class="kt">string</span><span class="p">;</span>
-<span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">post</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">access_token</span>: <span class="kt">string</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(</span>
-    <span class="s2">&#34;account/auth/refresh&#34;</span><span class="p">,</span>
-    <span class="p">{</span> <span class="nx">refresh_token</span>: <span class="kt">refreshToken</span> <span class="p">}</span>
-  <span class="p">);</span>
-  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">access_token</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="cm">/** 어카운트 정보 조회 */</span>
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">getAccount</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="kr">get</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">account</span>: <span class="kt">TAccount</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&#34;my/account&#34;</span><span class="p">);</span>
-  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">account</span><span class="p">;</span>
-<span class="p">};</span>
-</code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">ID</span> <span class="o">=</span> <span class="s2">&#34;withbecon_id&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">TOKEN_INFO</span> <span class="o">=</span> <span class="s2">&#34;withbecon_token_info&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">EXPIRED</span> <span class="o">=</span> <span class="s2">&#34;withbecon_expired&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">INVALID</span> <span class="o">=</span> <span class="s2">&#34;withbecon_invalid&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** 이메일 로그인 */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">emailLogin</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">email</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">password</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">email</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">password</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">post</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">result</span>: <span class="kt">TLogin</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&#34;/account/auth&#34;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">email</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">password</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">tokenInfo</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">accessToken</span>: <span class="kt">res.data.result.access_token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">refreshToken</span>: <span class="kt">res.data.result.refresh_token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setAxiosHeader</span><span class="p">(</span><span class="nx">tokenInfo</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">ID</span><span class="p">,</span> <span class="nx">email</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">TOKEN_INFO</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">tokenInfo</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** 휴대폰번호 로그인 */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">phoneNumberLogin</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">phone_number</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">password</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">phone_number</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">password</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">post</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">result</span>: <span class="kt">TLogin</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;/account/auth/phone&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">phone_number</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">password</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">tokenInfo</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">accessToken</span>: <span class="kt">res.data.result.access_token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">refreshToken</span>: <span class="kt">res.data.result.refresh_token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setAxiosHeader</span><span class="p">(</span><span class="nx">tokenInfo</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">ID</span><span class="p">,</span> <span class="nx">phone_number</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">TOKEN_INFO</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">tokenInfo</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** 로그아웃 (query X) */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">logout</span> <span class="o">=</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isExpired</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isInvalid</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isExpired?</span>: <span class="kt">boolean</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isInvalid?</span>: <span class="kt">boolean</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="o">=</span> <span class="p">{})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">isExpired</span><span class="p">)</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">EXPIRED</span><span class="p">,</span> <span class="nx">EXPIRED</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">isInvalid</span><span class="p">)</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">INVALID</span><span class="p">,</span> <span class="nx">INVALID</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="nx">TOKEN_INFO</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">origin</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** 엑세스 토큰 조회 (query X) */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">getAccessToken</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">refreshToken</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">refreshToken</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="nx">post</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">access_token</span>: <span class="kt">string</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;account/auth/refresh&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">refresh_token</span>: <span class="kt">refreshToken</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">access_token</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** 어카운트 정보 조회 */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">getAccount</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axiosInstance</span><span class="p">.</span><span class="kr">get</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">account</span>: <span class="kt">TAccount</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&#34;my/account&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">account</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div></div>
 </details>
 <h2 id="react-query" class="relative group">React Query <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#react-query" aria-label="Anchor">#</a></span></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">yarn add @tanstack/react-query @tanstack/react-query-devtools
-</code></pre></div><details>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn add @tanstack/react-query @tanstack/react-query-devtools
+</span></span></code></pre></div><details>
 <summary>index.tsx</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;root&#34;</span><span class="p">)</span> <span class="kr">as</span> <span class="nx">HTMLElement</span>
-<span class="p">);</span>
-<span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
-  <span class="p">&lt;</span><span class="nt">QueryClientProvider</span> <span class="na">client</span><span class="o">=</span><span class="p">{</span><span class="nx">queryClient</span><span class="p">}&gt;</span>
-    <span class="p">&lt;</span><span class="nt">App</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">ReactQueryDevtools</span> <span class="p">/&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">QueryClientProvider</span><span class="p">&gt;</span>
-<span class="p">);</span>
-</code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;root&#34;</span><span class="p">)</span> <span class="kr">as</span> <span class="nx">HTMLElement</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">QueryClientProvider</span> <span class="na">client</span><span class="o">=</span><span class="p">{</span><span class="nx">queryClient</span><span class="p">}&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">App</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ReactQueryDevtools</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">QueryClientProvider</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div></div>
 </details>
 <details>
 <summary>queryClient.tsx</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">generateQueryClient</span> <span class="o">=</span> <span class="p">()</span><span class="o">:</span> <span class="nx">QueryClient</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="k">new</span> <span class="nx">QueryClient</span><span class="p">({</span>
-    <span class="nx">defaultOptions</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">queries</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">suspense</span>: <span class="kt">true</span><span class="p">,</span>
-        <span class="nx">refetchOnWindowFocus</span>: <span class="kt">false</span><span class="p">,</span>
-        <span class="nx">retry</span>: <span class="kt">1</span><span class="p">,</span>
-        <span class="nx">onError</span>: <span class="kt">queryErrorHandler</span><span class="p">,</span>
-      <span class="p">},</span>
-      <span class="nx">mutations</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">onError</span>: <span class="kt">queryErrorHandler</span><span class="p">,</span>
-      <span class="p">},</span>
-    <span class="p">},</span>
-  <span class="p">});</span>
-<span class="p">};</span>
-
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">queryClient</span> <span class="o">=</span> <span class="nx">generateQueryClient</span><span class="p">();</span>
-</code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">generateQueryClient</span> <span class="o">=</span> <span class="p">()</span><span class="o">:</span> <span class="nx">QueryClient</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nx">QueryClient</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">defaultOptions</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">queries</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">suspense</span>: <span class="kt">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">refetchOnWindowFocus</span>: <span class="kt">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">retry</span>: <span class="kt">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">onError</span>: <span class="kt">queryErrorHandler</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">mutations</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">onError</span>: <span class="kt">queryErrorHandler</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">queryClient</span> <span class="o">=</span> <span class="nx">generateQueryClient</span><span class="p">();</span>
+</span></span></code></pre></div></div>
 </details>
 <details>
 <summary>queryErrorHandler.ts</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">queryErrorHandler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">err</span>: <span class="kt">unknown</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="sb">`withbecon server error -&gt; </span><span class="si">${</span><span class="nx">err</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">origin</span><span class="p">);</span>
-<span class="p">};</span>
-
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">queryErrorHandler</span><span class="p">;</span>
-</code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">queryErrorHandler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">err</span>: <span class="kt">unknown</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">alert</span><span class="p">(</span><span class="sb">`withbecon server error -&gt; </span><span class="si">${</span><span class="nx">err</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">origin</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">queryErrorHandler</span><span class="p">;</span>
+</span></span></code></pre></div></div>
 </details>
 
       </div>
@@ -728,19 +728,31 @@
             <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
             <div class="pt-3">
               <div id="disqus_thread"></div>
+
 <script>
-    
 
-    
 
-    (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = 'https://yuchans-hello-world-5.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
+
+
+
+
+
+(function() { 
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://yuchans-hello-world-5.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
 </script>
+
 <script id="dsq-count-scr" src="//yuchans-hello-world-5.disqus.com/count.js" async></script>
+
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
           </div>
