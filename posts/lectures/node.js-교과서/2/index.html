@@ -1,0 +1,1356 @@
+
+
+<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head>
+  <meta charset="utf-8" />
+  
+    <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>[Node.js 교과서] Node.js의 기능 &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[Node.js 교과서] Node.js의 기능 &middot; Yuchan&#39;s hello world!" />
+  
+  <meta name="description" content="The blog from a developer who loves &#39;Why?&#39; :)" />
+  
+  
+  
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/2/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.3552466d62941f854cc764b706ab5b2e3616325dd23313577f99ff83f095a09e436d4734656eb0ab9f588d93c251fdf636660a728c2f6ccb49697325daac8a6c.css"
+    integrity="sha512-NVJGbWKUH4VMx2S3BqtbLjYWMl3SMxNXf5n/g/CVoJ5DbUc0ZW6wq59YjZPCUf32NmYKcowvbMtJaXMl2qyKbA=="
+  />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
+  
+    
+    
+    
+  
+  
+    
+    
+  
+  
+  
+    
+    <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.15ae6e2c9b1ac24a9ccf40003fa689efb1a18db1ee9b73d780b01a6c31b150441415862513e93184f68fe385759e4698b8763cba6a0f79493c1fed99ad5868d4.js" integrity="sha512-Fa5uLJsawkqcz0AAP6aJ77GhjbHum3PXgLAabDGxUEQUFYYlE&#43;kxhPaP44V1nkaYuHY8umoPeUk8H&#43;2ZrVho1A==" data-copy="Copy" data-copied="Copied"></script>
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="[Node.js 교과서] Node.js의 기능" />
+<meta property="og:description" content="제 3장." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-04-05T00:00:00+00:00" /><meta property="og:site_name" content="Yuchan&#39;s hello world!" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Node.js 교과서] Node.js의 기능"/>
+<meta name="twitter:description" content="제 3장."/>
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "[Node.js 교과서] Node.js의 기능",
+    "headline": "[Node.js 교과서] Node.js의 기능",
+    
+    "abstract": "제 3장.",
+    "inLanguage": "en",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/lectures\/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C\/2\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Yuchan"
+    },
+    "copyrightYear": "2023",
+    "dateCreated": "2023-04-05T00:00:00\u002b00:00",
+    "datePublished": "2023-04-05T00:00:00\u002b00:00",
+    
+    "dateModified": "2023-04-05T00:00:00\u002b00:00",
+    
+    "keywords": ["node.js","Node.js 교과서","조현영(zerocho)"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1669"
+  }]
+  </script>
+
+
+  
+  <meta name="author" content="Yuchan" />
+  
+    
+      <link href="mailto:yuchanjeong0923@gmail.com" rel="me" />
+    
+      <link href="https://github.com/YuchanJeong" rel="me" />
+    
+      <link href="https://stackoverflow.com/users/16967930/yuchanjeong" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 dark:bg-neutral-600 focus:translate-y-0"
+        href="#main-content"
+        ><span class="font-bold ltr:pr-2 rtl:pl-2 text-primary-600 dark:text-primary-400"
+          >&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold sm:py-10 text-neutral-900 dark:text-neutral print:hidden">
+  <nav class="flex justify-between">
+    
+    <div>
+      
+        <a
+          class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+          rel="me"
+          href="/"
+          >Yuchan&rsquo;s hello world!</a
+        >
+      
+
+    </div>
+    
+    
+      <ul class="flex flex-col list-none ltr:text-right rtl:text-left sm:flex-row">
+        
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/posts/"
+                title="Posts"
+                >Posts</a
+              >
+            </li>
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/categories/"
+                title="Categories"
+                >Categories</a
+              >
+            </li>
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/tags/"
+                title="Tags"
+                >Tags</a
+              >
+            </li>
+          
+        
+        
+          <li class="ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+            <button
+              id="search-button"
+              class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+              title="Search (/)"
+            >
+              
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+          </li>
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        [Node.js 교과서] Node.js의 기능
+      </h1>
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2023-04-05 00:00:00 &#43;0000 UTC">5 April 2023</time>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 text-xs text-neutral-500 dark:text-neutral-400 ">
+      
+        
+          
+            <a
+              href="/categories/%5Clectures/"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >\lectures</a
+            >
+          
+        
+      
+        
+          
+            <a
+              href="/tags/node.js/"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >node.js</a
+            >
+          
+            <a
+              href="/tags/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Node.js 교과서</a
+            >
+          
+            <a
+              href="/tags/%EC%A1%B0%ED%98%84%EC%98%81zerocho/"
+              class="px-1 py-[1px] border rounded-md border-neutral-200 dark:border-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >조현영(zerocho)</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+      </div>
+    </header>
+    <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
+      
+        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10 print:hidden">
+            <details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700"
+  >
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600"
+  >
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#제-3장-노드-기능-알아보기">제 3장. 노드 기능 알아보기</a>
+      <ul>
+        <li><a href="#1-모듈">1) 모듈</a></li>
+        <li><a href="#2-노드-내장-객체">2) 노드 내장 객체</a></li>
+        <li><a href="#3-노드-내장-모듈">3) 노드 내장 모듈</a>
+          <ul>
+            <li><a href="#1-os">1. os</a></li>
+            <li><a href="#2-path">2. <code>path</code></a></li>
+            <li><a href="#3-url--searchparams">3. url &amp; <code>.searchParams</code></a></li>
+            <li><a href="#4-dns">4. dns</a></li>
+            <li><a href="#5-crypto">5. crypto</a></li>
+            <li><a href="#6-utils">6. utils</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-w-0 min-h-0 max-w-prose">
+        <h2 id="제-3장-노드-기능-알아보기" class="relative group">제 3장. 노드 기능 알아보기 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%a0%9c-3%ec%9e%a5-%eb%85%b8%eb%93%9c-%ea%b8%b0%eb%8a%a5-%ec%95%8c%ec%95%84%eb%b3%b4%ea%b8%b0" aria-label="Anchor">#</a></span></h2>
+<h3 id="1-모듈" class="relative group">1) 모듈 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%eb%aa%a8%eb%93%88" aria-label="Anchor">#</a></span></h3>
+<ul>
+<li>
+<p>CommonJS 모듈</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 파일 하나당 하나만 가능
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">데이터</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 파일 하나당 여러개 가능
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">exports</span><span class="p">.</span><span class="nx">변수</span> <span class="o">=</span> <span class="nx">데이터</span><span class="p">;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">데이터</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;경로&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// require.main은 실행한 파일
+</span></span></span><span class="line"><span class="cl"><span class="c1">// require.cache는 캐시된 모듈(한 번 이상 실행된 경우)
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 순환 참조 시 자동으로 빈 객체가 됨
+</span></span></span></code></pre></div></li>
+<li>
+<p>ECMAScript 모듈</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 이름 필수 X, 파일 하나당 하나만 가능
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="nx">데이터</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 이름 필수 O, 파일 하나당 여러개 가능
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="nx">데이터</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// export default
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">임의_데이터명</span> <span class="nx">from</span> <span class="s2">&#34;경로&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// export
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">데이터명</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;경로&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">데이터명</span> <span class="nx">as</span> <span class="nx">임의_데이터명</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;경로&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">임의_객체명</span> <span class="nx">from</span> <span class="s2">&#34;경로&#34;</span><span class="p">;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>CommonJS 모듈과 ES 모듈의 차이점</p>
+<table>
+<thead>
+<tr>
+<th>차이점</th>
+<th>CommonJS 모듈</th>
+<th>ES 모듈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>최상단 외 사용</td>
+<td>가능</td>
+<td>불가능</td>
+</tr>
+<tr>
+<td>확장자</td>
+<td>js, cjs</td>
+<td>js(package.json에 &ldquo;type&rdquo;: &ldquo;module&rdquo; 필요), mjs</td>
+</tr>
+<tr>
+<td>확장자 생략</td>
+<td>가능</td>
+<td>불가능</td>
+</tr>
+<tr>
+<td>인덱스 생략</td>
+<td>가능</td>
+<td>불가능</td>
+</tr>
+<tr>
+<td>top level await<sup>[1]</sup></td>
+<td>불가능</td>
+<td>가능</td>
+</tr>
+<tr>
+<td>dynamic import<sup>[2]</sup></td>
+<td>가능</td>
+<td>불가능</td>
+</tr>
+<tr>
+<td>__filename,<br/>__dirname</td>
+<td>사용 가능</td>
+<td>사용 불가능(__filename 대신 <code>import.meta.url</code> 사용)</td>
+</tr>
+</tbody>
+</table>
+<p><sup>[1]</sup> top level await: 최상위 스코프에서 await 바로 사용 가능</p>
+<p><sup>[2]</sup> dynamic import</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cjs" data-lang="cjs"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;...&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mjs" data-lang="mjs"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="kr">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="kr">await</span> <span class="kr">import</span><span class="p">(</span><span class="s2">&#34;...&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>*CommonJS 모듈과 ES 모듈 간의 호출은 대부분 가능</p>
+<p>*최상위 스코프의 this는 module.exports</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span> <span class="c1">// -&gt; {}
+</span></span></span></code></pre></div></li>
+</ul>
+<h3 id="2-노드-내장-객체" class="relative group">2) 노드 내장 객체 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%eb%85%b8%eb%93%9c-%eb%82%b4%ec%9e%a5-%ea%b0%9d%ec%b2%b4" aria-label="Anchor">#</a></span></h3>
+<ol>
+<li>global
+<ul>
+<li>노드의 전역 객체</li>
+<li>브라우저의 window(globalThis)와 같은 역할</li>
+<li>생략 가능</li>
+<li>global에 값을 넣을 경우 다른 파일에서도 사용 가능하지만 지양해야함</li>
+</ul>
+</li>
+<li>console<sup>*</sup>
+<ul>
+<li><code>console.time()</code>, <code>console.timeEnd()</code>: 시간 로깅</li>
+<li>console.log(): 평범한 로그</li>
+<li>console.table(): 테이블로 표시할 로그</li>
+<li>console.error(): 에러 로깅</li>
+<li>console.dir(): 객체 로깅</li>
+<li><code>console.trace()</code>: 호출스택 로깅(함수 내부에서 사용)</li>
+</ul>
+</li>
+<li>process<sup>*</sup>
+<ul>
+<li>현재 실행중인 노드 프로세스에 대한 정보를 담고있음</li>
+<li><code>process.cwd()</code>: 실행중인 노드 프로세스 경로</li>
+<li><code>process.env</code>: 시스템 환경 변수
+<ul>
+<li>노드에 직접 영향을 미치는 변수도 있음
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">NODE_OPTIONS</span><span class="o">=</span>--max-old-space-size<span class="o">=</span><span class="m">8192</span> <span class="c1"># 노드 옵션: 메모리 사이즈</span>
+</span></span><span class="line"><span class="cl"><span class="nv">UV_THREADPOOL_SIZE</span><span class="o">=</span><span class="m">8</span> <span class="c1"># 스레드 갯수</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li><code>process.nextTick(콜백)</code>: 이벤트 루프가 다른 콜백 함수보다 우선적으로 처리함</li>
+<li><code>process.exit(코드)</code>: 코드가 없거나 0이면 정상 종료(그 외는 비정상 종료)</li>
+</ul>
+</li>
+<li>기타 내장 객체
+<ul>
+<li>URL, URLSearchParams</li>
+<li>TextDecoder: Buffer를 문자열로 바꿈</li>
+<li>TextEncoder: 문자열을 Buffer로 바꿈</li>
+<li>WebAssembly: 웹어셈블리 처리 담당</li>
+<li>AbortController, FormData, fetch, Headers, Request, Response, Event, EventTarget: 브라우저에서 사용하던 API들</li>
+</ul>
+</li>
+</ol>
+<details>
+<summary><sup>*</sup>console example</summary>
+<div markdown=1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">string</span> <span class="o">=</span> <span class="s2">&#34;abc&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="kr">boolean</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">outside</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">inside</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">key</span><span class="o">:</span> <span class="s2">&#34;value&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s2">&#34;전체시간&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;평범한 로그입니다 쉼표로 구분해 여러 값을 찍을 수 있습니다&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="nx">number</span><span class="p">,</span> <span class="kr">boolean</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&#34;에러 메시지는 console.error에 담아주세요&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">table</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;제로&#34;</span><span class="p">,</span> <span class="nx">birth</span><span class="o">:</span> <span class="mi">1994</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;hero&#34;</span><span class="p">,</span> <span class="nx">birth</span><span class="o">:</span> <span class="mi">1988</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="p">{</span> <span class="nx">colors</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">depth</span><span class="o">:</span> <span class="mi">2</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="p">{</span> <span class="nx">colors</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">depth</span><span class="o">:</span> <span class="mi">1</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s2">&#34;시간측정&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">100000</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">timeEnd</span><span class="p">(</span><span class="s2">&#34;시간측정&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">b</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">trace</span><span class="p">(</span><span class="s2">&#34;에러 위치 추적&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">a</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">b</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">a</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">timeEnd</span><span class="p">(</span><span class="s2">&#34;전체시간&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">평범한 로그입니다 쉼표로 구분해 여러 값을 찍을 수 있습니다
+</span></span><span class="line"><span class="cl">abc <span class="m">1</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">에러 메시지는 console.error에 담아주세요
+</span></span><span class="line"><span class="cl">┌─────────┬────────┬───────┐
+</span></span><span class="line"><span class="cl">│ <span class="o">(</span>index<span class="o">)</span> │  name  │ birth │
+</span></span><span class="line"><span class="cl">├─────────┼────────┼───────┤
+</span></span><span class="line"><span class="cl">│    <span class="m">0</span>    │ <span class="s1">&#39;제로&#39;</span>  │ <span class="m">1994</span>  │
+</span></span><span class="line"><span class="cl">│    <span class="m">1</span>    │ <span class="s1">&#39;hero&#39;</span> │ <span class="m">1988</span>  │
+</span></span><span class="line"><span class="cl">└─────────┴────────┴───────┘
+</span></span><span class="line"><span class="cl"><span class="o">{</span> outside: <span class="o">{</span> inside: <span class="o">{</span> key: <span class="s1">&#39;value&#39;</span> <span class="o">}</span> <span class="o">}</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{</span> outside: <span class="o">{</span> inside: <span class="o">[</span>Object<span class="o">]</span> <span class="o">}</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">시간측정: 21.228ms
+</span></span><span class="line"><span class="cl">Trace: 에러 위치 추적
+</span></span><span class="line"><span class="cl">    at b <span class="o">(</span>/Users/yuchanjeong/Desktop/nodejs-book-master/ch3/3.4/console.js:29:11<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    at Object.&lt;anonymous&gt; <span class="o">(</span>/Users/yuchanjeong/Desktop/nodejs-book-master/ch3/3.4/console.js:32:1<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    at Module._compile <span class="o">(</span>node:internal/modules/cjs/loader:1155:14<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    at Object.Module._extensions..js <span class="o">(</span>node:internal/modules/cjs/loader:1209:10<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    at Module.load <span class="o">(</span>node:internal/modules/cjs/loader:1033:32<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    at Function.Module._load <span class="o">(</span>node:internal/modules/cjs/loader:868:12<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    at Function.executeUserEntryPoint <span class="o">[</span>as runMain<span class="o">]</span> <span class="o">(</span>node:internal/modules/run_main:81:12<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    at node:internal/main/run_main_module:22:47
+</span></span><span class="line"><span class="cl">전체시간: 34.557ms
+</span></span></code></pre></div></div>
+</details>
+<details>
+<summary><sup>*</sup>process example</summary>
+<div markdown=1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ node
+</span></span><span class="line"><span class="cl">&gt; process.version
+</span></span><span class="line"><span class="cl">v18.7.0 // 설치된 노드의 버전입니다
+</span></span><span class="line"><span class="cl">&gt; process.arch
+</span></span><span class="line"><span class="cl">x64 // 프로세서 아키텍처 정보입니다. arm, ia32 등의 값일 수도 있습니다
+</span></span><span class="line"><span class="cl">&gt; process.platform
+</span></span><span class="line"><span class="cl">win32 // 운영체제 플랫폼 정보입니다. linux나 darwin, freebsd 등의 값일 수도 있습니다
+</span></span><span class="line"><span class="cl">&gt; process.pid
+</span></span><span class="line"><span class="cl"><span class="m">14736</span> // 현재 프로세스의 아이디입니다. 프로세스를 여러 개 가질 때 구분할 수 있습니다
+</span></span><span class="line"><span class="cl">&gt; process.uptime<span class="o">()</span>
+</span></span><span class="line"><span class="cl">199.36 // 프로세스가 시작된 후 흐른 시간입니다. 단위는 초입니다
+</span></span><span class="line"><span class="cl">&gt; process.execPath
+</span></span><span class="line"><span class="cl">C:<span class="se">\P</span>rogram Files<span class="se">\n</span>odejs<span class="se">\n</span>ode.exe // 노드의 경로입니다
+</span></span><span class="line"><span class="cl">&gt; process.cwd<span class="o">()</span>
+</span></span><span class="line"><span class="cl">C:<span class="se">\U</span>sers<span class="se">\z</span>erocho // 현재 프로세스가 실행되는 위치입니다
+</span></span><span class="line"><span class="cl">&gt; process.cpuUsage<span class="o">()</span>
+</span></span><span class="line"><span class="cl"><span class="o">{</span> user: 390000, system: <span class="m">203000</span> <span class="o">}</span> // 현재 cpu 사용량입니다
+</span></span></code></pre></div></div>
+</details>
+<h3 id="3-노드-내장-모듈" class="relative group">3) 노드 내장 모듈 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%eb%85%b8%eb%93%9c-%eb%82%b4%ec%9e%a5-%eb%aa%a8%eb%93%88" aria-label="Anchor">#</a></span></h3>
+<h4 id="1-os" class="relative group">1. os <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-os" aria-label="Anchor">#</a></span></h4>
+<ul>
+<li>
+<p>운영체제의 정보를 담고있는 모듈</p>
+</li>
+<li>
+<details>
+<summary>list</summary>
+<div markdown=1>
+<p>• os.arch(): process.arch와 동일합니다.<br/>
+• os.platform(): process.platform과 동일합니다.<br/>
+• os.type(): 운영체제의 종류를 보여줍니다.<br/>
+• os.uptime(): 운영체제 부팅 이후 흐른 시간(초)을 보여줍니다.<br/>
+• os.hostname(): 컴퓨터의 이름을 보여줍니다.<br/>
+• os.release(): 운영체제의 버전을 보여줍니다.<br/>
+• os.homedir(): 홈 디렉터리 경로를 보여줍니다.<br/>
+• os.tmpdir(): 임시 파일 저장 경로를 보여줍니다.<br/>
+• <strong>os.cpus()</strong>: 컴퓨터의 코어 정보를 보여줍니다.<br/>
+• os.freemem(): 사용 가능한 메모리(RAM)를 보여줍니다.<br/>
+• os.totalmem(): 전체 메모리 용량을 보여줍니다.<br/></p>
+ </div>
+ </details>
+</li>
+</ul>
+<h4 id="2-path" class="relative group">2. <code>path</code> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-path" aria-label="Anchor">#</a></span></h4>
+<ul>
+<li>
+<p>폴더와 파일의 경로를 쉽게 조작하도록 도와주는 모듈</p>
+<table>
+<thead>
+<tr>
+<th>Properties &amp; Methods</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.sep</td>
+<td>경로의 구분자<br/><em>*WINDOW는 &ldquo;\&rdquo;, POSIX(LINUX &amp; MAC)는 &ldquo;/&rdquo;</em></td>
+</tr>
+<tr>
+<td>.delimiter</td>
+<td>환경 변수의 구분자 (process.env.PATH를 입력하면 여러 개의 경로가 이 구분자로 구분되어 있음)<br/><em>*WINDOW는 &ldquo;;&rdquo;, POSIX는 &ldquo;:&rdquo;</em></td>
+</tr>
+<tr>
+<td>.dirname(경로)</td>
+<td>파일이 위치한 폴더 경로</td>
+</tr>
+<tr>
+<td>.extname(경로)</td>
+<td>파일의 확장자</td>
+</tr>
+<tr>
+<td>.basename(경로, [확장자])</td>
+<td>파일의 이름<br/><em>*두 번째 인수를 넣을 경우 파일의 이름만 표시</em></td>
+</tr>
+<tr>
+<td>.parse(경로)</td>
+<td>파일 경로를 root, dir, base, ext, name으로 구분한 객체</td>
+</tr>
+<tr>
+<td>.format(객체)</td>
+<td>path.parse()의 반환값을 합친 경로</td>
+</tr>
+<tr>
+<td>.normalize(경로)</td>
+<td>&ldquo;/&ldquo;나 &ldquo;\&ldquo;를 잘못 사용했을 때 올바르게 변환한 경로</td>
+</tr>
+<tr>
+<td>.isAbsolute(경로)</td>
+<td>절대경로인지 여부</td>
+</tr>
+<tr>
+<td>.relative(기준경로, 목표경로)</td>
+<td>기준경로에서 목표경로로 가는 경로</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><code>path.join(경로, …)</code> vs <code>path.resolve(경로, …)</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;/a&#34;</span><span class="p">,</span> <span class="s2">&#34;/b&#34;</span><span class="p">,</span> <span class="s2">&#34;c&#34;</span><span class="p">);</span> <span class="cm">/* 결과: /a/b/c/ */</span>
+</span></span><span class="line"><span class="cl"><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">&#34;/a&#34;</span><span class="p">,</span> <span class="s2">&#34;/b&#34;</span><span class="p">,</span> <span class="s2">&#34;c&#34;</span><span class="p">);</span> <span class="cm">/* 결과: /b/c */</span>
+</span></span></code></pre></div></li>
+<li>
+<details>
+ <summary>example</summary>
+ <div markdown=1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">__filename</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;path.sep:&#39;</span><span class="p">,</span> <span class="nx">path</span><span class="p">.</span><span class="nx">sep</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;path.delimiter:&#39;</span><span class="p">,</span> <span class="nx">path</span><span class="p">.</span><span class="nx">delimiter</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;------------------------------&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;path.dirname():&#39;</span><span class="p">,</span> <span class="nx">path</span><span class="p">.</span><span class="nx">dirname</span><span class="p">(</span><span class="nx">string</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;path.extname():&#39;</span><span class="p">,</span> <span class="nx">path</span><span class="p">.</span><span class="nx">extname</span><span class="p">(</span><span class="nx">string</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;path.basename():&#39;</span><span class="p">,</span> <span class="nx">path</span><span class="p">.</span><span class="nx">basename</span><span class="p">(</span><span class="nx">string</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;path.basename - extname:&#39;</span><span class="p">,</span> <span class="nx">path</span><span class="p">.</span><span class="nx">basename</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="nx">path</span><span class="p">.</span><span class="nx">extname</span><span class="p">(</span><span class="nx">string</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;------------------------------&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;path.parse()&#39;</span><span class="p">,</span> <span class="nx">path</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">string</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;path.format():&#39;</span><span class="p">,</span> <span class="nx">path</span><span class="p">.</span><span class="nx">format</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">dir</span><span class="o">:</span> <span class="s1">&#39;C:\users\zerocho&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;path&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">ext</span><span class="o">:</span> <span class="s1">&#39;.js&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;path.normalize():&#39;</span><span class="p">,</span> <span class="nx">path</span><span class="p">.</span><span class="nx">normalize</span><span class="p">(</span><span class="s1">&#39;C://users\\zerocho\\path.js&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;------------------------------&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;path.isAbsolute(C:\):&#39;</span><span class="p">,</span> <span class="nx">path</span><span class="p">.</span><span class="nx">isAbsolute</span><span class="p">(</span><span class="s1">&#39;C:\&#39;));
+</span></span></span><span class="line"><span class="cl"><span class="s1">console.log(&#39;</span><span class="nx">path</span><span class="p">.</span><span class="nx">isAbsolute</span><span class="p">(.</span><span class="o">/</span><span class="nx">home</span><span class="p">)</span><span class="o">:</span><span class="s1">&#39;, path.isAbsolute(&#39;</span><span class="p">.</span><span class="o">/</span><span class="nx">home</span><span class="s1">&#39;));
+</span></span></span><span class="line"><span class="cl"><span class="s1">console.log(&#39;</span><span class="o">------------------------------</span><span class="s1">&#39;);
+</span></span></span><span class="line"><span class="cl"><span class="s1">console.log(&#39;</span><span class="nx">path</span><span class="p">.</span><span class="nx">relative</span><span class="p">()</span><span class="o">:</span><span class="s1">&#39;, path.relative(&#39;</span><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">users</span><span class="err">\</span><span class="nx">zerocho</span><span class="err">\</span><span class="nx">path</span><span class="p">.</span><span class="nx">js</span><span class="s1">&#39;, &#39;</span><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="s1">&#39;));
+</span></span></span><span class="line"><span class="cl"><span class="s1">console.log(&#39;</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">()</span><span class="o">:</span><span class="s1">&#39;, path.join(__dirname, &#39;</span><span class="p">..</span><span class="s1">&#39;, &#39;</span><span class="p">..</span><span class="s1">&#39;, &#39;</span><span class="o">/</span><span class="nx">users</span><span class="s1">&#39;, &#39;</span><span class="p">.</span><span class="s1">&#39;, &#39;</span><span class="o">/</span><span class="nx">zerocho</span><span class="s1">&#39;));
+</span></span></span><span class="line"><span class="cl"><span class="s1">console.log(&#39;</span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">()</span><span class="o">:</span><span class="s1">&#39;, path.resolve(__dirname, &#39;</span><span class="p">..</span><span class="s1">&#39;, &#39;</span><span class="nx">users</span><span class="s1">&#39;, &#39;</span><span class="p">.</span><span class="s1">&#39;, &#39;</span><span class="o">/</span><span class="nx">zerocho</span><span class="err">&#39;</span><span class="p">));</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">path.sep: <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>path.delimiter: <span class="p">;</span>
+</span></span><span class="line"><span class="cl">------------------------------
+</span></span><span class="line"><span class="cl">path.dirname<span class="o">()</span>: C:<span class="se">\U</span>sers<span class="se">\z</span>erocho
+</span></span><span class="line"><span class="cl">path.extname<span class="o">()</span>: .js
+</span></span><span class="line"><span class="cl">path.basename<span class="o">()</span>: path.js
+</span></span><span class="line"><span class="cl">path.basename - extname: path
+</span></span><span class="line"><span class="cl">------------------------------
+</span></span><span class="line"><span class="cl">path.parse<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  root:  <span class="s1">&#39;C:\&#39;</span>,
+</span></span><span class="line"><span class="cl">  dir:  <span class="s1">&#39;C:\Users\zerocho&#39;</span>,
+</span></span><span class="line"><span class="cl">  base:  <span class="s1">&#39;path.js&#39;</span>,
+</span></span><span class="line"><span class="cl">  ext:  <span class="s1">&#39;.js&#39;</span>,
+</span></span><span class="line"><span class="cl">  name:  <span class="s1">&#39;path&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">path.format<span class="o">()</span>: C:<span class="se">\u</span>sers<span class="se">\z</span>erocho<span class="se">\p</span>ath.js
+</span></span><span class="line"><span class="cl">path.normalize<span class="o">()</span>: C:<span class="se">\u</span>sers<span class="se">\z</span>erocho<span class="se">\p</span>ath.js
+</span></span><span class="line"><span class="cl">------------------------------
+</span></span><span class="line"><span class="cl">path.isAbsolute<span class="o">(</span>C:<span class="se">\)</span>: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">path.isAbsolute<span class="o">(</span>./home<span class="o">)</span>: <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">------------------------------
+</span></span><span class="line"><span class="cl">path.relative<span class="o">()</span>: ..<span class="se">\.</span>.<span class="se">\.</span>.
+</span></span><span class="line"><span class="cl">path.join<span class="o">()</span>: C:<span class="se">\U</span>sers<span class="se">\z</span>erocho
+</span></span><span class="line"><span class="cl">path.resolve<span class="o">()</span>: C:<span class="se">\z</span>erocho
+</span></span></code></pre></div> </div>
+ </details>
+</li>
+</ul>
+<h4 id="3-url--searchparams" class="relative group">3. url &amp; <code>.searchParams</code> <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-url--searchparams" aria-label="Anchor">#</a></span></h4>
+<ul>
+<li>
+<p>인터넷 주소를 쉽게 조작하도록 도와주는 모듈</p>
+</li>
+<li>
+<p>pathname만 있는 주소는 <code>new URL(pathname, host)</code>로 host를 두 번째 인수로 적어줘야 함</p>
+</li>
+<li>
+<p><code>.searchParams</code></p>
+<table>
+<thead>
+<tr>
+<th>Properties &amp; Methods</th>
+<th>Return or Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.getAll(키)</td>
+<td>키에 해당하는 모든 값</td>
+</tr>
+<tr>
+<td>.get(키)</td>
+<td>키에 해당하는 첫 번째 값</td>
+</tr>
+<tr>
+<td>.has(키)</td>
+<td>해당 키의 존재 여부</td>
+</tr>
+<tr>
+<td>.keys()</td>
+<td>모든 키를 포함한 iterator(반복자 객체)</td>
+</tr>
+<tr>
+<td>.values()</td>
+<td>모든 값를 포함한 iterator(반복자 객체)</td>
+</tr>
+<tr>
+<td>.append(키, 값)</td>
+<td>해당 키를 추가, 같은 키의 값이 있다면 유지하면서 하나 더 추가</td>
+</tr>
+<tr>
+<td>.set(키, 값)</td>
+<td>해당 키를 제거</td>
+</tr>
+<tr>
+<td>.toString()</td>
+<td>조작한 searchParams 객체를 다시 문자열로 만듦</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<details>
+<summary>example</summary>
+<div markdown=1>
+<img width="800px" src="/assets/lectures/Node.js 교과서/WHATWG.png" alt="https://thebook.io/080334/0122/"/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myURL</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URL</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;http://www.gilbut.co.kr/book/bookList.aspx?sercate1=001001000#anchor&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;new URL():&#34;</span><span class="p">,</span> <span class="nx">myURL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;url.format():&#34;</span><span class="p">,</span> <span class="nx">url</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">myURL</span><span class="p">));</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">new URL<span class="o">()</span>: URL <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  href: <span class="s1">&#39;http://www.gilbut.co.kr/book/bookList.aspx?sercate1=001001000#anchor&#39;</span>,
+</span></span><span class="line"><span class="cl">  origin: <span class="s1">&#39;http://www.gilbut.co.kr&#39;</span>,
+</span></span><span class="line"><span class="cl">  protocol: <span class="s1">&#39;http:&#39;</span>,
+</span></span><span class="line"><span class="cl">  username: <span class="s1">&#39;&#39;</span>,
+</span></span><span class="line"><span class="cl">  password: <span class="s1">&#39;&#39;</span>,
+</span></span><span class="line"><span class="cl">  host: <span class="s1">&#39;www.gilbut.co.kr&#39;</span>,
+</span></span><span class="line"><span class="cl">  hostname: <span class="s1">&#39;www.gilbut.co.kr&#39;</span>,
+</span></span><span class="line"><span class="cl">  port: <span class="s1">&#39;&#39;</span>,
+</span></span><span class="line"><span class="cl">  pathname: <span class="s1">&#39;/book/bookList.aspx&#39;</span>,
+</span></span><span class="line"><span class="cl">  search: <span class="s1">&#39;?sercate1=001001000&#39;</span>,
+</span></span><span class="line"><span class="cl">  searchParams: URLSearchParams <span class="o">{</span> <span class="s1">&#39;sercate1&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;001001000&#39;</span> <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">  hash: <span class="s1">&#39;#anchor&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">url.format<span class="o">()</span>: http://www.gilbut.co.kr/book/bookList.aspx?sercate1<span class="o">=</span>001001000#anchor
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myURL</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URL</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;http://www.gilbut.co.kr/?page=3&amp;limit=10&amp;category=nodejs&amp;category=javascript&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;searchParams:&#34;</span><span class="p">,</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;searchParams.getAll():&#34;</span><span class="p">,</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="s2">&#34;category&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;searchParams.get():&#34;</span><span class="p">,</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;limit&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;searchParams.has():&#34;</span><span class="p">,</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="s2">&#34;page&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;searchParams.keys():&#34;</span><span class="p">,</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">keys</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;searchParams.values():&#34;</span><span class="p">,</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">values</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">,</span> <span class="s2">&#34;es3&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">,</span> <span class="s2">&#34;es5&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">,</span> <span class="s2">&#34;es6&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;searchParams.toString():&#34;</span><span class="p">,</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="nx">myURL</span><span class="p">.</span><span class="nx">search</span> <span class="o">=</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">searchParams: URLSearchParams <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;page&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39; 3 &#39;</span>,
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;limit&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39; 10 &#39;</span>,
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;category&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;nodejs&#39;</span>,
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;category&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;javascript&#39;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">searchParams.getAll<span class="o">()</span>: <span class="o">[</span> <span class="s1">&#39;nodejs&#39;</span>, <span class="s1">&#39;javascript&#39;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">searchParams.get<span class="o">()</span>: <span class="m">10</span>
+</span></span><span class="line"><span class="cl">searchParams.has<span class="o">()</span>: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">searchParams.keys<span class="o">()</span>: URLSearchParams Iterator <span class="o">{</span> <span class="s1">&#39;page&#39;</span>, <span class="s1">&#39;limit&#39;</span>, <span class="s1">&#39;category&#39;</span>, <span class="s1">&#39;category&#39;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">searchParams.values<span class="o">()</span>: URLSearchParams Iterator <span class="o">{</span> <span class="s1">&#39; 3 &#39;</span>, <span class="s1">&#39; 10 &#39;</span>, <span class="s1">&#39;nodejs&#39;</span>, <span class="s1">&#39;javascript&#39;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span> <span class="s1">&#39;es 3 &#39;</span>, <span class="s1">&#39;es 5 &#39;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span> <span class="s1">&#39;es 6 &#39;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[]</span>
+</span></span><span class="line"><span class="cl">searchParams.toString<span class="o">()</span>: <span class="nv">page</span><span class="o">=</span>3<span class="p">&amp;</span><span class="nv">limit</span><span class="o">=</span>10<span class="p">&amp;</span><span class="nv">category</span><span class="o">=</span>nodejs<span class="p">&amp;</span><span class="nv">category</span><span class="o">=</span>javascript
+</span></span></code></pre></div></div>
+</details>
+</li>
+</ul>
+<h4 id="4-dns" class="relative group">4. dns <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-dns" aria-label="Anchor">#</a></span></h4>
+<ul>
+<li>
+<p>DNS를 다룰 때 사용하는 모듈</p>
+</li>
+<li>
+<p>도메인을 통해 IP나 DNS 레코드를 얻고자 할 때 사용</p>
+</li>
+<li>
+<p>레코드</p>
+<ul>
+<li>A(ipv4 주소), AAAA(ipv6 주소), NS(네임서버), SOA(도메인 정보), CNAME(별칭, 주로 www가 붙은 주소), MX(메일 서버)</li>
+</ul>
+</li>
+<li>
+<details>
+ <summary>example</summary>
+ <div markdown=1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">dns</span> <span class="nx">from</span> <span class="s2">&#34;dns/promises&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">ip</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">dns</span><span class="p">.</span><span class="nx">lookup</span><span class="p">(</span><span class="s2">&#34;gilbut.co.kr&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;IP&#34;</span><span class="p">,</span> <span class="nx">ip</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">dns</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">&#34;gilbut.co.kr&#34;</span><span class="p">,</span> <span class="s2">&#34;A&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;A&#34;</span><span class="p">,</span> <span class="nx">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">mx</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">dns</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">&#34;gilbut.co.kr&#34;</span><span class="p">,</span> <span class="s2">&#34;MX&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;MX&#34;</span><span class="p">,</span> <span class="nx">mx</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">cname</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">dns</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">&#34;www.gilbut.co.kr&#34;</span><span class="p">,</span> <span class="s2">&#34;CNAME&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;CNAME&#34;</span><span class="p">,</span> <span class="nx">cname</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">any</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">dns</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">&#34;gilbut.co.kr&#34;</span><span class="p">,</span> <span class="s2">&#34;ANY&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;ANY&#34;</span><span class="p">,</span> <span class="nx">any</span><span class="p">);</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> IP <span class="o">{</span> address: <span class="s1">&#39; 49 . 236 . 151 . 220 &#39;</span>, family: <span class="m">4</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"> A <span class="o">[</span> <span class="s1">&#39; 49 . 236 . 151 . 220 &#39;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"> MX <span class="o">[</span>
+</span></span><span class="line"><span class="cl">   <span class="o">{</span> exchange: <span class="s1">&#39;alt 2 .aspmx.l.google.com&#39;</span>, priority: <span class="m">5</span> <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">   <span class="o">{</span> exchange: <span class="s1">&#39;aspmx 3 .googlemail.com&#39;</span>, priority: <span class="m">10</span> <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">   <span class="o">{</span> exchange: <span class="s1">&#39;aspmx 2 .googlemail.com&#39;</span>, priority: <span class="m">10</span> <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">   <span class="o">{</span> exchange: <span class="s1">&#39;aspmx.l.google.com&#39;</span>, priority: <span class="m">1</span> <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">   <span class="o">{</span> exchange: <span class="s1">&#39;alt 1 .aspmx.l.google.com&#39;</span>, priority: <span class="m">5</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"> CNAME <span class="o">[</span> <span class="s1">&#39;slb- 1088813 .ncloudslb.com&#39;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"> ANY <span class="o">[</span>
+</span></span><span class="line"><span class="cl">   <span class="o">{</span> address: <span class="s1">&#39; 49 . 236 . 151 . 220 &#39;</span>, ttl: 14235, type: <span class="s1">&#39;A&#39;</span> <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">   <span class="o">{</span> value: <span class="s1">&#39;ns 1 - 2 .ns-ncloud.com&#39;</span>, type: <span class="s1">&#39;NS&#39;</span> <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">   <span class="o">{</span> value: <span class="s1">&#39;ns 1 - 1 .ns-ncloud.com&#39;</span>, type: <span class="s1">&#39;NS&#39;</span> <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">   <span class="o">{</span>
+</span></span><span class="line"><span class="cl">     nsname: <span class="s1">&#39;ns 1 - 1 .ns-ncloud.com&#39;</span>,
+</span></span><span class="line"><span class="cl">     hostmaster: <span class="s1">&#39;ns 1 - 2 .ns-ncloud.com&#39;</span>,
+</span></span><span class="line"><span class="cl">     serial: 32,
+</span></span><span class="line"><span class="cl">     refresh: 21600,
+</span></span><span class="line"><span class="cl">     retry: 1800,
+</span></span><span class="line"><span class="cl">     expire: 1209600,
+</span></span><span class="line"><span class="cl">     minttl: 300,
+</span></span><span class="line"><span class="cl">     type: <span class="s1">&#39;SOA&#39;</span>
+</span></span><span class="line"><span class="cl">   <span class="o">}</span>
+</span></span><span class="line"><span class="cl"> <span class="o">]</span>
+</span></span></code></pre></div> </div>
+ </details>
+</li>
+</ul>
+<h4 id="5-crypto" class="relative group">5. crypto <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-crypto" aria-label="Anchor">#</a></span></h4>
+<ul>
+<li>다양한 방식의 암호화를 도와주는 모듈</li>
+</ul>
+<ol>
+<li>
+<p>단방향 암호 - 암호화는 가능하지만 복호화는 불가능, <code>Hash</code></p>
+<ul>
+<li>
+<p>문자열을 고정된 길이의 다른 문자열로 바꾸는 방식</p>
+</li>
+<li>
+<p>출력 문자열이 같은 경우 충돌이 발생했다고 함</p>
+<table>
+<thead>
+<tr>
+<th>Methods</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.createHash(해시 알고리즘)</td>
+<td><del>md5</del>, <del>sha1</del>, <del>sha256</del>, sha512등의 사용할 해시 알고리즘을 넣음<br/><em>*보안 취약점이 많이 발견 되면서 현재는 pbkdf2, bcrypt, scrypt등의 방식을 사용</em><br/><em>*노드는 pbkdf2와 scrypt 지원</em></td>
+</tr>
+<tr>
+<td>-.update(문자열)</td>
+<td>변환할 문자열을 넣음</td>
+</tr>
+<tr>
+<td>-.digest(인코딩)</td>
+<td><code>base64</code>, hex, latin1등의 인코딩할 알고리즘을 넣음</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>pbkdf2</p>
+<ul>
+<li>기존 문자열에 salt(문자열)를 붙인 후 해시 알고리즘을 반복해서 적용하는 방식</li>
+<li>params: 비밀번호, salt, 반복 횟수, 출력 바이트, 해시 알고리즘</li>
+</ul>
+</li>
+<li>
+<details>
+<summary>example</summary>
+<div markdown=1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">crypto</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;crypto&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;base64:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">crypto</span><span class="p">.</span><span class="nx">createHash</span><span class="p">(</span><span class="s2">&#34;sha512&#34;</span><span class="p">).</span><span class="nx">update</span><span class="p">(</span><span class="s2">&#34;비밀번호&#34;</span><span class="p">).</span><span class="nx">digest</span><span class="p">(</span><span class="s2">&#34;base64&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span> <span class="c1">// 가장 짧음
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;hex:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">crypto</span><span class="p">.</span><span class="nx">createHash</span><span class="p">(</span><span class="s2">&#34;sha512&#34;</span><span class="p">).</span><span class="nx">update</span><span class="p">(</span><span class="s2">&#34;비밀번호&#34;</span><span class="p">).</span><span class="nx">digest</span><span class="p">(</span><span class="s2">&#34;hex&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;base64:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">crypto</span><span class="p">.</span><span class="nx">createHash</span><span class="p">(</span><span class="s2">&#34;sha512&#34;</span><span class="p">).</span><span class="nx">update</span><span class="p">(</span><span class="s2">&#34;다른 비밀번호&#34;</span><span class="p">).</span><span class="nx">digest</span><span class="p">(</span><span class="s2">&#34;base64&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">crypto</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;crypto&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// randomBytes이므로 매번 실행할 때마다 결과가 달라져서 salt를 잘 보관하고 있어야 비밀번호도 찾을 수 있음
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">crypto</span><span class="p">.</span><span class="nx">randomBytes</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">buf</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">salt</span> <span class="o">=</span> <span class="nx">buf</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s2">&#34;base64&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;salt:&#34;</span><span class="p">,</span> <span class="nx">salt</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">crypto</span><span class="p">.</span><span class="nx">pbkdf2</span><span class="p">(</span><span class="s2">&#34;비밀번호&#34;</span><span class="p">,</span> <span class="nx">salt</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="s2">&#34;sha512&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;password:&#34;</span><span class="p">,</span> <span class="nx">key</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s2">&#34;base64&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div></div>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>양방향 암호 - 암호화된 문자열을 복호화할 수 있음</p>
+<ul>
+<li>
+<p>대칭형 암호 - 같은 키</p>
+</li>
+<li>
+<p>비대칭 암호 - 다른 키 (e.g. https)</p>
+</li>
+<li>
+<details>
+<summary>example</summary>
+<div markdown=1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">crypto</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;crypto&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">algorithm</span> <span class="o">=</span> <span class="s2">&#34;aes-256-cbc&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="s2">&#34;abcdefghijklmnopqrstuvwxyz123456&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">iv</span> <span class="o">=</span> <span class="s2">&#34;1234567890123456&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">cipher</span> <span class="o">=</span> <span class="nx">crypto</span><span class="p">.</span><span class="nx">createCipheriv</span><span class="p">(</span><span class="nx">algorithm</span><span class="p">,</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">iv</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">cipher</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="s2">&#34;암호화할 문장&#34;</span><span class="p">,</span> <span class="s2">&#34;utf8&#34;</span><span class="p">,</span> <span class="s2">&#34;base64&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">result</span> <span class="o">+=</span> <span class="nx">cipher</span><span class="p">.</span><span class="kr">final</span><span class="p">(</span><span class="s2">&#34;base64&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;암호화:&#34;</span><span class="p">,</span> <span class="nx">result</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">decipher</span> <span class="o">=</span> <span class="nx">crypto</span><span class="p">.</span><span class="nx">createDecipheriv</span><span class="p">(</span><span class="nx">algorithm</span><span class="p">,</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">iv</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">result2</span> <span class="o">=</span> <span class="nx">decipher</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span> <span class="s2">&#34;base64&#34;</span><span class="p">,</span> <span class="s2">&#34;utf8&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">result2</span> <span class="o">+=</span> <span class="nx">decipher</span><span class="p">.</span><span class="kr">final</span><span class="p">(</span><span class="s2">&#34;utf8&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;복호화:&#34;</span><span class="p">,</span> <span class="nx">result2</span><span class="p">);</span>
+</span></span></code></pre></div></div>
+</details>
+</li>
+</ul>
+<p>*키는 AWS kms등으로 관리해 줘야 함</p>
+</li>
+</ol>
+<h4 id="6-utils" class="relative group">6. utils <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#6-utils" aria-label="Anchor">#</a></span></h4>
+<ul>
+<li>
+<p>각종 편의 기능을 모아둔 모듈</p>
+</li>
+<li>
+<p>.deprecate(콜백, 메시지): 함수가 deprecated 처리되었음을 알림</p>
+</li>
+<li>
+<p>.promisify(콜백): 콜백 패턴을 프로미스 패턴으로 변경(but 콜백이 (err, data) =&gt; {} 형식이어야 함)</p>
+</li>
+<li>
+<details>
+<summary>example</summary>
+<div markdown=1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">util</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;util&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">crypto</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;crypto&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">dontUseMe</span> <span class="o">=</span> <span class="nx">util</span><span class="p">.</span><span class="nx">deprecate</span><span class="p">((</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="s2">&#34;dontUseMe 함수는 deprecated되었으니 더 이상 사용하지 마세요!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">dontUseMe</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">randomBytesPromise</span> <span class="o">=</span> <span class="nx">util</span><span class="p">.</span><span class="nx">promisify</span><span class="p">(</span><span class="nx">crypto</span><span class="p">.</span><span class="nx">randomBytes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">randomBytesPromise</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">buf</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">buf</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s2">&#34;base64&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="m">3</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>node:7264<span class="o">)</span> DeprecationWarning: dontUseMe 함수는 deprecated되었으니 더 이상 사용하지 마세요!
+</span></span><span class="line"><span class="cl"><span class="o">(</span>Use <span class="sb">`</span>node --trace-deprecation ...<span class="sb">`</span> to show where the warning was created<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">60b4RQbrx1j130x4r95fpZac9lmcHyitqwAm8gKsHQKF8tcNhvcTfW031XaQqHlRKzaVkcENmIV25fDVs3SB7g</span><span class="o">==</span>
+</span></span></code></pre></div></div>
+</details>
+</li>
+</ul>
+<hr>
+<p>Reference.</p>
+<ul>
+<li><a href="https://nodejs.org/en/docs">https://nodejs.org/en/docs</a></li>
+<li><a href="https://thebook.io/080334/0122/">https://thebook.io/080334/0122/</a></li>
+<li><a href="https://nodejs.org/api/crypto.html">https://nodejs.org/api/crypto.html</a></li>
+<li><a href="https://www.npmjs.com/package/crypto-js">https://www.npmjs.com/package/crypto-js</a> (SHA512(단반향), AES(대칭), RSA(비대칭))</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  <div class="flex">
+    
+      
+      
+        
+        <img
+          class="w-24 h-24 !mt-0 !mb-0 ltr:mr-4 rtl:ml-4 rounded-full"
+          width="96"
+          height="96"
+          alt="Yuchan"
+          src="/img/MyLogo_hue585f61b28a74a671118de43150c5d63_71237_192x192_fill_q75_box_smart1.jpeg"
+        />
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] leading-3 text-neutral-500 dark:text-neutral-400 uppercase">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Yuchan
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">A developer who loves &lsquo;Why?&rsquo; :)</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:yuchanjeong0923@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/YuchanJeong"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://stackoverflow.com/users/16967930/yuchanjeong"
+          target="_blank"
+          aria-label="Stack-Overflow"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group" href="/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/1/">
+              <span
+                class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >[Node.js 교과서] Node.js란</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-04-02 00:00:00 &#43;0000 UTC">2 April 2023</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+        
+          <div class="pt-3">
+            <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+            <div class="pt-3">
+              <div id="disqus_thread"></div>
+
+<script>
+
+
+
+
+
+
+
+(function() { 
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://yuchans-hello-world-5.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<script id="dsq-count-scr" src="//yuchans-hello-world-5.disqus.com/count.js" async></script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+          </div>
+        
+      
+    </footer>
+  </article>
+
+        
+          <div
+            class="absolute top-[100vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
+          >
+            <a
+              href="#the-top"
+              class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5.5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
+        
+      </main><footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2021 Yuchan&rsquo;s hello world!
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    
+    
+      <div
+        class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-14 rtl:ml-14"
+      >
+        <button
+          id="appearance-switcher"
+          class="w-12 h-12 "
+          type="button"
+          title="Switch to dark appearance"
+        >
+          <span class="inline dark:hidden">
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+</span>
+          <span class="hidden dark:inline">
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+</span>
+        </button>
+      </div>
+    
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="fixed inset-0 z-50 flex flex-col p-4 sm:p-6 md:p-[10vh] lg:p-[12vh] w-screen h-screen cursor-default bg-neutral-500/50 backdrop-blur-sm dark:bg-neutral-900/50 invisible"
+  data-url="https://yuchanjeong.github.io/"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg border-neutral-200 top-20 bg-neutral dark:bg-neutral-800 dark:border-neutral-700"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-transparent focus:outline-2"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

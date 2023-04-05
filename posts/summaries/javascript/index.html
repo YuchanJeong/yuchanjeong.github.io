@@ -106,7 +106,7 @@
     "keywords": ["javascript"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2746"
+    "wordCount": "2758"
   }]
   </script>
 
@@ -937,19 +937,27 @@
 </thead>
 <tbody>
 <tr>
-<td>setTimeout(함수, ms)</td>
-<td>일정 시간 후 함수 실핼</td>
+<td>setImmediate(콜백)</td>
+<td>즉시 함수 실행<br/><em>*setTimeout(콜백, 0) 사용은 지양</em></td>
 </tr>
 <tr>
-<td>setInterval(함수, ms)</td>
+<td>setTimeout(콜백, ms)</td>
+<td>일정 시간 후 함수 실행</td>
+</tr>
+<tr>
+<td>setInterval(콜백, ms)</td>
 <td>일정 시간 마다 함수 실행</td>
 </tr>
 <tr>
-<td>clearTimeout(변수)</td>
+<td>clearImmediate(타이머)</td>
+<td>해당 Immediate 함수를 종료</td>
+</tr>
+<tr>
+<td>clearTimeout(타이머)</td>
 <td>해당 Timeout 함수를 종료</td>
 </tr>
 <tr>
-<td>clearInterval(변수)</td>
+<td>clearInterval(타이머)</td>
 <td>해당 Interval 함수를 종료</td>
 </tr>
 </tbody>

@@ -15,8 +15,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>[Node.js 교과서] About Node.js & Javascript Basic &middot; Yuchan&#39;s hello world!</title>
-    <meta name="title" content="[Node.js 교과서] About Node.js & Javascript Basic &middot; Yuchan&#39;s hello world!" />
+  <title>[Node.js 교과서] Node.js란 &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[Node.js 교과서] Node.js란 &middot; Yuchan&#39;s hello world!" />
   
   <meta name="description" content="The blog from a developer who loves &#39;Why?&#39; :)" />
   
@@ -69,7 +69,7 @@
   
   
   
-  <meta property="og:title" content="[Node.js 교과서] About Node.js &amp; Javascript Basic" />
+  <meta property="og:title" content="[Node.js 교과서] Node.js란" />
 <meta property="og:description" content="제 1장." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/1/" /><meta property="article:section" content="posts" />
@@ -78,7 +78,7 @@
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[Node.js 교과서] About Node.js &amp; Javascript Basic"/>
+<meta name="twitter:title" content="[Node.js 교과서] Node.js란"/>
 <meta name="twitter:description" content="제 1장."/>
 
   
@@ -87,8 +87,8 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "[Node.js 교과서] About Node.js \u0026 Javascript Basic",
-    "headline": "[Node.js 교과서] About Node.js \u0026 Javascript Basic",
+    "name": "[Node.js 교과서] Node.js란",
+    "headline": "[Node.js 교과서] Node.js란",
     
     "abstract": "제 1장.",
     "inLanguage": "en",
@@ -106,7 +106,7 @@
     "keywords": ["node.js","Node.js 교과서","조현영(zerocho)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "523"
+    "wordCount": "518"
   }]
   </script>
 
@@ -231,7 +231,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        [Node.js 교과서] About Node.js & Javascript Basic
+        [Node.js 교과서] Node.js란
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -333,14 +333,10 @@
         <li><a href="#1-노드의-정의">1) 노드의 정의</a></li>
         <li><a href="#2-노드의-특성">2) 노드의 특성</a></li>
         <li><a href="#3-노드로-만든-서버">3) 노드로 만든 서버</a></li>
+        <li><a href="#4-콜-스택과-이벤트-루프">4) 콜 스택과 이벤트 루프</a></li>
       </ul>
     </li>
-    <li><a href="#제-2장-javascript-기본">제 2장. Javascript 기본</a>
-      <ul>
-        <li><a href="#1-콜-스택과-이벤트-루프">1) 콜 스택과 이벤트 루프</a></li>
-        <li><a href="#2-js-기본-문법">2) JS 기본 문법</a></li>
-      </ul>
-    </li>
+    <li><a href="#제-2장-javascript-기초">제 2장. Javascript 기초</a></li>
     <li><a href="#부록">부록</a>
       <ul>
         <li><a href="#cli">CLI</a></li>
@@ -428,8 +424,7 @@
 </tbody>
 </table>
 <p>*CPU 작업을 위해 AWS Lamda, Google Cloud Functions 같은 별도 서비스 사용 권장</p>
-<h2 id="제-2장-javascript-기본" class="relative group">제 2장. Javascript 기본 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%a0%9c-2%ec%9e%a5-javascript-%ea%b8%b0%eb%b3%b8" aria-label="Anchor">#</a></span></h2>
-<h3 id="1-콜-스택과-이벤트-루프" class="relative group">1) 콜 스택과 이벤트 루프 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ec%bd%9c-%ec%8a%a4%ed%83%9d%ea%b3%bc-%ec%9d%b4%eb%b2%a4%ed%8a%b8-%eb%a3%a8%ed%94%84" aria-label="Anchor">#</a></span></h3>
+<h3 id="4-콜-스택과-이벤트-루프" class="relative group">4) 콜 스택과 이벤트 루프 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-%ec%bd%9c-%ec%8a%a4%ed%83%9d%ea%b3%bc-%ec%9d%b4%eb%b2%a4%ed%8a%b8-%eb%a3%a8%ed%94%84" aria-label="Anchor">#</a></span></h3>
 <ul>
 <li>
 <p>콜 스택</p>
@@ -480,7 +475,7 @@
 <p><sup>[4]</sup> 마이크로 태스크: <code>process.nextTick</code>, <code>Promises</code>, queueMicrotask(f), MutationObserver</p>
 <p>*백그라운드와 태스크 큐는 자바스크립트가 아님</p>
 <p>*프로미스 내부는 동기, then/catch/finally는 비동기</p>
-<h3 id="2-js-기본-문법" class="relative group">2) JS 기본 문법 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-js-%ea%b8%b0%eb%b3%b8-%eb%ac%b8%eb%b2%95" aria-label="Anchor">#</a></span></h3>
+<h2 id="제-2장-javascript-기초" class="relative group">제 2장. Javascript 기초 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%a0%9c-2%ec%9e%a5-javascript-%ea%b8%b0%ec%b4%88" aria-label="Anchor">#</a></span></h2>
 <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
   <span class="ltr:pr-3 rtl:pl-3 text-primary-400">
     
@@ -676,6 +671,28 @@
           
         </span>
         <span>
+          
+            <a class="flex text-right group" href="/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/2/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >[Node.js 교과서] Node.js의 기능</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-04-05 00:00:00 &#43;0000 UTC">5 April 2023</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>
