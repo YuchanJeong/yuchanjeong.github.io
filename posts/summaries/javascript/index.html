@@ -106,7 +106,7 @@
     "keywords": ["javascript"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2627"
+    "wordCount": "2746"
   }]
   </script>
 
@@ -1432,13 +1432,60 @@
 </ul>
 <h3 id="7-map--set" class="relative group">7. Map &amp; Set <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#7-map--set" aria-label="Anchor">#</a></span></h3>
 <ul>
-<li>Map
+<li>
+<p>Map</p>
 <ul>
-<li>객체와 유사한 자료구조</li>
-<li><code>for (const [key, value] of map)</code></li>
+<li>
+<p>객체와 유사한 자료구조</p>
+</li>
+<li>
+<p>symbol이나 string이 아닌 key 사용 가능</p>
+</li>
+<li>
+<p><code>for (const [key, value] of map)</code></p>
+</li>
+<li>
+<p>WeakMap</p>
+<ul>
+<li>
+<p>WeakMap의 key 외에 참조가 없는 객체를 가비지 컬렉팅의 대상으로 만듦</p>
+</li>
+<li>
+<p>원시형 데이터를 key로 사용 못함</p>
+</li>
+<li>
+<p>반복작업 및 반복자 객체 반환 메서드를 사용 못함</p>
+</li>
+<li>
+<details>
+<summary>example</summary>
+<div markdown=1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;adw&#34;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">29</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">userMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">userWeakMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WeakMap</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">userMap</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="p">{</span> <span class="nx">married</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="nx">userWeakMap</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="p">{</span> <span class="nx">married</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">user</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span> <span class="c1">// -&gt; null
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">userMap</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">user</span><span class="p">));</span> <span class="c1">// -&gt; undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">userMap</span><span class="p">.</span><span class="nx">size</span><span class="p">);</span> <span class="c1">// -&gt; 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">userWeakMap</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">user</span><span class="p">));</span> <span class="c1">// -&gt; undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">userWeakMap</span><span class="p">.</span><span class="nx">size</span><span class="p">);</span> <span class="c1">// -&gt; undefined
+</span></span></span></code></pre></div></div>
+</details>
+</li>
 </ul>
 </li>
-<li>Set
+</ul>
+</li>
+<li>
+<p>Set</p>
 <ul>
 <li>배열과 유사한 자료구조</li>
 <li>중복 요소를 가질 수 없음</li>
@@ -1458,7 +1505,7 @@
 <tbody>
 <tr>
 <td>.size</td>
-<td>map&amp;set</td>
+<td>map, set</td>
 <td>속성/요소의 갯수</td>
 </tr>
 <tr>
@@ -1478,23 +1525,38 @@
 </tr>
 <tr>
 <td>.has(key/item)</td>
-<td>map&amp;set</td>
+<td>map, set</td>
 <td>해당 속성/요소 존재 여부 확인</td>
 </tr>
 <tr>
 <td>.delete(key/item)</td>
-<td>map&amp;set</td>
+<td>map, set</td>
 <td>해당 속성/요소 삭제</td>
 </tr>
 <tr>
 <td>.clear()</td>
-<td>map&amp;set</td>
+<td>map, set</td>
 <td>모든 속성/요소 삭제</td>
 </tr>
 <tr>
 <td>.forEach()</td>
-<td>map&amp;set</td>
+<td>map, set</td>
 <td>모든 속성/요소 삭제</td>
+</tr>
+<tr>
+<td>.keys()</td>
+<td>map</td>
+<td>key를 삽입한 순서대로 가지고 있는 iterator(반복자 객체) 반환</td>
+</tr>
+<tr>
+<td>.values()</td>
+<td>map</td>
+<td>value를 삽입한 순서대로 가지고 있는 iterator(반복자 객체) 반환</td>
+</tr>
+<tr>
+<td>.entries()</td>
+<td>map</td>
+<td>[key, value]를 삽입한 순서대로 가지고 있는 iterator(반복자 객체) 반환</td>
 </tr>
 </tbody>
 </table>
