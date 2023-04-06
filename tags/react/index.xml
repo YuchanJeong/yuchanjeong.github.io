@@ -14,7 +14,7 @@
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/work/5/</guid>
-      <description>배경 # 새로 진행하고 있는 B2B 프로젝트에 글로벌 진출 기회가 생겨서 다국어 처리를 할 필요가 생겼다.</description>
+      <description>배경 #새로 진행하고 있는 B2B 프로젝트에 글로벌 진출 기회가 생겨서 다국어 처리를 할 필요가 생겼다.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/work/4/</guid>
-      <description>Axios Instance # base url 설정, 헤더에 액세스 토큰 포함, 액세스 토큰 만료 시 재발급 그리고 리프레시 토큰 만료 시 로그아웃을 axiosInstance를 통해 공통 설정으로 처리했다.</description>
+      <description>Axios Instance #base url 설정, 헤더에 액세스 토큰 포함, 액세스 토큰 만료 시 재발급 그리고 리프레시 토큰 만료 시 로그아웃을 axiosInstance를 통해 공통 설정으로 처리했다.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
       <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/work/3/</guid>
-      <description>코드 스플리팅 # 리액트에서 활용 가능한 여러 방식의 코드 스플리팅이 있지만 우선 회사의 다른 프로젝트에서 사용하고 있는 loadable component를 활용한 페이지(라우팅) 기반의 코드 스플리팅만 적용 했다.</description>
+      <description>코드 스플리팅 #리액트에서 활용 가능한 여러 방식의 코드 스플리팅이 있지만 우선 회사의 다른 프로젝트에서 사용하고 있는 loadable component를 활용한 페이지(라우팅) 기반의 코드 스플리팅만 적용 했다.</description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@
       <pubDate>Fri, 11 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/work/2/</guid>
-      <description>배경 # 다른 팀원들이 기존 업무로 바빴기 때문에 신규 B2B 프로젝트에 나만 우선 투입되었다.</description>
+      <description>배경 #다른 팀원들이 기존 업무로 바빴기 때문에 신규 B2B 프로젝트에 나만 우선 투입되었다.</description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@
       <pubDate>Sat, 05 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/posts/work/1/</guid>
-      <description>배경 # 제품 상세페이지의 제품 이미지 바로 아래에 해당 제품의 평균 별점이 보이면 좋겠다는 의견이 나와서 이를 반영하기로 했다.</description>
+      <description>배경 #제품 상세페이지의 제품 이미지 바로 아래에 해당 제품의 평균 별점이 보이면 좋겠다는 의견이 나와서 이를 반영하기로 했다.</description>
     </item>
     
   </channel>
