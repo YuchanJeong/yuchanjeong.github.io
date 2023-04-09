@@ -106,7 +106,7 @@
     "keywords": ["node.js","Node.js 교과서","조현영(zerocho)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "3260"
+    "wordCount": "3266"
   }]
   </script>
 
@@ -577,11 +577,11 @@ Trace: 에러 위치 추적
 </thead>
 <tbody>
 <tr>
-<td>process.cwd()</td>
+<td><code>process.cwd()</code></td>
 <td>실행중인 노드 프로세스 경로</td>
 </tr>
 <tr>
-<td>process.env</td>
+<td><code>process.env</code></td>
 <td>시스템 환경 변수<br/><em>*노드에 직접 영향을 미치는 변수도 있음</em><br/>ㅤ<em>NODE_OPTIONS=&ndash;max-old-space-size=8192 (노드 옵션: 메모리 사이즈)</em><br/>ㅤ<em>UV_THREADPOOL_SIZE=8 (스레드 갯수)</em></td>
 </tr>
 <tr>
@@ -662,7 +662,7 @@ C:<span class="se">\U</span>sers<span class="se">\z</span>erocho // 현재 프�
 <p>os.tmpdir(): 임시 파일 저장 경로를 보여줍니다.</p>
 </li>
 <li>
-<p><strong>os.cpus()</strong>: 컴퓨터의 코어 정보를 보여줍니다.</p>
+<p>os.cpus(): 컴퓨터의 코어 정보를 보여줍니다.</p>
 </li>
 <li>
 <p>os.freemem(): 사용 가능한 메모리(RAM)를 보여줍니다.</p>
@@ -681,10 +681,13 @@ C:<span class="se">\U</span>sers<span class="se">\z</span>erocho // 현재 프�
 <p>폴더와 파일의 경로를 쉽게 조작하도록 도와주는 모듈</p>
 </li>
 <li>
+<p><code>./</code>(상대 경로) vs <code>/</code>(절대 경로)</p>
+</li>
+<li>
 <p><code>path.join(경로, …)</code> vs <code>path.resolve(경로, …)</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;/a&#34;</span><span class="p">,</span> <span class="s2">&#34;/b&#34;</span><span class="p">,</span> <span class="s2">&#34;c&#34;</span><span class="p">);</span> <span class="cm">/* 결과: /a/b/c/ */</span>
-<span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">&#34;/a&#34;</span><span class="p">,</span> <span class="s2">&#34;/b&#34;</span><span class="p">,</span> <span class="s2">&#34;c&#34;</span><span class="p">);</span> <span class="cm">/* 결과: /b/c */</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;/a&#34;</span><span class="p">,</span> <span class="s2">&#34;/b&#34;</span><span class="p">,</span> <span class="s2">&#34;c&#34;</span><span class="p">,</span> <span class="s2">&#34;..&#34;</span><span class="p">);</span> <span class="c1">// /a/b
+</span><span class="c1"></span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">&#34;/a&#34;</span><span class="p">,</span> <span class="s2">&#34;/b&#34;</span><span class="p">,</span> <span class="s2">&#34;c&#34;</span><span class="p">);</span> <span class="c1">// /b/c -&gt; 상대경로와 절대경로를 구분
+</span></code></pre></div></li>
 </ul>
 <table>
 <thead>
@@ -1589,7 +1592,7 @@ end : 저는 조금씩 조금씩 나눠서 전달됩니다. 나눠진 조각을 
 </tr>
 <tr>
 <td><code>fs.stat(경로)</code></td>
-<td>파일/경로 정보 확인</td>
+<td>파일/폴더 정보 확인</td>
 </tr>
 </tbody>
 </table>
