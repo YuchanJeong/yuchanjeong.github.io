@@ -106,7 +106,7 @@
     "keywords": ["node.js","Node.js 교과서","조현영(zerocho)"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2228"
+    "wordCount": "3215"
   }]
   </script>
 
@@ -345,7 +345,17 @@
             <li><a href="#9-기타-모듈">9. 기타 모듈</a></li>
           </ul>
         </li>
-        <li><a href="#4-fs-">4) fs (●●●)</a></li>
+        <li><a href="#4-fs-">4) fs (●●●)</a>
+          <ul>
+            <li><a href="#1-비동기-메서드">1. 비동기 메서드</a></li>
+            <li><a href="#2-동기-메서드">2. 동기 메서드</a></li>
+            <li><a href="#3-비동기-메서드로-순서-유지">3. 비동기 메서드로 순서 유지</a></li>
+            <li><a href="#4-버퍼">4. 버퍼</a></li>
+            <li><a href="#5-스트림">5. 스트림</a></li>
+            <li><a href="#6-파이프">6. 파이프</a></li>
+            <li><a href="#7-기타-fs-메서드">7. 기타 fs 메서드</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -820,11 +830,15 @@
 </tr>
 <tr>
 <td>.searchParams.set(키, 값)</td>
+<td>해당 키를 추가, 같은 키의 값이 있다면 제거하면서 추가</td>
+</tr>
+<tr>
+<td>.searchParams.delete(키)</td>
 <td>해당 키를 제거</td>
 </tr>
 <tr>
 <td>.searchParams.toString()</td>
-<td>조작한 searchParams 객체를 다시 문자열로 만듦</td>
+<td>searchParams 객체를 다시 문자열로 만듦</td>
 </tr>
 </tbody>
 </table>
@@ -857,7 +871,9 @@
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myURL</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URL</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">&#34;http://www.gilbut.co.kr/?page=3&amp;limit=10&amp;category=nodejs&amp;category=javascript&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;searchParams:&#34;</span><span class="p">,</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;searchParams.getAll():&#34;</span><span class="p">,</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="s2">&#34;category&#34;</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;searchParams.get():&#34;</span><span class="p">,</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;limit&#34;</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;searchParams.has():&#34;</span><span class="p">,</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="s2">&#34;page&#34;</span><span class="p">));</span>
@@ -868,10 +884,8 @@
 </span></span><span class="line"><span class="cl"><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">,</span> <span class="s2">&#34;es3&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">,</span> <span class="s2">&#34;es5&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">,</span> <span class="s2">&#34;es6&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myURL</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="s2">&#34;filter&#34;</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">
@@ -882,14 +896,18 @@
 </span></span><span class="line"><span class="cl">  <span class="s1">&#39;limit&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39; 10 &#39;</span>,
 </span></span><span class="line"><span class="cl">  <span class="s1">&#39;category&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;nodejs&#39;</span>,
 </span></span><span class="line"><span class="cl">  <span class="s1">&#39;category&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;javascript&#39;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">searchParams.getAll<span class="o">()</span>: <span class="o">[</span> <span class="s1">&#39;nodejs&#39;</span>, <span class="s1">&#39;javascript&#39;</span> <span class="o">]</span>
 </span></span><span class="line"><span class="cl">searchParams.get<span class="o">()</span>: <span class="m">10</span>
 </span></span><span class="line"><span class="cl">searchParams.has<span class="o">()</span>: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">searchParams.keys<span class="o">()</span>: URLSearchParams Iterator <span class="o">{</span> <span class="s1">&#39;page&#39;</span>, <span class="s1">&#39;limit&#39;</span>, <span class="s1">&#39;category&#39;</span>, <span class="s1">&#39;category&#39;</span> <span class="o">}</span>
 </span></span><span class="line"><span class="cl">searchParams.values<span class="o">()</span>: URLSearchParams Iterator <span class="o">{</span> <span class="s1">&#39; 3 &#39;</span>, <span class="s1">&#39; 10 &#39;</span>, <span class="s1">&#39;nodejs&#39;</span>, <span class="s1">&#39;javascript&#39;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="o">[</span> <span class="s1">&#39;es 3 &#39;</span>, <span class="s1">&#39;es 5 &#39;</span> <span class="o">]</span>
 </span></span><span class="line"><span class="cl"><span class="o">[</span> <span class="s1">&#39;es 6 &#39;</span> <span class="o">]</span>
 </span></span><span class="line"><span class="cl"><span class="o">[]</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">searchParams.toString<span class="o">()</span>: <span class="nv">page</span><span class="o">=</span>3<span class="p">&amp;</span><span class="nv">limit</span><span class="o">=</span>10<span class="p">&amp;</span><span class="nv">category</span><span class="o">=</span>nodejs<span class="p">&amp;</span><span class="nv">category</span><span class="o">=</span>javascript
 </span></span></code></pre></div></div>
 </details>
@@ -971,16 +989,16 @@
 </thead>
 <tbody>
 <tr>
-<td>.createHash(해시 알고리즘)</td>
-<td><del>md5</del>, <del>sha1</del>, <del>sha256</del>, sha512등의 사용할 해시 알고리즘을 넣음<br/><em>*보안 취약점이 많이 발견 되면서 현재는 pbkdf2, bcrypt, scrypt등의 방식을 사용</em><br/><em>*노드는 pbkdf2와 scrypt 지원</em></td>
+<td>crypto.createHash(해시 알고리즘)</td>
+<td><del>md5</del>, <del>sha1</del>, <del>sha256</del>, sha512등의 사용할 해시 알고리즘을 넣음<br/><em>*보안 취약점이 많이 발견 되면서 현재는 pbkdf2, bcrypt, scrypt등의 방식을 사용</em><br/><em>*이 중 노드는 pbkdf2와 scrypt만 지원</em></td>
 </tr>
 <tr>
-<td>-.update(문자열)</td>
+<td>.update(문자열)</td>
 <td>변환할 문자열을 넣음</td>
 </tr>
 <tr>
-<td>-.digest(인코딩)</td>
-<td><code>base64</code>, hex, latin1등의 인코딩할 알고리즘을 넣음</td>
+<td>.digest(인코딩)</td>
+<td>base6, hex, latin1등의 인코딩할 알고리즘을 넣음</td>
 </tr>
 </tbody>
 </table>
@@ -1008,7 +1026,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">&#34;base64:&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">crypto</span><span class="p">.</span><span class="nx">createHash</span><span class="p">(</span><span class="s2">&#34;sha512&#34;</span><span class="p">).</span><span class="nx">update</span><span class="p">(</span><span class="s2">&#34;다른 비밀번호&#34;</span><span class="p">).</span><span class="nx">digest</span><span class="p">(</span><span class="s2">&#34;base64&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">crypto</span><span class="p">.</span><span class="nx">createHash</span><span class="p">(</span><span class="s2">&#34;sha512&#34;</span><span class="p">).</span><span class="nx">update</span><span class="p">(</span><span class="s2">&#34;비밀번호&#34;</span><span class="p">).</span><span class="nx">digest</span><span class="p">(</span><span class="s2">&#34;base64&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">crypto</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;crypto&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
@@ -1289,9 +1307,353 @@
 <li>wasi: 웹어셈블리를 실행할 때 사용하는 실험적인 모듈입니다.</li>
 </ul>
 <h3 id="4-fs-" class="relative group">4) fs (●●●) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-fs-" aria-label="Anchor">#</a></span></h3>
-<p>동기는 딱 한번 or 초기화 / 서버 실행 된 이후 쓰면 안됨</p>
-<p>스트리밍 하면 메모리를 아낄 수 있다.</p>
-<p>공문 연결?</p>
+<ul>
+<li>파일 시스템에 접근하는 모듈</li>
+<li>웹 브라우저에서는 제한적이나 노드는 권한을 지니고 있음</li>
+<li>파일의 경로는 현재 파일 기준이 아니라 <code>node 명령어를 실행하는 콘솔 기준</code></li>
+</ul>
+<h4 id="1-비동기-메서드" class="relative group">1. 비동기 메서드 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%eb%b9%84%eb%8f%99%ea%b8%b0-%eb%a9%94%ec%84%9c%eb%93%9c" aria-label="Anchor">#</a></span></h4>
+<ul>
+<li><code>fs.readFile(경로)</code> &amp; <code>fs.writeFile(경로, 내용)</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">fs</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s2">&#34;./writeme.txt&#34;</span><span class="p">,</span> <span class="s2">&#34;글이 입력됩니다&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">&#34;./writeme.txt&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><h4 id="2-동기-메서드" class="relative group">2. 동기 메서드 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%eb%8f%99%ea%b8%b0-%eb%a9%94%ec%84%9c%eb%93%9c" aria-label="Anchor">#</a></span></h4>
+<ul>
+<li>fs.readFileSync(경로) &amp; writeFileSync(경로, 내용)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;시작&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s2">&#34;./readme2.txt&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;1번&#34;</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="nx">data</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s2">&#34;./readme2.txt&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;2번&#34;</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="nx">data</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s2">&#34;./readme2.txt&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;3번&#34;</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;끝&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><ul>
+<li>요청이 많을 때 비효율적임</li>
+<li>프로그램을 처음 실행할 때 초기화 용도로만 사용하는 것을 권장</li>
+</ul>
+<h4 id="3-비동기-메서드로-순서-유지" class="relative group">3. 비동기 메서드로 순서 유지 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%eb%b9%84%eb%8f%99%ea%b8%b0-%eb%a9%94%ec%84%9c%eb%93%9c%eb%a1%9c-%ec%88%9c%ec%84%9c-%ec%9c%a0%ec%a7%80" aria-label="Anchor">#</a></span></h4>
+<ul>
+<li><code>.promises</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">).</span><span class="nx">promises</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;시작&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">&#34;./readme2.txt&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;1번&#34;</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">&#34;./readme2.txt&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;2번&#34;</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">&#34;./readme2.txt&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;3번&#34;</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;끝&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span></code></pre></div><h4 id="4-버퍼" class="relative group">4. 버퍼 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-%eb%b2%84%ed%8d%bc" aria-label="Anchor">#</a></span></h4>
+<ul>
+<li>일정한 크기로 모아두는 데이터</li>
+<li>일정한 크기가 되면 한 번에 처리</li>
+<li>메모리 문제가 생길 수 있음</li>
+<li>버퍼에 데이터가 찰 때까지 모으는 작업을 버퍼링이라고 함</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Properties &amp; Methods</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buffer.length</td>
+<td>버퍼의 크기(byte)</td>
+</tr>
+<tr>
+<td>Buffer.from(문자열)</td>
+<td>문자열로 만든 버퍼</td>
+</tr>
+<tr>
+<td>Buffer.toString()</td>
+<td>버퍼로 만든 문자열</td>
+</tr>
+<tr>
+<td>Buffer.concat(배열)</td>
+<td>배열안의 버퍼를 합쳐서 만든 버퍼</td>
+</tr>
+<tr>
+<td>Buffer.alloc(바이트)</td>
+<td>해당 바이트의 크기를 지니는 빈 버퍼</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">buffer</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="s2">&#34;저를 버퍼로 바꿔보세요&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;from():&#34;</span><span class="p">,</span> <span class="nx">buffer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;length:&#34;</span><span class="p">,</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;toString():&#34;</span><span class="p">,</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">Buffer</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="s2">&#34;띄엄 &#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">Buffer</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="s2">&#34;띄엄 &#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">Buffer</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="s2">&#34;띄어쓰기&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">buffer2</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;concat():&#34;</span><span class="p">,</span> <span class="nx">buffer2</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">buffer3</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="nx">alloc</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;alloc():&#34;</span><span class="p">,</span> <span class="nx">buffer3</span><span class="p">);</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">from<span class="o">()</span>: &lt;Buffer ec a0 <span class="m">80</span> eb a5 bc <span class="m">20</span> eb b2 <span class="m">84</span> ed 8d bc eb a1 9c <span class="m">20</span> eb b0 <span class="m">94</span> ea bf <span class="m">94</span> eb b3 b4 ec <span class="m">84</span> b8 ec 9a 94&gt;
+</span></span><span class="line"><span class="cl">length: <span class="m">32</span>
+</span></span><span class="line"><span class="cl">toString<span class="o">()</span>: 저를 버퍼로 바꿔보세요
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">concat<span class="o">()</span>: 띄엄 띄엄 띄어쓰기length
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">alloc<span class="o">()</span>: &lt;Buffer <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> <span class="m">00</span> 00&gt;
+</span></span></code></pre></div><h4 id="5-스트림" class="relative group">5. 스트림 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-%ec%8a%a4%ed%8a%b8%eb%a6%bc" aria-label="Anchor">#</a></span></h4>
+<ul>
+<li>
+<p>데이터의 흐름</p>
+</li>
+<li>
+<p>일정한 크기로 나눠서 여러 번에 걸쳐서 처리</p>
+</li>
+<li>
+<p>버퍼(청크)의 크기를 작게 만들어서 주기적으로 데이터를 전달</p>
+</li>
+<li>
+<p>일정한 크기의 데이터를 지속적으로 전달하는 작업을 스트림이라고 함</p>
+</li>
+<li>
+<p><code>fs.createReadStream(경로, 옵션)</code></p>
+<ul>
+<li><code>highWaterMark</code> 옵션은 버퍼의 크기(바이트 단위, 기본값 64KB)</li>
+<li><code>data[chunk 전달]</code>, <code>end[전달 완료]</code>, <code>error[에러 발생]</code> 이벤트 리스너와 같이 사용</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">저는 조금씩 조금씩 나눠서 전달됩니다. 나눠진 조각을 chunk라고 부릅니다.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">readStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s2">&#34;./readme3.txt&#34;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">highWaterMark</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">readStream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;data&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">data</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunk</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;data :&#34;</span><span class="p">,</span> <span class="nx">chunk</span><span class="p">,</span> <span class="nx">chunk</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">readStream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;end&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;end :&#34;</span><span class="p">,</span> <span class="nx">Buffer</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">toString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">readStream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;error :&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">data : &lt;Buffer ec a0 <span class="m">80</span> eb 8a <span class="m">94</span> <span class="m">20</span> ec a1 b0 ea b8 <span class="m">88</span> ec <span class="m">94</span> a9&gt; <span class="m">16</span>
+</span></span><span class="line"><span class="cl">data : &lt;Buffer <span class="m">20</span> ec a1 b0 ea b8 <span class="m">88</span> ec <span class="m">94</span> a9 <span class="m">20</span> eb <span class="m">82</span> <span class="m">98</span> eb 88&gt; <span class="m">16</span>
+</span></span><span class="line"><span class="cl">data : &lt;Buffer a0 ec <span class="m">84</span> 9c <span class="m">20</span> ec a0 <span class="m">84</span> eb 8b ac eb <span class="m">90</span> a9 eb 8b&gt; <span class="m">16</span>
+</span></span><span class="line"><span class="cl">data : &lt;Buffer <span class="m">88</span> eb 8b a4 2e <span class="m">20</span> eb <span class="m">82</span> <span class="m">98</span> eb <span class="m">88</span> a0 ec a7 <span class="m">84</span> 20&gt; <span class="m">16</span>
+</span></span><span class="line"><span class="cl">data : &lt;Buffer ec a1 b0 ea b0 <span class="m">81</span> ec 9d <span class="m">84</span> <span class="m">20</span> <span class="m">63</span> <span class="m">68</span> <span class="m">75</span> 6e 6b eb&gt; <span class="m">16</span>
+</span></span><span class="line"><span class="cl">data : &lt;Buffer 9d bc ea b3 a0 <span class="m">20</span> eb b6 <span class="m">80</span> eb a6 <span class="m">85</span> eb 8b <span class="m">88</span> eb&gt; <span class="m">16</span>
+</span></span><span class="line"><span class="cl">data : &lt;Buffer 8b a4 2e&gt; <span class="m">3</span>
+</span></span><span class="line"><span class="cl">end : 저는 조금씩 조금씩 나눠서 전달됩니다. 나눠진 조각을 chunk라고 부릅니다.
+</span></span></code></pre></div></li>
+<li>
+<p><code>fs.createWriteStream(경로)</code></p>
+<ul>
+<li><code>.write(chunk)</code>로 쓰고 <code>.end()</code>로 종료</li>
+<li><code>finish[종료]</code> 이벤트 리스너와 같이 사용</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s2">&#34;./writeme2.txt&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">writeStream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;finish&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;파일 쓰기 완료&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">writeStream</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&#34;이 글을 씁니다.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">writeStream</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&#34;한 번 더 씁니다.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">writeStream</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">파일 쓰기 완료
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">이 글을 씁니다.
+</span></span><span class="line"><span class="cl">한 번 더 씁니다.
+</span></span></code></pre></div></li>
+</ul>
+<h4 id="6-파이프" class="relative group">6. 파이프 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#6-%ed%8c%8c%ec%9d%b4%ed%94%84" aria-label="Anchor">#</a></span></h4>
+<ul>
+<li>
+<p><code>스트림.pipe(스트림)</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">readStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s2">&#34;readme4.txt&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s2">&#34;writeme3.txt&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">readStream</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">zlib</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;zlib&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">readStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s2">&#34;./readme4.txt&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">zlibStream</span> <span class="o">=</span> <span class="nx">zlib</span><span class="p">.</span><span class="nx">createGzip</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s2">&#34;./readme4.txt.gz&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">readStream</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">zlibStream</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
+</span></span></code></pre></div></li>
+<li>
+<p><code>await pipeline(스트림, ..., { signal })</code></p>
+<ul>
+<li><code>AbortController</code>를 사용해 원할 때 파이프를 중단할 수 있음</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">pipeline</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;stream/promises&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">zlib</span> <span class="nx">from</span> <span class="s2">&#34;zlib&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">fs</span> <span class="nx">from</span> <span class="s2">&#34;fs&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">ac</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AbortController</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">signal</span> <span class="o">=</span> <span class="nx">ac</span><span class="p">.</span><span class="nx">signal</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">ac</span><span class="p">.</span><span class="nx">abort</span><span class="p">(),</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// 1ms 뒤에 중단
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kr">await</span> <span class="nx">pipeline</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s2">&#34;./readme4.txt&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">zlib</span><span class="p">.</span><span class="nx">createGzip</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s2">&#34;./readme4.txt.gz&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">signal</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div></li>
+</ul>
+<h4 id="7-기타-fs-메서드" class="relative group">7. 기타 fs 메서드 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#7-%ea%b8%b0%ed%83%80-fs-%eb%a9%94%ec%84%9c%eb%93%9c" aria-label="Anchor">#</a></span></h4>
+<table>
+<thead>
+<tr>
+<th>Methods</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fs.access(경로, 옵션, 콜백)</code></td>
+<td>폴더나 파일에 접근할 수 있는지 여부 체크<br/><em>*옵션은 constants로 가져옴(<code>F_OK</code>는 파일 존재 여부, <code>R_OK</code>는 읽기 권한 여부, <code>W_OK</code>는 쓰기 권한 여부)</em><br/><em>*파일/폴더가 없을 때의 에러 코드는 <code>ENOENT</code></em></td>
+</tr>
+<tr>
+<td><code>fs.mkdir(경로, 콜백)</code></td>
+<td>폴더를 만듦<br/><em>*이미 폴더가 있으면 에러가 발생하므로 먼저 access 메서드를 호출해서 확인하는 것이 중요</em></td>
+</tr>
+<tr>
+<td><code>fs.open(경로, 옵션, 콜백)</code></td>
+<td>파일의 아이디(fd 변수)를 가져옴<br/><em>*파일이 없으면 파일을 생성한 뒤 그 아이디를 가져옴</em><br/><em>*가져온 아이디를 사용해 fs.read 또는 fs.write 사용 가능</em><br/><em>*옵션으로 어떤 동작을 할 것인지를 설정할 수 있음(쓰려면 w, 읽으려면 r, 기존 파일에 추가하려면 a)</em></td>
+</tr>
+<tr>
+<td><code>fs.rename(기존 경로, 새 경로, 콜백)</code></td>
+<td>파일의 위치 or 이름 변경</td>
+</tr>
+<tr>
+<td><code>fs.readdir(경로, 콜백)</code></td>
+<td>폴더 안의 내용물 확인, 배열 안에 내부의 파일명과 폴더명이 담김</td>
+</tr>
+<tr>
+<td><code>fs.unlink(경로, 콜백)</code></td>
+<td>파일을 지움<br/><em>*파일이 없으면 에러 발생</em></td>
+</tr>
+<tr>
+<td><code>fs.rmdir(경로, 콜백)</code></td>
+<td>폴더를 지움<br/><em>*폴더 안에 파일들이 있으면 에러가 발생하므로 먼저 내부 파일을 모두 지우고 호출해야 함</em></td>
+</tr>
+<tr>
+<td><code>fs.copyFile(복사할 파일, 복사될 경로, 콜백)</code></td>
+<td>파일 복사</td>
+</tr>
+<tr>
+<td><code>fs.watch(감시할 파일/폴더, 콜백)</code></td>
+<td>파일/폴더의 변경 사항을 감지</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">).</span><span class="nx">promises</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">constants</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">).</span><span class="nx">constants</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">fs</span><span class="p">.</span><span class="nx">access</span><span class="p">(</span><span class="s2">&#34;./folder&#34;</span><span class="p">,</span> <span class="nx">constants</span><span class="p">.</span><span class="nx">F_OK</span> <span class="o">|</span> <span class="nx">constants</span><span class="p">.</span><span class="nx">W_OK</span> <span class="o">|</span> <span class="nx">constants</span><span class="p">.</span><span class="nx">R_OK</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="s2">&#34;이미 폴더 있음&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">code</span> <span class="o">===</span> <span class="s2">&#34;ENOENT&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;폴더 없음&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">mkdir</span><span class="p">(</span><span class="s2">&#34;./folder&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;폴더 만들기 성공&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&#34;./folder/file.js&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">);</span> <span class="c1">// r이나 a를 사용했으면 에러 발생
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">fd</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;빈 파일 만들기 성공&#34;</span><span class="p">,</span> <span class="nx">fd</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">rename</span><span class="p">(</span><span class="s2">&#34;./folder/file.js&#34;</span><span class="p">,</span> <span class="s2">&#34;./folder/newfile.js&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;이름 바꾸기 성공&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ node fsCreate
+</span></span><span class="line"><span class="cl">폴더 없음
+</span></span><span class="line"><span class="cl">폴더 만들기 성공
+</span></span><span class="line"><span class="cl">빈 파일 만들기 성공 <span class="m">3</span>
+</span></span><span class="line"><span class="cl">이름 바꾸기 성공
+</span></span><span class="line"><span class="cl">$ node fsCreate
+</span></span><span class="line"><span class="cl">이미 폴더 있음
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">).</span><span class="nx">promises</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s2">&#34;./folder&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">dir</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;폴더 내용 확인&#34;</span><span class="p">,</span> <span class="nx">dir</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">unlink</span><span class="p">(</span><span class="s2">&#34;./folder/newfile.js&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;파일 삭제 성공&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">rmdir</span><span class="p">(</span><span class="s2">&#34;./folder&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;폴더 삭제 성공&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">폴더 내용 확인 <span class="o">[</span> <span class="s1">&#39;newfile.js&#39;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">파일 삭제 성공
+</span></span><span class="line"><span class="cl">폴더 삭제 성공
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;fs&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">fs</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s2">&#34;./target.txt&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">eventType</span><span class="p">,</span> <span class="nx">filename</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">eventType</span><span class="p">,</span> <span class="nx">filename</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">// 내용물 수정 후
+</span></span><span class="line"><span class="cl">change target.txt
+</span></span><span class="line"><span class="cl">change target.txt
+</span></span><span class="line"><span class="cl">// 파일명 변경 또는 파일 삭제 후
+</span></span><span class="line"><span class="cl">rename target.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// rename 이벤트가 발생한 후에는 더 이상 watch가 수행되지 않음
+</span></span><span class="line"><span class="cl">// change 이벤트가 두 번씩 발생하기도 하므로 실무에서 사용할 때는 주의가 필요
+</span></span></code></pre></div><hr>
 <p>fs.existsSync</p>
 <p>fs.stat</p>
 <hr>
