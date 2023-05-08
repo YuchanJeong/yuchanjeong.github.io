@@ -7,7 +7,79 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Wed, 05 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>convention</title>
+      <link>https://yuchanjeong.github.io/tags/convention/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/convention/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eslint</title>
+      <link>https://yuchanjeong.github.io/tags/eslint/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/eslint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>husky</title>
+      <link>https://yuchanjeong.github.io/tags/husky/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/husky/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>i18n</title>
+      <link>https://yuchanjeong.github.io/tags/i18n/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/i18n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lint-staged</title>
+      <link>https://yuchanjeong.github.io/tags/lint-staged/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/lint-staged/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>next.js</title>
+      <link>https://yuchanjeong.github.io/tags/next.js/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/next.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prettier</title>
+      <link>https://yuchanjeong.github.io/tags/prettier/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/prettier/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>typescript</title>
+      <link>https://yuchanjeong.github.io/tags/typescript/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>node.js</title>
       <link>https://yuchanjeong.github.io/tags/node.js/</link>
@@ -36,83 +108,11 @@
     </item>
     
     <item>
-      <title>convention</title>
-      <link>https://yuchanjeong.github.io/tags/convention/</link>
-      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/tags/convention/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>eslint</title>
-      <link>https://yuchanjeong.github.io/tags/eslint/</link>
-      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/tags/eslint/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>husky</title>
-      <link>https://yuchanjeong.github.io/tags/husky/</link>
-      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/tags/husky/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>i18n</title>
-      <link>https://yuchanjeong.github.io/tags/i18n/</link>
-      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/tags/i18n/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lint-staged</title>
-      <link>https://yuchanjeong.github.io/tags/lint-staged/</link>
-      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/tags/lint-staged/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>next.js</title>
-      <link>https://yuchanjeong.github.io/tags/next.js/</link>
-      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/tags/next.js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>prettier</title>
-      <link>https://yuchanjeong.github.io/tags/prettier/</link>
-      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/tags/prettier/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>react</title>
       <link>https://yuchanjeong.github.io/tags/react/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://yuchanjeong.github.io/tags/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>typescript</title>
-      <link>https://yuchanjeong.github.io/tags/typescript/</link>
-      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/tags/typescript/</guid>
       <description></description>
     </item>
     
