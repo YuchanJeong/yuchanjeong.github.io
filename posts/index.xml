@@ -27,6 +27,15 @@
     </item>
     
     <item>
+      <title>Next.js </title>
+      <link>https://yuchanjeong.github.io/posts/work/6/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/work/6/</guid>
+      <description>개요 # BE가 기존의 Express 및 TypeORM로 구성된 서버를 Nest.</description>
+    </item>
+    
+    <item>
       <title>다국어 처리 (react-i18next)</title>
       <link>https://yuchanjeong.github.io/posts/work/5/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>

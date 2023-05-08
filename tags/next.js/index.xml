@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>next.js on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/next.js/</link>
+    <description>Recent content in next.js on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Mon, 14 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/next.js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Next.js </title>
+      <link>https://yuchanjeong.github.io/posts/work/6/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/work/6/</guid>
+      <description>개요 # BE가 기존의 Express 및 TypeORM로 구성된 서버를 Nest.</description>
+    </item>
+    
+  </channel>
+</rss>
