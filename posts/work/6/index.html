@@ -106,7 +106,7 @@
     "keywords": ["convention","next.js","typescript","eslint","prettier","lint-staged","husky","i18n"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2195"
+    "wordCount": "2180"
   }]
   </script>
 
@@ -408,7 +408,7 @@
 <h3 id="1-cna" class="relative group">1. CNA <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-cna" aria-label="Anchor">#</a></span></h3>
 <pre tabindex="0"><code>npx create-next-app --typescript [project] --use-yarn
 </code></pre><h3 id="2-eslint--prettier-설치" class="relative group">2. eslint &amp; prettier 설치 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-eslint--prettier-%ec%84%a4%ec%b9%98" aria-label="Anchor">#</a></span></h3>
-<pre tabindex="0"><code>yarn add eslint prettier eslint-config-prettier eslint-plugin-import @typescript-eslint/parser eslint-import-resolver-typescript -D
+<pre tabindex="0"><code>yarn add -D eslint prettier eslint-config-prettier eslint-plugin-import @typescript-eslint/parser eslint-import-resolver-typescript prettier-plugin-style-order
 </code></pre><pre tabindex="0"><code> npx eslint --init
 </code></pre><pre tabindex="0"><code>✔ How would you like to use ESLint? · problems
 ✔ What type of modules does your project use? · esm
@@ -454,6 +454,7 @@ eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-e
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;import/no-unresolved&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;react-hooks/rules-of-hooks&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;react-hooks/exhaustive-deps&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;import/no-named-as-default-member&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;import/order&#34;</span><span class="p">:</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl">      <span class="s2">&#34;error&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">      <span class="p">{</span>
@@ -1152,7 +1153,7 @@ build-storybook.log
 </tr>
 <tr>
 <td>hotfix/…</td>
-<td>긴급 수정을 위해 product 브랜치에서 분기한 브랜치</td>
+<td>긴급 수정을 위해 배포 브랜치에서 분기한 브랜치</td>
 </tr>
 </tbody>
 </table>
@@ -1266,39 +1267,32 @@ build-storybook.log
 </code></pre><table>
 <thead>
 <tr>
-<th>Branch</th>
 <th>Prefix</th>
 <th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>deploy/prd</td>
 <td>🚀 Deploy:</td>
 <td>정식 프로덕트 배포</td>
 </tr>
 <tr>
-<td>deploy/prd</td>
 <td>🚨 Hotfix:</td>
 <td>긴급 수정</td>
 </tr>
 <tr>
-<td>deploy/stg, &hellip;</td>
 <td>✅ Implement:</td>
 <td>기능 구현 완료</td>
 </tr>
 <tr>
-<td>deploy/stg, &hellip;</td>
 <td>💫 Enhancement:</td>
 <td>완료된 기능의 개선</td>
 </tr>
 <tr>
-<td>deploy/stg, &hellip;</td>
 <td>🚧 In progress:</td>
 <td>완료하지 못한 기능</td>
 </tr>
 <tr>
-<td>deploy/stg, &hellip;</td>
 <td>&hellip;</td>
 <td>Commit의 Prefix와 동일</td>
 </tr>
@@ -1320,10 +1314,8 @@ build-storybook.log
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!-- # Assignee 및 Label 등록 --&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!-- # Template 중 개요만 필수 작성 (작성 안 할 타이틀은 지우기) --&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!-- # Prefix
-</span></span></span><span class="line"><span class="cl"><span class="c">===== deploy/prd =====
 </span></span></span><span class="line"><span class="cl"><span class="c">🚀 Deploy: 정식 프로덕트 배포
 </span></span></span><span class="line"><span class="cl"><span class="c">🚨 Hotfix: 긴급 수정
-</span></span></span><span class="line"><span class="cl"><span class="c">===== deploy/stg, ... =====
 </span></span></span><span class="line"><span class="cl"><span class="c">✅ Implement: 기능 구현 완료
 </span></span></span><span class="line"><span class="cl"><span class="c">💫 Enhancement: 완료된 기능의 개선
 </span></span></span><span class="line"><span class="cl"><span class="c">🚧 In progress: 완료하지 못한 기능
