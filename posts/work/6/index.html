@@ -525,12 +525,12 @@ eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-e
 </code></pre><details>
 <summary>package.json</summary>
 <div markdown="1">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"> <span class="s2">&#34;lint-staged&#34;</span><span class="err">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&#34;*.{js,jsx,ts,tsx,,css,md}&#34;</span><span class="p">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">     <span class="s2">&#34;prettier --write&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">     <span class="s2">&#34;eslint --fix&#34;</span>
-</span></span><span class="line"><span class="cl">   <span class="p">]</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;lint-staged&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;*.{js,jsx,ts,tsx,css,scss}&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;prettier --write&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;eslint --fix&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></div>
 </details>
 <pre tabindex="0"><code>npx husky-init
