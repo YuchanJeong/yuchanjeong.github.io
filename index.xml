@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Sun, 07 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[B2B/리팩토링] 초기 스타일</title>
+      <link>https://yuchanjeong.github.io/posts/work/7/</link>
+      <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://yuchanjeong.github.io/posts/work/7/</guid>
+      <description>이 게시물은 미래의 나를 위한 작업 과정의 요약본으로 설명이 많이 생략된 불친절한 글이다.</description>
+    </item>
+    
     <item>
       <title>[B2B/리팩토링] 프로젝트 시작</title>
       <link>https://yuchanjeong.github.io/posts/work/6/</link>
