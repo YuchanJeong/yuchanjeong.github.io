@@ -106,7 +106,7 @@
     "keywords": ["convention","next.js","typescript","eslint","prettier","lint-staged","husky","i18n"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "3135"
+    "wordCount": "3169"
   }]
   </script>
 
@@ -748,6 +748,19 @@
 </span></span><span class="line"><span class="cl">  <span class="k">@each</span> <span class="nv">$key</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$fw-map</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">&amp;</span><span class="nc">.qs-font-weight-</span><span class="si">#{</span><span class="nv">$key</span><span class="si">}</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="na">font-weight</span><span class="o">:</span> <span class="nv">$value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> qs-svg-size</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@each</span> <span class="nv">$key</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$fs-map</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">&amp;</span><span class="nc">.qs-svg-size-</span><span class="si">#{</span><span class="nv">$key</span><span class="si">}</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="na">width</span><span class="o">:</span> <span class="nv">$value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">height</span><span class="o">:</span> <span class="nv">$value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&gt;</span> <span class="nt">svg</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="na">width</span><span class="o">:</span> <span class="nv">$value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">height</span><span class="o">:</span> <span class="nv">$value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -1454,12 +1467,14 @@
 </span></span><span class="line"><span class="cl">  <span class="cm">/* color */</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">backgroundColor</span><span class="o">:</span> <span class="p">(</span><span class="nx">color</span>: <span class="kt">Color</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="sb">`qs-background-color-</span><span class="si">${</span><span class="nx">color</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">borderColor</span><span class="o">:</span> <span class="p">(</span><span class="nx">color</span>: <span class="kt">Color</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="sb">`qs-border-color-</span><span class="si">${</span><span class="nx">color</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">svgColor</span><span class="o">:</span> <span class="p">(</span><span class="nx">color</span>: <span class="kt">Color</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="sb">`qs-svg-color-</span><span class="si">${</span><span class="nx">color</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="cm">/* font */</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">fontSize</span><span class="o">:</span> <span class="p">(</span><span class="nx">fontSize</span>: <span class="kt">FontSize</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="sb">`qs-font-size-</span><span class="si">${</span><span class="nx">fontSize</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">fontWeight</span><span class="o">:</span> <span class="p">(</span><span class="nx">FontWeight</span>: <span class="kt">FontWeight</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="sb">`qs-font-weight-</span><span class="si">${</span><span class="nx">FontWeight</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">fontColor</span><span class="o">:</span> <span class="p">(</span><span class="nx">color</span>: <span class="kt">Color</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="sb">`qs-font-color-</span><span class="si">${</span><span class="nx">color</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">fontBorderColor</span><span class="o">:</span> <span class="p">(</span><span class="nx">color</span>: <span class="kt">Color</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="sb">`qs-font-border-color-</span><span class="si">${</span><span class="nx">color</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="cm">/* svg */</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">svgSize</span><span class="o">:</span> <span class="p">(</span><span class="nx">svgSize</span>: <span class="kt">FontSize</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="sb">`qs-svg-size-</span><span class="si">${</span><span class="nx">svgSize</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">svgColor</span><span class="o">:</span> <span class="p">(</span><span class="nx">color</span>: <span class="kt">Color</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="sb">`qs-svg-color-</span><span class="si">${</span><span class="nx">color</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="cm">/* gap */</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">margin</span><span class="o">:</span> <span class="p">(</span><span class="nx">space</span>: <span class="kt">Space</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">space</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span>
