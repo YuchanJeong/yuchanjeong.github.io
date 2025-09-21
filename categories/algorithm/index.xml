@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>&lt;Algorithm&gt; on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/categories/algorithm/</link>
+    <description>Recent content in &lt;Algorithm&gt; on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Thu, 19 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Practice Kit] 힙(Heap)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/heap/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/heap/</guid>
+      <description>힙은 특정한 규칙을 가지는 트리로, 힙을 이용해서 우선순위 큐를 구현할 수 있습니다.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 탐욕법(Greedy)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</link>
+      <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</guid>
+      <description>부분적인 최적해가 전체적인 최적해가 되는 마법.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 스택/큐(Stack/Queue)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/stack-queue/</link>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/stack-queue/</guid>
+      <description>LIFO, FIFO, push &amp;amp; pop!</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 깊이/너비 우선 탐색(DFS/BFS)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/dfs-bfs/</link>
+      <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/dfs-bfs/</guid>
+      <description>깊이/너비 우선 탐색을 사용해 원하는 답을 찾아보세요.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 완전탐색(Exhaustive Search, Brute-force Search)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/exhaustivesearch/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/exhaustivesearch/</guid>
+      <description>무식해 보여도 사실은 최고의 방법일 때가 있지요.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 정렬(Sort)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/sort/</link>
+      <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/sort/</guid>
+      <description>정렬을 이용해서 문제를 효율적으로 풀어보세요.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 해시(Hash)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/hash/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/hash/</guid>
+      <description>Key-value쌍으로 데이터를 빠르게 찾아보세요.</description>
+    </item>
+  </channel>
+</rss>

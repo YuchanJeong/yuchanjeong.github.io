@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/security/</link>
+    <description>Recent content in Security on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Wed, 29 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BC-14w-3 / [인증/보안] OAuth</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-3/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-3/</guid>
+      <description>1. OAuth 2.</description>
+    </item>
+    <item>
+      <title>BC-14w-2 / [인증/보안] Token</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-2/</link>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-2/</guid>
+      <description>1. 토큰 기반 인증 (Token-based Authentication) # 세션 기반 인증은 서버(혹은 DB)에 유저 정보를 담는 인증 방식 매 요청마다 데이터베이스를 살펴보는 것이 불편하고, 이 부담을 덜어내고 싶어서, 토큰 기반 인증 사용 대표적인 것이 JWT (JSON Web Token) 토큰은 유저 정보를 암호화한 상태로 담을 수 있고, 암호화했기 때문에 클라이언트에 담을 수 있음 JWT 종류 # Access Token 실제로 권한을 얻는 데 사용하는 토큰 비교적 짧은 유효 기간 을 주어 탈취되더라도 오랫동안 사용할 수 없도록 함 Refresh Token Access token의 유효기간이 만료된다면 Refresh token을 사용하여 새로운 access token을 발급 JWT 구조 # aaaaaa(Header).</description>
+    </item>
+    <item>
+      <title>BC-14w-1 / [인증/보안] Session</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-1/</link>
+      <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-1/</guid>
+      <description>1. HTTPS # HTTPS = HTTP + Secure 무결성, 기밀성 인증서(Certification) 데이터 제공자 신원 보장 도메인 종속 CA(Certification Authority) 공인 인증서 발급 기관 비대칭 키 암호화 key A로 암호화, key B로 복호화 SSL(Secure Socket Layer) or TLS(Transport Layer Security)</description>
+    </item>
+  </channel>
+</rss>

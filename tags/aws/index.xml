@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/aws/</link>
+    <description>Recent content in AWS on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Mon, 29 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[DynamoDB] 기본 개념</title>
+      <link>https://yuchanjeong.github.io/posts/studies/db/dynamodb/2/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/db/dynamodb/2/</guid>
+      <description>공식 문서와 블로그 정리글들의 내용을 바탕으로 기본적인 내용만 정리.</description>
+    </item>
+    <item>
+      <title>[DynamoDB] 시작하기</title>
+      <link>https://yuchanjeong.github.io/posts/studies/db/dynamodb/1/</link>
+      <pubDate>Sun, 28 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/db/dynamodb/1/</guid>
+      <description>What is Amazon DynamoDB?</description>
+    </item>
+    <item>
+      <title>BC-15w-2 / [배포] Amazon Web Service</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-2/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-2/</guid>
+      <description>1) Cloud Computing # 데이터 센터에서는 서버의 자원과 공간, 및 네트워크 환경을 제공(on-premise) 클라우드 컴퓨팅은 가상화 기술의 발전으로부터 비롯 운영 환경 자체가 클라우드 제공자에게 종속되어 버리므로, 클라우드 서비스에 문제가 생기면 내가 배포하고 관리하는 환경에도 영향이 미치거나 백엔드 구성 자체가 특정 회사의 기술로만 구성해야만 하는 경우가 발생할 수도 있는 단점이 있음 클라우드 서비스의 형태 SaaS(Software as a Service) 클라우드 제공자가 당장 사용 가능한 소프트웨어를 제공하는 경우 대부분 SaaS에 해당 PaaS(Platform as a Service) 클라우드 제공자가 데이터베이스, 개발 플랫폼까지 제공하는 경우 대부분 PaaS에 해당 IaaS(Infrastructure as a Service) 클라우드 제공자가 가상 컴퓨터까지 제공하는 경우 대부분 IaaS에 해당 *AWS는 IaaS에 가까움 2) Deploy # Development 단계 각자의 컴퓨터에서 코드를 작성하고 테스트하는 과정 개발 단계이기 때문에 실제 데이터를 이용하지 않고 더미 데이터를 이용해서 테스트 Integration 단계 각자의 컴퓨터에서 작성한 코드를 합치는 과정 내가 작성한 코드가 다른 코드를 침범해서 오류를 일으키지 않는지, 코드 간에 conflict가 있지는 않은지 확인하는 과정 Staging 단계 실제 출시 단계인 Production 단계와 가장 유사한 환경에서 테스트하는 과정 실제 데이터를 복사해서 문제가 있지 않은지 등 다양한 환경에서 테스트를 진행 또한 서비스와 관련된 부서 혹은 인원의 확인 과정을 거침 Production 단계 개발된 서비스를 출시하는 단계 사용자가 접속할 수 있는 Production 환경에서 코드를 구동하고 서비스를 제공 실제 데이터를 가지고 서비스가 운영되기 때문에 문제가 생기면 안 되는 단계 환경 설정을 코드와 분리하는 것이 중요 절대경로 대신 상대경로 사용 환경에 따라 포트를 분기할 수 있도록 환경 변수를 설정(.</description>
+    </item>
+  </channel>
+</rss>

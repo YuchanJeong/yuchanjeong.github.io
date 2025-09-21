@@ -1,0 +1,1019 @@
+
+
+
+
+  
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>BC-2w-6 / 맥 계산기 만들기 &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="BC-2w-6 / 맥 계산기 만들기 &middot; Yuchan&#39;s hello world!" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.b0785c8131a75f72b211435af86269eb2d4b81dda03a8f2cf5ccb1c967747167.css"
+    integrity="sha256-sHhcgTGnX3KyEUNa&#43;GJp6y1Lgd2gOo8s9cyxyWd0cWc="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f29ffdffd9ab4cc95250c3c7196b2d5dae8ee6ef0a4139451073f90183ae7e31.js"
+      integrity="sha256-8p/9/9mrTMlSUMPHGWstXa6O5u8KQTlFEHP5AYOufjE="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        HTML과 CSS # 크게 display(출력)와 buttonWrap(입력) 부분으로 구분 background를 flex로 설정하고, justify-content와 align-items에 center 값을 줘서 계산기를 가운데 배치 맥 계산기는 커서 모양이 변하지 않아서 cursor: default;로 커서가 변하지 않게 함 user-select: none;을 이용해서 계산기의 contents들이 선택되지 않게 함
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/bootcamp/bc-2w-6/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="BC-2w-6 / 맥 계산기 만들기" />
+<meta property="og:description" content="HTML과 CSS # 크게 display(출력)와 buttonWrap(입력) 부분으로 구분 background를 flex로 설정하고, justify-content와 align-items에 center 값을 줘서 계산기를 가운데 배치 맥 계산기는 커서 모양이 변하지 않아서 cursor: default;로 커서가 변하지 않게 함 user-select: none;을 이용해서 계산기의 contents들이 선택되지 않게 함" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/bootcamp/bc-2w-6/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-05T00:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="BC-2w-6 / 맥 계산기 만들기"/>
+<meta name="twitter:description" content="HTML과 CSS # 크게 display(출력)와 buttonWrap(입력) 부분으로 구분 background를 flex로 설정하고, justify-content와 align-items에 center 값을 줘서 계산기를 가운데 배치 맥 계산기는 커서 모양이 변하지 않아서 cursor: default;로 커서가 변하지 않게 함 user-select: none;을 이용해서 계산기의 contents들이 선택되지 않게 함"/>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "BC-2w-6 \/ 맥 계산기 만들기",
+    "headline": "BC-2w-6 \/ 맥 계산기 만들기",
+    
+    "abstract": "HTML과 CSS # 크게 display(출력)와 buttonWrap(입력) 부분으로 구분 background를 flex로 설정하고, justify-content와 align-items에 center 값을 줘서 계산기를 가운데 배치 맥 계산기는 커서 모양이 변하지 않아서 cursor: default;로 커서가 변하지 않게 함 user-select: none;을 이용해서 계산기의 contents들이 선택되지 않게 함",
+    "inLanguage": "en",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/bootcamp\/bc-2w-6\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2021",
+    "dateCreated": "2021-09-05T00:00:00\u002b00:00",
+    "datePublished": "2021-09-05T00:00:00\u002b00:00",
+    
+    "dateModified": "2021-09-05T00:00:00\u002b00:00",
+    
+    "keywords": ["(Retrospective)"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1407"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/",
+       "name": "Yuchan's Hello World!",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/categories/bootcamp/",
+       "name": "\u003cBootcamp\u003e",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Bc 2w 6 맥 계산기 만들기",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Yuchan&rsquo;s hello world!</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Posts</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title="Categories"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title="Tags"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        BC-2w-6 / 맥 계산기 만들기
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2021-09-05 00:00:00 &#43;0000 UTC">5 September 2021</time>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="/categories/bootcamp/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >&lt;Bootcamp&gt;</a
+            >
+          
+        
+      
+        
+          
+            <a
+              href="/tags/retrospective/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >(Retrospective)</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#html과-css">HTML과 CSS</a></li>
+        <li><a href="#javascript">JavaScript</a>
+          <ul>
+            <li><a href="#1-우선-맥-계산기에-여러-숫자들을-넣어보며-어떻게-작동하는지-파악">1. 우선 맥 계산기에 여러 숫자들을 넣어보며 어떻게 작동하는지 파악</a></li>
+            <li><a href="#2-수도-코드-작성">2. 수도 코드 작성</a></li>
+            <li><a href="#3-수도-코드를-코드로-작성">3. 수도 코드를 코드로 작성</a></li>
+          </ul>
+        </li>
+        <li><a href="#사칙-연산-규칙-적용하기-advenced">사칙 연산 규칙 적용하기-advenced</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <p>
+
+
+
+
+
+
+  
+  
+<figure><img src="https://user-images.githubusercontent.com/84524514/132117283-92b29171-0d03-4f92-9325-d58a94a95539.gif" alt="macCalculator" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<h3 id="html과-css" class="relative group">HTML과 CSS <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#html%ea%b3%bc-css" aria-label="Anchor">#</a></span></h3><ul>
+<li>크게 display(출력)와 buttonWrap(입력) 부분으로 구분</li>
+<li>background를 flex로 설정하고, justify-content와 align-items에 center 값을 줘서 계산기를 가운데 배치</li>
+<li>맥 계산기는 커서 모양이 변하지 않아서 cursor: default;로 커서가 변하지 않게 함</li>
+<li>user-select: none;을 이용해서 계산기의 contents들이 선택되지 않게 함<br>
+(-webkit-user-select: none; -ms-user-select: none; -moz-user-select: none;)</li>
+<li>display의 윗부분과 0 버튼, = 버튼의 아래 부분을 각각 border-radius로 둥글게 만듦</li>
+<li>text-align으로 글자 가로 정렬, line-height으로 글자 세로 정렬</li>
+<li>buttonWrap을 flex로 설정하고, flex-wrap: wrap;을 이용해서 버튼 배치</li>
+<li>가상 선택자(:active)를 이용해서 클릭 시 색상 변경</li>
+<li>operator가 isPressed 클래스를 지니고 있을 경우, border를 두껍게 해서 현재 선택된 연산자를 알 수 있게 함</li>
+</ul>
+<h3 id="javascript" class="relative group">JavaScript <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#javascript" aria-label="Anchor">#</a></span></h3><p>
+
+
+
+
+
+
+  
+  
+<figure><img src="https://user-images.githubusercontent.com/84524514/134358486-527b1b74-0871-4df9-b4c9-c61fbb73866a.gif" alt="img" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<h4 id="1-우선-맥-계산기에-여러-숫자들을-넣어보며-어떻게-작동하는지-파악" class="relative group">1. 우선 맥 계산기에 여러 숫자들을 넣어보며 어떻게 작동하는지 파악 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ec%9a%b0%ec%84%a0-%eb%a7%a5-%ea%b3%84%ec%82%b0%ea%b8%b0%ec%97%90-%ec%97%ac%eb%9f%ac-%ec%88%ab%ec%9e%90%eb%93%a4%ec%9d%84-%eb%84%a3%ec%96%b4%eb%b3%b4%eb%a9%b0-%ec%96%b4%eb%96%bb%ea%b2%8c-%ec%9e%91%eb%8f%99%ed%95%98%eb%8a%94%ec%a7%80-%ed%8c%8c%ec%95%85" aria-label="Anchor">#</a></span></h4><h4 id="2-수도-코드-작성" class="relative group">2. 수도 코드 작성 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%ec%88%98%eb%8f%84-%ec%bd%94%eb%93%9c-%ec%9e%91%ec%84%b1" aria-label="Anchor">#</a></span></h4><ul>
+<li>아래 글로 적은 것들이 작성한 수도 코드</li>
+</ul>
+<h4 id="3-수도-코드를-코드로-작성" class="relative group">3. 수도 코드를 코드로 작성 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%ec%88%98%eb%8f%84-%ec%bd%94%eb%93%9c%eb%a5%bc-%ec%bd%94%eb%93%9c%eb%a1%9c-%ec%9e%91%ec%84%b1" aria-label="Anchor">#</a></span></h4><ul>
+<li>
+<p>clearButton은 target이 아닐 때도, 사용되어야 해서 전역 변수로 선언</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">displayEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.calculator .display&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">buttonWrapEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.calculator .buttonWrap&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">clearButtonEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.calculator .button.clear&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">operatorButtonEls</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.calculator .button.operator&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">displayNum</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="nx">previousNum</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="nx">previousOperator</span><span class="p">,</span> <span class="nx">previousKey</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">buttonWrapEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">target</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">action</span> <span class="o">=</span> <span class="nx">target</span><span class="p">.</span><span class="nx">classList</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">buttonContent</span> <span class="o">=</span> <span class="nx">target</span><span class="p">.</span><span class="nx">textContent</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nx">cancelPress</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">operatorButtonEls</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;isPressed&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">changeToIEEE</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">changeFontSize</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div></li>
+<li>
+<p>연산</p>
+<ul>
+<li>JS에서 나타나는 계산 오류를 줄이기 위해, 「x 1 e12 ÷ 1 e12」를 해줌.</li>
+<li>Ex. 0.3 + 0.6 = 0.8999999999999999(JS 기본 연산 시)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">calculate</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">operator</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">operator</span> <span class="o">===</span> <span class="s2">&#34;＋&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">result</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">((</span><span class="nb">Number</span><span class="p">(</span><span class="nx">num1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">num2</span><span class="p">))</span> <span class="o">*</span> <span class="mf">1e12</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1e12</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">operator</span> <span class="o">===</span> <span class="s2">&#34;－&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">result</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">((</span><span class="nb">Number</span><span class="p">(</span><span class="nx">num1</span><span class="p">)</span> <span class="o">-</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">num2</span><span class="p">))</span> <span class="o">*</span> <span class="mf">1e12</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1e12</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">operator</span> <span class="o">===</span> <span class="s2">&#34;×&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">result</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Number</span><span class="p">(</span><span class="nx">num1</span><span class="p">)</span> <span class="o">*</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">num2</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1e12</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1e12</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">operator</span> <span class="o">===</span> <span class="s2">&#34;÷&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">result</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">((</span><span class="nb">Number</span><span class="p">(</span><span class="nx">num1</span><span class="p">)</span> <span class="o">/</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">num2</span><span class="p">))</span> <span class="o">*</span> <span class="mf">1e12</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1e12</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nb">String</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>display</p>
+<ul>
+<li>디스플레이의 수가 20자리 이상이면 소수점이 16자리인 부동 소수점 e로 표현</li>
+<li>맥 계산기는 부동 소수점 e를 표현할 때, 소수점 맨 뒤의 0들은 생략하기 때문에, 소수 부분만 따로 떼어서 숫자화로 소수점 맨 뒤의 0들을 없애 주고, 다시 문자 화하여 나머지 부분과 합쳐줌</li>
+<li>디스플레이에 보이는 수와 계산에 사용하는 디스플레이의 수를 분리(부동 소수점 e는 문자화와 숫자화를 자유롭게 할 수 없기 때문)</li>
+<li>디스플레이의 수가 10자리 이상이면 폰트가 점점 작아짐</li>
+<li>숫자 버튼 이외의 버튼을 클릭하면 디스플레이가 깜박임</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">changeToIEEE</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">displayNum</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">exponentialNum</span><span class="p">,</span> <span class="nx">intPart</span><span class="p">,</span> <span class="nx">decimalPart</span><span class="p">,</span> <span class="nx">exponentialPart</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">exponentialNum</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">.</span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">displayNum</span><span class="p">).</span><span class="nx">toExponential</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">intPart</span> <span class="o">=</span> <span class="nx">exponentialNum</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">decimalPart</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">parseFloat</span><span class="p">(</span><span class="sb">`0.</span><span class="si">${</span><span class="nx">exponentialNum</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">).</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">exponentialPart</span> <span class="o">=</span> <span class="nx">exponentialNum</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">18</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">displayEl</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">intPart</span><span class="si">}${</span><span class="nx">decimalPart</span><span class="si">}${</span><span class="nx">exponentialPart</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayEl</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">displayNum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">changeFontSize</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">displayLength</span> <span class="o">=</span> <span class="nx">displayEl</span><span class="p">.</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">displayFontSize</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">displayLength</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayFontSize</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">displayLength</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayFontSize</span> <span class="o">=</span> <span class="mi">40</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">0.915</span><span class="p">,</span> <span class="nx">displayLength</span> <span class="o">-</span> <span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">displayLength</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayFontSize</span> <span class="o">=</span> <span class="mf">25.65</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">0.93</span><span class="p">,</span> <span class="nx">displayLength</span> <span class="o">-</span> <span class="mi">15</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayFontSize</span> <span class="o">=</span> <span class="mf">17.84</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">displayEl</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">fontSize</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">displayFontSize</span><span class="si">}</span><span class="sb">px`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">blink</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">displayEl</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s2">&#34;rgb(90, 90, 90)&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayEl</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s2">&#34;aliceblue&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>number</p>
+<ul>
+<li>디스플레이 수가 0이거나 연산자 혹은 계산 다음일 때, 디스플레이에 입력이 그대로 할당. 나머지 경우는 디스플레이의 수에 입력 할당 연산</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">action</span> <span class="o">===</span> <span class="s2">&#34;number&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayNum</span> <span class="o">===</span> <span class="s2">&#34;0&#34;</span> <span class="o">||</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;operator&#34;</span> <span class="o">||</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;calculate&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">buttonContent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayNum</span> <span class="o">+=</span> <span class="nx">buttonContent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">clearButtonEl</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&#34;C&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">previousKey</span> <span class="o">=</span> <span class="s2">&#34;number&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>decimal</p>
+<ul>
+<li>디스플레이의 수에 소수점이 없으면서 연산자 다음이 아닐 때, 소수점을 입력 할당 연산. 연산자 다음 일 때는 &lsquo;0.&rsquo; 할당</li>
+<li>숫자 버튼과 같은 취급</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">action</span> <span class="o">===</span> <span class="s2">&#34;decimal&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">displayNum</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s2">&#34;.&#34;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">previousKey</span> <span class="o">!==</span> <span class="s2">&#34;operator&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayNum</span> <span class="o">+=</span> <span class="s2">&#34;.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;operator&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayNum</span> <span class="o">=</span> <span class="s2">&#34;0.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">clearButtonEl</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&#34;C&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">previousKey</span> <span class="o">=</span> <span class="s2">&#34;number&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>operator</p>
+<ul>
+<li>기존의 isPressed 초기화 후 타깃에 isPressed 클래스 부여</li>
+<li>숫자 다음이며 이미 기억하고 있는 연산자가 있을 때, 연산(previousNum, previousOperator, displayNum)</li>
+<li>연산 여부와 상관없이, 디스플레이의 수와 연산자 기억</li>
+<li>초기화 다음에는 디스플레이의 수를 기억하지 않는데, 0이 되어버린 디스플레이의 수로 이전의 수를 덮지 않게 하기 위함</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">action</span> <span class="o">===</span> <span class="s2">&#34;operator&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">cancelPress</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">target</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&#34;isPressed&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;number&#34;</span> <span class="o">&amp;&amp;</span> <span class="nx">previousOperator</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span><span class="nx">previousNum</span><span class="p">,</span> <span class="nx">previousOperator</span><span class="p">,</span> <span class="nx">displayNum</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">!==</span> <span class="s2">&#34;clear&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">previousNum</span> <span class="o">=</span> <span class="nx">displayNum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">previousOperator</span> <span class="o">=</span> <span class="nx">buttonContent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">previousKey</span> <span class="o">=</span> <span class="s2">&#34;operator&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">blink</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>calculate</p>
+<ul>
+<li>isPressed 초기화</li>
+<li>이미 기억하고 있는 연산자가 있을 때 연속 계산이 아니면, 디스플레이의 수를 임의의 변수에 할당하고(연속 계산시, 기호 다음의 숫자를 기억하고 있기 위해), 연산(previousNum, previousOperator, displayNum) 후 이전 디스플레이의 수 기억</li>
+<li>초기화 다음일 때, 다른 방식으로 연산(previousNum, previousOperator, previousNum)</li>
+<li>연속으로 계산할 때, 또 다른 방식으로 연산(displayNum, previousOperator, previousNum)</li>
+<li>코드로 작성 할때는 내가 작성한 수도코드와 반대로 예외부터 걸러줘야함!</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">action</span> <span class="o">===</span> <span class="s2">&#34;calculate&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">cancelPress</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">pseudoNum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">previousOperator</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;calculate&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span><span class="nx">displayNum</span><span class="p">,</span> <span class="nx">previousOperator</span><span class="p">,</span> <span class="nx">previousNum</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;clear&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span><span class="nx">previousNum</span><span class="p">,</span> <span class="nx">previousOperator</span><span class="p">,</span> <span class="nx">previousNum</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">pseudoNum</span> <span class="o">=</span> <span class="nx">displayNum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span><span class="nx">previousNum</span><span class="p">,</span> <span class="nx">previousOperator</span><span class="p">,</span> <span class="nx">displayNum</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">previousNum</span> <span class="o">=</span> <span class="nx">pseudoNum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">pseudoNum</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">previousKey</span> <span class="o">=</span> <span class="s2">&#34;calculate&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">blink</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>clear</p>
+<ul>
+<li>수나 소수점을 누르면 C로 변환. clear를 누르면 다시 AC로 변환</li>
+<li>숫자 다음일 때, 디스플레이의 수를 초기화</li>
+<li>연산자 다음일 때, 연산자와 isPressed 초기화</li>
+<li>계산 다음일 때, 디스플레이의 수를 기억하고 나서 초기화</li>
+<li>초기화 다음일 때, 모두 초기화(처음에 이걸 젤 마지막에 둬서 항상 모두 초기화되어 버렸음)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">action</span> <span class="o">===</span> <span class="s2">&#34;clear&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">clearButtonEl</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&#34;AC&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;clear&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayNum</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">previousNum</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">previousOperator</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">cancelPress</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">previousKey</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;number&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayNum</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">previousKey</span> <span class="o">=</span> <span class="s2">&#34;clear&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;operator&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">previousOperator</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">cancelPress</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">previousKey</span> <span class="o">=</span> <span class="s2">&#34;clear&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;calculate&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">previousNum</span> <span class="o">=</span> <span class="nx">displayNum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayNum</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">previousKey</span> <span class="o">=</span> <span class="s2">&#34;clear&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">blink</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>sign &amp; percent</p>
+<ul>
+<li>디스플레이의 수가 0이 아닐 때, sing은 -1을 곱해주고, percent는 0.01을 곱해줌</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">action</span> <span class="o">===</span> <span class="s2">&#34;sign&#34;</span> <span class="o">&amp;&amp;</span> <span class="nx">displayNum</span> <span class="o">!==</span> <span class="s2">&#34;0&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">displayNum</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">blink</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">action</span> <span class="o">===</span> <span class="s2">&#34;percent&#34;</span> <span class="o">&amp;&amp;</span> <span class="nx">displayNum</span> <span class="o">!==</span> <span class="s2">&#34;0&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">displayNum</span> <span class="o">*=</span> <span class="mf">0.01</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">blink</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>undefined is not an object error를 만났다. 한참을 해결하지 못하였고, 새벽이라 너무 피곤해서 일단 잠을 잤다. 일어나자말자 기능별로 하나씩 때서 콘솔을 통해 확인했다. 생각보다 쉽게 error의 이유와 해결 방안을 찾을 수 있었다. 함수의 return 부분이 한 줄 밀려서 if문의 괄호 안으로 들어간 것이었다. 처음 만나는 error에 error 메시지가 말해주는 부분만 계속 고치며 확인한 것이 시간이 오래 걸린 이유였다. 좀 더 구조를 잘 이해하고 유기적으로 생각하는 법을 길러야겠다. 여담으로 error가 발생했을 때, 화가 나기보다는 어디가 잘못되었을까 찾고 더 보완하고 싶은 마음에 기뻐하는 나를 보며 개발자가 천직이 아닐까 하고 생각했다.</p>
+</li>
+<li>
+<p>기능을 만들어 가는 와중에 치명적인 문제점을 발견했다. 이전까지 맥 계산기는 숫자 다음에 오는 두 번째 이후 연산자일 때, 디스플레이에 연산이 바로바로 반영되었기에, 곱셈/나눗셈이 먼저 진행되어야 하는 사칙연산의 기본 규칙을 적용하지 않아도 된다고 생각하고 있었다. 기능을 쉽게 파악하기 위해 덧셈/뺄셈 위주로 기능을 확인했던 것이 문제점을 늦게 발견하게 된 이유이다. 우선은 기존에 구상한 데로 순서대로 계산하는 계산기를 먼저 만들고, 추가로 사칙 연산 규칙을 따르게 만들 것이다.</p>
+</li>
+</ul>
+<h3 id="사칙-연산-규칙-적용하기-advenced" class="relative group">사칙 연산 규칙 적용하기-advenced <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%82%ac%ec%b9%99-%ec%97%b0%ec%82%b0-%ea%b7%9c%ec%b9%99-%ec%a0%81%ec%9a%a9%ed%95%98%ea%b8%b0-advenced" aria-label="Anchor">#</a></span></h3><ul>
+<li>
+<p>사칙 연산 규칙 적용 안됨<br>
+
+
+
+
+
+
+
+  
+  
+<figure><img src="https://user-images.githubusercontent.com/84524514/134363680-919b52be-25b2-48b9-8825-a64d03cdae7b.gif" alt="img-2" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+</li>
+<li>
+<p>사칙 연산 규칙 적용됨<br>
+
+
+
+
+
+
+
+  
+  
+<figure><img src="https://user-images.githubusercontent.com/84524514/134363727-c8d62637-82c8-40a6-812a-022810ce71aa.gif" alt="img-3" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+</li>
+<li>
+<p>현재는 연산자가 있을 때, 숫자 다음 연산자를 누르면 즉시 연산(previousNum, previousOperator, displayNum) 후 previousNum = displayNum, previousOperator = buttonContent</p>
+</li>
+<li>
+<p>사칙연산 규칙을 적용하면, 덧셈/뺄셈 다음에 곱셈/나눗셈이 나오면 덧셈/뺄셈이 나오거나 계산을 누를 때까지 제일 앞의 숫자 하나와 연산자 하나를 보류해두고 뒤에는 계속 연산</p>
+</li>
+<li>
+<p>즉, previousOperator가 +/-이면서 buttonContent가 ×/÷일 때, 연산 전에 스택으로 previousNum과 previousOperator 이동(previousOperator가 없어서 연산은 일어나지 않고, previousNum = displayNum, previousOperator = buttonContent)</p>
+</li>
+<li>
+<p>stack !== undefined면서 buttonContent가 +/-일 때, 연산(previousNum, previousOperator, displayNum) 후 스택을 불러와서 추가 연산(stack[0], stack[1], 앞의 연산 결과) 후 스택 초기화</p>
+</li>
+<li>
+<p>계산은 스택이 있을 때, 추가연산만 해주면 기존과 같음</p>
+</li>
+<li>
+<p>연산자 다음 초기화하면, 스택은 연산 안 하고 사라짐</p>
+</li>
+<li>
+<p>조건을 만족할 때, 스택을 쌓는 부분과 스택을 포함해서 계산해 주는 부분 추가</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">action</span> <span class="o">===</span> <span class="s2">&#34;operator&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">cancelPress</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">target</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&#34;isPressed&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;number&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">previousOperator</span> <span class="o">===</span> <span class="s2">&#34;＋&#34;</span> <span class="o">||</span> <span class="nx">previousOperator</span> <span class="o">===</span> <span class="s2">&#34;－&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">buttonContent</span> <span class="o">===</span> <span class="s2">&#34;×&#34;</span> <span class="o">||</span> <span class="nx">buttonContent</span> <span class="o">===</span> <span class="s2">&#34;÷&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">stackCalculate</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">stackCalculate</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">previousNum</span><span class="p">,</span> <span class="nx">previousOperator</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">previousOperator</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">previousOperator</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span><span class="nx">previousNum</span><span class="p">,</span> <span class="nx">previousOperator</span><span class="p">,</span> <span class="nx">displayNum</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">stackCalculate</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">buttonContent</span> <span class="o">===</span> <span class="s2">&#34;＋&#34;</span> <span class="o">||</span> <span class="nx">buttonContent</span> <span class="o">===</span> <span class="s2">&#34;－&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">stackCalculate</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">stackCalculate</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">displayNum</span>
+</span></span><span class="line"><span class="cl">      <span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">stackCalculate</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">!==</span> <span class="s2">&#34;clear&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">previousNum</span> <span class="o">=</span> <span class="nx">displayNum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">previousOperator</span> <span class="o">=</span> <span class="nx">buttonContent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">previousKey</span> <span class="o">=</span> <span class="s2">&#34;operator&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">blink</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>기존 코드에 스택이 있을 때, 스택을 포함해서 계산 해주는 부분 추가</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">action</span> <span class="o">===</span> <span class="s2">&#34;calculate&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">cancelPress</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">pseudoNum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">previousOperator</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;calculate&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span><span class="nx">displayNum</span><span class="p">,</span> <span class="nx">previousOperator</span><span class="p">,</span> <span class="nx">previousNum</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">previousKey</span> <span class="o">===</span> <span class="s2">&#34;clear&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span><span class="nx">previousNum</span><span class="p">,</span> <span class="nx">previousOperator</span><span class="p">,</span> <span class="nx">previousNum</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">pseudoNum</span> <span class="o">=</span> <span class="nx">displayNum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span><span class="nx">previousNum</span><span class="p">,</span> <span class="nx">previousOperator</span><span class="p">,</span> <span class="nx">displayNum</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">previousNum</span> <span class="o">=</span> <span class="nx">pseudoNum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">pseudoNum</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">stackCalculate</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">displayNum</span> <span class="o">=</span> <span class="nx">calculate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">stackCalculate</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">stackCalculate</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">displayNum</span>
+</span></span><span class="line"><span class="cl">      <span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">stackCalculate</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">previousKey</span> <span class="o">=</span> <span class="s2">&#34;calculate&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">blink</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/bootcamp/bc-2w-5/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >BC-2w-5 / [JS/Node] 배열, 객체</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2021-09-03 00:00:00 &#43;0000 UTC">3 September 2021</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/bootcamp/bc-3w-1/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >BC-3w-1 / [JS/Node] 객체</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2021-09-06 00:00:00 &#43;0000 UTC">6 September 2021</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+        
+          
+        
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2021 Yuchan&rsquo;s hello world!
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://yuchanjeong.github.io/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

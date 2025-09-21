@@ -7,51 +7,98 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Wed, 10 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>\work</title>
       <link>https://yuchanjeong.github.io/categories/%5Cwork/</link>
       <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/categories/%5Cwork/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>\lectures</title>
       <link>https://yuchanjeong.github.io/categories/%5Clectures/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/categories/%5Clectures/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>\etc</title>
       <link>https://yuchanjeong.github.io/categories/%5Cetc/</link>
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/categories/%5Cetc/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>\books</title>
       <link>https://yuchanjeong.github.io/categories/%5Cbooks/</link>
       <pubDate>Sat, 29 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/categories/%5Cbooks/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>&lt;Diaries&gt;</title>
+      <link>https://yuchanjeong.github.io/categories/diaries/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/categories/diaries/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>&lt;Projects&gt;</title>
+      <link>https://yuchanjeong.github.io/categories/projects/</link>
+      <pubDate>Mon, 12 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/categories/projects/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>&lt;Etc&gt;</title>
+      <link>https://yuchanjeong.github.io/categories/etc/</link>
+      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/categories/etc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>&lt;Studies&gt;</title>
+      <link>https://yuchanjeong.github.io/categories/studies/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/categories/studies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>&lt;Algorithm&gt;</title>
+      <link>https://yuchanjeong.github.io/categories/algorithm/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/categories/algorithm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>&lt;Bootcamp&gt;</title>
+      <link>https://yuchanjeong.github.io/categories/bootcamp/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/categories/bootcamp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>&lt;What I read&gt;</title>
+      <link>https://yuchanjeong.github.io/categories/what-i-read/</link>
+      <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/categories/what-i-read/</guid>
+      <description></description>
+    </item>
     <item>
       <title>\summaries</title>
       <link>https://yuchanjeong.github.io/categories/%5Csummaries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/categories/%5Csummaries/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>&lt;What I learned&gt;</title>
+      <link>https://yuchanjeong.github.io/categories/what-i-learned/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/categories/what-i-learned/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

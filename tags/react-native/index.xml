@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React Native on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/react-native/</link>
+    <description>Recent content in React Native on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Wed, 24 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/react-native/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[React Native] 공식 문서로 공부하자!</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/react-native/od-1/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/react-native/od-1/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

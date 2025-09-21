@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Socket.io on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/socket.io/</link>
+    <description>Recent content in Socket.io on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/socket.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Socket.io] Nest.js에서 Socket.io 연결 기초</title>
+      <link>https://yuchanjeong.github.io/posts/studies/socket.io/socket.io-nest.js/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/socket.io/socket.io-nest.js/</guid>
+      <description>설치 #npm i @nestjs/websockets @nestjs/platform-socket.</description>
+    </item>
+  </channel>
+</rss>

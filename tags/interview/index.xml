@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interview on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/interview/</link>
+    <description>Recent content in Interview on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Sun, 16 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>취직 준비부터 면접 그리고 출근 첫 주</title>
+      <link>https://yuchanjeong.github.io/posts/diaries/2/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/diaries/2/</guid>
+      <description>취직 #팀 프로젝트를 끝낸 뒤 아쉬움이 남아 팀 프로젝트 개선과 개인 프로젝트를 하나 더 진행하였다.</description>
+    </item>
+    <item>
+      <title>[면접 대비] 주니어 프런트 앤드 기술 면접</title>
+      <link>https://yuchanjeong.github.io/posts/etc/interview-1/</link>
+      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/etc/interview-1/</guid>
+      <description>주니어 레벨 프런트 앤드 개발자 기술 면접에 필요한 지식들을 간단히 정리한 문서</description>
+    </item>
+  </channel>
+</rss>

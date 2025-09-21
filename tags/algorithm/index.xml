@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithm on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/algorithm/</link>
+    <description>Recent content in Algorithm on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Thu, 19 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Practice Kit] 힙(Heap)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/heap/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/heap/</guid>
+      <description>힙은 특정한 규칙을 가지는 트리로, 힙을 이용해서 우선순위 큐를 구현할 수 있습니다.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 탐욕법(Greedy)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</link>
+      <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</guid>
+      <description>부분적인 최적해가 전체적인 최적해가 되는 마법.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 스택/큐(Stack/Queue)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/stack-queue/</link>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/stack-queue/</guid>
+      <description>LIFO, FIFO, push &amp;amp; pop!</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 깊이/너비 우선 탐색(DFS/BFS)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/dfs-bfs/</link>
+      <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/dfs-bfs/</guid>
+      <description>깊이/너비 우선 탐색을 사용해 원하는 답을 찾아보세요.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 완전탐색(Exhaustive Search, Brute-force Search)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/exhaustivesearch/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/exhaustivesearch/</guid>
+      <description>무식해 보여도 사실은 최고의 방법일 때가 있지요.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 정렬(Sort)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/sort/</link>
+      <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/sort/</guid>
+      <description>정렬을 이용해서 문제를 효율적으로 풀어보세요.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 해시(Hash)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/hash/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/hash/</guid>
+      <description>Key-value쌍으로 데이터를 빠르게 찾아보세요.</description>
+    </item>
+    <item>
+      <title>BC-12w-3 / [자료구조/알고리즘] 순열/조합 &amp; GCD/LCM &amp; 멱집합</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-3/</link>
+      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-3/</guid>
+      <description>1. 순열 / 조합 # 순열(순서 O) 공식 : nPr = n!</description>
+    </item>
+    <item>
+      <title>BC-12w-2 / [자료구조/알고리즘] 시간 복잡도 &amp; 탐욕 알고리즘 &#43; {FC} Context로 전역 상태 관리하기</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-2/</link>
+      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-2/</guid>
+      <description>Intro to Algorithm # 알고리즘이란 문제를 해결하는 최선의 선택 문제 이해 해결 전략 구상(with 수도 코드) 수도 코드를 바탕으로 코드 작성 1.</description>
+    </item>
+    <item>
+      <title>BC-8w-1 / [자료구조/알고리즘] Graph, Tree, BST</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-1/</link>
+      <pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-1/</guid>
+      <description>Today I learned #&#xD;Graph / Tree / BST #Graph # 여러개의 점들이 서로 복잡하게 연결되어 있는 관계를 표현한 자료구조</description>
+    </item>
+    <item>
+      <title>BC-7w-4 / [자료구조/알고리즘] Stack, Queue</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-4/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-4/</guid>
+      <description>Today I learned #&#xD;Stack / Queue #Stack # LIFO(Last In First Out) 혹은 FILO(First In Last Out) 브라우저의 뒤로 가기, 앞으로 가기 기능을 구현할 때 자료구조 Stack 활용 새로운 페이지로 접속할 때, 현재 페이지를 Prev Stack에 보관 뒤로 가기 버튼을 눌러 이전 페이지로 돌아갈 때에는, 현재 페이지를 Next Stack에 보관하고 Prev Stack에 가장 나중에 보관된 페이지를 현재 페이지로 가져옴 앞으로 가기 버튼을 눌러 앞서 방문한 페이지로 이동을 원할 때에는, Next Stack의 가장 마지막으로 보관된 페이지를 가져옴 마지막으로 현재 페이지를 Prev Stack에 보관 class Stack { constructor() { this.</description>
+    </item>
+    <item>
+      <title>BC-7w-3 / [자료구조/알고리즘] 재귀(2)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-3/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-3/</guid>
+      <description>Today I learned #&#xD;Big-O notation # O(1) (Constant) 입력 데이터의 크기에 상관없이 언제나 일정한 시간이 걸리는 알고리즘을 나타낸다.</description>
+    </item>
+    <item>
+      <title>BC-7w-2 / [자료구조/알고리즘] 재귀(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-2/</link>
+      <pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-2/</guid>
+      <description>Today I learned #Algorithm Test 01 팩토리얼 인덱스 찾기 #&#xD;팩토리얼은 수가 조금만 늘어도 기하급수적으로 증가.</description>
+    </item>
+  </channel>
+</rss>

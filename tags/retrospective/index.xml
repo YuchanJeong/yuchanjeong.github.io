@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>(Retrospective) on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/retrospective/</link>
+    <description>Recent content in (Retrospective) on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Sun, 16 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/retrospective/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>취직 준비부터 면접 그리고 출근 첫 주</title>
+      <link>https://yuchanjeong.github.io/posts/diaries/2/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/diaries/2/</guid>
+      <description>취직 #팀 프로젝트를 끝낸 뒤 아쉬움이 남아 팀 프로젝트 개선과 개인 프로젝트를 하나 더 진행하였다.</description>
+    </item>
+    <item>
+      <title>Debate Ducks 2</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/32/</link>
+      <pubDate>Mon, 12 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/32/</guid>
+      <description>개요 # 실시간 영상 토론 배틀 플랫폼 Debate-Ducks의 개선 프로젝트</description>
+    </item>
+    <item>
+      <title>첫 이력서 작성 후기</title>
+      <link>https://yuchanjeong.github.io/posts/diaries/1/</link>
+      <pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/diaries/1/</guid>
+      <description>이력서 구글 드라이브 링크</description>
+    </item>
+    <item>
+      <title>BC-Final / Final Project 기능 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-final-2/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-final-2/</guid>
+      <description>*전체적인 회고는 따로 회고록에 작성</description>
+    </item>
+    <item>
+      <title>BC-Final / Final Project 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-final-1/</link>
+      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-final-1/</guid>
+      <description>*기능 관련 부분은 따로 기능 회고록에 작성</description>
+    </item>
+    <item>
+      <title>BC-First / First Project 기능 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-first-2/</link>
+      <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-first-2/</guid>
+      <description>*전체적인 회고는 따로 회고록에 작성</description>
+    </item>
+    <item>
+      <title>BC-First / First Project 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-first-1/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-first-1/</guid>
+      <description>*기능 관련 부분은 따로 기능 회고록에 작성</description>
+    </item>
+    <item>
+      <title>BC-16w / Section3 및 HA 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-16w/</link>
+      <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-16w/</guid>
+      <description>Section3 회고지만 First Project를 끝내고서야 작성할 수 있을 정도로 프로젝트에 온 힘을 쏟았었다.</description>
+    </item>
+    <item>
+      <title>BC-11w-3 / HA-Algorithm, HA-react, Section2 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-3/</link>
+      <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-3/</guid>
+      <description>HA-Algorithm, HA-react # 알고리즘 문제는 코플릿 보다 쉽게 나와서 어렵지 않게 풀었다.</description>
+    </item>
+    <item>
+      <title>BC-8w-5 / 8주 차 정리</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-5/</link>
+      <pubDate>Sun, 17 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-5/</guid>
+      <description>자료구조를 마무리하고 비동기를 공부했다.</description>
+    </item>
+    <item>
+      <title>BC-7w-5 / 7주 차 정리</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-5/</link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-5/</guid>
+      <description>7주 차 정리 # 이번 주의 핵심은 데이터를 다루는 방법이다.</description>
+    </item>
+    <item>
+      <title>BC-6w / 6주 차 정리, Section1 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-4/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-4/</guid>
+      <description>6주 차 정리 # 10월 1일에 코로나 2차 백신을 맞았다.</description>
+    </item>
+    <item>
+      <title>BC-5w-추석(3) / 5주 차 정리 &#43; {FC} React(6)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-3/</link>
+      <pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-3/</guid>
+      <description>5주 차 정리(추석 연휴) # 19일은 외가, 20일은 산소, 21일은 친가를 방문했다.</description>
+    </item>
+    <item>
+      <title>BC-4w-6 / 4주 차 정리 &#43; {FC} React(3)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-6/</link>
+      <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-6/</guid>
+      <description>4주 차 정리 # 월요일에는 DOM의 이벤트에 대해 배우고, 혼자서 TypeScript를 학습했다.</description>
+    </item>
+    <item>
+      <title>BC-3w-6 / 3주 차 정리, 반응형 내비게이션 바 만들기</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-6/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-6/</guid>
+      <description>3주 차 정리 # 이번 주는 전체적으로 평이한 난이도였다.</description>
+    </item>
+    <item>
+      <title>BC-2w-7 / 2주 차 정리</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-7/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-7/</guid>
+      <description>2주 차 정리 # 월요일에 처음으로 계산기를 만드는 과제를 했다.</description>
+    </item>
+    <item>
+      <title>BC-2w-6 / 맥 계산기 만들기</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-6/</link>
+      <pubDate>Sun, 05 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-6/</guid>
+      <description>HTML과 CSS # 크게 display(출력)와 buttonWrap(입력) 부분으로 구분 background를 flex로 설정하고, justify-content와 align-items에 center 값을 줘서 계산기를 가운데 배치 맥 계산기는 커서 모양이 변하지 않아서 cursor: default;로 커서가 변하지 않게 함 user-select: none;을 이용해서 계산기의 contents들이 선택되지 않게 함</description>
+    </item>
+    <item>
+      <title>BC-1w-6 / 1주 차 정리</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-6/</link>
+      <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-6/</guid>
+      <description>1주 차 정리 # 월요일에는 학습 환경설정과 학습 방향 설정을 했다.</description>
+    </item>
+  </channel>
+</rss>

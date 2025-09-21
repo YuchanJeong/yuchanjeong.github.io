@@ -7,24 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Wed, 05 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/%EC%A1%B0%ED%98%84%EC%98%81zerocho/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/%EC%A1%B0%ED%98%84%EC%98%81zerocho/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Node.js 교과서] Node.js의 기능</title>
       <link>https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/2/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/2/</guid>
       <description>제 3장.</description>
     </item>
-    
     <item>
       <title>[Node.js 교과서] Node.js란</title>
       <link>https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/1/</link>
       <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/1/</guid>
       <description>제 1장.</description>
     </item>
-    
   </channel>
 </rss>

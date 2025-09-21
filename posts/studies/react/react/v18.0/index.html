@@ -1,0 +1,841 @@
+
+
+
+
+  
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>[React] React v18.0 &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[React] React v18.0 &middot; Yuchan&#39;s hello world!" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.b0785c8131a75f72b211435af86269eb2d4b81dda03a8f2cf5ccb1c967747167.css"
+    integrity="sha256-sHhcgTGnX3KyEUNa&#43;GJp6y1Lgd2gOo8s9cyxyWd0cWc="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f29ffdffd9ab4cc95250c3c7196b2d5dae8ee6ef0a4139451073f90183ae7e31.js"
+      integrity="sha256-8p/9/9mrTMlSUMPHGWstXa6O5u8KQTlFEHP5AYOufjE="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        React v18.
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/studies/react/react/v18.0/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="[React] React v18.0" />
+<meta property="og:description" content="React v18." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/studies/react/react/v18.0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-18T00:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="[React] React v18.0"/>
+<meta name="twitter:description" content="React v18."/>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "[React] React v18.0",
+    "headline": "[React] React v18.0",
+    
+    "abstract": "React v18.",
+    "inLanguage": "en",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/studies\/react\/react\/v18.0\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-04-18T00:00:00\u002b00:00",
+    "datePublished": "2022-04-18T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-04-18T00:00:00\u002b00:00",
+    
+    "keywords": ["React"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "974"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/",
+       "name": "Yuchan's Hello World!",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/categories/studies/",
+       "name": "\u003cStudies\u003e",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "[ React] React V18.0",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Yuchan&rsquo;s hello world!</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Posts</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title="Categories"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title="Tags"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        [React] React v18.0
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-04-18 00:00:00 &#43;0000 UTC">18 April 2022</time>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="/categories/studies/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >&lt;Studies&gt;</a
+            >
+          
+        
+      
+        
+          
+            <a
+              href="/tags/react/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >React</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#what-is-concurrent-react">What is Concurrent React?</a></li>
+    <li><a href="#whats-new-in-react-18">What’s New in React 18</a>
+      <ul>
+        <li><a href="#1-automatic-batchinghttpsgithubcomreactwgreact-18discussions21">1. Automatic Batching<a href="https://github.com/reactwg/react-18/discussions/21">^</a></a></li>
+        <li><a href="#2-transitionshttpsreactjsorgdocsreact-apihtmltransitions">2. Transitions<a href="https://reactjs.org/docs/react-api.html#transitions">^</a></a></li>
+        <li><a href="#3-suspensehttpsgithubcomreactjsrfcsblobmaintext0213-suspense-in-react-18md">3. Suspense<a href="https://github.com/reactjs/rfcs/blob/main/text/0213-suspense-in-react-18.md">^</a></a></li>
+        <li><a href="#4-rendering-apis">4. Rendering APIs</a>
+          <ul>
+            <li><a href="#react-dom-clienthttpsreactjsorgdocsreact-dom-clienthtml">React DOM Client<a href="https://reactjs.org/docs/react-dom-client.html">^</a></a></li>
+            <li><a href="#react-dom-serverhttpsreactjsorgdocsreact-dom-serverhtml">React DOM Server<a href="https://reactjs.org/docs/react-dom-server.html">^</a></a></li>
+          </ul>
+        </li>
+        <li><a href="#5-strict-modehttpsreactjsorgdocsstrict-modehtmlensuring-reusable-state">5. Strict Mode<a href="https://reactjs.org/docs/strict-mode.html#ensuring-reusable-state">^</a></a></li>
+        <li><a href="#6-hooks">6. Hooks</a>
+          <ul>
+            <li><a href="#useidhttpsreactjsorgdocshooks-referencehtmluseid">useId<a href="https://reactjs.org/docs/hooks-reference.html#useid">^</a></a></li>
+            <li><a href="#usetransitionhttpsreactjsorgdocshooks-referencehtmlusetransition">useTransition<a href="https://reactjs.org/docs/hooks-reference.html#usetransition">^</a></a></li>
+            <li><a href="#usedeferredvaluehttpsreactjsorgdocshooks-referencehtmlusedeferredvalue">useDeferredValue<a href="https://reactjs.org/docs/hooks-reference.html#usedeferredvalue">^</a></a></li>
+            <li><a href="#usesyncexternalstorehttpsreactjsorgdocshooks-referencehtmlusesyncexternalstore">useSyncExternalStore<a href="https://reactjs.org/docs/hooks-reference.html#usesyncexternalstore">^</a></a></li>
+            <li><a href="#useinsertioneffecthttpsreactjsorgdocshooks-referencehtmluseinsertioneffect">useInsertionEffect<a href="https://reactjs.org/docs/hooks-reference.html#useinsertioneffect">^</a></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h1 id="react-v180" class="relative group">React v18.0 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#react-v180" aria-label="Anchor">#</a></span></h1><h2 id="intro" class="relative group">Intro <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#intro" aria-label="Anchor">#</a></span></h2><p>1월 초, 한참 퍼스트 프로젝트를 준비하면서 바쁜 와중 &ldquo;노마드 코더&quot;의 &ldquo;<a href="https://www.youtube.com/watch?v=7mkQi0TlJQo" target="_blank" rel="noreferrer">완전 새로운 리액트가 온다? 핵심정리 10분컷</a>&rdquo; 영상을 보고 React 18에 처음 관심을 가졌다. 이때는 아직 프로젝트를 해본 적도 없어서 영상에서 좋다고 하니까 좋은 거구나 할 뿐이었다. (지금은 입력 지연이나 Loading의 반복 작성 등 문제를 직접 겪어본 후라 어떤 점이 좋은지 어느 정도 이해함.)</p>
+<p>이후로 하루에 한 번씩 공식 문서에 들어가서 출시 여부를 확인하고 틈틈이 구글에 &ldquo;when react 18 release&quot;를 검색했다. 사실 이 정도로 출시를 기다린 주된 이유는 &ldquo;React 18의 특정한 기능을 사용해 보고 싶어서&quot;는 아니었다.</p>
+<p>개발 공부를 하면서 &ldquo;이 기능은 언제 새로 추가되었다.&rdquo; (Ex. Arrow Function(ES6), React Hooks(v16.8)) 이런 글들을 볼 때마다, 새로운 기능이 추가되는 순간을 직접 경험해 보고 싶었다. 이것이 내가 React 18의 출시를 목 빠지게 기다린 주된 이유이다.</p>
+<p>이 문서는 React 18을 파이널 프로젝트 리팩토링에 활용하기 위해 공식 문서를 참조하여 공부하며 작성한 문서이다. 빨리 새로운 기능을 활용한 다음 &ldquo;이 때 React 18이 출시 되었고, 이 프로젝트에 이 기능을 처음 사용 했었지!&rdquo; 하는 나만의 추억을 만들고 싶다.</p>
+<h2 id="what-is-concurrent-react" class="relative group">What is Concurrent React? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#what-is-concurrent-react" aria-label="Anchor">#</a></span></h2><ul>
+<li>동시성(Concurrent)은 그 자체로 기능이 아니고 React가 <strong>동시에 여러 버전의 UI를 준비</strong>할 수 있도록 하는 새로운 배후 메커니즘.</li>
+<li>Concurrent React의 핵심 속성은 <strong>렌더링이 중단 가능</strong>한 것.</li>
+<li>기존의 동기 렌더링(Synchronous rendering)은 일단 렌더링을 시작하면 사용자가 화면에서 결과를 볼 수 있을 때까지 업데이트를 중단할 수 없음.</li>
+</ul>
+<h2 id="whats-new-in-react-18" class="relative group">What’s New in React 18 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#whats-new-in-react-18" aria-label="Anchor">#</a></span></h2><h3 id="1-automatic-batchinghttpsgithubcomreactwgreact-18discussions21" class="relative group">1. Automatic Batching<a href="https://github.com/reactwg/react-18/discussions/21" target="_blank" rel="noreferrer">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-automatic-batchinghttpsgithubcomreactwgreact-18discussions21" aria-label="Anchor">#</a></span></h3><div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300">this is an in-depth feature that we don’t expect most users to need to think about. However, it may be relevant to educators and library developers.</span>
+</div>
+
+<ul>
+<li>일괄 처리는 더 나은 성능을 위해 React가 여러 상태 업데이트를 <strong>단일 리렌더링</strong>으로 그룹화하는 것.</li>
+<li>React 18 미만에서는 이벤트 헨들러 내부의 업데이트만 일괄 처리.</li>
+<li>React 18 부터는 promises, setTimeout, 이벤트 헨들러 또는 기타 이벤트 내부의 업데이트도 모두 자동 일괄 처리.</li>
+<li><code>ReactDOM.flushSync()</code>를 사용해 일괄 처리 취소 가능.</li>
+<li>Example:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Before: only React events were batched.
+</span></span></span><span class="line"><span class="cl"><span class="c1">// After: updates inside of timeouts, promises, native event handlers or any other event are batched.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setCount</span><span class="p">((</span><span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">c</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setFlag</span><span class="p">((</span><span class="nx">f</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="o">!</span><span class="nx">f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Before: React will render twice, once for each state update (no batching)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// After: React will only re-render once at the end (that&#39;s batching!)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="2-transitionshttpsreactjsorgdocsreact-apihtmltransitions" class="relative group">2. Transitions<a href="https://reactjs.org/docs/react-api.html#transitions" target="_blank" rel="noreferrer">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-transitionshttpsreactjsorgdocsreact-apihtmltransitions" aria-label="Anchor">#</a></span></h3><ul>
+<li>
+<p>전환은 <strong>긴급한 업데이트</strong>와 <strong>긴급하지 않은 업데이트</strong>를 구분하기 위한 React의 새로운 개념.</p>
+</li>
+<li>
+<p>긴급하지 않은 업데이트 중에 긴급한 업데이트가 일어나면 긴급하지 않은 업데이트 중지 후 긴급한 업데이트 우선 처리. (후에 중지 되었던 업데이트는 최신 업데이트만 렌더링.)</p>
+</li>
+<li>
+<p>예를 들어 목록에서 필터를 클릭할 때 클릭된 필터의 변경은 긴급한 업데이트, 필터가 적용된 목록의 변경 긴급하지 않은 업데이트. 필터를 연속 클릭하면 목록의 변경은 중지되고 마지막 필터가 적용된 최신 목록만 렌더링.</p>
+</li>
+<li>
+<p><code>React.startTransition</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">React</span><span class="p">.</span><span class="nx">startTransition</span><span class="p">(</span><span class="nx">callback</span><span class="p">);</span>
+</span></span></code></pre></div></li>
+<li>
+<p><code>React.useTransition</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">[</span><span class="nx">isPending</span><span class="p">,</span> <span class="nx">startTransition</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useTransition</span><span class="p">();</span>
+</span></span></code></pre></div><ul>
+<li>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">isPending</span><span class="p">,</span> <span class="nx">startTransition</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useTransition</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">count</span><span class="p">,</span> <span class="nx">setCount</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nx">handleClick</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">startTransition</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setCount</span><span class="p">((</span><span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">c</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="nx">isPending</span> <span class="o">&amp;&amp;</span> <span class="p">&lt;</span><span class="nt">Spinner</span> <span class="p">/&gt;}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleClick</span><span class="p">}&gt;{</span><span class="nx">count</span><span class="p">}&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-suspensehttpsgithubcomreactjsrfcsblobmaintext0213-suspense-in-react-18md" class="relative group">3. Suspense<a href="https://github.com/reactjs/rfcs/blob/main/text/0213-suspense-in-react-18.md" target="_blank" rel="noreferrer">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-suspensehttpsgithubcomreactjsrfcsblobmaintext0213-suspense-in-react-18md" aria-label="Anchor">#</a></span></h3><ul>
+<li>
+<p>Suspense는 React 프로그래밍 모델에서 <strong>UI 로딩 상태</strong>를 <strong>일급 선언적 개념</strong>으로 만듦.</p>
+</li>
+<li>
+<p>React 18에서는 Suspense에 대한 서버의 지원을 추가하고 동시 렌더링(Concurrent rendering)을 사용하여 기능을 확장.</p>
+</li>
+<li>
+<p>React 18의 Suspense는 Transition API와 결합 시 가장 잘 작동. 업데이트 일시 중단 시 콘텐츠가 대체 항목으로 대체되는 것을 방지하고 충분한 데이터가 로드될 때까지 렌더링을 지연.</p>
+</li>
+<li>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">[</span><span class="nx">isPending</span><span class="p">,</span> <span class="nx">startTransition</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useTransition</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">handleClick</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">startTransition</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setTab</span><span class="p">(</span><span class="s2">&#34;comments&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">Suspense</span> <span class="na">fallback</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">Spinner</span> <span class="p">/&gt;}&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span> <span class="nx">opacity</span><span class="o">:</span> <span class="nx">isPending</span> <span class="o">?</span> <span class="mf">0.8</span> <span class="o">:</span> <span class="mi">1</span> <span class="p">}}&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nx">tab</span> <span class="o">===</span> <span class="s2">&#34;photos&#34;</span> <span class="o">?</span> <span class="p">&lt;</span><span class="nt">Photos</span> <span class="p">/&gt;</span> <span class="o">:</span> <span class="p">&lt;</span><span class="nt">Comments</span> <span class="p">/&gt;}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">Suspense</span><span class="p">&gt;;</span>
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="4-rendering-apis" class="relative group">4. Rendering APIs <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-rendering-apis" aria-label="Anchor">#</a></span></h3><h4 id="react-dom-clienthttpsreactjsorgdocsreact-dom-clienthtml" class="relative group">React DOM Client<a href="https://reactjs.org/docs/react-dom-client.html" target="_blank" rel="noreferrer">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#react-dom-clienthttpsreactjsorgdocsreact-dom-clienthtml" aria-label="Anchor">#</a></span></h4><ul>
+<li>
+<p>react-dom/client:</p>
+<ul>
+<li><code>createRoot</code>: 루트를 만드는 새로운 방법. <code>ReactDOM.render</code> 대신 사용.</li>
+<li><code>hydrateRoot</code>: 서버 렌더링 응용 프로그램을 hydrate 하는 새로운 방법. 새로운 React DOM Server API와 함께 <code>ReactDOM.hydrate</code> 대신 사용.</li>
+</ul>
+<p>*<em>hydrate란? Server에서 렌더링 된 HTML 코드를 Client에서 JS 코드와 매칭 시키는 것.</em><br>
+*<em>createRoot와 hydrateRoot 모두 &ldquo;렌더링 중 오류에서 복구&rdquo; 또는 &ldquo;로깅을 위한 수화&rdquo; 시 알림을 받기를 원하는 경우 <code>onRecoverableError</code>라는 새로운 옵션을 허용.</em></p>
+</li>
+</ul>
+<h4 id="react-dom-serverhttpsreactjsorgdocsreact-dom-serverhtml" class="relative group">React DOM Server<a href="https://reactjs.org/docs/react-dom-server.html" target="_blank" rel="noreferrer">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#react-dom-serverhttpsreactjsorgdocsreact-dom-serverhtml" aria-label="Anchor">#</a></span></h4><ul>
+<li>
+<p>react-dom/server:</p>
+<ul>
+<li><code>renderToPipeableStream</code>: Node 환경용.</li>
+<li><code>renderToReadableStream</code>: Deno와 Cloudflare workers 같은 최신 Edge runtime 환경용.</li>
+</ul>
+<p>*<em>기존 <code>renderToString</code>은 작동하지만 권장하지 않음.</em></p>
+</li>
+</ul>
+<h3 id="5-strict-modehttpsreactjsorgdocsstrict-modehtmlensuring-reusable-state" class="relative group">5. Strict Mode<a href="https://reactjs.org/docs/strict-mode.html#ensuring-reusable-state" target="_blank" rel="noreferrer">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-strict-modehttpsreactjsorgdocsstrict-modehtmlensuring-reusable-state" aria-label="Anchor">#</a></span></h3><ul>
+<li>React 18 미만:
+<ul>
+<li>구성 요소를 마운트하고 효과를 생성.</li>
+</ul>
+</li>
+<li>React 18:
+<ul>
+<li>구성 요소를 마운트하고 효과를 생성한 뒤 구성 요소의 마운트 해제 및 리마운트를 시뮬레이션.</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-hooks" class="relative group">6. Hooks <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#6-hooks" aria-label="Anchor">#</a></span></h3><h4 id="useidhttpsreactjsorgdocshooks-referencehtmluseid" class="relative group">useId<a href="https://reactjs.org/docs/hooks-reference.html#useid" target="_blank" rel="noreferrer">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#useidhttpsreactjsorgdocshooks-referencehtmluseid" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">useId</span><span class="p">();</span>
+</span></span></code></pre></div><ul>
+<li>useId로 수화 불일치를 피하면서 서버와 클라이언트에서 안정적인 고유 ID를 생성.</li>
+<li>Example:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">NameFields</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">useId</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">htmlFor</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span><span class="p">}&gt;</span><span class="nx">Do</span> <span class="nx">you</span> <span class="nx">like</span> <span class="nx">React</span><span class="o">?</span><span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;react&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">htmlFor</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span> <span class="o">+</span> <span class="s2">&#34;-firstName&#34;</span><span class="p">}&gt;</span><span class="nx">First</span> <span class="nx">Name</span><span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span> <span class="o">+</span> <span class="s2">&#34;-firstName&#34;</span><span class="p">}</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">htmlFor</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span> <span class="o">+</span> <span class="s2">&#34;-lastName&#34;</span><span class="p">}&gt;</span><span class="nx">Last</span> <span class="nx">Name</span><span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span> <span class="o">+</span> <span class="s2">&#34;-lastName&#34;</span><span class="p">}</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ul>
+<h4 id="usetransitionhttpsreactjsorgdocshooks-referencehtmlusetransition" class="relative group">useTransition<a href="https://reactjs.org/docs/hooks-reference.html#usetransition" target="_blank" rel="noreferrer">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#usetransitionhttpsreactjsorgdocshooks-referencehtmlusetransition" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">[</span><span class="nx">isPending</span><span class="p">,</span> <span class="nx">startTransition</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useTransition</span><span class="p">();</span>
+</span></span></code></pre></div><p>*<em>앞선 <a href="#2-transitions-httpsreactjsorgdocsreact-apihtmltransitions">Transitions</a>에서 설명.</em></p>
+<h4 id="usedeferredvaluehttpsreactjsorgdocshooks-referencehtmlusedeferredvalue" class="relative group">useDeferredValue<a href="https://reactjs.org/docs/hooks-reference.html#usedeferredvalue" target="_blank" rel="noreferrer">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#usedeferredvaluehttpsreactjsorgdocshooks-referencehtmlusedeferredvalue" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">deferredValue</span> <span class="o">=</span> <span class="nx">useDeferredValue</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+</span></span></code></pre></div><ul>
+<li>
+<p>useDeferredValue로 트리의 긴급하지 않은 부분 렌더링 연기 가능.</p>
+</li>
+<li>
+<p>Debouncing 또는 Throttling을 사용하여 업데이트를 연기하는 user-space hooks와 유사하나 몇 가지 장점이 있음.</p>
+<ul>
+<li>고정된 시간 지연이 없어 우선되는 렌더링이 반영된 직후 지연된 렌더링 시도.</li>
+<li>지연된 렌더링은 중단 가능하며 사용자 입력을 차단하지 않음.</li>
+</ul>
+</li>
+<li>
+<p>값을 <code>setState</code>로 제어할 수 없을 때 유용. (다른 경우는 <a href="#2-transitions-httpsreactjsorgdocsreact-apihtmltransitions">Transitions</a> 권장.)</p>
+</li>
+<li>
+<p>useDeferredValue는 전달한 값만 연기. 즉, 긴급 업데이트 중 자식 구성 요소의 리렌더링을 방지하려면 해당 구성 요소를 React.memo 또는 React.useMemo로 메모해야 함.</p>
+</li>
+<li>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">Typeahead</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">useSearchQuery</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">deferredQuery</span> <span class="o">=</span> <span class="nx">useDeferredValue</span><span class="p">(</span><span class="nx">query</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Memoizing tells React to only re-render when deferredQuery changes,
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// not when query changes.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">suggestions</span> <span class="o">=</span> <span class="nx">useMemo</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">&lt;</span><span class="nt">SearchSuggestions</span> <span class="na">query</span><span class="o">=</span><span class="p">{</span><span class="nx">deferredQuery</span><span class="p">}</span> <span class="p">/&gt;,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">deferredQuery</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">SearchInput</span> <span class="na">query</span><span class="o">=</span><span class="p">{</span><span class="nx">query</span><span class="p">}</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">Suspense</span> <span class="na">fallback</span><span class="o">=</span><span class="s">&#34;Loading results...&#34;</span><span class="p">&gt;{</span><span class="nx">suggestions</span><span class="p">}&lt;/</span><span class="nt">Suspense</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ul>
+<h4 id="usesyncexternalstorehttpsreactjsorgdocshooks-referencehtmlusesyncexternalstore" class="relative group">useSyncExternalStore<a href="https://reactjs.org/docs/hooks-reference.html#usesyncexternalstore" target="_blank" rel="noreferrer">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#usesyncexternalstorehttpsreactjsorgdocshooks-referencehtmlusesyncexternalstore" aria-label="Anchor">#</a></span></h4><ul>
+<li>useSyncExternalStore는 외부 저장소가 업데이트를 동기적으로 강제하여 동시 읽기를 지원하는 새로운 Hook.</li>
+</ul>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300">useSyncExternalStore is intended to be used by libraries, not application code.</span>
+</div>
+
+<h4 id="useinsertioneffecthttpsreactjsorgdocshooks-referencehtmluseinsertioneffect" class="relative group">useInsertionEffect<a href="https://reactjs.org/docs/hooks-reference.html#useinsertioneffect" target="_blank" rel="noreferrer">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#useinsertioneffecthttpsreactjsorgdocshooks-referencehtmluseinsertioneffect" aria-label="Anchor">#</a></span></h4><ul>
+<li>useInsertionEffect는 CSS-in-JS 라이브러리가 렌더링 중에 스타일을 삽입할 때 생기는 성능 문제를 해결하는 새로운 Hook.</li>
+<li>DOM이 변경된 후에 실행되지만 기존 레이아웃이 영향을 미치기 전에 새 레이아웃을 읽음.</li>
+</ul>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300">useInsertionEffect is intended to be used by libraries, not application code.</span>
+</div>
+
+<hr>
+<p>Ps. <a href="https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html" target="_blank" rel="noreferrer">React Blog: How to Upgrade to React 18</a><br>
+Ps. <a href="https://reactjs.org/blog/2021/12/17/react-conf-2021-recap.html" target="_blank" rel="noreferrer">React Blog: React Conf 2021 Recap</a><br>
+Ps. <a href="https://www.youtube.com/watch?v=7mkQi0TlJQo" target="_blank" rel="noreferrer">Youtube: 완전 새로운 리액트가 온다? 핵심정리 10분컷</a><br>
+Ps. <a href="https://www.youtube.com/watch?v=lDukIAymutM" target="_blank" rel="noreferrer">Youtube: useTransition vs useDeferredValue | React 18</a></p>
+<p>Ref. <a href="https://reactjs.org/blog/2022/03/29/react-v18.html" target="_blank" rel="noreferrer">React Blog: React v18.0</a></p>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/studies/react/next.js/lc-4/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >[Next.js] Learn Course (4) - CREATE YOUR FIRST APP 2</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-04-08 00:00:00 &#43;0000 UTC">8 April 2022</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/algorithm/practice-kit/hash/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >[Practice Kit] 해시(Hash)</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-05-02 00:00:00 &#43;0000 UTC">2 May 2022</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+        
+          
+        
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2021 Yuchan&rsquo;s hello world!
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://yuchanjeong.github.io/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

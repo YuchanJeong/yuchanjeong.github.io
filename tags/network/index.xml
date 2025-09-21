@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/network/</link>
+    <description>Recent content in Network on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Tue, 26 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BC-10w-2 / [Web Server] 기초(3)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-2/</link>
+      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-2/</guid>
+      <description>Today I learned #&#xD;Sprint - StatesAirline Server #mini server(1) #const express = require(&amp;#34;express&amp;#34;); const cors = require(&amp;#34;cors&amp;#34;); // 서버 시작 const app = express(); // 모든 요청에 대해 CORS 를 허용 app.</description>
+    </item>
+    <item>
+      <title>BC-10w-1 / [Web Server] 기초(2)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-1/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-1/</guid>
+      <description>Today I learned #&#xD;Chapter - Refactor Express # npm install express &amp;ndash;save 라우팅 메소드와 URL(/lower, /upper 등)로 분기점을 만드는 것 /* 순수 node.</description>
+    </item>
+    <item>
+      <title>BC-9w-5 / [Web Server] 기초(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-5/</link>
+      <pubDate>Fri, 22 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-5/</guid>
+      <description>Today I learned #Algorithm Test 12 treeBFS #let func = function (node) { // 반복문 밖의 변수에 누적 const queue = [node]; const result = []; while (queue.</description>
+    </item>
+    <item>
+      <title>BC-9w-2 / [HTTP/네트워크] REST API</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-2/</link>
+      <pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-2/</guid>
+      <description>Today I learned #Algorithm Test 09 나머지의 분배 #&#xD;나머지의 분배 (A + B) % C === ((A % C) + (B % C)) % C (A _ B) % C === ((A _ C) _ (B _ C)) % C (A - B) % C === ((A % C) - (B % C) + C) % C Rest API # REST(Representational State Transfer) API는 웹에서 사용되는 데이터나 자원(Resource)을 HTTP URI로 표현하고, HTTP 프로토콜을 통해 요청과 응답을 정의하는 방식</description>
+    </item>
+    <item>
+      <title>BC-9w-1 / [HTTP/네트워크] 네트워크-기초</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-1/</link>
+      <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-1/</guid>
+      <description>Today I learned #&#xD;클라이언트-서버 아키텍처(2티어 아키텍처) # Client 리소스를 사용하는 앱 Server 리소스가 존재하는 곳 HTTP 프로토콜(통신 규약) OSI 7 Layers 물리-데이터 링크-네트워크 계층-전송 계층-세션 계층-표현 계층-응용 계층 응용 계층(7) 프로토콜 이름 설명 HTTP 웹에서 HTML, JSON 등의 정보를 주고받는 프로토콜 HTTPS HTTP에서 보안이 강화된 프로토콜 FTP 파일 전송 프로토콜 SMTP 메일을 전송하기 위한 프로토콜 SSH CLI 환경의 원격 컴퓨터에 접속하기 위한 프로토콜 RDP Windows 계열의 원격 컴퓨터에 접속하기 위한 프로토콜 WebSocket 실시간 통신, Push 등을 지원하는 프로토콜 전송 계층(4) 프로토콜 이름 설명 TCP HTTP, FTP 통신의 등의 근간이 되는 인터넷 프로토콜 UDP (양방향의 TCP와는 다르게)단방향으로 작동하는 훨씬 더 단순하고 빠르지만, 신뢰성이 낮은 인터넷 프로토콜 API(Application Programming Interface) Interface 의사소통이 가능하도록 만들어진 접점 HTTP 요청 메소드 요청 적절한 메소드 추가(Create) POST 조회(Read) GET 갱신(Update) PUT or PATCH 삭제(Delete) DELETE 보이지 않는 곳의 브라우저 작동 원리 #URL과 URI # URL(Uniform Resource Locator) 네트워크 상에서 웹 페이지, 이미지, 동영상 등의 파일이 위치한 정보 scheme, hosts, url-path로 구분 URI(Uniform Resource Identifier) URL의 기본 요소에 더해 query, bookmark를 포함 부분 명칭 설명 file://, http://, https:// scheme 통신 프로토콜 127.</description>
+    </item>
+  </channel>
+</rss>

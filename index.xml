@@ -7,123 +7,1218 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Wed, 10 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[B2B/리팩토링] 스타일</title>
       <link>https://yuchanjeong.github.io/posts/work/7/</link>
       <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/work/7/</guid>
       <description>실제 적용 시 더 편리하게 바뀐 부분들 반영 안됨 변경 예정!</description>
     </item>
-    
     <item>
       <title>[B2B/리팩토링] 프로젝트 시작</title>
       <link>https://yuchanjeong.github.io/posts/work/6/</link>
       <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/work/6/</guid>
-      <description>개요 # BE가 기존의 Express 및 TypeORM로 구성된 서버를 Nest.</description>
+      <description>개요 #BE가 기존의 Express 및 TypeORM로 구성된 서버를 Nest.</description>
     </item>
-    
     <item>
       <title>[Node.js 교과서] Node.js의 기능</title>
       <link>https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/2/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/2/</guid>
       <description>제 3장.</description>
     </item>
-    
     <item>
       <title>[Node.js 교과서] Node.js란</title>
       <link>https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/1/</link>
       <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/lectures/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/1/</guid>
       <description>제 1장.</description>
     </item>
-    
     <item>
       <title>다국어 처리 (react-i18next)</title>
       <link>https://yuchanjeong.github.io/posts/work/5/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/work/5/</guid>
-      <description>배경 # 새로 진행하고 있는 B2B 프로젝트에 글로벌 진출 기회가 생겨서 다국어 처리를 할 필요가 생겼다.</description>
+      <description>배경 #새로 진행하고 있는 B2B 프로젝트에 글로벌 진출 기회가 생겨서 다국어 처리를 할 필요가 생겼다.</description>
     </item>
-    
     <item>
       <title>[프로젝트 초기 설정] Axios Instance &amp; React Query</title>
       <link>https://yuchanjeong.github.io/posts/work/4/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/work/4/</guid>
-      <description>Axios Instance # base url 설정, 헤더에 액세스 토큰 포함, 액세스 토큰 만료 시 재발급 그리고 리프레시 토큰 만료 시 로그아웃을 axiosInstance를 통해 공통 설정으로 처리했다.</description>
+      <description>Axios Instance #base url 설정, 헤더에 액세스 토큰 포함, 액세스 토큰 만료 시 재발급 그리고 리프레시 토큰 만료 시 로그아웃을 axiosInstance를 통해 공통 설정으로 처리했다.</description>
     </item>
-    
     <item>
       <title>[프로젝트 초기 설정] 코드 스플리팅 &amp; SASS</title>
       <link>https://yuchanjeong.github.io/posts/work/3/</link>
       <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/work/3/</guid>
-      <description>코드 스플리팅 # 리액트에서 활용 가능한 여러 방식의 코드 스플리팅이 있지만 우선 회사의 다른 프로젝트에서 사용하고 있는 loadable component를 활용한 페이지(라우팅) 기반의 코드 스플리팅만 적용 했다.</description>
+      <description>코드 스플리팅 #리액트에서 활용 가능한 여러 방식의 코드 스플리팅이 있지만 우선 회사의 다른 프로젝트에서 사용하고 있는 loadable component를 활용한 페이지(라우팅) 기반의 코드 스플리팅만 적용 했다.</description>
     </item>
-    
     <item>
       <title>[프로젝트 초기 설정] 협업 준비</title>
       <link>https://yuchanjeong.github.io/posts/work/2/</link>
       <pubDate>Fri, 11 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/work/2/</guid>
-      <description>배경 # 다른 팀원들이 기존 업무로 바빴기 때문에 신규 B2B 프로젝트에 나만 우선 투입되었다.</description>
+      <description>배경 #다른 팀원들이 기존 업무로 바빴기 때문에 신규 B2B 프로젝트에 나만 우선 투입되었다.</description>
     </item>
-    
     <item>
       <title>평균 별점 (소수점 반영)</title>
       <link>https://yuchanjeong.github.io/posts/work/1/</link>
       <pubDate>Sat, 05 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/work/1/</guid>
-      <description>배경 # 제품 상세페이지의 제품 이미지 바로 아래에 해당 제품의 평균 별점이 보이면 좋겠다는 의견이 나와서 이를 반영하기로 했다.</description>
+      <description>배경 #제품 상세페이지의 제품 이미지 바로 아래에 해당 제품의 평균 별점이 보이면 좋겠다는 의견이 나와서 이를 반영하기로 했다.</description>
     </item>
-    
     <item>
       <title>깃허브 블로그 서브 모듈 문제</title>
       <link>https://yuchanjeong.github.io/posts/etc/1/</link>
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/etc/1/</guid>
-      <description>배경 # 취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 과정에서 서브 모듈 관련 문제를 만났다.</description>
+      <description>배경 #취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 과정에서 서브 모듈 관련 문제를 만났다.</description>
     </item>
-    
     <item>
       <title>개발자의 글쓰기 - 김철수</title>
       <link>https://yuchanjeong.github.io/posts/books/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EA%B8%80%EC%93%B0%EA%B8%B0/</link>
       <pubDate>Sat, 29 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/books/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EA%B8%80%EC%93%B0%EA%B8%B0/</guid>
       <description>개발자의 글쓰기는 &amp;lsquo;정확&amp;rsquo;하고 &amp;lsquo;간결&amp;rsquo;하고 &amp;lsquo;가독성&amp;rsquo;이 높아야 한다.</description>
     </item>
-    
+    <item>
+      <title>취직 준비부터 면접 그리고 출근 첫 주</title>
+      <link>https://yuchanjeong.github.io/posts/diaries/2/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/diaries/2/</guid>
+      <description>취직 #팀 프로젝트를 끝낸 뒤 아쉬움이 남아 팀 프로젝트 개선과 개인 프로젝트를 하나 더 진행하였다.</description>
+    </item>
+    <item>
+      <title>Debate Ducks 2</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/32/</link>
+      <pubDate>Mon, 12 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/32/</guid>
+      <description>개요 # 실시간 영상 토론 배틀 플랫폼 Debate-Ducks의 개선 프로젝트</description>
+    </item>
+    <item>
+      <title>[면접 대비] 주니어 프런트 앤드 기술 면접</title>
+      <link>https://yuchanjeong.github.io/posts/etc/interview-1/</link>
+      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/etc/interview-1/</guid>
+      <description>주니어 레벨 프런트 앤드 개발자 기술 면접에 필요한 지식들을 간단히 정리한 문서</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 성능 최적화 - 이미지</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/31/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/31/</guid>
+      <description>[PR] - https://github.</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] 시험 생성 페이지 - 기초</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/5/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/5/</guid>
+      <description>시험 생성 페이지에 탭 추가 #[PR] - https://github.</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] 페이지 이너, 셀렉트, 인풋 및 버튼</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/4/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/4/</guid>
+      <description>PageInner &amp;amp; Select #[PR] - https://github.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 치명적인 문제들 해결</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/30/</link>
+      <pubDate>Wed, 31 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/30/</guid>
+      <description>*Pull Request</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] Styled-components 설정 및 헤더•푸터</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/3/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/3/</guid>
+      <description>[PR] - https://github.</description>
+    </item>
+    <item>
+      <title>[DynamoDB] 기본 개념</title>
+      <link>https://yuchanjeong.github.io/posts/studies/db/dynamodb/2/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/db/dynamodb/2/</guid>
+      <description>공식 문서와 블로그 정리글들의 내용을 바탕으로 기본적인 내용만 정리.</description>
+    </item>
+    <item>
+      <title>[DynamoDB] 시작하기</title>
+      <link>https://yuchanjeong.github.io/posts/studies/db/dynamodb/1/</link>
+      <pubDate>Sun, 28 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/db/dynamodb/1/</guid>
+      <description>What is Amazon DynamoDB?</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] DynamoDB 연결 및 기능 구체화</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/2/</link>
+      <pubDate>Sun, 28 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/2/</guid>
+      <description>로컬 DynamoDB 연결 #우선 Docker를 사용해서 로컬에 DynamoDB를 만들었다.</description>
+    </item>
+    <item>
+      <title>[Styled-components] 시작하기</title>
+      <link>https://yuchanjeong.github.io/posts/studies/css/styled-components/1/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/css/styled-components/1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] 기획 및 초기 설정</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/1/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/1/</guid>
+      <description>기획 이유 #가끔씩 대학수학능력시험을 패러디한 게시물들을 볼 수 있는데, 대부분이 이미지나 PDF로 만들어져 있다.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 소소한 문제들 해결</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/29/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/29/</guid>
+      <description>토론 카드 목록 배치 문제 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[React Native] 공식 문서로 공부하자!</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/react-native/od-1/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/react-native/od-1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 정적 배포로 변경 및 마이페이지 개선</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/28/</link>
+      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/28/</guid>
+      <description>정적 배포로 변경 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 크로스 브라우징 이슈</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/27/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/27/</guid>
+      <description>사파리 브라우저에서 발생하는 문제들 해결 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 에러 페이지 &amp; 스크롤 위치 기억하기</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/26/</link>
+      <pubDate>Sat, 20 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/26/</guid>
+      <description>에러 페이지 제작 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 체험 토론</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/25/</link>
+      <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/25/</guid>
+      <description>체험 토론 제작 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Q&amp;A 페이지</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/24/</link>
+      <pubDate>Thu, 18 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/24/</guid>
+      <description>Q&amp;amp;A 페이지 제작 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] SSR 도입과 소소한 개선</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/23/</link>
+      <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/23/</guid>
+      <description>회원가입 개선 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 로그인/로그아웃 문제 해결과 코드 정돈 및 개선</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/22/</link>
+      <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/22/</guid>
+      <description>로그인/로그아웃 시 좋아요 여부와 투표 여부 반영 문제 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 프로젝트 v2.0.0 마무리</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/21/</link>
+      <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/21/</guid>
+      <description>헤더 개선 및 기타 에러 해결 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 실시간 영상 토론 진행 페이지</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/20/</link>
+      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/20/</guid>
+      <description>실시간 영상 토론 에러 해결 및 스타일 적용 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 토론 목록 및 게시물 기타 작업들</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/19/</link>
+      <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/19/</guid>
+      <description>해당 내용의 PR 주소 첨부 시작.</description>
+    </item>
+    <item>
+      <title>첫 이력서 작성 후기</title>
+      <link>https://yuchanjeong.github.io/posts/diaries/1/</link>
+      <pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/diaries/1/</guid>
+      <description>이력서 구글 드라이브 링크</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 토론 생성, 수정 및 조회 페이지</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/18/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/18/</guid>
+      <description>토론 생성 및 수정 페이지 # 원래는 유효성 검사 실패 여부를 작성 버튼을 누른 후에 뜨게 했었다.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 토론 목록 조회 페이지</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/17/</link>
+      <pubDate>Sat, 30 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/17/</guid>
+      <description>토론 목록 #&#xD;기존에는 기본 토론 목록과 좋아요가 된 토론 목록이 따로 작성되어 있었지만 공통 요소를 최대한 묶어서 하나의 컴포넌트로 만들었다.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 로그인 모달</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/16/</link>
+      <pubDate>Fri, 29 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/16/</guid>
+      <description>로그인이 필요한 서비스 모달 # 기존에는 로그인이 필요한 서비스의 경우 안내 모달을 띄우고 사용자가 로그인을 원할 경우 로그인 페이지로 이동시켜줬다.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 첫 스타일 작업</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/15/</link>
+      <pubDate>Thu, 28 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/15/</guid>
+      <description>개요 #스타일 초기화, 전역 변수 및 스타일 설정 후 스타일 작업 시작.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 기본 기능 마무리</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/14/</link>
+      <pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/14/</guid>
+      <description>목차 변경</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 토론 게시물 CRUD</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/13/</link>
+      <pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/13/</guid>
+      <description>Summary #토론 게시물 생성, 조회, 수정, 삭제</description>
+    </item>
+    <item>
+      <title>[React-query] React Query와 상태관리 (feat. 2월 우아한테크세미나)</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/react-query/1/</link>
+      <pubDate>Mon, 18 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/react-query/1/</guid>
+      <description>정리 필요 상태관리 #상태란?</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] React Query 기초</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/12/</link>
+      <pubDate>Sun, 17 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/12/</guid>
+      <description>Summary #리액트 쿼리 적용.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 토론 생성</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/11/</link>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/11/</guid>
+      <description>Summary #토론 생성 기능 추가.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - 개발 재개 및 보류</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/10/</link>
+      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/10/</guid>
+      <description>귀국, 입원 및 수술 등의 이유로 한 달 넘게 중지됐던 개발 재개 Summary #재연결 시 녹화 영상 유지 기능 구현 시도.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Record</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/9/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/9/</guid>
+      <description>Summary #토론 녹화 및 임시 다운로드 기능 추가.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Debate</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/8/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/8/</guid>
+      <description>Summary #토론 시작, 일시 중단, 단계별 안내 및 권한 설정.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Reconnect</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/7/</link>
+      <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/7/</guid>
+      <description>Summary #WebRTC 재연결 시 발생하는 여러 문제들 해결.</description>
+    </item>
+    <item>
+      <title>[Redux] Redux-toolkit in Next.js and TypeScript</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/redux/redux-toolkit-next.js-ts/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/redux/redux-toolkit-next.js-ts/</guid>
+      <description>npm i @reduxjs/toolkit react-redux next-redux-wrapper npm i -D @types/react-redux redux/store.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Canvas</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/6/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/6/</guid>
+      <description>Summary #캔버스에 비디오 및 공유 화면를 포함한 여러 요소들을 그리고 녹화할 수 있게 만듦.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Stream</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/5/</link>
+      <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/5/</guid>
+      <description>Summary #마이크 및 비디오 끄기/켜기 기능 및 화면 공유 기능 추가.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - WebRTC</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/4/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/4/</guid>
+      <description>Summary #WebRTC(simple-peer)로 사용자를 1 대 1로 연결해 서로의 미디어를 빠르게 주고받을 수 있게 만듦.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 힙(Heap)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/heap/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/heap/</guid>
+      <description>힙은 특정한 규칙을 가지는 트리로, 힙을 이용해서 우선순위 큐를 구현할 수 있습니다.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Room</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/3/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/3/</guid>
+      <description>Summary #WebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 함.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Init</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/2/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/2/</guid>
+      <description>Summary #socket.</description>
+    </item>
+    <item>
+      <title>[Socket.io] Nest.js에서 Socket.io 연결 기초</title>
+      <link>https://yuchanjeong.github.io/posts/studies/socket.io/socket.io-nest.js/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/socket.io/socket.io-nest.js/</guid>
+      <description>설치 #npm i @nestjs/websockets @nestjs/platform-socket.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 탐욕법(Greedy)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</link>
+      <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/greedy/</guid>
+      <description>부분적인 최적해가 전체적인 최적해가 되는 마법.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 스택/큐(Stack/Queue)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/stack-queue/</link>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/stack-queue/</guid>
+      <description>LIFO, FIFO, push &amp;amp; pop!</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 개선 프로젝트 시작</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/1/</link>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/1/</guid>
+      <description>개요 # 새로운 스택을 적극 활용해 기존 프로젝트를 개선한 새로운 버전의 Debate-Ducks 프로젝트 시작.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 깊이/너비 우선 탐색(DFS/BFS)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/dfs-bfs/</link>
+      <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/dfs-bfs/</guid>
+      <description>깊이/너비 우선 탐색을 사용해 원하는 답을 찾아보세요.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 완전탐색(Exhaustive Search, Brute-force Search)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/exhaustivesearch/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/exhaustivesearch/</guid>
+      <description>무식해 보여도 사실은 최고의 방법일 때가 있지요.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 정렬(Sort)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/sort/</link>
+      <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/sort/</guid>
+      <description>정렬을 이용해서 문제를 효율적으로 풀어보세요.</description>
+    </item>
+    <item>
+      <title>[Practice Kit] 해시(Hash)</title>
+      <link>https://yuchanjeong.github.io/posts/algorithm/practice-kit/hash/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/algorithm/practice-kit/hash/</guid>
+      <description>Key-value쌍으로 데이터를 빠르게 찾아보세요.</description>
+    </item>
+    <item>
+      <title>[React] React v18.0</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/react/v18.0/</link>
+      <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/react/v18.0/</guid>
+      <description>React v18.</description>
+    </item>
+    <item>
+      <title>[Next.js] Learn Course (4) - CREATE YOUR FIRST APP 2</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-4/</link>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-4/</guid>
+      <description>CREATE YOUR FIRST APP #4.</description>
+    </item>
+    <item>
+      <title>[Next.js] Learn Course (3) - CREATE YOUR FIRST APP 1</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-3/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-3/</guid>
+      <description>CREATE YOUR FIRST APP #1.</description>
+    </item>
+    <item>
+      <title>[Next.js] Learn Course (2) - How Next.js Works</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-2/</link>
+      <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-2/</guid>
+      <description>How Next.</description>
+    </item>
+    <item>
+      <title>[Next.js] Learn Course (1) - About Next.js</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-1/</link>
+      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-1/</guid>
+      <description>About Next.</description>
+    </item>
+    <item>
+      <title>BC-Final / Final Project 기능 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-final-2/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-final-2/</guid>
+      <description>*전체적인 회고는 따로 회고록에 작성</description>
+    </item>
+    <item>
+      <title>BC-Final / Final Project 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-final-1/</link>
+      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-final-1/</guid>
+      <description>*기능 관련 부분은 따로 기능 회고록에 작성</description>
+    </item>
+    <item>
+      <title>BC-First / First Project 기능 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-first-2/</link>
+      <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-first-2/</guid>
+      <description>*전체적인 회고는 따로 회고록에 작성</description>
+    </item>
+    <item>
+      <title>BC-First / First Project 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-first-1/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-first-1/</guid>
+      <description>*기능 관련 부분은 따로 기능 회고록에 작성</description>
+    </item>
+    <item>
+      <title>BC-16w / Section3 및 HA 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-16w/</link>
+      <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-16w/</guid>
+      <description>Section3 회고지만 First Project를 끝내고서야 작성할 수 있을 정도로 프로젝트에 온 힘을 쏟았었다.</description>
+    </item>
+    <item>
+      <title>BC-15w-3 / [배포] Docker</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-3/</link>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-3/</guid>
+      <description>1. Why Docker?</description>
+    </item>
+    <item>
+      <title>BC-15w-2 / [배포] Amazon Web Service</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-2/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-2/</guid>
+      <description>1) Cloud Computing # 데이터 센터에서는 서버의 자원과 공간, 및 네트워크 환경을 제공(on-premise) 클라우드 컴퓨팅은 가상화 기술의 발전으로부터 비롯 운영 환경 자체가 클라우드 제공자에게 종속되어 버리므로, 클라우드 서비스에 문제가 생기면 내가 배포하고 관리하는 환경에도 영향이 미치거나 백엔드 구성 자체가 특정 회사의 기술로만 구성해야만 하는 경우가 발생할 수도 있는 단점이 있음 클라우드 서비스의 형태 SaaS(Software as a Service) 클라우드 제공자가 당장 사용 가능한 소프트웨어를 제공하는 경우 대부분 SaaS에 해당 PaaS(Platform as a Service) 클라우드 제공자가 데이터베이스, 개발 플랫폼까지 제공하는 경우 대부분 PaaS에 해당 IaaS(Infrastructure as a Service) 클라우드 제공자가 가상 컴퓨터까지 제공하는 경우 대부분 IaaS에 해당 *AWS는 IaaS에 가까움 2) Deploy # Development 단계 각자의 컴퓨터에서 코드를 작성하고 테스트하는 과정 개발 단계이기 때문에 실제 데이터를 이용하지 않고 더미 데이터를 이용해서 테스트 Integration 단계 각자의 컴퓨터에서 작성한 코드를 합치는 과정 내가 작성한 코드가 다른 코드를 침범해서 오류를 일으키지 않는지, 코드 간에 conflict가 있지는 않은지 확인하는 과정 Staging 단계 실제 출시 단계인 Production 단계와 가장 유사한 환경에서 테스트하는 과정 실제 데이터를 복사해서 문제가 있지 않은지 등 다양한 환경에서 테스트를 진행 또한 서비스와 관련된 부서 혹은 인원의 확인 과정을 거침 Production 단계 개발된 서비스를 출시하는 단계 사용자가 접속할 수 있는 Production 환경에서 코드를 구동하고 서비스를 제공 실제 데이터를 가지고 서비스가 운영되기 때문에 문제가 생기면 안 되는 단계 환경 설정을 코드와 분리하는 것이 중요 절대경로 대신 상대경로 사용 환경에 따라 포트를 분기할 수 있도록 환경 변수를 설정(.</description>
+    </item>
+    <item>
+      <title>BC-15w-1 / {FC} Next.js로 블로그 만들기 - Next.js</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-1/</link>
+      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-15w-1/</guid>
+      <description>1. What is Next.</description>
+    </item>
+    <item>
+      <title>BC-14w-5 / {FC} Next.js로 블로그 만들기 - Sanity</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-5/</link>
+      <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-5/</guid>
+      <description>1. What is Sanity^ ^ # Sanity.</description>
+    </item>
+    <item>
+      <title>BC-14w-4 / {FC} GraphQL 맛보기</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-4/</link>
+      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-4/</guid>
+      <description>1. Rest API &amp;amp; GraphQL #Rest API #axios.</description>
+    </item>
+    <item>
+      <title>BC-14w-3 / [인증/보안] OAuth</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-3/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-3/</guid>
+      <description>1. OAuth 2.</description>
+    </item>
+    <item>
+      <title>BC-14w-2 / [인증/보안] Token</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-2/</link>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-2/</guid>
+      <description>1. 토큰 기반 인증 (Token-based Authentication) # 세션 기반 인증은 서버(혹은 DB)에 유저 정보를 담는 인증 방식 매 요청마다 데이터베이스를 살펴보는 것이 불편하고, 이 부담을 덜어내고 싶어서, 토큰 기반 인증 사용 대표적인 것이 JWT (JSON Web Token) 토큰은 유저 정보를 암호화한 상태로 담을 수 있고, 암호화했기 때문에 클라이언트에 담을 수 있음 JWT 종류 # Access Token 실제로 권한을 얻는 데 사용하는 토큰 비교적 짧은 유효 기간 을 주어 탈취되더라도 오랫동안 사용할 수 없도록 함 Refresh Token Access token의 유효기간이 만료된다면 Refresh token을 사용하여 새로운 access token을 발급 JWT 구조 # aaaaaa(Header).</description>
+    </item>
+    <item>
+      <title>BC-14w-1 / [인증/보안] Session</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-1/</link>
+      <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-1/</guid>
+      <description>1. HTTPS # HTTPS = HTTP + Secure 무결성, 기밀성 인증서(Certification) 데이터 제공자 신원 보장 도메인 종속 CA(Certification Authority) 공인 인증서 발급 기관 비대칭 키 암호화 key A로 암호화, key B로 복호화 SSL(Secure Socket Layer) or TLS(Transport Layer Security)</description>
+    </item>
+    <item>
+      <title>BC-13w-5 / [데이터베이스] NoSQL</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-5/</link>
+      <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-5/</guid>
+      <description>MongoDB #1) NoSQL 기반의 비관계형 데이터베이스를 사용하는 경우 # 비구조적인 대용량의 데이터를 저장하는 경우 클라우드 컴퓨팅 및 저장 공간을 최대한 활용하는 경우 NoSQL은 수평적 확장의 형태로 증설하므로, 이론상 무한대로 서버를 계속 분산시켜 DB를 증설할 수 있습니다.</description>
+    </item>
+    <item>
+      <title>BC-13w-4 / [데이터베이스] MVC(3) ORM</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-4/</link>
+      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-4/</guid>
+      <description>ORM(Object-Relational Mapping) # Sequelize a promise-based Node.</description>
+    </item>
+    <item>
+      <title>BC-13w-3 / [데이터베이스] MVC(2)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-3/</link>
+      <pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-3/</guid>
+      <description>Server Example #// app.</description>
+    </item>
+    <item>
+      <title>BC-13w-2 / [데이터베이스] MVC(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-2/</link>
+      <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-2/</guid>
+      <description>1. MVC(Model-View-Controller) # SW Architecture Design Pattern separates application functionalities 1) Model # knowledge handles data interaction with &amp;ldquo;Database&amp;rdquo; and &amp;ldquo;Controller&amp;rdquo; 2) View # visual representation of a mode what the users see(UI) interaction with &amp;ldquo;Controller&amp;rdquo; 3) Controller # receives input(&amp;ldquo;Client&amp;rdquo;) process requests get data from a &amp;ldquo;Model&amp;rdquo; pass data to the &amp;ldquo;View&amp;rdquo; 2.</description>
+    </item>
+    <item>
+      <title>BC-13w-1 / [데이터베이스] 관계형 데이터베이스(3)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-1/</link>
+      <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-1/</guid>
+      <description>추가 요구조건과 스키마 #1) schema #CREATE TABLE `category` ( `id` int PRIMARY KEY AUTO_INCREMENT, `name` varchar(255) not NULL ); CREATE TABLE `content_category` ( `id` int PRIMARY KEY AUTO_INCREMENT, `contentId` int not NULL, FOREIGN KEY (`contentId`) REFERENCES `content` (`id`), `categoryId` int not NULL, FOREIGN KEY (`categoryId`) REFERENCES `category` (`id`) ); CREATE TABLE `role` ( `id` int PRIMARY KEY AUTO_INCREMENT, `name` varchar(255) not NULL ); ALTER TABLE `user` ADD roleId int; ALTER TABLE `user` ADD FOREIGN KEY (`roleId`) REFERENCES `role` (`id`); 2) script #// category 테이블의 구조를 보기위한 SQL을 작성해주세요.</description>
+    </item>
+    <item>
+      <title>BC-12w-7 / {FC} Redux-saga</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-7/</link>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-7/</guid>
+      <description>An intuitive Redux side effect manager; middleware</description>
+    </item>
+    <item>
+      <title>BC-12w-6 / {FC} Redux</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-6/</link>
+      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-6/</guid>
+      <description>A Predictable State Container for JS Apps</description>
+    </item>
+    <item>
+      <title>BC-12w-5 / [데이터베이스] 관계형 데이터베이스(2) &#43; {FC} Redux Basic</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-5/</link>
+      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-5/</guid>
+      <description>1. Instagram Schema Design # https://dbdiagram.</description>
+    </item>
+    <item>
+      <title>BC-12w-4 / [데이터베이스] 관계형 데이터베이스(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-4/</link>
+      <pubDate>Thu, 16 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-4/</guid>
+      <description>1. SQL intro #1) 데이터베이스의 필요성 # In-Memory 프로그램이 종료될 때 해당 프로그램이 사용하던 데이터도 사라짐 File I/O 데이터가 필요할 때마다 전체 파일을 매번 읽어야 함 파일의 크기가 커질수록 이 작업은 버겁고, 비효율적임 데이터베이스를 사용하여 데이터를 영속성있게(persistently) 저장할 필요가 있음 2) Structured Query Language (SQL) # 데이터베이스 언어로, 주로 관계형 데이터베이스에서 사용 MySQL, Oracle, SQLite, PostgreSQL 등 다양한 데이터베이스에서 SQL 구문을 사용 2.</description>
+    </item>
+    <item>
+      <title>BC-12w-3 / [자료구조/알고리즘] 순열/조합 &amp; GCD/LCM &amp; 멱집합</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-3/</link>
+      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-3/</guid>
+      <description>1. 순열 / 조합 # 순열(순서 O) 공식 : nPr = n!</description>
+    </item>
+    <item>
+      <title>BC-12w-2 / [자료구조/알고리즘] 시간 복잡도 &amp; 탐욕 알고리즘 &#43; {FC} Context로 전역 상태 관리하기</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-2/</link>
+      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-2/</guid>
+      <description>Intro to Algorithm # 알고리즘이란 문제를 해결하는 최선의 선택 문제 이해 해결 전략 구상(with 수도 코드) 수도 코드를 바탕으로 코드 작성 1.</description>
+    </item>
+    <item>
+      <title>BC-12w-1 / [Linux] 사용 권한, 환경 변수</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-1/</link>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-1/</guid>
+      <description>1. 사용 권한 #ls -l # 권한을 확인하는 명령어</description>
+    </item>
+    <item>
+      <title>BC-11w-3 / HA-Algorithm, HA-react, Section2 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-3/</link>
+      <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-3/</guid>
+      <description>HA-Algorithm, HA-react # 알고리즘 문제는 코플릿 보다 쉽게 나와서 어렵지 않게 풀었다.</description>
+    </item>
+    <item>
+      <title>BC-11w-2 / [React] 상태 관리(2) redux</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-2/</link>
+      <pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-2/</guid>
+      <description>Today I learned #Sprint - Cmarket Redux #index.</description>
+    </item>
+    <item>
+      <title>BC-11w-1 / [React] 상태 관리(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-1/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-1/</guid>
+      <description>Today I learned #&#xD;상태 관리 # 상태 변경이 일어나는 곳과 상태 변경의 영향을 받는 곳 Side Effect 함수(또는 컴포넌트)의 입력 외에도 함수의 결과에 영향을 미치는 요인 Ex.</description>
+    </item>
+    <item>
+      <title>BC-10w-5 / [React] 컴포넌트 디자인-실습(2)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-5/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-5/</guid>
+      <description>Today I learned #Sprint - React Custom Component #Autocomplete #import { useState, useEffect } from &amp;#34;react&amp;#34;; import styled from &amp;#34;styled-components&amp;#34;; const deselectedOptions = [ &amp;#34;rustic&amp;#34;, &amp;#34;antique&amp;#34;, &amp;#34;vinyl&amp;#34;, &amp;#34;vintage&amp;#34;, &amp;#34;refurbished&amp;#34;, &amp;#34;신품&amp;#34;, &amp;#34;빈티지&amp;#34;, &amp;#34;중고A급&amp;#34;, &amp;#34;중고B급&amp;#34;, &amp;#34;골동품&amp;#34;, ]; const boxShadow = &amp;#34;0 4px 6px rgb(32 33 36 / 28%)&amp;#34;; const activeBorderRadius = &amp;#34;1rem 1rem 0 0&amp;#34;; const inactiveBorderRadius = &amp;#34;1rem 1rem 1rem 1rem&amp;#34;; export const InputContainer = styled.</description>
+    </item>
+    <item>
+      <title>BC-10w-4 / [React] 컴포넌트 디자인-실습(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-4/</link>
+      <pubDate>Thu, 28 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-4/</guid>
+      <description>Today I learned #&#xD;Sprint - React Custom Component # 빌드 컴포넌트 📚 스토리북(Storybook) UI 컴포넌트 개발과 자동으로 문서를 생성할 때 사용 ⚛️ 리액트(React) 선언 중심 컴포넌트 UI(create-react-app)를 사용 💅 스타일 컴포넌트(Styled-components) 컴포넌트 단위의 스타일링에 사용.</description>
+    </item>
+    <item>
+      <title>BC-10w-3 / [React] 컴포넌트 디자인-기본</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-3/</link>
+      <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-3/</guid>
+      <description>Today I learned #&#xD;컴포넌트 단위로 개발하기 #Component Driven Development(CDD) # 컴포넌트 생성 -&amp;gt; 컴포넌트 결합 -&amp;gt; 페이지 조립 예시 BBC 컴포넌트 UI 개발을 위한 Storybook # Component Explorer (컴포넌트 탐색기)</description>
+    </item>
+    <item>
+      <title>BC-10w-2 / [Web Server] 기초(3)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-2/</link>
+      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-2/</guid>
+      <description>Today I learned #&#xD;Sprint - StatesAirline Server #mini server(1) #const express = require(&amp;#34;express&amp;#34;); const cors = require(&amp;#34;cors&amp;#34;); // 서버 시작 const app = express(); // 모든 요청에 대해 CORS 를 허용 app.</description>
+    </item>
+    <item>
+      <title>BC-10w-1 / [Web Server] 기초(2)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-1/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-10w-1/</guid>
+      <description>Today I learned #&#xD;Chapter - Refactor Express # npm install express &amp;ndash;save 라우팅 메소드와 URL(/lower, /upper 등)로 분기점을 만드는 것 /* 순수 node.</description>
+    </item>
+    <item>
+      <title>BC-9w-5 / [Web Server] 기초(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-5/</link>
+      <pubDate>Fri, 22 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-5/</guid>
+      <description>Today I learned #Algorithm Test 12 treeBFS #let func = function (node) { // 반복문 밖의 변수에 누적 const queue = [node]; const result = []; while (queue.</description>
+    </item>
+    <item>
+      <title>BC-9w-4 / {FC} React(8) Deploy React App</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-4/</link>
+      <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-4/</guid>
+      <description>Today I learned #&#xD;+ React with FastCampus(8) Deploy React App #SPA 프로젝트 배포 이해하기 # npm run build long term caching techniques SPA Deploy 특징 모든 요청을 서버에 하고 받아오는 형태가 아님 라우팅 경로에 상관없이 리액트 앱을 받아 실행 라우팅은 받아온 리액트 앱을 실행 후 적용 static 파일을 제외한 모든 요청을 index.</description>
+    </item>
+    <item>
+      <title>BC-9w-3 / [React] 데이터 흐름의 이해와 비동기 처리</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-3/</link>
+      <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-3/</guid>
+      <description>Today I learned #&#xD;React 데이터 흐름 # 데이터 흐름</description>
+    </item>
+    <item>
+      <title>BC-9w-2 / [HTTP/네트워크] REST API</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-2/</link>
+      <pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-2/</guid>
+      <description>Today I learned #Algorithm Test 09 나머지의 분배 #&#xD;나머지의 분배 (A + B) % C === ((A % C) + (B % C)) % C (A _ B) % C === ((A _ C) _ (B _ C)) % C (A - B) % C === ((A % C) - (B % C) + C) % C Rest API # REST(Representational State Transfer) API는 웹에서 사용되는 데이터나 자원(Resource)을 HTTP URI로 표현하고, HTTP 프로토콜을 통해 요청과 응답을 정의하는 방식</description>
+    </item>
+    <item>
+      <title>BC-9w-1 / [HTTP/네트워크] 네트워크-기초</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-1/</link>
+      <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-9w-1/</guid>
+      <description>Today I learned #&#xD;클라이언트-서버 아키텍처(2티어 아키텍처) # Client 리소스를 사용하는 앱 Server 리소스가 존재하는 곳 HTTP 프로토콜(통신 규약) OSI 7 Layers 물리-데이터 링크-네트워크 계층-전송 계층-세션 계층-표현 계층-응용 계층 응용 계층(7) 프로토콜 이름 설명 HTTP 웹에서 HTML, JSON 등의 정보를 주고받는 프로토콜 HTTPS HTTP에서 보안이 강화된 프로토콜 FTP 파일 전송 프로토콜 SMTP 메일을 전송하기 위한 프로토콜 SSH CLI 환경의 원격 컴퓨터에 접속하기 위한 프로토콜 RDP Windows 계열의 원격 컴퓨터에 접속하기 위한 프로토콜 WebSocket 실시간 통신, Push 등을 지원하는 프로토콜 전송 계층(4) 프로토콜 이름 설명 TCP HTTP, FTP 통신의 등의 근간이 되는 인터넷 프로토콜 UDP (양방향의 TCP와는 다르게)단방향으로 작동하는 훨씬 더 단순하고 빠르지만, 신뢰성이 낮은 인터넷 프로토콜 API(Application Programming Interface) Interface 의사소통이 가능하도록 만들어진 접점 HTTP 요청 메소드 요청 적절한 메소드 추가(Create) POST 조회(Read) GET 갱신(Update) PUT or PATCH 삭제(Delete) DELETE 보이지 않는 곳의 브라우저 작동 원리 #URL과 URI # URL(Uniform Resource Locator) 네트워크 상에서 웹 페이지, 이미지, 동영상 등의 파일이 위치한 정보 scheme, hosts, url-path로 구분 URI(Uniform Resource Identifier) URL의 기본 요소에 더해 query, bookmark를 포함 부분 명칭 설명 file://, http://, https:// scheme 통신 프로토콜 127.</description>
+    </item>
+    <item>
+      <title>BC-8w-5 / 8주 차 정리</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-5/</link>
+      <pubDate>Sun, 17 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-5/</guid>
+      <description>자료구조를 마무리하고 비동기를 공부했다.</description>
+    </item>
+    <item>
+      <title>BC-8w-4 / [JS/Node] 비동기-fetch API</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-4/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-4/</guid>
+      <description>Today I learned #&#xD;Sprint - 비동기 예제 (3) 네트워크 요청 #01_PromiseChaining #function getNewsAndWeather() { const result = {}; return fetch(newsURL) .</description>
+    </item>
+    <item>
+      <title>BC-8w-3 / [JS/Node] 비동기, 모듈</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-3/</link>
+      <pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-3/</guid>
+      <description>Today I learned #비동기 #비동기 호출 # Node.</description>
+    </item>
+    <item>
+      <title>BC-8w-2 / [JS/Node] 중급</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-2/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-2/</guid>
+      <description>Today I learned #&#xD;Sprint - Underbar #Bare minimum #_.</description>
+    </item>
+    <item>
+      <title>BC-8w-1 / [자료구조/알고리즘] Graph, Tree, BST</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-1/</link>
+      <pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-8w-1/</guid>
+      <description>Today I learned #&#xD;Graph / Tree / BST #Graph # 여러개의 점들이 서로 복잡하게 연결되어 있는 관계를 표현한 자료구조</description>
+    </item>
+    <item>
+      <title>BC-7w-5 / 7주 차 정리</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-5/</link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-5/</guid>
+      <description>7주 차 정리 # 이번 주의 핵심은 데이터를 다루는 방법이다.</description>
+    </item>
+    <item>
+      <title>BC-7w-4 / [자료구조/알고리즘] Stack, Queue</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-4/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-4/</guid>
+      <description>Today I learned #&#xD;Stack / Queue #Stack # LIFO(Last In First Out) 혹은 FILO(First In Last Out) 브라우저의 뒤로 가기, 앞으로 가기 기능을 구현할 때 자료구조 Stack 활용 새로운 페이지로 접속할 때, 현재 페이지를 Prev Stack에 보관 뒤로 가기 버튼을 눌러 이전 페이지로 돌아갈 때에는, 현재 페이지를 Next Stack에 보관하고 Prev Stack에 가장 나중에 보관된 페이지를 현재 페이지로 가져옴 앞으로 가기 버튼을 눌러 앞서 방문한 페이지로 이동을 원할 때에는, Next Stack의 가장 마지막으로 보관된 페이지를 가져옴 마지막으로 현재 페이지를 Prev Stack에 보관 class Stack { constructor() { this.</description>
+    </item>
+    <item>
+      <title>BC-7w-3 / [자료구조/알고리즘] 재귀(2)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-3/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-3/</guid>
+      <description>Today I learned #&#xD;Big-O notation # O(1) (Constant) 입력 데이터의 크기에 상관없이 언제나 일정한 시간이 걸리는 알고리즘을 나타낸다.</description>
+    </item>
+    <item>
+      <title>Mac Shortcuts</title>
+      <link>https://yuchanjeong.github.io/posts/etc/mac-shortcuts/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/etc/mac-shortcuts/</guid>
+      <description>1. 포커스 및 화면 관리(ctrl) # 단축키 설명 ctrl+F2 상태 막대 포커스 이동 ctrl+F3 Dock 포커스 이동 ctrl+F4 활성 창 포커스 이동 *ctrl+F5 상태 메뉴 포커스 이동 ctrl+↑ 미션 컨트롤 ctrl+↓ 해당 앱 창 ctrl+⇆ 스페이스 이동 2.</description>
+    </item>
+    <item>
+      <title>VSC Shortcuts</title>
+      <link>https://yuchanjeong.github.io/posts/etc/vsc-shortcuts/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/etc/vsc-shortcuts/</guid>
+      <description>1. Cursor # 단축키 설명 opt+shift+I Focus의 각 줄 마지막 멀티 커서 opt+click 멀티 커서 opt+⇆ 단어 커서 cmd+⇆/⇅ 커서 처음/끝으로(한 줄/페이지) cmd+U 커서 되돌리기 cmd+enter 다음 줄 이동 cmd+shift+\ 괄호 끝으로 이동 2.</description>
+    </item>
+    <item>
+      <title>BC-7w-2 / [자료구조/알고리즘] 재귀(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-2/</link>
+      <pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-2/</guid>
+      <description>Today I learned #Algorithm Test 01 팩토리얼 인덱스 찾기 #&#xD;팩토리얼은 수가 조금만 늘어도 기하급수적으로 증가.</description>
+    </item>
+    <item>
+      <title>BC-7w-1 / [JS/Node] 객체지향 프로그래밍</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-1/</link>
+      <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-7w-1/</guid>
+      <description>Today I learned #클래스를 이용한 모듈화 #클로저 모듈 패턴 #function makeCounter() { return { value: 0, increase: function () { this.</description>
+    </item>
+    <item>
+      <title>BC-6w / 6주 차 정리, Section1 회고</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-4/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-4/</guid>
+      <description>6주 차 정리 # 10월 1일에 코로나 2차 백신을 맞았다.</description>
+    </item>
+    <item>
+      <title>BC-6w-3 / HA-JavaScript</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-3/</link>
+      <pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-3/</guid>
+      <description>Today I learned # HA-JavaScript Today&amp;rsquo;s takeaway # section1 HA로 알고리즘 테스트(JavaScript)를 진행했다.</description>
+    </item>
+    <item>
+      <title>BC-6w-2 / HA-React</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-2/</link>
+      <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-2/</guid>
+      <description>Today I learned #Section Review #DOM #&amp;lt;!</description>
+    </item>
+    <item>
+      <title>BC-6w-1 / {FC} React(7)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-1/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-6w-1/</guid>
+      <description>Today I learned #+ React with FastCampus(7) Advanced #Optimizing Performance # 필요할 때만 랜더 한다.</description>
+    </item>
+    <item>
+      <title>BC-5w-추석(3) / 5주 차 정리 &#43; {FC} React(6)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-3/</link>
+      <pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-3/</guid>
+      <description>5주 차 정리(추석 연휴) # 19일은 외가, 20일은 산소, 21일은 친가를 방문했다.</description>
+    </item>
+    <item>
+      <title>BC-5w-추석(2) / {FC} React(5)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-2/</link>
+      <pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-2/</guid>
+      <description>React with FastCampus(5) 실전 활용 #HOC(Higher-Order Component) # HOC = function(컴포넌트) { return 새로운 컴포넌트 } Ex.</description>
+    </item>
+    <item>
+      <title>BC-5w-추석(1) / {FC} React(4)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-1/</link>
+      <pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-5w-1/</guid>
+      <description>React with FastCampus(4) Style #Style Loaders # loader in webpack CSS, SASS # 스타일이 전역적으로 순서만 다르게 들어가서,</description>
+    </item>
+    <item>
+      <title>BC-4w-6 / 4주 차 정리 &#43; {FC} React(3)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-6/</link>
+      <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-6/</guid>
+      <description>4주 차 정리 # 월요일에는 DOM의 이벤트에 대해 배우고, 혼자서 TypeScript를 학습했다.</description>
+    </item>
+    <item>
+      <title>BC-4w-5 / [React] props, state</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-5/</link>
+      <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-5/</guid>
+      <description>Today I learned #React props &amp;amp; state # props</description>
+    </item>
+    <item>
+      <title>BC-4w-4 / [React] Router &#43; {FC} React(2)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-4/</link>
+      <pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-4/</guid>
+      <description>Today I learned #SPA # 전통적인 웹사이트는 페이지 전체를 로딩 SPA는 Menu와 Footer와 같이 페이지 전환 전후에 중복되는 부분은 새로 불러오지 않음 SPA는 무거운 JS 파일을 기다리는 시간으로 인해 첫 화면의 로딩 시간이 길어짐 SPA는 검색 엔진 최적화(SEO)가 좋지 않음(구글 등이 HTML을 기반으로 자료 수집) React Router # npm i react-router-dom 라우팅(Routing) 경로(주소)에 따라 다른 뷰를 보여줌 &amp;lt;BrowserRouter&amp;gt; &amp;lt;App /&amp;gt;을 감쌈 &amp;lt;Switch&amp;gt; Route를 감쌈 &amp;lt;Route&amp;gt; exact 속성은 정확한 주소 매칭 path 속성에 경로 &amp;lt;Link&amp;gt; to 속성에 path의 경로 Ex.</description>
+    </item>
+    <item>
+      <title>BC-4w-3 / [React] Intro &#43; {FC} React(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-3/</link>
+      <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-3/</guid>
+      <description>Today I learned #React Intro # React</description>
+    </item>
+    <item>
+      <title>BC-4w-2 / [JS/Node] 고차 함수</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-2/</link>
+      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-2/</guid>
+      <description>Today I learned #고차함수 # 일급 객체(first-class citizen) -&amp;gt; Ex.</description>
+    </item>
+    <item>
+      <title>BC-4w-1 / [JS/브라우저] DOM(2) &#43; {FC} TypeScript</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-1/</link>
+      <pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-1/</guid>
+      <description>Today I learned #DOM API 정리 # childrenNodes는 텍스트와 태그가 섞여 있을 때 사용 dataset &amp;lt;tag data-user|role|user-id=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/tag&amp;gt;</description>
+    </item>
+    <item>
+      <title>BC-3w-6 / 3주 차 정리, 반응형 내비게이션 바 만들기</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-6/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-6/</guid>
+      <description>3주 차 정리 # 이번 주는 전체적으로 평이한 난이도였다.</description>
+    </item>
+    <item>
+      <title>BC-3w-5 / [JS/브라우저] DOM(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-5/</link>
+      <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-5/</guid>
+      <description>Today I learned #DOM 이해하기 # Document Object Model의 약자로, HTML 요소를 Object처럼 조작할 수 있는 Model</description>
+    </item>
+    <item>
+      <title>BC-3w-4 / [JS/Node] JavaScript Koans</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-4/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-4/</guid>
+      <description>Toady I learned #JavaScriptKoans # chai_expect expect(value).</description>
+    </item>
+    <item>
+      <title>BC-3w-3 / [JS/Node] 자료형, 스코프, 클로저</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-3/</link>
+      <pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-3/</guid>
+      <description>Today I learned #원시 자료형과 참조 자료형 # 변수는 메모리의 이름표</description>
+    </item>
+    <item>
+      <title>BC-3w-2 / [CSS] 레이아웃, Selector</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-2/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-2/</guid>
+      <description>Today I learned #CSS 중급 # CSS Selector selector1 + selector2는 selector1의 형제 요소 중 다음 selector2 selector1 ~ selector2는 selector1의 형제 요소 중 모든 selector2 selector:last-child는 자식 요소인 selector 중 마지막 요소 selector1 &amp;gt; selector2:lastChild는 selector1의 자식 요소인 selector2 중 마지막 요소 selector:last-child(n)은 자식 요소인 selector 중 마지막에서 n번째요소 selector1 &amp;gt; selector2:nth-last-child(2n+1)은 selector1의 자식 요소인 selector2 중 마지막에서 홀수 번째 요소 selector:first-of-type은 자식요소인 selector 중 첫 등장 요소 selector:last-of-type은 자식요소인 selector 중 마지막 등장 요소 selector:nth-of-type(n)은 n번째자식 요소인 selector(selector 중에서 n번째) selector1:not(selector2)는 selector2가 아닌 selector1 기본 스타일링을 제거하는 CSS 코드 body { margin: 0; padding: 0; } Flex box flex: 1 0 0;을 이용한 1:1 비율 배치 와이어프레임 설계 및 목업 구현 참조 사이트 https://material-ui.</description>
+    </item>
+    <item>
+      <title>BC-2w-7 / 2주 차 정리</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-7/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-7/</guid>
+      <description>2주 차 정리 # 월요일에 처음으로 계산기를 만드는 과제를 했다.</description>
+    </item>
+    <item>
+      <title>BC-3w-1 / [JS/Node] 객체</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-1/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-1/</guid>
+      <description>Today I learned #객체 문제 # 15</description>
+    </item>
+    <item>
+      <title>BC-2w-6 / 맥 계산기 만들기</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-6/</link>
+      <pubDate>Sun, 05 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-6/</guid>
+      <description>HTML과 CSS # 크게 display(출력)와 buttonWrap(입력) 부분으로 구분 background를 flex로 설정하고, justify-content와 align-items에 center 값을 줘서 계산기를 가운데 배치 맥 계산기는 커서 모양이 변하지 않아서 cursor: default;로 커서가 변하지 않게 함 user-select: none;을 이용해서 계산기의 contents들이 선택되지 않게 함</description>
+    </item>
+    <item>
+      <title>BC-2w-5 / [JS/Node] 배열, 객체</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-5/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-5/</guid>
+      <description>Today I learned #배열 # 대소문자 구분 잘하자 console.</description>
+    </item>
+    <item>
+      <title>BC-2w-4 / [Git] 기초</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-4/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-4/</guid>
+      <description>Today I learned #Git 설치 # git config &amp;ndash;global core.</description>
+    </item>
+    <item>
+      <title>BC-2w-3 / [Linux] 기초</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-3/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-3/</guid>
+      <description>Today I learned #CLI 명령어 # 기본적인 이동/생성/삭제/복사 등의 명령어 관리자 권한을 획득하는 명령어 sudo 텍스트 에디터 nano ls -l d: 폴더 / -: 파일 r: 읽기 권한 w: 쓰기 권한 e: 실행 권한 -: 권한 없음 -f는 강제 명령 패키지와 패키지 매니저 Home Brew # eval $(/opt/homebrew/bin/brew shellenv)</description>
+    </item>
+    <item>
+      <title>BC-2w-2 / [HTML/CSS] 계산기 만들기</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-2/</link>
+      <pubDate>Tue, 31 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-2/</guid>
+      <description>Today I learned #계산기 과제 # 어제 혼자 만든 계산기의 코드를 페어에게 설명해주고 페어의 코드 설명도 들었다.</description>
+    </item>
+    <item>
+      <title>BC-2w-1 / [HTML/CSS] CSS 기초, 계산기 만들기</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-1/</link>
+      <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-2w-1/</guid>
+      <description>Today I learned #CSS # CSS는 구조의 외부와 내부를 꾸미는 역할 CSS 기본 구조 selector { property: value; } CSS 연결 &amp;lt;link rel=&amp;ldquo;stylesheet&amp;rdquo; href=&amp;quot;.</description>
+    </item>
+    <item>
+      <title>BC-1w-6 / 1주 차 정리</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-6/</link>
+      <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-6/</guid>
+      <description>1주 차 정리 # 월요일에는 학습 환경설정과 학습 방향 설정을 했다.</description>
+    </item>
+    <item>
+      <title>개발자의 글쓰기 - 김철수</title>
+      <link>https://yuchanjeong.github.io/posts/what-i-read/wir-1/</link>
+      <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/what-i-read/wir-1/</guid>
+      <description>개발자의 글쓰기는 정확하고 간결하고 가독성이 높아야 한다.</description>
+    </item>
+    <item>
+      <title>BC-1w-5 / [HTML/CSS] HTML 기초</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-5/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-5/</guid>
+      <description>Today I learned # HTML(Structure), CSS(Presentation), JS(Interaction)</description>
+    </item>
+    <item>
+      <title>BC-1w-4 / [JS/Node] 반복문</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-4/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-4/</guid>
+      <description>Today I learned #반복문 # 같거나 비슷한 코드를 여러 번 실행시켜야 할 경우에 씀 for(초기값; 반복 조건; 증감값) { 반복 내용 } 초기값</description>
+    </item>
+    <item>
+      <title>BC-1w-3 / [JS/Node] 조건문, 문자열</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-3/</link>
+      <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-3/</guid>
+      <description>Today I learned #조건문 문제 # 03</description>
+    </item>
+    <item>
+      <title>BC-1w-2 / [JS/Node] 변수, 타입, 함수</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-2/</link>
+      <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-2/</guid>
+      <description>Today I learned #변수 # 변수 기초 변수란 이름이 붙은 값 메모리에 저장된 변수(데이터)를 불러내서 활용 가능 카멜 케이스로 작성 선언과 할당 선언 let 재할당 가능 const 재할당 불가능 할당 (여기에) = (여기를 할당) Ex.</description>
+    </item>
+    <item>
+      <title>BC-1w-1 / [학습 방향] Learn How to Learn</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-1/</link>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-1/</guid>
+      <description>Today I learned #학습 환경 설정 # UrClass Zoom Discord Notion GitHub GoogleCalendar 학습 방향 설정 # 자기 주도 학습 개발자는 끊임없이 학습해야한다.</description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/html-css/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/html-css/css/</guid>
+      <description>Cascading Style Sheets</description>
+    </item>
+    <item>
+      <title>CSS Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/html-css/ex-css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/html-css/ex-css/</guid>
+      <description>Root Selector #:root { --background-color: #f4f5f6; } body { background-color: var(--background-color); } is Pseudo Selector #:is(section, article, aside, nav) :is(h1, h2, h3, h4, h5, h6) { color: #f4f5f6; } /* .</description>
+    </item>
     <item>
       <title>Git</title>
       <link>https://yuchanjeong.github.io/posts/summaries/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/summaries/git/</guid>
       <description>1) 기본 설정 # Command Details git init 깃 추적 시작 git config --global --list 기본 설정 보기 git config --global core.</description>
     </item>
-    
+    <item>
+      <title>Git</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/etc/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/etc/git/</guid>
+      <description>Work Space -add-&amp;gt; Stage -commit-&amp;gt; Local Repo -push-&amp;gt; Remote Repo</description>
+    </item>
+    <item>
+      <title>HomeBrew</title>
+      <link>https://yuchanjeong.github.io/storage/wil/etc/homebrew/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/etc/homebrew/</guid>
+      <description> Command Details brew update brew 자체 업데이트 brew outdated 업데이트 필요한 파일 조회 brew upgrade [프로그램명] 프로그램 업그레이드 brew search [프로그램명] 프로그램 검색 brew info [프로그램명] 프로그램 정보 확인 brew install [프로그램명] 프로그램 설치 brew uninstall [프로그램명] 프로그램 삭제 brew list 설치된 프로그램 보기 </description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/html-css/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/html-css/html/</guid>
+      <description>HyperText Markup Language</description>
+    </item>
     <item>
       <title>Javascript</title>
       <link>https://yuchanjeong.github.io/posts/summaries/javascript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/posts/summaries/javascript/</guid>
-      <description>JS Data # 1.</description>
+      <description>JS Data #1.</description>
     </item>
-    
+    <item>
+      <title>JavaScript</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/javascript/</guid>
+      <description>JS Data #1.</description>
+    </item>
+    <item>
+      <title>JS Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/javascript/ex-javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-javascript/</guid>
+      <description>Data Immutability #// 원시 데이터 (불변) // string, number, boolean, undefined, null // |a: 1 |b: 3 // |a: 1 |b: 1 // |a: 1 |b: 5 // |a: 1 |b: 5 |c: 1 let a = 1; let b = 3; console.</description>
+    </item>
+    <item>
+      <title>Linux Console</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/etc/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/etc/linux/</guid>
+      <description>리눅스 콘솔 명령어 추가 예정 1.</description>
+    </item>
+    <item>
+      <title>Node.js</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/nodejs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/nodejs/</guid>
+      <description>확장성 네트워크 애플리케이션(특히 서버 사이드) 개발에 사용되는 소프트웨어 플랫폼(런타임 환경).</description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/react/</guid>
+      <description>React v18.</description>
+    </item>
+    <item>
+      <title>React Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/javascript/ex-react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-react/</guid>
+      <description>useEffect #import { useState, useEffect } from &amp;#34;react&amp;#34;; export default function Component() { const [name, setName] = useState(&amp;#34;&amp;#34;); const [count, setCount] = useState(0); const handleChangeName = (e) =&amp;gt; setName(e.</description>
+    </item>
+    <item>
+      <title>Redux Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/javascript/ex-redux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-redux/</guid>
+      <description>Redux Basic #1) Action #// 1) Action Type 정의 export const ADD_TODO = &amp;#34;ADD_TODO&amp;#34;; export const COMPLETE_TODO = &amp;#34;COMPLETE_TODO&amp;#34;; export const SHOW_ALL = &amp;#34;SHOW_ALL&amp;#34;; export const SHOW_COMPLETE = &amp;#34;SHOW_COMPLETE&amp;#34;; // 2) Action Creator(Action 객체 반환) 작성 export function addTodo(text) { return { type: ADD_TODO, text }; // { type: ADD_TODO, text: &amp;#34;todo&amp;#34; } } export function completeTodo(index) { return { type: COMPLETE_TODO, index }; // { type: COMPLETE_TODO, index: num } } export function showAll() { return { type: SHOW_ALL }; // { type: SHOW_ALL } } export function showComplete() { return { type: SHOW_COMPLETE }; // { type: SHOW_COMPLETE } 2) Reducer #// 3) reducers 작성 // redux/modules/reducers.</description>
+    </item>
+    <item>
+      <title>Redux-toolkit</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/redux-toolkit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/redux-toolkit/</guid>
+      <description>Next.</description>
+    </item>
+    <item>
+      <title>Redux-toolkit Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/javascript/ex-redux-toolkit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-redux-toolkit/</guid>
+      <description>Provider #import React from &amp;#34;react&amp;#34;; import ReactDOM from &amp;#34;react-dom&amp;#34;; import App from &amp;#34;.</description>
+    </item>
+    <item>
+      <title>Regular Expression</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/etc/regex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/etc/regex/</guid>
+      <description>Ref. https://regexr.</description>
+    </item>
+    <item>
+      <title>SCSS</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/html-css/scss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/html-css/scss/</guid>
+      <description>Sassy CSS; CSS preprocessor</description>
+    </item>
+    <item>
+      <title>TS Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/javascript/ex-typescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-typescript/</guid>
+      <description>Unknown #declare const maybe: unknown; if (typeof maybe === &amp;#34;boolean&amp;#34;) { const aBoolean: boolean = maybe; } if (typeof maybe === &amp;#34;string&amp;#34;) { const aString: string = maybe; } Getter &amp;amp; Setter #class Person { constructor(private _name: string, private _age: number) {} // 추가로 뭔가 할 수 있음 /* Getter */ get name() { return `Mr.</description>
+    </item>
+    <item>
+      <title>TypeScript</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/typescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/typescript/</guid>
+      <description>Ref. TypeScript Cheat sheets</description>
+    </item>
   </channel>
 </rss>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Storages on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/storage/</link>
+    <description>Recent content in Storages on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <atom:link href="https://yuchanjeong.github.io/storage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/html-css/ex-css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/html-css/ex-css/</guid>
+      <description>Root Selector #:root { --background-color: #f4f5f6; } body { background-color: var(--background-color); } is Pseudo Selector #:is(section, article, aside, nav) :is(h1, h2, h3, h4, h5, h6) { color: #f4f5f6; } /* .</description>
+    </item>
+    <item>
+      <title>HomeBrew</title>
+      <link>https://yuchanjeong.github.io/storage/wil/etc/homebrew/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/etc/homebrew/</guid>
+      <description> Command Details brew update brew 자체 업데이트 brew outdated 업데이트 필요한 파일 조회 brew upgrade [프로그램명] 프로그램 업그레이드 brew search [프로그램명] 프로그램 검색 brew info [프로그램명] 프로그램 정보 확인 brew install [프로그램명] 프로그램 설치 brew uninstall [프로그램명] 프로그램 삭제 brew list 설치된 프로그램 보기 </description>
+    </item>
+    <item>
+      <title>JS Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/javascript/ex-javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-javascript/</guid>
+      <description>Data Immutability #// 원시 데이터 (불변) // string, number, boolean, undefined, null // |a: 1 |b: 3 // |a: 1 |b: 1 // |a: 1 |b: 5 // |a: 1 |b: 5 |c: 1 let a = 1; let b = 3; console.</description>
+    </item>
+    <item>
+      <title>React Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/javascript/ex-react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-react/</guid>
+      <description>useEffect #import { useState, useEffect } from &amp;#34;react&amp;#34;; export default function Component() { const [name, setName] = useState(&amp;#34;&amp;#34;); const [count, setCount] = useState(0); const handleChangeName = (e) =&amp;gt; setName(e.</description>
+    </item>
+    <item>
+      <title>Redux Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/javascript/ex-redux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-redux/</guid>
+      <description>Redux Basic #1) Action #// 1) Action Type 정의 export const ADD_TODO = &amp;#34;ADD_TODO&amp;#34;; export const COMPLETE_TODO = &amp;#34;COMPLETE_TODO&amp;#34;; export const SHOW_ALL = &amp;#34;SHOW_ALL&amp;#34;; export const SHOW_COMPLETE = &amp;#34;SHOW_COMPLETE&amp;#34;; // 2) Action Creator(Action 객체 반환) 작성 export function addTodo(text) { return { type: ADD_TODO, text }; // { type: ADD_TODO, text: &amp;#34;todo&amp;#34; } } export function completeTodo(index) { return { type: COMPLETE_TODO, index }; // { type: COMPLETE_TODO, index: num } } export function showAll() { return { type: SHOW_ALL }; // { type: SHOW_ALL } } export function showComplete() { return { type: SHOW_COMPLETE }; // { type: SHOW_COMPLETE } 2) Reducer #// 3) reducers 작성 // redux/modules/reducers.</description>
+    </item>
+    <item>
+      <title>Redux-toolkit Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/javascript/ex-redux-toolkit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-redux-toolkit/</guid>
+      <description>Provider #import React from &amp;#34;react&amp;#34;; import ReactDOM from &amp;#34;react-dom&amp;#34;; import App from &amp;#34;.</description>
+    </item>
+    <item>
+      <title>TS Example</title>
+      <link>https://yuchanjeong.github.io/storage/wil/javascript/ex-typescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/storage/wil/javascript/ex-typescript/</guid>
+      <description>Unknown #declare const maybe: unknown; if (typeof maybe === &amp;#34;boolean&amp;#34;) { const aBoolean: boolean = maybe; } if (typeof maybe === &amp;#34;string&amp;#34;) { const aString: string = maybe; } Getter &amp;amp; Setter #class Person { constructor(private _name: string, private _age: number) {} // 추가로 뭔가 할 수 있음 /* Getter */ get name() { return `Mr.</description>
+    </item>
+  </channel>
+</rss>

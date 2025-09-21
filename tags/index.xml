@@ -7,186 +7,343 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Wed, 10 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>convention</title>
       <link>https://yuchanjeong.github.io/tags/convention/</link>
       <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/convention/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>eslint</title>
       <link>https://yuchanjeong.github.io/tags/eslint/</link>
       <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/eslint/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>husky</title>
       <link>https://yuchanjeong.github.io/tags/husky/</link>
       <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/husky/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>i18n</title>
       <link>https://yuchanjeong.github.io/tags/i18n/</link>
       <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/i18n/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>lint-staged</title>
       <link>https://yuchanjeong.github.io/tags/lint-staged/</link>
       <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/lint-staged/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>next.js</title>
+      <title>Next.js</title>
       <link>https://yuchanjeong.github.io/tags/next.js/</link>
       <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/next.js/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>prettier</title>
       <link>https://yuchanjeong.github.io/tags/prettier/</link>
       <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/prettier/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>typescript</title>
+      <title>TypeScript</title>
       <link>https://yuchanjeong.github.io/tags/typescript/</link>
       <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/typescript/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>node.js</title>
       <link>https://yuchanjeong.github.io/tags/node.js/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/node.js/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Node.js 교과서</title>
       <link>https://yuchanjeong.github.io/tags/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/node.js-%EA%B5%90%EA%B3%BC%EC%84%9C/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>조현영(zerocho)</title>
       <link>https://yuchanjeong.github.io/tags/%EC%A1%B0%ED%98%84%EC%98%81zerocho/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/%EC%A1%B0%ED%98%84%EC%98%81zerocho/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>react</title>
+      <title>React</title>
       <link>https://yuchanjeong.github.io/tags/react/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/react/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>axios</title>
       <link>https://yuchanjeong.github.io/tags/axios/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/axios/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>react-query</title>
+      <title>React-query</title>
       <link>https://yuchanjeong.github.io/tags/react-query/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/react-query/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>sass</title>
       <link>https://yuchanjeong.github.io/tags/sass/</link>
       <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/sass/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>error</title>
       <link>https://yuchanjeong.github.io/tags/error/</link>
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/error/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>git</title>
+      <title>Git</title>
       <link>https://yuchanjeong.github.io/tags/git/</link>
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/git/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>개발자의 글쓰기</title>
       <link>https://yuchanjeong.github.io/tags/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EA%B8%80%EC%93%B0%EA%B8%B0/</link>
       <pubDate>Sat, 29 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EA%B8%80%EC%93%B0%EA%B8%B0/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>김철수</title>
       <link>https://yuchanjeong.github.io/tags/%EA%B9%80%EC%B2%A0%EC%88%98/</link>
       <pubDate>Sat, 29 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://yuchanjeong.github.io/tags/%EA%B9%80%EC%B2%A0%EC%88%98/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>javascript</title>
+      <title>(Retrospective)</title>
+      <link>https://yuchanjeong.github.io/tags/retrospective/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/retrospective/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>\\Becon</title>
+      <link>https://yuchanjeong.github.io/tags/%5C%5Cbecon/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/%5C%5Cbecon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interview</title>
+      <link>https://yuchanjeong.github.io/tags/interview/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/interview/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>\Debate-Ducks</title>
+      <link>https://yuchanjeong.github.io/tags/%5Cdebate-ducks/</link>
+      <pubDate>Mon, 12 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/%5Cdebate-ducks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>(Devlog)</title>
+      <link>https://yuchanjeong.github.io/tags/devlog/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/devlog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>\땡땡능력시험</title>
+      <link>https://yuchanjeong.github.io/tags/%5C%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/%5C%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS</title>
+      <link>https://yuchanjeong.github.io/tags/aws/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DynamoDB</title>
+      <link>https://yuchanjeong.github.io/tags/dynamodb/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/dynamodb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Styled-components</title>
+      <link>https://yuchanjeong.github.io/tags/styled-components/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/styled-components/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React Native</title>
+      <link>https://yuchanjeong.github.io/tags/react-native/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/react-native/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redux</title>
+      <link>https://yuchanjeong.github.io/tags/redux/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/redux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Algorithm</title>
+      <link>https://yuchanjeong.github.io/tags/algorithm/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Practice Kit</title>
+      <link>https://yuchanjeong.github.io/tags/practice-kit/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/practice-kit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nest.js</title>
+      <link>https://yuchanjeong.github.io/tags/nest.js/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/nest.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Socket.io</title>
+      <link>https://yuchanjeong.github.io/tags/socket.io/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/socket.io/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://yuchanjeong.github.io/tags/docker/</link>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sanity</title>
+      <link>https://yuchanjeong.github.io/tags/sanity/</link>
+      <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/sanity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GraphQL</title>
+      <link>https://yuchanjeong.github.io/tags/graphql/</link>
+      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/graphql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://yuchanjeong.github.io/tags/security/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>https://yuchanjeong.github.io/tags/database/</link>
+      <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://yuchanjeong.github.io/tags/linux/</link>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network</title>
+      <link>https://yuchanjeong.github.io/tags/network/</link>
+      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
       <link>https://yuchanjeong.github.io/tags/javascript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
       <guid>https://yuchanjeong.github.io/tags/javascript/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>DOM</title>
+      <link>https://yuchanjeong.github.io/tags/dom/</link>
+      <pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/dom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>https://yuchanjeong.github.io/tags/css/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>https://yuchanjeong.github.io/tags/html/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>(Summary)</title>
+      <link>https://yuchanjeong.github.io/tags/summary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/summary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RegEx</title>
+      <link>https://yuchanjeong.github.io/tags/regex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/regex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SCSS</title>
+      <link>https://yuchanjeong.github.io/tags/scss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/tags/scss/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

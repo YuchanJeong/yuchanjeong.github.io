@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTML on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/html/</link>
+    <description>Recent content in HTML on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Fri, 27 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BC-1w-5 / [HTML/CSS] HTML 기초</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-5/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-1w-5/</guid>
+      <description>Today I learned # HTML(Structure), CSS(Presentation), JS(Interaction)</description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/html-css/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/html-css/html/</guid>
+      <description>HyperText Markup Language</description>
+    </item>
+  </channel>
+</rss>

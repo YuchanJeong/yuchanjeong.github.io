@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>&lt;Projects&gt; on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/categories/projects/</link>
+    <description>Recent content in &lt;Projects&gt; on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Mon, 12 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debate Ducks 2</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/32/</link>
+      <pubDate>Mon, 12 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/32/</guid>
+      <description>개요 # 실시간 영상 토론 배틀 플랫폼 Debate-Ducks의 개선 프로젝트</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 성능 최적화 - 이미지</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/31/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/31/</guid>
+      <description>[PR] - https://github.</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] 시험 생성 페이지 - 기초</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/5/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/5/</guid>
+      <description>시험 생성 페이지에 탭 추가 #[PR] - https://github.</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] 페이지 이너, 셀렉트, 인풋 및 버튼</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/4/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/4/</guid>
+      <description>PageInner &amp;amp; Select #[PR] - https://github.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 치명적인 문제들 해결</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/30/</link>
+      <pubDate>Wed, 31 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/30/</guid>
+      <description>*Pull Request</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] Styled-components 설정 및 헤더•푸터</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/3/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/3/</guid>
+      <description>[PR] - https://github.</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] DynamoDB 연결 및 기능 구체화</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/2/</link>
+      <pubDate>Sun, 28 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/2/</guid>
+      <description>로컬 DynamoDB 연결 #우선 Docker를 사용해서 로컬에 DynamoDB를 만들었다.</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] 기획 및 초기 설정</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/1/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/1/</guid>
+      <description>기획 이유 #가끔씩 대학수학능력시험을 패러디한 게시물들을 볼 수 있는데, 대부분이 이미지나 PDF로 만들어져 있다.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 소소한 문제들 해결</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/29/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/29/</guid>
+      <description>토론 카드 목록 배치 문제 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 정적 배포로 변경 및 마이페이지 개선</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/28/</link>
+      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/28/</guid>
+      <description>정적 배포로 변경 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 크로스 브라우징 이슈</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/27/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/27/</guid>
+      <description>사파리 브라우저에서 발생하는 문제들 해결 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 에러 페이지 &amp; 스크롤 위치 기억하기</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/26/</link>
+      <pubDate>Sat, 20 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/26/</guid>
+      <description>에러 페이지 제작 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 체험 토론</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/25/</link>
+      <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/25/</guid>
+      <description>체험 토론 제작 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Q&amp;A 페이지</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/24/</link>
+      <pubDate>Thu, 18 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/24/</guid>
+      <description>Q&amp;amp;A 페이지 제작 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] SSR 도입과 소소한 개선</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/23/</link>
+      <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/23/</guid>
+      <description>회원가입 개선 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 로그인/로그아웃 문제 해결과 코드 정돈 및 개선</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/22/</link>
+      <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/22/</guid>
+      <description>로그인/로그아웃 시 좋아요 여부와 투표 여부 반영 문제 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 프로젝트 v2.0.0 마무리</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/21/</link>
+      <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/21/</guid>
+      <description>헤더 개선 및 기타 에러 해결 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 실시간 영상 토론 진행 페이지</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/20/</link>
+      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/20/</guid>
+      <description>실시간 영상 토론 에러 해결 및 스타일 적용 #*Pull Request</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 토론 목록 및 게시물 기타 작업들</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/19/</link>
+      <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/19/</guid>
+      <description>해당 내용의 PR 주소 첨부 시작.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 토론 생성, 수정 및 조회 페이지</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/18/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/18/</guid>
+      <description>토론 생성 및 수정 페이지 # 원래는 유효성 검사 실패 여부를 작성 버튼을 누른 후에 뜨게 했었다.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 토론 목록 조회 페이지</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/17/</link>
+      <pubDate>Sat, 30 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/17/</guid>
+      <description>토론 목록 #&#xD;기존에는 기본 토론 목록과 좋아요가 된 토론 목록이 따로 작성되어 있었지만 공통 요소를 최대한 묶어서 하나의 컴포넌트로 만들었다.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 로그인 모달</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/16/</link>
+      <pubDate>Fri, 29 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/16/</guid>
+      <description>로그인이 필요한 서비스 모달 # 기존에는 로그인이 필요한 서비스의 경우 안내 모달을 띄우고 사용자가 로그인을 원할 경우 로그인 페이지로 이동시켜줬다.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 첫 스타일 작업</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/15/</link>
+      <pubDate>Thu, 28 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/15/</guid>
+      <description>개요 #스타일 초기화, 전역 변수 및 스타일 설정 후 스타일 작업 시작.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 기본 기능 마무리</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/14/</link>
+      <pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/14/</guid>
+      <description>목차 변경</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 토론 게시물 CRUD</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/13/</link>
+      <pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/13/</guid>
+      <description>Summary #토론 게시물 생성, 조회, 수정, 삭제</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] React Query 기초</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/12/</link>
+      <pubDate>Sun, 17 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/12/</guid>
+      <description>Summary #리액트 쿼리 적용.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 토론 생성</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/11/</link>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/11/</guid>
+      <description>Summary #토론 생성 기능 추가.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - 개발 재개 및 보류</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/10/</link>
+      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/10/</guid>
+      <description>귀국, 입원 및 수술 등의 이유로 한 달 넘게 중지됐던 개발 재개 Summary #재연결 시 녹화 영상 유지 기능 구현 시도.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Record</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/9/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/9/</guid>
+      <description>Summary #토론 녹화 및 임시 다운로드 기능 추가.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Debate</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/8/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/8/</guid>
+      <description>Summary #토론 시작, 일시 중단, 단계별 안내 및 권한 설정.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Reconnect</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/7/</link>
+      <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/7/</guid>
+      <description>Summary #WebRTC 재연결 시 발생하는 여러 문제들 해결.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Canvas</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/6/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/6/</guid>
+      <description>Summary #캔버스에 비디오 및 공유 화면를 포함한 여러 요소들을 그리고 녹화할 수 있게 만듦.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Stream</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/5/</link>
+      <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/5/</guid>
+      <description>Summary #마이크 및 비디오 끄기/켜기 기능 및 화면 공유 기능 추가.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - WebRTC</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/4/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/4/</guid>
+      <description>Summary #WebRTC(simple-peer)로 사용자를 1 대 1로 연결해 서로의 미디어를 빠르게 주고받을 수 있게 만듦.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Room</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/3/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/3/</guid>
+      <description>Summary #WebSocket에서 방을 생성하고, 사용자가 방에 입장할 수 있게 함.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] Debateroom - Init</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/2/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/2/</guid>
+      <description>Summary #socket.</description>
+    </item>
+    <item>
+      <title>[Debate-Ducks] 개선 프로젝트 시작</title>
+      <link>https://yuchanjeong.github.io/posts/projects/debate-ducks/1/</link>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/debate-ducks/1/</guid>
+      <description>개요 # 새로운 스택을 적극 활용해 기존 프로젝트를 개선한 새로운 버전의 Debate-Ducks 프로젝트 시작.</description>
+    </item>
+  </channel>
+</rss>

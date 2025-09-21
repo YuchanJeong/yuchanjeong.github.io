@@ -1,0 +1,757 @@
+
+
+
+
+  
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>BC-15w-3 / [배포] Docker &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="BC-15w-3 / [배포] Docker &middot; Yuchan&#39;s hello world!" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.b0785c8131a75f72b211435af86269eb2d4b81dda03a8f2cf5ccb1c967747167.css"
+    integrity="sha256-sHhcgTGnX3KyEUNa&#43;GJp6y1Lgd2gOo8s9cyxyWd0cWc="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f29ffdffd9ab4cc95250c3c7196b2d5dae8ee6ef0a4139451073f90183ae7e31.js"
+      integrity="sha256-8p/9/9mrTMlSUMPHGWstXa6O5u8KQTlFEHP5AYOufjE="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        1. Why Docker?
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/bootcamp/bc-15w-3/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="BC-15w-3 / [배포] Docker" />
+<meta property="og:description" content="1. Why Docker?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/bootcamp/bc-15w-3/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-01-07T00:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="BC-15w-3 / [배포] Docker"/>
+<meta name="twitter:description" content="1. Why Docker?"/>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "BC-15w-3 \/ [배포] Docker",
+    "headline": "BC-15w-3 \/ [배포] Docker",
+    
+    "abstract": "1. Why Docker?",
+    "inLanguage": "en",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/bootcamp\/bc-15w-3\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-01-07T00:00:00\u002b00:00",
+    "datePublished": "2022-01-07T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-01-07T00:00:00\u002b00:00",
+    
+    "keywords": ["Docker"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "549"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/",
+       "name": "Yuchan's Hello World!",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/categories/bootcamp/",
+       "name": "\u003cBootcamp\u003e",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Bc 15w 3 [배포] Docker",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Yuchan&rsquo;s hello world!</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Posts</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title="Categories"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title="Tags"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        BC-15w-3 / [배포] Docker
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-01-07 00:00:00 &#43;0000 UTC">7 January 2022</time>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="/categories/bootcamp/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >&lt;Bootcamp&gt;</a
+            >
+          
+        
+      
+        
+          
+            <a
+              href="/tags/docker/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Docker</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-why-dockerhttpsdocsdockercomdesktopmacinstall">1. Why <a href="https://docs.docker.com/desktop/mac/install/">Docker</a>?</a>
+      <ul>
+        <li><a href="#1-의존성-충돌-문제-해결">1) 의존성 충돌 문제 해결</a></li>
+        <li><a href="#2-개발과-배포-환경-일치">2) 개발과 배포 환경 일치</a></li>
+        <li><a href="#3-수평-확장--새로운-내용-배포-간편화">3) 수평 확장 &amp; 새로운 내용 배포 간편화</a></li>
+        <li><a href="#etc-용어-정리">Etc. 용어 정리</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-docker-cli-1">2. Docker CLI (1)</a></li>
+    <li><a href="#3-docker-cli-2">3. Docker CLI (2)</a>
+      <ul>
+        <li><a href="#a-httpdhttp-daemon">A. httpd(http daemon)</a></li>
+        <li><a href="#b-docker-이미지-만들기">B. Docker 이미지 만들기</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="1-why-dockerhttpsdocsdockercomdesktopmacinstall" class="relative group">1. Why <a href="https://docs.docker.com/desktop/mac/install/" target="_blank" rel="noreferrer">Docker</a>? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-why-dockerhttpsdocsdockercomdesktopmacinstall" aria-label="Anchor">#</a></span></h2><ul>
+<li>컨테이너 방식으로 실행 환경에 구애받지 않고 애플리케이션을 실행할 수 있음</li>
+</ul>
+<h3 id="1-의존성-충돌-문제-해결" class="relative group">1) 의존성 충돌 문제 해결 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ec%9d%98%ec%a1%b4%ec%84%b1-%ec%b6%a9%eb%8f%8c-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0" aria-label="Anchor">#</a></span></h3><ul>
+<li>각 컨테이너가 철저하게 실행 환경이 격리되어 있기 때문에 가능</li>
+<li>각 컨테이너의 내용물
+<ul>
+<li>프로세스
+<ul>
+<li>특정 컨테이너에서 작동하는 프로세스는 기본적으로 그 컨테이너 안에서만 액세스할 수 있음</li>
+<li>컨테이너 안에서 실행되는 프로세스는 다른 컨테이너의 프로세스에게 영향을 줄 수 없음</li>
+</ul>
+</li>
+<li>네트워크
+<ul>
+<li>기본으로 컨테이너 하나에 하나의 IP 주소가 할당</li>
+</ul>
+</li>
+<li>파일 시스템
+<ul>
+<li>컨테이너 안에서 사용되는 파일 시스템은 구획화되어 있음</li>
+<li>해당 컨테이너에서의 명령이나 파일 등의 액세스를 제한할 수 있음</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-개발과-배포-환경-일치" class="relative group">2) 개발과 배포 환경 일치 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%ea%b0%9c%eb%b0%9c%ea%b3%bc-%eb%b0%b0%ed%8f%ac-%ed%99%98%ea%b2%bd-%ec%9d%bc%ec%b9%98" aria-label="Anchor">#</a></span></h3><ul>
+<li>Ex. ECS in AWS</li>
+</ul>
+<h3 id="3-수평-확장--새로운-내용-배포-간편화" class="relative group">3) 수평 확장 &amp; 새로운 내용 배포 간편화 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%ec%88%98%ed%8f%89-%ed%99%95%ec%9e%a5--%ec%83%88%eb%a1%9c%ec%9a%b4-%eb%82%b4%ec%9a%a9-%eb%b0%b0%ed%8f%ac-%ea%b0%84%ed%8e%b8%ed%99%94" aria-label="Anchor">#</a></span></h3><ul>
+<li>트래픽 분산을 위해 프록시 서버(로드 밸런서) 운영</li>
+<li>실행 환경의 일치로 이를 쉽게 해줌</li>
+</ul>
+<h3 id="etc-용어-정리" class="relative group">Etc. 용어 정리 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc-%ec%9a%a9%ec%96%b4-%ec%a0%95%eb%a6%ac" aria-label="Anchor">#</a></span></h3><ul>
+<li>컨테이너
+<ul>
+<li>애플리케이션이 의존성, 네트워크 환경, 파일 시스템에 구애받지 않고, 도커라는 기술 위에 실행될 수 있도록 만든 애플리케이션 상자</li>
+</ul>
+</li>
+<li>이미지
+<ul>
+<li>이미지는 애플리케이션 및 애플리케이션 구성을 함께 담아놓은 템플릿</li>
+<li>이미지를 이용해 여러 개의 컨테이너를 생성(수평 확장)</li>
+<li>이미지는 기본 이미지로부터 변경 사항을 추가/커밋해서 또 다른 이미지를 만들 수도 있음</li>
+<li>Ex. <a href="https://nodejs.org/ko/docs/guides/nodejs-docker-webapp/" target="_blank" rel="noreferrer">Node.js 웹 앱의 도커라이징(컨테이너화)</a></li>
+</ul>
+</li>
+<li>레지스트리
+<ul>
+<li>이미지는 레지스트리에 저장</li>
+<li>Ex. Docker Hub, Amazon ECR</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-docker-cli-1" class="relative group">2. Docker CLI (1) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-docker-cli-1" aria-label="Anchor">#</a></span></h2><ul>
+<li><a href="https://docs.docker.com/engine/reference/commandline/container_run/" target="_blank" rel="noreferrer">Docker docs</a></li>
+<li>Registry_Account/Repository_Name:Tag
+<ul>
+<li>레지스트리(Registry)
+<ul>
+<li>Ex. <a href="https://hub.docker.com/" target="_blank" rel="noreferrer">Docker Hub</a></li>
+<li>도커 이미지를 관리하는 공간</li>
+</ul>
+</li>
+<li>레포지토리(Repository)
+<ul>
+<li>레지스트리 내에 도커 이미지가 저장되는 공간</li>
+<li>이미지 이름이 사용되기도 함</li>
+</ul>
+</li>
+<li>태그(Tag)
+<ul>
+<li>해당 이미지를 설명하는 버전 정보를 주로 입력</li>
+<li>특별히 다른 것을 지정하지 않는다면 latest 태그를 붙인 이미지를 가져옴</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 최신 이미지를 받아옴</span>
+</span></span><span class="line"><span class="cl">docker image pull Registry_Account/Repository_Name:Tag
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 이미지 리스트를 출력</span>
+</span></span><span class="line"><span class="cl">docker image ls
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 이미지 삭제</span>
+</span></span><span class="line"><span class="cl">docker image rm 이미지_이름 <span class="p">|</span> 6b362a9f73eb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 컨테이너_이름을 이름으로 갖는 컨테이너를 실행</span>
+</span></span><span class="line"><span class="cl">docker container run --name 컨테이너_이름 Registry_Account/Repository_Name:Tag
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 모든 컨테이너의 리스트를 출력</span>
+</span></span><span class="line"><span class="cl">docker container ps -a
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 컨테이너 삭제</span>
+</span></span><span class="line"><span class="cl">docker container rm 컨테이너_이름 <span class="p">|</span> CONTAINER ID
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 컨테이너 실행</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker container run --name 컨테이너_이름 docker/whalesay:latest cowsay boo
+</span></span><span class="line"><span class="cl"><span class="c1"># OPTIONS</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   --name : 컨테이너의 이름을 할당</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># COMMAND</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   cowsay : 컨테이너 실행 시 cowsay 명령어를 호출</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ARG...</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   boo : COMMAND인 cowsay에 넘겨질 파라미터</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker container run -it --rm danielkraic/asciiquarium:latest
+</span></span></code></pre></div><h2 id="3-docker-cli-2" class="relative group">3. Docker CLI (2) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-docker-cli-2" aria-label="Anchor">#</a></span></h2><ul>
+<li>로컬에 있는 파일과 도커 이미지를 연결하는 방법
+<ul>
+<li>CP(Copy) : 호스트와 컨테이너 사이에 파일을 복사(Copy)</li>
+<li>Volume : 호스트와 컨테이너 사이에 공간을 마운트(Mount)</li>
+</ul>
+</li>
+</ul>
+<h3 id="a-httpdhttp-daemon" class="relative group">A. httpd(http daemon) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#a-httpdhttp-daemon" aria-label="Anchor">#</a></span></h3><ul>
+<li>Apache HTTP Server를 실행할 수 있는 오픈소스 웹 서버 소프트웨어</li>
+<li>httpd는 /usr/local/apache2/htdocs/ 경로에 웹 서버와 관련된 파일들이 저장되어 있다면, 해당 파일을 기반으로 웹 서버가 실행되도록 함</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/codestates/pacman-canvas
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker container run --name 컨테이너_이름 -p 818:80 httpd
+</span></span><span class="line"><span class="cl"><span class="c1"># -p 옵션은 로컬호스트의 포트와 컨테이너의 포트를 연결</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2의 명령어에서 818포트가 로컬호스트의 포트이고, 80번은 컨테이너의 포트</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># httpd 는 일정 시간 연결 기록이 없으면, 서버 가동이 중지됨</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (컨테이너를 백그라운드에서 실행하게 해주는 -d 옵션)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker container cp ./ 컨테이너_이름:/usr/local/apache2/htdocs/
+</span></span><span class="line"><span class="cl"><span class="c1"># [주의] 위의 명령어를 로컬 터미널에서 실행할 때, 위치는 pacman-canvas 디렉토리여야 함</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it 컨테이너_이름 bash
+</span></span><span class="line"><span class="cl"><span class="c1"># 컨테이너 내부 터미널로 접속할 수 있음</span>
+</span></span></code></pre></div><h3 id="b-docker-이미지-만들기" class="relative group">B. Docker 이미지 만들기 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#b-docker-%ec%9d%b4%eb%af%b8%ec%a7%80-%eb%a7%8c%eb%93%a4%ea%b8%b0" aria-label="Anchor">#</a></span></h3><ol>
+<li>구동한 Docker Container를 이미지로 만드는 방법</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker container commit 컨테이너_이름 my_pacman:1.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker run --name my_web2 -p 900:80 my_pacman:1.0
+</span></span></code></pre></div><ol start="2">
+<li>Docker Image 빌드를 위한 파일인 <a href="https://docs.docker.com/engine/reference/builder/" target="_blank" rel="noreferrer">Dockerfile</a> 로 만드는 방법</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 베이스 이미지를 httpd:2.4 로 사용</span>
+</span></span><span class="line"><span class="cl">FROM httpd:2.4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 호스트의 현재 경로에 있는 파일을 생성할 이미지 /usr/local/apache2/htdocs/ 에 복사</span>
+</span></span><span class="line"><span class="cl">COPY ./ /usr/local/apache2/htdocs/
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># --tag 는 name:tag 형식으로 이미지를 생성할 수 있음</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 지정한 경로에 있는 Dockerfile을 찾아서 빌드</span>
+</span></span><span class="line"><span class="cl">docker build --tag my_pacman:2.0 .
+</span></span><span class="line"><span class="cl"><span class="c1"># [주의] &#34;.&#34;을 명령어에 꼭 포함해야 함</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker run --name my_web3 -p 901:80 my_pacman:2.0
+</span></span><span class="line"><span class="cl"><span class="c1"># 901 포트에서 웹 서버로 이미지를 구동</span>
+</span></span></code></pre></div>
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/bootcamp/bc-15w-2/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >BC-15w-2 / [배포] Amazon Web Service</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-01-05 00:00:00 &#43;0000 UTC">5 January 2022</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/bootcamp/bc-16w/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >BC-16w / Section3 및 HA 회고</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-01-29 00:00:00 &#43;0000 UTC">29 January 2022</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+        
+          
+        
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2021 Yuchan&rsquo;s hello world!
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://yuchanjeong.github.io/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

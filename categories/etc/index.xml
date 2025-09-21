@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>&lt;etc&gt; on Yuchan&#39;s hello world!</title>
+    <title>&lt;Etc&gt; on Yuchan&#39;s hello world!</title>
     <link>https://yuchanjeong.github.io/categories/etc/</link>
-    <description>Recent content in &lt;etc&gt; on Yuchan&#39;s hello world!</description>
+    <description>Recent content in &lt;Etc&gt; on Yuchan&#39;s hello world!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
-    <lastBuildDate>Mon, 31 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yuchanjeong.github.io/categories/etc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/categories/etc/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>깃허브 블로그 서브 모듈 문제</title>
-      <link>https://yuchanjeong.github.io/posts/etc/1/</link>
-      <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuchanjeong.github.io/posts/etc/1/</guid>
-      <description>배경 # 취업을 하게 되면서 컴퓨터 두 대(개인 컴퓨터와 회사 컴퓨터)를 이용해 블로깅을 하게 되었고, 이 과정에서 서브 모듈 관련 문제를 만났다.</description>
+      <title>[면접 대비] 주니어 프런트 앤드 기술 면접</title>
+      <link>https://yuchanjeong.github.io/posts/etc/interview-1/</link>
+      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/etc/interview-1/</guid>
+      <description>주니어 레벨 프런트 앤드 개발자 기술 면접에 필요한 지식들을 간단히 정리한 문서</description>
     </item>
-    
+    <item>
+      <title>Mac Shortcuts</title>
+      <link>https://yuchanjeong.github.io/posts/etc/mac-shortcuts/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/etc/mac-shortcuts/</guid>
+      <description>1. 포커스 및 화면 관리(ctrl) # 단축키 설명 ctrl+F2 상태 막대 포커스 이동 ctrl+F3 Dock 포커스 이동 ctrl+F4 활성 창 포커스 이동 *ctrl+F5 상태 메뉴 포커스 이동 ctrl+↑ 미션 컨트롤 ctrl+↓ 해당 앱 창 ctrl+⇆ 스페이스 이동 2.</description>
+    </item>
+    <item>
+      <title>VSC Shortcuts</title>
+      <link>https://yuchanjeong.github.io/posts/etc/vsc-shortcuts/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/etc/vsc-shortcuts/</guid>
+      <description>1. Cursor # 단축키 설명 opt+shift+I Focus의 각 줄 마지막 멀티 커서 opt+click 멀티 커서 opt+⇆ 단어 커서 cmd+⇆/⇅ 커서 처음/끝으로(한 줄/페이지) cmd+U 커서 되돌리기 cmd+enter 다음 줄 이동 cmd+shift+\ 괄호 끝으로 이동 2.</description>
+    </item>
   </channel>
 </rss>

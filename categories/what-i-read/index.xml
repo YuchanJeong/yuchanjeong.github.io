@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>&lt;What I read&gt; on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/categories/what-i-read/</link>
+    <description>Recent content in &lt;What I read&gt; on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Sun, 29 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/categories/what-i-read/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>개발자의 글쓰기 - 김철수</title>
+      <link>https://yuchanjeong.github.io/posts/what-i-read/wir-1/</link>
+      <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/what-i-read/wir-1/</guid>
+      <description>개발자의 글쓰기는 정확하고 간결하고 가독성이 높아야 한다.</description>
+    </item>
+  </channel>
+</rss>

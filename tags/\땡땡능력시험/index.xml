@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>\땡땡능력시험 on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/%5C%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/</link>
+    <description>Recent content in \땡땡능력시험 on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/%5C%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[땡땡능력시험] 시험 생성 페이지 - 기초</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/5/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/5/</guid>
+      <description>시험 생성 페이지에 탭 추가 #[PR] - https://github.</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] 페이지 이너, 셀렉트, 인풋 및 버튼</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/4/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/4/</guid>
+      <description>PageInner &amp;amp; Select #[PR] - https://github.</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] Styled-components 설정 및 헤더•푸터</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/3/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/3/</guid>
+      <description>[PR] - https://github.</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] DynamoDB 연결 및 기능 구체화</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/2/</link>
+      <pubDate>Sun, 28 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/2/</guid>
+      <description>로컬 DynamoDB 연결 #우선 Docker를 사용해서 로컬에 DynamoDB를 만들었다.</description>
+    </item>
+    <item>
+      <title>[땡땡능력시험] 기획 및 초기 설정</title>
+      <link>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/1/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/projects/%EB%95%A1%EB%95%A1%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/1/</guid>
+      <description>기획 이유 #가끔씩 대학수학능력시험을 패러디한 게시물들을 볼 수 있는데, 대부분이 이미지나 PDF로 만들어져 있다.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/database/</link>
+    <description>Recent content in Database on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Fri, 24 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BC-13w-5 / [데이터베이스] NoSQL</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-5/</link>
+      <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-5/</guid>
+      <description>MongoDB #1) NoSQL 기반의 비관계형 데이터베이스를 사용하는 경우 # 비구조적인 대용량의 데이터를 저장하는 경우 클라우드 컴퓨팅 및 저장 공간을 최대한 활용하는 경우 NoSQL은 수평적 확장의 형태로 증설하므로, 이론상 무한대로 서버를 계속 분산시켜 DB를 증설할 수 있습니다.</description>
+    </item>
+    <item>
+      <title>BC-13w-4 / [데이터베이스] MVC(3) ORM</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-4/</link>
+      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-4/</guid>
+      <description>ORM(Object-Relational Mapping) # Sequelize a promise-based Node.</description>
+    </item>
+    <item>
+      <title>BC-13w-3 / [데이터베이스] MVC(2)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-3/</link>
+      <pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-3/</guid>
+      <description>Server Example #// app.</description>
+    </item>
+    <item>
+      <title>BC-13w-2 / [데이터베이스] MVC(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-2/</link>
+      <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-2/</guid>
+      <description>1. MVC(Model-View-Controller) # SW Architecture Design Pattern separates application functionalities 1) Model # knowledge handles data interaction with &amp;ldquo;Database&amp;rdquo; and &amp;ldquo;Controller&amp;rdquo; 2) View # visual representation of a mode what the users see(UI) interaction with &amp;ldquo;Controller&amp;rdquo; 3) Controller # receives input(&amp;ldquo;Client&amp;rdquo;) process requests get data from a &amp;ldquo;Model&amp;rdquo; pass data to the &amp;ldquo;View&amp;rdquo; 2.</description>
+    </item>
+    <item>
+      <title>BC-13w-1 / [데이터베이스] 관계형 데이터베이스(3)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-1/</link>
+      <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-13w-1/</guid>
+      <description>추가 요구조건과 스키마 #1) schema #CREATE TABLE `category` ( `id` int PRIMARY KEY AUTO_INCREMENT, `name` varchar(255) not NULL ); CREATE TABLE `content_category` ( `id` int PRIMARY KEY AUTO_INCREMENT, `contentId` int not NULL, FOREIGN KEY (`contentId`) REFERENCES `content` (`id`), `categoryId` int not NULL, FOREIGN KEY (`categoryId`) REFERENCES `category` (`id`) ); CREATE TABLE `role` ( `id` int PRIMARY KEY AUTO_INCREMENT, `name` varchar(255) not NULL ); ALTER TABLE `user` ADD roleId int; ALTER TABLE `user` ADD FOREIGN KEY (`roleId`) REFERENCES `role` (`id`); 2) script #// category 테이블의 구조를 보기위한 SQL을 작성해주세요.</description>
+    </item>
+    <item>
+      <title>BC-12w-5 / [데이터베이스] 관계형 데이터베이스(2) &#43; {FC} Redux Basic</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-5/</link>
+      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-5/</guid>
+      <description>1. Instagram Schema Design # https://dbdiagram.</description>
+    </item>
+    <item>
+      <title>BC-12w-4 / [데이터베이스] 관계형 데이터베이스(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-4/</link>
+      <pubDate>Thu, 16 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-4/</guid>
+      <description>1. SQL intro #1) 데이터베이스의 필요성 # In-Memory 프로그램이 종료될 때 해당 프로그램이 사용하던 데이터도 사라짐 File I/O 데이터가 필요할 때마다 전체 파일을 매번 읽어야 함 파일의 크기가 커질수록 이 작업은 버겁고, 비효율적임 데이터베이스를 사용하여 데이터를 영속성있게(persistently) 저장할 필요가 있음 2) Structured Query Language (SQL) # 데이터베이스 언어로, 주로 관계형 데이터베이스에서 사용 MySQL, Oracle, SQLite, PostgreSQL 등 다양한 데이터베이스에서 SQL 구문을 사용 2.</description>
+    </item>
+  </channel>
+</rss>

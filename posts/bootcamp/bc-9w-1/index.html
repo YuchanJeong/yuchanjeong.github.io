@@ -1,0 +1,1111 @@
+
+
+
+
+  
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>BC-9w-1 / [HTTP/네트워크] 네트워크-기초 &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="BC-9w-1 / [HTTP/네트워크] 네트워크-기초 &middot; Yuchan&#39;s hello world!" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.b0785c8131a75f72b211435af86269eb2d4b81dda03a8f2cf5ccb1c967747167.css"
+    integrity="sha256-sHhcgTGnX3KyEUNa&#43;GJp6y1Lgd2gOo8s9cyxyWd0cWc="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f29ffdffd9ab4cc95250c3c7196b2d5dae8ee6ef0a4139451073f90183ae7e31.js"
+      integrity="sha256-8p/9/9mrTMlSUMPHGWstXa6O5u8KQTlFEHP5AYOufjE="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        Today I learned #클라이언트-서버 아키텍처(2티어 아키텍처) # Client 리소스를 사용하는 앱 Server 리소스가 존재하는 곳 HTTP 프로토콜(통신 규약) OSI 7 Layers 물리-데이터 링크-네트워크 계층-전송 계층-세션 계층-표현 계층-응용 계층 응용 계층(7) 프로토콜 이름 설명 HTTP 웹에서 HTML, JSON 등의 정보를 주고받는 프로토콜 HTTPS HTTP에서 보안이 강화된 프로토콜 FTP 파일 전송 프로토콜 SMTP 메일을 전송하기 위한 프로토콜 SSH CLI 환경의 원격 컴퓨터에 접속하기 위한 프로토콜 RDP Windows 계열의 원격 컴퓨터에 접속하기 위한 프로토콜 WebSocket 실시간 통신, Push 등을 지원하는 프로토콜 전송 계층(4) 프로토콜 이름 설명 TCP HTTP, FTP 통신의 등의 근간이 되는 인터넷 프로토콜 UDP (양방향의 TCP와는 다르게)단방향으로 작동하는 훨씬 더 단순하고 빠르지만, 신뢰성이 낮은 인터넷 프로토콜 API(Application Programming Interface) Interface 의사소통이 가능하도록 만들어진 접점 HTTP 요청 메소드 요청 적절한 메소드 추가(Create) POST 조회(Read) GET 갱신(Update) PUT or PATCH 삭제(Delete) DELETE 보이지 않는 곳의 브라우저 작동 원리 #URL과 URI # URL(Uniform Resource Locator) 네트워크 상에서 웹 페이지, 이미지, 동영상 등의 파일이 위치한 정보 scheme, hosts, url-path로 구분 URI(Uniform Resource Identifier) URL의 기본 요소에 더해 query, bookmark를 포함 부분 명칭 설명 file://, http://, https:// scheme 통신 프로토콜 127.
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/bootcamp/bc-9w-1/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="BC-9w-1 / [HTTP/네트워크] 네트워크-기초" />
+<meta property="og:description" content="Today I learned #클라이언트-서버 아키텍처(2티어 아키텍처) # Client 리소스를 사용하는 앱 Server 리소스가 존재하는 곳 HTTP 프로토콜(통신 규약) OSI 7 Layers 물리-데이터 링크-네트워크 계층-전송 계층-세션 계층-표현 계층-응용 계층 응용 계층(7) 프로토콜 이름 설명 HTTP 웹에서 HTML, JSON 등의 정보를 주고받는 프로토콜 HTTPS HTTP에서 보안이 강화된 프로토콜 FTP 파일 전송 프로토콜 SMTP 메일을 전송하기 위한 프로토콜 SSH CLI 환경의 원격 컴퓨터에 접속하기 위한 프로토콜 RDP Windows 계열의 원격 컴퓨터에 접속하기 위한 프로토콜 WebSocket 실시간 통신, Push 등을 지원하는 프로토콜 전송 계층(4) 프로토콜 이름 설명 TCP HTTP, FTP 통신의 등의 근간이 되는 인터넷 프로토콜 UDP (양방향의 TCP와는 다르게)단방향으로 작동하는 훨씬 더 단순하고 빠르지만, 신뢰성이 낮은 인터넷 프로토콜 API(Application Programming Interface) Interface 의사소통이 가능하도록 만들어진 접점 HTTP 요청 메소드 요청 적절한 메소드 추가(Create) POST 조회(Read) GET 갱신(Update) PUT or PATCH 삭제(Delete) DELETE 보이지 않는 곳의 브라우저 작동 원리 #URL과 URI # URL(Uniform Resource Locator) 네트워크 상에서 웹 페이지, 이미지, 동영상 등의 파일이 위치한 정보 scheme, hosts, url-path로 구분 URI(Uniform Resource Identifier) URL의 기본 요소에 더해 query, bookmark를 포함 부분 명칭 설명 file://, http://, https:// scheme 통신 프로토콜 127." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/bootcamp/bc-9w-1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-10-18T00:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="BC-9w-1 / [HTTP/네트워크] 네트워크-기초"/>
+<meta name="twitter:description" content="Today I learned #클라이언트-서버 아키텍처(2티어 아키텍처) # Client 리소스를 사용하는 앱 Server 리소스가 존재하는 곳 HTTP 프로토콜(통신 규약) OSI 7 Layers 물리-데이터 링크-네트워크 계층-전송 계층-세션 계층-표현 계층-응용 계층 응용 계층(7) 프로토콜 이름 설명 HTTP 웹에서 HTML, JSON 등의 정보를 주고받는 프로토콜 HTTPS HTTP에서 보안이 강화된 프로토콜 FTP 파일 전송 프로토콜 SMTP 메일을 전송하기 위한 프로토콜 SSH CLI 환경의 원격 컴퓨터에 접속하기 위한 프로토콜 RDP Windows 계열의 원격 컴퓨터에 접속하기 위한 프로토콜 WebSocket 실시간 통신, Push 등을 지원하는 프로토콜 전송 계층(4) 프로토콜 이름 설명 TCP HTTP, FTP 통신의 등의 근간이 되는 인터넷 프로토콜 UDP (양방향의 TCP와는 다르게)단방향으로 작동하는 훨씬 더 단순하고 빠르지만, 신뢰성이 낮은 인터넷 프로토콜 API(Application Programming Interface) Interface 의사소통이 가능하도록 만들어진 접점 HTTP 요청 메소드 요청 적절한 메소드 추가(Create) POST 조회(Read) GET 갱신(Update) PUT or PATCH 삭제(Delete) DELETE 보이지 않는 곳의 브라우저 작동 원리 #URL과 URI # URL(Uniform Resource Locator) 네트워크 상에서 웹 페이지, 이미지, 동영상 등의 파일이 위치한 정보 scheme, hosts, url-path로 구분 URI(Uniform Resource Identifier) URL의 기본 요소에 더해 query, bookmark를 포함 부분 명칭 설명 file://, http://, https:// scheme 통신 프로토콜 127."/>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "BC-9w-1 \/ [HTTP\/네트워크] 네트워크-기초",
+    "headline": "BC-9w-1 \/ [HTTP\/네트워크] 네트워크-기초",
+    
+    "abstract": "Today I learned #\r클라이언트-서버 아키텍처(2티어 아키텍처) # Client 리소스를 사용하는 앱 Server 리소스가 존재하는 곳 HTTP 프로토콜(통신 규약) OSI 7 Layers 물리-데이터 링크-네트워크 계층-전송 계층-세션 계층-표현 계층-응용 계층 응용 계층(7) 프로토콜 이름 설명 HTTP 웹에서 HTML, JSON 등의 정보를 주고받는 프로토콜 HTTPS HTTP에서 보안이 강화된 프로토콜 FTP 파일 전송 프로토콜 SMTP 메일을 전송하기 위한 프로토콜 SSH CLI 환경의 원격 컴퓨터에 접속하기 위한 프로토콜 RDP Windows 계열의 원격 컴퓨터에 접속하기 위한 프로토콜 WebSocket 실시간 통신, Push 등을 지원하는 프로토콜 전송 계층(4) 프로토콜 이름 설명 TCP HTTP, FTP 통신의 등의 근간이 되는 인터넷 프로토콜 UDP (양방향의 TCP와는 다르게)단방향으로 작동하는 훨씬 더 단순하고 빠르지만, 신뢰성이 낮은 인터넷 프로토콜 API(Application Programming Interface) Interface 의사소통이 가능하도록 만들어진 접점 HTTP 요청 메소드 요청 적절한 메소드 추가(Create) POST 조회(Read) GET 갱신(Update) PUT or PATCH 삭제(Delete) DELETE 보이지 않는 곳의 브라우저 작동 원리 #URL과 URI # URL(Uniform Resource Locator) 네트워크 상에서 웹 페이지, 이미지, 동영상 등의 파일이 위치한 정보 scheme, hosts, url-path로 구분 URI(Uniform Resource Identifier) URL의 기본 요소에 더해 query, bookmark를 포함 부분 명칭 설명 file:\/\/, http:\/\/, https:\/\/ scheme 통신 프로토콜 127.",
+    "inLanguage": "en",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/bootcamp\/bc-9w-1\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2021",
+    "dateCreated": "2021-10-18T00:00:00\u002b00:00",
+    "datePublished": "2021-10-18T00:00:00\u002b00:00",
+    
+    "dateModified": "2021-10-18T00:00:00\u002b00:00",
+    
+    "keywords": ["Network"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1172"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/",
+       "name": "Yuchan's Hello World!",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/categories/bootcamp/",
+       "name": "\u003cBootcamp\u003e",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Bc 9w 1 [ HTTP 네트워크] 네트워크 기초",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Yuchan&rsquo;s hello world!</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Posts</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title="Categories"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title="Tags"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        BC-9w-1 / [HTTP/네트워크] 네트워크-기초
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2021-10-18 00:00:00 &#43;0000 UTC">18 October 2021</time>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="/categories/bootcamp/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >&lt;Bootcamp&gt;</a
+            >
+          
+        
+      
+        
+          
+            <a
+              href="/tags/network/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Network</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#today-i-learned">Today I learned</a>
+      <ul>
+        <li><a href="#클라이언트-서버-아키텍처2티어-아키텍처">클라이언트-서버 아키텍처(2티어 아키텍처)</a></li>
+        <li><a href="#보이지-않는-곳의-브라우저-작동-원리">보이지 않는 곳의 브라우저 작동 원리</a>
+          <ul>
+            <li><a href="#url과-uri">URL과 URI</a></li>
+            <li><a href="#ip와-port">IP와 Port</a></li>
+            <li><a href="#도메인과-dns">도메인과 DNS</a></li>
+          </ul>
+        </li>
+        <li><a href="#chrome-network-tab">Chrome Network Tab</a></li>
+        <li><a href="#httphypertext-transfer-protocol">HTTP(HyperText Transfer Protocol)</a>
+          <ul>
+            <li><a href="#http-messageshttpsdevelopermozillaorgkodocswebhttpmessages"><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Messages">HTTP Messages</a></a></li>
+            <li><a href="#http-request">HTTP Request</a></li>
+            <li><a href="#http-responses">HTTP Responses</a></li>
+            <li><a href="#stateless무상태성">Stateless(무상태성)</a></li>
+            <li><a href="#advanced-concepts">Advanced Concepts</a></li>
+          </ul>
+        </li>
+        <li><a href="#보이는-곳의-브라우저-작동-원리">보이는 곳의 브라우저 작동 원리</a>
+          <ul>
+            <li><a href="#spa를-만드는-기술-ajax">SPA를 만드는 기술: AJAX</a></li>
+            <li><a href="#ssr과-csr">SSR과 CSR</a></li>
+            <li><a href="#corscross-origin-resource-sharinghttpsdevelopermozillaorgkodocswebhttpcors">CORS<a href="https://developer.mozilla.org/ko/docs/Web/HTTP/CORS">(Cross-Origin Resource Sharing)</a></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#todays-takeaway">Today&rsquo;s takeaway</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="today-i-learned" class="relative group">Today I learned <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#today-i-learned" aria-label="Anchor">#</a></span></h2><!-- ## Algorithm Test 08 배열의 요소 곱하기 최댓값 ☆
+
+```js
+const func = function (arr) {
+  arr.sort((a, b) => a - b);
+  lastIdx = arr.length - 1;
+  result1 = arr[0] * arr[1] * arr[lastIdx];
+  result2 = arr[lastIdx - 2] * arr[lastIdx - 1] * arr[lastIdx];
+  return Math.max(result1, result2);
+};
+``` -->
+<h3 id="클라이언트-서버-아키텍처2티어-아키텍처" class="relative group">클라이언트-서버 아키텍처(2티어 아키텍처) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%81%b4%eb%9d%bc%ec%9d%b4%ec%96%b8%ed%8a%b8-%ec%84%9c%eb%b2%84-%ec%95%84%ed%82%a4%ed%85%8d%ec%b2%982%ed%8b%b0%ec%96%b4-%ec%95%84%ed%82%a4%ed%85%8d%ec%b2%98" aria-label="Anchor">#</a></span></h3><ul>
+<li>Client
+<ul>
+<li>리소스를 사용하는 앱</li>
+</ul>
+</li>
+<li>Server
+<ul>
+<li>리소스가 존재하는 곳</li>
+</ul>
+</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Messages" target="_blank" rel="noreferrer">HTTP</a>
+<ul>
+<li>프로토콜(통신 규약)</li>
+<li>OSI 7 Layers
+<ul>
+<li>물리-데이터 링크-네트워크 계층-전송 계층-세션 계층-표현 계층-응용 계층</li>
+<li>응용 계층(7)
+<table>
+<thead>
+<tr>
+<th>프로토콜 이름</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP</td>
+<td>웹에서 HTML, JSON 등의 정보를 주고받는 프로토콜</td>
+</tr>
+<tr>
+<td>HTTPS</td>
+<td>HTTP에서 보안이 강화된 프로토콜</td>
+</tr>
+<tr>
+<td>FTP</td>
+<td>파일 전송 프로토콜</td>
+</tr>
+<tr>
+<td>SMTP</td>
+<td>메일을 전송하기 위한 프로토콜</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>CLI 환경의 원격 컴퓨터에 접속하기 위한 프로토콜</td>
+</tr>
+<tr>
+<td>RDP</td>
+<td>Windows 계열의 원격 컴퓨터에 접속하기 위한 프로토콜</td>
+</tr>
+<tr>
+<td>WebSocket</td>
+<td>실시간 통신, Push 등을 지원하는 프로토콜</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>전송 계층(4)
+<table>
+<thead>
+<tr>
+<th>프로토콜 이름</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCP</td>
+<td>HTTP, FTP 통신의 등의 근간이 되는 인터넷 프로토콜</td>
+</tr>
+<tr>
+<td>UDP</td>
+<td>(양방향의 TCP와는 다르게)단방향으로 작동하는 훨씬 더 단순하고 빠르지만, 신뢰성이 낮은 인터넷 프로토콜</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>API(Application Programming Interface)
+<ul>
+<li>Interface
+<ul>
+<li>의사소통이 가능하도록 만들어진 접점</li>
+</ul>
+</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Methods" target="_blank" rel="noreferrer">HTTP 요청 메소드</a>
+<table>
+<thead>
+<tr>
+<th>요청</th>
+<th>적절한 메소드</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추가(Create)</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>조회(Read)</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>갱신(Update)</td>
+<td>PUT or PATCH</td>
+</tr>
+<tr>
+<td>삭제(Delete)</td>
+<td>DELETE</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="보이지-않는-곳의-브라우저-작동-원리" class="relative group">보이지 않는 곳의 브라우저 작동 원리 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b3%b4%ec%9d%b4%ec%a7%80-%ec%95%8a%eb%8a%94-%ea%b3%b3%ec%9d%98-%eb%b8%8c%eb%9d%bc%ec%9a%b0%ec%a0%80-%ec%9e%91%eb%8f%99-%ec%9b%90%eb%a6%ac" aria-label="Anchor">#</a></span></h3><h4 id="url과-uri" class="relative group">URL과 URI <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#url%ea%b3%bc-uri" aria-label="Anchor">#</a></span></h4><ul>
+<li>URL(Uniform Resource Locator)
+<ul>
+<li>네트워크 상에서 웹 페이지, 이미지, 동영상 등의 파일이 위치한 정보</li>
+<li>scheme, hosts, url-path로 구분</li>
+</ul>
+</li>
+<li>URI(Uniform Resource Identifier)
+<ul>
+<li>URL의 기본 요소에 더해 query, bookmark를 포함</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>부분</th>
+<th>명칭</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file://, http://, https://</td>
+<td>scheme</td>
+<td>통신 프로토콜</td>
+</tr>
+<tr>
+<td>127.0.0.1, <a href="https://www.google.com" target="_blank" rel="noreferrer">www.google.com</a></td>
+<td>hosts</td>
+<td>웹 페이지, 이미지, 동영상 등의 파일이 위치한 웹 서버, 도메인 또는 IP</td>
+</tr>
+<tr>
+<td>:80, :443, :3000</td>
+<td>port</td>
+<td>웹 서버에 접속하기 위한 통로</td>
+</tr>
+<tr>
+<td>/search, /Users/username/Desktop</td>
+<td>url-path</td>
+<td>웹 서버의 루트 디렉토리로부터 웹 페이지, 이미지, 동영상 등의 파일이 위치까지의 경로</td>
+</tr>
+<tr>
+<td>q=JavaScript</td>
+<td>query</td>
+<td>웹 서버에 전달하는 추가 질문</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ip와-port" class="relative group">IP와 Port <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ip%ec%99%80-port" aria-label="Anchor">#</a></span></h4><ul>
+<li>IP address(Internet Protocol address)
+<ul>
+<li>localhost, 127.0.0.1
+<ul>
+<li>현재 사용 중인 로컬 PC</li>
+</ul>
+</li>
+<li>0.0.0.0, 255.255.255.255
+<ul>
+<li>broadcast address, 로컬 네트워크에 접속된 모든 장치와 소통하는 주소</li>
+</ul>
+</li>
+<li>IPv4
+<ul>
+<li>4 bytes each</li>
+<li>2^32(약 43억)개 IP 주소 표현</li>
+</ul>
+</li>
+<li>IPv6
+<ul>
+<li>6 bytes each</li>
+<li>2^128개 IP 주소 표현</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>PORT
+<ul>
+<li>포트 번호는 0 ~ 65,535 까지 사용할 수 있음</li>
+<li>그 중에서 0 ~ 1024번 까지의 <a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers" target="_blank" rel="noreferrer">포트 번호</a>는 주요 통신을 위한 규약에 따라 이미 정해져 있음
+<ul>
+<li>:22 - SSH<br>
+:80 - HTTP<br>
+:443 - HTTPS</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="도메인과-dns" class="relative group">도메인과 DNS <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%8f%84%eb%a9%94%ec%9d%b8%ea%b3%bc-dns" aria-label="Anchor">#</a></span></h4><ul>
+<li>도메인
+<ul>
+<li>웹 브라우저를 통해 특정 사이트에 진입을 할 때, IP 주소를 대신하여 사용하는 주소</li>
+<li>터미널에서 도메인 이름을 통해 IP 주소를 확인하는 명령어 nslookup</li>
+</ul>
+</li>
+<li>DNS(Domain Name System)
+<ul>
+<li>호스트의 도메인 이름을 IP 주소로 변환하거나 반대의 경우를 수행할 수 있도록 개발된 데이터베이스 시스템</li>
+</ul>
+</li>
+</ul>
+<h3 id="chrome-network-tab" class="relative group">Chrome Network Tab <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#chrome-network-tab" aria-label="Anchor">#</a></span></h3><ul>
+<li><a href="https://www.youtube.com/watch?v=e1gAyQuIFQo" target="_blank" rel="noreferrer">https://www.youtube.com/watch?v=e1gAyQuIFQo</a></li>
+</ul>
+<h3 id="httphypertext-transfer-protocol" class="relative group">HTTP(HyperText Transfer Protocol) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#httphypertext-transfer-protocol" aria-label="Anchor">#</a></span></h3><h4 id="http-messageshttpsdevelopermozillaorgkodocswebhttpmessages" class="relative group"><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Messages" target="_blank" rel="noreferrer">HTTP Messages</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#http-messageshttpsdevelopermozillaorgkodocswebhttpmessages" aria-label="Anchor">#</a></span></h4><ul>
+<li>클라이언트와 서버 사이에서 데이터가 교환되는 방식</li>
+<li>HTTP messages의 구조
+<ol>
+<li>start/status line
+<ul>
+<li>요청이나 응답의 상태</li>
+</ul>
+</li>
+<li>HTTP headers
+<ul>
+<li>요청을 지정하거나, 메시지에 포함된 본문을 설명하는 헤더의 집합</li>
+</ul>
+</li>
+<li>empty line
+<ul>
+<li>헤더와 본문을 구분하는 빈 줄</li>
+</ul>
+</li>
+<li>body
+<ul>
+<li>요청과 관련된 데이터나 응답과 관련된 데이터 또는 문서를 포함</li>
+<li>요청과 응답의 유형에 따라 선택적으로 사용</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="http-request" class="relative group">HTTP Request <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#http-request" aria-label="Anchor">#</a></span></h4><ul>
+<li>Start line
+<ol>
+<li>HTTP method
+<ul>
+<li>수행할 작업(GET, PUT, POST 등)이나 방식(HEAD or OPTIONS)을 설명</li>
+</ul>
+</li>
+<li>요청 대상(일반적으로 URL이나 URI) 또는 프로토콜, 포트, 도메인의 절대 경로
+<ul>
+<li>origin 형식
+<ul>
+<li>?와 쿼리 문자열이 붙는 절대 경로</li>
+<li>POST, GET, HEAD, OPTIONS 등의 method와 함께 사용</li>
+<li>POST / HTTP/1.1<br>
+GET /background.png HTTP/1.0<br>
+HEAD /test.html?query=alibaba HTTP/1.1<br>
+OPTIONS /anypage.html HTTP/1.0</li>
+</ul>
+</li>
+<li>absolute 형식
+<ul>
+<li>완전한 URL 형식으로, 프록시에 연결하는 경우 대부분 GET method와 함께 사용</li>
+<li>GET <a href="http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages" target="_blank" rel="noreferrer">http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages</a> HTTP/1.1</li>
+</ul>
+</li>
+<li>authority 형식
+<ul>
+<li>도메인 이름과 포트 번호로 이루어진 URL의 authority component</li>
+<li>HTTP 터널을 구축하는 경우, CONNECT와 함께 사용</li>
+<li>CONNECT developer.mozilla.org:80 HTTP/1.1</li>
+</ul>
+</li>
+<li>asterisk 형식
+<ul>
+<li>OPTIONS 와 함께 별표(*) 하나로 서버 전체를 표현</li>
+<li>OPTIONS * HTTP/1.1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>HTTP 버전</li>
+</ol>
+</li>
+<li>Headers
+<ul>
+<li>헤더 이름(대소문자 구분이 없는 문자열), 콜론( : ), 값을 입력</li>
+<li>General headers
+<ul>
+<li>메시지 전체에 적용되는 헤더로, body를 통해 전송되는 데이터와는 관련이 없는 헤더</li>
+</ul>
+</li>
+<li>Request headers
+<ul>
+<li>fetch를 통해 가져올 리소스나 클라이언트 자체에 대한 자세한 정보를 포함하는 헤더</li>
+<li>User-Agent, Accept-Type, Accept-Language과 같은 헤더는 요청을 보다 구체화</li>
+<li>Referer처럼 컨텍스트를 제공하거나 If-None과 같이 조건에 따라 제약을 추가할 수 있음</li>
+</ul>
+</li>
+<li>Representation headers
+<ul>
+<li>body에 담긴 리소스의 정보(컨텐츠 길이, MIME 타입 등)를 포함하는 헤더</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Body(Optional)
+<ul>
+<li>GET, HEAD, DELETE, OPTIONS처럼 서버에 리소스를 요청하는 경우에는 본문이 필요하지 않음</li>
+<li>POST나 PUT과 같은 일부 요청에서 데이터를 업데이트하기 위해 사용</li>
+<li>Single-resource bodies(단일-리소스 본문)
+<ul>
+<li>헤더 두 개(Content-Type과 Content-Length)로 정의된 단일 파일로 구성</li>
+</ul>
+</li>
+<li>Multiple-resource bodies(다중-리소스 본문)
+<ul>
+<li>여러 파트로 구성된 본문에서는 각 파트마다 다른 정보를 지님</li>
+<li>보통 HTML form과 관련</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="http-responses" class="relative group">HTTP Responses <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#http-responses" aria-label="Anchor">#</a></span></h4><ul>
+<li>Status line
+<ol>
+<li>현재 프로토콜의 버전(HTTP/1.1 등)</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Status" target="_blank" rel="noreferrer">상태 코드</a> - 요청의 결과(200, 302, 404 등)</li>
+<li>상태 텍스트 - 상태 코드에 대한 설명</li>
+</ol>
+<ul>
+<li>HTTP/1.1 404 Not Found.</li>
+</ul>
+</li>
+<li>Headers
+<ul>
+<li>General headers</li>
+<li>Response headers
+<ul>
+<li>위치 또는 서버 자체에 대한 정보(이름, 버전 등)와 같이 응답에 대한 부가적인 정보를 갖는 헤더</li>
+<li>Vary, Accept-Ranges와 같이 상태 줄에 넣기에는 공간이 부족했던 추가 정보를 제공</li>
+</ul>
+</li>
+<li>Representation headers</li>
+</ul>
+</li>
+<li>Body(Optional)
+<ul>
+<li>Single-resource bodies(단일-리소스 본문)
+<ul>
+<li>길이가 알려진 단일-리소스 본문은 두 개의 헤더(Content-Type, Content-Length)로 정의</li>
+<li>길이를 모르는 단일 파일로 구성된 단일-리소스 본문은 Transfer-Encoding이 chunked 로 설정되어 있으며, 파일은 chunk로 나뉘어 인코딩</li>
+</ul>
+</li>
+<li>Multiple-resource bodies(다중-리소스 본문)
+<ul>
+<li>서로 다른 정보를 담고 있는 body</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="stateless무상태성" class="relative group">Stateless(무상태성) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#stateless%eb%ac%b4%ec%83%81%ed%83%9c%ec%84%b1" aria-label="Anchor">#</a></span></h4><ul>
+<li>HTTP로 클라이언트와 서버가 통신을 주고 받는 과정에서, HTTP가 클라이언트나 서버의 상태를 확인하지 않음</li>
+<li>따라서, 필요에 따라 다른 방법(쿠키-세션, API 등)을 통해 상태를 확인</li>
+<li>HTTP의 큰 특징</li>
+</ul>
+<h4 id="advanced-concepts" class="relative group">Advanced Concepts <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#advanced-concepts" aria-label="Anchor">#</a></span></h4><ul>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types" target="_blank" rel="noreferrer">MDN: MIME Type</a></li>
+<li><a href="https://d2.naver.com/helloworld/59361" target="_blank" rel="noreferrer">브라우저는 어떻게 동작하는가</a></li>
+</ul>
+<h3 id="보이는-곳의-브라우저-작동-원리" class="relative group">보이는 곳의 브라우저 작동 원리 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b3%b4%ec%9d%b4%eb%8a%94-%ea%b3%b3%ec%9d%98-%eb%b8%8c%eb%9d%bc%ec%9a%b0%ec%a0%80-%ec%9e%91%eb%8f%99-%ec%9b%90%eb%a6%ac" aria-label="Anchor">#</a></span></h3><h4 id="spa를-만드는-기술-ajax" class="relative group">SPA를 만드는 기술: AJAX <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#spa%eb%a5%bc-%eb%a7%8c%eb%93%9c%eb%8a%94-%ea%b8%b0%ec%88%a0-ajax" aria-label="Anchor">#</a></span></h4><ol>
+<li>AJAX 란?
+<ul>
+<li>Asynchronous JavaScript And XMLHttpRequest의 약자로, JavaScript, DOM, Fetch, XMLHttpRequest, HTML 등의 다양한 기술을 사용하는 웹 개발 기법</li>
+<li>가장 큰 특징은 웹 페이지에 필요한 부분에 필요한 데이터만 비동기적으로 받아와 화면에 그려낼 수 있는 것</li>
+</ul>
+</li>
+<li>AJAX의 핵심 기술
+<ul>
+<li>JavaScript와 DOM, 그리고 Fetch</li>
+<li>Fetch를 사용하면, 페이지를 이동하지 않아도 서버로부터 필요한 데이터를 받아올 수 있음</li>
+<li>Fetch는 XHR의 단점을 보완한 새로운 Web API이며, XML보다 가볍고 JavaScript와 호환되는 JSON을 사용</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;http://52.78.213.9:3000/messages&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">then</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div></li>
+<li>AJAX의 장점
+<ul>
+<li>서버에서 완성된 HTML을 보내주지 않아도 필요한 데이터를 비동기적으로 가져와 브라우저에서 화면의 일부만 업데이트 하여 렌더링 가능</li>
+<li>XHR이 표준화 되면서부터 브라우저에 상관 없이 AJAX를 사용</li>
+<li>유저 중심 어플리케이션 개발 AJAX를 사용하면 필요한 일부분만 렌더링하기 때문에 빠르고 더 많은 상호작용이 가능한 어플리케이션을 만들 수 있음</li>
+<li>더 작은 대역폭(네트워크 통신 한 번에 보낼 수 있는 데이터의 크기). AJAX에서는 필요한 데이터를 텍스트 형태(JSON, XML 등) 보내면 되기 때문에 비교적 데이터의 크기가 작음</li>
+</ul>
+</li>
+<li>AJAX의 단점
+<ul>
+<li>Search Engine Optimization(SEO)에 불리함. AJAX 방식의 웹 어플리케이션의 HTML 파일은 뼈대만 있고 데이터는 없기 때문에 사이트의 정보를 긁어가기 어려움</li>
+<li>AJAX에서는 이전 상태를 기억하지 않기 때문에 뒤로가기 등의 기능을 구현하기 위해서는 별도로 History API를 사용해야 함</li>
+</ul>
+</li>
+</ol>
+<p>*<a href="https://sungmooncho.com/2012/12/04/gmail-and-ajax/" target="_blank" rel="noreferrer">지메일이 핫메일을 이긴 진짜 이유 (Ajax가 가져온 유저 인터페이스의 혁신)</a></p>
+<h4 id="ssr과-csr" class="relative group">SSR과 CSR <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ssr%ea%b3%bc-csr" aria-label="Anchor">#</a></span></h4><ul>
+<li>SSR은 서버에서 페이지를 렌더링하고, CSR은 브라우저(클라이언트)에서 페이지를 렌더링함. 브라우저는 사용자가 다른 경로를 요청할 때마다 페이지를 새로고침 하지 않고, 동적으로 라우팅을 관리</li>
+<li>SSR(Server Side Rendering)
+<ul>
+<li>웹 페이지를 브라우저에서 렌더링하는 대신에, 서버에서 렌더링</li>
+<li>브라우저가 서버의 URI로 GET 요청을 보내면, 서버는 정해진 웹 페이지 파일을 브라우저로 전송</li>
+<li>그리고 서버의 웹 페이지가 브라우저에 도착하면 완전히 렌더링</li>
+<li>브라우저가 다른 경로로 이동할 때마다 서버는 이 작업을 다시 수행</li>
+</ul>
+</li>
+<li>CSR(Client Side Rendering)
+<ul>
+<li>브라우저에서 웹 페이지를 렌더링</li>
+<li>브라우저의 요청을 서버로 보내면, 웹 페이지의 골격이 될 단일 페이지를 브라우저로 전송</li>
+<li>웹 페이지와 함께 전달된 JavaScript 파일은 브라우저에서 웹 페이지를 완전히 렌더링 된 페이지로 바꿈</li>
+<li>브라우저가 다른 경로로 이동하면, 브라우저는 브라우저가 요청한 경로에 따라 페이지를 다시 렌더링</li>
+<li>이때 보이는 웹 페이지의 파일은 맨 처음 서버로부터 전달받은 웹 페이지 파일과 동일한 파일</li>
+</ul>
+</li>
+<li>Use SSR
+<ul>
+<li>SEO(Search Engine Optimization) 가 우선순위인 경우</li>
+<li>웹 페이지의 첫 화면 렌더링이 빠르게 필요한 경우</li>
+<li>웹 페이지가 사용자와 상호작용이 적은 경우</li>
+</ul>
+</li>
+<li>Use CSR
+<ul>
+<li>SEO 가 우선순위가 아닌 경우</li>
+<li>사이트에 풍부한 상호 작용이 있는 경우(빠른 라우팅)</li>
+<li>웹 애플리케이션을 제작하는 경우(빠른 동적 렌더링)</li>
+</ul>
+</li>
+</ul>
+<h4 id="corscross-origin-resource-sharinghttpsdevelopermozillaorgkodocswebhttpcors" class="relative group">CORS<a href="https://developer.mozilla.org/ko/docs/Web/HTTP/CORS" target="_blank" rel="noreferrer">(Cross-Origin Resource Sharing)</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#corscross-origin-resource-sharinghttpsdevelopermozillaorgkodocswebhttpcors" aria-label="Anchor">#</a></span></h4><ul>
+<li>브라우저의 사용자를 보호하는 브라우저의 자발적인 보안조치</li>
+<li>Cross-origin requests is controlled by CORS</li>
+</ul>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="https://user-images.githubusercontent.com/84524514/137696218-084be3c3-fc73-44fb-b4cf-599600e5c8e4.png" alt="스크린샷 2021-10-18 오후 5 30 40" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<h2 id="todays-takeaway" class="relative group">Today&rsquo;s takeaway <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#todays-takeaway" aria-label="Anchor">#</a></span></h2><ul>
+<li>Client, Server, HTTP, API</li>
+<li>URL, URI</li>
+<li>IP, Port</li>
+<li>도메인, DNS</li>
+<li>HTTP Messages</li>
+<li>AJAX</li>
+<li>SSR, CSR</li>
+<li>용어들의 의미를 잘 기억하고, 흐름을 이해하자.</li>
+<li>HTTP의 가장 큰 특징은 무상태성(Stateless)이다.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/bootcamp/bc-8w-5/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >BC-8w-5 / 8주 차 정리</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2021-10-17 00:00:00 &#43;0000 UTC">17 October 2021</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/bootcamp/bc-9w-2/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >BC-9w-2 / [HTTP/네트워크] REST API</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2021-10-19 00:00:00 &#43;0000 UTC">19 October 2021</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+        
+          
+        
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2021 Yuchan&rsquo;s hello world!
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://yuchanjeong.github.io/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

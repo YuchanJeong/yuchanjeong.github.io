@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GraphQL on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/graphql/</link>
+    <description>Recent content in GraphQL on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Thu, 30 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/graphql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BC-14w-4 / {FC} GraphQL 맛보기</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-4/</link>
+      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-4/</guid>
+      <description>1. Rest API &amp;amp; GraphQL #Rest API #axios.</description>
+    </item>
+  </channel>
+</rss>

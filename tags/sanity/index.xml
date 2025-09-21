@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sanity on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/sanity/</link>
+    <description>Recent content in Sanity on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/sanity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BC-14w-5 / {FC} Next.js로 블로그 만들기 - Sanity</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-5/</link>
+      <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-14w-5/</guid>
+      <description>1. What is Sanity^ ^ # Sanity.</description>
+    </item>
+  </channel>
+</rss>

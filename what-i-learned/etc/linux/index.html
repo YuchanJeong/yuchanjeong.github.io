@@ -1,0 +1,654 @@
+
+
+
+
+  
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>Linux Console &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="Linux Console &middot; Yuchan&#39;s hello world!" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.b0785c8131a75f72b211435af86269eb2d4b81dda03a8f2cf5ccb1c967747167.css"
+    integrity="sha256-sHhcgTGnX3KyEUNa&#43;GJp6y1Lgd2gOo8s9cyxyWd0cWc="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f29ffdffd9ab4cc95250c3c7196b2d5dae8ee6ef0a4139451073f90183ae7e31.js"
+      integrity="sha256-8p/9/9mrTMlSUMPHGWstXa6O5u8KQTlFEHP5AYOufjE="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        리눅스 콘솔 명령어 추가 예정 1.
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="https://yuchanjeong.github.io/what-i-learned/etc/linux/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Linux Console" />
+<meta property="og:description" content="리눅스 콘솔 명령어 추가 예정 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuchanjeong.github.io/what-i-learned/etc/linux/" /><meta property="article:section" content="What I learned" />
+
+
+
+
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Linux Console"/>
+<meta name="twitter:description" content="리눅스 콘솔 명령어 추가 예정 1."/>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "What I Learneds",
+    "name": "Linux Console",
+    "headline": "Linux Console",
+    
+    "abstract": "리눅스 콘솔 명령어 추가 예정 1.",
+    "inLanguage": "en",
+    "url" : "https:\/\/yuchanjeong.github.io\/what-i-learned\/etc\/linux\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    "keywords": ["(Summary)","Linux"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "284"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/",
+       "name": "Yuchan's Hello World!",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/what-i-learned/",
+       "name": "What I Learneds",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/categories/what-i-learned/",
+       "name": "\u003cWhat I learned\u003e",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Linux Console",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Yuchan&rsquo;s hello world!</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Posts</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title="Categories"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title="Tags"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Linux Console
+      </h1>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-기본-명령어">1. 기본 명령어</a></li>
+        <li><a href="#2-경로-탐색">2. 경로 탐색</a></li>
+        <li><a href="#3-파일폴더-생성-및-관리">3. 파일·폴더 생성 및 관리</a></li>
+        <li><a href="#4-환경-변수">4. 환경 변수</a></li>
+        <li><a href="#5-텍스트-에디터">5. 텍스트 에디터</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300">리눅스 콘솔 명령어 추가 예정</span>
+</div>
+
+<h3 id="1-기본-명령어" class="relative group">1. 기본 명령어 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ea%b8%b0%eb%b3%b8-%eb%aa%85%eb%a0%b9%ec%96%b4" aria-label="Anchor">#</a></span></h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>man [명령어]</td>
+<td>메뉴얼 보기</td>
+</tr>
+<tr>
+<td>clear</td>
+<td>터미널 창 정리</td>
+</tr>
+<tr>
+<td>open .</td>
+<td>현재 경로를 Finder에서 열기</td>
+</tr>
+<tr>
+<td>code .</td>
+<td>현재 경로를 VSC에서 열기</td>
+</tr>
+<tr>
+<td>sudo</td>
+<td>관리자 권한 획득</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-경로-탐색" class="relative group">2. 경로 탐색 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%ea%b2%bd%eb%a1%9c-%ed%83%90%ec%83%89" aria-label="Anchor">#</a></span></h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pwd</td>
+<td>현재 절대 경로 보기</td>
+</tr>
+<tr>
+<td>ls<br/>ㅤ[경로명]<br/>ㅤ-l<br/>ㅤ-a</td>
+<td>현재 경로 목록 보기<br/>- 경로 지정<br/>- 자세히 보기<br/>- 숨겨진 목록 보기</td>
+</tr>
+<tr>
+<td>which [프로그램명]</td>
+<td>해당 프로그램의 실행 경로 보기</td>
+</tr>
+<tr>
+<td>cd<br/>ㅤ[경로명]<br/>ㅤ..<br/>ㅤ~<br/>ㅤ-</td>
+<td><br/>해당 경로로 이동<br/>상위 경로로 이동<br/>최상위 경로로 이동<br/>직전 경로로 이동</td>
+</tr>
+<tr>
+<td>find . -type directory|file -name &ldquo;[검색어]&rdquo;</td>
+<td>현재 및 하위 경로의 특정 폴더|파일 찾기<br/>(Ex. &ldquo;*A*&rdquo;, &ldquo;*.md&rdquo;)</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>권한 (ls -l로 볼 수 있음)</summary>
+사용 권한 (Ex. drwxr-xr-x)
+  <ul>
+    <li>d(directory) | -(non-directory)</li>
+    <li>user group other</li>
+    <li>r(read) | w(write) | x(execute)</li>
+  </ul>
+권한 변경: chmod
+  <ol>
+    <li>
+    Symbolic method (Ex. chmod a=r-x project)
+    <ul>
+      <li>u(user) | g(group) | o(other) | a(all)</li>
+      <li>+(add) | -(remove) | =(set exact)</li>
+      <li>r(read) | w(write) | x(execute)</li>
+    </ul>
+    </li>
+    <li>
+    Absolute form (Ex. chmod 740 index.js)
+    <ul>
+    <li>user group other</li>
+    <li>4(r)2(w)1(x)</li>
+    </ul>
+    </li>
+  </ol>
+</details>
+<h3 id="3-파일폴더-생성-및-관리" class="relative group">3. 파일·폴더 생성 및 관리 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%ed%8c%8c%ec%9d%bc%ed%8f%b4%eb%8d%94-%ec%83%9d%ec%84%b1-%eb%b0%8f-%ea%b4%80%eb%a6%ac" aria-label="Anchor">#</a></span></h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mkdir<br/>ㅤ[경로명]<br/>ㅤ-p [경로명]</td>
+<td><br/>하위 폴더 만들기<br/>해당 경로를 따라 하위 폴더 만들기</td>
+</tr>
+<tr>
+<td>touch [파일명]</td>
+<td>파일 만들기</td>
+</tr>
+<tr>
+<td>echo<br/>ㅤ&quot;[문자열]&quot; &gt; [파일명]<br/>ㅤ&quot;[문자열]&quot; &raquo; [파일명]</td>
+<td><br/>문자열을 덮어쓰면서 파일 만들기<br/>문자열을 추가하면서 파일 만들기</td>
+</tr>
+<tr>
+<td>cat [파일명] (&hellip;)</td>
+<td>파일(들) 내용 확인</td>
+</tr>
+<tr>
+<td>mv<br>ㅤ[경로·파일명] (&hellip;) [경로]<br>ㅤ[경로·파일명] [경로·파일명]</td>
+<td><br>해당 폴더로 폴더·파일(들) 이동<br>이름 변경 (후자가 없는 경우)</td>
+</tr>
+<tr>
+<td>cp<br>ㅤ[파일명] [복사파일명]<br>ㅤ-r [경로명] [복사경로명]</td>
+<td><br>해당 파일 복사<br>해당 폴더 복사</td>
+</tr>
+<tr>
+<td>rm<br/>ㅤ[파일명]<br/>ㅤ-r [경로명]</td>
+<td><br/>해당 파일 삭제<br/>해당 폴더 삭세</td>
+</tr>
+<tr>
+<td>grep &ldquo;[검색어]&rdquo; [경로명]<br/>ㅤ-n<br/>ㅤ-i<br/>ㅤ-r</td>
+<td>특정 파일에서 특정 키워드 검색<br/>- 줄 표시<br/>- 대소문자 무시<br/>- 현재 및 하위경로 검색</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-환경-변수" class="relative group">4. 환경 변수 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-%ed%99%98%ea%b2%bd-%eb%b3%80%ec%88%98" aria-label="Anchor">#</a></span></h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>export [환경변수]=[값]</td>
+<td>환경 변수 임시 저장</td>
+</tr>
+<tr>
+<td>unset [환경변수]</td>
+<td>해당 환경 변수 삭제</td>
+</tr>
+<tr>
+<td>env</td>
+<td>모든 환경 변수 보기</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-텍스트-에디터" class="relative group">5. 텍스트 에디터 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-%ed%85%8d%ec%8a%a4%ed%8a%b8-%ec%97%90%eb%94%94%ed%84%b0" aria-label="Anchor">#</a></span></h3><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Command</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vim</td>
+<td>vi [파일명]</td>
+<td>i -&gt; esc -&gt; :wq</td>
+</tr>
+<tr>
+<td>nano</td>
+<td>nano [파일명]</td>
+<td>ctrl+X -&gt; Y -&gt; enter</td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+
+      
+        
+          
+        
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2021 Yuchan&rsquo;s hello world!
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://yuchanjeong.github.io/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

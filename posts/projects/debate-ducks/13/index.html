@@ -1,0 +1,806 @@
+
+
+
+
+  
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>[Debate-Ducks] 토론 게시물 CRUD &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[Debate-Ducks] 토론 게시물 CRUD &middot; Yuchan&#39;s hello world!" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.b0785c8131a75f72b211435af86269eb2d4b81dda03a8f2cf5ccb1c967747167.css"
+    integrity="sha256-sHhcgTGnX3KyEUNa&#43;GJp6y1Lgd2gOo8s9cyxyWd0cWc="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f29ffdffd9ab4cc95250c3c7196b2d5dae8ee6ef0a4139451073f90183ae7e31.js"
+      integrity="sha256-8p/9/9mrTMlSUMPHGWstXa6O5u8KQTlFEHP5AYOufjE="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        Summary #토론 게시물 생성, 조회, 수정, 삭제
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/projects/debate-ducks/13/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="[Debate-Ducks] 토론 게시물 CRUD" />
+<meta property="og:description" content="Summary #토론 게시물 생성, 조회, 수정, 삭제" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks/13/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-19T00:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="[Debate-Ducks] 토론 게시물 CRUD"/>
+<meta name="twitter:description" content="Summary #토론 게시물 생성, 조회, 수정, 삭제"/>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "[Debate-Ducks] 토론 게시물 CRUD",
+    "headline": "[Debate-Ducks] 토론 게시물 CRUD",
+    
+    "abstract": "Summary #토론 게시물 생성, 조회, 수정, 삭제",
+    "inLanguage": "en",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks\/13\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-07-19T00:00:00\u002b00:00",
+    "datePublished": "2022-07-19T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-07-19T00:00:00\u002b00:00",
+    
+    "keywords": ["\\Debate-Ducks","(Devlog)"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "788"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/",
+       "name": "Yuchan's Hello World!",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/categories/projects/",
+       "name": "\u003cProjects\u003e",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "[ Debate Ducks] 토론 게시물 Crud",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Yuchan&rsquo;s hello world!</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Posts</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title="Categories"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title="Tags"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        [Debate-Ducks] 토론 게시물 CRUD
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-07-19 00:00:00 &#43;0000 UTC">19 July 2022</time>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="/categories/projects/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >&lt;Projects&gt;</a
+            >
+          
+        
+      
+        
+          
+            <a
+              href="/tags/%5Cdebate-ducks/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >\Debate-Ducks</a
+            >
+          
+            <a
+              href="/tags/devlog/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >(Devlog)</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#details">Details</a>
+      <ul>
+        <li><a href="#react-query-커스텀훅">React Query 커스텀훅</a></li>
+        <li><a href="#생성과-수정의-공통요소">생성과 수정의 공통요소</a></li>
+      </ul>
+    </li>
+    <li><a href="#problems">Problems</a>
+      <ul>
+        <li><a href="#작동-순서-문제">작동 순서 문제</a></li>
+      </ul>
+    </li>
+    <li><a href="#etc">Etc</a>
+      <ul>
+        <li><a href="#typescript-및-react-query">TypeScript 및 React Query</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="summary" class="relative group">Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#summary" aria-label="Anchor">#</a></span></h2><p>토론 게시물 생성, 조회, 수정, 삭제</p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="https://user-images.githubusercontent.com/84524514/179946190-beaa8752-f209-40d1-8dbf-56fba8b043f3.gif" alt="토론 CRUD" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<h2 id="details" class="relative group">Details <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#details" aria-label="Anchor">#</a></span></h2><h3 id="react-query-커스텀훅" class="relative group">React Query 커스텀훅 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#react-query-%ec%bb%a4%ec%8a%a4%ed%85%80%ed%9b%85" aria-label="Anchor">#</a></span></h3><p>useQuery과 useMutation을 커스텀훅으로 만들어 재사용성과 안정성을 높였다. 성공 시와 에러 발생 시의 로직도 미리 작성해뒀다.</p>
+<p>Ps. usePatchDebate의 isEdit으로 토론 게시물을 수정할 때와 토론에 참여할 때를 구분했다. (토론에 참여할 때 토론 테이블의 participant_id를 업데이트함)</p>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300">구분의 기준을 isEdit애서 넘겨주는 참가자 정보 여부로 변경</span>
+</div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">useGetDebate</span> <span class="o">=</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">debateId</span>: <span class="kt">number</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">options?</span>: <span class="kt">UseQueryOptions</span><span class="p">&lt;</span><span class="nt">Debate</span><span class="err">,</span> <span class="na">AxiosError</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">{</span> <span class="nx">isLoading</span><span class="p">,</span> <span class="nx">data</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useQuery</span><span class="p">&lt;</span><span class="nt">Debate</span><span class="err">,</span> <span class="na">AxiosError</span><span class="p">&gt;(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s2">&#34;debate&#34;</span><span class="p">,</span> <span class="sb">`</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">`</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">getDebate</span><span class="p">(</span><span class="nx">debateId</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="p">...</span><span class="nx">options</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">onError</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">);</span> <span class="c1">//Todo: 에러 페이지로 이동
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">{</span> <span class="nx">isLoading</span><span class="p">,</span> <span class="nx">data</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">usePostDebate</span> <span class="o">=</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setIsErrorModalOn</span>: <span class="kt">Dispatch</span><span class="p">&lt;</span><span class="nt">SetStateAction</span><span class="err">&lt;</span><span class="na">boolean</span><span class="p">&gt;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">:</span> <span class="nx">UseMutationResult</span><span class="p">&lt;</span><span class="nt">DebatePost</span><span class="err">,</span> <span class="na">AxiosError</span><span class="err">,</span> <span class="na">DebatePost</span><span class="p">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">queryClient</span> <span class="o">=</span> <span class="nx">useQueryClient</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">useMutation</span><span class="p">((</span><span class="nx">debate</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">postDebate</span><span class="p">(</span><span class="nx">debate</span><span class="p">),</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">onSuccess</span><span class="o">:</span> <span class="p">(</span><span class="nx">debateId</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">queryClient</span><span class="p">.</span><span class="nx">invalidateQueries</span><span class="p">([</span><span class="s2">&#34;debates&#34;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="sb">`/debates/</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">onError</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setIsErrorModalOn</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">usePatchDebate</span> <span class="o">=</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setIsErrorModalOn</span>: <span class="kt">Dispatch</span><span class="p">&lt;</span><span class="nt">SetStateAction</span><span class="err">&lt;</span><span class="na">boolean</span><span class="p">&gt;</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isEdit?</span>: <span class="kt">boolean</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">:</span> <span class="nx">UseMutationResult</span><span class="p">&lt;</span><span class="nt">DebatePatch</span><span class="err">,</span> <span class="na">AxiosError</span><span class="err">,</span> <span class="na">DebatePatch</span><span class="p">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">queryClient</span> <span class="o">=</span> <span class="nx">useQueryClient</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">useMutation</span><span class="p">((</span><span class="nx">debate</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">patchDebate</span><span class="p">(</span><span class="nx">debate</span><span class="p">),</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">onSuccess</span><span class="o">:</span> <span class="p">(</span><span class="nx">debateId</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">queryClient</span><span class="p">.</span><span class="nx">invalidateQueries</span><span class="p">([</span><span class="s2">&#34;debate&#34;</span><span class="p">,</span> <span class="sb">`</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">`</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">isEdit</span><span class="p">)</span> <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="sb">`/debates/</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">onError</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setIsErrorModalOn</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">useDeleteDebate</span> <span class="o">=</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setIsErrorModalOn</span>: <span class="kt">Dispatch</span><span class="p">&lt;</span><span class="nt">SetStateAction</span><span class="err">&lt;</span><span class="na">boolean</span><span class="p">&gt;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">:</span> <span class="nx">UseMutationResult</span><span class="p">&lt;</span><span class="nt">number</span><span class="err">,</span> <span class="na">AxiosError</span><span class="err">,</span> <span class="na">number</span><span class="p">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">queryClient</span> <span class="o">=</span> <span class="nx">useQueryClient</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">useMutation</span><span class="p">((</span><span class="nx">debateId</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">deleteDebate</span><span class="p">(</span><span class="nx">debateId</span><span class="p">),</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">onSuccess</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">queryClient</span><span class="p">.</span><span class="nx">invalidateQueries</span><span class="p">([</span><span class="s2">&#34;debates&#34;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="sb">`/debates`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">onError</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setIsErrorModalOn</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><h3 id="생성과-수정의-공통요소" class="relative group">생성과 수정의 공통요소 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%83%9d%ec%84%b1%ea%b3%bc-%ec%88%98%ec%a0%95%ec%9d%98-%ea%b3%b5%ed%86%b5%ec%9a%94%ec%86%8c" aria-label="Anchor">#</a></span></h3><p>이번 작업에서 가장 신경 쓴 부분이 기능만 다를 뿐 똑같은 형태인 생성 페이지와 수정 페이지를 공통 요소로 최대한 묶는 것이었다. 처음에는 거의 모든 요소를 공통 컴포넌트에 넣은 다음 <code>debateId</code>를 지니고 있는 경우는 수정, 지니고 있지 않은 경우는 생성으로 나눴지만 몇 가지 문제를 만났다.</p>
+<p>첫 번째 문제는 React의 Hook은 조건부 렌더링을 할 수 없는 것이고, 두 번째 문제는 공통 요소의 타입을 Union Type으로 지정했으나 각각의 React Hook이 타입 에러를 뱉는 것이다. (다른 타입이 들어올 가능성이 생기기 때문) 그래서 우선 공통 기능을 함수로 묶고, 공통 HTML 요소는 컴포넌트로 묶었다. 그 이외의 남는 부분들은 각 페이지에 남겼다. 이 과정에서 기존에 내가 만든 커스텀훅들의 타입 정리가 필요했다. (props나 인자로 사용하기 위해서 필요)</p>
+<p>생성 페이지와 수정 페이지는 각 상태의 기본값과 API 및 body의 구성요소만 다르다.</p>
+<p>Ps. 수정 페이지에서 기존 데이터와 입력값이 똑같을때 요청을 보내지 않고 안내 모달을 띄우는 로직 추가.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// edit/[debateId].tsx
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Edit() {</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">param</span> <span class="o">=</span> <span class="nx">router</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">debateId</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">    <span class="k">typeof</span> <span class="nx">param</span><span class="o">?</span><span class="p">.</span><span class="nx">debateId</span> <span class="o">===</span> <span class="s2">&#34;string&#34;</span> <span class="o">?</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">param</span><span class="o">?</span><span class="p">.</span><span class="nx">debateId</span><span class="p">)</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">{</span> <span class="nx">data</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useGetDebate</span><span class="p">(</span><span class="nx">debateId</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">isSameModal</span><span class="p">,</span> <span class="nx">setIsSameModal</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">&lt;</span><span class="nt">boolean</span><span class="p">&gt;(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">isErrorModalOn</span><span class="p">,</span> <span class="nx">setIsErrorModalOn</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">&lt;</span><span class="nt">boolean</span><span class="p">&gt;(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">isCancelModalOn</span><span class="p">,</span> <span class="nx">setIsCancelModalOn</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">&lt;</span><span class="nt">boolean</span><span class="p">&gt;(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">titleRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">&lt;</span><span class="nt">HTMLInputElement</span><span class="p">&gt;(</span><span class="kc">null</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">validateNotice</span><span class="p">,</span> <span class="nx">setValidateNotice</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">titleInput</span> <span class="o">=</span> <span class="nx">useInput</span><span class="p">(</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">categorySelect</span> <span class="o">=</span> <span class="nx">useSelect</span><span class="p">(</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">category</span> <span class="o">||</span> <span class="nx">CATEGORIES</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">prosConsRadio</span> <span class="o">=</span> <span class="nx">useRadio</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">author_pros</span> <span class="o">?</span> <span class="sb">`</span><span class="si">${</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">author_pros</span><span class="si">}</span><span class="sb">`</span> <span class="o">:</span> <span class="s2">&#34;false&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;prosCons&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">contentsInput</span> <span class="o">=</span> <span class="nx">useInput</span><span class="p">(</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">contents</span> <span class="o">||</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">postDebate</span> <span class="o">=</span> <span class="nx">usePatchDebate</span><span class="p">(</span><span class="nx">setIsErrorModalOn</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">debate</span>: <span class="kt">DebatePatch</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span>: <span class="kt">titleInput.value</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">author_pros</span>: <span class="kt">prosConsRadio.value</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">category</span>: <span class="kt">categorySelect.value</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">contents</span>: <span class="kt">contentsInput.value</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">id</span>: <span class="kt">data?.id</span> <span class="o">||</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">edit</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// Edit 고유 로직
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">data</span><span class="p">.</span><span class="nx">title</span> <span class="o">===</span> <span class="nx">debate</span><span class="p">.</span><span class="nx">title</span> <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">data</span><span class="p">.</span><span class="nx">author_pros</span> <span class="o">===</span> <span class="nx">debate</span><span class="p">.</span><span class="nx">author_pros</span> <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">data</span><span class="p">.</span><span class="nx">category</span> <span class="o">===</span> <span class="nx">debate</span><span class="p">.</span><span class="nx">category</span> <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">data</span><span class="p">.</span><span class="nx">contents</span> <span class="o">===</span> <span class="nx">debate</span><span class="p">.</span><span class="nx">contents</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setIsSameModal</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 공통 함수
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">createOrEdit</span><span class="p">(</span><span class="nx">titleRef</span><span class="p">,</span> <span class="nx">setValidateNotice</span><span class="p">,</span> <span class="nx">titleInput</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">postDebate</span><span class="p">.</span><span class="nx">mutate</span><span class="p">(</span><span class="nx">debate</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 공통 HTML
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span> <span class="p">&lt;&gt;</span><span class="mi">404</span><span class="p">&lt;/&gt;;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="nx">isSameModal</span> <span class="o">?</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">ConfirmModal</span>
+</span></span><span class="line"><span class="cl">          <span class="na">title</span><span class="o">=</span><span class="s">&#34;작성 실패&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="na">content</span><span class="o">=</span><span class="s">&#34;변경 내용이 없습니다.&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="na">firstBtn</span><span class="o">=</span><span class="s">&#34;확인&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="na">firstFunc</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">setIsSameModal</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">CreateOrEdit</span>
+</span></span><span class="line"><span class="cl">        <span class="na">isErrorModalOn</span><span class="o">=</span><span class="p">{</span><span class="nx">isErrorModalOn</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">setIsErrorModalOn</span><span class="o">=</span><span class="p">{</span><span class="nx">setIsErrorModalOn</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">isCancelModalOn</span><span class="o">=</span><span class="p">{</span><span class="nx">isCancelModalOn</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">setIsCancelModalOn</span><span class="o">=</span><span class="p">{</span><span class="nx">setIsCancelModalOn</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">titleRef</span><span class="o">=</span><span class="p">{</span><span class="nx">titleRef</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">validateNotice</span><span class="o">=</span><span class="p">{</span><span class="nx">validateNotice</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">setValidateNotice</span><span class="o">=</span><span class="p">{</span><span class="nx">setValidateNotice</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">titleInput</span><span class="o">=</span><span class="p">{</span><span class="nx">titleInput</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">categorySelect</span><span class="o">=</span><span class="p">{</span><span class="nx">categorySelect</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">prosConsRadio</span><span class="o">=</span><span class="p">{</span><span class="nx">prosConsRadio</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">contentsInput</span><span class="o">=</span><span class="p">{</span><span class="nx">contentsInput</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">createOrEdit</span><span class="o">=</span><span class="p">{</span><span class="nx">edit</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="na">routerPush</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="sb">`/debates/</span><span class="si">${</span><span class="nx">debateId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2><h3 id="작동-순서-문제" class="relative group">작동 순서 문제 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%9e%91%eb%8f%99-%ec%88%9c%ec%84%9c-%eb%ac%b8%ec%a0%9c" aria-label="Anchor">#</a></span></h3><p><code>createOrEdit</code> 함수 내에서 좌우 여백을 <code>trim</code>하고 <code>debate</code>를 변경한 다음 post 하는 로직을 만들었으나, <code>postDebate.mutate(debate)</code>를 콜백함수로 넘기는 시점에서 <code>trim</code> 되지 않은 <code>debate</code>가 넘어가서 원하는데로 작동하지 않았다. 그래서 우선은 <code>createOrEdit</code> 내에서 유효성 검사를 통해 걸러주는 방식을 선택했다.</p>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300">setTimeout으로 해결 <em>*<a href="/posts/projects/debate-ducks/14/#%ec%a0%95%eb%a0%ac-%ec%8b%9c-%ec%9e%ac%ec%9a%94%ec%b2%ad">참조</a></em></span>
+</div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">createOrEdit</span><span class="p">(</span><span class="nx">titleRef</span><span class="p">,</span> <span class="nx">setValidateNotice</span><span class="p">,</span> <span class="nx">titleInput</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">postDebate</span><span class="p">.</span><span class="nx">mutate</span><span class="p">(</span><span class="nx">debate</span><span class="p">);</span> <span class="c1">// 내부에서 debate를 변경해도 이 시점에서 변경되기 이전의 debate가 넘어감
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
+</span></span></code></pre></div><h2 id="etc" class="relative group">Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc" aria-label="Anchor">#</a></span></h2><h3 id="typescript-및-react-query" class="relative group">TypeScript 및 React Query <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#typescript-%eb%b0%8f-react-query" aria-label="Anchor">#</a></span></h3><p>타입 스크립트가 가끔 귀찮은 상황을 만들기도 하지만 그만큼 안정적이라 기본 CRUD 작업에 들어간 다음에는 에러를 거의 못 보고 있다. 특히 타입이 명확히 정해져 있다 보니 오타로 인한 에러 방지에 탁월했다.</p>
+<p>또한 서버와 연동되는 작업을 시작하니 유용성을 더욱 느낄 수 있었다. 이전에는 API나 데이터베이스에 수정 사항 혹은 요청 사항이 있을 때 일일이 확인해도 가끔씩 문제가 발생했다. 하지만 타입 스크립트는 컴파일 과정에서 바로바로 에러를 뱉어주다 보니 문제가 생기기 전에 미연에 방지할 수 있었다.</p>
+<p>리액트 쿼리의 경우 직접 사용해 보기 이전에는 전역 상태 관리에 큰 장점이 있다고 생각했었다. 하지만 직접 사용해 보고 나니
+특정 컴포넌트 내부에서만 사용 하더라도 충분히 사용할 가치가 있었다. 서버에서 받는 데이터를 관리할 때 필요한 여러 부가적인 상태들과 함수들을 따로 작성할 필요가 없이 쉽게 사용할 수 있기 때문이다.</p>
+<p>무엇보다 클라이언트에서 관리되야 하는 상태와의 구분히 명확해져서 코드가 이전보다 훨씬 직관적이다. 또한 여러 옵션들을 통해 다양한 기능들을 별도의 코드작성 없이 쉽게 사용할 수 있는 장점도 매우 크다.</p>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/studies/react/react-query/1/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >[React-query] React Query와 상태관리 (feat. 2월 우아한테크세미나)</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-07-18 00:00:00 &#43;0000 UTC">18 July 2022</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/projects/debate-ducks/14/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >[Debate-Ducks] 기본 기능 마무리</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-07-23 00:00:00 &#43;0000 UTC">23 July 2022</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+        
+          
+        
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2021 Yuchan&rsquo;s hello world!
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://yuchanjeong.github.io/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

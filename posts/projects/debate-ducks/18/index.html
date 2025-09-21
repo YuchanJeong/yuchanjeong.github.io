@@ -1,0 +1,820 @@
+
+
+
+
+  
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>[Debate-Ducks] 토론 생성, 수정 및 조회 페이지 &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[Debate-Ducks] 토론 생성, 수정 및 조회 페이지 &middot; Yuchan&#39;s hello world!" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.b0785c8131a75f72b211435af86269eb2d4b81dda03a8f2cf5ccb1c967747167.css"
+    integrity="sha256-sHhcgTGnX3KyEUNa&#43;GJp6y1Lgd2gOo8s9cyxyWd0cWc="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f29ffdffd9ab4cc95250c3c7196b2d5dae8ee6ef0a4139451073f90183ae7e31.js"
+      integrity="sha256-8p/9/9mrTMlSUMPHGWstXa6O5u8KQTlFEHP5AYOufjE="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        토론 생성 및 수정 페이지 # 원래는 유효성 검사 실패 여부를 작성 버튼을 누른 후에 뜨게 했었다.
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/projects/debate-ducks/18/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="[Debate-Ducks] 토론 생성, 수정 및 조회 페이지" />
+<meta property="og:description" content="토론 생성 및 수정 페이지 # 원래는 유효성 검사 실패 여부를 작성 버튼을 누른 후에 뜨게 했었다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks/18/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-08-01T00:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="[Debate-Ducks] 토론 생성, 수정 및 조회 페이지"/>
+<meta name="twitter:description" content="토론 생성 및 수정 페이지 # 원래는 유효성 검사 실패 여부를 작성 버튼을 누른 후에 뜨게 했었다."/>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "[Debate-Ducks] 토론 생성, 수정 및 조회 페이지",
+    "headline": "[Debate-Ducks] 토론 생성, 수정 및 조회 페이지",
+    
+    "abstract": "토론 생성 및 수정 페이지 # 원래는 유효성 검사 실패 여부를 작성 버튼을 누른 후에 뜨게 했었다.",
+    "inLanguage": "en",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks\/18\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-08-01T00:00:00\u002b00:00",
+    "datePublished": "2022-08-01T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-08-01T00:00:00\u002b00:00",
+    
+    "keywords": ["\\Debate-Ducks","(Devlog)"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "972"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/",
+       "name": "Yuchan's Hello World!",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/categories/projects/",
+       "name": "\u003cProjects\u003e",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "[ Debate Ducks] 토론 생성, 수정 및 조회 페이지",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Yuchan&rsquo;s hello world!</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Posts</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title="Categories"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title="Tags"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        [Debate-Ducks] 토론 생성, 수정 및 조회 페이지
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-08-01 00:00:00 &#43;0000 UTC">1 August 2022</time>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="/categories/projects/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >&lt;Projects&gt;</a
+            >
+          
+        
+      
+        
+          
+            <a
+              href="/tags/%5Cdebate-ducks/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >\Debate-Ducks</a
+            >
+          
+            <a
+              href="/tags/devlog/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >(Devlog)</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#토론-생성-및-수정-페이지">토론 생성 및 수정 페이지</a></li>
+    <li><a href="#토론-게시물---기본-내용-및-팩트-체크">토론 게시물 - 기본 내용 및 팩트 체크</a></li>
+    <li><a href="#토론-게시물---투표">토론 게시물 - 투표</a>
+      <ul>
+        <li><a href="#막대-그래프">막대 그래프</a></li>
+        <li><a href="#커서-디테일">커서 디테일</a></li>
+      </ul>
+    </li>
+    <li><a href="#토론-게시물---댓글">토론 게시물 - 댓글</a></li>
+    <li><a href="#토론-카드-수정">토론 카드 수정</a></li>
+    <li><a href="#숫자-자릿수-표시">숫자 자릿수 표시</a></li>
+    <li><a href="#usequery의-enabled">useQuery의 enabled</a></li>
+    <li><a href="#배포-준비">배포 준비</a>
+      <ul>
+        <li><a href="#타입-에러">타입 에러</a></li>
+        <li><a href="#image-optimization-error">Image Optimization Error</a></li>
+        <li><a href="#ssr-기능-제거">SSR 기능 제거</a></li>
+        <li><a href="#src의-요청-문제">src의 요청 문제</a></li>
+      </ul>
+    </li>
+    <li><a href="#css-작업에-대해-느낀-점">CSS 작업에 대해 느낀 점</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="토론-생성-및-수정-페이지" class="relative group">토론 생성 및 수정 페이지 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%86%a0%eb%a1%a0-%ec%83%9d%ec%84%b1-%eb%b0%8f-%ec%88%98%ec%a0%95-%ed%8e%98%ec%9d%b4%ec%a7%80" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+
+  
+  
+<figure><img src="https://user-images.githubusercontent.com/84524514/182023581-78104b68-a8ac-489e-a4e9-a654c597b9bd.gif" alt="createOrEdit-style" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>원래는 유효성 검사 실패 여부를 작성 버튼을 누른 후에 뜨게 했었다. 하지만 사용자의 입장에서 이미 작성을 다 한 다음 틀렸다고 안내받고 다시 작성하는 것보다 틀리는 시점에 안내받는 것이 더 좋을 것이라고 판단했다. 그래서 유효성 검사를 실패할 때마다 유효성 검사 실패 안내가 뜨게 만들었다.</p>
+<p>그러자 한글을 입력할 때 계속 유효성 검상 실패 안내가 뜨는 문제가 생겼다. 유효성 검사에서 낱자를 거르기 때문이다. 그래서 낱자 조건은 유효성 검사 실패 안내 조건에서는 빼고 실제 조건에는 넣어서 따로 메시지로 안내하게 만들었다.</p>
+<img width="800" alt="낱자 안내" src="https://user-images.githubusercontent.com/84524514/183131066-e5796a09-4d51-4b83-88b0-2201b482b999.png">
+<p>Ps. 가운데 정렬</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="na">position</span><span class="o">:</span> <span class="ni">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">top</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">left</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">transform</span><span class="o">:</span> <span class="nf">translateX</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="kt">%</span><span class="p">)</span> <span class="nf">translateY</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="kt">%</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="토론-게시물---기본-내용-및-팩트-체크" class="relative group">토론 게시물 - 기본 내용 및 팩트 체크 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%86%a0%eb%a1%a0-%ea%b2%8c%ec%8b%9c%eb%ac%bc---%ea%b8%b0%eb%b3%b8-%eb%82%b4%ec%9a%a9-%eb%b0%8f-%ed%8c%a9%ed%8a%b8-%ec%b2%b4%ed%81%ac" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+
+  
+  
+<figure><img src="https://user-images.githubusercontent.com/84524514/182337912-b5ab84b8-89ee-4e96-8825-5202dac4c97d.gif" alt="debate_until_factcheck-style" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>토론자 정보 부분은 토론 목록의 토론자 정보 부분을 공용 컴포넌트로 변경해서 사용했다. 이 때 토론 게시물 내부에서 크기를 줄였을 때 배치가 이상해지는 문제가 발생했다.</p>
+<p>문제의 원인은 반응형을 적용할 때 %를 활용했는데 박스의 크기가 너무 작아지게 돼서 생기는 문제였다. 그래서 min-width로 배치가 무너지는 것을 막았다. <em>*<a href="/posts/projects/debate-ducks/15/#ps-%ec%b5%9c%ec%86%8c-%eb%84%93%ec%9d%b4-%ec%84%a4%ec%a0%95">참조</a>와 같은 원리</em></p>
+<img width="350" alt="프로필 문제해결 전" src="https://user-images.githubusercontent.com/84524514/183142149-101c28c6-778b-484e-897d-7bebc2affe3c.png">
+<img width="350" alt="프로필 문제해결 후" src="https://user-images.githubusercontent.com/84524514/183142012-2f7f64b6-06ea-4efd-9f64-538c86b586a4.png">
+<h2 id="토론-게시물---투표" class="relative group">토론 게시물 - 투표 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%86%a0%eb%a1%a0-%ea%b2%8c%ec%8b%9c%eb%ac%bc---%ed%88%ac%ed%91%9c" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+
+  
+  
+<figure><img src="https://user-images.githubusercontent.com/84524514/182338091-e9f4a23e-5970-4a1f-ab38-a8971123a1ca.gif" alt="vote_style" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<h3 id="막대-그래프" class="relative group">막대 그래프 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%a7%89%eb%8c%80-%ea%b7%b8%eb%9e%98%ed%94%84" aria-label="Anchor">#</a></span></h3><p>투표 결과에 따라 그래프가 변하는 기능은 SCSS로 처리하고 싶었지만 당장 방법을 떠올리지 못해 일단 인라인 스타일로 처리했다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">calcPercent</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cnt</span>: <span class="kt">number</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nx">cnt</span> <span class="o">/</span>
+</span></span><span class="line"><span class="cl">        <span class="p">((</span><span class="nx">debate</span><span class="p">.</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">vote</span><span class="p">.</span><span class="nx">prosCnt</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="nx">debate</span><span class="p">.</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">vote</span><span class="p">.</span><span class="nx">consCnt</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)))</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl">      <span class="mi">100</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span>
+</span></span><span class="line"><span class="cl">  <span class="na">className</span><span class="o">=</span><span class="p">{</span><span class="sb">`</span><span class="si">${</span><span class="nx">styles</span><span class="p">.</span><span class="nx">chart</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">styles</span><span class="p">.</span><span class="nx">chart_pros</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">calcPercent</span><span class="p">(</span><span class="nx">debate</span><span class="p">.</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">vote</span><span class="p">.</span><span class="nx">prosCnt</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">===</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl">    <span class="o">?</span> <span class="nx">styles</span><span class="p">.</span><span class="nx">chart_100</span>
+</span></span><span class="line"><span class="cl">    <span class="o">:</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="si">}</span><span class="sb">`</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="na">style</span><span class="o">=</span><span class="p">{{</span> <span class="nx">width</span><span class="o">:</span> <span class="sb">`</span><span class="si">${</span><span class="nx">calcPercent</span><span class="p">(</span><span class="nx">debate</span><span class="p">.</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">vote</span><span class="p">.</span><span class="nx">prosCnt</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="sb">%`</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><h3 id="커서-디테일" class="relative group">커서 디테일 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%bb%a4%ec%84%9c-%eb%94%94%ed%85%8c%ec%9d%bc" aria-label="Anchor">#</a></span></h3><p>사용자가 눌렀을 때 이벤트가 발생하는 모든 요소에 <code>pointer: cursor</code> 스타일을 줬다. 이미 투표한 버튼의 경우는 추가 이벤트가 발생하지 않으므로 <code>pointer: default</code> 스타일을 줬다.</p>
+<p>별건 아니지만 포인터 커서는 눌러서 이벤트를 발생시킬 수 있다는 일관성을 지키기 위한 작은 노력이다. 이런 디테일에서 완성도가 결정되고 감동을 줄 수 있다고 나는 믿는다.</p>
+<h2 id="토론-게시물---댓글" class="relative group">토론 게시물 - 댓글 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%86%a0%eb%a1%a0-%ea%b2%8c%ec%8b%9c%eb%ac%bc---%eb%8c%93%ea%b8%80" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+
+  
+  
+<figure><img src="https://user-images.githubusercontent.com/84524514/182769476-893d839d-a187-4834-bb8d-f079ceafe0f6.gif" alt="comment-style" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p><code>useQueryInfinite</code>를 사용할 때는 각 요소의 바깥에서 한 번 더 묶어서 <code>width</code>를 줘야 한다. 왜냐하면 각 <code>page</code>안에 배열로 정보들이 들어있는 형태라서 그렇다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.comment_box</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nc">.comment</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nc">...</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>
+<p><code>.comment_box</code>에 <code>width</code>를 주지 않았을 때, 각 댓글 요소가 밖으로 삐져 나감. (빨간색 테두리)</p>
+<img width="1100" alt="문제 해결 전" src="https://user-images.githubusercontent.com/84524514/183151157-fcaacea5-bd3d-403a-8a60-0a8b88476fc6.png">
+</li>
+<li>
+<p><code>.comment_box</code>에 <code>width</code>를 줬을 때, 각 댓글 요소가 잘 위치함. (빨간색 테두리)</p>
+<img width="1100" alt="문제 해결 후" src="https://user-images.githubusercontent.com/84524514/183151173-964a1a9f-1b4e-4fcc-9eac-4e4e9f2619c0.png">
+</li>
+</ul>
+<h2 id="토론-카드-수정" class="relative group">토론 카드 수정 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%86%a0%eb%a1%a0-%ec%b9%b4%eb%93%9c-%ec%88%98%ec%a0%95" aria-label="Anchor">#</a></span></h2><p>이전 프로젝트에서 받았던 피드백을 바탕으로 토론 상태를 한글로 더 직관적이게 바꿨다. 추가로 상태도 표시해 줬었는데 직관적이긴 했지만 조금 촌스러워 보였다. 그리고 참가 가능한 토론은 이미 &ldquo;비어있음&quot;으로 충분히 알 수 있었고, 투표가 가능한 토론인지 아닌지만 사용자에게 알려주면 됐기 때문에 &ldquo;투표 가능&quot;만 따로 표시해 줬다.</p>
+<p>추가로 원래는 토론의 분류를 카드 이미지로만 구분해 줬었다. 만드는 입장에서 이미 각 이미지에 익숙해서 분류를 바로 알 수 있었기 때문에 사용자의 입장에서 이미지로 분류를 명확히 구분할 수 없을 것이라는 판단을 하지 못했었다. 이를 깨닫고 사용자의 입장에서 직관적으로 알 수 있게 분류도 따로 표시해 줬다.</p>
+<ul>
+<li>
+<p>기존 토론 상태
+<img width="400" alt="이전 분류" src="https://user-images.githubusercontent.com/84524514/183135484-27ae9c25-a427-4b08-80a7-bda7015c6e6e.png"></p>
+</li>
+<li>
+<p>현재 토론 상태
+<img width="400" alt="바뀐 분류" src="https://user-images.githubusercontent.com/84524514/183134785-273c7a40-4a35-4dd1-b75d-bc52a2bfe59b.png"></p>
+</li>
+<li>
+<p>기존 토론 카드
+<img width="800" alt="기존 토론 카드" src="https://user-images.githubusercontent.com/84524514/184272548-8531d352-fc9a-45da-b0f9-6a4ea4da6794.png"></p>
+</li>
+<li>
+<p>중간 수정 토론 카드
+<img width="1100" alt="중간 수정 토론 카드" src="https://user-images.githubusercontent.com/84524514/183134864-098fbcee-0276-4e41-8b3a-f221bdd1e3c1.png"></p>
+</li>
+<li>
+<p>최종 수정 토론 카드
+<img width="1100" alt="최종 수정 토론 카드" src="https://user-images.githubusercontent.com/84524514/183134879-29d97eba-195b-4b7c-b564-0a99bfb944a6.png"></p>
+</li>
+</ul>
+<h2 id="숫자-자릿수-표시" class="relative group">숫자 자릿수 표시 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%88%ab%ec%9e%90-%ec%9e%90%eb%a6%bf%ec%88%98-%ed%91%9c%ec%8b%9c" aria-label="Anchor">#</a></span></h2><p>천명이 넘는 사람이 좋아요를 누를 일은 당장 없지만 언젠가 많은 사람이 사용할 날을 생각하며 콤마(,)로 자릿수를 구분해 줬다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">thousandDigit</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span>: <span class="kt">number</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">str</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="k">return</span> <span class="nx">str</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">str</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">reverse</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">idx</span> <span class="o">!==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">idx</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">el</span> <span class="o">+</span> <span class="s2">&#34;,&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">el</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">reverse</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><h2 id="usequery의-enabled" class="relative group">useQuery의 enabled <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#usequery%ec%9d%98-enabled" aria-label="Anchor">#</a></span></h2><p>좋아요를 누른 토론일 경우 따로 표시를 해준다. 해당 정보를 토론 정보에 담을 수 있으면 좋겠지만 백 앤드에서 해당 정보를 담아서 주는 게 당장은 어렵다고 해서 따로 좋아요 여부를 받는 API를 팠다.</p>
+<p>하지만 이때 문제가 발생했다. 유저 아이디를 해당 API에 쿼리 파라미터로 보내줘야 했는데, 받아온 유저정보를 해당 API로 보내는 훅 내부에서 읽지 못하는 것이었다.</p>
+<p>이 문제는 순간 이전에 리액트 쿼리를 공부할 때 봤던 내용이 떠오르면서 쉽게 해결할 수 있었다. 연속되는 호출 시 enabled를 사용하면 된다는 것이었다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">useGetUser</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">debate</span> <span class="o">=</span> <span class="nx">useGetDebate</span><span class="p">(</span><span class="nx">debateId</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">heart</span> <span class="o">=</span> <span class="nx">useGetHeart</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">target_debate_id</span>: <span class="kt">debateId</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">target_user_id</span>: <span class="kt">user.data?.id</span> <span class="o">||</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">enabled</span><span class="o">:</span> <span class="o">!!</span><span class="nx">user</span><span class="p">.</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div><p>이전에 유저 정보 요청과 토큰 문제, 토론 게시물 요청 시 undefined 문제 등을 다른 방식으로 회피했는데 올바른 해결법을 알았으니 다시 수정해 줬다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">useGetUser</span> <span class="o">=</span> <span class="p">(</span><span class="nx">options?</span>: <span class="kt">UseQueryOptions</span><span class="p">&lt;</span><span class="nt">User</span><span class="err">,</span> <span class="na">AxiosError</span><span class="p">&gt;)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">    <span class="k">typeof</span> <span class="nb">window</span> <span class="o">!==</span> <span class="s2">&#34;undefined&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">?</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;debate-ducks-token&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="o">:</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">useQuery</span><span class="p">&lt;</span><span class="nt">User</span><span class="err">,</span> <span class="na">AxiosError</span><span class="p">&gt;(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">queryStr</span><span class="p">.</span><span class="nx">users</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">getUser</span><span class="p">(</span><span class="nx">token</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">enabled</span><span class="o">:</span> <span class="o">!!</span><span class="nx">token</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">...</span><span class="nx">options</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">query</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">debate</span> <span class="o">=</span> <span class="nx">useGetDebate</span><span class="p">(</span><span class="nx">debateId</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">enabled</span><span class="o">:</span> <span class="o">!!</span><span class="nx">debateId</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p>Ps. 이미 배웠던 내용이지만 다른 방식으로 문제를 해결해서 enabled를 떠올리지 못했었다. 이번에 떠올린 이유는 다른 방법으로 해결하지 못했기 때문이다. 앞으로는 해결한 문제도 이게 최선의 해결책인지 더 깊이 고민할 것이다.</p>
+<h2 id="배포-준비" class="relative group">배포 준비 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%b0%b0%ed%8f%ac-%ec%a4%80%eb%b9%84" aria-label="Anchor">#</a></span></h2><h3 id="타입-에러" class="relative group">타입 에러 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ed%83%80%ec%9e%85-%ec%97%90%eb%9f%ac" aria-label="Anchor">#</a></span></h3><p>빌드 시 컴파일 시에는 감지하지 못했던 타입 에러가 발생했다.</p>
+<img width="528" alt="스크린샷 2022-08-04 오후 2 25 12" src="https://user-images.githubusercontent.com/84524514/182769418-9216ec25-5617-46ab-af2f-c60fe83690a1.png">
+<p>해당 부분에 타입을 명시하는 것으로 쉽게 해결했다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">onError</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">err</span>: <span class="kt">AxiosError</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">message</span>: <span class="kt">string</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">_</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">rollback</span><span class="o">:</span> <span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">Debate</span><span class="p">)</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">rollback</span><span class="p">)</span> <span class="nx">rollback</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">toast</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="sb">`</span><span class="si">${</span><span class="nx">err</span><span class="p">.</span><span class="nx">response</span><span class="o">?</span><span class="p">.</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">message</span> <span class="o">||</span> <span class="s2">&#34;네트워크 에러가 발생했습니다.&#34;</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span></code></pre></div><h3 id="image-optimization-error" class="relative group">Image Optimization Error <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#image-optimization-error" aria-label="Anchor">#</a></span></h3><p>기본 이미지 로더와 <code>next export</code>의 호환성 에러가 발생했다.</p>
+<img width="800" alt="이미지 로더" src="https://user-images.githubusercontent.com/84524514/183156191-ace7a9cd-298f-4871-a566-3acfc65499b2.png">
+<p>next-optimized-images 설치 후 <code>next.config</code>에서 로더를 &ldquo;akamai&quot;로 설정해서 해결했다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/** @type {import(&#39;next&#39;).NextConfig} */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">nextConfig</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">reactStrictMode</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">images</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">loader</span><span class="o">:</span> <span class="s2">&#34;akamai&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">nextConfig</span><span class="p">;</span>
+</span></span></code></pre></div><p><em>*<a href="https://nextjs.org/docs/api-reference/next/image#built-in-loaders" target="_blank" rel="noreferrer">참조</a></em></p>
+<h3 id="ssr-기능-제거" class="relative group">SSR 기능 제거 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ssr-%ea%b8%b0%eb%8a%a5-%ec%a0%9c%ea%b1%b0" aria-label="Anchor">#</a></span></h3><p>배포를 담당하는 팀원이 서버는 EC2에 클라이언트는 S3에 올리려고 하는데, SSR 때문에 S3에 올릴 수 없다고 연락이 왔다. 사실 서버가 따로 있는 시점에서 SSR만을 위해서 EC2에 클라이언트를 올리는 것은 현재로서는 비효율 적이라고 판단해 SSR 기능을 제거했다.</p>
+<h3 id="src의-요청-문제" class="relative group">src의 요청 문제 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#src%ec%9d%98-%ec%9a%94%ec%b2%ad-%eb%ac%b8%ec%a0%9c" aria-label="Anchor">#</a></span></h3><p>배포 후 이미지 태그나 비디오 태그가 우리가 지정하지 않은 경로로 Get 요청을 보내는 문제가 발생했다. 해당 문제는 환경 변수파일이 배포때 제데로 설정되지 않아서 발생 했었다. 즉 정확한 경로가 들어가지 않을 경우 src가 스스로 요청을 보내서 소스를 찾으려고 하는 것 이었다. 하지만 아직까지 추측일 뿐이고 정확한 래퍼런스를 찾지 못했다.</p>
+<h2 id="css-작업에-대해-느낀-점" class="relative group">CSS 작업에 대해 느낀 점 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#css-%ec%9e%91%ec%97%85%ec%97%90-%eb%8c%80%ed%95%b4-%eb%8a%90%eb%82%80-%ec%a0%90" aria-label="Anchor">#</a></span></h2><p>반응형 디자인 직접 해보면서 점점 익히고 있는 중이다. 특히 &ldquo;특정 부분에서 폰트 크기를 정해주고 그 후손들의 폰트 크기를 %로 적은 다음 미디어 쿼리를 적용할 때 기준이 되는 폰트 크기만 바꿔주면 후손들은 신경 쓸 필요 없이 쉽게 비율에 맞게 줄일 수 있다&quot;는 발상이 많은 도움이 되고 있다.</p>
+<p>이번에는 디자인 요소를 명확하게 정하지 않고 작업에 들어가서 고생을 좀 하고 있다. 다음에는 HTML 요소들도 미리 구상하고 특히 클래스 명의 컨벤션을 잘 찾아보고 정해야겠다. 지금 나름대로 최선을 다해서 클래스명을 정하고 있으나 나 말고 다른 팀원이 알아보기 힘들어한다.</p>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/projects/debate-ducks/17/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >[Debate-Ducks] 토론 목록 조회 페이지</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-07-30 00:00:00 &#43;0000 UTC">30 July 2022</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/diaries/1/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >첫 이력서 작성 후기</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-08-04 00:00:00 &#43;0000 UTC">4 August 2022</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+        
+          
+        
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2021 Yuchan&rsquo;s hello world!
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://yuchanjeong.github.io/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

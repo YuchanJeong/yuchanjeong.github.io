@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>&lt;Studies&gt; on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/categories/studies/</link>
+    <description>Recent content in &lt;Studies&gt; on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Mon, 29 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/categories/studies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[DynamoDB] 기본 개념</title>
+      <link>https://yuchanjeong.github.io/posts/studies/db/dynamodb/2/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/db/dynamodb/2/</guid>
+      <description>공식 문서와 블로그 정리글들의 내용을 바탕으로 기본적인 내용만 정리.</description>
+    </item>
+    <item>
+      <title>[DynamoDB] 시작하기</title>
+      <link>https://yuchanjeong.github.io/posts/studies/db/dynamodb/1/</link>
+      <pubDate>Sun, 28 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/db/dynamodb/1/</guid>
+      <description>What is Amazon DynamoDB?</description>
+    </item>
+    <item>
+      <title>[Styled-components] 시작하기</title>
+      <link>https://yuchanjeong.github.io/posts/studies/css/styled-components/1/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/css/styled-components/1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>[React Native] 공식 문서로 공부하자!</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/react-native/od-1/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/react-native/od-1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>[React-query] React Query와 상태관리 (feat. 2월 우아한테크세미나)</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/react-query/1/</link>
+      <pubDate>Mon, 18 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/react-query/1/</guid>
+      <description>정리 필요 상태관리 #상태란?</description>
+    </item>
+    <item>
+      <title>[Redux] Redux-toolkit in Next.js and TypeScript</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/redux/redux-toolkit-next.js-ts/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/redux/redux-toolkit-next.js-ts/</guid>
+      <description>npm i @reduxjs/toolkit react-redux next-redux-wrapper npm i -D @types/react-redux redux/store.</description>
+    </item>
+    <item>
+      <title>[Socket.io] Nest.js에서 Socket.io 연결 기초</title>
+      <link>https://yuchanjeong.github.io/posts/studies/socket.io/socket.io-nest.js/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/socket.io/socket.io-nest.js/</guid>
+      <description>설치 #npm i @nestjs/websockets @nestjs/platform-socket.</description>
+    </item>
+    <item>
+      <title>[React] React v18.0</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/react/v18.0/</link>
+      <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/react/v18.0/</guid>
+      <description>React v18.</description>
+    </item>
+    <item>
+      <title>[Next.js] Learn Course (4) - CREATE YOUR FIRST APP 2</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-4/</link>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-4/</guid>
+      <description>CREATE YOUR FIRST APP #4.</description>
+    </item>
+    <item>
+      <title>[Next.js] Learn Course (3) - CREATE YOUR FIRST APP 1</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-3/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-3/</guid>
+      <description>CREATE YOUR FIRST APP #1.</description>
+    </item>
+    <item>
+      <title>[Next.js] Learn Course (2) - How Next.js Works</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-2/</link>
+      <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-2/</guid>
+      <description>How Next.</description>
+    </item>
+    <item>
+      <title>[Next.js] Learn Course (1) - About Next.js</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-1/</link>
+      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/next.js/lc-1/</guid>
+      <description>About Next.</description>
+    </item>
+  </channel>
+</rss>

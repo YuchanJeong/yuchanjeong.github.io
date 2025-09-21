@@ -1,0 +1,782 @@
+
+
+
+
+  
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>TypeScript &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="TypeScript &middot; Yuchan&#39;s hello world!" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.b0785c8131a75f72b211435af86269eb2d4b81dda03a8f2cf5ccb1c967747167.css"
+    integrity="sha256-sHhcgTGnX3KyEUNa&#43;GJp6y1Lgd2gOo8s9cyxyWd0cWc="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f29ffdffd9ab4cc95250c3c7196b2d5dae8ee6ef0a4139451073f90183ae7e31.js"
+      integrity="sha256-8p/9/9mrTMlSUMPHGWstXa6O5u8KQTlFEHP5AYOufjE="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        Ref. TypeScript Cheat sheets
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="https://yuchanjeong.github.io/what-i-learned/javascript/typescript/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="TypeScript" />
+<meta property="og:description" content="Ref. TypeScript Cheat sheets" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuchanjeong.github.io/what-i-learned/javascript/typescript/" /><meta property="article:section" content="What I learned" />
+
+
+
+
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="TypeScript"/>
+<meta name="twitter:description" content="Ref. TypeScript Cheat sheets"/>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "What I Learneds",
+    "name": "TypeScript",
+    "headline": "TypeScript",
+    
+    "abstract": "Ref. TypeScript Cheat sheets",
+    "inLanguage": "en",
+    "url" : "https:\/\/yuchanjeong.github.io\/what-i-learned\/javascript\/typescript\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    "keywords": ["(Summary)","TypeScript"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "581"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/",
+       "name": "Yuchan's Hello World!",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/what-i-learned/",
+       "name": "What I Learneds",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/categories/what-i-learned/",
+       "name": "\u003cWhat I learned\u003e",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Type Script",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Yuchan&rsquo;s hello world!</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Posts</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title="Categories"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title="Tags"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        TypeScript
+      </h1>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ts-init">TS Init</a>
+      <ul>
+        <li><a href="#1-설치-및-사용">1. 설치 및 사용</a></li>
+        <li><a href="#2-tsconfigjsonhttpswwwtypescriptlangorgdocshandbooktsconfig-jsonhtml">2. tsconfig.json<a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">^</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#ts-data-type">TS Data Type</a>
+      <ul>
+        <li><a href="#1-primitive-type">1. Primitive Type</a></li>
+        <li><a href="#2-non-primitive-type">2. Non-Primitive Type</a></li>
+        <li><a href="#3-union-type">3. Union Type</a></li>
+        <li><a href="#4-interaction-type">4. Interaction Type</a></li>
+      </ul>
+    </li>
+    <li><a href="#ts-custom-type">TS Custom Type</a>
+      <ul>
+        <li><a href="#1-type-alias">1. Type alias</a></li>
+        <li><a href="#2-interface">2. Interface</a></li>
+        <li><a href="#3-class">3. Class</a></li>
+        <li><a href="#4-generichttpswwwtypescriptlangorgkodocshandbookutility-typeshtml-storagewiljavascriptex-typescriptgeneric">4. Generic<a href="https://www.typescriptlang.org/ko/docs/handbook/utility-types.html">^</a> <a href="/storage/wil/javascript/ex-typescript/#generic">⋯</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#ts-etc">TS Etc</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <p>Ref. <a href="https://www.typescriptlang.org/cheatsheets" target="_blank" rel="noreferrer">TypeScript Cheat sheets</a></p>
+<h2 id="ts-init" class="relative group">TS Init <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ts-init" aria-label="Anchor">#</a></span></h2><h3 id="1-설치-및-사용" class="relative group">1. 설치 및 사용 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%ec%84%a4%ec%b9%98-%eb%b0%8f-%ec%82%ac%ec%9a%a9" aria-label="Anchor">#</a></span></h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>npm i -D typescript</td>
+<td>typescript 설치</td>
+</tr>
+<tr>
+<td>npx tsc &ndash;init <a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html" target="_blank" rel="noreferrer">^</a></td>
+<td>tsconfig.json 생성</td>
+</tr>
+<tr>
+<td>npx tsc ([파일명])</td>
+<td>(해당 파일) 컴파일</td>
+</tr>
+<tr>
+<td>npx tsc -w</td>
+<td>자동 컴파일 모드</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-tsconfigjsonhttpswwwtypescriptlangorgdocshandbooktsconfig-jsonhtml" class="relative group">2. tsconfig.json<a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html" target="_blank" rel="noreferrer">^</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-tsconfigjsonhttpswwwtypescriptlangorgdocshandbooktsconfig-jsonhtml" aria-label="Anchor">#</a></span></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;compileOnSave&rdquo;</td>
+<td>저장 후 자동 컴파일</td>
+</tr>
+<tr>
+<td>&ldquo;extends&rdquo;</td>
+<td>컴파일러 옵션 상속 경로</td>
+</tr>
+<tr>
+<td>&ldquo;files&rdquo;</td>
+<td>컴파일 할 것들 배열 (&gt;exclude)</td>
+</tr>
+<tr>
+<td>&ldquo;include&rdquo;</td>
+<td>컴파일 할 것들 배열<br/>*확장자를 선언하지 않으면, .ts, .tsx, .d.ts만 포함</td>
+</tr>
+<tr>
+<td>&ldquo;exclude&rdquo;</td>
+<td>include에 포함된 것들 중 제외할 것들 배열<br/>*<em>설정하지 않으면, 4개 경로 자동 제외(<br/>node_modules, bower_components,<br/>jspm_packages, outDir)</em></td>
+</tr>
+</tbody>
+</table>
+<p>*<em>&ldquo;&ldquo;를 입력하면 최상위 프로퍼티 목록 확인 가능</em><br/>*<em>files, include, exclude를 셋다 설정하지 않으면 모든 관련 파일 컴파일</em><br/></p>
+<table>
+<thead>
+<tr>
+<th>&ldquo;compileOptions&rdquo;</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;target&rdquo;</td>
+<td>빌드 결과물의 버전을 지정<br/>*<em>화살표 함수, 클래스는 es6 이상</em></td>
+</tr>
+<tr>
+<td>&ldquo;outDir&rdquo;</td>
+<td>컴파일 된 결과물을 모을 폴더 지정 (Ex. ./dist/)</td>
+</tr>
+<tr>
+<td>&ldquo;rootDir&rdquo;</td>
+<td>컴파일 할 소스를 모을 폴더 지정 (Ex. ./src/)</td>
+</tr>
+<tr>
+<td>&ldquo;strict&rdquo;</td>
+<td>엄격 모드</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ts-data-type" class="relative group">TS Data Type <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ts-data-type" aria-label="Anchor">#</a></span></h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">data</span>: <span class="kt">valueType</span><span class="p">;</span> <span class="c1">//Type annotation
+</span></span></span></code></pre></div><h3 id="1-primitive-type" class="relative group">1. Primitive Type <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-primitive-type" aria-label="Anchor">#</a></span></h3><ol>
+<li>: string</li>
+<li>: number</li>
+<li>: boolean</li>
+<li>: symbol (es6) <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol" target="_blank" rel="noreferrer">^</a></li>
+<li>: null</li>
+<li>: undefined</li>
+</ol>
+<h3 id="2-non-primitive-type" class="relative group">2. Non-Primitive Type <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-non-primitive-type" aria-label="Anchor">#</a></span></h3><ol>
+<li>object literal type
+<ul>
+<li>: { key1: Type1; key2: Type2; &hellip; }</li>
+</ul>
+</li>
+<li>array
+<ul>
+<li>: 타입[]</li>
+<li>: (타입1 | 타입2 | &hellip;)[]</li>
+</ul>
+</li>
+<li>tuple
+<ul>
+<li>: [타입1, 타입2, &hellip;]</li>
+</ul>
+</li>
+<li><del>: any</del></li>
+<li>: unknown<a href="/storage/wil/javascript/ex-typescript/#unknown">⋯</a>
+<ul>
+<li>타입을 확정한 뒤 할당 및 사용 가능</li>
+</ul>
+</li>
+<li>: never
+<ul>
+<li>항상 오류를 출력하거나, 절대 값을 반환하지 않는 함수의 리턴 타입</li>
+<li>모든 타입의 서브타입이며 어떤 타입도 할당 불가</li>
+</ul>
+</li>
+<li>: void
+<ul>
+<li>값을 반환하지 않는 함수의 리턴 타입</li>
+<li>undefined만 할당 가능</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-union-type" class="relative group">3. Union Type <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-union-type" aria-label="Anchor">#</a></span></h3><ul>
+<li>: 타입1 | 타입2 | &hellip;</li>
+</ul>
+<h3 id="4-interaction-type" class="relative group">4. Interaction Type <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-interaction-type" aria-label="Anchor">#</a></span></h3><ul>
+<li>: 타입1 &amp; 타입2 &amp; &hellip;</li>
+</ul>
+<h2 id="ts-custom-type" class="relative group">TS Custom Type <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ts-custom-type" aria-label="Anchor">#</a></span></h2><h3 id="1-type-alias" class="relative group">1. Type alias <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-type-alias" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">type</span> <span class="err">에일리아스</span> <span class="o">=</span> <span class="nx">union</span> <span class="o">|</span> <span class="nx">interaction</span> <span class="o">|</span> <span class="nx">tuple</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="2-interface" class="relative group">2. Interface <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-interface" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="cm">/* 인터페이스 */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">interface</span> <span class="err">인터페이스</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">key</span>: <span class="kt">valueType</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">method</span><span class="p">(</span><span class="nx">parameter</span>: <span class="kt">valueType</span><span class="p">,</span> <span class="p">...)</span><span class="o">:</span> <span class="nx">returnType</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* 인터페이스 상속 */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">interface</span> <span class="err">하위</span><span class="nx">_인터페이스</span> <span class="kr">extends</span> <span class="err">상위</span><span class="nx">_인터페이스</span><span class="p">,</span> <span class="p">...</span> <span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* 인터페이스 -&gt; 클래스 */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="err">클래스</span> <span class="kr">implements</span> <span class="err">인터페이스</span> <span class="p">{</span> <span class="p">}</span>
+</span></span></code></pre></div><p>*<em>인터페이스는 중복 작성했을 때, 자동으로 병합됨 (Declaration Merging)</em></p>
+<h3 id="3-class" class="relative group">3. Class <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-class" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">class 클래스 {
+</span></span></span><span class="line"><span class="cl"><span class="cm">   key: valueType // 초기값 필요(but, &#34;!:&#34;면 필요 X)
+</span></span></span><span class="line"><span class="cl"><span class="cm">   constructor(parameter: valueType, ...) {
+</span></span></span><span class="line"><span class="cl"><span class="cm">      this.key = parameter
+</span></span></span><span class="line"><span class="cl"><span class="cm">   }
+</span></span></span><span class="line"><span class="cl"><span class="cm">}
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// this로 한 번 더 할당할 필요 X
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">class</span> <span class="err">클래스</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="kr">constructor</span><span class="p">(</span><span class="kr">public</span><span class="o">|</span><span class="kr">private</span><span class="o">|</span><span class="kr">protected</span> <span class="nx">parameter</span>: <span class="kt">valueType</span><span class="p">,</span> <span class="p">...)</span> <span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="err">하위</span><span class="nx">_클래스</span> <span class="kr">extends</span> <span class="err">상위</span><span class="nx">_클래스</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="kr">constructor</span><span class="p">(</span><span class="kr">public</span><span class="o">|</span><span class="kr">private</span><span class="o">|</span><span class="kr">protected</span> <span class="nx">parameter</span>: <span class="kt">valueType</span><span class="p">,</span> <span class="p">...)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">super</span><span class="p">(</span><span class="cm">/* 상위_클래스_parameter */</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th>Access Modifier</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public</td>
+<td>외부에서도 접근 가능 (def)</td>
+</tr>
+<tr>
+<td>private</td>
+<td>내부에서만 접근 가능<br/>*<em>관습적으로 앞에 _사용</em></td>
+</tr>
+<tr>
+<td>protected</td>
+<td>내부와 하위 클래스에서만 접근 가능</td>
+</tr>
+<tr>
+<td>static</td>
+<td>클래스 자체에서만 호출 가능<br/>*<em>인스턴스에서 호출 불가능</em></td>
+</tr>
+<tr>
+<td>abstract</td>
+<td>추상 메서드는 정의만 되어있을 뿐 구현되어 있지 않음<br/>추상 클래스는 특정 클래스의 상속 대상이 되는 클래스</br>상속하는 클래스는 반듯이 정의된 추상 메서드를 구현해야 함<br/>추상 클레스는 인스턴스 생성 불가능</td>
+</tr>
+<tr>
+<td>readonly</td>
+<td>초깃값만 할당 가능</td>
+</tr>
+</tbody>
+</table>
+<p>*<em><a href="/storage/wil/javascript/ex-typescript/#getter--setter">getter &amp; setter 예제</a></em></p>
+<h3 id="4-generichttpswwwtypescriptlangorgkodocshandbookutility-typeshtml-storagewiljavascriptex-typescriptgeneric" class="relative group">4. Generic<a href="https://www.typescriptlang.org/ko/docs/handbook/utility-types.html" target="_blank" rel="noreferrer">^</a> <a href="/storage/wil/javascript/ex-typescript/#generic">⋯</a> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-generichttpswwwtypescriptlangorgkodocshandbookutility-typeshtml-storagewiljavascriptex-typescriptgeneric" aria-label="Anchor">#</a></span></h3><table>
+<thead>
+<tr>
+<th>Questions</th>
+<th>Answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>제네릭이란?</td>
+<td>일종의 타입 변수</td>
+</tr>
+<tr>
+<td>형태는?</td>
+<td>&lt;Type&gt;</td>
+</tr>
+<tr>
+<td>상속은?</td>
+<td>&lt;Type extends Super_Type&gt;</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Utility Types</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Partial&lt;Type&gt;</td>
+<td>Type의 모든 프로퍼티를 선택으로 설정한 타입 생성</td>
+</tr>
+<tr>
+<td>Required&lt;Type&gt;</td>
+<td>Type의 모든 프로퍼티를 필수로 설정한 타입 생성</td>
+</tr>
+<tr>
+<td>Readonly&lt;Type&gt;</td>
+<td>Type의 모든 프로퍼티를 읽기 전용으로 설정한 타입 생성</td>
+</tr>
+<tr>
+<td>Record&lt;Keys, Values&gt;</td>
+<td>키의 타입은 Keys, 값의 타입은 Values인 타입 생성</td>
+</tr>
+<tr>
+<td>Pick&lt;Type, Keys&gt;</td>
+<td>Type의 프로퍼티 중 Keys만 선택한 타입 생성</td>
+</tr>
+<tr>
+<td>Omit&lt;Type, Keys&gt;</td>
+<td>Type의 프로퍼티 중 Keys만 제외한 타입 생성</td>
+</tr>
+<tr>
+<td>Exclude&lt;Type1, Type2&gt;</td>
+<td>Type1의 유니온 멤버 중 Type2의 유니온 멤버만 제외한 타입 생성</td>
+</tr>
+<tr>
+<td>NonNullable&lt;Type&gt;</td>
+<td>Type에서 null과 undefined를 제외한 타입 생성</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ts-etc" class="relative group">TS Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ts-etc" aria-label="Anchor">#</a></span></h2><p><strong>1) Index Signatures</strong></p>
+<ul>
+<li>[index: string]: valueType</li>
+<li>이름, 존재 여부 상관없는 key들의 value의 타입 지정</li>
+</ul>
+<p><strong>2) Optional Type</strong></p>
+<ul>
+<li>?:</li>
+<li>해당 요소가 있어도 되고 없어도 됨</li>
+</ul>
+<p><strong>3) Non-Null Assertion Operator</strong><a href="https://www.typescriptlang.org/play?ssl=7&amp;ssc=66&amp;pln=3&amp;pc=1#code/MYewdgzgLgBAhgJwTAvDA2gbwG5wDYCuApgFwwCMAvgDQw77FkBMlAugNwBQoksAllCIBbVPCQA6AGZ8wAEwAURPKgB8MJeNyEiqFGiYBKLj2gwERCATyw0A4ZoY6A1BXYwA9O4AqAZXVIQBFoIGWAdOxE&#43;CBh5fDwiAHMiWTwATwMYAAcQCBCAIzSYAjkiaTBkzm5wU3NLawB1AQALAHlMqD5wfFEIgH4HbRgXcjdPHw68ZTgwfwRAgEIYPoHiGCXo6D5JrJz8wuLZUpkKqt4zCysoRqhWzKIEOChAnsEheZXnVw93AEEm2hujwA5NEbjpwER5pwgA" target="_blank" rel="noreferrer">^</a></p>
+<ul>
+<li>!.</li>
+<li>해당 피연산자가 null, undefined가 아니라고 단언</li>
+</ul>
+<p><strong>4) readonly &hellip;</strong></p>
+<ul>
+<li>해당 요소에 초기값만 할당 가능</li>
+</ul>
+<p><strong>5) keyof 타입</strong></p>
+<ul>
+<li>해당 타입의 모든 키값을 union 멤버로 반환</li>
+</ul>
+<p><strong>6)Type Assertion</strong></p>
+<ul>
+<li>&hellip; as 타입</li>
+<li>&hellip; as const (readonly) <a href="/storage/wil/javascript/ex-typescript/#as-const">⋯</a></li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+
+      
+        
+          
+        
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2021 Yuchan&rsquo;s hello world!
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://yuchanjeong.github.io/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

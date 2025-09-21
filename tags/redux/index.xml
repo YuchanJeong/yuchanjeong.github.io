@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redux on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/redux/</link>
+    <description>Recent content in Redux on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Mon, 23 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/redux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Redux] Redux-toolkit in Next.js and TypeScript</title>
+      <link>https://yuchanjeong.github.io/posts/studies/react/redux/redux-toolkit-next.js-ts/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/studies/react/redux/redux-toolkit-next.js-ts/</guid>
+      <description>npm i @reduxjs/toolkit react-redux next-redux-wrapper npm i -D @types/react-redux redux/store.</description>
+    </item>
+    <item>
+      <title>BC-12w-7 / {FC} Redux-saga</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-7/</link>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-7/</guid>
+      <description>An intuitive Redux side effect manager; middleware</description>
+    </item>
+    <item>
+      <title>BC-12w-6 / {FC} Redux</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-6/</link>
+      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-6/</guid>
+      <description>A Predictable State Container for JS Apps</description>
+    </item>
+    <item>
+      <title>BC-12w-5 / [데이터베이스] 관계형 데이터베이스(2) &#43; {FC} Redux Basic</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-5/</link>
+      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-12w-5/</guid>
+      <description>1. Instagram Schema Design # https://dbdiagram.</description>
+    </item>
+    <item>
+      <title>BC-11w-2 / [React] 상태 관리(2) redux</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-2/</link>
+      <pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-11w-2/</guid>
+      <description>Today I learned #Sprint - Cmarket Redux #index.</description>
+    </item>
+    <item>
+      <title>Redux-toolkit</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/redux-toolkit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/redux-toolkit/</guid>
+      <description>Next.</description>
+    </item>
+  </channel>
+</rss>

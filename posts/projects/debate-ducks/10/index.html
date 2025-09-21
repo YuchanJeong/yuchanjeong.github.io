@@ -1,0 +1,751 @@
+
+
+
+
+  
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>[Debate-Ducks] Debateroom - 개발 재개 및 보류 &middot; Yuchan&#39;s hello world!</title>
+    <meta name="title" content="[Debate-Ducks] Debateroom - 개발 재개 및 보류 &middot; Yuchan&#39;s hello world!" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.b0785c8131a75f72b211435af86269eb2d4b81dda03a8f2cf5ccb1c967747167.css"
+    integrity="sha256-sHhcgTGnX3KyEUNa&#43;GJp6y1Lgd2gOo8s9cyxyWd0cWc="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f29ffdffd9ab4cc95250c3c7196b2d5dae8ee6ef0a4139451073f90183ae7e31.js"
+      integrity="sha256-8p/9/9mrTMlSUMPHGWstXa6O5u8KQTlFEHP5AYOufjE="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        귀국, 입원 및 수술 등의 이유로 한 달 넘게 중지됐던 개발 재개 Summary #재연결 시 녹화 영상 유지 기능 구현 시도.
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="https://yuchanjeong.github.io/posts/projects/debate-ducks/10/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="[Debate-Ducks] Debateroom - 개발 재개 및 보류" />
+<meta property="og:description" content="귀국, 입원 및 수술 등의 이유로 한 달 넘게 중지됐던 개발 재개 Summary #재연결 시 녹화 영상 유지 기능 구현 시도." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuchanjeong.github.io/posts/projects/debate-ducks/10/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-06T00:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="[Debate-Ducks] Debateroom - 개발 재개 및 보류"/>
+<meta name="twitter:description" content="귀국, 입원 및 수술 등의 이유로 한 달 넘게 중지됐던 개발 재개 Summary #재연결 시 녹화 영상 유지 기능 구현 시도."/>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "[Debate-Ducks] Debateroom - 개발 재개 및 보류",
+    "headline": "[Debate-Ducks] Debateroom - 개발 재개 및 보류",
+    
+    "abstract": "귀국, 입원 및 수술 등의 이유로 한 달 넘게 중지됐던 개발 재개 Summary #재연결 시 녹화 영상 유지 기능 구현 시도.",
+    "inLanguage": "en",
+    "url" : "https:\/\/yuchanjeong.github.io\/posts\/projects\/debate-ducks\/10\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-07-06T00:00:00\u002b00:00",
+    "datePublished": "2022-07-06T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-07-06T00:00:00\u002b00:00",
+    
+    "keywords": ["\\Debate-Ducks","(Devlog)"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "960"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/",
+       "name": "Yuchan's Hello World!",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://yuchanjeong.github.io/categories/projects/",
+       "name": "\u003cProjects\u003e",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "[ Debate Ducks] Debateroom 개발 재개 및 보류",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Yuchan&rsquo;s hello world!</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Posts</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title="Categories"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title="Tags"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        [Debate-Ducks] Debateroom - 개발 재개 및 보류
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-07-06 00:00:00 &#43;0000 UTC">6 July 2022</time>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+          
+            <a
+              href="/categories/projects/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >&lt;Projects&gt;</a
+            >
+          
+        
+      
+        
+          
+            <a
+              href="/tags/%5Cdebate-ducks/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >\Debate-Ducks</a
+            >
+          
+            <a
+              href="/tags/devlog/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >(Devlog)</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#details">Details</a>
+      <ul>
+        <li><a href="#data-channel">Data channel</a></li>
+        <li><a href="#녹화-영상-유지-기능-삭제">녹화 영상 유지 기능 삭제</a></li>
+      </ul>
+    </li>
+    <li><a href="#problems">Problems</a>
+      <ul>
+        <li><a href="#녹화-영상-깨짐-현상">녹화 영상 깨짐 현상</a></li>
+        <li><a href="#녹화-영상-시간-점프-현상">녹화 영상 시간 점프 현상</a></li>
+      </ul>
+    </li>
+    <li><a href="#reflections">Reflections</a></li>
+    <li><a href="#etc">Etc</a>
+      <ul>
+        <li><a href="#ispros-변경">isPros 변경</a></li>
+        <li><a href="#코드-정돈">코드 정돈</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300">귀국, 입원 및 수술 등의 이유로 한 달 넘게 중지됐던 개발 재개</span>
+</div>
+
+<h2 id="summary" class="relative group">Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#summary" aria-label="Anchor">#</a></span></h2><p>재연결 시 녹화 영상 유지 기능 구현 시도. (보류)</p>
+<h2 id="details" class="relative group">Details <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#details" aria-label="Anchor">#</a></span></h2><h3 id="data-channel" class="relative group">Data channel <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#data-channel" aria-label="Anchor">#</a></span></h3><p>기존에는 서버에 녹화 영상을 저장하는 방식을 사용했으나 서버를 거치는 방식이 비효율적이라고 판단해 WebRTC의 Data channel을 통해 재연결 시 이미 연결되어 있는 사용자가 재연결한 사용자에게 기존의 녹화 영상을 전송해서 녹화영상이 유지되게 만들었다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">blobs</span> <span class="o">=</span> <span class="nx">blobsRef</span><span class="p">.</span><span class="nx">current</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">blobs</span><span class="p">.</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">blob</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="nx">blob</span><span class="p">).</span><span class="nx">arrayBuffer</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">arrayBuffer</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">peerRef</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">arrayBuffer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">simplePeer</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;data&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">arrayBuffer</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="k">new</span> <span class="nx">Uint8Array</span><span class="p">(</span><span class="nx">arrayBuffer</span><span class="p">)],</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">type</span><span class="o">:</span> <span class="s2">&#34;video/webm&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">blobsRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><h3 id="녹화-영상-유지-기능-삭제" class="relative group">녹화 영상 유지 기능 삭제 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%85%b9%ed%99%94-%ec%98%81%ec%83%81-%ec%9c%a0%ec%a7%80-%ea%b8%b0%eb%8a%a5-%ec%82%ad%ec%a0%9c" aria-label="Anchor">#</a></span></h3><p>녹화 영상 유지 기능을 삭제했기 때문에 토론 중에 한쪽의 연결이 끊겼을 경우 남아있는 사용자가 해당 시점까지 진행된 토론의 녹화 영상을 올리고 토론을 종료시킬지 아니면 토론을 처음부터 다시 시작할지 선택할 수 있게 만들었다.</p>
+<p>Ps. 스킵을 1분 미만일 때만 가능하게 변경했다. 매초 재랜더링이 일어나는 것을 방지하기 위해 시간은 useRef로 관리하며 스킵이 가능하지 않을 때는 따로 안내하게 만들었다. (버튼 비활성화를 위해서는 useState로 변경을 추적해야 해서 비효율적)</p>
+<h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2><h3 id="녹화-영상-깨짐-현상" class="relative group">녹화 영상 깨짐 현상 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%85%b9%ed%99%94-%ec%98%81%ec%83%81-%ea%b9%a8%ec%a7%90-%ed%98%84%ec%83%81" aria-label="Anchor">#</a></span></h3><p><strong># 문제</strong></p>
+<p>토론이 중단된 후 재시작 됐을 때 재시작 이후의 녹화 영상이 깨지는 현상이 발생한다.</p>
+<img width="800" alt="1" src="https://user-images.githubusercontent.com/84524514/177230570-faf74cc0-b0e5-48d2-8ae7-086322ccc403.png">
+<p><strong># 원인</strong></p>
+<p>recorder가 변경됐을 때 녹화를 중지하고 다시 시작하게 했으나, 이미 recorder는 변경되어 record 내부의 기존 recorder는 종료되지 않고 계속 작동하기 때문에 문제가 발생한다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">record</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">canvasRef</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">mergedAudio</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setRecorder</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">blobsRef</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="nx">Pick</span><span class="o">&lt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">IDebateroom</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;canvasRef&#34;</span> <span class="o">|</span> <span class="s2">&#34;mergedAudio&#34;</span> <span class="o">|</span> <span class="s2">&#34;setRecorder&#34;</span> <span class="o">|</span> <span class="s2">&#34;blobsRef&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">canvasStream</span> <span class="o">=</span> <span class="nx">canvasRef</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">captureStream</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">canvasStream</span> <span class="o">||</span> <span class="o">!</span><span class="nx">mergedAudio</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">mergedTracks</span> <span class="o">=</span> <span class="nx">canvasStream</span><span class="p">.</span><span class="nx">getVideoTracks</span><span class="p">().</span><span class="nx">concat</span><span class="p">(</span><span class="nx">mergedAudio</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">mergedTracks</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">mergedStream</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MediaStream</span><span class="p">(</span><span class="nx">mergedTracks</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">mergedStream</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">recorder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MediaRecorder</span><span class="p">(</span><span class="nx">mergedStream</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">mimeType</span><span class="o">:</span> <span class="s2">&#34;video/webm&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">recorder</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">recorder</span><span class="p">.</span><span class="nx">ondataavailable</span> <span class="o">=</span> <span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">blobsRef</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">ev</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setRecorder</span><span class="p">(</span><span class="nx">recorder</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isStart</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">recorder</span><span class="o">?</span><span class="p">.</span><span class="nx">state</span> <span class="o">===</span> <span class="s2">&#34;recording&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">recorder</span><span class="o">?</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">recorder</span><span class="o">?</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="mi">1000</span> <span class="o">/</span> <span class="mi">30</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="p">[</span><span class="nx">isStart</span><span class="p">,</span> <span class="nx">recorder</span><span class="p">]);</span>
+</span></span></code></pre></div><p><strong># 해결</strong></p>
+<p>recorder를 변경하기 전에 <code>recorder?.stop();</code>을 먼저 실행해서 해결했다.</p>
+<p>Ps. 굉장히 쉬운 문제였지만 원인을 잘못 파악해 해결에 많은 시간이 걸렸다. Blob에 대한 공부가 부족해 Blob을 합칠 때 발생하는 문제라고 생각했었다. (Blob을 합치는 것은 이 문제가 아닌 다른 문제를 발생 시킨다. 😢😢😢)</p>
+<h3 id="녹화-영상-시간-점프-현상" class="relative group">녹화 영상 시간 점프 현상 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%eb%85%b9%ed%99%94-%ec%98%81%ec%83%81-%ec%8b%9c%ea%b0%84-%ec%a0%90%ed%94%84-%ed%98%84%ec%83%81" aria-label="Anchor">#</a></span></h3><p><strong># 문제</strong></p>
+<p>재시작 이후의 녹화 영상에서 재시작 되는 부분이 건너뛰어지는 문제가 발생한다.</p>
+<p><strong># 원인 및 문제 해결을 위한 시도</strong></p>
+<p>처음에는 녹화의 대상(MediaRecorder)이 변경 될 때 딜레이가 생기게 원인이라고 생각했다. 그래서 useEffect의 조건을 수정하고 재연결 시 setTimeout을 통해 약간의 지연 시간을 주었지만 해결되지 않았다.</p>
+<p>그 후 재연결 이전의 녹화 영상과 재연결 이후의 녹화 영상을 확인했고, 각각은 이상이 없는 것을 확인해 Blob을 합치는 것이 원인이라고 판단했다. MediaRecorder에서 생성되는 Blob은 헤더 청크에 각각의 정보를 포함하고 있고, 단순히 Blob을 연결하는 것만으로는 하나의 영상으로 합쳐지지 않는 것이었다. Blob에 대한 공부가 부족해서 알지 못했었다.</p>
+<p>각기 다른 영상을 합쳐줘야 해서 ffmpeg.wasm를 이용하기로 했고 공식 문서를 보면서 임시로 코드를 작성했다. (공식 문서는 <code>ffmpeg.FS(&quot;writeFile&quot;, &quot;concat_list.txt&quot;, textUnit8Array);</code>에 <code>textUnit8Array</code> 대신 문자열이 직접 들어 있었으나 <code>Argument of type 'string' is not assignable to parameter of type 'Uint8Array'.</code> 에러가 발생해 임의로 변경)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createFFmpeg</span><span class="p">,</span> <span class="nx">fetchFile</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;@ffmpeg/ffmpeg&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Blob</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;buffer&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">mergeVideo</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">results</span>: <span class="kt">Blob</span><span class="p">[][])</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">ffmpeg</span> <span class="o">=</span> <span class="nx">createFFmpeg</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">log</span>: <span class="kt">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="k">await</span> <span class="nx">ffmpeg</span><span class="p">.</span><span class="nx">load</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">results</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kr">async</span> <span class="p">(</span><span class="nx">blobs</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">(</span><span class="nx">blobs</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">type</span><span class="o">:</span> <span class="s2">&#34;video/webm&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">ffmpeg</span><span class="p">.</span><span class="nx">FS</span><span class="p">(</span><span class="s2">&#34;writeFile&#34;</span><span class="p">,</span> <span class="sb">`recording</span><span class="si">${</span><span class="nx">idx</span><span class="si">}</span><span class="sb">.webm`</span><span class="p">,</span> <span class="k">await</span> <span class="nx">fetchFile</span><span class="p">(</span><span class="nx">blob</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">text</span> <span class="o">+=</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">text</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="o">?</span> <span class="sb">`file recording</span><span class="si">${</span><span class="nx">idx</span><span class="si">}</span><span class="sb">.webm`</span>
+</span></span><span class="line"><span class="cl">        <span class="o">:</span> <span class="sb">`</span><span class="err">\</span><span class="sb">nfile recording</span><span class="si">${</span><span class="nx">idx</span><span class="si">}</span><span class="sb">.webm`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">textUnit8Array</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TextEncoder</span><span class="p">().</span><span class="nx">encode</span><span class="p">(</span><span class="s2">&#34;¢&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">ffmpeg</span><span class="p">.</span><span class="nx">FS</span><span class="p">(</span><span class="s2">&#34;writeFile&#34;</span><span class="p">,</span> <span class="s2">&#34;concat_list.txt&#34;</span><span class="p">,</span> <span class="nx">textUnit8Array</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">await</span> <span class="nx">ffmpeg</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;-f&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;concat&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;-safe&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;-i&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;concat_list.txt&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;-c&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;copy&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="sb">`output.webm`</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">ffmpeg</span><span class="p">.</span><span class="nx">FS</span><span class="p">(</span><span class="s2">&#34;readFile&#34;</span><span class="p">,</span> <span class="s2">&#34;output.webm&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p>하지만 해당 부분을 확인하기 이전에 Blob에 관한 에러가 발생했다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Argument of <span class="nb">type</span> <span class="s1">&#39;Blob&#39;</span> is not assignable to parameter of <span class="nb">type</span> <span class="s1">&#39;string | Buffer | Blob | File&#39;</span>.
+</span></span><span class="line"><span class="cl">  Type <span class="s1">&#39;Blob&#39;</span> is missing the following properties from <span class="nb">type</span> <span class="s1">&#39;File&#39;</span>: lastModified, name, webkitRelativePath
+</span></span></code></pre></div><p>해당 문제는 <a href="https://stackoverflow.com/questions/72111017/argument-of-type-blob-is-not-assignable-to-parameter-of-type-string-blob" target="_blank" rel="noreferrer">stackoverflow의 답변</a>을 확인했을 때 <code>import { Blob } from &quot;buffer&quot;;</code>을 제거해주면 된다고 하는데 제거할 경우 <code>ReferenceError: Blob is not defined</code> 에러가 발생한다.</p>
+<p><strong># 보류 결정</strong></p>
+<p>Blob 에러의 해결 방법을 찾지 못했고 해결이 되더라도 위 코드가 정상적으로 작동한다는 확신도 없다. &ldquo;Blob을 영상 파일로 각각 먼저 만들고 합칠까?&rdquo; 하는 등의 몇 가지 아이디어도 있지만 프로젝트의 완성이 우선이고, 해당 문제의 해결을 시도하는데 이미 많은 시간이 지체돼서 해결을 보류하고 프로젝트 완성 후 Blob과 ffmpeg에 대한 추가 학습을 하고 해결을 시도하기로 결정했다. 하지만 해결된다고 해서 해당 기능을 포함할지는 현재는 미지수다. 결국 서버의 부담이 늘어나게 될 것이기 때문이다.</p>
+<h2 id="reflections" class="relative group">Reflections <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reflections" aria-label="Anchor">#</a></span></h2><p>이번 개선 프로젝트에서 개인적으로 가장 신경 썼던 부분이 재연결이었다. 이전 프로젝트에서 해당 문제를 해결하지 못해 뒤로 가기를 못하게 막는 등의 방식으로 문제를 회피했었기 때문이다.</p>
+<p>재연결 시 발생하는 문제는 원인을 잘 파악하고 해결했지만 영상 녹화 기능이 추가되자 많은 문제들이 추가로 발생했고 결국 해결하지 못했다. 이 과정에서 크게 두 가지를 배웠다.</p>
+<p>우선 문제가 발생했을 때 <strong>원인을 정확하게 파악</strong>해야 한다는 것이다. 당연한 소리지만 생각보다 어려웠다. 특히 원인을 모를 때 보다 원인을 잘못 파악했을 때 손해가 컸다. 여러번 원인을 잘못 파악해서 잘못된 해결 시도로 많은 낭비가 있었다.</p>
+<p>두 번째는 <strong>우선 순위와 보류 여부를 잘 판단</strong>해야 한다는 것이다. 이번에는 프로젝트에 기한을 정해두지 않아 작업 과정에서 우선 순위를 크게 신경쓰지 않았다. 그래서 문제가 해결되지 않을 때 빠르게 보류 여부를 판단하지 못했고 프로젝트의 완성이 지연됬다.</p>
+<p>물론 끊임없이 시도한 끝에 정확한 원인은 파악했지만 다른 우선순위 기능들을 완성하지 못한 시점에서는 적합하지 않은 행동이었다. (결국 해결도 못했고 😢😢😢, 매우 반성합니다. 🙏🙏🙏)</p>
+<p>끈질김은 좋지만 정확한 원인 파악 후 해결에 걸리는 시간과 난이도를 잘 판단하고, 우선순위가 높은 다른 문제를 먼저 해결한 뒤 발휘하겠다. 🔥🔥🔥</p>
+<h2 id="etc" class="relative group">Etc <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc" aria-label="Anchor">#</a></span></h2><h3 id="ispros-변경" class="relative group">isPros 변경 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ispros-%eb%b3%80%ea%b2%bd" aria-label="Anchor">#</a></span></h3><p>기존에는 isPros(임시 변수)를 버튼을 통해 변경할 수 있는 변수로 관리했으나, 실사용 시와 좀 더 유사하게 사용할 수 있도록 쿼리를 통해 변경되지 않는 props로 관리하게 변경했다.</p>
+<h3 id="코드-정돈" class="relative group">코드 정돈 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%ec%bd%94%eb%93%9c-%ec%a0%95%eb%8f%88" aria-label="Anchor">#</a></span></h3><p>컴포넌트 props의 타입은 Pick으로 뽑아서 사용하고 있었지만 함수는 각 인자와 타입을 따로 적어서 사용하고 있었다. Pick으로 뽑아서 사용할 인자를 중괄호로 묶어서 객체 형태로 만들어 주면 된다는 간단한 사실을 늦게 떠올렸다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// Example
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">screenShare</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">peerRef</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">stream</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">videoRef</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">screenStreamRef</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setIsScreenOn</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="nx">Pick</span><span class="o">&lt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">IDebateroom</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;peerRef&#34;</span> <span class="o">|</span> <span class="s2">&#34;stream&#34;</span> <span class="o">|</span> <span class="s2">&#34;videoRef&#34;</span> <span class="o">|</span> <span class="s2">&#34;screenStreamRef&#34;</span> <span class="o">|</span> <span class="s2">&#34;setIsScreenOn&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Ps. 필요 없는 코드들이 여전히 발견된다. 코드 한 줄 한 줄을 보면서 &ldquo;이 코드가 왜 필요한지? 또 이게 최선인지?&ldquo;를 생각해 보는 시간을 통해서 이를 줄여나가고 있다.</p>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/projects/debate-ducks/9/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >[Debate-Ducks] Debateroom - Record</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-06-01 00:00:00 &#43;0000 UTC">1 June 2022</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/projects/debate-ducks/11/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >[Debate-Ducks] 토론 생성</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-07-16 00:00:00 &#43;0000 UTC">16 July 2022</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+        
+          
+        
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            © 2021 Yuchan&rsquo;s hello world!
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://yuchanjeong.github.io/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

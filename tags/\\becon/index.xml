@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>\\Becon on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/%5C%5Cbecon/</link>
+    <description>Recent content in \\Becon on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Sun, 16 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/%5C%5Cbecon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>취직 준비부터 면접 그리고 출근 첫 주</title>
+      <link>https://yuchanjeong.github.io/posts/diaries/2/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/diaries/2/</guid>
+      <description>취직 #팀 프로젝트를 끝낸 뒤 아쉬움이 남아 팀 프로젝트 개선과 개인 프로젝트를 하나 더 진행하였다.</description>
+    </item>
+  </channel>
+</rss>

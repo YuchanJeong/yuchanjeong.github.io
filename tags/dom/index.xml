@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DOM on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/dom/</link>
+    <description>Recent content in DOM on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <lastBuildDate>Mon, 13 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuchanjeong.github.io/tags/dom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BC-4w-1 / [JS/브라우저] DOM(2) &#43; {FC} TypeScript</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-1/</link>
+      <pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-4w-1/</guid>
+      <description>Today I learned #DOM API 정리 # childrenNodes는 텍스트와 태그가 섞여 있을 때 사용 dataset &amp;lt;tag data-user|role|user-id=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/tag&amp;gt;</description>
+    </item>
+    <item>
+      <title>BC-3w-5 / [JS/브라우저] DOM(1)</title>
+      <link>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-5/</link>
+      <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/posts/bootcamp/bc-3w-5/</guid>
+      <description>Today I learned #DOM 이해하기 # Document Object Model의 약자로, HTML 요소를 Object처럼 조작할 수 있는 Model</description>
+    </item>
+  </channel>
+</rss>

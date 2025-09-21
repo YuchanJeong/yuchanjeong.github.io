@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>(Summary) on Yuchan&#39;s hello world!</title>
+    <link>https://yuchanjeong.github.io/tags/summary/</link>
+    <description>Recent content in (Summary) on Yuchan&#39;s hello world!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Yuchan&#39;s hello world!</copyright>
+    <atom:link href="https://yuchanjeong.github.io/tags/summary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/html-css/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/html-css/css/</guid>
+      <description>Cascading Style Sheets</description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/etc/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/etc/git/</guid>
+      <description>Work Space -add-&amp;gt; Stage -commit-&amp;gt; Local Repo -push-&amp;gt; Remote Repo</description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/html-css/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/html-css/html/</guid>
+      <description>HyperText Markup Language</description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/javascript/</guid>
+      <description>JS Data #1.</description>
+    </item>
+    <item>
+      <title>Linux Console</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/etc/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/etc/linux/</guid>
+      <description>리눅스 콘솔 명령어 추가 예정 1.</description>
+    </item>
+    <item>
+      <title>Node.js</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/nodejs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/nodejs/</guid>
+      <description>확장성 네트워크 애플리케이션(특히 서버 사이드) 개발에 사용되는 소프트웨어 플랫폼(런타임 환경).</description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/react/</guid>
+      <description>React v18.</description>
+    </item>
+    <item>
+      <title>Redux-toolkit</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/redux-toolkit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/redux-toolkit/</guid>
+      <description>Next.</description>
+    </item>
+    <item>
+      <title>Regular Expression</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/etc/regex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/etc/regex/</guid>
+      <description>Ref. https://regexr.</description>
+    </item>
+    <item>
+      <title>SCSS</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/html-css/scss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/html-css/scss/</guid>
+      <description>Sassy CSS; CSS preprocessor</description>
+    </item>
+    <item>
+      <title>TypeScript</title>
+      <link>https://yuchanjeong.github.io/what-i-learned/javascript/typescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://yuchanjeong.github.io/what-i-learned/javascript/typescript/</guid>
+      <description>Ref. TypeScript Cheat sheets</description>
+    </item>
+  </channel>
+</rss>
